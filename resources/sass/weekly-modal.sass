@@ -1,0 +1,179 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp650
+	@media screen and (max-width: 650px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+
+
+
+
+
+
+
+.md-overlay
+	display: block
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background: #000
+	opacity: .7
+	z-index: 3
+.md-contents
+	display: block
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 75%
+	max-width: 500px
+	z-index: 1999
+	overflow: hidden
+	+bp1000
+		max-width: 400px
+	> .md-inner
+		display: block
+		width: 100%
+		padding: 60px 40px 40px
+		background-color: #fff
+		border-radius: 5px
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		position: relative
+		+bp1000
+			padding: 60px 20px 20px
+		> h3
+			display: inline-block
+			padding: 5px 25px
+			margin-bottom: 15px
+			font-weight: 700
+			font-size: 18px
+			line-height: 1.7
+			font-family: sans-serif
+			letter-spacing: 0.05em
+			color: #000
+		> p
+			display: block
+			margin-top: 1em
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.7
+			font-family: sans-serif
+			letter-spacing: 0.05em
+			color: #000
+		> .fig
+			display: block
+			width: 100%
+		> .note
+			display: block
+			width: calc(100% - 10px)
+			margin: 5px auto 0
+			padding-left: 1.35em
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.5
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #777
+			text-indent: -1.35em
+			+bp1000
+				margin: 2px auto 0
+				font-size: 11px
+			&:first-of-type
+				margin: 10px auto 0
+				+bp1000
+					margin: 7px auto 0
+		> .close_btn
+			position: absolute
+			top: 15px
+			right: 15px
+			display: block
+			width: 40px
+			pointer-events: initial
+			-webkit-user-select: initial
+			-moz-touch-callout: initial
+			-moz-user-select: initial
+			user-select: initial
+			transition: all 0.3s ease-in-out
+		> .close_btn:hover
+			opacity: 0.5

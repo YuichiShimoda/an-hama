@@ -1,0 +1,112 @@
+.md-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+.md-contents {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  max-width: 500px;
+  z-index: 1999;
+  overflow: hidden;
+}
+@media screen and (max-width: 1000px) {
+  .md-contents {
+    max-width: 400px;
+  }
+}
+.md-contents > .md-inner {
+  display: block;
+  width: 100%;
+  padding: 60px 40px 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .md-contents > .md-inner {
+    padding: 60px 20px 20px;
+  }
+}
+.md-contents > .md-inner > h3 {
+  display: inline-block;
+  padding: 5px 25px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+.md-contents > .md-inner > p {
+  display: block;
+  margin-top: 1em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+.md-contents > .md-inner > .fig {
+  display: block;
+  width: 100%;
+}
+.md-contents > .md-inner > .note {
+  display: block;
+  width: calc(100% - 10px);
+  margin: 5px auto 0;
+  padding-left: 1.35em;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  color: #777;
+  text-indent: -1.35em;
+}
+@media screen and (max-width: 1000px) {
+  .md-contents > .md-inner > .note {
+    margin: 2px auto 0;
+    font-size: 11px;
+  }
+}
+.md-contents > .md-inner > .note:first-of-type {
+  margin: 10px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  .md-contents > .md-inner > .note:first-of-type {
+    margin: 7px auto 0;
+  }
+}
+.md-contents > .md-inner > .close_btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 40px;
+  pointer-events: initial;
+  -webkit-user-select: initial;
+  -moz-touch-callout: initial;
+  -moz-user-select: initial;
+  user-select: initial;
+  transition: all 0.3s ease-in-out;
+}
+.md-contents > .md-inner > .close_btn:hover {
+  opacity: 0.5;
+}

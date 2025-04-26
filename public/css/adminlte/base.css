@@ -1,0 +1,268 @@
+.login-page {
+  background: url("../../image/base-bg.png");
+  background-size: 500px;
+  background-repeat: repeat;
+}
+.login-page .login-box {
+  width: 450px;
+}
+@media screen and (max-width: 600px) {
+  .login-page .login-box {
+    width: 350px;
+  }
+}
+.login-page .login-box .login-logo {
+  width: 300px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .login-page .login-box .login-logo {
+    width: 250px;
+  }
+}
+.login-page .login-box .card.card-outline {
+  margin: 50px auto 0;
+  border: 0;
+}
+@media screen and (max-width: 600px) {
+  .login-page .login-box .card.card-outline {
+    margin: 30px auto 0;
+  }
+}
+.login-page .login-box .card.card-outline .card-header .card-title {
+  color: #999;
+}
+.login-page .login-box .card.card-outline .card-body {
+  padding: 30px 50px 15px;
+}
+@media screen and (max-width: 600px) {
+  .login-page .login-box .card.card-outline .card-body {
+    padding: 25px 20px 15px;
+  }
+}
+.login-page .login-box .card.card-outline .card-body form.login .input-group .invalid-feedback {
+  font-size: 10px;
+}
+.login-page .login-box .card.card-outline .card-body form.login .row {
+  align-items: center;
+}
+.login-page .login-box .card.card-outline .card-body form.login .row .col-7 .icheck-primary {
+  display: flex;
+  align-items: center;
+}
+.login-page .login-box .card.card-outline .card-body form.login .row .col-7 .icheck-primary input[type=checkbox]:checked {
+  accent-color: #d40100;
+}
+.login-page .login-box .card.card-outline .card-body form.login .row .col-7 .icheck-primary label {
+  margin-left: 0.3em;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+.login-page .login-box .card.card-outline .card-body form.login .row .col-5 button {
+  background-color: #B92928;
+  border: 0;
+  white-space: nowrap;
+}
+.login-page .login-box .card.card-outline .card-body form.login .row .col-5 button span {
+  margin-right: 5px;
+}
+.login-page .login-box .card.card-outline .card-body form.pw-reset .input-group.mb-3 .invalid-feedback {
+  font-size: 10px;
+}
+.login-page .login-box .card.card-outline .card-body form.pw-reset .btn.btn-block.btn-flat.btn-primary {
+  width: 180px;
+  margin: 0 auto 15px;
+  background-color: #B92928;
+  border: 0;
+}
+.login-page .login-box .card.card-outline .card-body form.pw-reset .btn.btn-block.btn-flat.btn-primary span {
+  margin-right: 8px;
+  font-size: 14px;
+}
+.login-page .login-box .card.card-outline .card-footer {
+  padding: 20px 50px;
+}
+@media screen and (max-width: 600px) {
+  .login-page .login-box .card.card-outline .card-footer {
+    padding: 15px 20px;
+  }
+}
+.login-page .login-box .card.card-outline .card-footer .my-0 a {
+  font-size: 14px;
+  color: #999;
+}
+
+.register-page {
+  background: url("../../image/base-bg.png");
+  background-size: 500px;
+  background-repeat: repeat;
+}
+.register-page .register-box {
+  width: 450px;
+}
+@media screen and (max-width: 600px) {
+  .register-page .register-box {
+    width: 350px;
+  }
+}
+.register-page .register-box .register-logo {
+  width: 300px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .register-page .register-box .register-logo {
+    width: 250px;
+  }
+}
+.register-page .register-box .card.card-outline {
+  margin: 50px auto 0;
+  border: 0;
+}
+@media screen and (max-width: 600px) {
+  .register-page .register-box .card.card-outline {
+    margin: 30px auto 0;
+  }
+}
+.register-page .register-box .card.card-outline .card-header .card-title {
+  color: #999;
+}
+.register-page .register-box .card.card-outline .card-body {
+  padding: 30px 50px 15px;
+}
+@media screen and (max-width: 600px) {
+  .register-page .register-box .card.card-outline .card-body {
+    padding: 25px 20px 15px;
+  }
+}
+.register-page .register-box .card.card-outline .card-body form.register .input-group.mb-3 .invalid-feedback {
+  font-size: 10px;
+}
+.register-page .register-box .card.card-outline .card-body form.register .btn.btn-block.btn-flat.btn-primary {
+  width: 180px;
+  height: 40px;
+  margin: 0 auto 10px;
+  background-color: #B92928;
+  border: 0;
+}
+.register-page .register-box .card.card-outline .card-body form.register .btn.btn-block.btn-flat.btn-primary span {
+  margin-right: 8px;
+  font-size: 14px;
+}
+.register-page .register-box .card.card-outline .card-footer {
+  padding: 20px 50px;
+}
+@media screen and (max-width: 600px) {
+  .register-page .register-box .card.card-outline .card-footer {
+    padding: 15px 20px;
+  }
+}
+.register-page .register-box .card.card-outline .card-footer .my-0 a {
+  font-size: 14px;
+  color: #999;
+}
+
+.footer-box {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+.footer-box .copyright-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 0 11px;
+  margin-top: 0;
+  background-color: #333;
+}
+.footer-box .copyright-box .corporate-box {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.footer-box .copyright-box .corporate-box .link-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  z-index: 2;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.footer-box .copyright-box .corporate-box .link-box:hover {
+  opacity: 0.5;
+}
+.footer-box .copyright-box .corporate-box .link-box .logo {
+  display: block;
+  width: 50px;
+}
+@media screen and (max-width: 450px) {
+  .footer-box .copyright-box .corporate-box .link-box .logo {
+    width: 40px;
+  }
+}
+.footer-box .copyright-box .corporate-box .invoice-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-left: 15px;
+}
+.footer-box .copyright-box .corporate-box .invoice-box .tit {
+  display: block;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #ccc;
+}
+.footer-box .copyright-box .corporate-box .invoice-box .tit::selection {
+  background: #721C1B;
+}
+.footer-box .copyright-box .corporate-box .invoice-box .num {
+  display: block;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #ccc;
+}
+.footer-box .copyright-box .corporate-box .invoice-box .num::selection {
+  background: #721C1B;
+}
+.footer-box .copyright-box .copyright {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0em;
+  color: #fff;
+}
+.footer-box .copyright-box .copyright::selection {
+  background: #721C1B;
+}
+.footer-box .copyright-box .copyright span {
+  display: inline-block;
+  margin-right: 0.3em;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  font-family: serif;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.footer-box .copyright-box .copyright span::selection {
+  background: #721C1B;
+}

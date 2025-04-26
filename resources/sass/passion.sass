@@ -1,0 +1,1858 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+
+
+
+@mixin bph800
+	@media screen and (max-height: 800px)
+		@content
+@mixin bph750
+	@media screen and (max-height: 750px)
+		@content
+
+
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	max-width: 100%
+	background: url("../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+*::selection
+	background: #ddd
+
+
+
+
+
+
+
+
+
+
+
+
+
+#first-view
+	display: block
+	width: 100%
+	margin: 150px auto 0
+	+bp900
+		margin: 120px auto 0
+	h1
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+	.desc-box
+		display: block
+		width: 720px
+		margin: 40px auto 0
+		+bp900
+			width: calc(100% - 160px)
+		+bp800
+			width: calc(100% - 100px)
+		p
+			display: block
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.7
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #555
+	.nav-box
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 50px auto 0
+		z-index: 2
+		position: relative
+		+bp900
+			margin: 35px auto 0
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			min-width: 60px
+			padding: 8px 15px
+			margin-left: 10px
+			border-radius: 15px
+			border: solid 1px #555
+			background-color: #555
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.0em
+			color: #fff
+			transition: all 0.5s ease-in-out
+			&:nth-of-type(1)
+				margin-left: 0
+			&.previous
+				border: solid 1px #006134
+				background-color: #006134
+				color: #fff
+			&.hovered
+				border: solid 1px #ccc
+				background-color: #fff
+				color: #555
+			&.next
+				border: solid 1px #BA292B
+				background-color: #BA292B
+				color: #fff
+			&::selection
+				background: #777
+
+
+
+
+
+
+
+
+
+
+
+#sauce
+	display: block
+	padding-top: 100px
+	margin: 0 auto 0
+	+bp1400
+		padding-top: 80px
+	h2
+		display: block
+		text-align: center
+		span
+			display: inline-block
+			font-weight: 400
+			font-size: 30px
+			line-height: 1.6
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.05em
+			color: #721C1B
+			+bp1200
+				font-size: 28px
+			+bp1000
+				font-size: 26px
+			+bp850
+				font-size: 24px
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		width: 940px
+		margin: 80px auto 0
+		position: relative
+		+bp1100
+			margin: 60px auto 0
+		+bp900
+			width: calc(100% - 160px)
+			margin: 50px auto 0
+		+bp850
+			width: calc(100% - 120px)
+		+bp800
+			width: calc(100% - 80px)
+		+bp750
+			width: calc(100% - 60px)
+		.bg-img-box
+			position: absolute
+			top: -170px
+			right: -200px
+			display: block
+			width: 330px
+			transform-origin: top right
+			transform: rotate(11deg)
+			opacity: 0.3
+			+bp1300
+				top: -150px
+				right: -150px
+				width: 300px
+			+bp1200
+				top: -130px
+				right: -120px
+			+bp1100
+				top: -110px
+				right: -70px
+				width: 290px
+			+bp1000
+				top: -70px
+				right: -25px
+				width: 260px
+			+bp900
+				top: -150px
+				right: -90px
+				width: 240px
+			+bp800
+				top: -40px
+				width: 230px
+			.txt
+				display: block
+				width: 95%
+			.img
+				display: block
+				width: 100%
+				transform-origin: top center
+		.left-box
+			display: block
+			width: 450px
+			min-width: 450px
+			position: relative
+			+bp1100
+				width: 380px
+				min-width: 380px
+			+bp1000
+				width: 330px
+				min-width: 330px
+			+bp900
+				width: 48%
+				min-width: 48%
+			.main
+				display: block
+				width: 100%
+				transform-origin: center
+				position: relative
+				transition: transform 1.0s 0.3s ease-in-out
+				img
+					display: block
+					width: 100%
+					object-fit: cover
+					object-position: center
+					transform-origin: center
+					clip-path: circle(0% at 50% 20%)
+					animation: bounce-in-reverse 1.0s forwards
+					transition: clip-path 1.5s ease-in-out
+				.overlay
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 100%
+					background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+					opacity: 0.3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.0
+			.sub
+				position: absolute
+				left: 50px
+				bottom: -230px
+				display: block
+				width: 300px
+				transform-origin: center
+				clip-path: circle(0% at 50% 20%)
+				transition: clip-path 1.5s ease-in-out, transform 1.0s 0.3s ease-in-out
+				+bp1100
+					left: 60px
+					bottom: -190px
+					width: 250px
+				+bp1000
+					left: 50px
+					bottom: -160px
+					width: 230px
+				+bp900
+					left: 15%
+					bottom: -140px
+					width: 66%
+				img
+					display: block
+					width: 100%
+					object-fit: cover
+					object-position: center
+					transform-origin: center
+					animation: bounce-in-reverse 1.0s forwards
+				.overlay
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 100%
+					background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+					opacity: 0.3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.0
+		.right-box
+			display: block
+			width: 430px
+			margin-top: 50px
+			margin-left: 60px
+			+bp900
+				width: 46%
+				margin-left: 40px
+			.txt1-box
+				display: block
+				width: 400px
+				+bp900
+					width: 93%
+				p
+					display: block
+					margin-top: 1.0em
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					&:nth-of-type(1)
+						margin-top: 0
+			.img-box
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				width: fit-content
+				margin-top: 80px
+				.left
+					display: block
+					width: 180px
+					transform-origin: center
+					position: relative
+					clip-path: circle(0% at 50% 20%)
+					transition: clip-path 1.5s ease-in-out, transform 1.0s 0.3s ease-in-out
+					+bp1000
+						width: 150px
+					+bp900
+						width: 42%
+					img
+						display: block
+						width: 100%
+						object-fit: cover
+						object-position: center
+						transform-origin: center
+						transform: scale(0.0)
+						animation: bounce-in-reverse 1.0s forwards
+					.overlay
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+						opacity: 0.3
+						transition: all 0.5s ease-in-out
+						&:hover
+							opacity: 0.0
+				.right
+					display: block
+					width: 220px
+					margin-left: 30px
+					transform-origin: center
+					position: relative
+					clip-path: circle(0% at 50% 20%)
+					transition: clip-path 1.5s ease-in-out, transform 1.0s 0.3s ease-in-out
+					+bp1000
+						width: 180px
+					+bp900
+						width: 51%
+						margin-left: 7%
+					img
+						display: block
+						width: 100%
+						object-fit: cover
+						object-position: center
+						transform-origin: center
+						transform: scale(0.0)
+						animation: bounce-in-reverse 1.0s forwards
+					.overlay
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+						opacity: 0.3
+						transition: all 0.5s ease-in-out
+						&:hover
+							opacity: 0.0
+			.txt2-box
+				display: block
+				width: 500px
+				margin-top: 70px
+				transform: translateX(-100px)
+				+bp1100
+					width: 400px
+				+bp900
+					width: 100%
+				p
+					display: block
+					margin-top: 0.8em
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.4
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #999
+					&:nth-of-type(1)
+						margin-top: 0
+#sauce
+	.content-box
+		.left-box
+			.main.is-show
+				transform: rotate(1deg)
+				img
+					clip-path: circle(100% at 50% 80%)
+					animation: bounce-in 1.5s forwards
+			.sub.is-show
+				clip-path: circle(100% at 50% 80%)
+				transform: rotate(-2deg)
+				img
+					animation: bounce-in 1.5s forwards
+		.right-box
+			.img-box
+				.left.is-show
+					transform: rotate(-4deg)
+					clip-path: circle(100% at 50% 80%)
+					img
+						animation: bounce-in 1.5s forwards
+				.right.is-show
+					transform: rotate(-1deg)
+					clip-path: circle(100% at 50% 80%)
+					img
+						animation: bounce-in 1.5s forwards
+						animation-delay: 0.2s
+@keyframes bounce-in
+	0%
+		transform: scale(0.0)
+	40%
+		transform: scale(1.05)
+	50%
+		transform: scale(1.05)
+	60%
+		transform: scale(0.95)
+	80%, 100%
+		transform: scale(1.0)
+@keyframes bounce-in-reverse
+	0%
+		transform: scale(1.0)
+	100%
+		transform: scale(0.0)
+
+
+
+
+
+
+
+
+
+
+#pasta
+	display: block
+	padding-top: 100px
+	margin: 115px auto 0
+	+bp1400
+		padding-top: 80px
+	+bp1100
+		margin: 70px auto 0
+	+bp1000
+		margin: 50px auto 0
+	+bp900
+		margin: 30px auto 0
+	+bp800
+		margin: 20px auto 0
+	h2
+		display: block
+		text-align: center
+		span
+			display: inline-block
+			font-weight: 400
+			font-size: 30px
+			line-height: 1.6
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.05em
+			color: #721C1B
+			+bp1200
+				font-size: 28px
+			+bp1000
+				font-size: 26px
+			+bp850
+				font-size: 24px
+	.content-box
+		display: block
+		width: 900px
+		margin: 70px auto 0
+		position: relative
+		+bp1100
+			width: calc(100% - 200px)
+			margin: 50px auto 0
+		+bp900
+			width: calc(100% - 160px)
+			margin: 40px auto 0
+		+bp850
+			width: calc(100% - 120px)
+		+bp800
+			width: calc(100% - 80px)
+		+bp750
+			width: calc(100% - 60px)
+		.bg-img-box
+			position: absolute
+			top: -165px
+			left: -230px
+			display: block
+			width: 180px
+			transform-origin: top left
+			transform: rotate(-14deg)
+			opacity: 0.3
+			+bp1300
+				top: -200px
+				left: -180px
+			+bp1200
+				left: -130px
+				width: 160px
+			+bp1100
+				left: 0px
+				width: 150px
+			+bp1000
+				top: -190px
+				left: 20px
+				width: 140px
+			+bp900
+				top: -240px
+				left: 10px
+			+bp800
+				top: -250px
+				left: 20px
+			img
+				display: block
+				width: 100%
+				transform-origin: center
+				animation: flipping 6.0s infinite
+		.top-box
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			margin-left: -50px
+			.txt-box
+				display: block
+				width: 400px
+				margin-top: 20px
+				margin-left: 30px
+				+bp1100
+					width: 44%
+				p
+					display: block
+					margin-top: 1.0em
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					&:nth-of-type(1)
+						margin-top: 0
+			.img-box
+				display: block
+				width: 350px
+				margin-left: 70px
+				position: relative
+				+bp1100
+					width: 39%
+					margin-left: 7%
+				.with-pasta
+					display: block
+					width: 100%
+					margin-left: 30px
+					transform-origin: center
+					position: relative
+					+bp900
+						margin-left: 0
+					img
+						display: block
+						width: 100%
+						object-fit: cover
+						object-position: center
+						clip-path: inset(0 0 100% 100%)
+						transition: all 1.0s ease-in-out
+					.overlay
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+						opacity: 0.2
+						transition: all 0.5s ease-in-out
+						&:hover
+							opacity: 0.0
+				.v-txt-box
+					position: absolute
+					top: 85px
+					right: -85px
+					display: flex
+					justify-content: flex-start
+					align-items: flex-start
+					flex-direction: row-reverse
+					padding-left: 15px
+					padding-bottom: 10px
+					border-left: solid 1px #999
+					+bp900
+						right: -30px
+					p
+						display: block
+						margin-left: 10px
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.0
+						font-family: $miniwa-bd-v3
+						letter-spacing: 0.2em
+						writing-mode: vertical-rl
+						color: #555
+						&:nth-of-type(2)
+							margin-left: 0
+		.bottom-box
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			margin: -70px auto 0
+			+bp1050
+				margin: -30px auto 0
+			+bp1000
+				margin: 0px auto 0
+			+bp950
+				margin: 10px auto 0
+			+bp900
+				margin: 30px auto 0
+			+bp800
+				margin: 40px auto 0
+			.img-box
+				display: block
+				width: 250px
+				position: relative
+				+bp1100
+					width: 28%
+				.fryer
+					display: block
+					width: 100%
+					margin-left: 30px
+					transform-origin: center
+					clip-path: circle(0% at 50% 20%)
+					transition: clip-path 1.5s ease-in-out
+					position: relative
+					img
+						display: block
+						width: 100%
+						object-fit: cover
+						object-position: center
+						transform-origin: center
+						transform: scale(0.0)
+						animation: bounce-in-reverse 1.0s forwards
+					.overlay
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+						opacity: 0.3
+						transition: all 0.5s ease-in-out
+						&:hover
+							opacity: 0.0
+				.v-txt-box
+					position: absolute
+					top: 40px
+					right: -68px
+					display: block
+					+bp1000
+						top: 10px
+					p
+						display: block
+						padding-left: 15px
+						padding-bottom: 20px
+						border-left: solid 1px #999
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.2
+						font-family: $miniwa-bd-v3
+						letter-spacing: 0.2em
+						writing-mode: vertical-rl
+						color: #555
+			.txt-box
+				display: block
+				width: 450px
+				margin-top: 130px
+				margin-left: 150px
+				+bp1100
+					width: 50%
+					margin-left: 17%
+				+bp1000
+					margin-top: 80px
+				+bp850
+					margin-top: 50px
+				p
+					display: block
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #999
+#pasta
+	.content-box
+		.top-box
+			.img-box
+				.with-pasta.is-show
+					animation: floating-x 7.2s ease-in-out infinite alternate-reverse, floating-y 2.8s ease-in-out infinite alternate-reverse
+					img
+						clip-path: inset(0 0 0 0)
+		.bottom-box
+			.img-box
+				.fryer.is-show
+					clip-path: circle(100% at 50% 80%)
+					img
+						animation: bounce-in 1.5s forwards
+@keyframes floating-x
+	0%
+		left: -2%
+	100%
+		left: 3%
+@keyframes floating-y
+	0%
+		transform: translateY(-5%)
+	100%
+		transform: translateY(5%)
+@keyframes flipping
+	0%
+		transform: rotateY(0deg)
+	70%
+		transform: rotateY(360deg)
+	100%
+		transform: rotateY(360deg)
+
+
+
+
+
+
+
+
+#pepper
+	display: block
+	padding-top: 100px
+	margin: 80px auto 0
+	+bp1400
+		padding-top: 80px
+		margin: 40px auto 0
+	+bp1000
+		margin: 20px auto 0
+	h2
+		display: block
+		text-align: center
+		span
+			display: inline-block
+			font-weight: 400
+			font-size: 30px
+			line-height: 1.6
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.05em
+			color: #721C1B
+			+bp1200
+				font-size: 28px
+			+bp1000
+				font-size: 26px
+			+bp850
+				font-size: 24px
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		width: fit-content
+		margin: 60px auto 0
+		position: relative
+		+bp1000
+			width: calc(100% - 60px)
+			margin: calc(-0.375*100vw + 465px) auto 0
+		+bp800
+			margin: calc(-0.4*100vw + 490px) auto 0
+		.bg-img-box
+			position: absolute
+			top: -220px
+			right: -100px
+			display: block
+			width: 120px
+			+bp1300
+				top: -160px
+				right: -60px
+				width: 110px
+			+bp1200
+				right: -40px
+				width: 100px
+			+bp1100
+				top: -110px
+				right: -35px
+				width: 95px
+			+bp1000
+				top: -110px
+				right: 0px
+				width: 90px
+			+bp900
+				top: -140px
+				right: -15px
+				width: 80px
+			+bp800
+				top: -110px
+				right: -20px
+				width: 70px
+			+bp750
+				top: -160px
+				right: -50px
+			.outside-box
+				display: block
+				width: 100%
+				position: relative
+				> img
+					display: block
+					width: 100%
+					transform-origin: top right
+					opacity: 0.2
+					animation: shaking 6.0s infinite
+				.inside-box
+					position: absolute
+					left: -160%
+					bottom: -40%
+					display: block
+					width: 130%
+					> img
+						display: block
+						width: 100%
+						opacity: 0.4
+						animation: heaping 6.0s infinite
+		.left-img
+			display: block
+			width: 300px
+			transform-origin: center
+			position: relative
+			+bp1200
+				width: 280px
+			+bp1000
+				width: 29%
+			+bp900
+				width: 25%
+			img
+				display: block
+				width: 100%
+				object-fit: cover
+				object-position: center
+				clip-path: inset(0 0 100% 0)
+				transition: all 1.0s ease-in-out
+			.overlay
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				width: 100%
+				height: 100%
+				background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+				opacity: 0.2
+				transition: all 0.5s ease-in-out
+				&:hover
+					opacity: 0.0
+		.center-box
+			display: block
+			width: 260px
+			margin-left: 70px
+			margin-bottom: -30px
+			position: relative
+			+bp1200
+				margin-left: 40px
+			+bp1000
+				width: 25%
+				margin-left: 4%
+			+bp900
+				width: 280px
+			.txt-box
+				display: block
+				width: 100%
+				+bp900
+					min-width: 280px
+				p
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+			.center-img
+				position: absolute
+				top: -230px
+				left: 30px
+				display: block
+				width: 250px
+				transform-origin: center
+				+bp1000
+					top: -175px
+					width: 96%
+				+bp950
+					top: -175px
+				+bp900
+					top: -165px
+					width: 190px
+				img
+					display: block
+					width: 100%
+					object-fit: cover
+					object-position: center
+					transform-origin: center
+					transform: scale(0.0)
+					clip-path: circle(0% at 50% 20%)
+					animation: bounce-in-reverse 1.0s forwards
+					transition: clip-path 1.5s ease-in-out
+				.overlay
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 100%
+					background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+					opacity: 0.3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.0
+		.right-img
+			display: block
+			width: 350px
+			margin-left: 70px
+			margin-bottom: -60px
+			transform-origin: center
+			position: relative
+			+bp1200
+				width: 300px
+				margin-left: 40px
+			+bp1000
+				width: 33%
+				margin-left: 4%
+			+bp900
+				width: 28%
+			img
+				display: block
+				width: 100%
+				object-fit: cover
+				object-position: center
+				transform-origin: center
+				transform: scale(0.0)
+				clip-path: circle(0% at 50% 20%)
+				animation: bounce-in-reverse 1.0s forwards
+				transition: clip-path 1.5s ease-in-out
+			.overlay
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				width: 100%
+				height: 100%
+				background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+				opacity: 0.3
+				transition: all 0.5s ease-in-out
+				&:hover
+					opacity: 0.0
+#pepper
+	.content-box
+		.left-img.is-show
+			img
+				clip-path: inset(0 0 0 0)
+		.center-box
+			.center-img.is-show
+				img
+					clip-path: circle(100% at 50% 80%)
+					animation: bounce-in 1.5s forwards
+		.right-img.is-show
+			img
+					clip-path: circle(100% at 50% 80%)
+					animation: bounce-in 1.5s forwards
+@keyframes shaking
+	0%
+		transform: translateY(0) rotate(20deg)
+		opacity: 0.0
+	15%
+		transform: translateY(0) rotate(20deg)
+		opacity: 0.2
+	18%
+		transform: translateY(6px) rotate(17deg)
+	21%
+		transform: translateY(-4px) rotate(22deg)
+	24%
+		transform: translateY(2px) rotate(19deg)
+		opacity: 0.2
+	27%
+		transform: translateY(0) rotate(20deg)
+		opacity: 0.2
+	42%
+		opacity: 0.2
+	60%
+		opacity: 0.0
+	100%
+		transform: translateY(0) rotate(20deg)
+		opacity: 0.0
+@keyframes heaping
+	0%
+		clip-path: inset(100% 0 0 0)
+		opacity: 0.4
+	18%
+		clip-path: inset(100% 0 0 0)
+	30%
+		clip-path: inset(0 0 0 0)
+	42%
+		opacity: 0.4
+	60%
+		opacity: 0.0
+	100%
+		opacity: 0.0
+
+
+
+
+
+
+
+#ingredients
+	display: block
+	padding-top: 100px
+	margin: 100px auto 0
+	+bp1400
+		padding-top: 80px
+	+bp1000
+		margin: 60px auto 0
+	h2
+		display: block
+		text-align: center
+		span
+			display: inline-block
+			font-weight: 400
+			font-size: 30px
+			line-height: 1.6
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.05em
+			color: #721C1B
+			+bp1200
+				font-size: 28px
+			+bp1000
+				font-size: 26px
+			+bp850
+				font-size: 24px
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		margin: 160px auto 0
+		+bp1200
+			margin: 120px auto 0
+			width: calc(100% - 100px)
+		+bp900
+			margin: 100px auto 0
+		.left-box
+			display: block
+			width: 310px
+			+bp1200
+				width: 29%
+			.img-box
+				display: block
+				position: relative
+				.base-box
+					.green-pepper-box
+						display: block
+						width: 200px
+						margin-left: 30px
+						position: relative
+						+bp1200
+							width: 65%
+						.green-pepper
+							display: block
+							width: 100%
+						.overlay
+							position: absolute
+							top: 0
+							left: 0
+							display: block
+							width: 100%
+							height: 100%
+							background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+							opacity: 0.3
+							transition: all 0.5s ease-in-out
+							&:hover
+								opacity: 0.0
+					.egg-box
+						display: block
+						margin-top: 55px
+						width: 105px
+						+bp1200
+							margin-top: 30px
+							width: 34%
+						.egg
+							display: block
+							width: 100%
+				.tomato-box
+					position: absolute
+					top: 0
+					left: 300px
+					width: 210px
+					+bp1200
+						left: 97%
+						width: 68%
+					.tomato
+						display: block
+						width: 100%
+				.carrot-box
+					position: absolute
+					left: 140px
+					bottom: 15px
+					display: block
+					width: 310px
+					+bp1200
+						left: 45%
+						width: 100%
+					.carrot
+						display: block
+						width: 100%
+			.txt-box
+				display: block
+				width: 300px
+				margin-left: 10px
+				margin-top: 60px
+				+bp1200
+					width: 99%
+					margin-left: 3%
+					margin-top: 20px
+				+bp900
+					min-width: 350px
+				p
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+		.right-box
+			display: block
+			width: 600px
+			margin-left: 155px
+			+bp1200
+				width: 56%
+				margin-left: 14%
+			.img-box
+				display: block
+				position: relative
+				.base-box
+					display: flex
+					justify-content: flex-start
+					align-items: flex-end
+					flex-direction: column
+					.corn-box
+						display: block
+						width: 225px
+						+bp1200
+							width: 37.5%
+						.corn
+							display: block
+							width: 100%
+					.vegetable-box
+						display: block
+						width: 600px
+						margin-top: 35px
+						position: relative
+						+bp1200
+							width: 100%
+							margin-top: 15px
+						+bp900
+							margin-top: 0
+						+bp800
+							margin-bottom: 20px
+						.vegetable
+							display: block
+							width: 100%
+						.overlay
+							position: absolute
+							top: 0
+							left: 0
+							display: block
+							width: 100%
+							height: 100%
+							background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+							opacity: 0.2
+							transition: all 0.5s ease-in-out
+							&:hover
+								opacity: 0.0
+					.spinach-box
+						display: block
+						width: 360px
+						margin-top: 40px
+						margin-right: 130px
+						position: relative
+						+bp1200
+							width: 60%
+							margin-right: 22%
+						+bp900
+							margin-right: 4%
+						+bp800
+							width: 55%
+						.spinach
+							display: block
+							width: 100%
+						.overlay
+							position: absolute
+							top: 0
+							left: 0
+							display: block
+							width: 100%
+							height: 100%
+							background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+							opacity: 0.2
+							transition: all 0.5s ease-in-out
+							&:hover
+								opacity: 0.0
+				.onion-box
+					position: absolute
+					top: -80px
+					right: 225px
+					display: block
+					width: 140px
+					+bp1200
+						right: 37.5%
+						width: 23%
+					.onion
+						display: block
+						width: 100%
+				.wiener-box
+					position: absolute
+					right: 545px
+					bottom: 115px
+					display: block
+					width: 170px
+					+bp1200
+						right: 91%
+						width: 28%
+					+bp900
+						right: 55%
+					+bp800
+						right: 50%
+					+bp750
+						right: 40%
+					.wiener
+						display: block
+						width: 100%
+
+
+
+
+
+#arrangement
+	display: block
+	padding-top: 100px
+	margin: 85px auto 0
+	+bp1400
+		padding-top: 80px
+	h2
+		display: block
+		text-align: center
+		span
+			display: inline-block
+			font-weight: 400
+			font-size: 30px
+			line-height: 1.6
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.05em
+			color: #721C1B
+			+bp1200
+				font-size: 28px
+			+bp1000
+				font-size: 26px
+			+bp850
+				font-size: 24px
+	.content-box
+		display: block
+		width: fit-content
+		margin: 100px auto 0
+		+bp1100
+			margin: 80px auto 0
+		.top-box
+			display: block
+			width: 700px
+			z-index: 1
+			position: relative
+			img
+				display: block
+				width: 100%
+		.center-box
+			display: block
+			width: 600px
+			margin-top: -105px
+			margin-left: 385px
+			position: relative
+			z-index: 2
+			img
+				display: block
+				width: 100%
+		.bottom-box
+			display: block
+			width: 415px
+			margin-top: -100px
+			margin-left: 100px
+			z-index: 3
+			position: relative
+			img
+				display: block
+				width: 100%
+			.txt-box
+				position: absolute
+				right: -550px
+				bottom: 0px
+				display: block
+				width: 500px
+				p
+					display: block
+					width: 100%
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+
+
+
+
+
+
+
+
+
+
+
+
+
+#interior
+	display: block
+	padding-top: 100px
+	margin: 60px auto 0
+	+bp1400
+		padding-top: 80px
+	+bp1000
+		margin: 20px auto 0
+	h2
+		display: block
+		text-align: center
+		span
+			display: inline-block
+			font-weight: 400
+			font-size: 30px
+			line-height: 1.6
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.05em
+			color: #721C1B
+			+bp1200
+				font-size: 28px
+			+bp1000
+				font-size: 26px
+			+bp850
+				font-size: 24px
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		width: fit-content
+		margin: 100px auto 0
+		position: relative
+		+bp1200
+			width: 960px
+		+bp1100
+			width: calc(100% - 100px)
+			margin: 80px auto 0
+		+bp900
+			margin: 70px auto 0
+		+bp800
+			width: calc(100% - 60px)
+		.bg-left-img-box
+			position: absolute
+			top: -175px
+			left: -160px
+			display: block
+			width: 240px
+			opacity: 0.3
+			+bp1200
+				top: -170px
+				left: -110px
+				width: 220px
+			+bp1100
+				top: -190px
+				left: -60px
+				width: 190px
+			+bp1000
+				top: -180px
+				left: -60px
+				width: 180px
+			+bp900
+				top: -210px
+				left: -80px
+				width: 160px
+			+bp800
+				top: -190px
+				left: -50px
+			+bp750
+				top: -180px
+				width: 150px
+			img
+				display: block
+				width: 100%
+				transform-origin: top center
+		.bg-right-img-box
+			position: absolute
+			top: -155px
+			right: -315px
+			display: block
+			width: 440px
+			opacity: 0.2
+			transform-origin: top right
+			transform: rotate(15deg)
+			+bp1400
+				top: -215px
+				right: -250px
+			+bp1300
+				top: -220px
+				right: -200px
+				width: 380px
+			+bp1200
+				top: -210px
+				right: -110px
+				width: 340px
+			+bp1100
+				top: -220px
+				right: -50px
+			+bp1000
+				top: -190px
+				right: -30px
+				width: 320px
+			+bp900
+				top: -180px
+				right: -20px
+				width: 300px
+			+bp800
+				top: -170px
+				right: -50px
+			+bp750
+				top: -190px
+				width: 280px
+			img
+				display: block
+				width: 100%
+				transform-origin: top center
+		.left-box
+			display: flex
+			justify-content: flex-start
+			align-items: flex-end
+			flex-direction: column
+			width: 580px
+			position: relative
+			+bp1100
+				width: 60%
+			.img-box
+				display: flex
+				justify-content: center
+				align-items: flex-end
+				width: fit-content
+				.v-txt-box
+					display: flex
+					justify-content: flex-start
+					align-items: flex-start
+					flex-direction: row-reverse
+					padding-right: 15px
+					padding-bottom: 10px
+					border-right: solid 1px #999
+					p
+						display: block
+						margin-left: 10px
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.0
+						font-family: $miniwa-bd-v3
+						letter-spacing: 0.2em
+						writing-mode: vertical-rl
+						color: #555
+						.v-num12
+							display: inline-block
+							margin-bottom: 2px
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0
+							writing-mode: vertical-rl
+							transform-origin: center
+							transform: rotate(-90deg)
+							color: #555
+						.v-num5
+							display: inline-block
+							margin-bottom: 5px
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0
+							writing-mode: vertical-rl
+							transform-origin: center
+							transform: rotate(-90deg)
+							color: #555
+				.interior1-box
+					display: block
+					width: 485px
+					margin-left: 40px
+					clip-path: inset(0 50% 0 50%)
+					transition: clip-path 1.5s ease-in-out, transform 1.0s 0.3s ease-in-out
+					position: relative
+					+bp1100
+						width: 84%
+					+bp900
+						margin-left: 20px
+					img
+						display: block
+						width: 100%
+					.overlay
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+						opacity: 0.3
+						transition: all 0.5s ease-in-out
+						&:hover
+							opacity: 0.0
+			.txt-box
+				display: block
+				width: 320px
+				margin-top: 50px
+				margin-right: 25px
+				+bp1100
+					width: 55%
+					margin-right: 4%
+				+bp900
+					min-width: 310px
+					margin-top: 30px
+					margin-right: 0
+				p
+					display: block
+					margin-top: 1.0em
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					&:nth-of-type(1)
+						margin-top: 0
+			.interior2-box
+				position: absolute
+				left: -60px
+				bottom: 15px
+				display: block
+				width: 170px
+				clip-path: inset(100% 0 0 0)
+				transition: all 1.0s ease-in-out
+				+bp1100
+					left: -3%
+					width: 29%
+				+bp1000
+					left: 5%
+				+bp950
+					left: 0%
+				+bp900
+					left: -12%
+				+bp750
+					left: -7%
+					width: 20%
+				img
+					display: block
+					width: 100%
+				.overlay
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 100%
+					background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+					opacity: 0.3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.0
+		.right-box
+			display: block
+			width: 300px
+			margin-top: 50px
+			margin-left: 80px
+			+bp1100
+				width: 35%
+				margin-left: 4%
+			.interior3-box
+				display: block
+				width: 100%
+				clip-path: inset(0 0 100% 0)
+				position: relative
+				transition: all 1.0s ease-in-out
+				img
+					display: block
+					width: 100%
+				.overlay
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 100%
+					background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+					opacity: 0.3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.0
+			.interior4-box, .interior5-box
+				display: block
+				width: 100%
+				margin-top: 10px
+				clip-path: inset(0 0 100% 0)
+				position: relative
+				transition: all 1.0s ease-in-out
+				img
+					display: block
+					width: 100%
+				.overlay
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 100%
+					background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+					opacity: 0.3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.0
+#interior
+	.content-box
+		.left-box
+			.img-box
+				.interior1-box.is-show
+					clip-path: inset(0 0 0 0)
+		.interior2-box.is-show
+			clip-path: inset(0 0 0 0)
+		.right-box
+			.interior3-box.is-show
+				clip-path: inset(0 0 0 0)
+			.interior4-box.is-show
+				clip-path: inset(0 0 0 0)
+			.interior5-box.is-show
+				clip-path: inset(0 0 0 0)
+
+
+
+
+
+#gallery
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	margin: 120px auto 0
+	+bp1000
+		margin: 100px auto 0
+	+bp800
+		margin: 80px auto 0
+	.img-box
+		display: block
+		width: 50%
+		z-index: 2
+		position: relative
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+			opacity: 0.3
+			transition: all 0.5s ease-in-out
+			&:hover
+				opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#face
+	position: absolute
+	top: 40%
+	left: 50%
+	.tear
+		&_right
+			.drops
+				position: absolute
+				top: 50%
+				left: 50%
+				margin-left: 40px
+				.drop
+					width: 100px
+					height: 100px
+					background: #865C48
+					border-radius: 100%
+			@for $i from 1 through 100
+				&:nth-child(#{$i})
+					.drops
+						$speed: #{random(5000) + 3000}ms
+						animation: horizontalRight $speed cubic-bezier(0.545, 0.080, 0.520, 0.975) infinite
+						.drop
+							animation: vertical $speed cubic-bezier(0.545, 0.080, 0.520, 0.975) infinite
+		&_left
+			.drops
+				position: absolute
+				top: 50%
+				left: 50%
+				margin-left: -70px
+				.drop
+					width: 30px
+					height: 30px
+					background: #fff
+					border-radius: 100%
+			@for $i from 1 through 100
+				&:nth-child(#{$i})
+					.drops
+						$speed: #{random(5000) + 3000}ms
+						$size: random(20) + 15px
+						animation: horizontalLeft $speed cubic-bezier(0.545, 0.080, 0.520, 0.975) infinite
+						.drop
+							width: $size
+							height: $size
+							animation: vertical $speed cubic-bezier(0.545, 0.080, 0.520, 0.975) infinite
+@keyframes horizontalRight
+	0%
+		transform: translateX(0px)
+	25%
+		transform: translateX(85px)
+	50%
+		transform: translateX(60px)
+	100%
+		transform: translateX(-100px)
+@keyframes horizontalLeft
+	0%
+		transform: translateX(0px)
+	25%
+		transform: translateX(-85px)
+	50%
+		transform: translateX(-60px)
+	100%
+		transform: translateX(100px)
+@keyframes vertical
+	0%
+		transform: translateY(0px) scale(0.5)
+	18%
+		transform: translateY(8px) scale(1.1)
+	35%
+		transform: translateY(-10px) scale(1)
+	100%
+		transform: translateY(600px) scale(0)
+
+
+
+
+
+
+
+
+
+
+
+

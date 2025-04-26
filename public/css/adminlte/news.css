@@ -1,0 +1,366 @@
+.content-header .tit-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.content-header .tit-box h1 {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content-header .tit-box .create-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+}
+.content-header .tit-box .create-btn p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.content-header .tit-box .back-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+.content-header .tit-box .back-btn p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content-header .desc-box {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+.content-header .desc-box p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+
+.content {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+.content #newsTable {
+  width: initial !important;
+  margin: 0;
+}
+@media screen and (max-width: 1000px) {
+  .content #newsTable {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content #newsTable {
+    margin-bottom: 40px;
+  }
+}
+.content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1) {
+  width: 30px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1) {
+    min-width: 30px !important;
+  }
+}
+.content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2) {
+  width: 90px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2) {
+    min-width: 90px !important;
+  }
+}
+.content #newsTable th:nth-child(3), .content #newsTable td:nth-child(3) {
+  min-width: 200px !important;
+  max-width: 380px !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4) {
+  width: 100px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4) {
+    min-width: 100px !important;
+  }
+}
+.content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5) {
+  width: 110px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5) {
+    min-width: 110px !important;
+  }
+}
+.content #newsTable th {
+  padding: 0.7em 1em;
+  font-size: 14px;
+  color: #555;
+}
+.content #newsTable th:first-of-type {
+  font-size: 16px;
+}
+.content #newsTable td {
+  padding: 0.5em 1em;
+  font-size: 13px;
+  vertical-align: initial;
+  color: #555;
+}
+.content #newsTable td:first-of-type {
+  font-size: 15px;
+}
+.content #newsTable td:last-of-type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content #newsTable td:last-of-type a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  aspect-ratio: 1/1;
+  padding: 0;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type a {
+    width: 25px;
+  }
+}
+.content #newsTable td:last-of-type a:nth-of-type(1) i {
+  font-size: 13px;
+}
+.content #newsTable td:last-of-type a:nth-of-type(2) {
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type a:nth-of-type(2) {
+    margin-left: 0.3em;
+  }
+}
+.content #newsTable td:last-of-type a:nth-of-type(2) i {
+  font-size: 14px;
+  color: #444;
+}
+.content #newsTable td:last-of-type form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  aspect-ratio: 1/1;
+  padding: 0;
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type form {
+    width: 25px;
+    margin-left: 0.3em;
+  }
+}
+.content #newsTable td:last-of-type form button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type form button {
+    padding: 0;
+  }
+}
+.content #newsTable td:last-of-type form button i {
+  font-size: 12px;
+}
+.content form {
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .content form {
+    padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content form {
+    padding-bottom: 40px;
+  }
+}
+.content form .d-block {
+  margin-top: 1.2em;
+}
+.content form .d-block:first-of-type {
+  margin-top: 0;
+}
+.content form .d-block:first-of-type .input-group.adminlte-invalid-igroup {
+  width: fit-content;
+}
+.content form .d-block .form-group {
+  margin: 0;
+}
+.content form .d-block .form-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #882117;
+}
+.content form .d-block .form-group .input-group select#category {
+  width: 250px;
+  flex: initial;
+}
+.content form .d-block .form-note-box {
+  margin-left: 0.2em;
+  margin-top: 0.3em;
+}
+.content form .d-block .form-note-box p {
+  display: block;
+  margin: 0;
+  padding-left: 1.15em;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #777;
+  text-indent: -1.15em;
+}
+.content form .d-block .invalid-feedback {
+  margin: 0.5em 0 0 0.3em;
+  font-size: 10px;
+}
+.content form .register-btn {
+  padding: 13px 25px;
+  margin-top: 20px;
+  border: 0;
+  background-color: #c71f10;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.content .card {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .content .card {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content .card {
+    margin-bottom: 40px;
+  }
+}
+.content .card .card-header {
+  background-color: #c71f10;
+}
+.content .card .card-header .card-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+@media screen and (max-width: 600px) {
+  .content .card .card-header .card-title {
+    font-size: 14px;
+  }
+}
+.content .card .card-body p {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content .card .card-body p:first-of-type {
+  margin-top: 0;
+}
+.content .card .card-body p strong {
+  display: inline-block;
+  width: 80px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+.content .card .card-body .body-box {
+  padding: 15px 20px;
+  margin-top: 0.3em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+@media screen and (max-width: 600px) {
+  .content .card .card-body .body-box {
+    padding: 10px 15px;
+  }
+}
+.content .card .card-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content .card .card-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 36px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+.content .card .card-footer a:first-of-type {
+  font-weight: 400;
+  color: #fff;
+}
+.content .card .card-footer a:first-of-type i {
+  display: block;
+  margin-right: 8px;
+  font-size: 13px;
+  transform-origin: center;
+  transform: scaleY(0.7);
+}
+.content .card .card-footer a:last-of-type {
+  margin-left: 5px;
+  font-weight: 700;
+  color: #444;
+}
+.content .card .card-footer a:last-of-type i {
+  display: block;
+  margin-right: 5px;
+  font-size: 13px;
+}

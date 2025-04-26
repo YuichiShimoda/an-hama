@@ -1,0 +1,686 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+	cursor: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	max-width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-box
+	position: fixed
+	top: 0
+	left: 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	padding: 35px 80px
+	background: linear-gradient(180deg, #fff 0%, rgba(#fff, 0.8) 30%, rgba(#fff, 0.6) 60%, rgba(#fff, 0.0) 100%)
+	z-index: 1000
+	transition: all 0.5s ease-in-out
+	&.is-scrolled
+		.logo-box
+			.logo
+				width: 160px
+				+bp1400
+					width: 150px
+				+bp850
+					width: 130px
+				+bp600
+					width: 110px
+				+bp450
+					width: 100px
+	+bp1400
+		padding: 25px 60px
+	+bp1100
+		padding: 20px 50px
+	+bp850
+		padding: 15px 30px
+	+bp500
+		padding: 10px 15px
+	.logo-box
+		display: block
+		width: 240px
+		transition: all 0.5s ease-in-out
+		&:hover
+			opacity: 0.5
+		+bp1400
+			width: 200px
+		+bp850
+			width: 170px
+		+bp600
+			width: 150px
+		+bp500
+			width: 130px
+		+bp450
+			width: 110px
+		.logo
+			display: block
+			width: 100%
+			transition: all 1.0s ease-in-out
+	nav
+		display: block
+		ul
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			width: 100%
+			li
+				display: block
+				margin-left: 40px
+				+bp850
+					margin-left: 25px
+				+bp450
+					margin-left: 20px
+				+bp420
+					margin-left: 15px
+				&:first-of-type
+					margin-left: 0
+				a
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					flex-direction: column
+					&:hover
+						.en
+							animation: text-link-hover 0.8s infinite
+						.jp
+							color: #B92928
+							opacity: 0.8
+					.en
+						display: block
+						background: linear-gradient(60deg, currentColor 75%, rgba(#fff, 1.0) 95%, currentColor 95%)
+						background-size: 200%
+						background-position: 200% 0%
+						-webkit-background-clip: text
+						-webkit-text-fill-color: rgba(#fff, 0.0)
+						font-weight: 700
+						font-size: 12px
+						line-height: 1.0
+						font-family: $rift
+						letter-spacing: 0.05em
+						color: #006134
+						+bp600
+							font-size: 10px
+						&::selection
+							background: #ddd
+							color: #555
+					.jp
+						display: block
+						margin-top: 5px
+						font-weight: 700
+						font-size: 14px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
+						transition: all 0.5s ease-in-out
+						+bp600
+							font-size: 12px
+						+bp450
+							margin-top: 3px
+@keyframes text-link-hover
+	100%
+		background-position: 50% 0%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-box
+	display: block
+	width: 100%
+	padding: 60px 0 0
+	transition: all 0.5s ease-in-out
+	+bp1000
+		padding: 40px 0 0
+	+bp500
+		padding: 25px 0 0
+	+bp450
+		padding: 50px 0 0
+		z-index: 2
+		position: relative
+	+bp400
+		padding: 40px 0 0
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		+bp700
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			margin: 0 auto
+		+bp400
+			transform-origin: center
+			transform: scale(0.9)
+		.left-box
+			display: block
+			.logo
+				display: block
+				width: 200px
+				transition: all 0.5s ease-in-out
+				z-index: 2
+				position: relative
+				&:hover
+					opacity: 0.5
+				+bp800
+					width: 160px
+				+bp700
+					margin: 0 auto
+				+bp500
+					width: 120px
+				img
+					display: block
+					width: 100%
+			.zipcode
+				display: block
+				margin-top: 20px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				font-family: $miniwa-lt-v3
+				letter-spacing: 0.05em
+				color: #555
+				+bp500
+					margin-top: 15px
+				span
+					display: inline-block
+					margin-right: 3px
+					font-weight: 400
+					font-size: 13px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+			.address
+				display: block
+				margin-top: 8px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				font-family: $miniwa-lt-v3
+				letter-spacing: 0.05em
+				color: #555
+			.open-time-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				margin-top: 15px
+				.tit
+					display: block
+					width: 80px
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+				.desc
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+					.from
+						display: inline-block
+						margin-left: 5px
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
+					.end-time
+						display: inline-block
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.0em
+						color: #777
+			.closed-day-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				margin-top: 8px
+				.tit
+					display: block
+					width: 80px
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+				.desc
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+			.note
+				display: block
+				margin-top: 15px
+				font-weight: 400
+				font-size: 10px
+				line-height: 1.0
+				font-family: $miniwa-md-v3
+				letter-spacing: 0.05em
+				color: #777
+		.right-box
+			display: flex
+			justify-content: flex-start
+			align-items: flex-end
+			flex-direction: column
+			margin-left: 150px
+			z-index: 2
+			position: relative
+			+bp1000
+				margin-left: 60px
+			+bp800
+				margin-left: 40px
+			+bp700
+				justify-content: center
+				align-items: center
+				flex-direction: initial
+				flex-wrap: wrap
+				width: 450px
+				margin-top: 25px
+				margin-left: 0
+			+bp500
+				width: 400px
+				margin-top: 15px
+			+bp450
+				flex-direction: column
+				width: 350px
+				margin-top: 25px
+			.sns-box
+				display: none
+			.tel-box
+				display: block
+				&:hover
+					.inside-box p
+						-webkit-text-fill-color: initial
+				.inside-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					pointer-events: none
+					+bp450
+						pointer-events: initial
+					.icon
+						display: block
+						width: 25px
+						+bp1000
+							width: 20px
+						+bp500
+							width: 18px
+						+bp450
+							width: 22px
+					p
+						display: block
+						margin-left: 10px
+						margin-bottom: 4px
+						font-weight: 400
+						font-size: 24px
+						line-height: 1.0
+						font-family: $miniwa-bd-v3
+						letter-spacing: 0.05em
+						color: #555
+						background: linear-gradient(90deg, #555, #999, #555)
+						background-repeat: no-repeat
+						background-size: 80%
+						animation: tel-highlight 3.0s linear infinite
+						-webkit-background-clip: text
+						-webkit-text-fill-color: rgba(#555, 0.2)
+						overflow: hidden
+						transition: all 0.5s ease-in-out
+						+bp1000
+							margin-bottom: 0
+							font-size: 20px
+						+bp500
+							font-size: 18px
+						+bp450
+							font-size: 22px
+			.h-line
+				display: block
+				width: 300px
+				height: 1px
+				margin-top: 20px
+				background-color: #ccc
+				+bp1000
+					width: 220px
+					margin-top: 12px
+				+bp800
+					width: 190px
+				+bp700
+					display: none
+				+bp450
+					display: block
+			.link-box
+				display: block
+				margin-top: 20px
+				+bp700
+					margin-top: 0
+					margin-left: 30px
+				+bp450
+					margin-top: 15px
+					margin-left: 0
+				ul
+					display: flex
+					justify-content: flex-start
+					justify-content: center
+					li
+						display: block
+						margin-left: 30px
+						+bp1000
+							margin-left: 20px
+						+bp800
+							margin-left: 15px
+						+bp500
+							margin-left: 10px
+						+bp450
+							margin-left: 30px
+						&:nth-of-type(1)
+							margin-left: 0
+						a
+							display: block
+							background: linear-gradient(60deg, currentColor 75%, rgba(#fff, 1.0) 95%, currentColor 95%)
+							background-size: 200%
+							background-position: 200% 0%
+							-webkit-background-clip: text
+							-webkit-text-fill-color: rgba(#fff, 0.0)
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $miniwa-lt-v3
+							letter-spacing: 0.05em
+							color: #555
+							+bp500
+								font-size: 12px
+							+bp450
+								font-size: 14px
+							&:hover
+								animation: text-link-hover 0.8s infinite
+								color: #B92928
+							&::selection
+								background: #ddd
+								color: #555
+			.voice-link-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				margin-top: 15px
+				background: linear-gradient(60deg, currentColor 75%, rgba(#fff, 1.0) 95%, currentColor 95%)
+				background-size: 200%
+				background-position: 200% 0%
+				-webkit-background-clip: text
+				-webkit-text-fill-color: rgba(#fff, 0.0)
+				+bp500
+					margin-top: 10px
+				&:hover
+					animation: text-link-hover 0.8s infinite
+					color: #B92928
+				&::selection
+					background: #ddd
+					color: #555
+				p
+					display: block
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+				.icon
+					display: block
+					width: 13px
+					margin-left: 5px
+					animation: blinker 0.6s infinite ease-in-out
+	.parking-link-btn
+		display: none
+		+bp450
+			position: absolute
+			top: 0
+			right: 0
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			padding: 10px 15px
+			p
+				display: block
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.0
+				font-family: $miniwa-lt-v3
+				letter-spacing: 0.05em
+				color: #555
+			.icon
+				display: block
+				width: 13px
+				margin-left: 5px
+				animation: blinker 0.6s infinite ease-in-out
+	.copyright-box
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		width: 100%
+		padding: 15px 0 11px
+		margin-top: 60px
+		background-color: #333
+		+bp1000
+			margin-top: 40px
+		+bp500
+			margin-top: 20px
+		+bp400
+			margin-top: 15px
+		.corporate-box
+			display: block
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			.link-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				z-index: 2
+				position: relative
+				transition: all 0.5s ease-in-out
+				&:hover
+					opacity: 0.5
+				.logo
+					display: block
+					width: 50px
+					+bp450
+						width: 40px
+				// .name
+				// 	display: block
+				// 	margin-left: 10px
+				// 	font-weight: 400
+				// 	font-size: 12px
+				// 	line-height: 1.0
+				// 	font-family: $iroha-25icho-stdn
+				// 	letter-spacing: 0.05em
+				// 	color: #ccc
+				// 	&::selection
+				// 		background: #721C1B
+			.invoice-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				margin-left: 15px
+				.tit
+					display: block
+					font-weight: 400
+					font-size: 11px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #ccc
+					&::selection
+						background: #721C1B
+				.num
+					display: block
+					font-weight: 400
+					font-size: 11px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #ccc
+					&::selection
+						background: #721C1B
+		.copyright
+			display: block
+			margin-top: 5px
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.0
+			font-family: $miniwa-bd-v3
+			letter-spacing: 0.0em
+			color: #fff
+			&::selection
+				background: #721C1B
+			span
+				display: inline-block
+				margin-right: 0.3em
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.0
+				font-family: serif
+				letter-spacing: 0.05em
+				color: #fff
+				&::selection
+					background: #721C1B
+
+
+
+
+
+@keyframes tel-highlight
+	0%
+		background-position: -500%
+	70%, 100%
+		background-position: 500%
+@keyframes blinker
+	0%
+		opacity: 1.0
+	100%
+		opacity: 0.0

@@ -1,0 +1,821 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	max-width: 100%
+	background: url("../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+*::selection
+	background: #ddd
+
+
+#c
+	display: none !important
+
+
+
+
+
+
+
+
+
+#first-view
+	display: block
+	width: 100%
+	margin: 150px auto 0
+	+bp900
+		margin: 120px auto 0
+	+bp700
+		margin: 100px auto 0
+	+bp450
+		margin: 80px auto 0
+	h1
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+		+bp450
+			font-size: 20px
+	.desc-box
+		display: block
+		width: 500px
+		margin: 40px auto 0
+		+bp600
+			width: calc(100% - 60px)
+		+bp450
+			width: calc(100% - 30px)
+			margin: 30px auto 0
+		.base
+			display: block
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.7
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #555
+		.note
+			display: block
+			padding-left: 1.35em
+			font-weight: 400
+			font-size: 11px
+			line-height: 1.7
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #777
+			text-indent: -1.35em
+			&:nth-of-type(4)
+				margin-top: 20px
+				+bp550
+					margin-top: 10px
+
+
+
+
+
+
+
+
+
+
+.wpcf7-response-success
+	display: block
+	margin: 30px 0 0
+	font-weight: 400
+	font-size: 14px !important
+	line-height: 1.5
+	font-family: $iroha-25icho-stdn
+	letter-spacing: 0.05em
+	text-align: center
+	white-space: nowrap
+	color: #DC4C4C
+	border: 0 !important
+	+bp1000
+		margin: 25px auto 0
+	+bp700
+		margin: 20px auto 0
+
+
+
+
+
+
+
+
+
+
+
+#input-form
+	display: block
+	width: 650px
+	margin: 30px auto 0
+	+bp900
+		width: calc(100% - 160px)
+	+bp700
+		width: calc(100% - 100px)
+	+bp600
+		width: calc(100% - 60px)
+	+bp450
+		width: calc(100% - 30px)
+	.input-box
+		display: block
+		width: 100%
+		padding: 40px 50px 30px
+		margin: 0 auto
+		box-shadow: 0 5px 5px rgba(#666, 0.3)
+		background-color: #F1F0E9
+		transition: all 1.0s ease-in-out
+		+bp600
+			padding: 40px 30px 30px
+			~.each_input
+				width: calc(100% - 60px)
+				margin: 15px auto 0
+		+bp420
+			padding: 40px 15px 30px
+			~.each_input
+				width: calc(100% - 30px)
+		.mark-desc
+			display: block
+			margin-bottom: 20px
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #B92928
+			.mark
+				display: inline-block
+				padding-left: 5px
+				margin-top: -5px
+				margin-right: 7px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0
+				color: #B92928
+		.each-input
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			width: 100%
+			margin-top: 15px
+			&:first-of-type
+				margin-top: 0
+			+bp850
+				flex-direction: column
+			> .input-tittle
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				width: 150px
+				padding-top: 6px
+				+bp850
+					width: 100%
+					padding-top: 0
+					margin-bottom: 4px
+				> .input-s-tittle
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.3
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #333
+					br
+						display: block
+						+bp850
+							display: none
+				> .required
+					display: block
+					padding-left: 5px
+					margin-top: -5px
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0
+					color: #B92928
+			> .input-part
+				max-width: 500px
+				+bp850
+					width: 100%
+					max-width: initial
+				input
+					height: 30px
+					padding: 3px 10px
+					background: none
+					border: solid 1px #ccc
+					border-radius: 5px
+					background-color: #fff
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					appearance: none
+					-webkit-appearance: none
+				.select-box
+					display: block
+					width: fit-content
+					font-weight: 500
+					font-size: 14px
+					line-height: 1.5
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #333
+					position: relative
+					&::before
+						position: absolute
+						right: 10px
+						top: 12px
+						width: 0
+						height: 0
+						content: ""
+						border-style: solid
+						border-right: 4px solid rgba(#fff, 0.0)
+						border-left: 4px solid rgba(#fff, 0.0)
+						border-top: 8px solid #d9d9d9
+						border-bottom: 0
+						z-index: 1
+					select
+						width: 135px
+						height: 30px
+						padding: 3px 10px
+						background: none
+						border: solid 1px #ccc
+						border-radius: 5px
+						background-color: #fff
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
+						appearance: none
+						-webkit-appearance: none
+						&.input-sex
+							width: 100px
+						&.input-age
+							width: 120px
+						&.input-day
+							width: 130px
+						&.input-num
+							width: 100px
+						&.input-visit-num
+							width: 120px
+						&.input-know
+							width: 300px
+						&.input-visit-how
+							width: 110px
+						&.input-taste
+							width: 130px
+						&.input-service
+							width: 130px
+						&.input-clean
+							width: 130px
+						&.input-interior
+							width: 130px
+						&.input-overall
+							width: 130px
+						> option
+							color: #555
+				textarea
+					width: 100%
+					height: 160px
+					padding: 8px 10px
+					background: none
+					border: solid 1px #ccc
+					border-radius: 5px
+					background-color: #fff
+					font-weight: 400
+					font-size: 14px
+					font-family: $iroha-25icho-stdn
+					line-height: 1.5
+					letter-spacing: 0.05em
+					color: #555
+					resize: vertical
+					appearance: none
+					-webkit-appearance: none
+				.input-name
+					width: 200px
+				.input-email
+					width: 250px
+				.input-place
+					> .wpcf7-list-item
+						margin: 0 15px 0 0
+						.wpcf7-list-item-label
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #555
+					> .wpcf7-list-item.last
+						margin-right: 0
+				.input-request
+					width: 400px
+					+bp850
+						width: 100%
+				.wpcf7-not-valid-tip
+					display: block
+					margin-left: 2px
+					margin-top: 5px
+					font-weight: 400
+					font-size: 10px
+					font-family: $iroha-25icho-stdn
+					line-height: 1.0
+					letter-spacing: 0.075em
+					color: #DC4C4C
+					transform-origin: left top
+		.line
+			display: block
+			width: calc(100% + 20px)
+			height: 1px
+			margin: 30px 0 30px -10px
+			background-color: #ddd
+			+bp400
+				width: calc(100% + 10px)
+				margin: 25px 0 25px -5px
+	.contact-button
+		display: block
+		width: 160px
+		height: 43px
+		margin: 50px auto 0
+		background-color: #B92928
+		border: none
+		font-weight: 400
+		font-size: 14px
+		line-height: 1.0
+		font-family: $iroha-25icho-stdn
+		letter-spacing: 0.05em
+		color: #fff
+		appearance: none
+		-webkit-appearance: none
+		+bp700
+			margin: 30px auto 0
+	.wpcf7-spinner
+		display: none
+	.wpcf7-response-output
+		display: block
+		margin: 20px 0 0
+		font-weight: 400
+		font-size: 14px !important
+		line-height: 1.0
+		font-family: $iroha-25icho-stdn
+		letter-spacing: 0.05em
+		text-align: center
+		white-space: nowrap
+		color: #DC4C4C
+		border: 0 !important
+		+bp500
+			line-height: 1.4
+			text-align: left
+			white-space: initial
+
+
+
+
+
+
+.thanks-box
+	display: block
+	width: 500px
+	margin: 50px auto
+	+bp600
+		width: calc(100% - 60px)
+		margin: 40px auto
+	+bp450
+		width: calc(100% - 30px)
+		margin: 30px auto 0
+	p
+		display: block
+		font-weight: 400
+		font-size: 14px
+		font-family: $iroha-25icho-stdn
+		line-height: 1.5
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+		&:nth-of-type(2)
+			margin-top: 30px
+			text-align: left
+		&:nth-of-type(3)
+			text-align: left
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#overview
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	width: 1050px
+	margin: 100px auto 0
+	+bp1400
+		margin: 80px auto 0
+	+bp1300
+		width: 1020px
+	+bp1200
+		justify-content: center
+		width: calc(100% - 200px)
+		margin: 60px auto 0
+	+bp1000
+		width: calc(100% - 160px)
+		margin: 50px auto 0
+	+bp900
+		justify-content: space-between
+		width: 100%
+	.left-box
+		display: block
+		width: 450px
+		+bp1200
+			width: calc(100% - 560px)
+		+bp1100
+			width: calc(100% - 520px)
+		+bp900
+			width: calc(100% - 550px)
+		+bp850
+			width: calc(100% - 530px)
+		+bp800
+			width: calc(100% - 450px)
+	.right-box
+		display: block
+		width: 500px
+		+bp1200
+			margin-left: 60px
+		+bp1100
+			min-width: 490px
+			margin-left: 50px
+		+bp1000
+			margin-left: 40px
+		+bp900
+			margin-top: 40px
+			margin-left: 60px
+		+bp850
+			margin-left: 40px
+		+bp800
+			width: 430px
+			min-width: 430px
+			margin-top: 20px
+			margin-left: 30px
+		.content-box
+			display: block
+			width: 100%
+			.ele
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 100%
+				padding: 30px 25px
+				border-bottom: solid 1px #ccc
+				+bp1200
+					padding: 25px 20px
+				+bp1100
+					padding: 20px 20px
+				.tit
+					display: block
+					font-weight: 400
+					font-size: 18px
+					line-height: 1.0
+					font-family: $miniwa-bd-v3
+					letter-spacing: 0.05em
+					color: #555
+					+bp1200
+						font-size: 16px
+				.desc
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+					+bp800
+						font-size: 12px
+					&.tel
+						pointer-events: none
+					.from
+						display: inline-block
+						margin-left: 5px
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
+						+bp800
+							font-size: 12px
+					.end-time
+						display: inline-block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.0em
+						color: #777
+					.parking
+						display: inline-block
+						margin-left: 10px
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.0em
+						color: #777
+		.note-box
+			display: block
+			width: 500px
+			padding: 0 25px
+			margin-top: 5px
+			p
+				display: block
+				width: 100%
+				padding-left: 2.5em
+				font-weight: 400
+				font-size: 10px
+				line-height: 1.3
+				font-family: $miniwa-lt-v3
+				letter-spacing: 0.0em
+				text-indent: -2.5em
+				color: #777
+
+
+
+
+
+
+
+
+#access
+	display: block
+	width: 100%
+	margin: 150px auto 0
+	+bp1400
+		margin: 120px auto 0
+	+bp1200
+		margin: 100px auto 0
+	+bp1000
+		margin: 80px auto 0
+	h2
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		width: 720px
+		margin: 80px auto 0
+		+bp1200
+			margin: 60px auto 0
+		+bp1000
+			margin: 50px auto 0
+		.train-box
+			display: block
+			width: fit-content
+			.icon
+				display: block
+				width: 60px
+				margin: 0 auto
+				aspect-ratio: 1 / 1
+				object-fit: contain
+			.cat
+				display: block
+				width: fit-content
+				padding: 0 0.3em 0.15em
+				margin: 30px auto 0
+				border-bottom: solid 1px #a35251
+				font-weight: 400
+				font-size: 18px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.15em
+				color: #721C1B
+			.desc
+				display: block
+				margin-top: 20px
+				width: 300px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				text-align: center
+				color: #555
+				+bp1000
+					width: 240px
+		.car-box
+			display: block
+			width: fit-content
+			margin-left: 50px
+			+bp1000
+				margin-left: 40px
+			.icon
+				display: block
+				width: 60px
+				margin: 0 auto
+				aspect-ratio: 1 / 1
+				object-fit: contain
+			.cat
+				display: block
+				width: fit-content
+				padding: 0 0.3em 0.15em
+				margin: 30px auto 0
+				border-bottom: solid 1px #a35251
+				font-weight: 400
+				font-size: 18px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.15em
+				color: #721C1B
+			.desc
+				display: block
+				width: 300px
+				margin-top: 20px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #555
+				+bp1000
+					width: 240px
+	.google-map
+		display: block
+		width: 100%
+		height: 450px
+		margin: 120px auto 0
+		z-index: 2
+		position: relative
+		+bp1400
+			margin: 100px auto 0
+		+bp1200
+			margin: 80px auto 0
+		+bp1000
+			height: 420px
+		iframe
+			display: block
+			width: 100%
+			height: 100%
+			filter: grayscale(1.0)
+
+
+
+
+
+
+
+
+
+
+#gallery
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	margin: 0 auto 0
+	.img-box
+		display: block
+		width: 50%
+		position: relative
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+			opacity: 0.3
+			transition: all 0.5s ease-in-out
+			&:hover
+				opacity: 0.0
+
+
+
+
+
+input::placeholder, textarea::placeholder
+	color: #b5b5b5

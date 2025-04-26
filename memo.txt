@@ -1,0 +1,21 @@
+gulp
+php artisan serve
+npm run dev
+
+
+◆ssh接続
+
+PW：7TikyBfiVWVx
+
+
+adminLTEデモ：https://tunasv2.yawas.my/admin/index3.html
+CRUD作成：https://www.itsolutionstuff.com/post/laravel-12-crud-application-example-tutorialexample.html
+adminLTE document1：https://adminlte.io/docs/3.2/index.html
+adminLTE document2：https://jeroennoten.github.io/Laravel-AdminLTE/sections/components/basic_forms_components.html
+
+
+
+
+◆XSERVERにlaravelのwebアプリをgitからデプロイ
+全体の流れ+phpのバージョン切替：https://qiita.com/ren7087/items/654f2be6b34ba428405f
+composerのバージョンUP+nodeインストール：https://huck-town.com/setting/command-composer/

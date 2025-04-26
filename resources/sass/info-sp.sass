@@ -1,0 +1,996 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	max-width: 100%
+	background: url("../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+*::selection
+	background: #ddd
+
+
+
+
+
+
+
+
+
+
+
+
+#first-view
+	display: block
+	width: 100%
+	margin: 120px auto 0
+	+bp450
+		margin: 80px auto 0
+	h1
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+		+bp450
+			font-size: 20px
+	.desc-box
+		display: block
+		width: calc(100% - 100px)
+		margin: 30px auto 0
+		+bp450
+			width: calc(100% - 60px)
+			margin: 20px auto 0
+		.note
+			display: block
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.7
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			text-align: center
+			color: #777
+
+
+
+
+
+
+
+
+
+
+
+
+.side-bar
+	position: fixed
+	top: 50%
+	right: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	width: fit-content
+	padding: 20px 15px
+	border-top-left-radius: 15px
+	border-bottom-left-radius: 15px
+	background: #B92928
+	z-index: 2000
+	+bp450
+		padding: 15px 11px
+		border-top-left-radius: 10px
+		border-bottom-left-radius: 10px
+	.icon-box
+		display: block
+		width: 38px
+		position: relative
+		+bp450
+			width: 24px
+		.nomal
+			display: block
+			width: 100%
+			filter: hue-rotate(110deg)
+			transform-origin: left bottom
+			animation: puni 5.0s infinite
+		.move
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			animation: puni-translate 5.0s 1.3s infinite
+	p
+		display: block
+		margin-top: 10px
+		font-weight: 400
+		font-size: 20px
+		line-height: 1.0
+		font-family: $iroha-25icho-stdn
+		letter-spacing: 0.25em
+		writing-mode: vertical-rl
+		color: #fff
+		+bp450
+			margin-top: 6px
+			font-size: 14px
+@keyframes puni
+	0%
+		transform: scale(0.9, 1.05) translateY(0) rotate(45deg)
+		opacity: 1.0
+	3%
+		transform: scale(1.1, 0.9) translateY(10%)
+	6%
+		transform: scale(1.0, 1.0) translateY(0)
+	9%
+		transform: scale(1.05, 0.95) translateY(5%)
+	12%
+		transform: scale(1.0, 1.0) translateY(0)
+	15%
+		transform: scale(1.02, 0.98) translateY(2%) rotate(0deg)
+	18%
+		transform: scale(1.0, 1.0) translateY(0)
+	20%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 1.0
+	50%
+		opacity: 1.0
+	60%
+		opacity: 0.0
+	100%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 0.0
+@keyframes puni-translate
+	0%
+		transform: scale(0.9, 1.05) translate(27%, 17%) rotate(45deg)
+		opacity: 1.0
+	3%
+		transform: scale(1.1, 0.9) translate(27%, 27%)
+	6%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	9%
+		transform: scale(1.05, 0.95) translate(27%, 22%)
+	12%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	15%
+		transform: scale(1.02, 0.98) translate(27%, 19%) rotate(0deg)
+	18%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	20%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+		opacity: 1.0
+	50%
+		opacity: 1.0
+	60%
+		opacity: 0.0
+	100%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 0.0
+
+
+
+
+
+
+#overview
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	flex-direction: column
+	width: calc(100% - 160px)
+	margin: 40px auto 0
+	.left-box
+		display: block
+		width: 250px
+		+bp450
+			width: 220px
+	.right-box
+		display: block
+		width: 500px
+		margin-top: 20px
+		+bp550
+			width: 400px
+		+bp450
+			width: 370px
+			margin-top: 10px
+		+bp400
+			width: 350px
+		.content-box
+			display: block
+			width: 100%
+			.ele
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 100%
+				padding: 25px 25px
+				border-bottom: solid 1px #ccc
+				+bp550
+					padding: 20px 15px
+				&:first-of-type
+					.desc
+						+bp450
+							width: 210px
+							line-height: 1.3
+				// &:nth-of-type(5)
+				// 	.desc
+				// 		+bp450
+				// 			width: 170px
+				// 			line-height: 1.3
+				&:last-of-type
+					.desc
+						// +bp450
+						// 	width: 180px
+						// 	line-height: 1.3
+				.tit
+					display: block
+					font-weight: 400
+					font-size: 18px
+					line-height: 1.0
+					font-family: $miniwa-bd-v3
+					letter-spacing: 0.05em
+					color: #555
+					+bp550
+						font-size: 14px
+				.desc
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+					+bp550
+						font-size: 12px
+					+bp450
+						font-size: 14px
+						text-align: right
+					&.tel
+						pointer-events: none
+						+bp450
+							pointer-events: initial
+							z-index: 2
+					.from
+						display: inline-block
+						margin-left: 5px
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
+						+bp550
+							font-size: 12px
+						+bp450
+							font-size: 14px
+					.end-time
+						display: inline-block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.0em
+						color: #777
+					.commas
+						display: inline-block
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.05em
+						color: #555
+						+bp550
+							font-size: 12px
+						+bp450
+							display: none
+					.pay-logo
+						display: inline-block
+						width: 240px
+						margin-left: 10px
+						margin-bottom: -2px
+						+bp550
+							width: 225px
+							margin-left: 5px
+						+bp450
+							width: 215px
+							margin-bottom: -1px
+						+bp400
+							width: 195px
+							margin-bottom: 0px
+						// display: block
+						// width: 250px
+						// margin-top: 6px
+						// margin-left: auto
+						// margin-right: 0
+						// +bp450
+						// 	width: 215px
+						// 	margin-left: -45px
+				a.desc
+					z-index: 3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.5
+					.parking
+						display: inline-block
+						margin-left: 10px
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.0em
+						white-space: nowrap
+						color: #777
+						+bp450
+							// display: block
+							margin-top: 5px
+							margin-left: 0
+							font-size: 11px
+					.external-link-icon
+						display: inline-block
+						width: 17px
+						margin-left: 5px
+						margin-bottom: -2px
+						animation: blinker 0.6s infinite ease-in-out
+						+bp450
+							width: 16px
+							margin-left: 4px
+						+bp400
+							width: 14px
+							margin-left: 3px
+							margin-bottom: -1px
+
+		.pay-box
+			display: flex
+			justify-content: flex-end
+			width: 100%
+			padding-right: 25px
+			margin-top: 15px
+			+bp550
+				padding-right: 15px
+			img
+				display: block
+				width: 260px
+		// .note-box
+		// 	display: block
+		// 	width: 500px
+		// 	padding: 0 25px
+		// 	margin-top: 5px
+		// 	p
+		// 		display: block
+		// 		width: 100%
+		// 		padding-left: 2.5em
+		// 		font-weight: 400
+		// 		font-size: 10px
+		// 		line-height: 1.3
+		// 		font-family: $miniwa-lt-v3
+		// 		letter-spacing: 0.0em
+		// 		text-indent: -2.5em
+		// 		color: #777
+@keyframes blinker
+	0%
+		opacity: 1.0
+	100%
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+#access
+	display: block
+	width: 100%
+	margin: 80px auto 0
+	+bp600
+		margin: 60px auto 0
+	h2
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+		+bp600
+			margin: 60px auto 0
+		+bp450
+			font-size: 20px
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		width: 100%
+		margin: 50px auto 0
+		+bp600
+			margin: 40px auto 0
+		+bp450
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			margin: 30px auto 0
+		.train-box
+			display: block
+			width: fit-content
+			.icon
+				display: block
+				width: 60px
+				margin: 0 auto
+				aspect-ratio: 1 / 1
+				object-fit: contain
+				+bp550
+					width: 55px
+			.cat
+				display: block
+				width: fit-content
+				padding: 0 0.3em 0.15em
+				margin: 30px auto 0
+				border-bottom: solid 1px #a35251
+				font-weight: 400
+				font-size: 18px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.15em
+				color: #721C1B
+				+bp550
+					margin: 25px auto 0
+					font-size: 16px
+			.desc
+				display: block
+				margin-top: 20px
+				width: 240px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				text-align: center
+				color: #555
+				+bp550
+					width: 210px
+					font-size: 13px
+		.car-box
+			display: block
+			width: fit-content
+			margin-left: 40px
+			+bp600
+				margin-left: 30px
+			+bp500
+				margin-left: 20px
+			+bp450
+				margin-top: 30px
+				margin-left: 0
+			.icon
+				display: block
+				width: 60px
+				margin: 0 auto
+				aspect-ratio: 1 / 1
+				object-fit: contain
+				+bp550
+					width: 55px
+			.cat
+				display: block
+				width: fit-content
+				padding: 0 0.3em 0.15em
+				margin: 30px auto 0
+				border-bottom: solid 1px #a35251
+				font-weight: 400
+				font-size: 18px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.15em
+				color: #721C1B
+				+bp550
+					margin: 25px auto 0
+					font-size: 16px
+					+bp450
+						margin: 15px auto 0
+			.desc
+				display: block
+				width: 240px
+				margin-top: 20px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #555
+				+bp550
+					width: 210px
+					font-size: 13px
+	.google-map
+		display: block
+		width: 100%
+		height: 420px
+		margin: 80px auto 0
+		z-index: 2
+		position: relative
+		+bp600
+			margin: 60px auto 0
+		+bp450
+			height: 400px
+		+bp400
+			height: 380px
+		iframe
+			display: block
+			width: 100%
+			height: 100%
+			filter: grayscale(1.0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#parking-map
+	display: block
+	width: 100%
+	margin: 40px auto 70px
+	+bp500
+		margin: 35px auto 60px
+	+bp450
+		margin: 30px auto 50px
+	.pc-content-box
+		display: block
+		width: calc(100% - 60px)
+		margin: 0 auto
+		position: relative
+		+bp500
+			display: none
+		.inside
+			display: block
+			width: 100%
+			img
+				display: block
+				width: 100%
+		.ripple-box
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 4%
+			aspect-ratio: 1 / 1
+			transform-origin: center center
+			transform: translate(50%, -50%)
+			z-index: 30
+			&.parking1
+				top: 18%
+				left: 27%
+			&.parking2
+				top: 40%
+				left: 32%
+			&.parking3
+				top: 46%
+				left: 24.4%
+			&.parking4
+				top: 8%
+				right: 37%
+			&.parking5
+				top: 12%
+				right: 33%
+			&.parking6
+				top: 53%
+				right: 23%
+			&.parking7
+				left: 32%
+				bottom: 26%
+			&.parking8
+				left: 28%
+				bottom: 10%
+			&.parking9
+				left: 32%
+				bottom: 6%
+			&.parking10
+				left: 52%
+				bottom: 8%
+			&.parking11
+				right: 25.5%
+				bottom: 26%
+			&.parking12
+				right: 26.5%
+				bottom: 10%
+			.ripple-btn
+				position: absolute
+				display: block
+				width: 10px
+				height: 10px
+				// &::before
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple 4.0s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(3px)
+				// &::after
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple2 4.0s -2.5s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(2px)
+	.sp-content-box
+		display: none
+		width: calc(100% - 30px)
+		margin: 0 auto
+		position: relative
+		+bp500
+			display: block
+		.inside
+			display: block
+			width: 100%
+			img
+				display: block
+				width: 100%
+		.ripple-box
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 30px
+			height: 30px
+			transform-origin: center center
+			transform: translate(50%, -50%)
+			z-index: 30
+			+bp400
+				width: 25px
+				height: 25px
+			&.parking1
+				top: 20%
+				left: 10%
+			&.parking2
+				top: 37.5%
+				left: 17%
+			&.parking3
+				top: 42.6%
+				left: 6%
+			&.parking4
+				top: 12%
+				right: 37.5%
+			&.parking5
+				top: 16%
+				right: 31.5%
+			&.parking6
+				top: 48%
+				right: 17.5%
+			&.parking7
+				left: 17%
+				bottom: 33.5%
+			&.parking8
+				left: 11.5%
+				bottom: 20.5%
+			&.parking9
+				left: 17%
+				bottom: 17%
+			&.parking10
+				left: 45.5%
+				bottom: 18.5%
+			&.parking11
+				right: 21%
+				bottom: 33.5%
+			&.parking12
+				right: 22.5%
+				bottom: 20.5%
+			.ripple-btn
+				position: absolute
+				display: block
+				width: 10px
+				height: 10px
+				// &::before
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple 4.0s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(3px)
+				// &::after
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple2 4.0s -2.5s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(2px)
+	.desc-box
+		display: block
+		width: calc(100% - 60px)
+		margin: 20px auto 0
+		+bp500
+			width: calc(100% - 30px)
+		+bp450
+			margin: 15px auto 0
+		p
+			display: block
+			width: 100%
+			padding-left: 1.0em
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.6
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #777
+			text-indent: -1.0em
+			+bp450
+				font-size: 10px
+	.download-btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: fit-content
+		padding: 15px 30px
+		margin: 30px auto 0
+		background-color: #B92928
+		border-radius: 25px
+		transition: all 0.5s ease-in-out
+		z-index: 3
+		position: relative
+		+bp450
+			padding: 12px 25px
+			margin: 20px auto 0
+		&:hover
+			opacity: 0.5
+		span
+			display: block
+			font-weight: 700
+			font-size: 16px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #fff
+			+bp500
+				font-size: 14px
+@keyframes ripple
+	0%
+		transform: scale(0.0)
+		opacity: 0.0
+	50%
+		opacity: 1.0
+	90%
+		transform: scale(1.2)
+		opacity: 0.0
+	100%
+		transform: scale(1.2)
+		opacity: 0.0
+@keyframes ripple2
+	0%
+		transform: scale(0.0)
+		opacity: 0.0
+	50%
+		opacity: 1.0
+	80%
+		transform: scale(1.4)
+	95%
+		opacity: 0.0
+	100%
+		transform: scale(1.4)
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gallery
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	margin: 0 auto 0
+	+bp450
+		flex-direction: column
+	.img-box
+		display: block
+		width: 50%
+		z-index: 2
+		position: relative
+		+bp450
+			width: 100%
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+			opacity: 0.3
+			transition: all 0.5s ease-in-out
+			&:hover
+				opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.md-overlay
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background: #000
+	opacity: .7
+	z-index: 3
+.md-contents
+	display: none
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 400px
+	z-index: 1999
+	overflow: hidden
+	+bp500
+		width: calc(100vw - 30px)
+	> .md-inner
+		display: block
+		width: 100%
+		padding: 60px 20px 20px
+		background-color: #fff
+		border-radius: 5px
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		position: relative
+		// > h3
+		// 	display: block
+		// 	font-weight: 700
+		// 	font-size: 16px
+		// 	line-height: 1.7
+		// 	font-family: sans-serif
+		// 	letter-spacing: 0.05em
+		// 	color: #000
+		// > p
+		// 	display: block
+		// 	margin-top: 10px
+		// 	font-weight: 400
+		// 	font-size: 12px
+		// 	line-height: 1.7
+		// 	font-family: sans-serif
+		// 	letter-spacing: 0.05em
+		// 	color: #555
+		> .fig
+			display: block
+			width: 100%
+		> .note
+			display: block
+			width: calc(100% - 10px)
+			margin: 2px auto 0
+			padding-left: 1.35em
+			font-weight: 400
+			font-size: 11px
+			line-height: 1.5
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #777
+			text-indent: -1.35em
+			+bp450
+				font-size: 10px
+			&:first-of-type
+				margin: 7px auto 0
+		> .close_btn
+			position: absolute
+			top: 15px
+			right: 15px
+			display: block
+			width: 40px
+			pointer-events: initial
+			-webkit-user-select: initial
+			-moz-touch-callout: initial
+			-moz-user-select: initial
+			user-select: initial
+			transition: all 0.3s ease-in-out
+		> .close_btn:hover
+			opacity: 0.5

@@ -1,0 +1,2334 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp650
+	@media screen and (max-width: 650px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	max-width: 100%
+	background: url("../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+*::selection
+	background: #ddd
+
+
+
+
+
+
+
+
+
+
+
+
+#mv
+	display: block
+	width: 100%
+	height: 85dvh
+	background-color: #ccc
+	position: relative
+	+bp450
+		height: initial
+	.video-box
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100vw
+		height: 85dvh
+		z-index: 0
+		+bp450
+			position: initial
+			top: initial
+			left: initial
+			height: initial
+			aspect-ratio: 1 / 1
+		video
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			// filter: brightness(1.3) saturate(1.2)
+	.mesh
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		display: block
+		width: 100%
+		height: 85dvh
+		object-fit: cover
+		object-position: center
+		opacity: 0.2
+		+bp450
+			height: initial
+			aspect-ratio: 1 / 1
+	// .center
+	// 	display: none !important
+	// 	position: absolute
+	// 	top: 0
+	// 	left: 0
+	// 	right: 0
+	// 	bottom: 0
+	// 	margin: auto
+	// 	display: block
+	// 	width: fit-content
+	// 	height: fit-content
+	// 	font-weight: 400
+	// 	font-size: 44px
+	// 	line-height: 1.7
+	// 	font-family: $miniwa-hv-v3
+	// 	letter-spacing: 0.05em
+	// 	text-align: center
+	// 	color: #fff
+	.center-box
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		display: block
+		width: 180px
+		height: 180px
+		+bp450
+			width: 120px
+			height: 120px
+		.inside
+			display: block
+			width: 100%
+			height: 100%
+			position: relative
+			.circle
+				display: block
+				width: 100%
+				transform-origin: center center
+				filter: brightness(10.0) grayscale(1.0)
+			.pasta-icon
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+				display: block
+				width: 130px
+				filter: brightness(10.0) grayscale(1.0)
+				+bp450
+					width: 85px
+	.info-box
+		position: absolute
+		right: 0
+		bottom: 0
+		width: 270px
+		padding: 25px 20px 25px
+		background-color: rgba(#fff, 0.7)
+		+bp450
+			display: none
+		.time-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: 100%
+			.tit
+				display: block
+				width: 100%
+				font-weight: 400
+				font-size: 16px
+				line-height: 1.0
+				font-family: $miniwa-hv-v3
+				letter-spacing: 0.2em
+				text-align: center
+				color: #721C1B
+			.open-time
+				display: block
+				width: 100%
+				margin-top: 15px
+				.lunch
+					display: block
+					width: 100%
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.0em
+					text-align: center
+					color: #555
+					+bp450
+						font-size: 16px
+				.hour-box
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 100%
+					margin-top: 5px
+					margin-left: 5px
+					+bp450
+						margin-top: 10px
+					.start-time
+						display: inline-block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.0em
+						white-space: nowrap
+						color: #555
+						+bp450
+							font-size: 16px
+					.end-time
+						display: inline-block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.0em
+						white-space: nowrap
+						color: #777
+						transform-origin: left bottom
+						animation: puni 5.0s infinite
+						+bp450
+							font-size: 14px
+		.closed-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: 100%
+			margin-top: 20px
+			.tit
+				display: block
+				width: 100%
+				font-weight: 400
+				font-size: 16px
+				line-height: 1.0
+				font-family: $miniwa-hv-v3
+				letter-spacing: 0.2em
+				text-align: center
+				color: #721C1B
+			.closed-day
+				display: block
+				width: 100%
+				margin-top: 15px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.0em
+				text-align: center
+				color: #555
+		.tel
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			padding:0 0 5px
+			margin: 20px auto 0
+			position: relative
+			+bp450
+				z-index: 2
+			&:before
+				position: absolute
+				left: 0
+				bottom: 0
+				content: ""
+				width: 100%
+				height:  1px
+				background: #721C1B
+				opacity: 0.3
+			.letter
+				display: block
+				font-weight: 400
+				font-size: 20px
+				line-height: 1.0
+				font-family: $miniwa-hv-v3
+				letter-spacing: 0.0em
+				text-align: center
+				color: #721C1B
+				opacity: 0.0
+				transform: scale(0.9)
+				pointer-events: none
+				+bp450
+					pointer-events: initial
+		.tel-desc-box
+			display: block
+			width: 100%
+			margin-top: 15px
+			.desc
+				display: block
+				padding-left: 1.05em
+				text-indent: -1.05em
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.0em
+				color: #999
+@keyframes puni
+	0%
+		transform: scale(0.9, 1.05) translateY(0)
+	15%
+		transform: scale(1.1, 0.9) translateY(10%)
+	30%
+		transform: scale(1.0, 1.0) translateY(0)
+	45%
+		transform: scale(1.05, 0.95) translateY(5%)
+	60%
+		transform: scale(1.0, 1.0) translateY(0)
+	75%
+		transform: scale(1.02, 0.98) translateY(2%)
+	100%
+		transform: scale(1.0, 1.0) translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+#loop-band
+	display: flex
+	width: 100%
+	padding: 20px 0
+	background-color: #721C1B
+	white-space: nowrap
+	overflow: hidden
+	pointer-events: none
+	z-index: 20
+	+bp550
+		padding: 18px 0
+	+bp450
+		padding: 16px 0
+	.word-box
+		animation: EnglishMoveLoop 20s linear infinite
+		transform: translateX(100%)
+		li
+			display: inline-block
+			padding: 0 25px
+			+bp550
+				padding: 0 20px
+			+bp450
+				padding: 0 15px
+			img
+				display: block
+				width: 550px
+				+bp550
+					width: 400px
+				+bp450
+					width: 320px
+@keyframes EnglishMoveLoop
+	0%
+		transform: translateX(0%)
+	100%
+		transform: translateX(-100%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sp-info
+	display: none
+	+bp450
+		display: block
+		width: 100%
+		padding: 25px 20px 25px
+		background-color: #fff
+	.time-box
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		width: 100%
+		.tit
+			display: block
+			width: 100%
+			font-weight: 400
+			font-size: 16px
+			line-height: 1.0
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.2em
+			text-align: center
+			color: #721C1B
+		.open-time
+			display: block
+			width: 100%
+			margin-top: 15px
+			.lunch
+				display: block
+				width: 100%
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.0em
+				text-align: center
+				color: #555
+				+bp450
+					font-size: 16px
+			.hour-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				margin-top: 5px
+				margin-left: 5px
+				+bp450
+					margin-top: 10px
+				.start-time
+					display: inline-block
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.0em
+					white-space: nowrap
+					color: #555
+					+bp450
+						font-size: 16px
+				.end-time
+					display: inline-block
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.0em
+					white-space: nowrap
+					color: #777
+					transform-origin: left bottom
+					animation: puni 5.0s infinite
+					+bp450
+						font-size: 14px
+	.closed-box
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		width: 100%
+		margin-top: 20px
+		.tit
+			display: block
+			width: 100%
+			font-weight: 400
+			font-size: 16px
+			line-height: 1.0
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.2em
+			text-align: center
+			color: #721C1B
+		.closed-day
+			display: block
+			width: 100%
+			margin-top: 15px
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.0em
+			text-align: center
+			color: #555
+	.tel
+		display: flex
+		justify-content: center
+		align-items: center
+		width: fit-content
+		padding:0 0 5px
+		margin: 20px auto 0
+		position: relative
+		+bp450
+			z-index: 2
+		&:before
+			position: absolute
+			left: 0
+			bottom: 0
+			content: ""
+			width: 100%
+			height:  1px
+			background: #721C1B
+			opacity: 0.3
+		.letter
+			display: block
+			font-weight: 400
+			font-size: 20px
+			line-height: 1.0
+			font-family: $miniwa-hv-v3
+			letter-spacing: 0.0em
+			text-align: center
+			color: #721C1B
+			opacity: 0.0
+			transform: scale(0.9)
+			pointer-events: none
+			+bp450
+				pointer-events: initial
+	.tel-desc-box
+		display: block
+		width: 100%
+		margin-top: 15px
+		.desc
+			display: block
+			padding-left: 1.05em
+			text-indent: -1.05em
+			font-weight: 400
+			font-size: 11px
+			line-height: 1.4
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.0em
+			color: #999
+
+
+
+
+
+
+
+
+
+
+
+
+#concept
+	display: block
+	padding: 90px 0 40px
+	width: 100%
+	+bp550
+		padding: 70px 0 40px
+	+bp450
+		padding: 55px 0 30px
+	&.is-show
+		.content-box
+			.img-box
+				img
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.0s
+				.v-txt-box
+					.reveal-box:nth-of-type(1)
+						h2
+							filter: blur(0)
+							animation: reveal-vertical 5.0s infinite
+					.reveal-box:nth-of-type(2)
+						h2
+							filter: blur(0)
+							animation: reveal-vertical 5.0s 0.2s infinite
+			.txt-box
+				h2
+					letter-spacing: 0.0em
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.2s
+				.first-desc-box
+					p
+						opacity: 1.0
+						filter: blur(0)
+						transition-delay: 0.9s
+					img
+						opacity: 1.0
+						filter: blur(0)
+						transition-delay: 0.7s
+				.second-desc-box
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.9s
+				.link-btn
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.9s
+	.content-box
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		width: calc(100% - 60px)
+		margin: 0 auto
+		.img-box
+			display: block
+			width: 230px
+			position: relative
+			+bp550
+				margin-left: -100px
+			+bp500
+				width: 200px
+			+bp450
+				width: 180px
+				margin-left: -120px
+			+bp420
+				width: 170px
+			img
+				display: block
+				width: 100%
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+			.v-txt-box
+				position: absolute
+				top: -20px
+				right: -15px
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				+bp450
+					right: -25px
+				.reveal-box:nth-of-type(1)
+					display: block
+					width: fit-content
+					margin-left: 10px
+					order: 2
+					overflow: hidden
+					+bp450
+						width: 35px
+					h2
+						display: block
+						width: fit-content
+						padding: 15px 10px
+						background-color: #B92928
+						font-weight: 400
+						font-size: 16px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.15em
+						writing-mode: vertical-rl
+						color: #fff
+						filter: blur(24px)
+						transform: translateY(-150%)
+						transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+						+bp450
+								font-size: 15px
+						&::selection
+							background: #9e1413
+				.reveal-box:nth-of-type(2)
+					display: block
+					width: fit-content
+					order: 1
+					overflow: hidden
+					+bp450
+						width: 35px
+					h2
+						padding: 15px 10px
+						background-color: #B92928
+						font-weight: 400
+						font-size: 16px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.15em
+						writing-mode: vertical-rl
+						color: #fff
+						filter: blur(24px)
+						transform: translateY(-150%)
+						transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+						+bp450
+								font-size: 15px
+						&::selection
+							background: #9e1413
+		.txt-box
+			display: block
+			width: 500px
+			margin-top: 50px
+			+bp600
+				width: calc(100% - 100px)
+			+bp550
+				margin-top: 40px
+			+bp500
+				width: 100%
+			h2
+				display: block
+				font-weight: 400
+				font-size: 20px
+				line-height: 1.0
+				font-family: $miniwa-hv-v3
+				letter-spacing: -0.5em
+				color: #721C1B
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97), letter-spacing 2.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+				+bp420
+					font-size: 18px
+					white-space: nowrap
+			.first-desc-box
+				display: block
+				width: 100%
+				margin-top: 20px
+				position: relative
+				p
+					display: block
+					width: 100%
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					opacity: 0
+					filter: blur(24px)
+					transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+				img
+					position: absolute
+					top: -110px
+					right: -40px
+					display: block
+					width: 120px
+					opacity: 0
+					filter: blur(24px)
+					transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+					+bp600
+						right: -80px
+					+bp550
+						top: -150px
+						right: -30px
+					+bp500
+						right: -10px
+					+bp450
+						top: -135px
+						width: 100px
+			.second-desc-box
+				display: block
+				width: 100%
+				margin-top: 15px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.7
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #555
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+			.link-btn
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				width: fit-content
+				padding: 15px 30px
+				margin: 25px auto 0
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+				z-index: 2
+				position: relative
+				+bp450
+					padding: 10px 15px
+					margin: 20px auto 0
+				&:hover
+					p
+						animation: concept-link-text 4.0s ease-in-out forwards
+					img
+						animation: concept-link-arrow 4.0s ease-in-out forwards
+				p
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #333
+				img
+					display: block
+					margin-left: 20px
+					width: 75px
+					transform-origin: left center
+					overflow: hidden
+					animation: arrowBounce 2.5s infinite
+@keyframes reveal-vertical
+	0%
+		transform: translateY(-130%)
+		letter-spacing: 0.01em
+	15%
+		transform: translateY(0%)
+		letter-spacing: 0.2em
+	30%
+		letter-spacing: 0.15em
+	60%
+		opacity: 1.0
+	80%, 100%
+		transform: translateY(0%)
+		opacity: 0.0
+@keyframes concept-link-text
+	0%
+		letter-spacing: 0.05em
+		opacity: 0.0
+	20%
+		letter-spacing: 1.0em
+	40%
+		letter-spacing: 1.0em
+		opacity: 1.0
+	60%
+		opacity: 0.6
+	65%
+		letter-spacing: 0.2em
+		opacity: 1.0
+	85%
+		letter-spacing: 0.2em
+		opacity: 1.0
+	100%
+		letter-spacing: 0.05em
+		opacity: 1.0
+@keyframes concept-link-arrow
+	0%
+		transform: scaleX(0.3)
+		opacity: 0.0
+	20%
+		transform: scaleX(0.6)
+	40%
+		transform: scaleX(0.6)
+		opacity: 1.0
+	60%
+		opacity: 0.6
+	65%
+		transform: scaleX(1.15)
+		opacity: 1.0
+	85%
+		transform: scaleX(1.15)
+		opacity: 1.0
+	100%
+		transform: scaleX(1.0)
+		opacity: 1.0
+@keyframes arrowBounce
+	0%
+		opacity: 1.0
+		transform: translateX(0)
+	60%
+		transform: translateX(20%)
+	80%
+		opacity: 1.0
+		transform: translateX(5%)
+	95%
+		opacity: 0.0
+		transform: translateX(130%)
+	100%
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+#back-shot
+	display: block
+	width: 100%
+	height: 0
+	object-fit: cover
+	object-position: bottom center
+	filter: brightness(0.6)
+	transform-origin: top center
+	transition: height 1.0s ease-in-out
+	will-change: opacity, filter
+	&.is-show
+		height: 240px
+		filter: brightness(1.0)
+		+bp650
+			height: 220px
+		+bp600
+			height: 200px
+		+bp550
+			height: 175px
+		+bp500
+			height: 160px
+		+bp450
+			height: 150px
+		+bp420
+			height: 142px
+		+bp400
+			height: 135px
+	img
+		display: block
+		width: 100%
+		height: 100%
+
+
+
+
+
+
+
+
+
+#news
+	display: block
+	width: 100%
+	margin: 50px auto 0
+	position: relative
+	+bp450
+		margin: 100px auto 0
+	+bp420
+		margin: 105px auto 0
+	+bp400
+		margin: 110px auto 0
+	&.is-show
+		.content-box
+			.top-box
+				.tit-box
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.2s
+				.news-box
+					border-left: 0
+					.news-ele
+						cursor: pointer
+						z-index: 2
+						position: relative
+					.news-ele:nth-of-type(1)
+						.main-box
+							.cat-box
+								transform: scaleX(1.0)
+								transition-delay: 0.6s
+					.news-ele:nth-of-type(2)
+						.main-box
+							.cat-box
+								transform: scaleX(1.0)
+								transition-delay: 0.7s
+					.news-ele:nth-of-type(3)
+						.main-box
+							.cat-box
+								transform: scaleX(1.0)
+								transition-delay: 0.8s
+					.news-ele
+						.main-box
+							.tit
+								opacity: 1.0
+								filter: blur(0)
+								transition-delay: 0.9s
+						.time
+							opacity: 1.0
+							filter: blur(0)
+							transition-delay: 1.0s
+			.bottom-box
+				.detail-ele
+					p
+						opacity: 1.0
+						filter: blur(0)
+						transition-delay: 1.2s
+	.content-box
+		display: block
+		width: 100%
+		padding: 20px 0
+		border: solid 1px #ccc
+		background-color: #fff
+		z-index: 2
+		position: relative
+		.top-box
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			width: 100%
+			+bp600
+				width: calc(100vw - 60px)
+				margin: 0 auto
+			+bp450
+				width: calc(100vw - 30px)
+			.tit-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+				width: fit-content
+				padding-right: 0
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+				.en
+					display: block
+					font-weight: 700
+					font-size: 18px
+					line-height: 1.0
+					font-family: $rift
+					letter-spacing: 0.05em
+					color: #999
+				.jp
+					display: block
+					margin-top: 10px
+					font-weight: 400
+					font-size: 18px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.1em
+					color: #333
+			.news-box
+				display: block
+				min-height: 95px
+				padding: 20px 0 0 0
+				border-left: solid 1px #fff
+				transition: all 1.0s 0.5s ease-in-out
+				+bp600
+					width: 100%
+				.news-ele
+					display: flex
+					justify-content: space-between
+					align-items: center
+					width: 100%
+					margin-top: 12px
+					+bp600
+						margin: 12px auto 0
+					&:nth-of-type(1)
+						margin: 0 auto 0
+						.cat-box
+							background-color: #006134
+							&::selection
+								background: #014425
+					&:nth-of-type(2)
+						.cat-box
+							background-color: #fff
+							p
+								color: #555 !important
+					&:nth-of-type(3)
+						.cat-box
+							background-color: #B92928
+							&::selection
+								background: #9e1413
+					&:hover
+						.main-box .cat-box p:nth-child(1)
+							box-shadow: inset 1px 1px 1px 0px rgba(#fff, 0.5), 2px 2px 14px 0px rgba(#000, 0.1), 2px 2px 5px 0px rgba(#000, 0.1)
+							transform: rotateX(0deg)
+					&:hover
+						.main-box .cat-box p:nth-child(2)
+							box-shadow: inset 1px 1px 1px 0px rgba(#fff, 0.5), 2px 2px 14px 0px rgba(#000, 0.1), 2px 2px 5px 0px rgba(#000, 0.1)
+							transform: rotateX(-90deg)
+							color: rgba(#fff, 0.0)
+					.main-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						width: 500px
+						+bp600
+							width: calc(100% - 90px)
+						+bp500
+							width: calc(100% - 75px)
+						.cat-box
+							display: block
+							width: 80px
+							height: 28px
+							transform-origin: left center
+							transform: scaleX(0.0)
+							transition: all 0.5s ease-in-out
+							position: relative
+							perspective: 600px
+							p
+								position: absolute
+								display: block
+								width: 100%
+								height: 28px
+								box-sizing: border-box
+								box-shadow: inset 1px 1px 1px 0px rgba(#fff, 0.5), 2px 2px 14px 0px rgba(#000, 0.1), 2px 2px 5px 0px rgba(#000, 0.1)
+								font-weight: 400
+								font-size: 12px
+								line-height: 28px
+								font-family: $iroha-25icho-stdn
+								letter-spacing: 0.15em
+								text-align: center
+								color: #fff
+								transition: all 0.3s ease-in-out
+								&:nth-child(1)
+									box-shadow: -3px -3px 14px 0px #fff9, -2px -2px 5px 0px #fff9, 2px 2px 14px 0px #0002, 2px 2px 5px 0px #0001
+									transform-origin: 50% 50% -14px
+									transform: rotateX(90deg)
+								&:nth-child(2)
+									transform-origin: 50% 50% -14px
+									transform: rotateX(0deg)
+						.tit
+							display: block
+							margin-left: 25px
+							width: 475px
+							font-weight: 400
+							font-size: 12px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.15em
+							white-space: nowrap
+							color: #555
+							overflow: hidden
+							text-overflow: ellipsis
+							opacity: 0
+							filter: blur(24px)
+							transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+							+bp600
+								width: calc(100% - 105px)
+								line-height: 1.5
+							+bp500
+								width: calc(100% - 90px)
+								margin-left: 15px
+					.time
+						display: block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.05em
+						color: #777
+						opacity: 0
+						filter: blur(24px)
+						transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+						+bp500
+							font-size: 10px
+		.bottom-box
+			display: block
+			width: 560px
+			margin: 25px auto 0
+			+bp600
+				width: calc(100vw - 60px)
+				margin: 20px auto 0
+			+bp450
+				width: calc(100vw - 30px)
+			.detail-ele
+				display: block
+				width: 100%
+				p
+					display: block
+					width: 100%
+					margin-top: 1.0em
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.5
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					opacity: 0
+					filter: blur(24px)
+					transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+					&:nth-of-type(1)
+						margin-top: 0
+	.back
+		position: absolute
+		top: -1%
+		left: 0
+		display: block
+		width: 101%
+		height: 102%
+		content: ""
+		background-color: #F2E9D8
+		transform-origin: center
+		transform: rotate(1deg)
+		z-index: 1
+		+bp450
+			top: -7%
+			left: 4%
+			height: 107%
+			transform: rotate(3deg)
+
+
+
+
+
+
+
+#chef
+	display: block
+	width: calc(100vw - 100px)
+	padding-top: 60px
+	padding-bottom: 50px
+	margin: 0 auto 0
+	+bp600
+		padding-top: 50px
+	+bp450
+		width: calc(100vw - 30px)
+		padding-top: 40px
+		padding-bottom: 40px
+	.content-box
+		.left-box.is-show
+			.main
+				opacity: 1.0
+				filter: blur(0)
+				transition-delay: 0.0s
+			.sub1
+				opacity: 1.0
+				filter: blur(0)
+				transition-delay: 0.5s
+			.sub2
+				opacity: 1.0
+				filter: blur(0)
+				transition-delay: 0.7s
+			.en.is-show
+				right: -40vw
+				opacity: 1.0
+				filter: blur(0)
+				transition-delay: 0.7s
+				+bp600
+					right: -38vw
+				+bp550
+					right: -38vw
+				+bp500
+					right: -36vw
+				+bp450
+					right: -46vw
+				+bp420
+					right: -48vw
+				+bp400
+					right: -47vw
+		.right-box
+			.img-box
+				img.is-show
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.0s
+				.en.is-show
+					top: 130px
+					opacity: 1.0
+					filter: blur(0)
+					color: #aaa
+					transition-delay: 0.2s
+					+bp650
+						top: 125px
+					+bp600
+						top: 120px
+					+bp550
+						top: 115px
+					+bp500
+						top: 110px
+					+bp450
+						top: 100px
+					+bp400
+						top: 90px
+			.txt-box.is-show
+				p
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.4s
+		.right-box
+			.prof-box.is-show
+				opacity: 1.0
+				filter: blur(0)
+				transition-delay: 0.0s
+				.txt-box
+					.manager
+						opacity: 1.0
+						transition-delay: 0.4s
+					.name-box
+						transform: translateX(0px)
+						opacity: 1.0
+						transition-delay: 0.4s
+
+	.content-box
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		width: 100%
+		padding-right: 0px
+		margin: 0 auto
+		.left-box
+			display: block
+			width: 40%
+			margin-left: -42%
+			position: relative
+			.main
+				display: block
+				width: 100%
+				opacity: 0
+				filter: blur(50px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+			.sub1
+				position: absolute
+				top: 20px
+				right: -16vw
+				display: block
+				width: 21vw
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+				+bp450
+					right: -19vw
+					width: 23vw
+				+bp420
+					right: -21vw
+					width: 24vw
+			.sub2
+				position: absolute
+				top: 85px
+				right: -31vw
+				display: block
+				width: 11vw
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+				+bp650
+					top: 65px
+				+bp600
+					top: 60px
+					right: -33vw
+				+bp500
+					top: 55px
+				+bp450
+					top: 50px
+					right: -37vw
+					width: 13vw
+				+bp420
+					top: 45px
+					right: -39vw
+				+bp400
+					top: 45px
+					right: -39vw
+			.en
+				position: absolute
+				right: -40vw
+				bottom: -60px
+				display: block
+				font-weight: 400
+				font-size: 64px
+				line-height: 0.8
+				font-family: $shalimar
+				letter-spacing: 0.05em
+				color: #006134
+				transform-origin: left center
+				transform: rotate(-5deg)
+				opacity: 0
+				filter: blur(24px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97), right 1.4s ease-in-out
+				+bp650
+					right: -44vw
+					font-size: 60px
+				+bp600
+					right: -42vw
+					bottom: -45px
+					font-size: 52px
+				+bp550
+					right: -42vw
+					bottom: -35px
+					font-size: 48px
+				+bp500
+					right: -40vw
+					bottom: -32px
+					font-size: 42px
+				+bp450
+					right: -55vw
+					font-size: 45px
+				+bp420
+					right: -57vw
+					font-size: 45px
+				+bp400
+					right: -55vw
+					font-size: 40px
+		.right-box
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			flex-wrap: wrap
+			flex-direction: row-reverse
+			width: fit-content
+			margin: 80px auto 0
+			position: relative
+			+bp600
+				margin: 60px auto 0
+			+bp550
+				margin: 50px auto 0
+			+bp500
+				margin: 45px auto 0
+			.img-box
+				display: block
+				width: 35%
+				margin-left: 0
+				img
+					display: block
+					width: 100%
+					opacity: 0
+					filter: blur(40px)
+					transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97), left 2.4s ease-in-out
+				.en
+					position: absolute
+					top: 115px
+					right: 25px
+					display: inline-block
+					font-weight: 400
+					font-size: 32px
+					line-height: 1.0
+					font-family: $shalimar
+					letter-spacing: 0.05em
+					color: #111
+					transform-origin: left center
+					transform: rotate(0deg)
+					opacity: 0
+					filter: blur(24px)
+					transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97), right 1.4s ease-in-out, top 1.4s ease-in-out, color 2.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+					+bp650
+						top: 110px
+						font-size: 30px
+					+bp600
+						top: 105px
+						right: -5px
+					+bp550
+						top: 100px
+						right: 10px
+						font-size: 28px
+					+bp500
+						top: 95px
+						font-size: 25px
+					+bp450
+						top: 85px
+						right: 25px
+						width: 115px
+						font-size: 38px
+						line-height: 0.9
+					+bp420
+						// top: 100px
+						font-size: 36px
+					+bp400
+						top: 75px
+						right: 15px
+						font-size: 32px
+			.txt-box
+				display: block
+				width: 53%
+				margin-right: 5%
+				p
+					display: block
+					margin-top: 1.0em
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.5
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #777
+					opacity: 0
+					filter: blur(24px)
+					transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97), left 2.4s ease-in-out
+					&:nth-of-type(1)
+						margin-top: 0
+			.prof-box
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				width: fit-content
+				margin-top: 60px
+				opacity: 0
+				filter: blur(60px)
+				transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97), left 2.4s ease-in-out
+				+bp600
+					margin-top: 45px
+				+bp550
+					margin-top: 40px
+				+bp500
+					margin-left: 0
+				+bp400
+					margin-top: 30px
+				.img
+					display: block
+					width: 140px
+					+bp500
+						width: 120px
+					+bp400
+						width: 110px
+				.txt-box
+					display: block
+					width: 280px
+					margin-top: 0
+					margin-left: 20px
+					+bp600
+						width: 240px
+					+bp500
+						width: 190px
+					.manager
+						display: block
+						padding-left: 12px
+						margin-bottom: 7px
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.0
+						font-family: $miniwa-bd-v3
+						letter-spacing: 0.05em
+						color: #777
+						opacity: 0.0
+						transition: all 2.6s cubic-bezier(0.67, 0, 0.57, 0.97)
+					.name-box
+						display: flex
+						justify-content: space-between
+						align-items: center
+						width: 100%
+						padding: 0 10px 10px
+						border-bottom: solid 1px #777
+						opacity: 0.0
+						transform: translateX(40px)
+						transition: all 2.6s cubic-bezier(0.67, 0, 0.57, 0.97)
+						+bp500
+							transform: translateX(30px)
+						+bp420
+							transform: translateX(20px)
+						.name
+							display: block
+							width: 100px
+							font-weight: 400
+							font-size: 28px
+							line-height: 1.0
+							letter-spacing: 0.05em
+							color: #B92928
+							+bp450
+								width: 90px
+							+bp400
+								width: 85px
+						.role
+							display: block
+							margin-top: 0
+							font-weight: 400
+							font-size: 16px
+							line-height: 1.0
+							font-family: $miniwa-lt-v3
+							letter-spacing: 0.05em
+							color: #999
+							+bp450
+								font-size: 15px
+					.desc-box
+						display: block
+						width: 100%
+						margin-top: 10px
+						p
+							display: block
+							margin-top: 0
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.5
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #777
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#menu
+	display: block
+	width: 100%
+	height: 800px
+	+bp450
+		height: 650px
+	.content-box
+		.logo.is-show
+			opacity: 1.0
+			transform: scale(1.0)
+		.left-bottom-box.is-show
+			.info-box
+				.left-box
+					.free-box
+						opacity: 1.0
+						filter: blur(0)
+						transition-delay: 0.2s
+					.price-box
+						opacity: 1.0
+						filter: blur(0)
+						transition-delay: 0.3s
+				.note-box
+					opacity: 1.0
+					filter: blur(0)
+					transition-delay: 0.5s
+		.right-top-box.is-show
+			p:nth-of-type(1)
+				opacity: 1.0
+				transform: scaleY(1.0)
+				transition-delay: 0.2s
+			p:nth-of-type(2)
+				opacity: 1.0
+				transform: scaleY(1.0)
+				transition-delay: 0.4s
+		.right-bottom-box.is-show
+			opacity: 1.0
+			filter: blur(0)
+			transition-delay: 0.7s
+	.content-box
+		display: block
+		width: 100%
+		height: 100%
+		background-color: #ccc
+		position: relative
+		.swiper
+			display: block
+			width: 100%
+			height: 100%
+			z-index: 1
+			.swiper-wrapper
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				width: 100%
+				height: 100%
+				.swiper-slide
+					filter: saturate(1.2)
+					img
+						display: block
+						width: 100%
+						height: 100%
+						object-fit: cover
+						object-position: top center
+			.swiper-pagination
+				bottom: 0
+				display: block
+				z-index: 10
+				.nav-box
+					position: absolute
+					right: 215px
+					bottom: 50px
+					display: block
+					+bp600
+						right: 190px
+					+bp550
+						right: 175px
+						bottom: 90px
+					+bp500
+						left: 20px
+						right: initial
+						bottom: 167px
+						transform-origin: left bottom
+						transform: scale(0.8)
+					+bp450
+						bottom: 155px
+						transform: scale(0.7)
+					.top-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						.line
+							display: block
+							width: 50px
+							height: 1px
+							background-color: rgba(#fff, 0.5)
+						p
+							display: block
+							margin-left: 15px
+							font-weight: 400
+							font-size: 12px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.05em
+							color: #fff
+							opacity: 0.5
+					.bottom-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						margin-top: 8px
+						.current
+							display: block
+							font-weight: 400
+							font-size: 32px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.0em
+							color: #fff
+						.connect-line
+							display: block
+							width: 10px
+							height: 1px
+							margin-left: 10px
+							margin-right: 10px
+							background-color: #fff
+						.total
+							display: block
+							font-weight: 400
+							font-size: 32px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.0em
+							color: #fff
+							opacity: 0.5
+			.color-top-layer
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -350px
+				margin: auto
+				display: block
+				width: 100%
+				height: 350px
+				background: linear-gradient(0deg, rgba(#441E07, 0.3) 0%, rgba(#A54812, 0.2) 50%, rgba(#A54812, 0.0) 100%)
+				opacity: 0.0
+				z-index: 3
+				transition: all 1.0s ease-in-out
+				&.active
+					bottom: 0
+					opacity: 1.0
+			.color-bottom-layer
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				margin: auto
+				display: block
+				width: 100%
+				height: 100%
+				background-color: rgba(#721C1B, 0.45)
+				box-shadow: inset 0px 100px 100px rgba(#fff, 0.25), inset 0px -200px 200px rgba(#000, 0.5)
+				z-index: 2
+		.logo
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto
+			display: block
+			width: 250px
+			opacity: 0.0
+			transform-origin: center
+			transform: scale(10.0)
+			z-index: 10
+			transform-style: preserve-3d
+			perspective: 150px
+			perspective-origin: center
+			transition: all 1.0s ease-in-out
+			+bp450
+				width: 200px
+				padding-top: 30px
+			+bp400
+				padding-top: 40px
+		.left-bottom-box
+			position: absolute
+			left: 30px
+			bottom: 50px
+			display: block
+			z-index: 10
+			+bp550
+				left: 15px
+			+bp500
+				bottom: 30px
+			+bp450
+				bottom: 20px
+			.info-box
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				flex-direction: column
+				.left-box
+					display: block
+					.free-box
+						display: flex
+						justify-content: center
+						align-items: center
+						width: 210px
+						height: 50px
+						background-color: #006134
+						opacity: 0
+						filter: blur(30px)
+						transition: opacity 0.8s cubic-bezier(0.67, 0, 0.57, 0.97), filter 0.7s cubic-bezier(0.35, 0.03, 0, 0.97)
+						+bp600
+							width: 160px
+							height: 45px
+						&::selection
+							background: #014425
+						p
+							display: block
+							font-weight: 400
+							font-size: 20px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #fff
+							+bp600
+								font-size: 18px
+					.price-box
+						display: flex
+						justify-content: flex-start
+						align-items: flex-end
+						width: fit-content
+						position: relative
+						margin-top: 5px
+						opacity: 0
+						filter: blur(30px)
+						transition: opacity 0.8s cubic-bezier(0.67, 0, 0.57, 0.97), filter 0.7s cubic-bezier(0.35, 0.03, 0, 0.97)
+						.price
+							display: block
+							font-weight: 400
+							font-size: 44px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.0em
+							color: #fff
+							+bp600
+								font-size: 38px
+						.unit
+							display: block
+							padding-bottom: 0.2em
+							margin-left: 8px
+							font-weight: 400
+							font-size: 24px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #fff
+							+bp600
+								padding-bottom: 0.15em
+								font-size: 20px
+						.mark
+							position: absolute
+							top: 0.2em
+							right: 0
+							display: block
+							font-weight: 400
+							font-size: 12px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.15em
+							color: #fff
+							+bp600
+								font-size: 10px
+				.note-box
+					display: block
+					width: calc(100vw - 250px)
+					margin-top: 10px
+					margin-left: 0
+					opacity: 0
+					filter: blur(20px)
+					transition: opacity 0.8s cubic-bezier(0.67, 0, 0.57, 0.97), filter 0.7s cubic-bezier(0.35, 0.03, 0, 0.97)
+					+bp600
+						width: calc(100vw - 225px)
+					+bp550
+						width: calc(100vw - 200px)
+					+bp500
+						width: calc(100vw - 60px)
+					.note-ele
+						display: block
+						width: 100%
+						padding-left: 2.0em
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.4
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.0em
+						color: #fff
+						text-indent: -2.0em
+						&:nth-of-type(1)
+							white-space: nowrap
+						&:nth-of-type(2)
+							white-space: nowrap
+		.right-top-box
+			position: absolute
+			top: 80px
+			right: 30px
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			z-index: 10
+			// animation: swing 7.0s cubic-bezier(0.5, 0, 0.5, 1) infinite both
+			// animation: swing 1.5s .2s ease infinite
+			+bp550
+				right: 15px
+			+bp500
+				top: 50px
+			+bp450
+				top: 30px
+			p:nth-of-type(1)
+				display: block
+				width: fit-content
+				padding: 30px 20px
+				margin-left: 12px
+				background-color: #B92928
+				font-weight: 400
+				font-size: 26px
+				line-height: 1.0
+				font-family: $miniwa-hv-v3
+				letter-spacing: 0.25em
+				writing-mode: vertical-rl
+				color: #fff
+				order: 2
+				opacity: 0
+				transform-origin: top center
+				transform: scaleY(0.0)
+				transition: opacity 1.0s cubic-bezier(0.67, 0, 0.57, 0.97), transform 0.8s cubic-bezier(0.35, 0.03, 0, 0.97)
+				animation: swing 7.0s cubic-bezier(0.5, 0, 0.5, 1) infinite
+				+bp450
+					padding: 22px 15px
+					font-size: 24px
+				span
+					display: inline-block
+					margin-top: 0.1em
+					font-weight: 400
+					font-size: 22px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.15em
+					writing-mode: vertical-rl
+					color: #fff
+					+bp450
+						font-size: 20px
+			p:nth-of-type(2)
+				display: block
+				width: fit-content
+				padding: 30px 20px
+				background-color: #B92928
+				font-weight: 400
+				font-size: 26px
+				line-height: 1.0
+				font-family: $miniwa-hv-v3
+				letter-spacing: 0.25em
+				writing-mode: vertical-rl
+				color: #fff
+				order: 1
+				opacity: 0
+				transform-origin: top center
+				transform: scaleY(0.0)
+				transition: opacity 1.0s cubic-bezier(0.67, 0, 0.57, 0.97), transform 0.8s cubic-bezier(0.35, 0.03, 0, 0.97)
+				animation: swing 7.0s 3.5s cubic-bezier(0.5, 0, 0.5, 1) infinite
+				+bp450
+					padding: 22px 15px
+					font-size: 24px
+				span
+					display: inline-block
+					margin-top: 0.1em
+					margin-bottom: 0.1em
+					font-weight: 400
+					font-size: 22px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.25em
+					writing-mode: vertical-rl
+					color: #fff
+					+bp450
+						font-size: 20px
+		.right-bottom-box
+			position: absolute
+			right: 30px
+			bottom: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			width: 160px
+			aspect-ratio: 1/ 1
+			opacity: 0
+			filter: blur(60px)
+			transition: opacity 0.8s cubic-bezier(0.67, 0, 0.57, 0.97), filter 0.7s cubic-bezier(0.35, 0.03, 0, 0.97)
+			z-index: 10
+			+bp600
+				width: 135px
+			+bp550
+				right: 15px
+			+bp500
+				width: 180px
+				bottom: 30px
+			+bp450
+				width: 170px
+				bottom: 20px
+			+bp420
+				width: 160px
+			+bp400
+				width: 150px
+			&:hover
+				mix-blend-mode: overlay
+			.outside-box
+				display: block
+				width: 100%
+				position: relative
+				> img
+					display: block
+					width: 100%
+					animation: circleRotate 17s linear infinite
+				.inside-box
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					p
+						display: block
+						font-weight: 400
+						font-size: 18px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.05em
+						color: #fff
+					img
+						display: block
+						width: 75px
+						margin-top: 7px
+@keyframes circleRotate
+	0%
+		transform: rotate(0deg)
+	to
+		transform: rotate(360deg)
+@keyframes swing
+	0%
+		transform: rotate(0.8deg)
+	12.5%
+		transform: rotate(-1.7deg)
+	25%
+		transform: rotate(1.7deg)
+	37.5%
+		transform: rotate(-2.5deg)
+	50%
+		transform: rotate(3.8deg)
+	62.5%
+		transform: rotate(-3.8deg)
+	75%
+		transform: rotate(2.5deg)
+	87.5%
+		transform: rotate(-1.7deg)
+	100%
+		transform: rotate(0.8deg)
+@keyframes open-swing
+	10%
+		transform: rotateX(25deg)
+	50%
+		transform: rotateX(-15deg)
+	75%
+		transform: rotateX(5deg)
+	90%
+		transform: rotateX(-2.5deg)
+	100%
+		transform: rotateX(0deg)
+
+
+
+
+
+#gallery
+	display: block
+	width: 100%
+	z-index: 2
+	position: relative
+	&.is-show
+		.content-box
+			.slider-box:nth-of-type(1)
+				.block
+					animation: bounceInUp 1.5s forwards
+					&:hover
+						z-index: 10
+						position: relative
+						img
+							transform: scale(1.1)
+						.overlay
+							transform: scale(1.1)
+							opacity: 1.0
+					&:nth-of-type(1)
+						animation-delay: 0.1s
+					&:nth-of-type(2)
+						animation-delay: 0.2s
+					&:nth-of-type(3)
+						animation-delay: 0.3s
+					&:nth-of-type(4)
+						animation-delay: 0.4s
+					&:nth-of-type(5)
+						animation-delay: 0.5s
+					&:nth-of-type(6)
+						animation-delay: 0.6s
+					&:nth-of-type(7)
+						animation-delay: 0.7s
+					&:nth-of-type(8)
+						animation-delay: 0.8s
+			.slider-box:nth-of-type(2)
+				.block
+					animation: bounceInUp 1.5s forwards
+					&:hover
+						z-index: 10
+						position: relative
+						img
+							transform: scale(1.1)
+						.overlay
+							transform: scale(1.1)
+							opacity: 1.0
+					&:nth-of-type(1)
+						animation-delay: 0.9s
+					&:nth-of-type(2)
+						animation-delay: 1.0s
+					&:nth-of-type(3)
+						animation-delay: 1.1s
+					&:nth-of-type(4)
+						animation-delay: 1.2s
+					&:nth-of-type(5)
+						animation-delay: 1.3s
+					&:nth-of-type(6)
+						animation-delay: 1.4s
+					&:nth-of-type(7)
+						animation-delay: 1.5s
+					&:nth-of-type(8)
+						animation-delay: 1.6s
+	.content-box
+		display: flex
+		justify-content: flex-start
+		align-items: flex-end
+		width: 100%
+		.slider-box
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100vw
+			min-width: 2240px
+			// +bp1300
+			// 	min-width: 2080px
+			.block
+				display: block
+				width: calc(100%/8)
+				min-width: 280px
+				aspect-ratio: 4 / 3
+				opacity: 0.0
+				position: relative
+				img
+					display: block
+					width: 100%
+					height: 100%
+					border-left: solid 1px #bbb
+					object-fit: cover
+					object-position: center center
+					transform-origin: center
+					transition: all 0.5s 0.2s ease-in-out
+				.overlay
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 100%
+					height: 100%
+					background: linear-gradient(to bottom, rgba(#000, 0.3) 0%, rgba(#000, 0.0) 10%, rgba(#000, 0.0) 80%, rgba(#000, 0.5) 100%)
+					opacity: 0.0
+					transition: all 0.5s 0.2s ease-in-out
+		.slider-box:first-child
+			animation: totalSupportLoop 40s -20s linear infinite
+		.slider-box:last-child
+			animation: totalSupportLoop2 40s linear infinite
+@keyframes bounceInUp
+	0%
+		opacity: 0.0
+		transform: translateY(30vh)
+	60%
+		opacity: 1.0
+		transform: translateY(-30px)
+	80%
+		transform: translateY(10px)
+	100%
+		opacity: 1.0
+		transform: translateY(0)
+
+@keyframes totalSupportLoop
+	0%
+		transform: translateX(100%)
+	to
+		transform: translateX(-100%)
+@keyframes totalSupportLoop2
+	0%
+		transform: translateX(0)
+	to
+		transform: translateX(-200%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#google-map
+	display: block
+	width: 100%
+	height: 500px
+	z-index: 2
+	position: relative
+	+bp500
+		height: 460px
+	+bp450
+		height: 400px
+	+bp400
+		height: 380px
+	.content-box
+		display: block
+		width: 100%
+		height: 100%
+		position: relative
+		iframe
+			display: block
+			width: 100%
+			height: 100%
+			filter: grayscale(1.0)
+		.link-btn
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 50px
+			margin: auto
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			padding: 20px 40px
+			background-color: #006134
+			transition: all 0.5s ease-in-out
+			+bp450
+				bottom: 40px
+				padding: 15px 30px
+			+bp400
+				bottom: 30px
+			&::selection
+				background: #014425
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				content: ""
+				display: block
+				width: 10px
+				aspect-ratio: 1 / 1
+				border-radius: 50%
+				background-color: rgba(#B92928, 0.8)
+				box-shadow: 0 0 5px #fff
+				transform: translate3d(-50%, -50%, 0)
+				animation: enclosure-loop 2.0s linear infinite
+				z-index: 5
+			&:hover
+				background-color: #222
+				animation: shadow-scale-down 1.0s 0.2s forwards
+				&:before
+			p
+				display: block
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #fff
+			img
+				display: block
+				width: 75px
+				margin-left: 20px
+				+bp500
+					width: 50px
+					margin-left: 15px
+		.parking-link-btn
+			position: absolute
+			right: 0
+			bottom: -45px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			padding: 20px 20px
+			background: linear-gradient(60deg, currentColor 75%, rgba(#fff, 1.0) 95%, currentColor 95%)
+			background-size: 200%
+			background-position: 200% 0%
+			-webkit-background-clip: text
+			-webkit-text-fill-color: rgba(#fff, 0.0)
+			+bp450
+				display: none
+			&:hover
+				animation: text-link-hover 0.8s infinite
+				color: #B92928
+			&::selection
+				background: #ddd
+				color: #555
+			p
+				display: block
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.0
+				font-family: $miniwa-lt-v3
+				letter-spacing: 0.05em
+				color: #555
+			.icon
+				display: block
+				width: 13px
+				margin-left: 5px
+				animation: blinker 0.6s infinite ease-in-out
+@keyframes enclosure-loop
+	0%
+		top: 0
+		left: 0
+	35%
+		top: 0
+		left: 100%
+	50%
+		top: 100%
+		left: 100%
+	85%
+		top: 100%
+		left: 0
+	100%
+		top: 0
+		left: 0
+@keyframes shadow-scale-down
+	0%
+		box-shadow: 0 20px 150px 150px rgba(#fff, 0.4)
+	70%
+		box-shadow: 0 10px 20px 10px rgba(#fff, 0.2)
+	100%
+		box-shadow: 0 0px 20px 0px rgba(#fff, 0.0)
+@keyframes text-link-hover
+	100%
+		background-position: 50% 0%
+@keyframes blinker
+	0%
+		opacity: 1.0
+	100%
+		opacity: 0.0
+
+
+

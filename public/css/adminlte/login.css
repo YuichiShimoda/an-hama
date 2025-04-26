@@ -1,0 +1,52 @@
+.login-page {
+  background: url("../../image/base-bg.png");
+  background-size: 500px;
+  background-repeat: repeat;
+}
+.login-page .login-box {
+  width: 450px;
+}
+.login-page .login-box .login-logo {
+  width: 300px;
+  margin: 0 auto;
+}
+.login-page .login-box .card.card-outline {
+  margin: 50px auto 0;
+  border: 0;
+}
+.login-page .login-box .card.card-outline .card-header .card-title {
+  color: #999;
+}
+.login-page .login-box .card.card-outline .card-body {
+  padding: 30px 50px 15px;
+}
+.login-page .login-box .card.card-outline .card-body form .row {
+  align-items: center;
+}
+.login-page .login-box .card.card-outline .card-body form .row .col-7 .icheck-primary {
+  display: flex;
+  align-items: center;
+}
+.login-page .login-box .card.card-outline .card-body form .row .col-7 .icheck-primary input[type=checkbox]:checked {
+  accent-color: #d40100;
+}
+.login-page .login-box .card.card-outline .card-body form .row .col-7 .icheck-primary label {
+  margin-left: 0.3em;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+.login-page .login-box .card.card-outline .card-body form .row .col-5 button {
+  background-color: #B92928;
+  border: 0;
+}
+.login-page .login-box .card.card-outline .card-body form .row .col-5 button span {
+  margin-right: 5px;
+}
+.login-page .login-box .card.card-outline .card-footer {
+  padding: 20px 50px;
+}
+.login-page .login-box .card.card-outline .card-footer .my-0 a {
+  font-size: 14px;
+  color: #999;
+}

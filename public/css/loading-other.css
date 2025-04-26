@@ -1,0 +1,37 @@
+#loader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: #b92928;
+  z-index: 3000;
+}
+#loader-bg.is-show > .overlay-circle {
+  animation: loading-overlay 0.7s 0.2s linear forwards;
+}
+#loader-bg > .overlay-circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 10vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 20px 5px #fff;
+  transform-origin: center;
+  transform: scale(0);
+  z-index: 2;
+}
+
+@keyframes loading-overlay {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(20);
+  }
+}

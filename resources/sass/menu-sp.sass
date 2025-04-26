@@ -1,0 +1,1548 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	max-width: 100%
+	background: url("../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+	.color-layer
+		position: fixed
+		top: 0
+		left: 0
+		display: block
+		width: 100vw
+		height: 100vh
+		background-color: #fff
+		opacity: 0.1
+		z-index: 0
+*::selection
+	background: #ddd
+
+
+
+
+
+
+
+
+
+
+
+#first-view
+	display: block
+	width: 100%
+	margin: 120px auto 0
+	+bp450
+		margin: 80px auto 0
+	h1
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+		+bp450
+			font-size: 20px
+	.desc-box
+		display: block
+		width: calc(100% - 100px)
+		margin: 30px auto 0
+		+bp450
+			width: calc(100% - 60px)
+			margin: 20px auto 0
+		.base
+			display: block
+			margin-bottom: 15px
+			font-weight: 400
+			font-size: 16px
+			line-height: 1.7
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			text-align: center
+			color: #555
+			+bp550
+				text-align: left
+			+bp450
+				width: 265px
+				margin: 0 auto 10px
+		.note
+			display: block
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.7
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			text-align: center
+			color: #777
+			+bp550
+				text-align: left
+	.nav-box
+		display: flex
+		justify-content: center
+		align-items: center
+		margin: 35px auto 0
+		z-index: 2
+		position: relative
+		+bp600
+			flex-wrap: wrap
+			width: 290px
+		+bp450
+			margin: 25px auto 0
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 8px 15px
+			margin-left: 15px
+			border-radius: 15px
+			border: solid 1px #555
+			background-color: #555
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.0em
+			color: #fff
+			transition: all 0.5s ease-in-out
+			&:nth-of-type(1)
+				margin-left: 0
+			&:nth-of-type(4)
+				+bp600
+					margin-top: 10px
+					margin-left: 0
+			&:nth-of-type(5)
+				+bp600
+					margin-top: 10px
+			&.previous
+				border: solid 1px #006134
+				background-color: #006134
+				color: #fff
+			&.hovered
+				border: solid 1px #ccc
+				background-color: #fff
+				color: #555
+			&.next
+				border: solid 1px #BA292B
+				background-color: #BA292B
+				color: #fff
+			&::selection
+				background: #777
+	.option-box
+		display: block
+		width: fit-content
+		margin: 40px auto 0
+		+bp550
+			margin: 30px auto 0
+		+bp450
+			margin: 25px auto 0
+		.cat-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			p:nth-of-type(1)
+				display: block
+				width: 100px
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.7
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #777
+			p:nth-of-type(2)
+				display: block
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.7
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #777
+
+
+
+
+
+
+
+
+
+
+
+
+#mirakan
+	margin: 20px auto 0
+#mirakan, #miranezu, #mila-egg, #spinach, #hama-chan
+	display: block
+	width: 100%
+	padding-top: 80px
+	margin: 0 auto 0
+	+bp500
+		padding-top: 60px
+	.top-content-box
+		display: block
+		width: 380px
+		margin: 0 auto
+		position: relative
+		+bp600
+			width: 304px
+		+bp450
+			transform-origin: top center
+			transform: scale(0.9)
+			z-index: 3
+		+bp400
+			transform: scale(0.8)
+		&.is-show
+			.dish
+				animation: dish-bounce-in 2.0s forwards
+			.bg
+				animation: bg-bounce-in 4.0s forwards
+			.fork
+				filter: opacity(0.2)
+			.tricolore
+				opacity: 1.0
+		.img-box
+			display: block
+			width: 100%
+			padding-top: 80px
+			position: relative
+			.base-box
+				display: block
+				width: 100%
+				z-index: 2
+				position: relative
+				.dish
+					display: block
+					width: 100%
+					min-height: 302px
+					transform-origin: center
+					transform: scale(0.8)
+					z-index: 2
+					position: relative
+					+bp600
+						min-height: 242px
+					+bp450
+						// min-height: 363px
+				.bg
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: 100%
+					transform-origin: center
+					transform: scale(0.4) translate(0)
+					z-index: 1
+				.ingredient-box
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					display: flex
+					justify-content: center
+					align-items: center
+					width: fit-content
+					min-width: 100px
+					padding: 8px 12px
+					border-radius: 20px
+					background-color: #B92928
+					border: solid 1px #fff
+					opacity: 0.0
+					transform-origin: center
+					z-index: 3
+					transition: all 0.5s ease-in-out
+					+bp600
+						min-width: 85px
+						padding: 6px 10px
+					p
+						display: block
+						font-weight: 700
+						font-size: 12px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						white-space: nowrap
+						color: #fff
+						transition: all 0.5s ease-in-out
+						+bp600
+							font-size: 10px
+			.food-box
+				position: absolute
+				right: -90px
+				top: 0
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				transform-origin: 240px 390px
+				transform: rotate(0deg)
+				+bp600
+					right: -85px
+					transform-origin: 192px 312px
+				+bp500
+					right: -60px
+				// +bp450
+				// 	right: -70px
+				// 	transform-origin: 240px 390px
+				h2
+					display: block
+					margin-left: 5px
+					font-weight: 400
+					font-size: 36px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.25em
+					writing-mode: vertical-rl
+					color: #555
+					order: 2
+					+bp600
+						margin-left: 0px
+						font-size: 29px
+					+bp500
+						font-size: 26px
+					+bp450
+						// margin-left: 24px
+						// font-size: 36px
+				.price
+					display: block
+					width: 33px
+					margin-top: 120px
+					font-weight: 400
+					font-size: 60px
+					line-height: 1.0
+					font-family: $morfin
+					letter-spacing: 0.25em
+					color: #555
+					order: 1
+					border-collapse: collapse
+					+bp600
+						margin-top: 96px
+					+bp500
+						width: 26px
+					+bp450
+						// margin-top: 120px
+					.num
+						display: block
+						font-weight: 400
+						font-size: 36px
+						line-height: 1.0
+						font-family: $morfin
+						letter-spacing: 0.25em
+						text-align: center
+						+bp600
+							font-size: 29px
+						+bp500
+							font-size: 25px
+						+bp450
+							// font-size: 36px
+					.yen
+						display: block
+						margin-top: 5px
+						font-weight: 400
+						font-size: 17px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.15em
+						writing-mode: vertical-rl
+						color: #555
+						+bp600
+							font-size: 14px
+						+bp500
+							font-size: 12px
+						+bp450
+							// font-size: 36px
+				video
+					display: block
+					width: 190px
+					height: 320px
+					object-fit: cover
+					object-position: center
+					+bp600
+						width: 145px
+						height: 240px
+					+bp500
+						width: 115px
+						height: 190px
+					+bp450
+			.copy-box
+				position: absolute
+				top: 0
+				left: -80px
+				display: block
+				width: 380px
+				padding: 24px 30px
+				background-color: #333
+				transform-origin: 0px 390px
+				transform: rotate(0deg)
+				z-index: 1
+				+bp600
+					left: -75px
+					width: 304px
+					padding: 19px 24px
+					transform-origin: 0px 312px
+				+bp500
+					left: -60px
+				+bp450
+					// left: -120px
+					// width: 420px
+					// padding: 24px 30px
+					// transform-origin: 0px 390px
+				h3
+					display: block
+					font-weight: 400
+					font-size: 42px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.05em
+					color: #fff
+					+bp600
+						font-size: 36px
+					+bp450
+						font-size: 32px
+					&::selection
+						background: #444
+				p
+					display: block
+					margin-top: 5px
+					margin-left: 12px
+					font-weight: 400
+					font-size: 24px
+					line-height: 1.5
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.05em
+					+bp600
+						margin-left: 10px
+						font-size: 22px
+					+bp450
+						margin-top: 3px
+						margin-left: 8px
+						font-size: 20px
+					color: #fff
+					&::selection
+						background: #444
+					.yen
+						display: inline-block
+						margin-left: 6px
+						margin-bottom: -3px
+						font-weight: 400
+						font-size: 16px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.15em
+						writing-mode: vertical-rl
+						color: #fff
+						+bp600
+							margin-left: 5px
+							font-size: 15px
+						+bp450
+							margin-left: 4px
+							font-size: 14px
+						&::selection
+							background: #444
+		.name
+			position: absolute
+			margin: auto
+			display: block
+			transform-origin: center
+			transition: all 1.0s ease-in-out
+		.fork
+			position: absolute
+			margin: auto
+			display: block
+			width: 150px
+			transform-origin: center
+			filter: opacity(1.0)
+			transition: left 1.0s ease-in-out, right 1.0s ease-in-out, bottom 1.0s ease-in-out, transform 1.0s ease-in-out, filter 1.5s 0.5s ease-in-out
+			+bp600
+				width: 120px
+			+bp450
+				// width: 150px
+		.tricolore
+			position: absolute
+			margin: auto
+			display: block
+			width: 30px
+			transform-origin: center
+			opacity: 0.0
+			transition: all 1.0s 1.0s ease-in-out
+			+bp600
+				width: 24px
+			+bp450
+				// width: 150px
+	.bottom-content-box
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		width: 500px
+		margin: 40px auto 0
+		+bp600
+			width: 400px
+			margin: 30px auto 0
+		+bp450
+			width: 360px
+			margin: 10px auto 0
+		+bp400
+			width: 300px
+			margin: -15px auto 0
+		.left-box
+			display: block
+			width: 450px
+			p
+				display: block
+				width: 100%
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.7
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #555
+		.right-box
+			display: block
+			width: 100%
+			// margin-left: 60px
+			border-bottom: solid 1px #ccc
+			&.is-show
+				.ele
+					.size-box
+						.desc
+							opacity: 1.0
+							transform: translate(0, 0)
+						.gram
+							opacity: 1.0
+							transform: translate(0, 0)
+					.price-box
+						.desc
+							opacity: 1.0
+							transform: translate(0, 0)
+						.yen
+							opacity: 1.0
+							transform: translate(0, 0)
+					&:nth-of-type(1)
+						.size-box
+							.desc
+								transition-delay: 0.4s
+							.gram
+								transition-delay: 0.6s
+						.price-box
+							.desc
+								transition-delay: 0.8s
+							.yen
+								transition-delay: 1.0s
+					&:nth-of-type(2)
+						.size-box
+							.desc
+								transition-delay: 0.8s
+							.gram
+								transition-delay: 1.0s
+						.price-box
+							.desc
+								transition-delay: 1.2s
+							.yen
+								transition-delay: 1.4s
+					&:nth-of-type(3)
+						.size-box
+							.desc
+								transition-delay: 1.2s
+							.gram
+								transition-delay: 1.4s
+						.price-box
+							.desc
+								transition-delay: 1.6s
+							.yen
+								transition-delay: 1.8s
+					&:nth-of-type(4)
+						.size-box
+							.desc
+								transition-delay: 1.6s
+							.gram
+								transition-delay: 1.8s
+						.price-box
+							.desc
+								transition-delay: 2.0s
+							.yen
+								transition-delay: 2.2s
+			.ele
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 100%
+				padding: 15px 30px
+				border-top: solid 1px #ccc
+				+bp600
+					padding: 15px 20px
+			.size-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				width: fit-content
+				.desc
+					display: block
+					width: 110px
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					opacity: 0.0
+					transform: translate(-100%, 0)
+					transition: all 1.0s ease-in-out
+					+bp600
+						width: 100px
+						font-size: 12px
+					+bp450
+						width: 90px
+					+bp400
+						width: 85px
+				.gram
+					display: block
+					width: fit-content
+					font-weight: 400
+					font-size: 16px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+					opacity: 0.0
+					transform: translate(0, -700%)
+					transition: all 1.0s ease-in-out
+					+bp600
+						font-size: 14px
+			.price-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				width: fit-content
+				.desc
+					display: block
+					width: fit-content
+					font-weight: 400
+					font-size: 16px
+					line-height: 1.0
+					font-family: $miniwa-bd-v3
+					letter-spacing: 0.05em
+					color: #555
+					opacity: 0.0
+					transform: translate(0, 700%)
+					transition: all 1.0s ease-in-out
+					+bp600
+						font-size: 14px
+				.yen
+					display: block
+					margin-left: 5px
+					width: fit-content
+					font-weight: 400
+					font-size: 11px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+					opacity: 0.0
+					transform: translate(700%, 0)
+					transition: all 1.0s ease-in-out
+#mirakan .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 180px
+		transform: rotate(60deg)
+		+bp600
+			width: 144px
+		+bp450
+			// width: 180px
+	.fork
+		right: 40%
+		bottom: 30%
+		transform: rotate(-10deg)
+	.tricolore
+		left: -42px
+		bottom: -12px
+		+bp600
+			left: -34px
+			bottom: -10px
+		+bp450
+			// left: -42px
+			// bottom: -12px
+	&.is-show
+		.name
+			left: -80px
+			bottom: 2px
+			transform: rotate(20deg)
+			+bp600
+				left: -64px
+			+bp450
+				// left: -80px
+		.fork
+			right: -70px
+			bottom: 27px
+			transform: rotate(-15deg)
+			+bp600
+				right: -56px
+				bottom: 22px
+			+bp450
+				// right: -70px
+				// bottom: 27px
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 50%
+					left: 19%
+					transform: translate(-50%, -50%) rotate(-15deg)
+					+bp600
+						left: 17%
+				&:nth-of-type(2)
+					top: 43%
+					left: 45%
+					transform: translate(-50%, -50%) rotate(-2deg)
+					+bp600
+						left: 47%
+				&:nth-of-type(3)
+					top: 44%
+					left: 73%
+					transform: translate(-50%, -50%) rotate(25deg)
+					background-color: #9c6a1a
+					+bp600
+						left: 76%
+				&:nth-of-type(4)
+					top: 64%
+					left: 35%
+					transform: translate(-50%, -50%) rotate(7deg)
+					background-color: #9c6a1a
+					+bp600
+						left: 33%
+				&:nth-of-type(5)
+					top: 60%
+					left: 65%
+					transform: translate(-50%, -50%) rotate(-5deg)
+					background-color: #3D7E00
+#mirakan .top-content-box.is-show
+	+bp450
+		&:hover .base-box .ingredient-box
+			opacity: 1.0
+			&:nth-of-type(1)
+				top: 50%
+				left: 17%
+				transform: translate(-50%, -50%) rotate(-15deg)
+			&:nth-of-type(2)
+				top: 43%
+				left: 47%
+				transform: translate(-50%, -50%) rotate(-2deg)
+			&:nth-of-type(3)
+				top: 44%
+				left: 76%
+				transform: translate(-50%, -50%) rotate(25deg)
+				background-color: #9c6a1a
+			&:nth-of-type(4)
+				top: 64%
+				left: 33%
+				transform: translate(-50%, -50%) rotate(7deg)
+				background-color: #9c6a1a
+			&:nth-of-type(5)
+				top: 60%
+				left: 65%
+				transform: translate(-50%, -50%) rotate(-5deg)
+				background-color: #3D7E00
+#miranezu .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 210px
+		transform: rotate(50deg)
+		+bp600
+			width: 168px
+		+bp450
+			// width: 210px
+	.fork
+		right: 40%
+		bottom: 30%
+		transform: rotate(60deg)
+	.tricolore
+		left: -30px
+		bottom: 102px
+		+bp600
+			left: -24px
+			bottom: 82px
+		+bp450
+			// left: -30px
+			// bottom: 102px
+	&.is-show
+		.name
+			left: -90px
+			bottom: -12px
+			transform: rotate(11deg)
+			+bp600
+				left: -72px
+				bottom: -10px
+			+bp450
+				// left: -90px
+				// bottom: -12px
+		.fork
+			right: -102px
+			bottom: 63px
+			transform: rotate(80deg)
+			+bp600
+				right: -82px
+				bottom: 50px
+			+bp450
+				// right: -102px
+				// bottom: 63px
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 57%
+					left: 24%
+					transform: translate(-50%, -50%) rotate(15deg)
+					+bp600
+						left: 22%
+				&:nth-of-type(2)
+					top: 51%
+					left: 50%
+					transform: translate(-50%, -50%) rotate(-7deg)
+				&:nth-of-type(3)
+					top: 56%
+					left: 78%
+					transform: translate(-50%, -50%) rotate(9deg)
+					+bp600
+						left: 80%
+#miranezu .top-content-box.is-show
+	+bp450
+		&:hover .base-box .ingredient-box
+			opacity: 1.0
+			&:nth-of-type(1)
+				top: 57%
+				left: 22%
+				transform: translate(-50%, -50%) rotate(15deg)
+			&:nth-of-type(2)
+				top: 51%
+				left: 50%
+				transform: translate(-50%, -50%) rotate(-7deg)
+			&:nth-of-type(3)
+				top: 56%
+				left: 80%
+				transform: translate(-50%, -50%) rotate(9deg)
+#mila-egg .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 205px
+		transform: rotate(200deg)
+		+bp600
+			width: 165px
+		+bp450
+			// width: 205px
+	.fork
+		right: 40%
+		bottom: 30%
+		transform: rotate(-10deg)
+	.tricolore
+		right: 36px
+		bottom: -6px
+		+bp600
+			right: 29px
+			bottom: -8px
+		+bp450
+			// right: 36px
+			// bottom: -6px
+	&.is-show
+		.name
+			left: -96px
+			bottom: -18px
+			transform: rotate(40deg)
+			+bp600
+				left: -77px
+				bottom: -14px
+			+bp450
+				// left: -96px
+				// bottom: -18px
+		.fork
+			right: -126px
+			bottom: 60px
+			transform: rotate(155deg)
+			+bp600
+				right: -101px
+				bottom: 48px
+			+bp450
+				// right: -126px
+				// bottom: 60px
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 24%
+					left: 65%
+					transform: translate(-50%, -50%) rotate(-6deg)
+				&:nth-of-type(2)
+					top: 38%
+					left: 73%
+					transform: translate(-50%, -50%) rotate(-2deg)
+				&:nth-of-type(3)
+					top: 53%
+					left: 68%
+					transform: translate(-50%, -50%) rotate(20deg)
+					background-color: #FFE100
+					p
+						color: #555
+				&:nth-of-type(4)
+					top: 68%
+					left: 58%
+					transform: translate(-50%, -50%) rotate(-7deg)
+					background-color: #FFE100
+					p
+						color: #555
+#mila-egg .top-content-box.is-show
+	+bp450
+		&:hover .base-box .ingredient-box
+			opacity: 1.0
+			&:nth-of-type(1)
+				top: 24%
+				left: 65%
+				transform: translate(-50%, -50%) rotate(-6deg)
+			&:nth-of-type(2)
+				top: 38%
+				left: 73%
+				transform: translate(-50%, -50%) rotate(-2deg)
+			&:nth-of-type(3)
+				top: 53%
+				left: 68%
+				transform: translate(-50%, -50%) rotate(20deg)
+				background-color: #FFE100
+				p
+					color: #555
+			&:nth-of-type(4)
+				top: 68%
+				left: 58%
+				transform: translate(-50%, -50%) rotate(-7deg)
+				background-color: #FFE100
+				p
+					color: #555
+#spinach .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 170px
+		transform: rotate(150deg)
+		+bp600
+			width: 136px
+		+bp450
+			// width: 170px
+	.fork
+		right: 40%
+		bottom: 30%
+		transform: rotate(-10deg)
+	.tricolore
+		right: -72px
+		bottom: 12px
+		+bp600
+			right: -58px
+			bottom: 10px
+		+bp450
+			// right: -72px
+			// bottom: 12px
+	&.is-show
+		.name
+			left: -126px
+			bottom: 30px
+			transform: rotate(60deg)
+			+bp600
+				left: -101px
+				bottom: 24px
+			+bp450
+				// left: -126px
+				// bottom: 30px
+		.fork
+			right: -96px
+			bottom: 117px
+			transform: rotate(-70deg)
+			+bp600
+				right: -77px
+				bottom: 94px
+			+bp450
+				// right: -96px
+				// bottom: 117
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 50%
+					left: 19%
+					transform: translate(-50%, -50%) rotate(-15deg)
+				&:nth-of-type(2)
+					top: 47%
+					left: 47%
+					transform: translate(-50%, -50%) rotate(-2deg)
+					+bp600
+						left: 50%
+				&:nth-of-type(3)
+					top: 44%
+					left: 74%
+					transform: translate(-50%, -50%) rotate(25deg)
+					background-color: #3D7E00
+					+bp600
+						left: 78%
+				&:nth-of-type(4)
+					top: 61%
+					left: 35%
+					transform: translate(-50%, -50%) rotate(7deg)
+					background-color: #FFE100
+					+bp600
+						top: 65%
+					p
+						color: #555
+				&:nth-of-type(5)
+					top: 60%
+					left: 65%
+					transform: translate(-50%, -50%) rotate(-5deg)
+					background-color: #3D7E00
+					+bp600
+						top: 62%
+#spinach .top-content-box.is-show
+	+bp450
+		&:hover .base-box .ingredient-box
+			opacity: 1.0
+			&:nth-of-type(1)
+				top: 50%
+				left: 19%
+				transform: translate(-50%, -50%) rotate(-15deg)
+			&:nth-of-type(2)
+				top: 47%
+				left: 50%
+				left: 47%
+				transform: translate(-50%, -50%) rotate(-2deg)
+			&:nth-of-type(3)
+				top: 44%
+				left: 78%
+				transform: translate(-50%, -50%) rotate(25deg)
+				background-color: #3D7E00
+			&:nth-of-type(4)
+				top: 65%
+				left: 35%
+				transform: translate(-50%, -50%) rotate(7deg)
+				background-color: #FFE100
+				p
+					color: #555
+			&:nth-of-type(5)
+				top: 62%
+				left: 65%
+				transform: translate(-50%, -50%) rotate(-5deg)
+				background-color: #3D7E00
+#hama-chan .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 180px
+		transform: rotate(60deg)
+		+bp600
+			width: 144px
+		+bp450
+			// width: 180px
+	.fork
+		left: 40%
+		bottom: 30%
+		transform: rotate(-10deg)
+	.tricolore
+		right: -42px
+		bottom: 24px
+		width: 50px
+		+bp600
+			right: -34px
+			bottom: 19px
+			width: 40px
+		+bp450
+			// right: -42px
+			// bottom: 24px
+			// width: 50px
+	.addition
+		position: absolute
+		top: 15px
+		right: -45px
+		display: block
+		width: 150px
+		opacity: 0.0
+		transition: all 1.0s 2.0s ease-in-out
+		+bp600
+			top: 15px
+			right: -40px
+			width: 140px
+		+bp500
+			top: initial
+			bottom: -10px
+			right: -15px
+			width: 120px
+			z-index: 10
+			transition: all 1.0s 1.5s ease-in-out
+	&.is-show
+		.name
+			left: -129px
+			bottom: 57px
+			transform: rotate(-20deg)
+			+bp600
+				left: -103px
+				bottom: 46px
+			+bp450
+				// left: -129px
+				// bottom: 57px
+		.fork
+			left: -24px
+			bottom: 12px
+			transform: rotate(5deg)
+			+bp600
+				left: -19px
+				bottom: 10px
+			+bp450
+				// left: -24px
+				// bottom: 12px
+		.addition
+			opacity: 1.0
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 50%
+					left: 27%
+					transform: translate(-50%, -50%) rotate(-8deg)
+					+bp600
+						left: 25%
+				&:nth-of-type(2)
+					top: 48%
+					left: 55%
+					transform: translate(-50%, -50%) rotate(10deg)
+					background-color: #FFE100
+					p
+						color: #555
+				&:nth-of-type(3)
+					top: 44%
+					left: 78%
+					transform: translate(-50%, -50%) rotate(20deg)
+					background-color: #FFE100
+					+bp600
+						left: 80%
+					p
+						color: #555
+				&:nth-of-type(4)
+					top: 24%
+					left: 89%
+					transform: translate(-50%, -50%) rotate(4deg)
+					background-color: #933724
+					+bp500
+						top: 92%
+						left: 56%
+						width: 100px
+					p
+						+bp500
+							white-space: initial
+#hama-chan .top-content-box.is-show
+	+bp450
+		&:hover .base-box .ingredient-box
+			opacity: 1.0
+			&:nth-of-type(1)
+				top: 50%
+				left: 25%
+				transform: translate(-50%, -50%) rotate(-8deg)
+			&:nth-of-type(2)
+				top: 48%
+				left: 55%
+				transform: translate(-50%, -50%) rotate(10deg)
+				background-color: #FFE100
+				p
+					color: #555
+			&:nth-of-type(3)
+				top: 44%
+				left: 80%
+				transform: translate(-50%, -50%) rotate(20deg)
+				background-color: #FFE100
+				p
+					color: #555
+			&:nth-of-type(4)
+				top: 92%
+				left: 56%
+				width: 100px
+				transform: translate(-50%, -50%) rotate(4deg)
+				background-color: #933724
+				p
+					white-space: initial
+@keyframes dish-bounce-in
+	0%
+		transform: scale(0.8)
+	40%
+		transform: scale(1.1)
+	50%
+		transform: scale(1.1)
+	60%
+		transform: scale(0.95)
+	80%, 100%
+		transform: scale(1.0)
+@keyframes bg-bounce-in
+	0%
+		transform: scale(0.4) translate(0)
+		filter: unset
+		opacity: 1.0
+	30%
+		transform: scale(1.2) translate(0)
+	33%
+		transform: scale(0.4) translate(25%, -30%)
+	45%
+		transform: scale(0.8) translate(30%, -25%)
+		filter: unset
+		opacity: 1.0
+	80%, 100%
+		transform: scale(0.8) translate(30%, -25%)
+		filter: brightness(1.5)
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#announcement
+	display: block
+	width: 100%
+	margin: 80px auto 0
+	+bp400
+		margin: 65px auto 0
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 500px
+		height: 1px
+		margin: 0 auto
+		position: relative
+		+bp600
+			width: 300px
+		p
+			position: absolute
+			display: block
+			font-weight: 400
+			font-size: 0
+			line-height: 1.0
+			font-family: $miniwa-bd-v3
+			letter-spacing: 0.05em
+			color: #BA292B
+			opacity: 0.0
+			&:nth-child(1)
+				animation: roll 5.0s linear infinite 0.0s
+				+bp600
+					animation: roll-600 5.0s linear infinite 0.0s
+				+bp450
+					animation: roll-450 5.0s linear infinite 0.0s
+			&:nth-child(2)
+				animation: roll 5.0s linear infinite 1.2s
+				+bp600
+					animation: roll-600 5.0s linear infinite 1.2s
+				+bp450
+					animation: roll-450 5.0s linear infinite 1.2s
+			&:nth-child(3)
+				animation: roll-long 5.0s linear infinite 2.4s
+				+bp600
+					animation: roll-long-600 5.0s linear infinite 2.4s
+				+bp450
+					animation: roll-long-450 5.0s linear infinite 2.4s
+		img
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto
+			display: block
+			width: 300px
+			opacity: 0.5
+			transform-origin: center center
+			transform: scaleY(0.6) rotateX(45deg)
+			+bp450
+				width: 270px
+			+bp400
+				width: 245px
+@keyframes roll
+	0%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(-25deg)
+	3%
+		opacity: 1.0
+		transform: rotate(0deg)
+	5%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 14px
+		opacity: 1.0
+	20%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 16px
+		opacity: 1.0
+		transform: rotate(0deg)
+	27%
+		margin-top: 10.0em
+		margin-left: 0
+		font-size: 0
+		opacity: 0.5
+	100%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(15deg)
+@keyframes roll-600
+	0%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(-25deg)
+	3%
+		opacity: 1.0
+		transform: rotate(0deg)
+	5%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 13px
+		opacity: 1.0
+	20%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 15px
+		opacity: 1.0
+		transform: rotate(0deg)
+	27%
+		margin-top: 10.0em
+		margin-left: 0
+		font-size: 0
+		opacity: 0.5
+	100%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(15deg)
+@keyframes roll-450
+	0%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(-25deg)
+	3%
+		opacity: 1.0
+		transform: rotate(0deg)
+	5%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 12px
+		opacity: 1.0
+	20%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 14px
+		opacity: 1.0
+		transform: rotate(0deg)
+	27%
+		margin-top: 10.0em
+		margin-left: 0
+		font-size: 0
+		opacity: 0.5
+	100%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(15deg)
+@keyframes roll-long
+	0%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(-25deg)
+	3%
+		opacity: 1.0
+		transform: rotate(0deg)
+	5%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 14px
+		opacity: 1.0
+	45%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 16px
+		opacity: 1.0
+		transform: rotate(0deg)
+	52%
+		margin-top: 10.0em
+		margin-left: 0
+		font-size: 0
+		opacity: 0.5
+	100%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(15deg)
+@keyframes roll-long-600
+	0%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(-25deg)
+	3%
+		opacity: 1.0
+		transform: rotate(0deg)
+	5%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 13px
+		opacity: 1.0
+	45%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 15px
+		opacity: 1.0
+		transform: rotate(0deg)
+	52%
+		margin-top: 10.0em
+		margin-left: 0
+		font-size: 0
+		opacity: 0.5
+	100%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(15deg)
+@keyframes roll-long-450
+	0%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(-25deg)
+	3%
+		opacity: 1.0
+		transform: rotate(0deg)
+	5%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 12px
+		opacity: 1.0
+	45%
+		margin-top: 0px
+		margin-left: 0px
+		font-size: 14px
+		opacity: 1.0
+		transform: rotate(0deg)
+	52%
+		margin-top: 10.0em
+		margin-left: 0
+		font-size: 0
+		opacity: 0.5
+	100%
+		margin-top: 0px
+		margin-left: -10.0em
+		font-size: 0
+		opacity: 0.0
+		transform: rotate(15deg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gallery
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	margin: 80px auto 0
+	+bp450
+		flex-direction: column
+	+bp400
+		margin: 65px auto 0
+	.img-box
+		display: block
+		width: 50%
+		z-index: 2
+		position: relative
+		+bp450
+			width: 100%
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+			opacity: 0.3
+			transition: all 0.5s ease-in-out
+			&:hover
+				opacity: 0.0

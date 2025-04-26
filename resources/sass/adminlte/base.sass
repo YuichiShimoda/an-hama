@@ -1,0 +1,298 @@
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp650
+	@media screen and (max-width: 650px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+
+
+
+
+.login-page
+	background: url("../../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+	.login-box
+		width: 450px
+		+bp600
+			width: 350px
+		.login-logo
+			width: 300px
+			margin: 0 auto
+			+bp600
+				width: 250px
+		.card.card-outline
+			margin: 50px auto 0
+			border: 0
+			+bp600
+				margin: 30px auto 0
+			.card-header
+				.card-title
+					color: #999
+			.card-body
+				padding: 30px 50px 15px
+				+bp600
+					padding: 25px 20px 15px
+				form.login
+					.input-group
+						.form-control
+						.invalid-feedback
+							font-size: 10px
+					.row
+						align-items: center
+						.col-7
+							.icheck-primary
+								display: flex
+								align-items: center
+								input[type="checkbox"]:checked
+									accent-color: #d40100
+								label
+									margin-left: 0.3em
+									margin-bottom: 0
+									font-weight: 500
+									font-size: 14px
+						.col-5
+							button
+								background-color: #B92928
+								border: 0
+								white-space: nowrap
+								span
+									margin-right: 5px
+				form.pw-reset
+					.input-group.mb-3
+						.invalid-feedback
+							font-size: 10px
+					.btn.btn-block.btn-flat.btn-primary
+						width: 180px
+						margin: 0 auto 15px
+						background-color: #B92928
+						border: 0
+						span
+							margin-right: 8px
+							font-size: 14px
+			.card-footer
+				padding: 20px 50px
+				+bp600
+					padding: 15px 20px
+				.my-0
+					a
+						font-size: 14px
+						color: #999
+
+
+
+
+
+
+
+
+.register-page
+	background: url("../../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+	.register-box
+		width: 450px
+		+bp600
+			width: 350px
+		.register-logo
+			width: 300px
+			margin: 0 auto
+			+bp600
+				width: 250px
+		.card.card-outline
+			margin: 50px auto 0
+			border: 0
+			+bp600
+				margin: 30px auto 0
+			.card-header
+				.card-title
+					color: #999
+			.card-body
+				padding: 30px 50px 15px
+				+bp600
+					padding: 25px 20px 15px
+				form.register
+					.input-group.mb-3
+						.invalid-feedback
+							font-size: 10px
+					.btn.btn-block.btn-flat.btn-primary
+						width: 180px
+						height: 40px
+						margin: 0 auto 10px
+						background-color: #B92928
+						border: 0
+						span
+							margin-right: 8px
+							font-size: 14px
+			.card-footer
+				padding: 20px 50px
+				+bp600
+					padding: 15px 20px
+				.my-0
+					a
+						font-size: 14px
+						color: #999
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-box
+	position: fixed
+	left: 0
+	bottom: 0
+	display: block
+	width: 100%
+	padding: 0
+	transition: all 0.5s ease-in-out
+	.copyright-box
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		width: 100%
+		padding: 15px 0 11px
+		margin-top: 0
+		background-color: #333
+		.corporate-box
+			display: block
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			.link-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				z-index: 2
+				position: relative
+				transition: all 0.5s ease-in-out
+				&:hover
+					opacity: 0.5
+				.logo
+					display: block
+					width: 50px
+					+bp450
+						width: 40px
+			.invoice-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				margin-left: 15px
+				.tit
+					display: block
+					margin-bottom: 0
+					font-weight: 400
+					font-size: 11px
+					line-height: 1.0
+					letter-spacing: 0.05em
+					color: #ccc
+					&::selection
+						background: #721C1B
+				.num
+					display: block
+					margin-bottom: 0
+					font-weight: 400
+					font-size: 11px
+					line-height: 1.0
+					letter-spacing: 0.05em
+					color: #ccc
+					&::selection
+						background: #721C1B
+		.copyright
+			display: block
+			margin-top: 5px
+			margin-bottom: 0
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.0
+			letter-spacing: 0.0em
+			color: #fff
+			&::selection
+				background: #721C1B
+			span
+				display: inline-block
+				margin-right: 0.3em
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.0
+				font-family: serif
+				letter-spacing: 0.05em
+				color: #fff
+				&::selection
+					background: #721C1B

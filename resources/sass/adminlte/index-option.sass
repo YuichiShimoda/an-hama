@@ -1,0 +1,231 @@
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp650
+	@media screen and (max-width: 650px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-header
+	.alert.alert-success
+		margin-top: 20px
+		margin-bottom: 0
+		h5
+			font-size: 16px
+			margin-bottom: 0
+			i
+				margin-right: 8px
+				font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table-empty-msg
+	display: block
+	margin-bottom: 0
+	font-weight: 500
+	font-size: 16px
+	line-height: 1.0
+	letter-spacing: 0.05em
+	text-align: center
+	color: #555
+.dataTables_wrapper
+	.dataTables_length
+		label
+			font-weight: 500
+			font-size: 14px
+			color: #555
+		select
+			min-width: 55px
+			height: 35px
+			margin-right: 5px
+	.dataTables_filter
+		label
+			font-weight: 500
+			font-size: 14px
+			color: #555
+		input
+			height: 35px
+			margin-left: 10px
+	.dataTables_info
+		display: none
+	.paginate_button.previous
+		font-size: 14px
+	.dataTables_paginate.paging_simple_numbers
+		float: left
+		margin-top: 5px
+		span
+			a
+				min-width: 35px
+				padding: 0.3em
+				color: #555 !important
+	.paginate_button.next
+		font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swal2-icon.swal2-warning.swal2-icon-show
+	width: 50px
+	height: 50px
+	margin: 2rem auto 0.6rem
+	border-color: #dc3545
+	color: #dc3545
+	> .swal2-icon-content
+		font-size: 2.5rem
+		color: #dc3545
+.swal2-icon.swal2-question.swal2-icon-show
+	width: 4rem
+	height: 4rem
+	margin: 2rem auto 0.6rem
+	border-color: #486BB1
+	color: #486BB1
+	> .swal2-icon-content
+		font-size: 3rem
+		color: #486BB1
+.swal2-icon.swal2-error.swal2-icon-show
+	width: 5rem
+	height: 5rem
+	margin: 2rem auto 0.6rem
+	> .swal2-icon-content
+		font-size: 3rem
+		color: #486BB1
+.swal2-html-container
+	marign: 0.5rem auto 0
+	font-size: 1rem
+.swal2-actions
+	margin: 0.7em auto 0
+.swal2-popup.swal2-modal.swal2-icon-warning.swal2-show
+	max-width: 380px
+	+bp500
+		max-width: calc(100vw - 30px)
+.swal2-popup.swal2-modal.swal2-icon-question.swal2-show
+	max-width: 500px
+	+bp500
+		max-width: calc(100vw - 30px)
+.swal2-validation-message:before
+	display: none !important
+.swal2-validation-message
+	background: none !important
+	font-size: 0.9rem !important
+	font-weight: 400 !important
+	color: #dc3545 !important
+#swal2-title
+	font-weight: 500
+	font-size: 18px
+button.swal2-confirm.swal2-styled
+	min-width: 80px
+	font-size: 0.8rem
+button.swal2-cancel.swal2-styled
+	font-size: 0.8rem

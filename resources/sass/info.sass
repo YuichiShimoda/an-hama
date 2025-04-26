@@ -1,0 +1,966 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-md-v3: "miniwa-md-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$morfin: "morfin", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+$rift: "rift", sans-serif // 400, 700
+$shalimar: "Shalimar", serif // 400
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+
+
+
+body
+	overflow-x: hidden
+	scrollbar-width: none
+	-ms-overflow-style: none
+body::-webkit-scrollbar
+	display: none
+#wrap
+	overflow: hidden
+	max-width: 100%
+	background: url("../image/base-bg.png")
+	background-size: 500px
+	background-repeat: repeat
+*::selection
+	background: #ddd
+
+
+
+
+
+
+
+
+
+
+
+
+#first-view
+	display: block
+	width: 100%
+	margin: 150px auto 0
+	+bp900
+		margin: 120px auto 0
+	h1
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+	.desc-box
+		display: block
+		width: 720px
+		margin: 40px auto 0
+		+bp900
+			width: calc(100% - 160px)
+		+bp800
+			width: calc(100% - 100px)
+		.note
+			display: block
+			padding-left: 1.35em
+			font-weight: 400
+			font-size: 11px
+			line-height: 1.7
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			text-align: center
+			color: #777
+			text-indent: -1.35em
+
+
+
+
+
+
+
+
+
+.side-bar
+	position: fixed
+	top: 50%
+	right: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	width: fit-content
+	padding: 20px 15px
+	border-top-left-radius: 15px
+	border-bottom-left-radius: 15px
+	background: #B92928
+	z-index: 2000
+	+bp1200
+		padding: 16px 12px
+		border-top-left-radius: 12px
+		border-bottom-left-radius: 12px
+	.icon-box
+		display: block
+		width: 38px
+		position: relative
+		+bp1200
+			width: 30px
+		.nomal
+			display: block
+			width: 100%
+			filter: hue-rotate(110deg)
+			transform-origin: left bottom
+			animation: puni 5.0s infinite
+		.move
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			animation: puni-translate 5.0s 1.3s infinite
+	p
+		display: block
+		margin-top: 10px
+		font-weight: 400
+		font-size: 20px
+		line-height: 1.0
+		font-family: $iroha-25icho-stdn
+		letter-spacing: 0.25em
+		writing-mode: vertical-rl
+		color: #fff
+		+bp1200
+			margin-top: 8px
+			font-size: 16px
+@keyframes puni
+	0%
+		transform: scale(0.9, 1.05) translateY(0) rotate(45deg)
+		opacity: 1.0
+	3%
+		transform: scale(1.1, 0.9) translateY(10%)
+	6%
+		transform: scale(1.0, 1.0) translateY(0)
+	9%
+		transform: scale(1.05, 0.95) translateY(5%)
+	12%
+		transform: scale(1.0, 1.0) translateY(0)
+	15%
+		transform: scale(1.02, 0.98) translateY(2%) rotate(0deg)
+	18%
+		transform: scale(1.0, 1.0) translateY(0)
+	20%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 1.0
+	50%
+		opacity: 1.0
+	60%
+		opacity: 0.0
+	100%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 0.0
+@keyframes puni-translate
+	0%
+		transform: scale(0.9, 1.05) translate(27%, 17%) rotate(45deg)
+		opacity: 1.0
+	3%
+		transform: scale(1.1, 0.9) translate(27%, 27%)
+	6%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	9%
+		transform: scale(1.05, 0.95) translate(27%, 22%)
+	12%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	15%
+		transform: scale(1.02, 0.98) translate(27%, 19%) rotate(0deg)
+	18%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	20%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+		opacity: 1.0
+	50%
+		opacity: 1.0
+	60%
+		opacity: 0.0
+	100%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#overview
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	width: 1050px
+	margin: 100px auto 0
+	+bp1400
+		margin: 80px auto 0
+	+bp1300
+		width: 1020px
+	+bp1200
+		justify-content: center
+		width: calc(100% - 200px)
+		margin: 60px auto 0
+	+bp1000
+		width: calc(100% - 160px)
+		margin: 50px auto 0
+	+bp900
+		justify-content: space-between
+		width: 100%
+	.left-box
+		display: block
+		width: 450px
+		+bp1200
+			width: calc(100% - 560px)
+		+bp1100
+			width: calc(100% - 520px)
+		+bp900
+			width: calc(100% - 550px)
+		+bp850
+			width: calc(100% - 530px)
+		+bp800
+			width: calc(100% - 450px)
+	.right-box
+		display: block
+		width: 500px
+		+bp1200
+			margin-left: 60px
+		+bp1100
+			min-width: 490px
+			margin-left: 50px
+		+bp1000
+			margin-left: 40px
+		+bp900
+			margin-top: 40px
+			margin-left: 60px
+		+bp850
+			margin-left: 40px
+		+bp800
+			width: 430px
+			min-width: 430px
+			margin-top: 20px
+			margin-left: 30px
+		.content-box
+			display: block
+			width: 100%
+			.ele
+				display: flex
+				justify-content: space-between
+				align-items: center
+				width: 100%
+				padding: 30px 25px
+				border-bottom: solid 1px #ccc
+				+bp1200
+					padding: 25px 20px
+				+bp1100
+					padding: 20px 20px
+				.tit
+					display: block
+					font-weight: 400
+					font-size: 18px
+					line-height: 1.0
+					font-family: $miniwa-bd-v3
+					letter-spacing: 0.05em
+					color: #555
+					+bp1200
+						font-size: 16px
+				.desc
+					display: block
+					font-weight: 400
+					font-size: 14px
+					line-height: 1.0
+					font-family: $miniwa-lt-v3
+					letter-spacing: 0.05em
+					color: #555
+					+bp800
+						font-size: 12px
+					&.tel
+						pointer-events: none
+					.from
+						display: inline-block
+						margin-left: 5px
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
+						+bp800
+							font-size: 12px
+					.end-time
+						display: inline-block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.0em
+						color: #777
+					.commas
+						display: inline-block
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.05em
+						color: #555
+						+bp800
+							font-size: 12px
+					.pay-logo
+						display: inline-block
+						width: 280px
+						margin-left: 10px
+						margin-bottom: -2px
+						+bp1200
+							margin-bottom: -3px
+						+bp800
+							width: 230px
+							margin-left: 5px
+				a.desc
+					z-index: 3
+					transition: all 0.5s ease-in-out
+					&:hover
+						opacity: 0.5
+					.parking
+						display: inline-block
+						margin-left: 10px
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $miniwa-lt-v3
+						letter-spacing: 0.0em
+						color: #777
+					.external-link-icon
+						display: inline-block
+						width: 17px
+						margin-left: 5px
+						margin-bottom: -2px
+						animation: blinker 0.6s infinite ease-in-out
+		.pay-box
+			display: flex
+			justify-content: flex-end
+			width: 100%
+			padding-right: 25px
+			margin-top: 15px
+			+bp1200
+				padding-right: 20px
+			img
+				display: block
+				width: 300px
+		// .note-box
+		// 	display: block
+		// 	width: 500px
+		// 	padding: 0 25px
+		// 	margin-top: 5px
+		// 	p
+		// 		display: block
+		// 		width: 100%
+		// 		padding-left: 2.5em
+		// 		font-weight: 400
+		// 		font-size: 10px
+		// 		line-height: 1.3
+		// 		font-family: $miniwa-lt-v3
+		// 		letter-spacing: 0.0em
+		// 		text-indent: -2.5em
+		// 		color: #777
+@keyframes blinker
+	0%
+		opacity: 1.0
+	100%
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+#access
+	display: block
+	width: 100%
+	margin: 150px auto 0
+	+bp1400
+		margin: 120px auto 0
+	+bp1200
+		margin: 100px auto 0
+	+bp1000
+		margin: 80px auto 0
+	h2
+		display: block
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.0
+		font-family: $miniwa-hv-v3
+		letter-spacing: 0.05em
+		text-align: center
+		color: #555
+	.content-box
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		width: 720px
+		margin: 80px auto 0
+		+bp1200
+			margin: 60px auto 0
+		+bp1000
+			margin: 50px auto 0
+		.train-box
+			display: block
+			width: fit-content
+			.icon
+				display: block
+				width: 60px
+				margin: 0 auto
+				aspect-ratio: 1 / 1
+				object-fit: contain
+			.cat
+				display: block
+				width: fit-content
+				padding: 0 0.3em 0.15em
+				margin: 30px auto 0
+				border-bottom: solid 1px #a35251
+				font-weight: 400
+				font-size: 18px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.15em
+				color: #721C1B
+			.desc
+				display: block
+				margin-top: 20px
+				width: 300px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				text-align: center
+				color: #555
+				+bp1000
+					width: 240px
+		.car-box
+			display: block
+			width: fit-content
+			margin-left: 50px
+			+bp1000
+				margin-left: 40px
+			.icon
+				display: block
+				width: 60px
+				margin: 0 auto
+				aspect-ratio: 1 / 1
+				object-fit: contain
+			.cat
+				display: block
+				width: fit-content
+				padding: 0 0.3em 0.15em
+				margin: 30px auto 0
+				border-bottom: solid 1px #a35251
+				font-weight: 400
+				font-size: 18px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.15em
+				color: #721C1B
+			.desc
+				display: block
+				width: 300px
+				margin-top: 20px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #555
+				+bp1000
+					width: 240px
+	.google-map
+		display: block
+		width: 100%
+		height: 450px
+		margin: 120px auto 0
+		z-index: 2
+		position: relative
+		+bp1400
+			margin: 100px auto 0
+		+bp1200
+			margin: 80px auto 0
+		+bp1000
+			height: 420px
+		iframe
+			display: block
+			width: 100%
+			height: 100%
+			filter: grayscale(1.0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#parking-map
+	display: block
+	width: 100%
+	margin: 70px auto 120px
+	+bp1000
+		margin: 60px auto 90px
+	+bp850
+		margin: 50px auto 70px
+	.pc-content-box
+		display: block
+		width: 1000px
+		margin: 0 auto
+		position: relative
+		+bp1300
+			width: calc(100% - 160px)
+			max-width: 1000px
+		+bp850
+			width: calc(100% - 100px)
+		+bp800
+			width: calc(100% - 60px)
+		.inside
+			display: block
+			width: 100%
+			img
+				display: block
+				width: 100%
+		.ripple-box
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 40px
+			aspect-ratio: 1 / 1
+			transform-origin: center center
+			transform: translate(50%, -50%)
+			z-index: 30
+			+bp1300
+				width: 4%
+			&.parking1
+				top: 18%
+				left: 27%
+			&.parking2
+				top: 40%
+				left: 32%
+			&.parking3
+				top: 46%
+				left: 24.4%
+			&.parking4
+				top: 8%
+				right: 37%
+			&.parking5
+				top: 12%
+				right: 33%
+			&.parking6
+				top: 53%
+				right: 23%
+			&.parking7
+				left: 32%
+				bottom: 26%
+			&.parking8
+				left: 28%
+				bottom: 10%
+			&.parking9
+				left: 32%
+				bottom: 6%
+			&.parking10
+				left: 52%
+				bottom: 8%
+			&.parking11
+				right: 25.5%
+				bottom: 26%
+			&.parking12
+				right: 26.5%
+				bottom: 10%
+			.ripple-btn
+				position: absolute
+				display: block
+				width: 10px
+				height: 10px
+				// &::before
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple 4.0s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(3px)
+				// &::after
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple2 4.0s -2.5s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(2px)
+	.sp-content-box
+		display: none
+		width: 600px
+		margin: 0 auto
+		position: relative
+		.inside
+			display: block
+			width: 100%
+			img
+				display: block
+				width: 100%
+		.ripple-box
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 40px
+			height: 40px
+			transform-origin: center center
+			transform: translate(50%, -50%)
+			z-index: 30
+			&.parking1
+				top: 20%
+				left: 11%
+			&.parking2
+				top: 28%
+				left: 19%
+			&.parking3
+				top: 31%
+				left: 9%
+			&.parking4
+				top: 11%
+				right: 37%
+			&.parking5
+				top: 17%
+				right: 31%
+			&.parking6
+				top: 49%
+				right: 18%
+			&.parking7
+				left: 17%
+				bottom: 35%
+			&.parking8
+				left: 12%
+				bottom: 17%
+			&.parking9
+				left: 19%
+				bottom: 17%
+			&.parking10
+				left: 46%
+				bottom: 20%
+			&.parking11
+				right: 21%
+				bottom: 35%
+			&.parking12
+				right: 23%
+				bottom: 22%
+			.ripple-btn
+				position: absolute
+				display: block
+				width: 10px
+				height: 10px
+				// &::before
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple 4.0s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(3px)
+				// &::after
+				// 	position: absolute
+				// 	top: 0
+				// 	left: 0
+				// 	right: 0
+				// 	bottom: 0
+				// 	content: ""
+				// 	display: block
+				// 	border-radius: 50%
+				// 	background-color: rgba(#B92928, 0.9)
+				// 	animation: ripple2 4.0s -2.5s cubic-bezier(0.72, 0, 0.31, 0.98) infinite
+				// 	transform-origin: center center
+				// 	filter: blur(2px)
+	.desc-box
+		display: block
+		width: 1000px
+		margin: 20px auto 0
+		+bp1300
+			width: calc(100% - 160px)
+			max-width: 1000px
+		+bp850
+			width: calc(100% - 100px)
+		+bp800
+			width: calc(100% - 60px)
+		p
+			display: block
+			width: 100%
+			padding-left: 1.0em
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.6
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #777
+			text-indent: -1.0em
+	.download-btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: fit-content
+		padding: 15px 30px
+		margin: 50px auto 0
+		background-color: #B92928
+		border-radius: 25px
+		transition: all 0.5s ease-in-out
+		z-index: 3
+		position: relative
+		&:hover
+			opacity: 0.5
+		+bp1000
+			margin: 40px auto 0
+		+bp850
+			margin: 30px auto 0
+		span
+			display: block
+			font-weight: 700
+			font-size: 16px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #fff
+@keyframes ripple
+	0%
+		transform: scale(0.0)
+		opacity: 0.0
+	50%
+		opacity: 1.0
+	90%
+		transform: scale(1.2)
+		opacity: 0.0
+	100%
+		transform: scale(1.2)
+		opacity: 0.0
+@keyframes ripple2
+	0%
+		transform: scale(0.0)
+		opacity: 0.0
+	50%
+		opacity: 1.0
+	80%
+		transform: scale(1.4)
+	95%
+		opacity: 0.0
+	100%
+		transform: scale(1.4)
+		opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gallery
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	margin: 0 auto 0
+	.img-box
+		display: block
+		width: 50%
+		z-index: 2
+		position: relative
+		.overlay
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg, #fcfffa, rgba(252, 255, 250, 0.2) 50%, #fcfffa), linear-gradient(90deg, rgba(252, 255, 250, 0.16), rgba(252, 255, 250, 0)), linear-gradient(to bottom, rgba(252, 255, 250, 0.5), rgba(252, 255, 250, 0.5))
+			opacity: 0.3
+			transition: all 0.5s ease-in-out
+			&:hover
+				opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.md-overlay
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background: #000
+	opacity: .7
+	z-index: 3
+.md-contents
+	display: none
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 75%
+	max-width: 500px
+	z-index: 1999
+	overflow: hidden
+	+bp1000
+		max-width: 400px
+	> .md-inner
+		display: block
+		width: 100%
+		padding: 60px 40px 40px
+		background-color: #fff
+		border-radius: 5px
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		position: relative
+		+bp1000
+			padding: 60px 20px 20px
+		// > h3
+		// 	display: inline-block
+		// 	padding: 5px 25px
+		// 	margin-bottom: 15px
+		// 	font-weight: 700
+		// 	font-size: 18px
+		// 	line-height: 1.7
+		// 	font-family: sans-serif
+		// 	letter-spacing: 0.05em
+		// 	color: #000
+		// > p
+		// 	display: block
+		// 	margin-top: 1em
+		// 	font-weight: 400
+		// 	font-size: 14px
+		// 	line-height: 1.7
+		// 	font-family: sans-serif
+		// 	letter-spacing: 0.05em
+		// 	color: #000
+		> .fig
+			display: block
+			width: 100%
+		> .note
+			display: block
+			width: calc(100% - 10px)
+			margin: 5px auto 0
+			padding-left: 1.35em
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.5
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #777
+			text-indent: -1.35em
+			+bp1000
+				margin: 2px auto 0
+				font-size: 11px
+			&:first-of-type
+				margin: 10px auto 0
+				+bp1000
+					margin: 7px auto 0
+		> .close_btn
+			position: absolute
+			top: 15px
+			right: 15px
+			display: block
+			width: 40px
+			pointer-events: initial
+			-webkit-user-select: initial
+			-moz-touch-callout: initial
+			-moz-user-select: initial
+			user-select: initial
+			transition: all 0.3s ease-in-out
+		> .close_btn:hover
+			opacity: 0.5
