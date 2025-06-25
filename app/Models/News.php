@@ -13,5 +13,6 @@ class News extends Model
         'category',
         'title',
         'body',
+        'reservation_day',
     ];
 }

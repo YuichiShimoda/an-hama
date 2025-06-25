@@ -4,6 +4,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminlte/news.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" />
 @stop
 
 @section('content_header')
@@ -53,6 +54,23 @@
             <x-adminlte-textarea name="body" label="詳細情報" placeholder="お知らせの詳細を入力してください。" rows="7">{{ old('body') }}</x-adminlte-textarea>
         </div>
 
+        @php
+            $tomorrow = \Carbon\Carbon::tomorrow()->format('Y-m-d');
+        @endphp
+        {{-- 公開予約日 --}}
+        <div class="d-block period-box">
+            <x-adminlte-input-date name="reservation_day" label="公開予約日" :config="['format' => 'YYYY-MM-DD', 'minDate' => $tomorrow]" value="{{ old('reservation_day') }}">
+                <x-slot name="prependSlot">
+                    <div class="input-group-text bg-gradient-info">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </x-slot>
+            </x-adminlte-input-date>
+            <div class="form-note-box">
+                <p>※ 公開予定日を設定することで、その日以降にホームページで情報が自動的に公開されます。公開予定日になるまでは、ホームページには表示されません。</p>
+            </div>
+        </div>
+
         {{-- 登録ボタン --}}
         <x-adminlte-button label="登録する" class="register-btn" type="submit"/>
     </form>
@@ -60,4 +78,10 @@
 
 @section('js')
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/ja.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script>
+        moment.locale('ja');
+    </script>
 @endsection
