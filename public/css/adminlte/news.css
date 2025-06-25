@@ -68,96 +68,86 @@
   margin-top: 20px;
   margin-bottom: 100px;
 }
-.content #newsTable {
+.content #newsTable, .content #reservationTable {
   width: initial !important;
   margin: 0;
 }
-@media screen and (max-width: 1000px) {
-  .content #newsTable {
-    margin-bottom: 80px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .content #newsTable {
-    margin-bottom: 40px;
-  }
-}
-.content #newsTable tbody tr.is-hidden {
+.content #newsTable tbody tr.is-hidden, .content #reservationTable tbody tr.is-hidden {
   opacity: 0.5;
 }
-.content #newsTable tbody tr.first td:nth-child(1) {
+.content #newsTable tbody tr.first td:nth-child(1), .content #reservationTable tbody tr.first td:nth-child(1) {
   background-color: #006134;
   color: #fff;
 }
-.content #newsTable tbody tr.second td:nth-child(1) {
+.content #newsTable tbody tr.second td:nth-child(1), .content #reservationTable tbody tr.second td:nth-child(1) {
   background-color: #fff;
 }
-.content #newsTable tbody tr.third td:nth-child(1) {
+.content #newsTable tbody tr.third td:nth-child(1), .content #reservationTable tbody tr.third td:nth-child(1) {
   background-color: #B92928;
   color: #fff;
 }
-.content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1) {
+.content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1), .content #reservationTable th:nth-child(1), .content #reservationTable td:nth-child(1) {
   width: 30px !important;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1) {
+  .content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1), .content #reservationTable th:nth-child(1), .content #reservationTable td:nth-child(1) {
     min-width: 30px !important;
   }
 }
-.content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2) {
+.content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2), .content #reservationTable th:nth-child(2), .content #reservationTable td:nth-child(2) {
   width: 90px !important;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2) {
+  .content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2), .content #reservationTable th:nth-child(2), .content #reservationTable td:nth-child(2) {
     min-width: 90px !important;
   }
 }
-.content #newsTable th:nth-child(3), .content #newsTable td:nth-child(3) {
+.content #newsTable th:nth-child(3), .content #newsTable td:nth-child(3), .content #reservationTable th:nth-child(3), .content #reservationTable td:nth-child(3) {
   min-width: 200px !important;
   max-width: 380px !important;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4) {
+.content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4), .content #reservationTable th:nth-child(4), .content #reservationTable td:nth-child(4) {
   width: 100px !important;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4) {
+  .content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4), .content #reservationTable th:nth-child(4), .content #reservationTable td:nth-child(4) {
     min-width: 100px !important;
   }
 }
-.content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5) {
+.content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5), .content #reservationTable th:nth-child(5), .content #reservationTable td:nth-child(5) {
   width: 110px !important;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5) {
+  .content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5), .content #reservationTable th:nth-child(5), .content #reservationTable td:nth-child(5) {
     min-width: 110px !important;
   }
 }
-.content #newsTable th {
+.content #newsTable th, .content #reservationTable th {
   padding: 0.7em 1em;
   font-size: 14px;
   color: #555;
 }
-.content #newsTable th:first-of-type {
+.content #newsTable th:first-of-type, .content #reservationTable th:first-of-type {
   font-size: 16px;
 }
-.content #newsTable td {
+.content #newsTable td, .content #reservationTable td {
   padding: 0.5em 1em;
   font-size: 13px;
   vertical-align: initial;
   color: #555;
 }
-.content #newsTable td:first-of-type {
+.content #newsTable td:first-of-type, .content #reservationTable td:first-of-type {
   font-size: 15px;
 }
-.content #newsTable td:last-of-type {
+.content #newsTable td:last-of-type, .content #reservationTable td:last-of-type {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.content #newsTable td:last-of-type a {
+.content #newsTable td:last-of-type a, .content #reservationTable td:last-of-type a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,26 +156,26 @@
   padding: 0;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable td:last-of-type a {
+  .content #newsTable td:last-of-type a, .content #reservationTable td:last-of-type a {
     width: 25px;
   }
 }
-.content #newsTable td:last-of-type a:nth-of-type(1) i {
+.content #newsTable td:last-of-type a:nth-of-type(1) i, .content #reservationTable td:last-of-type a:nth-of-type(1) i {
   font-size: 13px;
 }
-.content #newsTable td:last-of-type a:nth-of-type(2) {
+.content #newsTable td:last-of-type a:nth-of-type(2), .content #reservationTable td:last-of-type a:nth-of-type(2) {
   margin-left: 0.5em;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable td:last-of-type a:nth-of-type(2) {
+  .content #newsTable td:last-of-type a:nth-of-type(2), .content #reservationTable td:last-of-type a:nth-of-type(2) {
     margin-left: 0.3em;
   }
 }
-.content #newsTable td:last-of-type a:nth-of-type(2) i {
+.content #newsTable td:last-of-type a:nth-of-type(2) i, .content #reservationTable td:last-of-type a:nth-of-type(2) i {
   font-size: 14px;
   color: #444;
 }
-.content #newsTable td:last-of-type form {
+.content #newsTable td:last-of-type form, .content #reservationTable td:last-of-type form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,23 +185,36 @@
   margin-left: 0.5em;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable td:last-of-type form {
+  .content #newsTable td:last-of-type form, .content #reservationTable td:last-of-type form {
     width: 25px;
     margin-left: 0.3em;
   }
 }
-.content #newsTable td:last-of-type form button {
+.content #newsTable td:last-of-type form button, .content #reservationTable td:last-of-type form button {
   display: block;
   width: 100%;
   height: 100%;
 }
 @media screen and (max-width: 700px) {
-  .content #newsTable td:last-of-type form button {
+  .content #newsTable td:last-of-type form button, .content #reservationTable td:last-of-type form button {
     padding: 0;
   }
 }
-.content #newsTable td:last-of-type form button i {
+.content #newsTable td:last-of-type form button i, .content #reservationTable td:last-of-type form button i {
   font-size: 12px;
+}
+.content #reservationTable_wrapper {
+  margin-top: 80px;
+}
+@media screen and (max-width: 700px) {
+  .content #reservationTable_wrapper {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content #reservationTable_wrapper {
+    margin-top: 40px;
+  }
 }
 .content form {
   padding-bottom: 100px;
@@ -234,6 +237,20 @@
 }
 .content form .d-block:first-of-type .input-group.adminlte-invalid-igroup {
   width: fit-content;
+}
+.content form .d-block.period-box {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.content form .d-block.period-box .form-group .input-group .bg-gradient-info {
+  background: #999 !important;
+}
+@media screen and (max-width: 450px) {
+  .content form .d-block.period-box .form-group .input-group .bg-gradient-info .fa-calendar-alt {
+    font-size: 12px;
+  }
 }
 .content form .d-block .form-group {
   margin: 0;
@@ -377,4 +394,42 @@
   display: block;
   margin-right: 5px;
   font-size: 13px;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 5px 15px 3px;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .prev, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .next {
+  vertical-align: middle;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .prev span, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .next span {
+  font-size: 12px;
+  color: #777;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .picker-switch {
+  font-weight: 700;
+  line-height: 1.7;
+  color: #555;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .dow {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm tbody tr td {
+  font-size: 12px;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days th.dow:first-child, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days td:first-child {
+  color: #f00;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days th.dow:last-child, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days td:last-child {
+  color: #00f;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .picker-switch.accordion-toggle .fas.fa-times {
+  line-height: 2;
+  height: 2em;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .picker-switch.accordion-toggle .fas.fa-times::before {
+  font-size: 14px;
 }

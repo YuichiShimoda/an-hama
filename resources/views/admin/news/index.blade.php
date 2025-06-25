@@ -55,6 +55,33 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
+        @if (!$reservation_news->isEmpty())
+            <x-adminlte-datatable id="reservationTable" :heads="['ID', 'カテゴリ', 'タイトル', '公開予定日', '操作']" striped hoverable bordered compressed>
+                @foreach($reservation_news as $reservation_news_ele)
+                    <tr>
+                        <td>{{ $reservation_news_ele->id }}</td>
+                        <td>{{ $reservation_news_ele->category }}</td>
+                        <td>{{ $reservation_news_ele->title }}</td>
+                        <td>{{ \Carbon\Carbon::parse($reservation_news_ele->reservation_day)->format('Y年 n月 j日') }}</td>
+                        <td>
+                            <a href="{{ route('admin.news.show', $reservation_news_ele->id) }}" class="btn btn-sm btn-primary">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="{{ route('admin.news.edit', $reservation_news_ele->id) }}" class="btn btn-sm btn-warning">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <form action="{{ route('admin.news.destroy', $reservation_news_ele->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-xs btn-danger delete-btn" type="submit">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </x-adminlte-datatable>
+        @endif
     @endif
 @endsection
 
@@ -91,6 +118,21 @@
                         $(rows).addClass('is-hidden');
                     }
                 }
+            }, 100);
+            setTimeout(function() {
+                if ($.fn.DataTable.isDataTable('#reservationTable')) {
+                    $('#reservationTable').DataTable().destroy();
+                }
+                const reservationTable = $('#reservationTable').DataTable({
+                    "order": [[0, 'desc']],
+                    language: {
+                        url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
+                    },
+                    "pageLength": -1,
+                    "lengthMenu": [[-1], ["すべて"]],
+                    "searching": false,
+                    "paging": false,
+                });
             }, 100);
 
             // $('#newsTable tbody tr:nth-last-child(n+4)').addClass('is-hidden');

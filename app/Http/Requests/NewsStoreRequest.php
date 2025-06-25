@@ -25,6 +25,7 @@ class NewsStoreRequest extends FormRequest
             'category' => 'required',
             'title' => 'required|max:30',
             'body' => 'required',
+            'reservation_day' => 'nullable|date_format:Y-m-d',
         ];
     }
 
@@ -35,6 +36,7 @@ class NewsStoreRequest extends FormRequest
             'title.required'   => '必ず入力してください。',
             'title.max'      => '30文字以内で入力してください。',
             'body.required'=> '必ず入力してください。',
+            'reservation_day.date_format'   => '「 YYYY-MM-DD 」の形式で入力してください。',
         ];
     }
 }
