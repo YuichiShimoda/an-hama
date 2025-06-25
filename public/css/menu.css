@@ -471,6 +471,7 @@ body::-webkit-scrollbar {
   font-family: "miniwa-hv-v3", sans-serif;
   letter-spacing: 0.05em;
   color: #fff;
+  position: relative;
 }
 @media screen and (max-width: 1400px) {
   #mirakan .top-content-box .img-box .copy-box h3, #miranezu .top-content-box .img-box .copy-box h3, #mila-egg .top-content-box .img-box .copy-box h3, #spinach .top-content-box .img-box .copy-box h3, #hama-chan .top-content-box .img-box .copy-box h3 {
@@ -484,6 +485,23 @@ body::-webkit-scrollbar {
 }
 #mirakan .top-content-box .img-box .copy-box h3::selection, #miranezu .top-content-box .img-box .copy-box h3::selection, #mila-egg .top-content-box .img-box .copy-box h3::selection, #spinach .top-content-box .img-box .copy-box h3::selection, #hama-chan .top-content-box .img-box .copy-box h3::selection {
   background: #444;
+}
+#mirakan .top-content-box .img-box .copy-box h3 .weekly-menu, #miranezu .top-content-box .img-box .copy-box h3 .weekly-menu, #mila-egg .top-content-box .img-box .copy-box h3 .weekly-menu, #spinach .top-content-box .img-box .copy-box h3 .weekly-menu, #hama-chan .top-content-box .img-box .copy-box h3 .weekly-menu {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "miniwa-hv-v3", sans-serif;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+@media screen and (max-width: 1000px) {
+  #mirakan .top-content-box .img-box .copy-box h3 .weekly-menu, #miranezu .top-content-box .img-box .copy-box h3 .weekly-menu, #mila-egg .top-content-box .img-box .copy-box h3 .weekly-menu, #spinach .top-content-box .img-box .copy-box h3 .weekly-menu, #hama-chan .top-content-box .img-box .copy-box h3 .weekly-menu {
+    font-size: 12px;
+    letter-spacing: -0.05em;
+  }
 }
 #mirakan .top-content-box .img-box .copy-box p, #miranezu .top-content-box .img-box .copy-box p, #mila-egg .top-content-box .img-box .copy-box p, #spinach .top-content-box .img-box .copy-box p, #hama-chan .top-content-box .img-box .copy-box p {
   display: block;
@@ -1820,4 +1838,59 @@ body::-webkit-scrollbar {
 }
 #gallery .img-box .overlay:hover {
   opacity: 0;
+}
+
+#topping {
+  position: fixed;
+  right: 40px;
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  aspect-ratio: 1/1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 10;
+}
+#topping.is-show {
+  opacity: 1;
+  pointer-events: initial;
+}
+#topping.is-show:hover {
+  opacity: 0.5;
+}
+@media screen and (max-width: 900px) {
+  #topping {
+    right: 30px;
+  }
+}
+#topping .outside-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: solid 1px #cd2c1d;
+  border-radius: 50%;
+}
+#topping .outside-circle .inside-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 10px);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgba(205, 44, 29, 0.95);
+}
+#topping .outside-circle .inside-circle p {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
 }

@@ -1220,10 +1220,26 @@ body::-webkit-scrollbar {
   box-shadow: inset 1px 1px 1px 0px rgba(255, 255, 255, 0.5), 2px 2px 14px 0px rgba(0, 0, 0, 0.1), 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
   transform: rotateX(0deg);
 }
+@media screen and (max-width: 500px) {
+  #news .content-box .top-box .news-box .news-ele:hover .main-box .cat-box p:nth-child(1) {
+    transform: rotateX(90deg);
+  }
+}
 #news .content-box .top-box .news-box .news-ele:hover .main-box .cat-box p:nth-child(2) {
   box-shadow: inset 1px 1px 1px 0px rgba(255, 255, 255, 0.5), 2px 2px 14px 0px rgba(0, 0, 0, 0.1), 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
   transform: rotateX(-90deg);
   color: rgba(255, 255, 255, 0);
+}
+@media screen and (max-width: 500px) {
+  #news .content-box .top-box .news-box .news-ele:hover .main-box .cat-box p:nth-child(2) {
+    box-shadow: initial;
+    color: #fff;
+    animation: poyoyon 2.5s infinite;
+  }
+}
+#news .content-box .top-box .news-box .news-ele.clicked .main-box .tit {
+  border-bottom: solid 1px #ccc;
+  line-height: 2;
 }
 #news .content-box .top-box .news-box .news-ele .main-box {
   display: flex;
@@ -1381,6 +1397,38 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes poyoyon {
+  0% {
+    transform: rotateX(0deg) skew(0deg, 0deg);
+  }
+  5% {
+    transform: skew(5deg, 5deg);
+  }
+  10% {
+    transform: skew(-4deg, -4deg);
+  }
+  15% {
+    transform: skew(3deg, 3deg);
+  }
+  20% {
+    transform: skew(-2deg, -2deg);
+  }
+  25% {
+    transform: skew(1deg, 1deg);
+  }
+  30% {
+    transform: skew(-0.6deg, -0.6deg);
+  }
+  35% {
+    transform: skew(0.3deg, 0.3deg);
+  }
+  40% {
+    transform: skew(0deg, 0deg);
+  }
+  100% {
+    transform: rotateX(0deg) skew(0deg, 0deg);
+  }
+}
 #chef {
   display: block;
   width: calc(100vw - 100px);

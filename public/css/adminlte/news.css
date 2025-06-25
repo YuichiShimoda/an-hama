@@ -82,6 +82,20 @@
     margin-bottom: 40px;
   }
 }
+.content #newsTable tbody tr.is-hidden {
+  opacity: 0.5;
+}
+.content #newsTable tbody tr.first td:nth-child(1) {
+  background-color: #006134;
+  color: #fff;
+}
+.content #newsTable tbody tr.second td:nth-child(1) {
+  background-color: #fff;
+}
+.content #newsTable tbody tr.third td:nth-child(1) {
+  background-color: #B92928;
+  color: #fff;
+}
 .content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1) {
   width: 30px !important;
 }

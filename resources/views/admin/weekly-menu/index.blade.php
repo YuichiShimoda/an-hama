@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', '週替り管理')
+@section('title', '週替りトッピング管理')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminlte/weekly-menu.css') }}">
@@ -13,15 +13,14 @@
         <x-adminlte-alert theme="success" title="{{ session('success') }}"></x-adminlte-alert>
     @endif
     <div class="tit-box">
-        <h1>週替り管理</h1>
+        <h1>週替りトッピング管理</h1>
         <a href="{{ route('admin.weekly-menu.create') }}" class="create-btn">
             <p>新規作成</p>
         </a>
     </div>
     <div class="desc-box">
-        <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
-        <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
-        <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+        <p>ハマちゃん週替りトッピング情報を新規作成・編集・確認・削除できます。</p>
+        <p>登録されたトッピング具材は、条件を満たした場合にホームページ上でポップアップ表示されます。</p>
     </div>
 @endsection
 
@@ -30,13 +29,13 @@
     @if ($weekly_menu->isEmpty())
         <p class="table-empty-msg">表示するデータがありません。</p>
     @else
-        <x-adminlte-datatable id="weeklyMenuTable" :heads="['ID', 'メニュー', '提供開始日', '提供終了日', '操作']" striped hoverable bordered compressed>
+        <x-adminlte-datatable id="weeklyMenuTable" :heads="['ID', 'ハマちゃんトッピング具材', '提供開始日', '提供終了日', '操作']" striped hoverable bordered compressed>
             @foreach($weekly_menu as $weekly_menu_ele)
                 <tr>
                     <td>{{ $weekly_menu_ele->id }}</td>
                     <td>{{ $weekly_menu_ele->menu }}</td>
-                    <td>{{ $weekly_menu_ele->start_day }}</td>
-                    <td>{{ $weekly_menu_ele->end_day }}</td>
+                    <td>{{ \Carbon\Carbon::parse($weekly_menu_ele->start_day)->format('Y年 n月 j日') }}</td>
+                    <td>{{ \Carbon\Carbon::parse($weekly_menu_ele->end_day)->format('Y年 n月 j日') }}</td>
                     <td>
                         <a href="{{ route('admin.weekly-menu.show', $weekly_menu_ele->id) }}" class="btn btn-sm btn-primary">
                             <i class="fas fa-eye"></i>
@@ -65,14 +64,18 @@
     {{-- 削除確認用スクリプト --}}
     <script>
         $(window).on('load', function () {
-            $('#weeklyMenuTable').DataTable().destroy();
-            $('#weeklyMenuTable').DataTable({
-                "order": [[0, 'desc']],
-                language: {
-                    url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
-                },
-                lengthMenu: [[5, 10, 20], [5, 10, 20]]
-            });
+            setTimeout(function() {
+                if ($.fn.DataTable.isDataTable('#weeklyMenuTable')) {
+                    $('#weeklyMenuTable').DataTable().destroy();
+                }
+                $('#weeklyMenuTable').DataTable({
+                    "order": [[0, 'desc']],
+                    language: {
+                        url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
+                    },
+                    lengthMenu: [[5, 10, 20], [5, 10, 20]]
+                });
+            }, 100);
             $('.delete-btn').on('click', function (e) {
                 e.preventDefault();
                 const $form = $(this).closest('form');

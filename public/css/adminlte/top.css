@@ -1,0 +1,1299 @@
+.content-header .alert.alert-success {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.content-header .alert.alert-success h5 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.content-header .alert.alert-success h5 i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+.content-header .tit-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.content-header .tit-box h1 {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content-header .tit-box .create-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+}
+.content-header .tit-box .create-btn p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.content-header .tit-box .back-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 12px 20px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+.content-header .tit-box .back-btn p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content-header .desc-box {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+.content-header .desc-box p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+
+.content {
+  margin-top: 20px;
+}
+.content #calendar .fc-header-toolbar {
+  margin-bottom: 0.5em;
+}
+@media screen and (max-width: 600px) {
+  .content #calendar .fc-header-toolbar .fc-toolbar-chunk:nth-of-type(2) {
+    order: 3;
+  }
+  .content #calendar .fc-header-toolbar .fc-toolbar-chunk:nth-of-type(3) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    order: 2;
+  }
+}
+.content #calendar .fc-header-toolbar .fc-toolbar-chunk button {
+  padding: 0.6em 1em;
+  font-family: "Noto Sans JP";
+  font-size: 0.8em;
+}
+.content #calendar .fc-header-toolbar .fc-toolbar-chunk button.fc-button-active {
+  background-color: #003d74;
+}
+.content #calendar .fc-header-toolbar .fc-toolbar-title {
+  font-family: "Noto Sans JP";
+  font-size: 1.4em;
+  letter-spacing: 0.02em;
+}
+@media screen and (max-width: 1000px) {
+  .content #calendar .fc-header-toolbar .fc-toolbar-title {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 700px) {
+  .content #calendar .fc-header-toolbar .fc-toolbar-title {
+    font-size: 1em;
+  }
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header .fc-multimonth-title {
+  padding: 1em 0px 0.6em;
+  font-family: "Noto Sans JP";
+  letter-spacing: 0.05em;
+  color: #555;
+}
+@media screen and (max-width: 1000px) {
+  .content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header .fc-multimonth-title {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header .fc-multimonth-title {
+    font-size: 0.8em;
+  }
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header table.fc-multimonth-header-table thead .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header table.fc-multimonth-header-table thead .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header table.fc-multimonth-header-table thead .fc-col-header-cell-cushion {
+  padding: 10px 4px;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  color: #777;
+}
+@media screen and (max-width: 1000px) {
+  .content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header table.fc-multimonth-header-table thead .fc-col-header-cell-cushion {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-header table.fc-multimonth-header-table thead .fc-col-header-cell-cushion {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-day:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-day:not(.fc-day-other) .fc-holiday:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #f3e9e9;
+  opacity: 1;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-day-other .fc-holiday:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-day:not(.fc-day-other).fc-day-sat .fc-holiday {
+  background-color: #EEF6FB !important;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-number {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  color: #999;
+  transition: all 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-number:hover {
+  color: #007bff;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-event:not(.fc-bg-event):hover {
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-event:not(.fc-bg-event) .fc-daygrid-event-dot {
+  border-width: 3px;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-event:not(.fc-bg-event) .fc-event-time {
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #777;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-event:not(.fc-bg-event) .fc-event-title {
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #777;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-h-event {
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-h-event:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-time {
+  padding: 2px 0px 2px 5px;
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container {
+  display: block;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 4px;
+}
+.content #calendar .fc-view-harness .fc-multiMonthFourMonth-view .fc-multimonth-month .fc-multimonth-daygrid table.fc-multimonth-daygrid-table tbody .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container .fc-event-title {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid thead table.fc-col-header .fc-day:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid thead table.fc-col-header .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid thead table.fc-col-header .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+  padding: 10px 4px;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  color: #777;
+}
+@media screen and (max-width: 1000px) {
+  .content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-day:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-day:not(.fc-day-other) .fc-holiday:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #f3e9e9;
+  opacity: 1;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-day-other .fc-holiday:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-day:not(.fc-day-other).fc-day-sat .fc-holiday {
+  background-color: #EEF6FB !important;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-number {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  color: #999;
+  transition: all 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-number:hover {
+  color: #007bff;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-event:not(.fc-bg-event):hover {
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-event:not(.fc-bg-event) .fc-daygrid-event-dot {
+  border-width: 3px;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-event:not(.fc-bg-event) .fc-event-time {
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #777;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-event:not(.fc-bg-event) .fc-event-title {
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #777;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-h-event {
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-h-event:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-time {
+  padding: 2px 0px 2px 5px;
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container {
+  display: block;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 4px;
+}
+.content #calendar .fc-view-harness .fc-dayGridMonth-view table.fc-scrollgrid tbody table.fc-scrollgrid-sync-table .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container .fc-event-title {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-day:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+  padding: 10px 4px;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  color: #777;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1000px) {
+  .content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+    padding: 8px 4px;
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 700px) {
+  .content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion:hover {
+  color: #007bff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion:hover .fc-weekday {
+  color: #007bff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion .fc-weekday {
+  font-family: "Noto Sans JP";
+  font-size: 13px;
+  color: #777;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 1000px) {
+  .content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion .fc-weekday {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion .fc-weekday {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion .fc-weekday {
+    line-height: 1.2;
+    transform-origin: top center;
+    transform: scale(0.5);
+  }
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table tr {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday {
+  background-color: #f3e9e9;
+  opacity: 1;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-bg-event {
+  background-color: initial;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-timegrid-axis-cushion {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  color: #999;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events {
+  transition: opacity 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event {
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 4px;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container .fc-event-title {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-slots .fc-timegrid-slot-label-cushion {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  color: #999;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table tr {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday {
+  background-color: #f3e9e9;
+  opacity: 1;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-bg-event {
+  background-color: initial;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event {
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event .fc-event-main .fc-event-time {
+  padding: 1px 4px 0;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event .fc-event-main .fc-event-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 4px;
+}
+.content #calendar .fc-view-harness .fc-timeGridWeek-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event .fc-event-main .fc-event-title-container .fc-event-title {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid thead table.fc-col-header .fc-day:not(.fc-day-sat):not(.fc-day-sun) {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid thead table.fc-col-header .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid thead table.fc-col-header .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+  padding: 10px 4px;
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: #777;
+}
+@media screen and (max-width: 1000px) {
+  .content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid thead table.fc-col-header .fc-col-header-cell-cushion {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table tr {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday {
+  background-color: #f3e9e9;
+  opacity: 1;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-bg-event {
+  background-color: initial;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-timegrid-axis-cushion {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  color: #999;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event {
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 4px;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:first-child table .fc-daygrid-day-events .fc-h-event .fc-event-main .fc-event-title-container .fc-event-title {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-slots .fc-timegrid-slot-label-cushion {
+  font-family: "Noto Sans JP";
+  font-size: 14px;
+  color: #999;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table tr {
+  background-color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday {
+  background-color: #f3e9e9;
+  opacity: 1;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-day-sat {
+  background-color: #EEF6FB;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-day-sun {
+  background-color: #f3e9e9;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-bg-event {
+  background-color: initial;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event {
+  border: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event .fc-event-main .fc-event-time {
+  padding: 1px 4px 0;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event .fc-event-main .fc-event-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 4px;
+}
+.content #calendar .fc-view-harness .fc-timeGridDay-view table.fc-scrollgrid tbody .fc-scrollgrid-section-body:last-child .fc-timegrid-cols table .fc-timegrid-col-events .fc-v-event .fc-event-main .fc-event-title-container .fc-event-title {
+  display: block;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  color: #fff;
+}
+.content #newsTable {
+  width: initial !important;
+  margin: 0;
+}
+@media screen and (max-width: 1000px) {
+  .content #newsTable {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content #newsTable {
+    margin-bottom: 40px;
+  }
+}
+.content #newsTable tbody tr.is-hidden {
+  opacity: 0.5;
+}
+.content #newsTable tbody tr.first td:nth-child(1) {
+  background-color: #006134;
+  color: #fff;
+}
+.content #newsTable tbody tr.second td:nth-child(1) {
+  background-color: #fff;
+}
+.content #newsTable tbody tr.third td:nth-child(1) {
+  background-color: #B92928;
+  color: #fff;
+}
+.content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1) {
+  width: 30px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1) {
+    min-width: 30px !important;
+  }
+}
+.content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2) {
+  width: 90px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2) {
+    min-width: 90px !important;
+  }
+}
+.content #newsTable th:nth-child(3), .content #newsTable td:nth-child(3) {
+  min-width: 200px !important;
+  max-width: 380px !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4) {
+  width: 100px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4) {
+    min-width: 100px !important;
+  }
+}
+.content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5) {
+  width: 110px !important;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5) {
+    min-width: 110px !important;
+  }
+}
+.content #newsTable th {
+  padding: 0.7em 1em;
+  font-size: 14px;
+  color: #555;
+}
+.content #newsTable th:first-of-type {
+  font-size: 16px;
+}
+.content #newsTable td {
+  padding: 0.5em 1em;
+  font-size: 13px;
+  vertical-align: initial;
+  color: #555;
+}
+.content #newsTable td:first-of-type {
+  font-size: 15px;
+}
+.content #newsTable td:last-of-type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content #newsTable td:last-of-type a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  aspect-ratio: 1/1;
+  padding: 0;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type a {
+    width: 25px;
+  }
+}
+.content #newsTable td:last-of-type a:nth-of-type(1) i {
+  font-size: 13px;
+}
+.content #newsTable td:last-of-type a:nth-of-type(2) {
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type a:nth-of-type(2) {
+    margin-left: 0.3em;
+  }
+}
+.content #newsTable td:last-of-type a:nth-of-type(2) i {
+  font-size: 14px;
+  color: #444;
+}
+.content #newsTable td:last-of-type form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  aspect-ratio: 1/1;
+  padding: 0;
+  margin-left: 0.5em;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type form {
+    width: 25px;
+    margin-left: 0.3em;
+  }
+}
+.content #newsTable td:last-of-type form button {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 700px) {
+  .content #newsTable td:last-of-type form button {
+    padding: 0;
+  }
+}
+.content #newsTable td:last-of-type form button i {
+  font-size: 12px;
+}
+.content form {
+  padding-bottom: 100px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .content form {
+    padding-bottom: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content form {
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content form {
+    margin-top: 25px;
+  }
+}
+.content form .d-block {
+  margin-top: 1.2em;
+}
+.content form .d-block:first-of-type {
+  margin-top: 0;
+}
+.content form .d-block.period-box {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+@media screen and (max-width: 600px) {
+  .content form .d-block.period-box {
+    flex-direction: column;
+  }
+}
+.content form .d-block.period-box .form-group:first-of-type label {
+  position: relative;
+}
+.content form .d-block.period-box .form-group:last-of-type label {
+  opacity: 0;
+}
+@media screen and (max-width: 600px) {
+  .content form .d-block.period-box .form-group:last-of-type label {
+    display: none;
+  }
+}
+.content form .d-block.period-box .form-group .input-group .bg-gradient-info {
+  background: #999 !important;
+}
+@media screen and (max-width: 450px) {
+  .content form .d-block.period-box .form-group .input-group .bg-gradient-info .fa-calendar-alt {
+    font-size: 12px;
+  }
+}
+.content form .d-block.period-box .wavy-line {
+  display: block;
+  margin: 40px 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #999;
+}
+@media screen and (max-width: 600px) {
+  .content form .d-block.period-box .wavy-line {
+    margin: 10px 100px 8px;
+    font-size: 14px;
+  }
+}
+.content form .d-block .form-group {
+  margin: 0;
+}
+.content form .d-block .form-group label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #882117;
+}
+.content form .d-block .form-group .input-group.adminlte-invalid-igroup {
+  width: fit-content;
+}
+.content form .d-block .form-group .input-group #title {
+  width: 250px;
+  flex: initial;
+}
+.content form .d-block .form-group .input-group #start {
+  width: 180px;
+  flex: initial;
+}
+.content form .d-block .form-group .input-group #end {
+  width: 180px;
+  flex: initial;
+}
+.content form .d-block .form-group .input-group select#background_color {
+  width: 250px;
+  flex: initial;
+}
+.content form .d-block .form-group .input-group select option {
+  color: #555;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(1) {
+  color: #d81b60;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(2) {
+  color: #ffc107;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(3) {
+  color: #fd7e14;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(4) {
+  color: #28a745;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(5) {
+  color: #17a2b8;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(6) {
+  color: #20c997;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(7) {
+  color: #007bff;
+}
+.content form .d-block .form-group .input-group select option:nth-of-type(8) {
+  color: #6f42c1;
+}
+.content form .d-block .form-note-box {
+  margin-left: 0.2em;
+  margin-top: 0.3em;
+}
+.content form .d-block .form-note-box p {
+  display: block;
+  margin: 0;
+  padding-left: 1.15em;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #777;
+  text-indent: -1.15em;
+}
+.content form .d-block .invalid-feedback {
+  margin: 0.5em 0 0 0.3em;
+  font-size: 10px;
+}
+.content form .register-btn {
+  padding: 13px 25px;
+  margin-top: 20px;
+  border: 0;
+  background-color: #c71f10;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+.content .card {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .content .card {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content .card {
+    margin-bottom: 40px;
+  }
+}
+.content .card .card-header {
+  background-color: #c71f10;
+}
+.content .card .card-header .card-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+@media screen and (max-width: 600px) {
+  .content .card .card-header .card-title {
+    font-size: 14px;
+  }
+}
+.content .card .card-body p {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content .card .card-body p:first-of-type {
+  margin-top: 0;
+}
+.content .card .card-body p strong {
+  display: inline-block;
+  width: 80px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+.content .card .card-body .body-box {
+  padding: 15px 20px;
+  margin-top: 0.3em;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+@media screen and (max-width: 600px) {
+  .content .card .card-body .body-box {
+    padding: 10px 15px;
+  }
+}
+.content .card .card-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.content .card .card-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 36px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+.content .card .card-footer a:first-of-type {
+  font-weight: 400;
+  color: #fff;
+}
+.content .card .card-footer a:first-of-type i {
+  display: block;
+  margin-right: 8px;
+  font-size: 13px;
+  transform-origin: center;
+  transform: scaleY(0.7);
+}
+.content .card .card-footer a:last-of-type {
+  margin-left: 5px;
+  font-weight: 700;
+  color: #444;
+}
+.content .card .card-footer a:last-of-type i {
+  display: block;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 5px 15px 3px;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .prev, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .next {
+  vertical-align: middle;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .prev span, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .next span {
+  font-size: 12px;
+  color: #777;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .picker-switch {
+  font-weight: 700;
+  line-height: 1.7;
+  color: #555;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm thead tr .dow {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days .table.table-sm tbody tr td {
+  font-size: 12px;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days th.dow:first-child, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days td:first-child {
+  color: #f00;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days th.dow:last-child, .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-days td:last-child {
+  color: #00f;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .picker-switch.accordion-toggle .fas.fa-times {
+  line-height: 2;
+  height: 2em;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu .picker-switch.accordion-toggle .fas.fa-times::before {
+  font-size: 14px;
+}
+
+.swal2-container .swal2-modal {
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal {
+    padding: 25px 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .swal2-container .swal2-modal {
+    padding: 20px 20px;
+  }
+}
+.swal2-container .swal2-modal.edit-modal-box #swal2-title {
+  display: block;
+  padding: 0 0 0.5em;
+  border-bottom: solid 1px #777;
+  font-family: "Noto Sans JP";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #555;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal.edit-modal-box #swal2-title {
+    font-size: 14px;
+  }
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container {
+  margin-top: 20px;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block {
+  margin-top: 1.2em;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block:first-of-type {
+  margin-top: 0;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block.period-box {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block.period-box .form-group:first-of-type label {
+  position: relative;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block.period-box .form-group:last-of-type label {
+  opacity: 0;
+  display: none;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block.period-box .form-group .input-group .bg-gradient-info {
+  background: #999 !important;
+}
+@media screen and (max-width: 450px) {
+  .swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block.period-box .form-group .input-group .bg-gradient-info .fa-calendar-alt {
+    font-size: 12px;
+  }
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block.period-box .wavy-line {
+  display: block;
+  margin: 10px 90px 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #999;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block.period-box .wavy-line {
+    margin: 10px 100px 8px;
+    font-size: 14px;
+  }
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group {
+  margin: 0;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group label {
+  display: block;
+  margin-bottom: 0.3em;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #882117;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group.adminlte-invalid-igroup {
+  width: fit-content;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group #title-modal {
+  width: 250px;
+  flex: initial;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group #start-modal {
+  width: 180px;
+  flex: initial;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group #end-modal {
+  width: 180px;
+  flex: initial;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select#background_color-modal {
+  width: 250px;
+  flex: initial;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option {
+  color: #555;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(1) {
+  color: #d81b60;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(2) {
+  color: #ffc107;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(3) {
+  color: #fd7e14;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(4) {
+  color: #28a745;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(5) {
+  color: #17a2b8;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(6) {
+  color: #20c997;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(7) {
+  color: #007bff;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .form-group .input-group select option:nth-of-type(8) {
+  color: #6f42c1;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-html-container .d-block .invalid-feedback {
+  margin: 0.5em 0 0 0.3em;
+  font-size: 10px;
+  text-align: left;
+}
+.swal2-container .swal2-modal.edit-modal-box .swal2-actions {
+  margin: 20px auto 0;
+}
+.swal2-container .swal2-modal.delete-modal-box .swal2-icon.swal2-warning.swal2-icon-show {
+  width: 40px;
+  height: 40px;
+  margin: 0.5rem auto 1rem;
+}
+.swal2-container .swal2-modal.delete-modal-box #swal2-title {
+  display: block;
+  padding: 0 0 0.5em;
+  border-bottom: 0;
+  font-family: "Noto Sans JP";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #555;
+}
+.swal2-container .swal2-modal .swal2-icon {
+  display: none;
+}
+.swal2-container .swal2-modal #swal2-title {
+  display: block;
+  padding: 0 0 0.5em;
+  border-bottom: solid 1px #777;
+  font-family: "Noto Sans JP";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #555;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal #swal2-title {
+    font-size: 14px;
+  }
+}
+.swal2-container .swal2-modal .swal2-html-container {
+  display: block;
+  padding: 0;
+  margin-top: 10px;
+}
+.swal2-container .swal2-modal .swal2-html-container .item-ele {
+  display: block;
+  padding: 0;
+  margin-top: 5px;
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #555;
+  text-indent: -3.15em;
+  padding-left: 3.15em;
+}
+.swal2-container .swal2-modal .swal2-html-container .item-ele.first-of-type {
+  margin-top: 0;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal .swal2-html-container .item-ele {
+    font-size: 13px;
+  }
+}
+.swal2-container .swal2-modal .swal2-actions {
+  margin: 10px auto 0;
+}
+.swal2-container .swal2-modal .swal2-actions .swal2-confirm {
+  padding: 12px 20px;
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal .swal2-actions .swal2-confirm {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+.swal2-container .swal2-modal .swal2-actions .swal2-deny {
+  padding: 12px 20px;
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal .swal2-actions .swal2-deny {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+.swal2-container .swal2-modal .swal2-actions .swal2-cancel {
+  padding: 12px 20px;
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #444;
+}
+@media screen and (max-width: 500px) {
+  .swal2-container .swal2-modal .swal2-actions .swal2-cancel {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}

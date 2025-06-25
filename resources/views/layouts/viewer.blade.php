@@ -45,11 +45,17 @@
                 font-style: normal;
                 font-display: swap;
             }
-
             @font-face {
                 font-family: 'morfin';
                 src: url("{{ asset('fonts/MorfinSans-Regular.ttf') }}") format('truetype');
                 font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: 'fgp-soei-pop2';
+                src: url("{{ asset('fonts/FGSOEIPP2-Bold.ttf') }}") format('truetype');
+                font-weight: 700;
                 font-style: normal;
                 font-display: swap;
             }
@@ -123,17 +129,29 @@
             @if(!in_array(Route::currentRouteName(), ['voice', 'parking']) && (!empty($weeklyMenu['current']) || !empty($weeklyMenu['next'])))
                 <link href="{{ asset('css/weekly-modal.css') }}" rel='stylesheet' type='text/css' media='all'>
                 <div id="weekly-modal" class="modal">
-                    <div class="md-overlay md-close basic-hover"></div>
+                    <div class="md-overlay md-close basic-hover weekly-modal-close"></div>
                     <div class="md-contents">
+                        <div class="modal-tit-box">
+                            <span>お</span><span>知</span><span>ら</span><span>せ</span>
+                        </div>
                         <div class="md-inner basic-hover">
+                            <p class="topping-tit">週替りメニュー ： ハマちゃん<br>▼ 今週, 来週のトッピング ▼</p>
                             @if(!empty($weeklyMenu['current']))
-                                <h3>今週：{{ $weeklyMenu['current'] }}</h3>
+                                <h3>
+                                    <div class="list-circle"></div>
+                                    <span class="week-box">今週：</span>
+                                    <span class="name-box">{{ $weeklyMenu['current'] }}</span>
+                                </h3>
                             @endif
                             @if(!empty($weeklyMenu['next']))
-                                <h3>来週：{{ $weeklyMenu['next'] }}</h3>
-                                <p>{{ $weeklyMenu['start_day'] }}</p>
+                                <h3>
+                                    <div class="list-circle"></div>
+                                    <span class="week-box">来週<span class="date">（ {{ \Carbon\Carbon::parse($weeklyMenu['start_day'])->format('n月 j日') }}<div>~</div> ）</span>：</span>
+                                    <span class="name-box">{{ $weeklyMenu['next'] }}</span>
+                                </h3>
                             @endif
-                            <img loading="lazy" class="close_btn" src="{{ asset('image/close-btn.svg') }}" alt="close">
+                            <a class="link" href="{{ route('menu') }}">メニュー</a>
+                            <img loading="lazy" class="close_btn weekly-modal-close" src="{{ asset('image/close-btn.svg') }}" alt="close">
                         </div>
                     </div>
                 </div>
@@ -272,14 +290,36 @@
                         // console.log('Mac開発者ツールの起動を禁止しました。');
                     }
                 });
-                $(document).on('on', function(e) {
-                    $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+                $(window).on('load', function() {
+                    // ローカルストレージを取得
+                    var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
+                    if (localStorageData) {
+                        // 有効期限が過ぎているか確認後、ローカルストレージを削除
+                        if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
+                            window.localStorage.removeItem('anHamaWeeklyMenu');
+                            setTimeout(function() {
+                                $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+                                console.log("再表示｜有効期限が過ぎた");
+                            }, 8000);
+                        }
+                    } else {
+                        setTimeout(function() {
+                            $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+                            console.log("初回表示｜ローカルストレージがないため");
+                        }, 8000);
+                    }
                 });
-                $('.md-close').on('click',function() {
+                $('.weekly-modal-close').on('click',function() {
                     $('.md-overlay,.md-contents').fadeOut();
-                });
-                $('.close_btn').on('click',function() {
-                    $('.md-overlay,.md-contents').fadeOut();
+                    const value = @json($weeklyMenu['start_day']);
+                    if (value) {
+                        const item = {
+                            value: value,
+                            expiry: new Date().getTime() + 3 * 24 * 60 * 60 * 1000 // 3日後のタイムスタンプ
+                        };
+                        // ローカルストレージを保存
+                        window.localStorage.setItem('anHamaWeeklyMenu', JSON.stringify(item));
+                    }
                 });
             </script>
 

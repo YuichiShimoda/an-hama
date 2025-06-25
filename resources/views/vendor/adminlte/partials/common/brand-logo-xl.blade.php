@@ -9,6 +9,7 @@
 @endif
 
 <a href="{{ $dashboard_url }}"
+    onclick="window.open('https://an-hama.com', '_blank', 'width=' + screen.width + ', height=' + screen.height + ', top=0, left=0'); return false;"
     @if($layoutHelper->isLayoutTopnavEnabled())
         class="navbar-brand logo-switch {{ config('adminlte.classes_brand') }}"
     @else

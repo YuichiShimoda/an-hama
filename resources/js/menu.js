@@ -378,3 +378,32 @@ gsap.to("#hama-chan .right-box", {
 		}
 	}
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+gsap.to("#topping", {
+	scrollTrigger: {
+		trigger: "#gallery",
+		start: "bottom bottom-=1%",
+		end: "bottom bottom-=1%",
+		onEnter: () => {
+			$("#topping").removeClass("is-show");
+		},
+		onLeaveBack: () => {
+			$("#topping").addClass("is-show");
+		}
+	}
+});
+$('#topping').on('click',function() {
+	$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+});

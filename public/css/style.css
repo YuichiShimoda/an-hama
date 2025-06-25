@@ -1180,6 +1180,11 @@ body::-webkit-scrollbar {
   transform: rotateX(-90deg);
   color: rgba(255, 255, 255, 0);
 }
+#news .content-box .top-box .news-box .news-ele.clicked .main-box .tit {
+  width: fit-content;
+  border-bottom: solid 1px #ccc;
+  line-height: 2;
+}
 #news .content-box .top-box .news-box .news-ele .main-box {
   display: flex;
   justify-content: flex-start;

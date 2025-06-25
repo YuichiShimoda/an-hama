@@ -10,6 +10,7 @@ class VoiceController extends Controller
     public function submit(Request $request)
     {
         $request->validate([
+            'your-name'       => 'required|string|max:255',
             'your-sex'        => 'required',
             'your-age'        => 'required',
             'your-day'        => 'required',
@@ -25,7 +26,7 @@ class VoiceController extends Controller
         ]);
 
         $data = $request->only([
-            'your-sex', 'your-age', 'your-day',
+            'your-name', 'your-sex', 'your-age', 'your-day',
             'your-visit-num', 'your-visit-how', 'your-know',
             'your-taste', 'your-service', 'your-clean',
             'your-interior', 'your-overall', 'your-request',
@@ -37,6 +38,7 @@ HP経由でアンケートの回答がありました。
 
 -------------------------
 
+ニックネーム：{$data['your-name']}
 性別：{$data['your-sex']}
 年齢：{$data['your-age']}
 来店日：{$data['your-day']}

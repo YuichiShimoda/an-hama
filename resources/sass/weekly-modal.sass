@@ -6,7 +6,7 @@ $morfin: "morfin", sans-serif // 400
 $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 $rift: "rift", sans-serif // 400, 700
 $shalimar: "Shalimar", serif // 400
-
+$fgp-soei-pop2: "fgp-soei-pop2", sans-serif // 700
 
 
 @mixin bp1600
@@ -89,49 +89,190 @@ $shalimar: "Shalimar", serif // 400
 
 
 .md-overlay
-	display: block
+	display: none
 	position: fixed
 	top: 0
 	left: 0
 	width: 100vw
 	height: 100vh
 	background: #000
-	opacity: .7
-	z-index: 3
+	opacity: 0.7
+	z-index: 100
 .md-contents
-	display: block
+	display: none
 	position: fixed
-	top: 50%
+	top: 50px
 	left: 50%
-	transform: translate(-50%, -50%)
-	width: 75%
-	max-width: 500px
+	width: 500px
+	transform: translate(-50%, 0%)
 	z-index: 1999
 	overflow: hidden
 	+bp1000
-		max-width: 400px
+		top: 30px
+		width: 400px
+	+bp450
+		top: 25px
+		width: calc(100vw - 30px)
+	> .modal-tit-box
+		display: none
+		justify-content: center
+		align-items: center
+		width: fit-content
+		margin: 0 auto 30px
+		position:relative
+		+bp1000
+			margin: 0 auto 20px
+		span
+			display: block
+			font-weight: 400
+			font-size: 24px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #333
+			animation: bubble-pop 3.0s cubic-bezier(0.63, 0.09, 0.3, 1.43) infinite
+			transform-origin:50% 100%
+			transform:scale(0)
+			+bp1000
+				font-size: 20px
+			&:nth-of-type(1)
+				animation-delay: 0.2s
+			&:nth-of-type(2)
+				animation-delay: 0.4s
+			&:nth-of-type(3)
+				animation-delay: 0.6s
+			&:nth-of-type(4)
+				animation-delay: 0.8s
 	> .md-inner
-		display: block
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
 		width: 100%
-		padding: 60px 40px 40px
+		// aspect-ratio: 7 / 5
+		padding: 40px 0 30px
 		background-color: #fff
-		border-radius: 5px
+		border-radius: 25px
+		background: url("../image/base-bg.png")
 		background-size: cover
 		background-position: center center
 		background-repeat: no-repeat
 		position: relative
-		+bp1000
-			padding: 60px 20px 20px
-		> h3
-			display: inline-block
-			padding: 5px 25px
+		+bp450
+			min-width: 90vw
+			padding: 25px 0 20px
+		> .topping-tit
+			display: block
+			width: fit-content
+			padding: 10px 25px
+			background-color: #cd2c1d
+			margin-top: 0
 			margin-bottom: 15px
-			font-weight: 700
-			font-size: 18px
-			line-height: 1.7
-			font-family: sans-serif
+			font-weight: 400
+			font-size: 16px
+			line-height: 1.5
+			font-family: $miniwa-hv-v3
 			letter-spacing: 0.05em
-			color: #000
+			text-align: center
+			color: #fff
+			+bp1000
+				padding: 10px 20px
+				font-size: 14px
+			+bp450
+				padding: 8px 15px
+				margin-bottom: 5px
+				font-size: 12px
+		> h3
+			display: flex
+			justify-content: flex-start
+			align-items: flex-start
+			padding: 0
+			.list-circle
+				display: block
+				width: 10px
+				aspect-ratio: 1 / 1
+				margin-top: 13px
+				margin-right: 7px
+				border-radius: 50%
+				background-color: #cd2c1d
+				+bp1000
+					width: 8px
+					margin-right: 6px
+				+bp450
+					width: 6px
+			.week-box
+				display: inline-block
+				width: 150px
+				margin-top: 10px
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				font-family: $miniwa-hv-v3
+				letter-spacing: 0.05em
+				color: #333
+				+bp1000
+					width: 140px
+					font-size: 13px
+				+bp450
+					width: 120px
+					font-size: 11px
+				.date
+					display: inline
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: -0.05em
+					color: #333
+					+bp1000
+						font-size: 11px
+					+bp450
+						font-size: 10px
+					div
+						display: inline
+						margin: 0 0.2em
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						color: #333
+						+bp450
+							font-size: 10px
+			.name-box
+				display: block
+				width: 200px
+				margin-top: 0.05em
+				font-weight: 700
+				font-size: 18px
+				line-height: 1.9
+				font-family: $fgp-soei-pop2
+				letter-spacing: 0.05em
+				color: #111
+				text-shadow: 0.15em 0.15em 0 rgba(#fff, 1.0)
+				+bp1000
+					width: 180px
+					margin-top: 0.15em
+					font-size: 16px
+				+bp450
+					margin-top: 0.3em
+					font-size: 13px
+		> .link
+			display: block
+			width: fit-content
+			margin: 15px auto 0
+			border-bottom: solid 1px #2175b9
+			font-weight: 700
+			font-size: 14px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #2175b9
+			transition: all 0.5s ease-in-out
+			+bp1000
+				margin: 12px auto 0
+			+bp450
+				font-size: 12px
+			&:hover
+				opacity: 0.5
 		> p
 			display: block
 			margin-top: 1em
@@ -166,7 +307,7 @@ $shalimar: "Shalimar", serif // 400
 		> .close_btn
 			position: absolute
 			top: 15px
-			right: 15px
+			right: 20px
 			display: block
 			width: 40px
 			pointer-events: initial
@@ -175,5 +316,24 @@ $shalimar: "Shalimar", serif // 400
 			-moz-user-select: initial
 			user-select: initial
 			transition: all 0.3s ease-in-out
+			+bp450
+				width: 30px
 		> .close_btn:hover
 			opacity: 0.5
+
+
+
+@keyframes bubble-pop
+	0%
+		transform: scale(0.0, 0.0) translateY(0)
+	14%
+		transform: scale(0.7, 0.7) translateY(0)
+	16%
+		transform: scale(0.9, 0.5) translateY(5px)
+	20%
+		transform: scale(1.0, 1.0) translateY(0)
+	80%
+		transform: scale(1.0, 1.0) translateY(0)
+	90%, 100%
+		opacity: 0.0
+		transform: scale(1.0, 1.0) translateY(0)

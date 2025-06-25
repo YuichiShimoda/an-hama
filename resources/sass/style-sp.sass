@@ -1044,11 +1044,19 @@ body::-webkit-scrollbar
 						.main-box .cat-box p:nth-child(1)
 							box-shadow: inset 1px 1px 1px 0px rgba(#fff, 0.5), 2px 2px 14px 0px rgba(#000, 0.1), 2px 2px 5px 0px rgba(#000, 0.1)
 							transform: rotateX(0deg)
-					&:hover
+							+bp500
+								transform: rotateX(90deg)
 						.main-box .cat-box p:nth-child(2)
 							box-shadow: inset 1px 1px 1px 0px rgba(#fff, 0.5), 2px 2px 14px 0px rgba(#000, 0.1), 2px 2px 5px 0px rgba(#000, 0.1)
 							transform: rotateX(-90deg)
 							color: rgba(#fff, 0.0)
+							+bp500
+								box-shadow: initial
+								color: #fff
+								animation: poyoyon 2.5s infinite
+					&.clicked .main-box .tit
+						border-bottom: solid 1px #ccc
+						line-height: 2.0
 					.main-box
 						display: flex
 						justify-content: flex-start
@@ -1168,8 +1176,27 @@ body::-webkit-scrollbar
 			left: 4%
 			height: 107%
 			transform: rotate(3deg)
-
-
+@keyframes poyoyon
+	0%
+		transform: rotateX(0deg) skew(0deg, 0deg)
+	5%
+		transform: skew(5deg, 5deg)
+	10%
+		transform: skew(-4deg, -4deg)
+	15%
+		transform: skew(3deg, 3deg)
+	20%
+		transform: skew(-2deg, -2deg)
+	25%
+		transform: skew(1deg, 1deg)
+	30%
+		transform: skew(-0.6deg, -0.6deg)
+	35%
+		transform: skew(0.3deg, 0.3deg)
+	40%
+		transform: skew(0deg, 0deg)
+	100%
+		transform: rotateX(0deg) skew(0deg, 0deg)
 
 
 

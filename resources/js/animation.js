@@ -607,8 +607,13 @@ $("#news .news-box .news-ele").click(function() {
 	$("#news .bottom-box .detail-ele").hide();
 	$('#news .bottom-box .detail-ele').eq(index).show();
 });
-
-
+$(window).on('load', function() {
+	$('.news-ele:first').addClass('clicked');
+});
+$('.news-ele').on('click', function() {
+	$('.news-ele').removeClass('clicked');
+	$(this).addClass('clicked');
+});
 
 
 

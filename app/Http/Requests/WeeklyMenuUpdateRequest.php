@@ -24,7 +24,7 @@ class WeeklyMenuUpdateRequest extends FormRequest
         return [
             'menu' => 'required',
             'start_day' => 'required|date_format:Y-m-d',
-            'end_day' => 'required|date_format:Y-m-d',
+            'end_day' => 'required|date_format:Y-m-d|after:start_day',
         ];
     }
 
@@ -36,6 +36,7 @@ class WeeklyMenuUpdateRequest extends FormRequest
             'start_day.date_format'      => '「 YYYY-MM-DD 」の形式で入力してください。',
             'end_day.required'   => '必ず入力してください。',
             'end_day.date_format'      => '「 YYYY-MM-DD 」の形式で入力してください。',
+            'end_day.after'      => '開始日よりも後の日付を入力してください。',
         ];
     }
 }

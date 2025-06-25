@@ -48,7 +48,7 @@
                 <p class="mark-desc"><span class="mark">*</span>は必須項目</p>
 
                 {{-- ニックネーム --}}
-                <div class="each-input">
+                <div class="each-input" style="display: none;">
                     <div class="input-tittle">
                         <div class="input-s-tittle">ニックネーム</div>
                         <div class="required">*</div>

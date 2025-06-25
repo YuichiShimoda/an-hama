@@ -1,2 +1,17 @@
 User-agent: *
-Disallow:
+# Laravelのストレージや画像ディレクトリをクロール禁止
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /image/
+Disallow: /movie/
+Disallow: /vendor/
+
+# APIや非公開ルートがあればそれもブロック（必要に応じて）
+Disallow: /api/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /password/
+
+# サイトマップの場所（URLはあなたのドメインに書き換えてください）
+Sitemap: https://an-hama.com/sitemap.xml

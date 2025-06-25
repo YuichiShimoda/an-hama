@@ -1,3 +1,4 @@
+console.log('info.js loaded');
 // loading animation
 $(window).on('load', function() {
 	$('#loader-bg').addClass("is-show");

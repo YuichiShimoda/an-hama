@@ -1,0 +1,1200 @@
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp650
+	@media screen and (max-width: 650px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+
+
+
+.content-header
+	.alert.alert-success
+		margin-top: 20px
+		margin-bottom: 0
+		h5
+			font-size: 16px
+			margin-bottom: 0
+			i
+				margin-right: 8px
+				font-size: 14px
+	.tit-box
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		margin-top: 20px
+		h1
+			display: block
+			font-weight: 500
+			font-size: 16px
+			line-height: 1.0
+			letter-spacing: 0.05em
+			color: #555
+		.create-btn
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			padding: 12px 20px
+			border-radius: 5px
+			background-color: #007bff
+			p
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #fff
+		.back-btn
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			padding: 12px 20px
+			border-radius: 5px
+			background-color: #ccc
+			p
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #555
+	.desc-box
+		display: block
+		width: 100%
+		margin-top: 15px
+		p
+			display: block
+			margin: 0
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.5
+			letter-spacing: 0.05em
+			color: #555
+
+
+
+
+
+
+
+
+
+
+
+.content
+	margin-top: 20px
+	#calendar
+		.fc-header-toolbar
+			margin-bottom: 0.5em
+			.fc-toolbar-chunk
+				+bp600
+					&:nth-of-type(2)
+						order: 3
+					&:nth-of-type(3)
+						margin-top: 5px
+						margin-bottom: 10px
+						order: 2
+				button
+					padding: 0.6em 1.0em
+					font-family: "Noto Sans JP"
+					font-size: 0.8em
+					&.fc-button-active
+						background-color: #003d74
+			.fc-toolbar-title
+				font-family: "Noto Sans JP"
+				font-size: 1.4em
+				letter-spacing: 0.02em
+				+bp1000
+					font-size: 1.2em
+				+bp700
+					font-size: 1.0em
+		.fc-view-harness
+			.fc-multiMonthFourMonth-view
+				.fc-multimonth-month
+					.fc-multimonth-header
+						.fc-multimonth-title
+							padding: 1em 0px 0.6em
+							font-family: "Noto Sans JP"
+							letter-spacing: 0.05em
+							color: #555
+							+bp1000
+								font-size: 1.0em
+							+bp500
+								font-size: 0.8em
+						table.fc-multimonth-header-table
+							thead
+								.fc-day-sat
+									background-color: #EEF6FB
+								.fc-day-sun
+									background-color: #f3e9e9
+								.fc-col-header-cell-cushion
+									padding: 10px 4px
+									font-family: "Noto Sans JP"
+									font-size: 16px
+									color: #777
+									+bp1000
+										padding: 8px 4px
+										font-size: 14px
+									+bp500
+										padding: 6px 4px
+										font-size: 12px
+					.fc-multimonth-daygrid
+						table.fc-multimonth-daygrid-table
+							tbody
+								.fc-day:not(.fc-day-sat):not(.fc-day-sun)
+									background-color: #fff
+								.fc-day:not(.fc-day-other) .fc-holiday:not(.fc-day-sat):not(.fc-day-sun)
+									background-color: #f3e9e9
+									opacity: 1.0
+								.fc-day-other .fc-holiday:not(.fc-day-sat):not(.fc-day-sun)
+									background-color: #fff
+								.fc-day:not(.fc-day-other).fc-day-sat .fc-holiday
+									background-color: #EEF6FB !important
+								.fc-day-sat
+									background-color: #EEF6FB
+								.fc-day-sun
+									background-color: #f3e9e9
+								.fc-daygrid-day-number
+									font-family: "Noto Sans JP"
+									font-size: 14px
+									color: #999
+									transition: all 0.3s ease-in-out
+									&:hover
+										color: #007bff
+								// event info
+								.fc-daygrid-day-events
+									.fc-event:not(.fc-bg-event)
+										&:hover
+											cursor: pointer
+										.fc-daygrid-event-dot
+											border-width: 3px
+										.fc-event-time
+											font-family: "Noto Sans JP"
+											font-size: 10px
+											color: #777
+										.fc-event-title
+											font-family: "Noto Sans JP"
+											font-size: 10px
+											color: #777
+									// allDayの場合
+									.fc-h-event
+										border: 0
+										transition: opacity 0.3s ease-in-out
+										&:hover
+											opacity: 0.5
+											cursor: pointer
+										.fc-event-main
+											.fc-event-time
+												padding: 2px 0px 2px 5px
+												font-family: "Noto Sans JP"
+												font-weight: 400
+												font-size: 10px
+												color: #fff
+											.fc-event-title-container
+												display: block
+												justify-content: flex-start
+												align-items: center
+												padding: 1px 4px
+												.fc-event-title
+													display: block
+													font-family: "Noto Sans JP"
+													font-size: 10px
+													color: #fff
+			.fc-dayGridMonth-view
+				table.fc-scrollgrid
+					thead
+						table.fc-col-header
+							.fc-day:not(.fc-day-sat):not(.fc-day-sun)
+								background-color: #fff
+							.fc-day-sat
+								background-color: #EEF6FB
+							.fc-day-sun
+								background-color: #f3e9e9
+							.fc-col-header-cell-cushion
+								padding: 10px 4px
+								font-family: "Noto Sans JP"
+								font-size: 16px
+								color: #777
+								+bp1000
+									padding: 8px 4px
+									font-size: 14px
+								+bp500
+									padding: 6px 4px
+									font-size: 12px
+					tbody
+						table.fc-scrollgrid-sync-table
+							.fc-day:not(.fc-day-sat):not(.fc-day-sun)
+								background-color: #fff
+							.fc-day:not(.fc-day-other) .fc-holiday:not(.fc-day-sat):not(.fc-day-sun)
+								background-color: #f3e9e9
+								opacity: 1.0
+							.fc-day-other .fc-holiday:not(.fc-day-sat):not(.fc-day-sun)
+								background-color: #fff
+							.fc-day:not(.fc-day-other).fc-day-sat .fc-holiday
+								background-color: #EEF6FB !important
+							.fc-day-sat
+								background-color: #EEF6FB
+							.fc-day-sun
+								background-color: #f3e9e9
+							.fc-daygrid-day-number
+								font-family: "Noto Sans JP"
+								font-size: 14px
+								color: #999
+								transition: all 0.3s ease-in-out
+								&:hover
+									color: #007bff
+							// event info
+							.fc-daygrid-day-events
+								.fc-event:not(.fc-bg-event)
+									&:hover
+										cursor: pointer
+									.fc-daygrid-event-dot
+										border-width: 3px
+									.fc-event-time
+										font-family: "Noto Sans JP"
+										font-size: 10px
+										color: #777
+									.fc-event-title
+										font-family: "Noto Sans JP"
+										font-size: 10px
+										color: #777
+								// allDayの場合
+								.fc-h-event
+									border: 0
+									transition: opacity 0.3s ease-in-out
+									&:hover
+										opacity: 0.5
+										cursor: pointer
+									.fc-event-main
+										.fc-event-time
+											padding: 2px 0px 2px 5px
+											font-family: "Noto Sans JP"
+											font-weight: 400
+											font-size: 10px
+											color: #fff
+										.fc-event-title-container
+											display: block
+											justify-content: flex-start
+											align-items: center
+											padding: 1px 4px
+											.fc-event-title
+												display: block
+												font-family: "Noto Sans JP"
+												font-size: 10px
+												color: #fff
+			.fc-timeGridWeek-view
+				table.fc-scrollgrid
+					thead
+						table.fc-col-header
+							.fc-day:not(.fc-day-sat):not(.fc-day-sun)
+								background-color: #fff
+							.fc-day-sat
+								background-color: #EEF6FB
+							.fc-day-sun
+								background-color: #f3e9e9
+							.fc-col-header-cell-cushion
+								padding: 10px 4px
+								font-family: "Noto Sans JP"
+								font-size: 16px
+								letter-spacing: 0.05em
+								line-height: 1.1
+								color: #777
+								transition: all 0.3s ease-in-out
+								+bp1000
+									padding: 8px 4px
+									font-size: 14px
+									line-height: 1.0
+								+bp700
+									padding: 6px 4px
+									font-size: 12px
+								+bp500
+									padding: 6px 4px
+									font-size: 10px
+								&:hover
+									color: #007bff
+									.fc-weekday
+										color: #007bff
+								.fc-weekday
+									font-family: "Noto Sans JP"
+									font-size: 13px
+									color: #777
+									transition: all 0.3s ease-in-out
+									+bp1000
+										font-size: 11px
+									+bp700
+										font-size: 10px
+									+bp500
+										line-height: 1.2
+										transform-origin: top center
+										transform: scale(0.5)
+					tbody
+						.fc-scrollgrid-section-body
+							&:first-child
+								table
+									tr
+										background-color: #fff
+									.fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday
+										background-color: #f3e9e9
+										opacity: 1.0
+									.fc-day-sat
+										background-color: #EEF6FB
+									.fc-day-sun
+										background-color: #f3e9e9
+									.fc-bg-event
+										background-color: initial
+									.fc-timegrid-axis-cushion
+										font-family: "Noto Sans JP"
+										font-size: 14px
+										color: #999
+									// event info( allDayの場合 )
+									.fc-daygrid-day-events
+										transition: opacity 0.3s ease-in-out
+										&:hover
+											opacity: 0.5
+											cursor: pointer
+										.fc-h-event
+											border: 0
+											transition: opacity 0.3s ease-in-out
+											&:hover
+												opacity: 0.5
+												cursor: pointer
+											.fc-event-main
+												.fc-event-title-container
+													display: flex
+													justify-content: flex-start
+													align-items: center
+													padding: 1px 4px
+													.fc-event-title
+														display: block
+														font-family: "Noto Sans JP"
+														font-size: 10px
+														color: #fff
+							&:last-child
+								.fc-timegrid-slots
+									.fc-timegrid-slot-label-cushion
+										font-family: "Noto Sans JP"
+										font-size: 14px
+										color: #999
+								.fc-timegrid-cols
+									table
+										tr
+											background-color: #fff
+										.fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday
+											background-color: #f3e9e9
+											opacity: 1.0
+										.fc-day-sat
+											background-color: #EEF6FB
+										.fc-day-sun
+											background-color: #f3e9e9
+										.fc-bg-event
+											background-color: initial
+										.fc-timegrid-col-events
+											.fc-v-event
+												border: 0
+												transition: opacity 0.3s ease-in-out
+												&:hover
+													opacity: 0.5
+													cursor: pointer
+												.fc-event-main
+													.fc-event-time
+														padding: 1px 4px 0
+														font-family: "Noto Sans JP"
+														font-size: 10px
+														color: #fff
+													.fc-event-title-container
+														display: flex
+														justify-content: flex-start
+														align-items: flex-start
+														padding: 0 4px
+														.fc-event-title
+															display: block
+															font-family: "Noto Sans JP"
+															font-size: 10px
+															color: #fff
+			.fc-timeGridDay-view
+				table.fc-scrollgrid
+					thead
+						table.fc-col-header
+							.fc-day:not(.fc-day-sat):not(.fc-day-sun)
+								background-color: #fff
+							.fc-day-sat
+								background-color: #EEF6FB
+							.fc-day-sun
+								background-color: #f3e9e9
+							.fc-col-header-cell-cushion
+								padding: 10px 4px
+								font-family: "Noto Sans JP"
+								font-size: 16px
+								letter-spacing: 0.05em
+								color: #777
+								+bp1000
+									padding: 8px 4px
+									font-size: 14px
+								+bp500
+									padding: 6px 4px
+									font-size: 12px
+					tbody
+						.fc-scrollgrid-section-body
+							&:first-child
+								table
+									tr
+										background-color: #fff
+									.fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday
+										background-color: #f3e9e9
+										opacity: 1.0
+									.fc-day-sat
+										background-color: #EEF6FB
+									.fc-day-sun
+										background-color: #f3e9e9
+									.fc-bg-event
+										background-color: initial
+									.fc-timegrid-axis-cushion
+										font-family: "Noto Sans JP"
+										font-size: 14px
+										color: #999
+									// event info( allDayの場合 )
+									.fc-daygrid-day-events
+										.fc-h-event
+											border: 0
+											transition: opacity 0.3s ease-in-out
+											&:hover
+												opacity: 0.5
+												cursor: pointer
+											.fc-event-main
+												.fc-event-title-container
+													display: flex
+													justify-content: flex-start
+													align-items: center
+													padding: 1px 4px
+													.fc-event-title
+														display: block
+														font-family: "Noto Sans JP"
+														font-size: 10px
+														color: #fff
+							&:last-child
+								.fc-timegrid-slots
+									.fc-timegrid-slot-label-cushion
+										font-family: "Noto Sans JP"
+										font-size: 14px
+										color: #999
+								.fc-timegrid-cols
+									table
+										tr
+											background-color: #fff
+										.fc-day:not(.fc-day-sat):not(.fc-day-sun) .fc-holiday
+											background-color: #f3e9e9
+											opacity: 1.0
+										.fc-day-sat
+											background-color: #EEF6FB
+										.fc-day-sun
+											background-color: #f3e9e9
+										.fc-bg-event
+											background-color: initial
+										.fc-timegrid-col-events
+											.fc-v-event
+												border: 0
+												transition: opacity 0.3s ease-in-out
+												&:hover
+													opacity: 0.5
+													cursor: pointer
+												.fc-event-main
+													.fc-event-time
+														padding: 1px 4px 0
+														font-family: "Noto Sans JP"
+														font-size: 10px
+														color: #fff
+													.fc-event-title-container
+														display: flex
+														justify-content: flex-start
+														align-items: flex-start
+														padding: 0 4px
+														.fc-event-title
+															display: block
+															font-family: "Noto Sans JP"
+															font-size: 10px
+															color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// -----  index  -----
+	#newsTable
+		width: initial !important
+		margin: 0
+		+bp1000
+			margin-bottom: 80px
+		+bp600
+			margin-bottom: 40px
+		tbody tr.is-hidden
+			opacity: 0.5
+		tbody tr.first td:nth-child(1)
+			background-color: #006134
+			color: #fff
+		tbody tr.second td:nth-child(1)
+			background-color: #fff
+		tbody tr.third td:nth-child(1)
+			background-color: #B92928
+			color: #fff
+		th:nth-child(1), td:nth-child(1)
+			width: 30px !important
+			+bp700
+				min-width: 30px !important
+		th:nth-child(2), td:nth-child(2)
+			width: 90px !important
+			+bp700
+				min-width: 90px !important
+		th:nth-child(3), td:nth-child(3)
+			min-width: 200px !important
+			max-width: 380px !important
+			white-space: nowrap
+			text-overflow: ellipsis
+			overflow: hidden
+		th:nth-child(4), td:nth-child(4)
+			width: 100px !important
+			+bp700
+				min-width: 100px !important
+		th:nth-child(5), td:nth-child(5)
+			width: 110px !important
+			+bp700
+				min-width: 110px !important
+		th
+			padding: 0.7em 1.0em
+			font-size: 14px
+			color: #555
+			&:first-of-type
+				font-size: 16px
+		td
+			padding: 0.5em 1.0em
+			font-size: 13px
+			vertical-align: initial
+			color: #555
+			&:first-of-type
+				font-size: 15px
+			&:last-of-type
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				a
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 30px
+					aspect-ratio: 1 / 1
+					padding: 0
+					+bp700
+						width: 25px
+					&:nth-of-type(1)
+						i
+							font-size: 13px
+					&:nth-of-type(2)
+						margin-left: 0.5em
+						+bp700
+							margin-left: 0.3em
+						i
+							font-size: 14px
+							color: #444
+				form
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 30px
+					aspect-ratio: 1 / 1
+					padding: 0
+					margin-left: 0.5em
+					+bp700
+						width: 25px
+						margin-left: 0.3em
+					button
+						display: block
+						width: 100%
+						height: 100%
+						+bp700
+							padding: 0
+						i
+							font-size: 12px
+	// -----  create  -----
+	form
+		padding-bottom: 100px
+		margin-top: 30px
+		+bp1000
+			padding-bottom: 80px
+		+bp600
+			padding-bottom: 40px
+		+bp500
+			margin-top: 25px
+		.d-block
+			margin-top: 1.2em
+			&:first-of-type
+				margin-top: 0
+			&.period-box
+				display: flex !important
+				justify-content: flex-start
+				align-items: flex-start
+				+bp600
+					flex-direction: column
+				.form-group:first-of-type
+					label
+						position: relative
+						// &::after
+						// 	position: absolute
+						// 	top: 1px
+						// 	left: 58px
+						// 	display: block
+						// 	content: '（ 開始日 ～ 終了日 ）'
+						// 	font-weight: 700
+						// 	font-size: 12px
+						// 	line-height: 1.5
+						// 	letter-spacing: 0.05em
+						// 	white-space: nowrap
+						// 	color: #882117
+				.form-group:last-of-type
+					// margin-left: 30px
+					// +bp600
+					// 	margin-left: 20px
+					// +bp420
+					// 	margin-left: 15px
+					label
+						opacity: 0.0
+						+bp600
+							display: none
+				.form-group
+					.input-group
+						.bg-gradient-info
+							background: #999 !important
+							.fa-calendar-alt
+								+bp450
+									font-size: 12px
+				.wavy-line
+					display: block
+					margin: 40px 10px 0
+					font-weight: 400
+					font-size: 18px
+					line-height: 1.0
+					letter-spacing: 0.05em
+					color: #999
+					+bp600
+						margin: 10px 100px 8px
+						font-size: 14px
+			.form-group
+				margin: 0
+				label
+					display: block
+					font-weight: 700
+					font-size: 14px
+					line-height: 1.5
+					letter-spacing: 0.05em
+					color: #882117
+				.input-group
+					&.adminlte-invalid-igroup
+						width: fit-content
+					#title
+						width: 250px
+						flex: initial
+					#start
+						width: 180px
+						flex: initial
+					#end
+						width: 180px
+						flex: initial
+					select
+						&#background_color
+							width: 250px
+							flex: initial
+						option
+							color: #555
+							&:nth-of-type(1)
+								color: #d81b60
+							&:nth-of-type(2)
+								color: #ffc107
+							&:nth-of-type(3)
+								color: #fd7e14
+							&:nth-of-type(4)
+								color: #28a745
+							&:nth-of-type(5)
+								color: #17a2b8
+							&:nth-of-type(6)
+								color: #20c997
+							&:nth-of-type(7)
+								color: #007bff
+							&:nth-of-type(8)
+								color: #6f42c1
+			.form-note-box
+				margin-left: 0.2em
+				margin-top: 0.3em
+				p
+					display: block
+					margin: 0
+					padding-left: 1.15em
+					font-weight: 400
+					font-size: 11px
+					line-height: 1.5
+					letter-spacing: 0.05em
+					color: #777
+					text-indent: -1.15em
+			.invalid-feedback
+				margin: 0.5em 0 0 0.3em
+				font-size: 10px
+		.register-btn
+			padding: 13px 25px
+			margin-top: 20px
+			border: 0
+			background-color: #c71f10
+			font-weight: 700
+			font-size: 14px
+			line-height: 1.0
+			letter-spacing: 0.05em
+			color: #fff
+	// -----  show  -----
+	.card
+		margin-bottom: 100px
+		+bp1000
+			margin-bottom: 80px
+		+bp600
+			margin-bottom: 40px
+		.card-header
+			background-color: #c71f10
+			.card-title
+				font-weight: 700
+				font-size: 16px
+				line-height: 1.3
+				letter-spacing: 0.05em
+				+bp600
+					font-size: 14px
+		.card-body
+			p
+				width: 100%
+				margin-top: 5px
+				margin-bottom: 0
+				font-weight: 400
+				font-size: 14px
+				letter-spacing: 0.05em
+				color: #555
+				&:first-of-type
+					margin-top: 0
+				strong
+					display: inline-block
+					width: 80px
+					font-weight: 500
+					font-size: 14px
+					letter-spacing: 0.05em
+					color: #333
+			.body-box
+				padding: 15px 20px
+				margin-top: 0.3em
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.5
+				color: #555
+				+bp600
+					padding: 10px 15px
+		.card-footer
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				height: 36px
+				padding: 0 20px
+				border-radius: 5px
+				font-size: 14px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				&:first-of-type
+					font-weight: 400
+					color: #fff
+					i
+						display: block
+						margin-right: 8px
+						font-size: 13px
+						transform-origin: center
+						transform: scaleY(0.7)
+				&:last-of-type
+					margin-left: 5px
+					font-weight: 700
+					color: #444
+					i
+						display: block
+						margin-right: 5px
+						font-size: 13px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bootstrap-datetimepicker-widget.dropdown-menu
+	padding: 5px 15px 3px
+	.datepicker-days
+		.table.table-sm
+			thead
+				tr
+					.prev, .next
+						vertical-align: middle
+						span
+							font-size: 12px
+							color: #777
+					.picker-switch
+						font-weight: 700
+						line-height: 1.7
+						color: #555
+					.dow
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.5
+						color: #555
+			tbody
+				tr
+					td
+						font-size: 12px
+		th.dow:first-child, td:first-child
+			color: #f00
+		th.dow:last-child, td:last-child
+			color: #00f
+	.picker-switch.accordion-toggle
+		.fas.fa-times
+			line-height: 2.0
+			height: 2.0em
+			&::before
+				font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swal2-container
+	.swal2-modal
+		padding: 30px 40px
+		border-radius: 10px
+		+bp500
+			padding: 25px 30px
+		+bp400
+			padding: 20px 20px
+		&.edit-modal-box
+			#swal2-title
+				display: block
+				padding: 0 0 0.5em
+				border-bottom: solid 1px #777
+				font-family: "Noto Sans JP"
+				font-weight: 700
+				font-size: 16px
+				line-height: 1.5
+				letter-spacing: 0.05em
+				text-align: center
+				color: #555
+				+bp500
+					font-size: 14px
+			.swal2-html-container
+				margin-top: 20px
+				.d-block
+					margin-top: 1.2em
+					&:first-of-type
+						margin-top: 0
+					&.period-box
+						display: flex !important
+						justify-content: flex-start
+						align-items: flex-start
+						flex-direction: column
+						.form-group:first-of-type
+							label
+								position: relative
+						.form-group:last-of-type
+							label
+								opacity: 0.0
+								display: none
+						.form-group
+							.input-group
+								.bg-gradient-info
+									background: #999 !important
+									.fa-calendar-alt
+										+bp450
+											font-size: 12px
+						.wavy-line
+							display: block
+							margin: 10px 90px 8px
+							font-weight: 400
+							font-size: 18px
+							line-height: 1.0
+							letter-spacing: 0.05em
+							color: #999
+							+bp500
+								margin: 10px 100px 8px
+								font-size: 14px
+					.form-group
+						margin: 0
+						label
+							display: block
+							margin-bottom: 0.3em
+							font-weight: 700
+							font-size: 14px
+							line-height: 1.5
+							letter-spacing: 0.05em
+							text-align: left
+							color: #882117
+						.input-group
+							&.adminlte-invalid-igroup
+								width: fit-content
+							#title-modal
+								width: 250px
+								flex: initial
+							#start-modal
+								width: 180px
+								flex: initial
+							#end-modal
+								width: 180px
+								flex: initial
+							select
+								&#background_color-modal
+									width: 250px
+									flex: initial
+								option
+									color: #555
+									&:nth-of-type(1)
+										color: #d81b60
+									&:nth-of-type(2)
+										color: #ffc107
+									&:nth-of-type(3)
+										color: #fd7e14
+									&:nth-of-type(4)
+										color: #28a745
+									&:nth-of-type(5)
+										color: #17a2b8
+									&:nth-of-type(6)
+										color: #20c997
+									&:nth-of-type(7)
+										color: #007bff
+									&:nth-of-type(8)
+										color: #6f42c1
+					.invalid-feedback
+						margin: 0.5em 0 0 0.3em
+						font-size: 10px
+						text-align: left
+			.swal2-actions
+				margin: 20px auto 0
+		&.delete-modal-box
+			.swal2-icon.swal2-warning.swal2-icon-show
+				width: 40px
+				height: 40px
+				margin: 0.5rem auto 1.0rem
+			#swal2-title
+				display: block
+				padding: 0 0 0.5em
+				border-bottom: 0
+				font-family: "Noto Sans JP"
+				font-weight: 700
+				font-size: 14px
+				line-height: 1.5
+				letter-spacing: 0.05em
+				text-align: center
+				color: #555
+		.swal2-icon
+			display: none
+		#swal2-title
+			display: block
+			padding: 0 0 0.5em
+			border-bottom: solid 1px #777
+			font-family: "Noto Sans JP"
+			font-weight: 700
+			font-size: 16px
+			line-height: 1.5
+			letter-spacing: 0.05em
+			text-align: left
+			color: #555
+			+bp500
+				font-size: 14px
+		.swal2-html-container
+			display: block
+			padding: 0
+			margin-top: 10px
+			.item-ele
+				display: block
+				padding: 0
+				margin-top: 5px
+				font-family: "Noto Sans JP"
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.5
+				letter-spacing: 0.05em
+				text-align: left
+				color: #555
+				text-indent: -3.15em
+				padding-left: 3.15em
+				&.first-of-type
+					margin-top: 0
+				+bp500
+					font-size: 13px
+		.swal2-actions
+			margin: 10px auto 0
+			.swal2-confirm
+				padding: 12px 20px
+				font-family: "Noto Sans JP"
+				font-weight: 500
+				font-size: 15px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				text-align: center
+				color: #fff
+				+bp500
+					padding: 10px 15px
+					font-size: 14px
+			.swal2-deny
+				padding: 12px 20px
+				font-family: "Noto Sans JP"
+				font-weight: 500
+				font-size: 15px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				text-align: center
+				color: #fff
+				+bp500
+					padding: 10px 15px
+					font-size: 14px
+			.swal2-cancel
+				padding: 12px 20px
+				font-family: "Noto Sans JP"
+				font-weight: 500
+				font-size: 15px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				text-align: center
+				color: #444
+				+bp500
+					padding: 10px 15px
+					font-size: 14px

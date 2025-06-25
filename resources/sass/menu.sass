@@ -426,12 +426,26 @@ body::-webkit-scrollbar
 					font-family: $miniwa-hv-v3
 					letter-spacing: 0.05em
 					color: #fff
+					position: relative
 					+bp1400
 						font-size: 60px
 					+bp1000
 						font-size: 48px
 					&::selection
 						background: #444
+					.weekly-menu
+						position: absolute
+						top: 5px
+						right: -10px
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.05em
+						color: #fff
+						+bp1000
+							font-size: 12px
+							letter-spacing: -0.05em
 				p
 					display: block
 					margin-top: 5px
@@ -1398,3 +1412,58 @@ body::-webkit-scrollbar
 			transition: all 0.5s ease-in-out
 			&:hover
 				opacity: 0.0
+
+
+
+
+
+
+
+
+
+
+#topping
+	position: fixed
+	right: 40px
+	bottom: 80px
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 120px
+	aspect-ratio: 1 / 1
+	opacity: 0.0
+	transition: opacity 0.5s ease-in-out
+	pointer-events: none
+	z-index: 10
+	&.is-show
+		opacity: 1.0
+		pointer-events: initial
+		&:hover
+			opacity: 0.5
+	+bp900
+		right: 30px
+	.outside-circle
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		aspect-ratio: 1 / 1
+		border: solid 1px #cd2c1d
+		border-radius: 50%
+		.inside-circle
+			display: flex
+			justify-content: center
+			align-items: center
+			width: calc(100% - 10px)
+			aspect-ratio: 1 / 1
+			border-radius: 50%
+			background-color: rgba(#cd2c1d, 0.95)
+			p
+				display: block
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.4
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.0em
+				text-align: center
+				color: #fff

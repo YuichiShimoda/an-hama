@@ -1,0 +1,40 @@
+.content-header .tit-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.content-header .tit-box h1 {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content-header .desc-box {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+.content-header .desc-box p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+
+.content #report_box {
+  min-height: 93vh;
+  padding-bottom: 80px;
+}
+@media screen and (max-width: 500px) {
+  .content #report_box {
+    min-height: calc(100vh - 75px);
+    padding-bottom: 50px;
+  }
+}

@@ -400,7 +400,7 @@
                     </video>
                 </div>
                 <div class="copy-box">
-                    <h3>ハマちゃん</h3>
+                    <h3>ハマちゃん<span class="weekly-menu">※ 週替りメニュー</span></h3>
                     <p>1,500<span class="yen">円</span></p>
                 </div>
             </div>
@@ -471,6 +471,14 @@
         <div class="img-box">
             <img src="{{ asset('image/menu/scene2.webp') }}" alt="">
             <div class="overlay click-canvas"></div>
+        </div>
+    </section>
+
+    <section id="topping" class="is-show">
+        <div class="outside-circle">
+            <div class="inside-circle">
+                <p>ハマちゃん<br>週替り<br>トッピング</p>
+            </div>
         </div>
     </section>
 @stop

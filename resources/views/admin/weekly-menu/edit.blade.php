@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', '週替り管理｜編集')
+@section('title', '週替りトッピング管理｜編集')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminlte/weekly-menu.css') }}">
@@ -9,16 +9,16 @@
 
 @section('content_header')
     <div class="tit-box">
-        <h1>週替り管理｜編集</h1>
+        <h1>週替りトッピング管理<span>｜</span>編集</h1>
         <a href="{{ route('admin.weekly-menu.index') }}" class="back-btn">
             <p>一覧に戻る</p>
         </a>
     </div>
-    <div class="desc-box">
+<!--     <div class="desc-box">
         <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
         <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
         <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
-    </div>
+    </div> -->
 @stop
 
 @section('content')
@@ -26,9 +26,9 @@
         @csrf
         @method('PUT')
 
-        {{-- メニュー --}}
+        {{-- ハマちゃんトッピング具材 --}}
         <div class="d-block">
-            <x-adminlte-input name="menu" label="メニュー" placeholder="ハンバーグ" value="{{ old('menu', $weekly_menu->menu) }}"/>
+            <x-adminlte-input name="menu" label="ハマちゃんトッピング具材" placeholder="ハンバーグ" value="{{ old('menu', $weekly_menu->menu) }}"/>
 <!--             <div class="form-note-box">
                 <p>※ 30文字以内で入力してください。</p>
             </div> -->
@@ -36,13 +36,14 @@
 
         {{-- 提供期間 --}}
         <div class="d-block period-box">
-            <x-adminlte-input-date name="start_day" label="提供開始日" :config="['format' => 'YYYY-MM-DD']" value="{{ old('start_day', $weekly_menu->start_day ?? '') }}">
+            <x-adminlte-input-date name="start_day" label="提供期間" :config="['format' => 'YYYY-MM-DD']" value="{{ old('start_day', $weekly_menu->start_day ?? '') }}">
                 <x-slot name="prependSlot">
                     <div class="input-group-text bg-gradient-info">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
                 </x-slot>
             </x-adminlte-input-date>
+            <div class="wavy-line">～</div>
             <x-adminlte-input-date name="end_day" label="提供終了日" :config="['format' => 'YYYY-MM-DD']" value="{{ old('end_day', $weekly_menu->end_day ?? '') }}">
                 <x-slot name="prependSlot">
                     <div class="input-group-text bg-gradient-info">

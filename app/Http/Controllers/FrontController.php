@@ -11,10 +11,8 @@ use Illuminate\View\View;
 class FrontController extends Controller
 {
     public function __construct() {
-        // $today = Carbon::today();
-        // $oneWeekLater = Carbon::today()->addWeek();
-        $today = Carbon::create(2025, 5, 12);
-        $oneWeekLater = $today->copy()->addWeek();
+        $today = Carbon::today();
+        $oneWeekLater = Carbon::today()->addWeek();
         $thisWeeklyMenu = WeeklyMenu::whereDate('start_day', '<=', $today)->whereDate('end_day', '>=', $today)->orderBy('id', 'desc')->first();
         $nextWeeklyMenu = WeeklyMenu::where('start_day', '>', $today)->where('start_day', '<=', $oneWeekLater)->orderBy('id', 'desc')->first();
         $this->weeklyMenu = [
@@ -43,5 +41,15 @@ class FrontController extends Controller
     public function info(): View
     {
         return view('info', ['weeklyMenu' => $this->weeklyMenu]);
+    }
+
+    public function parking(): View
+    {
+        return view('parking', ['weeklyMenu' => $this->weeklyMenu]);
+    }
+
+    public function voice(): View
+    {
+        return view('voice', ['weeklyMenu' => $this->weeklyMenu]);
     }
 }

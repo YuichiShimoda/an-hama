@@ -19,9 +19,9 @@
         </a>
     </div>
     <div class="desc-box">
-        <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
-        <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
-        <p>説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。説明が入ります。</p>
+        <p>ホームページのトップページに、最新のお知らせを3件まで自動で表示します。</p>
+        <p>表示対象のお知らせは、ID欄が緑・白・赤に色分けされている行です。</p>
+        <p>こちらでは、お知らせの新規作成・編集・確認・削除が可能です。</p>
     </div>
 @endsection
 
@@ -36,7 +36,7 @@
                     <td>{{ $news_ele->id }}</td>
                     <td>{{ $news_ele->category }}</td>
                     <td>{{ $news_ele->title }}</td>
-                    <td>{{ $news_ele->created_at->format('Y-m-d') }}</td>
+                    <td>{{ $news_ele->created_at->format('Y年 n月 j日') }}</td>
                     <td>
                         <a href="{{ route('admin.news.show', $news_ele->id) }}" class="btn btn-sm btn-primary">
                             <i class="fas fa-eye"></i>
@@ -65,14 +65,38 @@
     {{-- 削除確認用スクリプト --}}
     <script>
         $(window).on('load', function () {
-            $('#newsTable').DataTable().destroy();
-            $('#newsTable').DataTable({
-                "order": [[0, 'desc']],
-                language: {
-                    url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
-                },
-                lengthMenu: [[5, 10, 20], [5, 10, 20]]
-            });
+            setTimeout(function() {
+                if ($.fn.DataTable.isDataTable('#newsTable')) {
+                    $('#newsTable').DataTable().destroy();
+                }
+                const table = $('#newsTable').DataTable({
+                    "order": [[0, 'desc']],
+                    language: {
+                        url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
+                    },
+                    lengthMenu: [[5, 10, 20], [5, 10, 20]]
+                });
+                table.on('draw', updateRowClasses);
+                function updateRowClasses() {
+                    const rows = table.rows({ page: 'current' }).nodes();
+                    $(rows).removeClass('first second third is-hidden');
+                    if (table.page() === 0) {
+                        $(rows).each(function (i) {
+                            if (i === 0) $(this).addClass('first');
+                            else if (i === 1) $(this).addClass('second');
+                            else if (i === 2) $(this).addClass('third');
+                            else $(this).addClass('is-hidden');
+                        });
+                    } else {
+                        $(rows).addClass('is-hidden');
+                    }
+                }
+            }, 100);
+
+            // $('#newsTable tbody tr:nth-last-child(n+4)').addClass('is-hidden');
+            // $('#newsTable tbody tr:nth-last-child(1)').addClass('first');
+            // $('#newsTable tbody tr:nth-last-child(2)').addClass('second');
+            // $('#newsTable tbody tr:nth-last-child(3)').addClass('third');
             $('.delete-btn').on('click', function (e) {
                 e.preventDefault();
                 const $form = $(this).closest('form');
