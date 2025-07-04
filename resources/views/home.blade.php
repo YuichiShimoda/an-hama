@@ -271,6 +271,9 @@
                     <div class="swiper-slide">
                         <img src="{{ asset('image/top/menu5.webp') }}" alt="">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('image/top/sosaku1.webp') }}" alt="">
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="color-top-layer"></div>

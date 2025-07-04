@@ -291,23 +291,30 @@
                     }
                 });
                 $(window).on('load', function() {
-                    // ローカルストレージを取得
-                    var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
-                    if (localStorageData) {
-                        // 有効期限が過ぎているか確認後、ローカルストレージを削除
-                        if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
-                            window.localStorage.removeItem('anHamaWeeklyMenu');
-                            setTimeout(function() {
-                                $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-                                console.log("再表示｜有効期限が過ぎた");
-                            }, 8000);
-                        }
-                    } else {
+                    @if (Route::currentRouteName() === 'menu')
                         setTimeout(function() {
                             $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-                            console.log("初回表示｜ローカルストレージがないため");
-                        }, 8000);
-                    }
+                            console.log("メニューページ表示");
+                        }, 5000);
+                    @else
+                        // ローカルストレージを取得
+                        var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
+                        if (localStorageData) {
+                            // 有効期限が過ぎているか確認後、ローカルストレージを削除
+                            if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
+                                window.localStorage.removeItem('anHamaWeeklyMenu');
+                                setTimeout(function() {
+                                    $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+                                    console.log("再表示｜有効期限が過ぎた");
+                                }, 8000);
+                            }
+                        } else {
+                            setTimeout(function() {
+                                $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+                                console.log("初回表示｜ローカルストレージがないため");
+                            }, 8000);
+                        }
+                    @endif
                 });
                 $('.weekly-modal-close').on('click',function() {
                     $('.md-overlay,.md-contents').fadeOut();
@@ -315,7 +322,7 @@
                     if (value) {
                         const item = {
                             value: value,
-                            expiry: new Date().getTime() + 3 * 24 * 60 * 60 * 1000 // 3日後のタイムスタンプ
+                            expiry: new Date().getTime() + 1 * 24 * 60 * 60 * 1000 // 1日後のタイムスタンプ
                         };
                         // ローカルストレージを保存
                         window.localStorage.setItem('anHamaWeeklyMenu', JSON.stringify(item));

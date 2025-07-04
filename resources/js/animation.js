@@ -542,7 +542,7 @@ const floorPlan1 = new Swiper('#menu .swiper', {
 		el: '.swiper-pagination',
 		type: 'fraction',
 		renderFraction: function (currentClass) {
-			return '<div class="nav-box"><div class="top-box"><div class="line"></div><p>SLIDE</p></div><div class="bottom-box"><p class="current ' + currentClass + '">0</p><div class="connect-line"></div><p class="total">05</p></div></div>';
+			return '<div class="nav-box"><div class="top-box"><div class="line"></div><p>SLIDE</p></div><div class="bottom-box"><p class="current ' + currentClass + '">0</p><div class="connect-line"></div><p class="total">06</p></div></div>';
 		},
 		formatFractionCurrent: function (number) {
 			return '0' + number;
@@ -556,6 +556,22 @@ const floorPlan1 = new Swiper('#menu .swiper', {
 			},
 		},
 	},
+	on: {
+		slideChange: function () {
+			const activeIndex = this.realIndex;
+			const freeBoxText = document.querySelector('#menu .free-box > p');
+			const priceBoxText = document.querySelector('#menu .price-box > .price');
+			if (freeBoxText) {
+				if (activeIndex === 5) {
+					freeBoxText.textContent = 'つけかけパスタ';
+					priceBoxText.textContent = '1,000';
+				} else if (activeIndex >= 0 && activeIndex <= 4) {
+					freeBoxText.textContent = 'あんかけパスタ';
+					priceBoxText.textContent = '1,200';
+				}
+			}
+		}
+	}
 });
 
 gsap.to("#gallery", {
