@@ -2336,9 +2336,6 @@ body::-webkit-scrollbar {
   background: #865C48;
   border-radius: 100%;
 }
-#face .tear_right:nth-child(1) .drops {
-  animation: horizontalRight 3580ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
-}
 #face .tear_right:nth-child(1) .drops .drop {
   animation: vertical 3580ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
 }
@@ -2929,9 +2926,6 @@ body::-webkit-scrollbar {
 }
 #face .tear_right:nth-child(99) .drops .drop {
   animation: vertical 4290ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
-}
-#face .tear_right:nth-child(100) .drops {
-  animation: horizontalRight 4998ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
 }
 #face .tear_right:nth-child(100) .drops .drop {
   animation: vertical 4998ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
