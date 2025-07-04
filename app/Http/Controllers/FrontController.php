@@ -24,7 +24,18 @@ class FrontController extends Controller
 
     public function home(): View
     {
-        $news = News::orderBy('id', 'desc')->limit(3)->get();
+        $today = Carbon::today();
+        $change_news = News::whereNotNull('reservation_day')->Where('reservation_day', '<', $today)->get();
+        foreach ($change_news as $ele) {
+            $newNews = $ele->replicate();
+            $newNews->reservation_day = null;
+            $newNews->created_at = now();
+            $newNews->updated_at = now();
+            $newNews->save();
+            $ele->delete();
+        }
+        $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->limit(3)->get();
+        // $news = News::orderBy('id', 'desc')->limit(3)->get();
         return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu]);
     }
 
