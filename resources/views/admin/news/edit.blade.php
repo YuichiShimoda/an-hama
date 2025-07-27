@@ -4,6 +4,7 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminlte/news.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" />
 @stop
 
 @section('content_header')
@@ -33,8 +34,8 @@
                 <option value="臨時休業" {{ old('category', $news->category) == '臨時休業' ? 'selected' : '' }}>臨時休業</option>
                 <option value="お得情報" {{ old('category', $news->category) == 'お得情報' ? 'selected' : '' }}>お得情報</option>
                 <option value="イベント" {{ old('category', $news->category) == 'イベント' ? 'selected' : '' }}>イベント</option>
-                <option value="新サービス" {{ old('category', $news->category) == '新サービス' ? 'selected' : '' }}>新サービス</option>
-                <option value="新メニュー" {{ old('category', $news->category) == '新メニュー' ? 'selected' : '' }}>新メニュー</option>
+                <option value="新ｻｰﾋﾞｽ" {{ old('category', $news->category) == '新ｻｰﾋﾞｽ' ? 'selected' : '' }}>新ｻｰﾋﾞｽ</option>
+                <option value="新ﾒﾆｭｰ" {{ old('category', $news->category) == '新ﾒﾆｭｰ' ? 'selected' : '' }}>新ﾒﾆｭｰ</option>
                 <option value="期間限定" {{ old('category', $news->category) == '期間限定' ? 'selected' : '' }}>期間限定</option>
                 <option value="お知らせ" {{ old('category', $news->category) == 'お知らせ' ? 'selected' : '' }}>お知らせ</option>
                 <option value="その他" {{ old('category', $news->category) == 'その他' ? 'selected' : '' }}>その他</option>
@@ -54,6 +55,23 @@
             <x-adminlte-textarea name="body" label="詳細情報" placeholder="お知らせの詳細を入力してください。" rows="7">{{ old('body', $news->body) }}</x-adminlte-textarea>
         </div>
 
+        @php
+            $tomorrow = \Carbon\Carbon::tomorrow()->format('Y-m-d');
+        @endphp
+        {{-- 公開予約日 --}}
+        <div class="d-block period-box">
+            <x-adminlte-input-date name="reservation_day" label="公開予約日" :config="['format' => 'YYYY-MM-DD', 'minDate' => $tomorrow]" value="{{ old('reservation_day', $news->reservation_day) }}">
+                <x-slot name="prependSlot">
+                    <div class="input-group-text bg-gradient-info">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </x-slot>
+            </x-adminlte-input-date>
+            <div class="form-note-box">
+                <p>※ 公開予定日を設定することで、その日以降にホームページで情報が自動的に公開されます。公開予定日になるまでは、ホームページには表示されません。</p>
+            </div>
+        </div>
+
         {{-- 更新ボタン --}}
         <x-adminlte-button label="更新する" class="register-btn" type="submit"/>
     </form>
@@ -61,4 +79,10 @@
 
 @section('js')
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/ja.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script>
+        moment.locale('ja');
+    </script>
 @endsection

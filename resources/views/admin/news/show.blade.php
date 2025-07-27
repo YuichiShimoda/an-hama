@@ -27,7 +27,11 @@
         </div>
         <div class="card-body">
             <p><strong>カテゴリ：</strong> {{ $news->category }}</p>
-            <p><strong>公開日：</strong> {{ $news->created_at->format('Y年 n月 j日') }}</p>
+            @if ($news->reservation_day == null)
+                <p><strong>公開日：</strong> {{ $news->created_at->format('Y年 n月 j日') }}</p>
+            @else
+                <p><strong>公開日：</strong> {{ \Carbon\Carbon::parse($news->reservation_day)->format('Y年 n月 j日') }}</p>
+            @endif
             <hr>
             <p><strong>詳細情報：</strong></p>
             <div class="body-box bg-light rounded border">

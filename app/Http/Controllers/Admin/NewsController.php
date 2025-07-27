@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
+use Illuminate\Support\Carbon;
 use App\Http\Requests\NewsStoreRequest;
 use App\Http\Requests\NewsUpdateRequest;
 
@@ -18,8 +19,21 @@ class NewsController extends Controller
      */
     public function index(): View
     {
-        $news = News::all();
-        return view('admin.news.index', compact('news'));
+        $today = Carbon::today();
+        $change_news = News::whereNotNull('reservation_day')->Where('reservation_day', '<', $today)->get();
+        foreach ($change_news as $ele) {
+            $newNews = $ele->replicate();
+            $newNews->reservation_day = null;
+            $newNews->created_at = now();
+            $newNews->updated_at = now();
+            $newNews->save();
+            $ele->delete();
+        }
+
+        $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->get();
+        $reservation_news = News::whereDate('reservation_day', '>', $today)->get();
+        // $news = News::all();
+        return view('admin.news.index', compact('news', 'reservation_news'));
     }
 
     /**
@@ -60,6 +74,10 @@ class NewsController extends Controller
      */
     public function update(NewsUpdateRequest $request, News $news): RedirectResponse
     {
+        if (empty($request->reservation_day) && !empty($news->reservation_day)) {
+            $news->created_at = now();
+            $news->save();
+        }
         $news->update($request->validated());
 
         return redirect()->route('admin.news.index')->with('success','更新完了');
