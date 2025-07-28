@@ -2242,6 +2242,17 @@ body::-webkit-scrollbar {
 #peperoncino .top-content-box .img-box .copy-box h3::selection, #indian .top-content-box .img-box .copy-box h3::selection {
   background: #444;
 }
+#peperoncino .top-content-box .img-box .copy-box h3 .common-name, #indian .top-content-box .img-box .copy-box h3 .common-name {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "miniwa-hv-v3", sans-serif;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
 #peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p {
   display: block;
   margin-top: 5px;
