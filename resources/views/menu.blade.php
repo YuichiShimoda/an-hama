@@ -531,6 +531,7 @@
                     </video>
                 </div>
                 <div class="copy-box">
+                    <div class="pasta-category-box"><p>オイルパスタ</p></div>
                     <h3>ペペロンチーノ</h3>
                     <p>1,000<span class="yen">円</span></p>
                 </div>
@@ -599,7 +600,8 @@
                     </video>
                 </div>
                 <div class="copy-box">
-                    <h3>インディアン<span class="common-name">※ カレーパスタ</span></h3>
+                    <div class="pasta-category-box"><p>カレーパスタ</p></div>
+                    <h3>インディアン</h3>
                     <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>

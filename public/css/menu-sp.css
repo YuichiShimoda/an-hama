@@ -2296,7 +2296,7 @@ body::-webkit-scrollbar {
   left: -80px;
   display: block;
   width: 380px;
-  padding: 24px 30px;
+  padding: 22px 30px 24px;
   background-color: #333;
   transform-origin: 0px 390px;
   transform: rotate(0deg);
@@ -2306,7 +2306,7 @@ body::-webkit-scrollbar {
   #peperoncino .top-content-box .img-box .copy-box, #indian .top-content-box .img-box .copy-box {
     left: -75px;
     width: 304px;
-    padding: 19px 24px;
+    padding: 19px 24px 19px;
     transform-origin: 0px 312px;
   }
 }
@@ -2315,10 +2315,35 @@ body::-webkit-scrollbar {
     left: -60px;
   }
 }
+#peperoncino .top-content-box .img-box .copy-box .pasta-category-box, #indian .top-content-box .img-box .copy-box .pasta-category-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 12px;
+  margin: 0 0 7px -2px;
+  border-radius: 20px;
+  background-color: #ae0e0e;
+}
+#peperoncino .top-content-box .img-box .copy-box .pasta-category-box p, #indian .top-content-box .img-box .copy-box .pasta-category-box p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "miniwa-hv-v3", sans-serif;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+@media screen and (max-width: 500px) {
+  #peperoncino .top-content-box .img-box .copy-box .pasta-category-box p, #indian .top-content-box .img-box .copy-box .pasta-category-box p {
+    font-size: 10px;
+  }
+}
 #peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3 {
   display: block;
   font-weight: 400;
-  font-size: 33.6px;
+  font-size: 29.4px;
   line-height: 1;
   font-family: "miniwa-hv-v3", sans-serif;
   letter-spacing: 0.05em;
@@ -2327,41 +2352,20 @@ body::-webkit-scrollbar {
 }
 @media screen and (max-width: 600px) {
   #peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3 {
-    font-size: 28.8px;
+    font-size: 25.2px;
   }
 }
 @media screen and (max-width: 450px) {
   #peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3 {
-    font-size: 25.6px;
+    font-size: 22.4px;
   }
 }
 #peperoncino .top-content-box .img-box .copy-box h3::selection, #indian .top-content-box .img-box .copy-box h3::selection {
   background: #444;
 }
-#peperoncino .top-content-box .img-box .copy-box h3 .common-name, #indian .top-content-box .img-box .copy-box h3 .common-name {
-  position: absolute;
-  top: 5px;
-  right: -10px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1;
-  font-family: "miniwa-hv-v3", sans-serif;
-  letter-spacing: -0.05em;
-  color: #fff;
-}
-@media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .copy-box h3 .common-name, #indian .top-content-box .img-box .copy-box h3 .common-name {
-    font-size: 10px;
-  }
-}
-@media screen and (max-width: 450px) {
-  #peperoncino .top-content-box .img-box .copy-box h3 .common-name, #indian .top-content-box .img-box .copy-box h3 .common-name {
-    right: -5px;
-  }
-}
 #peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p {
   display: block;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-left: 0px;
   font-weight: 400;
   font-size: 24px;
@@ -2378,7 +2382,7 @@ body::-webkit-scrollbar {
 }
 @media screen and (max-width: 450px) {
   #peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p {
-    margin-top: 2px;
+    margin-top: 0px;
     margin-left: 0px;
     font-size: 20px;
   }
