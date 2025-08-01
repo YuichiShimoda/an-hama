@@ -93,6 +93,7 @@
             <p class="type">定番メニュー</p>
             <h2>あんかけパスタ</h2>
             <div class="bottom"></div>
+            <div class="center-circle"></div>
             <div class="dot left-top"></div>
             <div class="dot left-bottom"></div>
             <div class="dot right-top"></div>
@@ -511,6 +512,7 @@
             <img class="top" src="{{ asset('image/menu/tit-top-border.svg') }}" alt="">
             <p class="type">創作メニュー</p>
             <h2>つけかけパスタ<span>- <ruby>Dip<rt>ディップ</rt></ruby><ruby>&amp;<rt>アンド</rt></ruby><ruby>Pour<rt>ポー</rt></ruby> -</span></h2>
+            <div class="center-circle"></div>
             <img class="bottom" src="{{ asset('image/menu/tit-bottom-border.svg') }}" alt="">
         </div>
         <div class="desc-box">

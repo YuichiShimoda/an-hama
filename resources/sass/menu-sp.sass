@@ -495,6 +495,7 @@ body::-webkit-scrollbar
 		+bp450
 			margin: 50px auto 0
 		.tit-box
+			overflow: hidden
 			.top, ,.bottom
 				display: block
 				width: 100%
@@ -545,10 +546,21 @@ body::-webkit-scrollbar
 				&.right-bottom
 					right: 10px
 					bottom: 10px
+			.center-circle
+				position: absolute
+				top: -20px
+				left: 0
+				right: 0
+				margin: auto
+				display: block
+				width: 80px
+				height: 32px
+				border-radius: 50% / 0 0 100% 100%
+				background-color: rgba(#cd2c1d, 1.0)
 	&.creation
-		margin: 60px auto 0
+		margin: 80px auto 0
 		+bp450
-			margin: 40px auto 0
+			margin: 65px auto 0
 		.tit-box
 			img
 				display: block
@@ -566,6 +578,20 @@ body::-webkit-scrollbar
 				color: #555
 				// +bp450
 				// 	margin: 8px auto 0
+			.center-circle
+				position: absolute
+				top: -12px
+				left: 0
+				right: 0
+				margin: auto
+				display: block
+				width: 80px
+				height: 32px
+				border-radius: 50%
+				clip-path: polygon(0 61%, 100% 61%, 100% 100%, 0% 100%)
+				background-color: rgba(#cd2c1d, 1.0)
+				+bp450
+					top: -14px
 			h2
 				display: block
 				width: 100%
