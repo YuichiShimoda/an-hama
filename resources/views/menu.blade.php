@@ -33,8 +33,9 @@
     <section id="first-view">
         <h1>メニュー</h1>
         <div class="desc-box">
-            <p class="base">“あんハマ”のあんかけパスタは、定番系と創作系</p>
-            <p class="note">現代的な創作系は、随時追加される予定です。</p>
+            <p class="base pc">“あんハマ”のあんかけパスタは、定番系と創作系</p>
+            <p class="base sp">“あんハマ”のあんかけパスタは<br>定番系と創作系</p>
+            <!-- <p class="note">現代的な創作系は、随時追加される予定です。</p> -->
             <p class="note">こちらに掲載のメニューと店舗でのメニューが多少異なる場合があります。</p>
         </div>
         <div class="standard-box">

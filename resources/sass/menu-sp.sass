@@ -94,7 +94,7 @@ body::-webkit-scrollbar
 			width: calc(100% - 60px)
 			margin: 20px auto 0
 		.base
-			display: block
+			// display: block
 			margin-bottom: 15px
 			font-weight: 400
 			font-size: 16px
@@ -103,11 +103,17 @@ body::-webkit-scrollbar
 			letter-spacing: 0.05em
 			text-align: center
 			color: #555
-			+bp550
-				text-align: left
-			+bp450
-				width: 265px
+			+bp500
 				margin: 0 auto 10px
+			&.pc
+				display: block
+				+bp500
+					display: none
+			&.sp
+				display: none
+				+bp500
+					display: block
+
 		.note
 			display: block
 			font-weight: 400
@@ -123,6 +129,8 @@ body::-webkit-scrollbar
 		display: block
 		width: 100%
 		margin: 30px auto 0
+		+bp450
+			margin: 45px auto 0
 		.category-box
 			display: block
 			.tit-box
@@ -252,6 +260,8 @@ body::-webkit-scrollbar
 		display: block
 		width: 100%
 		margin: 30px auto 0
+		+bp450
+			margin: 45px auto 0
 		.category-box
 			display: block
 			.tit-box
@@ -483,7 +493,7 @@ body::-webkit-scrollbar
 	&.standard
 		margin: 60px auto 0
 		+bp450
-			margin: 40px auto 0
+			margin: 50px auto 0
 		.tit-box
 			.top, ,.bottom
 				display: block
