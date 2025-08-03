@@ -37,15 +37,15 @@
     <section id="first-view">
         <h1>メニュー</h1>
         <div class="desc-box">
-            <p class="base pc">“あんハマ”のあんかけパスタは、定番系と創作系</p>
-            <p class="base sp">“あんハマ”のあんかけパスタは<br>定番系と創作系</p>
-            <!-- <p class="note">現代的な創作系は、随時追加される予定です。</p> -->
+            <p class="base pc">“あんハマ”のあんかけピザは、定番系と創作系</p>
+            <p class="base sp">“あんハマ”のあんかけピザは<br>定番系と創作系</p>
+            <p class="note">現代的な創作系は、随時追加される予定です。</p>
             <p class="note">こちらに掲載のメニューと店舗でのメニューが多少異なる場合があります。</p>
         </div>
         <div class="standard-box">
             <div class="category-box">
                 <div class="tit-box">
-                    <h2>あんかけパスタ</h2>
+                    <h2>あんかけピザ</h2>
                 </div>
             </div>
             <div class="nav-box">
@@ -58,30 +58,7 @@
             <div class="option-box">
                 <div class="cat-box">
                     <p>オプション　　：</p>
-                    <p>プチご飯　追加ソース　粉チーズ</p>
-                </div>
-                <p class="annotation"><span>∟</span> ※ 店舗でのみ選べる裏オプションあります</p>
-                <div class="cat-box">
-                    <p>フリー調味料　：</p>
-                    <p>ブラックペッパー　タバスコ</p>
-                </div>
-            </div>
-        </div>
-        <div class="creation-box">
-            <div class="category-box">
-                <div class="tit-box">
-                    <h2>つけかけパスタ<span>- <ruby>Dip<rt>ディップ</rt></ruby><ruby>&amp;<rt>アンド</rt></ruby><ruby>Pour<rt>ポー</rt></ruby> -</span></h2>
-                </div>
-            </div>
-            <div class="nav-box">
-                <a href="#peperoncino">ペペロンチーノ</a>
-                <a href="#indian">インディアン</a>
-                <a class="info-addition" href="#info-addition">~ 随時追加予定 ~</a>
-            </div>
-            <div class="option-box">
-                <div class="cat-box">
-                    <p>オプション　　：</p>
-                    <p>プチご飯　追加ソース　粉チーズ</p>
+                    <p>オリーブオイル　追加ソース　粉チーズ</p>
                 </div>
                 <div class="cat-box">
                     <p>フリー調味料　：</p>
@@ -95,7 +72,7 @@
         <div class="tit-box">
             <div class="top"></div>
             <p class="type">定番メニュー</p>
-            <h2>あんかけパスタ</h2>
+            <h2>あんかけピザ</h2>
             <div class="bottom"></div>
             <div class="center-circle"></div>
             <div class="dot left-top"></div>
@@ -112,7 +89,7 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/menu1.webp') }}" alt="">
+                    <img class="dish" src="{{ asset('image/pizza/pizza1.webp') }}" alt="">
                     <img class="bg" src="{{ asset('image/menu/menu1-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
@@ -194,7 +171,7 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/menu2.webp') }}" alt="">
+                    <img class="dish" src="{{ asset('image/pizza/pizza2.webp') }}" alt="">
                     <img class="bg" src="{{ asset('image/menu/menu2-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
@@ -270,7 +247,7 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/menu3.webp') }}" alt="">
+                    <img class="dish" src="{{ asset('image/pizza/pizza3.webp') }}" alt="">
                     <img class="bg" src="{{ asset('image/menu/menu3-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
@@ -349,7 +326,7 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/menu4.webp') }}" alt="">
+                    <img class="dish" src="{{ asset('image/pizza/pizza4.webp') }}" alt="">
                     <img class="bg" src="{{ asset('image/menu/menu4-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
@@ -432,7 +409,7 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/menu5.webp') }}" alt="">
+                    <img class="dish" src="{{ asset('image/pizza/pizza5.webp') }}" alt="">
                     <img class="bg" src="{{ asset('image/menu/menu5-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
@@ -508,161 +485,7 @@
         </div>
     </section>
 
-    <section id="boundary">
-        <img src="{{ asset('image/menu/boundary-line.svg') }}" alt="">
-    </section>
-    <section class="category-sec-box creation">
-        <div class="tit-box">
-            <img class="top" src="{{ asset('image/menu/tit-top-border.svg') }}" alt="">
-            <p class="type">創作メニュー</p>
-            <h2>つけかけパスタ<span>- <ruby>Dip<rt>ディップ</rt></ruby><ruby>&amp;<rt>アンド</rt></ruby><ruby>Pour<rt>ポー</rt></ruby> -</span></h2>
-            <div class="center-circle"></div>
-            <img class="bottom" src="{{ asset('image/menu/tit-bottom-border.svg') }}" alt="">
-        </div>
-        <div class="desc-box">
-            <p>"あん"ソースは別容器</p>
-            <p>つけてもよし!かけてもよし!新感覚パスタ</p>
-            <!-- <p class="heading" data-target-resolver></p> -->
-        </div>
-    </section>
-    <section id="peperoncino">
-        <div class="top-content-box">
-            <div class="img-box">
-                <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/sosaku1.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/menu1-paint.svg') }}" alt="">
-                </div>
-                <div class="food-box">
-                    <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu1.mp4') }}" type="video/mp4">
-                    </video>
-                </div>
-                <div class="copy-box">
-                    <div class="pasta-category-box"><p>オイルパスタ</p></div>
-                    <h3>ペペロンチーノ</h3>
-                    <p>1,000<span class="yen">円</span></p>
-                </div>
-            </div>
-            <img class="name" src="{{ asset('image/menu/sosaku1-name.svg') }}" alt="">
-            <!-- <p class="italiano">Autentico</p> -->
-            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
-            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
-        </div>
-        <div class="bottom-content-box">
-            <div class="right-box">
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">スモール</p>
-                        <p class="gram">200g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">950</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">レギュラー</p>
-                        <p class="gram">300g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,000</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">ラージ</p>
-                        <p class="gram">400g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,100</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">メガ</p>
-                        <p class="gram">600g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,200</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="indian">
-        <div class="top-content-box">
-            <div class="img-box">
-                <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/sosaku2.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/menu2-paint.svg') }}" alt="">
-                </div>
-                <div class="food-box">
-                    <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu2.mp4') }}" type="video/mp4">
-                    </video>
-                </div>
-                <div class="copy-box">
-                    <div class="pasta-category-box"><p>カレーパスタ</p></div>
-                    <h3>インディアン</h3>
-                    <p>1,000<span class="yen">円</span></p>
-                </div>
-            </div>
-            <img class="name" src="{{ asset('image/menu/sosaku2-name.svg') }}" alt="">
-            <!-- <p class="italiano">Autentico</p> -->
-            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
-            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
-        </div>
-        <div class="bottom-content-box">
-            <div class="right-box">
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">スモール</p>
-                        <p class="gram">200g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">950</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">レギュラー</p>
-                        <p class="gram">300g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,000</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">ラージ</p>
-                        <p class="gram">400g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,100</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">メガ</p>
-                        <p class="gram">600g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,200</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section id="announcement">
 <!--         <div class="content-box">
             <p>" 創作メニュー 第2弾 "</p>
@@ -711,13 +534,13 @@
         </div>
     </section>
 
-    <section id="topping" class="is-show">
+<!--     <section id="topping" class="is-show">
         <div class="outside-circle">
             <div class="inside-circle">
                 <p>ハマちゃん<br>週替り<br>トッピング</p>
             </div>
         </div>
-    </section>
+    </section> -->
 @stop
 
 
