@@ -139,20 +139,31 @@ body::-webkit-scrollbar {
 .header-box nav ul li:first-of-type {
   margin-left: 0;
 }
-.header-box nav ul li a {
+.header-box nav ul li .main-link-txt {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
-.header-box nav ul li a:hover .en {
+.header-box nav ul li .main-link-txt:hover .en {
   animation: text-link-hover 0.8s infinite;
 }
-.header-box nav ul li a:hover .jp {
+.header-box nav ul li .main-link-txt:hover .jp {
   color: #B92928;
   opacity: 0.8;
 }
-.header-box nav ul li a .en {
+.header-box nav ul li .main-link-txt.is-open .nav-arrow {
+  transform: rotate(180deg);
+}
+.header-box nav ul li .main-link-txt.is-open .sub-nav-box {
+  opacity: 1;
+  animation: showNav 0.8s ease-in-out forwards;
+}
+.header-box nav ul li .main-link-txt.is-open .sub-nav-box .inside-box .sub-link-txt {
+  pointer-events: initial;
+}
+.header-box nav ul li .main-link-txt .en {
   display: block;
   background: linear-gradient(60deg, currentColor 75%, white 95%, currentColor 95%);
   background-size: 200%;
@@ -167,15 +178,15 @@ body::-webkit-scrollbar {
   color: #006134;
 }
 @media screen and (max-width: 600px) {
-  .header-box nav ul li a .en {
+  .header-box nav ul li .main-link-txt .en {
     font-size: 10px;
   }
 }
-.header-box nav ul li a .en::selection {
+.header-box nav ul li .main-link-txt .en::selection {
   background: #ddd;
   color: #555;
 }
-.header-box nav ul li a .jp {
+.header-box nav ul li .main-link-txt .jp {
   display: block;
   margin-top: 5px;
   font-weight: 700;
@@ -187,19 +198,174 @@ body::-webkit-scrollbar {
   transition: all 0.5s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  .header-box nav ul li a .jp {
+  .header-box nav ul li .main-link-txt .jp {
     font-size: 12px;
   }
 }
 @media screen and (max-width: 450px) {
-  .header-box nav ul li a .jp {
+  .header-box nav ul li .main-link-txt .jp {
     margin-top: 3px;
   }
 }
+.header-box nav ul li .main-link-txt .jp .nav-arrow {
+  display: inline;
+  width: 10px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  transform-origin: center;
+  transition: all 0.5s ease-in-out;
+}
+.header-box nav ul li .main-link-txt .sub-nav-box {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  display: block;
+  width: 170px;
+  border-top: solid 2px #cd2c1d;
+  background: url("../image/nav-bg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1001;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box {
+    bottom: -89px;
+    width: 160px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box {
+    bottom: -80px;
+    width: 145px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box {
+    width: 135px;
+  }
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px 20px 20px;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box {
+    padding: 17px 10px 17px 17px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box {
+    padding: 13px 10px 13px 13px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box {
+    padding: 13px 5px 13px 10px;
+  }
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box .sub-link-txt {
+  display: block;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: #555;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box .sub-link-txt {
+    font-size: 12px;
+  }
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box .sub-link-txt::before {
+  content: "";
+  display: inline-block;
+  width: 0px;
+  aspect-ratio: 1/1;
+  margin-right: 0px;
+  margin-bottom: 1px;
+  border-radius: 50%;
+  background: #cd2c1d;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 450px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box .sub-link-txt::before {
+    width: 6px;
+    margin-right: 5px;
+  }
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box .sub-link-txt:hover {
+  color: #B92928;
+  opacity: 0.8;
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box .sub-link-txt:hover::before {
+  width: 8px;
+  margin-right: 7px;
+}
+@media screen and (max-width: 600px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box .sub-link-txt:hover::before {
+    width: 6px;
+    margin-right: 5px;
+  }
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box .triangle {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box .triangle.top {
+  top: 0;
+  border-width: 0px 15px 15px 0px;
+  border-color: rgba(255, 255, 255, 0) #cd2c1d rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+@media screen and (max-width: 450px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box .triangle.top {
+    border-width: 0px 13px 13px 0px;
+  }
+}
+.header-box nav ul li .main-link-txt .sub-nav-box .inside-box .triangle.bottom {
+  bottom: 0;
+  border-width: 0px 0px 15px 15px;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #cd2c1d rgba(255, 255, 255, 0);
+}
+@media screen and (max-width: 450px) {
+  .header-box nav ul li .main-link-txt .sub-nav-box .inside-box .triangle.bottom {
+    border-width: 0px 0px 13px 13px;
+  }
+}
 
-@keyframes text-link-hover {
+@keyframes text-link-hover1 {
   100% {
     background-position: 50% 0%;
+  }
+}
+@keyframes showNav {
+  00% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  }
+  45% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 0, 0 0);
+  }
+  55% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 0, 0 0);
+  }
+  100% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
   }
 }
 .footer-box {

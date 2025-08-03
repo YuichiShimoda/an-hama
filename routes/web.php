@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VoiceController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\WeeklyMenuController;
+use App\Http\Controllers\Admin\PressReleaseController;
 use App\Http\Controllers\Admin\TaskController;
 use App\Http\Controllers\Admin\AnalyticsController;
 
@@ -19,6 +20,9 @@ Route::get('passion', [App\Http\Controllers\FrontController::class, 'passion'])-
 
 // メニュー
 Route::get('menu', [App\Http\Controllers\FrontController::class, 'menu'])->name('menu');
+
+// メニュー - ピザ
+Route::get('menu/pizza', [App\Http\Controllers\FrontController::class, 'pizza'])->name('pizza');
 
 // 店舗情報
 Route::get('info', [App\Http\Controllers\FrontController::class, 'info'])->name('info');
@@ -56,6 +60,7 @@ Route::get('holiday', [App\Http\Controllers\HomeController::class, 'holiday'])->
 Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () {
     Route::resource('news', NewsController::class);
     Route::resource('weekly-menu', WeeklyMenuController::class);
+    Route::resource('press-release', PressReleaseController::class);
     Route::resource('task', TaskController::class);
     Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');
 });

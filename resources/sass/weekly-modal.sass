@@ -145,10 +145,11 @@ $fgp-soei-pop2: "fgp-soei-pop2", sans-serif // 700
 				animation-delay: 0.8s
 	> .md-inner
 		display: flex
-		justify-content: center
+		justify-content: flex-start
 		align-items: center
 		flex-direction: column
 		width: 100%
+		max-height: calc(100vh - 100px)
 		// aspect-ratio: 7 / 5
 		padding: 40px 0 30px
 		background-color: #fff
@@ -158,8 +159,16 @@ $fgp-soei-pop2: "fgp-soei-pop2", sans-serif // 700
 		background-position: center center
 		background-repeat: no-repeat
 		position: relative
+		overflow-y: scroll
+		scrollbar-width: none
+		-ms-overflow-style: none
+		&::-webkit-scrollbar
+			display: none
+		+bp1000
+			max-height: calc(100vh - 60px)
 		+bp450
 			min-width: 90vw
+			max-height: calc(100dvh - 50px)
 			padding: 25px 0 20px
 		> .topping-tit
 			display: block
@@ -273,6 +282,90 @@ $fgp-soei-pop2: "fgp-soei-pop2", sans-serif // 700
 				font-size: 12px
 			&:hover
 				opacity: 0.5
+		> .pr-box
+			display: block
+			width: 100%
+			margin: 30px auto 0
+			.sec-change-box
+				display: block
+				width: 100%
+				position: relative
+				.txt-box
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 100px
+					height: 30px
+					margin: 0 auto
+					background-color: #444
+					clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+					p
+						display: block
+						font-weight: 700
+						font-size: 10px
+						line-height: 1.0
+						font-family: sans-serif
+						letter-spacing: 0.05em
+						color: #fff
+				.border-left
+					position: absolute
+					top: 0
+					left: 30px
+					bottom: 0
+					margin: auto
+					display: block
+					width: 155px
+					height: 0.5px
+					background-color: #777
+					+bp1000
+						width: 95px
+					+bp400
+						left: 15px
+				.border-right
+					position: absolute
+					top: 0
+					right: 30px
+					bottom: 0
+					margin: auto
+					display: block
+					width: 155px
+					height: 0.5px
+					background-color: #777
+					+bp1000
+						width: 95px
+					+bp400
+						right: 15px
+			.pr-tit
+				display: block
+				width: calc(100% - 60px)
+				margin: 20px auto 0
+				font-weight: 700
+				font-size: 12px
+				line-height: 1.3
+				font-family: sans-serif
+				letter-spacing: 0.05em
+				text-align: left
+				color: #721C1B
+				+bp450
+					margin: 15px auto 0
+					font-size: 11px
+				+bp400
+					width: calc(100% - 30px)
+			.pr-body
+				display: block
+				width: calc(100% - 60px)
+				margin: 10px auto 0
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.5
+				font-family: sans-serif
+				letter-spacing: 0.05em
+				color: #333
+				+bp450
+					margin: 7px auto
+					font-size: 11px
+				+bp400
+					width: calc(100% - 30px)
 		> p
 			display: block
 			margin-top: 1em

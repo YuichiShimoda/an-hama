@@ -101,19 +101,27 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="{{ route('passion') }}">
+                            <a class="main-link-txt" href="{{ route('passion') }}">
                                 <p class="en">PASSION</p>
                                 <p class="jp">こだわり</p>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('menu') }}">
+                            <div class="main-link-txt accordion" href="{{ route('menu') }}">
                                 <p class="en">MENU</p>
-                                <p class="jp">メニュー</p>
-                            </a>
+                                <p class="jp">メニュー<img class="nav-arrow" src="{{ asset('image/nav-arrow.svg') }}" alt=""></p>
+                                <div class="sub-nav-box">
+                                    <div class="inside-box">
+                                        <a class="sub-link-txt" href="{{ route('menu') }}">あんかけパスタ</a>
+                                        <a class="sub-link-txt" href="{{ route('pizza') }}">あんかけピザ</a>
+                                        <div class="triangle top"></div>
+                                        <div class="triangle bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li>
-                            <a href="{{ route('info') }}">
+                            <a class="main-link-txt" href="{{ route('info') }}">
                                 <p class="en">INFO</p>
                                 <p class="jp">店舗情報</p>
                             </a>
@@ -154,6 +162,19 @@
                                 </h3>
                             @endif
                             <a class="link" href="{{ route('menu') }}">メニュー</a>
+                            @if(!empty($pressRelease))
+                                <div class="pr-box">
+                                    <div class="sec-change-box">
+                                        <div class="txt-box">
+                                            <p>NEWS</p>
+                                        </div>
+                                        <div class="border-left"></div>
+                                        <div class="border-right"></div>
+                                    </div>
+                                    <div class="pr-tit">{{ $pressRelease['title'] }}</div>
+                                    <div class="pr-body">{!! nl2br(e($pressRelease['body'])) !!}</div>
+                                </div>
+                            @endif
                             <img loading="lazy" class="close_btn weekly-modal-close" src="{{ asset('image/close-btn.svg') }}" alt="close">
                         </div>
                     </div>
@@ -297,7 +318,7 @@
                     @if (Route::currentRouteName() === 'menu')
                         setTimeout(function() {
                             $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-                            console.log("メニューページ表示");
+                            // console.log("メニューページ表示");
                         }, 5000);
                     @else
                         // ローカルストレージを取得
@@ -308,13 +329,13 @@
                                 window.localStorage.removeItem('anHamaWeeklyMenu');
                                 setTimeout(function() {
                                     $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-                                    console.log("再表示｜有効期限が過ぎた");
+                                    // console.log("再表示｜有効期限が過ぎた");
                                 }, 8000);
                             }
                         } else {
                             setTimeout(function() {
                                 $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-                                console.log("初回表示｜ローカルストレージがないため");
+                                // console.log("初回表示｜ローカルストレージがないため");
                             }, 8000);
                         }
                     @endif
@@ -330,6 +351,18 @@
                         // ローカルストレージを保存
                         window.localStorage.setItem('anHamaWeeklyMenu', JSON.stringify(item));
                     }
+                });
+                $('.accordion').on('click', function (e) {
+                    e.stopPropagation();
+                    $(this).toggleClass("is-open");
+                });
+                $(document).on('click', function (e) {
+                    const $target = $(e.target);
+                    console.log($target);
+                    if ($target.closest('.accordion').length || $target.closest('.sub-nav-box').length) {
+                        return;
+                    }
+                    $('.accordion').removeClass('is-open');
                 });
             </script>
 

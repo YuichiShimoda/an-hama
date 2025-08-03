@@ -66,7 +66,6 @@
 
 .content {
   margin-top: 20px;
-  margin-bottom: 100px;
 }
 .content #newsTable, .content #reservationTable {
   width: initial !important;
@@ -87,43 +86,27 @@
   color: #fff;
 }
 .content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1), .content #reservationTable th:nth-child(1), .content #reservationTable td:nth-child(1) {
-  width: 30px !important;
-}
-@media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(1), .content #newsTable td:nth-child(1), .content #reservationTable th:nth-child(1), .content #reservationTable td:nth-child(1) {
-    min-width: 30px !important;
-  }
+  width: 40px !important;
+  min-width: 40px !important;
 }
 .content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2), .content #reservationTable th:nth-child(2), .content #reservationTable td:nth-child(2) {
   width: 90px !important;
-}
-@media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(2), .content #newsTable td:nth-child(2), .content #reservationTable th:nth-child(2), .content #reservationTable td:nth-child(2) {
-    min-width: 90px !important;
-  }
+  min-width: 90px !important;
 }
 .content #newsTable th:nth-child(3), .content #newsTable td:nth-child(3), .content #reservationTable th:nth-child(3), .content #reservationTable td:nth-child(3) {
-  min-width: 200px !important;
-  max-width: 380px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4), .content #reservationTable th:nth-child(4), .content #reservationTable td:nth-child(4) {
-  width: 100px !important;
-}
-@media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(4), .content #newsTable td:nth-child(4), .content #reservationTable th:nth-child(4), .content #reservationTable td:nth-child(4) {
-    min-width: 100px !important;
-  }
+  width: 110px !important;
+  min-width: 110px !important;
 }
 .content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5), .content #reservationTable th:nth-child(5), .content #reservationTable td:nth-child(5) {
-  width: 110px !important;
-}
-@media screen and (max-width: 700px) {
-  .content #newsTable th:nth-child(5), .content #newsTable td:nth-child(5), .content #reservationTable th:nth-child(5), .content #reservationTable td:nth-child(5) {
-    min-width: 110px !important;
-  }
+  width: 80px !important;
+  min-width: 80px !important;
 }
 .content #newsTable th, .content #reservationTable th {
   padding: 0.7em 1em;
@@ -214,19 +197,6 @@
 @media screen and (max-width: 500px) {
   .content #reservationTable_wrapper {
     margin-top: 40px;
-  }
-}
-.content form {
-  padding-bottom: 100px;
-}
-@media screen and (max-width: 1000px) {
-  .content form {
-    padding-bottom: 80px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .content form {
-    padding-bottom: 40px;
   }
 }
 .content form .d-block {

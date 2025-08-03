@@ -342,6 +342,11 @@ return [
             'icon' => 'fas fa-newspaper',
         ],
         [
+            'text' => 'PR編集',
+            'url' => 'admin/press-release',
+            'icon' => 'fas fa-newspaper',
+        ],
+        [
             'text' => 'アナリティクス',
             'url' => 'admin/analytics',
             'icon' => 'fas fa-chart-bar',

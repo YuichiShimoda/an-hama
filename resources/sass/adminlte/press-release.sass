@@ -160,7 +160,7 @@
 	margin-top: 20px
 	// margin-bottom: 100px
 	// -----  index  -----
-	#weeklyMenuTable
+	#pressReleaseTable
 		width: initial !important
 		margin: 0
 		+bp1000
@@ -171,8 +171,8 @@
 			width: 40px !important
 			min-width: 40px !important
 		th:nth-child(2), td:nth-child(2)
-			width: 250px !important
 			min-width: 250px !important
+			max-width: 250px !important
 			white-space: nowrap
 			text-overflow: ellipsis
 			overflow: hidden
@@ -307,11 +307,8 @@
 					color: #882117
 				.input-group
 					&.adminlte-invalid-igroup
-						width: fit-content
-					#menu
-						width: 250px
-						flex: initial
-					#start_day
+						// width: fit-content
+					#start
 						width: 180px
 						flex: initial
 						+bp600
@@ -322,7 +319,7 @@
 							width: 130px
 						+bp420
 							width: 110px
-					#end_day
+					#end
 						width: 180px
 						flex: initial
 						+bp600
@@ -333,6 +330,12 @@
 							width: 130px
 						+bp420
 							width: 110px
+					#body
+						width: 100%
+						flex: initial
+						min-height: 150px
+						+bp600
+							min-height: 200px
 			.form-note-box
 				margin-left: 0.2em
 				margin-top: 0.3em
@@ -399,6 +402,23 @@
 					font-size: 14px
 					letter-spacing: 0.05em
 					color: #555
+			p
+				width: 100%
+				margin-top: 5px
+				margin-bottom: 0
+				font-weight: 400
+				font-size: 14px
+				letter-spacing: 0.05em
+				color: #555
+				&:first-of-type
+					margin-top: 0
+				strong
+					display: inline-block
+					width: 80px
+					font-weight: 500
+					font-size: 14px
+					letter-spacing: 0.05em
+					color: #333
 			.body-box
 				padding: 15px 20px
 				margin-top: 0.3em

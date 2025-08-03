@@ -89,66 +89,66 @@
 .content {
   margin-top: 20px;
 }
-.content #weeklyMenuTable {
+.content #pressReleaseTable {
   width: initial !important;
   margin: 0;
 }
 @media screen and (max-width: 1000px) {
-  .content #weeklyMenuTable {
+  .content #pressReleaseTable {
     margin-bottom: 80px;
   }
 }
 @media screen and (max-width: 600px) {
-  .content #weeklyMenuTable {
+  .content #pressReleaseTable {
     margin-bottom: 40px;
   }
 }
-.content #weeklyMenuTable th:nth-child(1), .content #weeklyMenuTable td:nth-child(1) {
+.content #pressReleaseTable th:nth-child(1), .content #pressReleaseTable td:nth-child(1) {
   width: 40px !important;
   min-width: 40px !important;
 }
-.content #weeklyMenuTable th:nth-child(2), .content #weeklyMenuTable td:nth-child(2) {
-  width: 250px !important;
+.content #pressReleaseTable th:nth-child(2), .content #pressReleaseTable td:nth-child(2) {
   min-width: 250px !important;
+  max-width: 250px !important;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.content #weeklyMenuTable th:nth-child(3), .content #weeklyMenuTable td:nth-child(3) {
+.content #pressReleaseTable th:nth-child(3), .content #pressReleaseTable td:nth-child(3) {
   width: 110px !important;
   min-width: 110px !important;
 }
-.content #weeklyMenuTable th:nth-child(4), .content #weeklyMenuTable td:nth-child(4) {
+.content #pressReleaseTable th:nth-child(4), .content #pressReleaseTable td:nth-child(4) {
   width: 110px !important;
   min-width: 110px !important;
 }
-.content #weeklyMenuTable th:nth-child(5), .content #weeklyMenuTable td:nth-child(5) {
+.content #pressReleaseTable th:nth-child(5), .content #pressReleaseTable td:nth-child(5) {
   width: 80px !important;
   min-width: 80px !important;
 }
-.content #weeklyMenuTable th {
+.content #pressReleaseTable th {
   padding: 0.7em 1em;
   font-size: 14px;
   color: #555;
 }
-.content #weeklyMenuTable th:first-of-type {
+.content #pressReleaseTable th:first-of-type {
   font-size: 16px;
 }
-.content #weeklyMenuTable td {
+.content #pressReleaseTable td {
   padding: 0.5em 1em;
   font-size: 13px;
   vertical-align: initial;
   color: #555;
 }
-.content #weeklyMenuTable td:first-of-type {
+.content #pressReleaseTable td:first-of-type {
   font-size: 15px;
 }
-.content #weeklyMenuTable td:last-of-type {
+.content #pressReleaseTable td:last-of-type {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.content #weeklyMenuTable td:last-of-type a {
+.content #pressReleaseTable td:last-of-type a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,26 +157,26 @@
   padding: 0;
 }
 @media screen and (max-width: 700px) {
-  .content #weeklyMenuTable td:last-of-type a {
+  .content #pressReleaseTable td:last-of-type a {
     width: 25px;
   }
 }
-.content #weeklyMenuTable td:last-of-type a:nth-of-type(1) i {
+.content #pressReleaseTable td:last-of-type a:nth-of-type(1) i {
   font-size: 13px;
 }
-.content #weeklyMenuTable td:last-of-type a:nth-of-type(2) {
+.content #pressReleaseTable td:last-of-type a:nth-of-type(2) {
   margin-left: 0.5em;
 }
 @media screen and (max-width: 700px) {
-  .content #weeklyMenuTable td:last-of-type a:nth-of-type(2) {
+  .content #pressReleaseTable td:last-of-type a:nth-of-type(2) {
     margin-left: 0.3em;
   }
 }
-.content #weeklyMenuTable td:last-of-type a:nth-of-type(2) i {
+.content #pressReleaseTable td:last-of-type a:nth-of-type(2) i {
   font-size: 14px;
   color: #444;
 }
-.content #weeklyMenuTable td:last-of-type form {
+.content #pressReleaseTable td:last-of-type form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,22 +186,22 @@
   margin-left: 0.5em;
 }
 @media screen and (max-width: 700px) {
-  .content #weeklyMenuTable td:last-of-type form {
+  .content #pressReleaseTable td:last-of-type form {
     width: 25px;
     margin-left: 0.3em;
   }
 }
-.content #weeklyMenuTable td:last-of-type form button {
+.content #pressReleaseTable td:last-of-type form button {
   display: block;
   width: 100%;
   height: 100%;
 }
 @media screen and (max-width: 700px) {
-  .content #weeklyMenuTable td:last-of-type form button {
+  .content #pressReleaseTable td:last-of-type form button {
     padding: 0;
   }
 }
-.content #weeklyMenuTable td:last-of-type form button i {
+.content #pressReleaseTable td:last-of-type form button i {
   font-size: 12px;
 }
 .content form .d-block {
@@ -268,59 +268,62 @@
   letter-spacing: 0.05em;
   color: #882117;
 }
-.content form .d-block .form-group .input-group.adminlte-invalid-igroup {
-  width: fit-content;
-}
-.content form .d-block .form-group .input-group #menu {
-  width: 250px;
-  flex: initial;
-}
-.content form .d-block .form-group .input-group #start_day {
+.content form .d-block .form-group .input-group #start {
   width: 180px;
   flex: initial;
 }
 @media screen and (max-width: 600px) {
-  .content form .d-block .form-group .input-group #start_day {
+  .content form .d-block .form-group .input-group #start {
     width: 150px;
   }
 }
 @media screen and (max-width: 500px) {
-  .content form .d-block .form-group .input-group #start_day {
+  .content form .d-block .form-group .input-group #start {
     width: 140px;
   }
 }
 @media screen and (max-width: 450px) {
-  .content form .d-block .form-group .input-group #start_day {
+  .content form .d-block .form-group .input-group #start {
     width: 130px;
   }
 }
 @media screen and (max-width: 420px) {
-  .content form .d-block .form-group .input-group #start_day {
+  .content form .d-block .form-group .input-group #start {
     width: 110px;
   }
 }
-.content form .d-block .form-group .input-group #end_day {
+.content form .d-block .form-group .input-group #end {
   width: 180px;
   flex: initial;
 }
 @media screen and (max-width: 600px) {
-  .content form .d-block .form-group .input-group #end_day {
+  .content form .d-block .form-group .input-group #end {
     width: 150px;
   }
 }
 @media screen and (max-width: 500px) {
-  .content form .d-block .form-group .input-group #end_day {
+  .content form .d-block .form-group .input-group #end {
     width: 140px;
   }
 }
 @media screen and (max-width: 450px) {
-  .content form .d-block .form-group .input-group #end_day {
+  .content form .d-block .form-group .input-group #end {
     width: 130px;
   }
 }
 @media screen and (max-width: 420px) {
-  .content form .d-block .form-group .input-group #end_day {
+  .content form .d-block .form-group .input-group #end {
     width: 110px;
+  }
+}
+.content form .d-block .form-group .input-group #body {
+  width: 100%;
+  flex: initial;
+  min-height: 150px;
+}
+@media screen and (max-width: 600px) {
+  .content form .d-block .form-group .input-group #body {
+    min-height: 200px;
   }
 }
 .content form .d-block .form-note-box {
@@ -409,6 +412,26 @@
   font-size: 14px;
   letter-spacing: 0.05em;
   color: #555;
+}
+.content .card .card-body p {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+.content .card .card-body p:first-of-type {
+  margin-top: 0;
+}
+.content .card .card-body p strong {
+  display: inline-block;
+  width: 80px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: #333;
 }
 .content .card .card-body .body-box {
   padding: 15px 20px;

@@ -78,6 +78,15 @@
 
 
 div.wrapper
+	.main-sidebar
+		max-height: 100dvh
+	.content-wrapper
+		padding-bottom: 80px
+		+bp1000
+			padding-bottom: 60px
+		+bp600
+			padding-bottom: 40px
+			min-height: calc(100dvh - 56px) !important
 	.preloader
 		img
 			width: 350px

@@ -12,6 +12,7 @@ export default defineConfig({
                 'resources/js/info.js',
                 'resources/js/magnetic.js',
                 'resources/js/menu.js',
+                'resources/js/pizza.js',
                 'resources/js/mouse.js',
                 'resources/js/myscript.js',
                 'resources/js/passion.js',
