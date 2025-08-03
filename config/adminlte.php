@@ -337,13 +337,13 @@ return [
             'icon' => 'fas fa-concierge-bell',
         ],
         [
-            'text' => 'お知らせ編集',
-            'url' => 'admin/news',
-            'icon' => 'fas fa-newspaper',
-        ],
-        [
             'text' => 'PR編集',
             'url' => 'admin/press-release',
+            'icon' => 'fas fa-bullhorn',
+        ],
+        [
+            'text' => 'お知らせ編集',
+            'url' => 'admin/news',
             'icon' => 'fas fa-newspaper',
         ],
         [
