@@ -169,7 +169,7 @@
     <section id="back-shot">
         <img src="{{ asset('image/top/back-shot.webp') }}" alt="">
     </section>
-    <section id="news">
+    <section id="news" data-total="{{ count($news) }}">
         <div class="content-box">
             <div class="top-box click-canvas">
                 <div class="tit-box">
@@ -177,8 +177,8 @@
                     <p class="jp">お知らせ</p>
                 </div>
                 <div class="news-box">
-                    @foreach($news as $news_ele)
-                        <div class="news-ele not-click-canvas">
+                    @foreach($news as $index => $news_ele)
+                        <div class="news-ele not-click-canvas" data-index="{{ $index }}" style="{{ $index >= 3 ? 'display:none;' : '' }}">
                             <div class="main-box">
                                 <div class="cat-box">
                                     <p>Click</p>
@@ -191,13 +191,14 @@
                     @endforeach
                 </div>
             </div>
+            <div class="pagination-box">
+                <button class="prev-btn"><p>&laquo;</p></button>
+                <div class="page-numbers"></div>
+                <button class="next-btn"><p>&raquo;</p></button>
+            </div>
             <div class="bottom-box click-canvas">
                 @foreach($news as $index => $news_ele)
-                    @if($index == 0)
-                        <div class="detail-ele">
-                    @else
-                        <div class="detail-ele" style="display:none;">
-                    @endif
+                    <div class="detail-ele" data-index="{{ $index }}" style="{{ $index >= 3 ? 'display:none;' : '' }}">
                         @php
                             $text = explode("\n", $news_ele->body);
                         @endphp

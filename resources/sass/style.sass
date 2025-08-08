@@ -852,17 +852,17 @@ body::-webkit-scrollbar
 						cursor: pointer
 						z-index: 2
 						position: relative
-					.news-ele:nth-of-type(1)
+					.news-ele:nth-of-type(3n+1)
 						.main-box
 							.cat-box
 								transform: scaleX(1.0)
 								transition-delay: 0.6s
-					.news-ele:nth-of-type(2)
+					.news-ele:nth-of-type(3n+2)
 						.main-box
 							.cat-box
 								transform: scaleX(1.0)
 								transition-delay: 0.7s
-					.news-ele:nth-of-type(3)
+					.news-ele:nth-of-type(3n+3)
 						.main-box
 							.cat-box
 								transform: scaleX(1.0)
@@ -960,18 +960,18 @@ body::-webkit-scrollbar
 						margin-top: 12px
 					+bp850
 						width: calc(100% - 60px)
-					&:nth-of-type(1)
+					&:nth-of-type(3n+1)
 						margin-top: 0
 						.cat-box
 							background-color: #006134
 							&::selection
 								background: #014425
-					&:nth-of-type(2)
+					&:nth-of-type(3n+2)
 						.cat-box
 							background-color: #fff
 							p
 								color: #555 !important
-					&:nth-of-type(3)
+					&:nth-of-type(3n+3)
 						.cat-box
 							background-color: #B92928
 							&::selection
@@ -1054,6 +1054,64 @@ body::-webkit-scrollbar
 						opacity: 0
 						filter: blur(24px)
 						transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97)
+		.pagination-box
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			margin: 15px auto 20px
+			.prev-btn, .next-btn
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 30px
+				aspect-ratio: 1 / 1
+				margin: 0 4px
+				border: solid 0.5px #ccc
+				border-radius: 3px
+				background-color: #fff
+				cursor: pointer
+				transition: all 0.3s ease-in-out
+				p
+					display: block
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+			.page-numbers
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				margin: 0 auto
+				.page-btn
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 30px
+					aspect-ratio: 1 / 1
+					margin: 0 4px
+					border: solid 0.5px #ccc
+					border-radius: 3px
+					background-color: #fff
+					cursor: pointer
+					transition: all 0.3s ease-in-out
+					&.active
+						border: 0
+						background-color: #F2E9D8
+					&:hover
+						border: 0
+						background-color: #F2E9D8
+					p
+						display: block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
 		.bottom-box
 			display: block
 			width: 1000px

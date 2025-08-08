@@ -618,21 +618,112 @@ $("#google-map").mouseleave(function() {
 
 
 
-$("#news .news-box .news-ele").click(function() {
-	var index = $(this).index();
-	$("#news .bottom-box .detail-ele").hide();
-	$('#news .bottom-box .detail-ele').eq(index).show();
-});
-$(window).on('load', function() {
-	$('.news-ele:first').addClass('clicked');
-});
-$('.news-ele').on('click', function() {
-	$('.news-ele').removeClass('clicked');
-	$(this).addClass('clicked');
-});
+// $("#news .news-box .news-ele").click(function() {
+// 	var index = $(this).index();
+// 	$("#news .bottom-box .detail-ele").hide();
+// 	$('#news .bottom-box .detail-ele').eq(index).show();
+// });
+// $(window).on('load', function() {
+// 	$('.news-ele:first').addClass('clicked');
+// });
+// $('.news-ele').on('click', function() {
+// 	$('.news-ele').removeClass('clicked');
+// 	$(this).addClass('clicked');
+// });
 
+$(function () {
+	const itemsPerPage = 3;
+	const totalItems = parseInt($('#news').data('total'));
+	const totalPages = Math.ceil(totalItems / itemsPerPage);
+	let currentPage = 1;
 
+	function showPage(page) {
+		currentPage = page;
+		const start = (page - 1) * itemsPerPage;
+		const end = start + itemsPerPage;
 
+		$('.news-ele, .detail-ele').hide().removeClass('clicked');
+		$('.news-ele').filter(function () {
+			const i = $(this).data('index');
+			return i >= start && i < end;
+		}).show();
+
+		$('.detail-ele').filter(function () {
+			const i = $(this).data('index');
+			return i >= start && i < end;
+		}).hide();
+
+		const $firstNews = $('.news-ele:visible').first();
+		$firstNews.addClass('clicked');
+		const index = $firstNews.data('index');
+		$('.detail-ele[data-index="' + index + '"]').show();
+
+		updatePagination();
+	}
+
+	function updatePagination() {
+		const maxVisible = 5;
+		let start = Math.max(currentPage - Math.floor(maxVisible / 2), 1);
+		let end = start + maxVisible - 1;
+
+		if (end > totalPages) {
+			end = totalPages;
+			start = Math.max(end - maxVisible + 1, 1);
+		}
+
+		const $container = $('.page-numbers');
+		$container.empty();
+
+		for (let i = start; i <= end; i++) {
+			const btn = $('<button>')
+				.addClass('page-btn')
+				.text(i)
+				.attr('data-page', i);
+			if (i === currentPage) {
+				btn.addClass('active');
+			}
+			$container.append(btn);
+		}
+	}
+
+	// ページ切り替えボタン処理
+	$('.page-numbers').on('click', '.page-btn', function () {
+		const page = parseInt($(this).data('page'));
+		showPage(page);
+		// アクティブボタン切り替え
+		// $('.page-btn').removeClass('active');
+		// $(this).addClass('active');
+	});
+
+	// ニュースクリックで詳細切り替え
+	$('#news .news-box .news-ele').on('click', function () {
+		const index = $(this).data('index');
+
+		// 表示切り替え
+		$('.news-ele').removeClass('clicked');
+		$(this).addClass('clicked');
+		$('.detail-ele').hide();
+		$('.detail-ele[data-index="' + index + '"]').show();
+	});
+
+	// 初期表示：1ページ目
+	showPage(1);
+	$('.page-btn[data-page="1"]').addClass('active');
+
+	// 前へ
+	$('.prev-btn').on('click', function () {
+		if (currentPage > 1) {
+			showPage(currentPage - 1);
+		}
+	});
+
+	// 次へ
+	$('.next-btn').on('click', function () {
+		if (currentPage < totalPages) {
+			showPage(currentPage + 1);
+		}
+	});
+});
 
 
 

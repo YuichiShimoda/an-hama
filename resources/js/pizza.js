@@ -3,6 +3,7 @@ $(window).on('load', function() {
 	$('#loader-bg').addClass("is-show");
 	var ref = document.referrer;
 	// $('#mv_sp')[0].pause();
+	$('.pasta-icon').attr('src', window.location.origin + '/image/pizza-icon.svg');
 	if (ref.indexOf('localhosaat') == -1) {
 		$('#wrap').css('visibility', 'hidden');
 		$('#loader-bg').delay(700).fadeOut(500);

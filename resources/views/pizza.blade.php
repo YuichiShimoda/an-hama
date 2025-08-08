@@ -31,9 +31,6 @@
 
 
 @section('content')
-    <div class="in-progress">
-        <p>ピザページ作成中</p>
-    </div>
     <section id="first-view">
         <h1>メニュー</h1>
         <div class="desc-box">
@@ -90,7 +87,7 @@
             <div class="img-box">
                 <div class="base-box click-canvas">
                     <img class="dish" src="{{ asset('image/pizza/pizza1.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/menu1-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/menu/pizza1-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -121,50 +118,6 @@
             <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
             <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
         </div>
-        <div class="bottom-content-box">
-            <div class="right-box">
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">スモール</p>
-                        <p class="gram">200g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,150</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">レギュラー</p>
-                        <p class="gram">300g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,200</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">ラージ</p>
-                        <p class="gram">400g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,300</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">メガ</p>
-                        <p class="gram">600g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,400</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section id="miranezu">
@@ -172,7 +125,7 @@
             <div class="img-box">
                 <div class="base-box click-canvas">
                     <img class="dish" src="{{ asset('image/pizza/pizza2.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/menu2-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/menu/pizza2-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -197,50 +150,6 @@
             <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
             <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
         </div>
-        <div class="bottom-content-box">
-            <div class="right-box">
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">スモール</p>
-                        <p class="gram">200g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,150</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">レギュラー</p>
-                        <p class="gram">300g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,200</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">ラージ</p>
-                        <p class="gram">400g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,300</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">メガ</p>
-                        <p class="gram">600g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,400</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section id="mila-egg">
@@ -248,7 +157,7 @@
             <div class="img-box">
                 <div class="base-box click-canvas">
                     <img class="dish" src="{{ asset('image/pizza/pizza3.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/menu3-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/menu/pizza3-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -276,50 +185,6 @@
             <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
             <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
         </div>
-        <div class="bottom-content-box">
-            <div class="right-box">
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">スモール</p>
-                        <p class="gram">200g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,150</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">レギュラー</p>
-                        <p class="gram">300g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,200</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">ラージ</p>
-                        <p class="gram">400g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,300</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">メガ</p>
-                        <p class="gram">600g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,400</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section id="spinach">
@@ -327,7 +192,7 @@
             <div class="img-box">
                 <div class="base-box click-canvas">
                     <img class="dish" src="{{ asset('image/pizza/pizza4.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/menu4-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/menu/pizza4-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -358,50 +223,6 @@
             <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
             <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
         </div>
-        <div class="bottom-content-box">
-            <div class="right-box">
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">スモール</p>
-                        <p class="gram">200g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,150</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">レギュラー</p>
-                        <p class="gram">300g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,200</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">ラージ</p>
-                        <p class="gram">400g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,300</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">メガ</p>
-                        <p class="gram">600g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,400</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
 
@@ -410,7 +231,7 @@
             <div class="img-box">
                 <div class="base-box click-canvas">
                     <img class="dish" src="{{ asset('image/pizza/pizza5.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/menu5-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/menu/pizza5-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -438,50 +259,6 @@
             <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
             <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
             <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="">
-        </div>
-        <div class="bottom-content-box">
-            <div class="right-box">
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">スモール</p>
-                        <p class="gram">200g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,450</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">レギュラー</p>
-                        <p class="gram">300g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,500</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">ラージ</p>
-                        <p class="gram">400g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,600</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-                <div class="ele">
-                    <div class="size-box">
-                        <p class="desc">メガ</p>
-                        <p class="gram">600g</p>
-                    </div>
-                    <div class="price-box">
-                        <p class="desc">1,700</p>
-                        <p class="yen">円</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 

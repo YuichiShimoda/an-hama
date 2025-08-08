@@ -1003,15 +1003,15 @@ body::-webkit-scrollbar {
   z-index: 2;
   position: relative;
 }
-#news.is-show .content-box .top-box .news-box .news-ele:nth-of-type(1) .main-box .cat-box {
+#news.is-show .content-box .top-box .news-box .news-ele:nth-of-type(3n+1) .main-box .cat-box {
   transform: scaleX(1);
   transition-delay: 0.6s;
 }
-#news.is-show .content-box .top-box .news-box .news-ele:nth-of-type(2) .main-box .cat-box {
+#news.is-show .content-box .top-box .news-box .news-ele:nth-of-type(3n+2) .main-box .cat-box {
   transform: scaleX(1);
   transition-delay: 0.7s;
 }
-#news.is-show .content-box .top-box .news-box .news-ele:nth-of-type(3) .main-box .cat-box {
+#news.is-show .content-box .top-box .news-box .news-ele:nth-of-type(3n+3) .main-box .cat-box {
   transform: scaleX(1);
   transition-delay: 0.8s;
 }
@@ -1150,25 +1150,25 @@ body::-webkit-scrollbar {
     width: calc(100% - 60px);
   }
 }
-#news .content-box .top-box .news-box .news-ele:nth-of-type(1) {
+#news .content-box .top-box .news-box .news-ele:nth-of-type(3n+1) {
   margin-top: 0;
 }
-#news .content-box .top-box .news-box .news-ele:nth-of-type(1) .cat-box {
+#news .content-box .top-box .news-box .news-ele:nth-of-type(3n+1) .cat-box {
   background-color: #006134;
 }
-#news .content-box .top-box .news-box .news-ele:nth-of-type(1) .cat-box::selection {
+#news .content-box .top-box .news-box .news-ele:nth-of-type(3n+1) .cat-box::selection {
   background: #014425;
 }
-#news .content-box .top-box .news-box .news-ele:nth-of-type(2) .cat-box {
+#news .content-box .top-box .news-box .news-ele:nth-of-type(3n+2) .cat-box {
   background-color: #fff;
 }
-#news .content-box .top-box .news-box .news-ele:nth-of-type(2) .cat-box p {
+#news .content-box .top-box .news-box .news-ele:nth-of-type(3n+2) .cat-box p {
   color: #555 !important;
 }
-#news .content-box .top-box .news-box .news-ele:nth-of-type(3) .cat-box {
+#news .content-box .top-box .news-box .news-ele:nth-of-type(3n+3) .cat-box {
   background-color: #B92928;
 }
-#news .content-box .top-box .news-box .news-ele:nth-of-type(3) .cat-box::selection {
+#news .content-box .top-box .news-box .news-ele:nth-of-type(3n+3) .cat-box::selection {
   background: #9e1413;
 }
 #news .content-box .top-box .news-box .news-ele:hover .main-box .cat-box p:nth-child(1) {
@@ -1259,6 +1259,72 @@ body::-webkit-scrollbar {
   opacity: 0;
   filter: blur(24px);
   transition: opacity 1.5s cubic-bezier(0.67, 0, 0.57, 0.97), filter 1.4s cubic-bezier(0.35, 0.03, 0, 0.97);
+}
+#news .content-box .pagination-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 15px auto 20px;
+}
+#news .content-box .pagination-box .prev-btn, #news .content-box .pagination-box .next-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  aspect-ratio: 1/1;
+  margin: 0 4px;
+  border: solid 0.5px #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#news .content-box .pagination-box .prev-btn p, #news .content-box .pagination-box .next-btn p {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+#news .content-box .pagination-box .page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+#news .content-box .pagination-box .page-numbers .page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  aspect-ratio: 1/1;
+  margin: 0 4px;
+  border: solid 0.5px #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#news .content-box .pagination-box .page-numbers .page-btn.active {
+  border: 0;
+  background-color: #F2E9D8;
+}
+#news .content-box .pagination-box .page-numbers .page-btn:hover {
+  border: 0;
+  background-color: #F2E9D8;
+}
+#news .content-box .pagination-box .page-numbers .page-btn p {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  color: #555;
 }
 #news .content-box .bottom-box {
   display: block;

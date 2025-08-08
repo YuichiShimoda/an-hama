@@ -37,7 +37,7 @@ class FrontController extends Controller
             $newNews->save();
             $ele->delete();
         }
-        $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->limit(3)->get();
+        $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
         // $news = News::orderBy('id', 'desc')->limit(3)->get();
         return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu]);
     }
