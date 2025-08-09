@@ -1306,6 +1306,12 @@ body::-webkit-scrollbar {
   border: solid 0.5px #ccc;
   border-radius: 3px;
   background-color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  color: #555;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
