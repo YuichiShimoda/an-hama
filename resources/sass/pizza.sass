@@ -649,6 +649,21 @@ body::-webkit-scrollbar
 
 #mirakan
 	margin: 20px auto 0
+#mirakan
+	.left-circle
+		background-color: #ee3848
+#miranezu
+	.right-circle
+		background-color: #e9832d
+#mila-egg
+	.left-circle
+		background-color: #f8e446
+#spinach
+	.right-circle
+		background-color: #539827
+#hama-chan
+	.left-circle
+		background-color: #a52e15
 #mirakan, #miranezu, #mila-egg, #spinach, #hama-chan
 	display: block
 	width: 100%
@@ -668,8 +683,12 @@ body::-webkit-scrollbar
 		+bp1000
 			width: 420px
 		&.is-show
+			.left-circle
+				animation: left-roll-circle 3.0s ease-in-out forwards
+			.right-circle
+				animation: right-roll-circle 3.0s ease-in-out forwards
 			.dish
-				animation: dish-bounce-in 2.0s forwards
+				animation: clip-path-circle 3.0s 3.0s ease-in-out forwards
 			.bg
 				animation: bg-bounce-in 4.0s forwards
 			.fork
@@ -686,18 +705,48 @@ body::-webkit-scrollbar
 				width: 100%
 				z-index: 2
 				position: relative
-				.dish
+				.dish-box
 					display: block
 					width: 100%
 					min-height: 605px
 					transform-origin: center
-					transform: scale(0.8)
+					// transform: scale(0.8)
 					z-index: 2
 					position: relative
 					+bp1400
 						min-height: 485px
 					+bp1000
 						min-height: 363px
+					.left-circle
+						position: absolute
+						left: 50%
+						display: block
+						width: 100px
+						height: 100px
+						border-radius: 50%
+						transform-origin: center
+						opacity: 0.0
+						+bp1000
+							width: 75px
+							height: 75px
+					.right-circle
+						position: absolute
+						right: 50%
+						display: block
+						width: 100px
+						height: 100px
+						border-radius: 50%
+						transform-origin: center
+						opacity: 0.0
+						+bp1000
+							width: 75px
+							height: 75px
+					.dish
+						display: block
+						width: 100%
+						height: 100%
+						clip-path: circle(0% at 50% 50%)
+						transform-origin: center
 				.bg
 					position: absolute
 					top: 0
@@ -1166,17 +1215,17 @@ body::-webkit-scrollbar
 			.ingredient-box
 				opacity: 1.0
 				&:nth-of-type(1)
-					top: 50%
+					top: 45%
 					left: 26%
 					transform: translate(-50%, -50%) rotate(-15deg)
 					+bp1000
 						left: 19%
 				&:nth-of-type(2)
-					top: 43%
+					top: 38%
 					left: 45%
 					transform: translate(-50%, -50%) rotate(-2deg)
 				&:nth-of-type(3)
-					top: 44%
+					top: 37%
 					left: 67%
 					transform: translate(-50%, -50%) rotate(25deg)
 					background-color: #9c6a1a
@@ -1191,7 +1240,7 @@ body::-webkit-scrollbar
 						top: 64%
 						left: 35%
 				&:nth-of-type(5)
-					top: 60%
+					top: 55%
 					left: 65%
 					transform: translate(-50%, -50%) rotate(-5deg)
 					background-color: #3D7E00
@@ -1243,17 +1292,17 @@ body::-webkit-scrollbar
 			.ingredient-box
 				opacity: 1.0
 				&:nth-of-type(1)
-					top: 57%
+					top: 46%
 					left: 32%
 					transform: translate(-50%, -50%) rotate(15deg)
 					+bp1000
 						left: 24%
 				&:nth-of-type(2)
-					top: 51%
+					top: 40%
 					left: 50%
 					transform: translate(-50%, -50%) rotate(-7deg)
 				&:nth-of-type(3)
-					top: 56%
+					top: 45%
 					left: 69%
 					transform: translate(-50%, -50%) rotate(9deg)
 					+bp1000
@@ -1307,17 +1356,17 @@ body::-webkit-scrollbar
 				opacity: 1.0
 				&:nth-of-type(1)
 					top: 25%
-					left: 65%
+					left: 39%
 					transform: translate(-50%, -50%) rotate(-6deg)
 					+bp1000
 						top: 24%
 				&:nth-of-type(2)
-					top: 38%
-					left: 73%
+					top: 35%
+					left: 65%
 					transform: translate(-50%, -50%) rotate(-2deg)
 				&:nth-of-type(3)
-					top: 50%
-					left: 68%
+					top: 44%
+					left: 40%
 					transform: translate(-50%, -50%) rotate(20deg)
 					background-color: #FFE100
 					+bp1000
@@ -1325,8 +1374,8 @@ body::-webkit-scrollbar
 					p
 						color: #555
 				&:nth-of-type(4)
-					top: 62%
-					left: 58%
+					top: 55%
+					left: 60%
 					transform: translate(-50%, -50%) rotate(-7deg)
 					background-color: #FFE100
 					+bp1000
@@ -1381,13 +1430,13 @@ body::-webkit-scrollbar
 			.ingredient-box
 				opacity: 1.0
 				&:nth-of-type(1)
-					top: 50%
-					left: 26%
+					top: 45%
+					left: 30%
 					transform: translate(-50%, -50%) rotate(-15deg)
 					+bp1000
 						left: 19%
 				&:nth-of-type(2)
-					top: 43%
+					top: 33%
 					left: 45%
 					transform: translate(-50%, -50%) rotate(-2deg)
 					+bp1000
@@ -1402,7 +1451,7 @@ body::-webkit-scrollbar
 						left: 74%
 				&:nth-of-type(4)
 					top: 55%
-					left: 45%
+					left: 52%
 					transform: translate(-50%, -50%) rotate(7deg)
 					background-color: #FFE100
 					+bp1000
@@ -1493,14 +1542,14 @@ body::-webkit-scrollbar
 			.ingredient-box
 				opacity: 1.0
 				&:nth-of-type(1)
-					top: 50%
-					left: 40%
+					top: 42%
+					left: 33%
 					transform: translate(-50%, -50%) rotate(-8deg)
 					+bp1000
 						left: 27%
 				&:nth-of-type(2)
 					top: 48%
-					left: 58%
+					left: 52%
 					transform: translate(-50%, -50%) rotate(10deg)
 					+bp1000
 						left: 55%
@@ -1509,7 +1558,7 @@ body::-webkit-scrollbar
 						color: #555
 				&:nth-of-type(3)
 					top: 44%
-					left: 72%
+					left: 70%
 					transform: translate(-50%, -50%) rotate(20deg)
 					+bp1000
 						left: 78%
@@ -1534,21 +1583,94 @@ body::-webkit-scrollbar
 		transform: scale(0.95)
 	80%, 100%
 		transform: scale(1.0)
+@keyframes left-roll-circle
+	0%
+		left: -30%
+		top: 75%
+		transform: translate(-50%, -50%) rotate(0deg)
+		opacity: 0.0
+	5%
+		left: -30%
+		top: 75%
+		transform: translate(-50%, -50%) rotate(0deg)
+		opacity: 1.0
+	35%
+		left: 15%
+		top: 75%
+		transform: translate(-50%, -50%) rotate(168deg)
+		opacity: 1.0
+	55%
+		left: 50%
+		top: 75%
+		transform: translate(-50%, -50%) rotate(0deg)
+		opacity: 1.0
+	75%
+		left: 50%
+		top: 75%
+		transform: translate(-50%, -50%) rotate(0deg)
+		opacity: 1.0
+	100%
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%) rotate(0deg)
+		opacity: 1.0
+@keyframes right-roll-circle
+	0%
+		right: -30%
+		top: 75%
+		transform: translate(50%, -50%) rotate(0deg)
+		opacity: 0.0
+	5%
+		right: -30%
+		top: 75%
+		transform: translate(50%, -50%) rotate(0deg)
+		opacity: 1.0
+	35%
+		right: 15%
+		top: 75%
+		transform: translate(50%, -50%) rotate(168deg)
+		opacity: 1.0
+	55%
+		right: 50%
+		top: 75%
+		transform: translate(50%, -50%) rotate(0deg)
+		opacity: 1.0
+	75%
+		right: 50%
+		top: 75%
+		transform: translate(50%, -50%) rotate(0deg)
+		opacity: 1.0
+	100%
+		right: 50%
+		top: 50%
+		transform: translate(50%, -50%) rotate(0deg)
+		opacity: 1.0
+@keyframes clip-path-circle
+	0%
+		clip-path: circle(0% at 50% 50%)
+	50%
+		clip-path: circle(65% at 50% 50%)
+	60%
+		clip-path: circle(65% at 50% 50%)
+	70%
+		clip-path: circle(40% at 50% 50%)
+	100%
+		clip-path: circle(65% at 50% 50%)
 @keyframes bg-bounce-in
 	0%
-		transform: scale(0.4) translate(0)
+		transform: scale(0.4)
 		filter: unset
 		opacity: 1.0
 	30%
-		transform: scale(1.2) translate(0)
+		transform: scale(1.0)
 	33%
-		transform: scale(0.4) translate(25%, -30%)
+		transform: scale(0.4)
 	45%
-		transform: scale(0.8) translate(30%, -25%)
+		transform: scale(0.8)
 		filter: unset
 		opacity: 1.0
 	80%, 100%
-		transform: scale(0.8) translate(30%, -25%)
+		transform: scale(0.8)
 		filter: brightness(1.5)
 		opacity: 0.0
 
@@ -2325,10 +2447,10 @@ body::-webkit-scrollbar
 #announcement
 	display: block
 	width: 100%
-	margin: 120px auto 0
+	margin: 80px auto 0
 	position: relative
 	+bp1000
-		margin: 100px auto 0
+		margin: 70px auto 0
 	// .content-box
 	// 	display: flex
 	// 	justify-content: center

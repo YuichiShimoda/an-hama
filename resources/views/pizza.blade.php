@@ -38,6 +38,7 @@
             <p class="base sp">“あんハマ”のあんかけピザは<br>定番系と創作系</p>
             <p class="note">現代的な創作系は、随時追加される予定です。</p>
             <p class="note">こちらに掲載のメニューと店舗でのメニューが多少異なる場合があります。</p>
+            <p class="note">お持ち帰り手数料 +150円 でお持ち帰りもご利用いただけます。</p>
         </div>
         <div class="standard-box">
             <div class="category-box">
@@ -55,7 +56,7 @@
             <div class="option-box">
                 <div class="cat-box">
                     <p>オプション　　：</p>
-                    <p>オリーブオイル　追加ソース　粉チーズ</p>
+                    <p>追加オリーブオイル　追加ソース　チーズ増量</p>
                 </div>
                 <div class="cat-box">
                     <p>フリー調味料　：</p>
@@ -86,8 +87,6 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/pizza/pizza1.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/pizza1-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -103,6 +102,11 @@
                     <div class="ingredient-box">
                         <p>ピーマン</p>
                     </div>
+                    <div class="dish-box">
+                        <div class="left-circle"></div>
+                        <img class="dish" src="{{ asset('image/pizza/pizza1.webp') }}" alt="">
+                    </div>
+                    <img class="bg" src="{{ asset('image/pizza/pizza1-paint.svg') }}" alt="">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -111,12 +115,12 @@
                 </div>
                 <div class="copy-box">
                     <h3>ミラカン</h3>
-                    <p>1,200<span class="yen">円</span></p>
+                    <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/menu/menu1-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza1-name.svg') }}" alt="">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
         </div>
     </section>
 
@@ -124,8 +128,6 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/pizza/pizza2.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/pizza2-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -135,6 +137,11 @@
                     <div class="ingredient-box">
                         <p>肉そぼろ</p>
                     </div>
+                    <div class="dish-box">
+                        <div class="right-circle"></div>
+                        <img class="dish" src="{{ asset('image/pizza/pizza2.webp') }}" alt="">
+                    </div>
+                    <img class="bg" src="{{ asset('image/pizza/pizza2-paint.svg') }}" alt="">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -143,12 +150,12 @@
                 </div>
                 <div class="copy-box">
                     <h3>ミラネーズ</h3>
-                    <p>1,200<span class="yen">円</span></p>
+                    <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/menu/menu2-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza2-name.svg') }}" alt="">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
         </div>
     </section>
 
@@ -156,8 +163,6 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/pizza/pizza3.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/pizza3-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -170,6 +175,11 @@
                     <div class="ingredient-box">
                         <p>卵そぼろ</p>
                     </div>
+                    <div class="dish-box">
+                        <div class="left-circle"></div>
+                        <img class="dish" src="{{ asset('image/pizza/pizza3.webp') }}" alt="">
+                    </div>
+                    <img class="bg" src="{{ asset('image/pizza/pizza3-paint.svg') }}" alt="">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -178,12 +188,12 @@
                 </div>
                 <div class="copy-box">
                     <h3>ミラエッグ</h3>
-                    <p>1,200<span class="yen">円</span></p>
+                    <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/menu/menu3-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza3-name.svg') }}" alt="">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
         </div>
     </section>
 
@@ -191,8 +201,6 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/pizza/pizza4.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/pizza4-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -205,9 +213,14 @@
                     <div class="ingredient-box">
                         <p>コーン</p>
                     </div>
-                    <div class="ingredient-box">
+<!--                     <div class="ingredient-box">
                         <p>豆苗</p>
+                    </div> -->
+                    <div class="dish-box">
+                        <div class="right-circle"></div>
+                        <img class="dish" src="{{ asset('image/pizza/pizza4.webp') }}" alt="">
                     </div>
+                    <img class="bg" src="{{ asset('image/pizza/pizza4-paint.svg') }}" alt="">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -216,12 +229,12 @@
                 </div>
                 <div class="copy-box">
                     <h3>ポパイ</h3>
-                    <p>1,200<span class="yen">円</span></p>
+                    <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/menu/menu4-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza4-name.svg') }}" alt="">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
         </div>
     </section>
 
@@ -230,8 +243,6 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/pizza/pizza5.webp') }}" alt="">
-                    <img class="bg" src="{{ asset('image/menu/pizza5-paint.svg') }}" alt="">
                     <div class="ingredient-box">
                         <p>ウィンナー</p>
                     </div>
@@ -244,6 +255,11 @@
                     <div class="ingredient-box">
                         <p>週替りのプラスされる具材</p>
                     </div>
+                    <div class="dish-box">
+                        <div class="left-circle"></div>
+                        <img class="dish" src="{{ asset('image/pizza/pizza5.webp') }}" alt="">
+                    </div>
+                    <img class="bg" src="{{ asset('image/pizza/pizza5-paint.svg') }}" alt="">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -252,28 +268,22 @@
                 </div>
                 <div class="copy-box">
                     <h3>ハマちゃん<span class="weekly-menu">※ 週替りメニュー</span></h3>
-                    <p>1,500<span class="yen">円</span></p>
+                    <p>1,200<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/menu/menu5-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza5-name.svg') }}" alt="">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
             <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="">
         </div>
     </section>
 
 
     <section id="announcement">
-<!--         <div class="content-box">
-            <p>" 創作メニュー 第2弾 "</p>
-            <p>つけかけパスタ  － Dip & Pour －</p>
-            <p>現在開発中！乞うご期待！</p>
-            <img src="{{ asset('image/menu/announcement-bg.webp') }}" alt="">
-        </div> -->
         <div class="text">
             <div class="text__content">
-                <h3 class="part-number">" 創作メニュー 第3弾 "</h3>
-                <h3 class="pasta-name">つけかけパスタ  <span>－ Dip & Pour －</span></h3>
+                <h3 class="part-number">" 創作メニュー 第1弾 "</h3>
+                <!-- <h3 class="pasta-name">つけかけパスタ  <span>－ Dip & Pour －</span></h3> -->
                 <p><span>現在</span>開発中！<span>乞う</span>ご期待！</p>
             </div>
             <div class="text__overlay">
@@ -293,31 +303,23 @@
                 </div>
             </div>
         </div>
-        <div class="flyin-box">
+<!--         <div class="flyin-box">
             <p>Dip it.</p>
             <p>Pour it.</p>
             <p>Wow!</p>
-        </div>
+        </div> -->
     </section>
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/menu/scene1.webp') }}" alt="">
+            <img src="{{ asset('image/pizza/scene1.webp') }}" alt="">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/menu/scene2.webp') }}" alt="">
+            <img src="{{ asset('image/pizza/scene2.webp') }}" alt="">
             <div class="overlay click-canvas"></div>
         </div>
     </section>
-
-<!--     <section id="topping" class="is-show">
-        <div class="outside-circle">
-            <div class="inside-circle">
-                <p>ハマちゃん<br>週替り<br>トッピング</p>
-            </div>
-        </div>
-    </section> -->
 @stop
 
 
