@@ -315,7 +315,7 @@
                     }
                 });
                 $(window).on('load', function() {
-                    @if (in_array(Route::currentRouteName(), ['aaa', 'bbb']))
+                    @if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
                         setTimeout(function() {
                             $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
                             // console.log("メニューページ表示");
