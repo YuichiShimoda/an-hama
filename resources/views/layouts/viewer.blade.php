@@ -164,6 +164,7 @@
                             <a class="link" href="{{ route('menu') }}">メニュー</a>
                             @if(!empty($pressRelease))
                                 <div class="pr-box">
+                                    <p class="common-comment">※ 週替りメニューは、あんかけパスタ, ピザ共通です。</p>
                                     <div class="sec-change-box">
                                         <div class="txt-box">
                                             <p>NEWS</p>

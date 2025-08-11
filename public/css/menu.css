@@ -80,6 +80,17 @@ body::-webkit-scrollbar {
 #first-view .desc-box .base.sp {
   display: none;
 }
+#first-view .desc-box .base .red-line {
+  display: inline;
+  border-bottom: solid 1px #cd2c1d;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #555;
+}
 #first-view .desc-box .note {
   display: block;
   padding-left: 1.35em;

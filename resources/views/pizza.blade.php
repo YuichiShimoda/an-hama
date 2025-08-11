@@ -34,8 +34,8 @@
     <section id="first-view">
         <h1>メニュー</h1>
         <div class="desc-box">
-            <p class="base pc">“あんハマ”のあんかけピザは、定番系と創作系</p>
-            <p class="base sp">“あんハマ”のあんかけピザは<br>定番系と創作系</p>
+            <p class="base pc">“あんハマ”の<span class="red-line">あんかけピザ</span>は、定番系と創作系</p>
+            <p class="base sp">“あんハマ”の<span class="red-line">あんかけピザ</span>は<br>定番系と創作系</p>
             <p class="note">現代的な創作系は、随時追加される予定です。</p>
             <p class="note">こちらに掲載のメニューと店舗でのメニューが多少異なる場合があります。</p>
             <p class="note">お持ち帰り手数料 +150円 でお持ち帰りもご利用いただけます。</p>
@@ -318,6 +318,14 @@
         <div class="img-box">
             <img src="{{ asset('image/pizza/scene2.webp') }}" alt="">
             <div class="overlay click-canvas"></div>
+        </div>
+    </section>
+
+    <section id="topping" class="is-show">
+        <div class="outside-circle">
+            <div class="inside-circle">
+                <p>ハマちゃん<br>週替り<br>トッピング</p>
+            </div>
         </div>
     </section>
 @stop

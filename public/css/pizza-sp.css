@@ -98,6 +98,17 @@ body::-webkit-scrollbar {
     display: block;
   }
 }
+#first-view .desc-box .base .red-line {
+  display: inline;
+  border-bottom: solid 1px #cd2c1d;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #555;
+}
 #first-view .desc-box .note {
   display: block;
   font-weight: 400;
@@ -795,7 +806,7 @@ body::-webkit-scrollbar {
   animation: clip-path-circle 3s 3s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .bg, #miranezu .top-content-box.is-show .bg, #mila-egg .top-content-box.is-show .bg, #spinach .top-content-box.is-show .bg, #hama-chan .top-content-box.is-show .bg {
-  animation: bg-bounce-in 4s forwards;
+  animation: bg-bounce-in 6s forwards;
 }
 #mirakan .top-content-box.is-show .fork, #miranezu .top-content-box.is-show .fork, #mila-egg .top-content-box.is-show .fork, #spinach .top-content-box.is-show .fork, #hama-chan .top-content-box.is-show .fork {
   filter: opacity(0.2);
@@ -2156,22 +2167,28 @@ body::-webkit-scrollbar {
 }
 @keyframes bg-bounce-in {
   0% {
-    transform: scale(0.4);
-    filter: unset;
-    opacity: 1;
-  }
-  30% {
-    transform: scale(1.2);
-  }
-  33% {
-    transform: scale(0.4);
+    opacity: 0;
   }
   45% {
-    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.4) translate(0%, -10%);
     filter: unset;
     opacity: 1;
   }
-  80%, 100% {
+  65% {
+    transform: scale(1) translate(0%, -20%);
+  }
+  70% {
+    transform: scale(0.4) translate(0%, -20%);
+  }
+  75% {
+    transform: scale(0.8) translate(0%, -10%);
+    filter: unset;
+    opacity: 1;
+  }
+  90%, 100% {
     transform: scale(0.8);
     filter: brightness(1.5);
     opacity: 0;

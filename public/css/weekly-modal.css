@@ -271,6 +271,17 @@
   width: 100%;
   margin: 30px auto 0;
 }
+.md-contents > .md-inner > .pr-box .common-comment {
+  display: block;
+  margin: 0 auto 1em;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #555;
+}
 .md-contents > .md-inner > .pr-box .sec-change-box {
   display: block;
   width: 100%;
@@ -279,15 +290,16 @@
 .md-contents > .md-inner > .pr-box .sec-change-box .txt-box {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100px;
   height: 30px;
   margin: 0 auto;
   background-color: #444;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
 .md-contents > .md-inner > .pr-box .sec-change-box .txt-box p {
   display: block;
+  margin-top: 5px;
   font-weight: 700;
   font-size: 10px;
   line-height: 1;
@@ -300,7 +312,7 @@
   top: 0;
   left: 30px;
   bottom: 0;
-  margin: auto;
+  margin: 0;
   display: block;
   width: 155px;
   height: 0.5px;
@@ -321,7 +333,7 @@
   top: 0;
   right: 30px;
   bottom: 0;
-  margin: auto;
+  margin: 0;
   display: block;
   width: 155px;
   height: 0.5px;
@@ -340,7 +352,7 @@
 .md-contents > .md-inner > .pr-box .pr-tit {
   display: block;
   width: calc(100% - 60px);
-  margin: 20px auto 0;
+  margin: 15px auto 0;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.3;
@@ -351,7 +363,6 @@
 }
 @media screen and (max-width: 450px) {
   .md-contents > .md-inner > .pr-box .pr-tit {
-    margin: 15px auto 0;
     font-size: 11px;
   }
 }
