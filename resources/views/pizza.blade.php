@@ -38,7 +38,7 @@
             <p class="base sp">“あんハマ”の<span class="red-line">あんかけピザ</span>は<br>定番系と創作系</p>
             <p class="note">現代的な創作系は、随時追加される予定です。</p>
             <p class="note">こちらに掲載のメニューと店舗でのメニューが多少異なる場合があります。</p>
-            <p class="note">お持ち帰り手数料 +150円 でお持ち帰りもご利用いただけます。</p>
+            <p class="note">あんかけピザは +150円 でお持ち帰りができます。</p>
         </div>
         <div class="standard-box">
             <div class="category-box">
@@ -79,8 +79,8 @@
             <div class="dot right-bottom"></div>
         </div>
         <div class="desc-box">
-            <p>歴史のある"あんかけスバゲッティ"</p>
-            <p>あんハマのオリジナルソースで再定義</p>
+            <p>あんかけパスタの"あん"ソースをピザソースに</p>
+            <p>直径24cmのオリジナルピザ</p>
         </div>
     </section>
     <section id="mirakan">
