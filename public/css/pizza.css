@@ -3782,7 +3782,7 @@ body::-webkit-scrollbar {
 #gallery .menu-link-box:hover {
   opacity: 0.6;
 }
-#gallery .menu-link-box a {
+#gallery .menu-link-box p {
   display: block;
   padding-bottom: 3px;
   border-bottom: solid 1.5px #2175b9;

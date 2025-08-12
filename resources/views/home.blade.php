@@ -278,6 +278,21 @@
                     <div class="swiper-slide">
                         <img src="{{ asset('image/top/sosaku2.webp') }}" alt="">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('image/top/pizza1.webp') }}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('image/top/pizza2.webp') }}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('image/top/pizza3.webp') }}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('image/top/pizza4.webp') }}" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('image/top/pizza5.webp') }}" alt="">
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="color-top-layer"></div>

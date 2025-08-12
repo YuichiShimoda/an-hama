@@ -542,10 +542,10 @@ const floorPlan1 = new Swiper('#menu .swiper', {
 		el: '.swiper-pagination',
 		type: 'fraction',
 		renderFraction: function (currentClass) {
-			return '<div class="nav-box"><div class="top-box"><div class="line"></div><p>SLIDE</p></div><div class="bottom-box"><p class="current ' + currentClass + '">0</p><div class="connect-line"></div><p class="total">07</p></div></div>';
+			return '<div class="nav-box"><div class="top-box"><div class="line"></div><p>SLIDE</p></div><div class="bottom-box"><p class="current ' + currentClass + '">0</p><div class="connect-line"></div><p class="total">12</p></div></div>';
 		},
 		formatFractionCurrent: function (number) {
-			return '0' + number;
+			return number < 10 ? '0' + number : number;
 		}
 	},
 	breakpoints: {
@@ -561,13 +561,20 @@ const floorPlan1 = new Swiper('#menu .swiper', {
 			const activeIndex = this.realIndex;
 			const freeBoxText = document.querySelector('#menu .free-box > p');
 			const priceBoxText = document.querySelector('#menu .price-box > .price');
+			const rightBottomBox = document.querySelector('#menu .right-bottom-box');
 			if (freeBoxText) {
-				if (activeIndex >= 5) {
+				if (activeIndex >= 7) {
+					freeBoxText.textContent = 'あんかけピザ';
+					priceBoxText.textContent = '1,000';
+					rightBottomBox.href = '/menu/pizza';
+				} else if (activeIndex >= 5 && activeIndex <= 6) {
 					freeBoxText.textContent = 'つけかけパスタ';
 					priceBoxText.textContent = '1,000';
+					rightBottomBox.href = '/menu';
 				} else if (activeIndex >= 0 && activeIndex <= 4) {
 					freeBoxText.textContent = 'あんかけパスタ';
 					priceBoxText.textContent = '1,200';
+					rightBottomBox.href = '/menu';
 				}
 			}
 		}
