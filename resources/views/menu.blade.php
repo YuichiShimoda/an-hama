@@ -705,6 +705,14 @@
             <img src="{{ asset('image/menu/scene2.webp') }}" alt="">
             <div class="overlay click-canvas"></div>
         </div>
+        <div class="menu-link-box">
+            <a href="{{ route('pizza') }}">"あんかけピザ"メニュー</a>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </section>
 
     <section id="topping" class="is-show">

@@ -39,7 +39,7 @@ class FrontController extends Controller
         }
         $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
         // $news = News::orderBy('id', 'desc')->limit(3)->get();
-        return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu]);
+        return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease]);
     }
 
     public function passion(): View

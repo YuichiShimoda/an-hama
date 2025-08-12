@@ -3106,6 +3106,7 @@ body::-webkit-scrollbar
 	align-items: center
 	width: 100%
 	margin: 80px auto 0
+	position: relative
 	+bp450
 		flex-direction: column
 	+bp400
@@ -3129,7 +3130,67 @@ body::-webkit-scrollbar
 			transition: all 0.5s ease-in-out
 			&:hover
 				opacity: 0.0
-
+	.menu-link-box
+		position: absolute
+		top: -30px
+		right: 60px
+		display: flex
+		justify-content: center
+		align-items: center
+		z-index: 3
+		transition: all 0.5s ease-in-out
+		+bp600
+			right: 40px
+		+bp500
+			right: 30px
+		&:hover
+			opacity: 0.6
+		a
+			display: block
+			padding-bottom: 3px
+			border-bottom: solid 1.5px #2175b9
+			font-weight: 700
+			font-size: 16px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #2175b9
+			+bp500
+				font-size: 14px
+		.arrow
+			display: block
+			margin-top: 2px
+			margin-left: 20px
+			transform: rotate(90deg)
+			cursor: pointer
+			+bp500
+				margin-top: 5px
+				margin-left: 10px
+			span
+				display: block
+				width: 12px
+				height: 12px
+				border-top: 2px solid #2175b9
+				border-left: 2px solid #2175b9
+				transform: rotate(45deg)
+				margin: -10px
+				animation: animate 2s infinite
+				+bp500
+					width: 10px
+					height: 10px
+				&:nth-child(2)
+					animation-delay: 0.2s
+				&:nth-child(3)
+					animation-delay: 0.4s
+@keyframes animate
+	0%
+		opacity: 0.0
+		transform: rotate(45deg) translate(10px, 10px)
+	50%
+		opacity: 1.0
+	100%
+		opacity: 0.0
+		transform: rotate(45deg) translate(-10px, -10px)
 
 
 
