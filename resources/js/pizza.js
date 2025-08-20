@@ -97,6 +97,9 @@ gsap.to("#mirakan", {
 		start: "center bottom-=1%",
 		onEnter: () => {
 			$("#mirakan .top-content-box").addClass("is-show");
+      setTimeout(() => {
+        $("#mirakan .ingredient-box").addClass("done");
+      }, 4000);
 		},
 	}
 });
@@ -146,6 +149,9 @@ gsap.to("#miranezu", {
 		start: "center bottom-=1%",
 		onEnter: () => {
 			$("#miranezu .top-content-box").addClass("is-show");
+      setTimeout(() => {
+        $("#miranezu .ingredient-box").addClass("done");
+      }, 4000);
 		},
 	}
 });
@@ -207,6 +213,9 @@ gsap.to("#mila-egg", {
 		start: "center bottom-=1%",
 		onEnter: () => {
 			$("#mila-egg .top-content-box").addClass("is-show");
+      setTimeout(() => {
+        $("#mila-egg .ingredient-box").addClass("done");
+      }, 4000);
 		},
 	}
 });
@@ -268,6 +277,9 @@ gsap.to("#spinach", {
 		start: "center bottom-=1%",
 		onEnter: () => {
 			$("#spinach .top-content-box").addClass("is-show");
+      setTimeout(() => {
+        $("#spinach .ingredient-box").addClass("done");
+      }, 4000);
 		},
 	}
 });
@@ -329,6 +341,9 @@ gsap.to("#hama-chan", {
 		start: "center bottom-=1%",
 		onEnter: () => {
 			$("#hama-chan .top-content-box").addClass("is-show");
+      setTimeout(() => {
+        $("#hama-chan .ingredient-box").addClass("done");
+      }, 4000);
 		},
 	}
 });
