@@ -1753,7 +1753,7 @@ body::-webkit-scrollbar
 
 
 
-#peperoncino, #indian
+#peperoncino, #indian, #genovese
 	display: block
 	width: 100%
 	padding-top: 80px
@@ -2536,7 +2536,105 @@ body::-webkit-scrollbar
 				top: 56%
 				left: 80%
 				transform: translate(-50%, -50%) rotate(9deg)
-
+#genovese .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 170px
+		transform: rotate(150deg)
+		+bp600
+			width: 136px
+		+bp450
+			// width: 170px
+	.fork
+		right: 40%
+		bottom: 30%
+		transform: rotate(-10deg)
+	.tricolore
+		right: -72px
+		bottom: 12px
+		+bp600
+			right: -58px
+			bottom: 10px
+		+bp450
+			// right: -72px
+			// bottom: 12px
+	.sauce
+		position: absolute
+		top: 22px
+		right: -45px
+		display: block
+		width: 160px
+		opacity: 0.0
+		transition: all 1.0s 2.0s ease-in-out
+		+bp600
+			top: 40px
+			right: -60px
+			width: 140px
+		+bp500
+			top: 45px
+			right: -50px
+			width: 130px
+			z-index: 10
+			transition: all 1.0s 1.5s ease-in-out
+	&.is-show
+		.name
+			left: -100px
+			bottom: 30px
+			transform: rotate(60deg)
+			+bp600
+				left: -75px
+				bottom: 24px
+			+bp450
+				// left: -126px
+				// bottom: 30px
+		.fork
+			right: -96px
+			bottom: 117px
+			transform: rotate(-70deg)
+			+bp600
+				right: -77px
+				bottom: 94px
+			+bp450
+				// right: -96px
+				// bottom: 117
+		.sauce
+			opacity: 1.0
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 57%
+					left: 24%
+					transform: translate(-50%, -50%) rotate(15deg)
+					+bp600
+						left: 22%
+				&:nth-of-type(2)
+					top: 51%
+					left: 50%
+					transform: translate(-50%, -50%) rotate(-7deg)
+				&:nth-of-type(3)
+					top: 56%
+					left: 78%
+					transform: translate(-50%, -50%) rotate(9deg)
+					+bp600
+						left: 80%
+#genovese .top-content-box.is-show
+	+bp450
+		&:hover .base-box .ingredient-box
+			opacity: 1.0
+			&:nth-of-type(1)
+				top: 57%
+				left: 22%
+				transform: translate(-50%, -50%) rotate(15deg)
+			&:nth-of-type(2)
+				top: 51%
+				left: 50%
+				transform: translate(-50%, -50%) rotate(-7deg)
+			&:nth-of-type(3)
+				top: 56%
+				left: 80%
+				transform: translate(-50%, -50%) rotate(9deg)
 
 
 

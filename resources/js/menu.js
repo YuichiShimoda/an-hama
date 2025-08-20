@@ -520,6 +520,70 @@ gsap.to("#indian .right-box", {
 
 
 
+gsap.to("#genovese", {
+	scrollTrigger: {
+		trigger: "#genovese .base-box",
+		start: "center bottom-=1%",
+		onEnter: () => {
+			$("#genovese .top-content-box").addClass("is-show");
+		},
+	}
+});
+gsap.fromTo("#genovese .base-box",
+	{opacity: 0.0, y: "-30vh"},
+	{opacity: 1.0, y: "0", ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#genovese",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 2.0,
+			// markers: true,
+		}
+	}
+);
+gsap.fromTo("#genovese .copy-box",
+	{opacity: 0.0, rotate: -60},
+	{opacity: 1.0, rotate: 0, ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#genovese",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 1.0,
+			// markers: true,
+		}
+	}
+);
+gsap.fromTo("#genovese .food-box",
+	{opacity: 0.0, rotate: 60},
+	{opacity: 0.3, rotate: 0, ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#genovese",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 1.0,
+			// markers: true,
+		}
+	}
+);
+gsap.to("#genovese .right-box", {
+	scrollTrigger: {
+		trigger: "#genovese .right-box",
+		start: "top bottom-=1%",
+		end: "top bottom-=1%",
+		onEnter: () => {
+			$("#genovese .right-box").addClass("is-show");
+		},
+		onLeaveBack: () => {
+			$("#genovese .right-box").removeClass("is-show");
+		}
+	}
+});
+
+
+
+
+
+
 
 
 

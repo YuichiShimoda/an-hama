@@ -659,6 +659,75 @@
             </div>
         </div>
     </section>
+    <section id="genovese">
+        <div class="top-content-box">
+            <div class="img-box">
+                <div class="base-box click-canvas">
+                    <img class="dish" src="{{ asset('image/menu/sosaku2.webp') }}" alt="">
+                    <img class="bg" src="{{ asset('image/menu/menu2-paint.svg') }}" alt="">
+                </div>
+                <div class="food-box">
+                    <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
+                        <source src="{{ asset('movie/menu2.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="copy-box">
+                    <div class="pasta-category-box"><p>バジルパスタ</p></div>
+                    <h3>ジェノベーゼ</h3>
+                    <p>1,000<span class="yen">円</span></p>
+                </div>
+            </div>
+            <img class="name" src="{{ asset('image/menu/sosaku3-name.svg') }}" alt="">
+            <!-- <p class="italiano">Autentico</p> -->
+            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="">
+            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
+        </div>
+        <div class="bottom-content-box">
+            <div class="right-box">
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">スモール</p>
+                        <p class="gram">200g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">950</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">レギュラー</p>
+                        <p class="gram">300g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,000</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">ラージ</p>
+                        <p class="gram">400g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,100</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">メガ</p>
+                        <p class="gram">600g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,200</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="announcement">
 <!--         <div class="content-box">
             <p>" 創作メニュー 第2弾 "</p>
@@ -668,7 +737,7 @@
         </div> -->
         <div class="text">
             <div class="text__content">
-                <h3 class="part-number">" 創作メニュー 第3弾 "</h3>
+                <h3 class="part-number">" 創作メニュー 第4弾 "</h3>
                 <h3 class="pasta-name">つけかけパスタ  <span>－ Dip & Pour －</span></h3>
                 <p><span>現在</span>開発中！<span>乞う</span>ご期待！</p>
             </div>
