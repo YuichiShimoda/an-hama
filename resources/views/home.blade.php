@@ -279,6 +279,9 @@
                         <img src="{{ asset('image/top/sosaku2.webp') }}" alt="">
                     </div>
                     <div class="swiper-slide">
+                        <img src="{{ asset('image/top/sosaku3.webp') }}" alt="">
+                    </div>
+                    <div class="swiper-slide">
                         <img src="{{ asset('image/top/pizza1.webp') }}" alt="">
                     </div>
                     <div class="swiper-slide">

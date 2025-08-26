@@ -663,7 +663,7 @@
         <div class="top-content-box">
             <div class="img-box">
                 <div class="base-box click-canvas">
-                    <img class="dish" src="{{ asset('image/menu/sosaku2.webp') }}" alt="">
+                    <img class="dish" src="{{ asset('image/menu/sosaku3.webp') }}" alt="">
                     <img class="bg" src="{{ asset('image/menu/menu2-paint.svg') }}" alt="">
                 </div>
                 <div class="food-box">
