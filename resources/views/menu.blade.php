@@ -72,6 +72,7 @@
             <div class="nav-box">
                 <a href="#peperoncino">ペペロンチーノ</a>
                 <a href="#indian">インディアン</a>
+                <a href="#genovese">ジェノベーゼ</a>
                 <a class="info-addition" href="#info-addition">~ 随時追加予定 ~</a>
             </div>
             <div class="option-box">

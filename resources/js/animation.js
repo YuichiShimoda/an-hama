@@ -550,7 +550,7 @@ gsap.to("#menu .right-bottom-box", {
 const floorPlan1 = new Swiper('#menu .swiper', {
 	loop: true,
 	autoplay: {
-		delay: 3000,
+		delay: 2000,
 		disableOnInteraction: true,
 	},
 	effect: "creative",
@@ -567,7 +567,7 @@ const floorPlan1 = new Swiper('#menu .swiper', {
 			rotate: [50, -50, 30]
 		},
 	},
-	speed: 1000,
+	speed: 800,
 	grabCursor: false,
 	allowTouchMove: false,
 	slidesPerView: 1,
@@ -585,7 +585,7 @@ const floorPlan1 = new Swiper('#menu .swiper', {
 	breakpoints: {
 		600: {
 			autoplay: {
-				delay: 4000,
+				delay: 2000,
 				disableOnInteraction: true,
 			},
 		},

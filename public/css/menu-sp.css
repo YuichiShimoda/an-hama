@@ -367,7 +367,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 600px) {
   #first-view .creation-box .nav-box {
     flex-wrap: wrap;
-    width: 295px;
+    width: 370px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -392,6 +392,16 @@ body::-webkit-scrollbar {
   color: #fff;
   transition: all 0.5s ease-in-out;
   pointer-events: none;
+}
+@media screen and (max-width: 420px) {
+  #first-view .creation-box .nav-box a {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #first-view .creation-box .nav-box a {
+    margin-left: 5px;
+  }
 }
 #first-view .creation-box .nav-box a:nth-of-type(1) {
   margin-left: 0;
@@ -420,6 +430,11 @@ body::-webkit-scrollbar {
   font-size: 12px;
   letter-spacing: 0.1em;
   color: #555;
+}
+@media screen and (max-width: 600px) {
+  #first-view .creation-box .nav-box a.info-addition {
+    margin-left: 0;
+  }
 }
 #first-view .creation-box .nav-box a::selection {
   background: #777;

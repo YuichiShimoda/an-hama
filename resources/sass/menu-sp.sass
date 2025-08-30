@@ -338,7 +338,7 @@ body::-webkit-scrollbar
 			position: relative
 			+bp600
 				flex-wrap: wrap
-				width: 295px
+				width: 370px
 			+bp450
 				margin: 25px auto 0
 			a
@@ -358,6 +358,10 @@ body::-webkit-scrollbar
 				color: #fff
 				transition: all 0.5s ease-in-out
 				pointer-events: none
+				+bp420
+					margin-left: 10px
+				+bp400
+					margin-left: 5px
 				&:nth-of-type(1)
 					margin-left: 0
 				&:nth-of-type(4)
@@ -378,6 +382,8 @@ body::-webkit-scrollbar
 					font-size: 12px
 					letter-spacing: 0.1em
 					color: #555
+					+bp600
+						margin-left: 0
 				// &.previous
 				// 	border: solid 1px #006134
 				// 	background-color: #006134
