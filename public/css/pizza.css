@@ -708,13 +708,13 @@ body::-webkit-scrollbar {
   }
 }
 #mirakan .top-content-box.is-show .left-circle, #miranezu .top-content-box.is-show .left-circle, #mila-egg .top-content-box.is-show .left-circle, #spinach .top-content-box.is-show .left-circle, #hama-chan .top-content-box.is-show .left-circle {
-  animation: left-roll-circle 1.5s ease-in-out forwards;
+  animation: left-roll-circle 1s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .right-circle, #miranezu .top-content-box.is-show .right-circle, #mila-egg .top-content-box.is-show .right-circle, #spinach .top-content-box.is-show .right-circle, #hama-chan .top-content-box.is-show .right-circle {
-  animation: right-roll-circle 1.5s ease-in-out forwards;
+  animation: right-roll-circle 1s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .dish, #miranezu .top-content-box.is-show .dish, #mila-egg .top-content-box.is-show .dish, #spinach .top-content-box.is-show .dish, #hama-chan .top-content-box.is-show .dish {
-  animation: clip-path-circle 1.5s 1.5s ease-in-out forwards;
+  animation: clip-path-circle 2s 1s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .bg, #miranezu .top-content-box.is-show .bg, #mila-egg .top-content-box.is-show .bg, #spinach .top-content-box.is-show .bg, #hama-chan .top-content-box.is-show .bg {
   animation: bg-bounce-in 3.5s forwards;
@@ -1909,50 +1909,27 @@ body::-webkit-scrollbar {
     width: 50px;
   }
 }
-#hama-chan .top-content-box .hama-sauce {
+#hama-chan .top-content-box .addition {
   position: absolute;
-  right: 20px;
+  right: -60px;
   bottom: 50px;
   display: block;
-  width: 170px;
+  width: 240px;
   opacity: 0;
   transition: all 1s 2s ease-in-out;
   z-index: 2;
 }
 @media screen and (max-width: 1400px) {
-  #hama-chan .top-content-box .hama-sauce {
-    right: 10px;
-    bottom: 40px;
-    width: 140px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  #hama-chan .top-content-box .hama-sauce {
-    right: 5px;
-    bottom: 40px;
-    width: 110px;
-  }
-}
-#hama-chan .top-content-box .addition {
-  position: absolute;
-  top: 20px;
-  right: -60px;
-  display: block;
-  width: 240px;
-  opacity: 0;
-  transition: all 1s 2s ease-in-out;
-}
-@media screen and (max-width: 1400px) {
   #hama-chan .top-content-box .addition {
-    top: 10px;
     right: -70px;
+    bottom: 40px;
     width: 230px;
   }
 }
 @media screen and (max-width: 1000px) {
   #hama-chan .top-content-box .addition {
-    top: 20px;
     right: -50px;
+    bottom: 30px;
     width: 180px;
   }
 }
@@ -1990,7 +1967,7 @@ body::-webkit-scrollbar {
     bottom: 12px;
   }
 }
-#hama-chan .top-content-box.is-show .hama-sauce {
+#hama-chan .top-content-box.is-show .sauce {
   opacity: 1;
 }
 #hama-chan .top-content-box.is-show .addition {
@@ -2038,10 +2015,20 @@ body::-webkit-scrollbar {
   color: #555;
 }
 #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(4) {
-  top: 21%;
-  left: 85%;
+  top: 75%;
+  left: 63%;
   transform: translate(-50%, -50%) rotate(4deg);
   background-color: #933724;
+}
+@media screen and (max-width: 1400px) {
+  #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(4) {
+    left: 58%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(4) {
+    left: 50%;
+  }
 }
 #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(4) p {
   white-space: nowrap;
@@ -2066,30 +2053,18 @@ body::-webkit-scrollbar {
 }
 @keyframes left-roll-circle {
   0% {
-    left: 10%;
+    left: 30%;
     top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 0;
   }
-  5% {
-    left: 10%;
-    top: 65%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 1;
-  }
   35% {
-    left: 35%;
-    top: 65%;
-    transform: translate(-50%, -50%) rotate(168deg);
-    opacity: 1;
-  }
-  55% {
     left: 50%;
     top: 65%;
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(180deg);
     opacity: 1;
   }
-  75% {
+  45% {
     left: 50%;
     top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
@@ -2104,30 +2079,18 @@ body::-webkit-scrollbar {
 }
 @keyframes right-roll-circle {
   0% {
-    right: 10%;
+    right: 30%;
     top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 0;
   }
-  5% {
-    right: 10%;
-    top: 65%;
-    transform: translate(50%, -50%) rotate(0deg);
-    opacity: 1;
-  }
   35% {
-    right: 35%;
-    top: 65%;
-    transform: translate(50%, -50%) rotate(168deg);
-    opacity: 1;
-  }
-  55% {
     right: 50%;
     top: 65%;
-    transform: translate(50%, -50%) rotate(0deg);
+    transform: translate(50%, -50%) rotate(180deg);
     opacity: 1;
   }
-  75% {
+  45% {
     right: 50%;
     top: 65%;
     transform: translate(50%, -50%) rotate(0deg);

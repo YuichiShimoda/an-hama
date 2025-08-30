@@ -745,11 +745,11 @@ body::-webkit-scrollbar
 			transform: scale(0.8)
 		&.is-show
 			.left-circle
-				animation: left-roll-circle 1.5s ease-in-out forwards
+				animation: left-roll-circle 1.0s ease-in-out forwards
 			.right-circle
-				animation: right-roll-circle 1.5s ease-in-out forwards
+				animation: right-roll-circle 1.0s ease-in-out forwards
 			.dish
-				animation: clip-path-circle 1.5s 1.5s ease-in-out forwards
+				animation: clip-path-circle 2.0s 1.0s ease-in-out forwards
 			.bg
 				animation: bg-bounce-in 3.5s forwards
 			.fork
@@ -1681,42 +1681,42 @@ body::-webkit-scrollbar
 			// right: -42px
 			// bottom: 24px
 			// width: 50px
-	.hama-sauce
-		position: absolute
-		right: -10px
-		bottom: 20px
-		display: block
-		width: 110px
-		opacity: 0.0
-		z-index: 2
-		transition: all 1.0s 2.0s ease-in-out
-		+bp600
-			right: -5px
-			bottom: 13px
-			width: 95px
-		+bp500
-			top: 60px
-			right: -20px
-			bottom: initial
-			width: 90px
-			z-index: 10
-			transition: all 1.0s 1.5s ease-in-out
+	// .hama-sauce
+	// 	position: absolute
+	// 	right: -10px
+	// 	bottom: 20px
+	// 	display: block
+	// 	width: 110px
+	// 	opacity: 0.0
+	// 	z-index: 2
+	// 	transition: all 1.0s 2.0s ease-in-out
+	// 	+bp600
+	// 		right: -5px
+	// 		bottom: 13px
+	// 		width: 95px
+	// 	+bp500
+	// 		top: 60px
+	// 		right: -20px
+	// 		bottom: initial
+	// 		width: 90px
+	// 		z-index: 10
+	// 		transition: all 1.0s 1.5s ease-in-out
 	.addition
 		position: absolute
-		top: 15px
 		right: -45px
+		bottom: 10px
 		display: block
 		width: 150px
 		opacity: 0.0
 		transition: all 1.0s 2.0s ease-in-out
+		z-index: 2
 		+bp600
-			top: 15px
 			right: -40px
+			bottom: 5px
 			width: 140px
 		+bp500
-			top: initial
-			bottom: -10px
 			right: -15px
+			bottom: 0px
 			width: 120px
 			z-index: 10
 			transition: all 1.0s 1.5s ease-in-out
@@ -1741,8 +1741,10 @@ body::-webkit-scrollbar
 			+bp450
 				// left: -24px
 				// bottom: 12px
-		.hama-sauce
+		.sauce
 			opacity: 1.0
+		// .hama-sauce
+		// 	opacity: 1.0
 		.addition
 			opacity: 1.0
 		.base-box:hover
@@ -1771,16 +1773,17 @@ body::-webkit-scrollbar
 					p
 						color: #555
 				&:nth-of-type(4)
-					top: 24%
-					left: 89%
+					top: 80%
+					left: 50%
 					transform: translate(-50%, -50%) rotate(4deg)
 					background-color: #933724
 					+bp500
-						top: 92%
-						left: 56%
+						top: 83%
+						left: 54%
 						width: 100px
-					p
+					> p
 						+bp500
+							line-height: 1.2
 							white-space: initial
 #hama-chan .top-content-box.is-show
 	+bp450
@@ -1825,26 +1828,16 @@ body::-webkit-scrollbar
 		transform: scale(1.0)
 @keyframes left-roll-circle
 	0%
-		left: 10%
+		left: 30%
 		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 0.0
-	5%
-		left: 10%
-		top: 65%
-		transform: translate(-50%, -50%) rotate(0deg)
-		opacity: 1.0
 	35%
-		left: 35%
-		top: 65%
-		transform: translate(-50%, -50%) rotate(168deg)
-		opacity: 1.0
-	55%
 		left: 50%
 		top: 65%
-		transform: translate(-50%, -50%) rotate(0deg)
+		transform: translate(-50%, -50%) rotate(180deg)
 		opacity: 1.0
-	75%
+	45%
 		left: 50%
 		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
@@ -1856,26 +1849,16 @@ body::-webkit-scrollbar
 		opacity: 1.0
 @keyframes right-roll-circle
 	0%
-		right: 10%
+		right: 30%
 		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 0.0
-	5%
-		right: 10%
-		top: 65%
-		transform: translate(50%, -50%) rotate(0deg)
-		opacity: 1.0
 	35%
-		right: 35%
-		top: 65%
-		transform: translate(50%, -50%) rotate(168deg)
-		opacity: 1.0
-	55%
 		right: 50%
 		top: 65%
-		transform: translate(50%, -50%) rotate(0deg)
+		transform: translate(50%, -50%) rotate(180deg)
 		opacity: 1.0
-	75%
+	45%
 		right: 50%
 		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)

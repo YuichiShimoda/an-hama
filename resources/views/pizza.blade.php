@@ -278,7 +278,8 @@
             <img class="name" src="{{ asset('image/pizza/pizza5-name.svg') }}" alt="">
             <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
             <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
-            <img class="hama-sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
+            <!-- <img class="hama-sauce" src="{{ asset('image/menu/sauce.webp') }}" alt=""> -->
             <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="">
         </div>
     </section>
