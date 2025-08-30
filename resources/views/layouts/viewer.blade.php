@@ -320,7 +320,7 @@
                         setTimeout(function() {
                             $("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
                             // console.log("メニューページ表示");
-                        }, 5000);
+                        }, 10000);
                     @else
                         // ローカルストレージを取得
                         var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
