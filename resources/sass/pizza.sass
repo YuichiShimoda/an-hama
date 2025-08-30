@@ -696,13 +696,13 @@ body::-webkit-scrollbar
 			width: 420px
 		&.is-show
 			.left-circle
-				animation: left-roll-circle 3.0s ease-in-out forwards
+				animation: left-roll-circle 1.5s ease-in-out forwards
 			.right-circle
-				animation: right-roll-circle 3.0s ease-in-out forwards
+				animation: right-roll-circle 1.5s ease-in-out forwards
 			.dish
-				animation: clip-path-circle 3.0s 3.0s ease-in-out forwards
+				animation: clip-path-circle 1.5s 1.5s ease-in-out forwards
 			.bg
-				animation: bg-bounce-in 6.0s forwards
+				animation: bg-bounce-in 3.5s forwards
 			.fork
 				filter: opacity(0.2)
 			.tricolore
@@ -1007,6 +1007,22 @@ body::-webkit-scrollbar
 				width: 40px
 			+bp1000
 				width: 30px
+		.sauce
+			position: absolute
+			top: 60px
+			right: 0px
+			display: block
+			width: 170px
+			opacity: 0.0
+			transition: all 1.0s 2.0s ease-in-out
+			+bp1400
+				top: 70px
+				right: -10px
+				width: 140px
+			+bp1000
+				top: 80px
+				right: -15px
+				width: 110px
 	.bottom-content-box
 		display: flex
 		justify-content: center
@@ -1223,6 +1239,8 @@ body::-webkit-scrollbar
 			+bp1000
 				right: -70px
 				bottom: 27px
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1300,6 +1318,8 @@ body::-webkit-scrollbar
 			+bp1000
 				right: -102px
 				bottom: 63px
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1363,6 +1383,8 @@ body::-webkit-scrollbar
 			+bp1000
 				right: -126px
 				bottom: 60px
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1438,6 +1460,8 @@ body::-webkit-scrollbar
 			+bp1000
 				right: -96px
 				bottom: 117px
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1502,6 +1526,23 @@ body::-webkit-scrollbar
 			right: -42px
 			bottom: 24px
 			width: 50px
+	.hama-sauce
+		position: absolute
+		right: 20px
+		bottom: 50px
+		display: block
+		width: 170px
+		opacity: 0.0
+		transition: all 1.0s 2.0s ease-in-out
+		z-index: 2
+		+bp1400
+			right: 10px
+			bottom: 40px
+			width: 140px
+		+bp1000
+			right: 5px
+			bottom: 40px
+			width: 110px
 	.addition
 		position: absolute
 		top: 20px
@@ -1548,6 +1589,8 @@ body::-webkit-scrollbar
 			+bp1000
 				left: -24px
 				bottom: 12px
+		.hama-sauce
+			opacity: 1.0
 		.addition
 			opacity: 1.0
 		.base-box:hover
@@ -1597,28 +1640,28 @@ body::-webkit-scrollbar
 		transform: scale(1.0)
 @keyframes left-roll-circle
 	0%
-		left: -30%
-		top: 75%
+		left: 10%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 0.0
 	5%
-		left: -30%
-		top: 75%
+		left: 10%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 1.0
 	35%
-		left: 15%
-		top: 75%
+		left: 35%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(168deg)
 		opacity: 1.0
 	55%
 		left: 50%
-		top: 75%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 1.0
 	75%
 		left: 50%
-		top: 75%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 1.0
 	100%
@@ -1628,28 +1671,28 @@ body::-webkit-scrollbar
 		opacity: 1.0
 @keyframes right-roll-circle
 	0%
-		right: -30%
-		top: 75%
+		right: 10%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 0.0
 	5%
-		right: -30%
-		top: 75%
+		right: 10%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 1.0
 	35%
-		right: 15%
-		top: 75%
+		right: 35%
+		top: 65%
 		transform: translate(50%, -50%) rotate(168deg)
 		opacity: 1.0
 	55%
 		right: 50%
-		top: 75%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 1.0
 	75%
 		right: 50%
-		top: 75%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 1.0
 	100%
@@ -1671,9 +1714,9 @@ body::-webkit-scrollbar
 @keyframes bg-bounce-in
 	0%
 		opacity: 0.0
-	45%
+	30%
 		opacity: 0.0
-	60%
+	50%
 		transform: scale(0.4) translate(0%, -10%)
 		filter: unset
 		opacity: 1.0
@@ -2283,20 +2326,20 @@ body::-webkit-scrollbar
 			bottom: -12px
 	.sauce
 		position: absolute
-		top: 20px
-		right: -60px
+		top: 60px
+		right: 0px
 		display: block
-		width: 260px
+		width: 170px
 		opacity: 0.0
 		transition: all 1.0s 2.0s ease-in-out
 		+bp1400
-			top: 20px
-			right: -70px
-			width: 240px
+			top: 70px
+			right: -10px
+			width: 140px
 		+bp1000
-			top: 40px
-			right: -60px
-			width: 180px
+			top: 80px
+			right: -15px
+			width: 110px
 	&.is-show
 		.name
 			left: -165px
@@ -2378,20 +2421,20 @@ body::-webkit-scrollbar
 			bottom: 102px
 	.sauce
 		position: absolute
-		top: 20px
-		right: -60px
+		top: 60px
+		right: 0px
 		display: block
-		width: 260px
+		width: 170px
 		opacity: 0.0
 		transition: all 1.0s 2.0s ease-in-out
 		+bp1400
-			top: 20px
-			right: -70px
-			width: 240px
+			top: 70px
+			right: -10px
+			width: 140px
 		+bp1000
-			top: 40px
-			right: -60px
-			width: 180px
+			top: 80px
+			right: -15px
+			width: 110px
 	&.is-show
 		.name
 			left: -110px

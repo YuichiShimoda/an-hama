@@ -136,6 +136,28 @@ for (const bubble of first_view_tit_bubbles) {
 
 
 
+gsap.to(".side-bar", {
+	scrollTrigger: {
+		trigger: "#concept",
+		start: "top center-=1%",
+		end: "top center-=1%",
+		onEnter: () => {
+			$(".side-bar").addClass("is-show");
+		},
+		onLeaveBack: () => {
+			$(".side-bar").removeClass("is-show");
+		}
+	}
+});
+
+
+
+
+
+
+
+
+
 
 
 

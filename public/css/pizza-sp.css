@@ -799,16 +799,16 @@ body::-webkit-scrollbar {
   }
 }
 #mirakan .top-content-box.is-show .left-circle, #miranezu .top-content-box.is-show .left-circle, #mila-egg .top-content-box.is-show .left-circle, #spinach .top-content-box.is-show .left-circle, #hama-chan .top-content-box.is-show .left-circle {
-  animation: left-roll-circle 3s ease-in-out forwards;
+  animation: left-roll-circle 1.5s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .right-circle, #miranezu .top-content-box.is-show .right-circle, #mila-egg .top-content-box.is-show .right-circle, #spinach .top-content-box.is-show .right-circle, #hama-chan .top-content-box.is-show .right-circle {
-  animation: right-roll-circle 3s ease-in-out forwards;
+  animation: right-roll-circle 1.5s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .dish, #miranezu .top-content-box.is-show .dish, #mila-egg .top-content-box.is-show .dish, #spinach .top-content-box.is-show .dish, #hama-chan .top-content-box.is-show .dish {
-  animation: clip-path-circle 3s 3s ease-in-out forwards;
+  animation: clip-path-circle 1.5s 1.5s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .bg, #miranezu .top-content-box.is-show .bg, #mila-egg .top-content-box.is-show .bg, #spinach .top-content-box.is-show .bg, #hama-chan .top-content-box.is-show .bg {
-  animation: bg-bounce-in 6s forwards;
+  animation: bg-bounce-in 3.5s forwards;
 }
 #mirakan .top-content-box.is-show .fork, #miranezu .top-content-box.is-show .fork, #mila-egg .top-content-box.is-show .fork, #spinach .top-content-box.is-show .fork, #hama-chan .top-content-box.is-show .fork {
   filter: opacity(0.2);
@@ -1218,6 +1218,30 @@ body::-webkit-scrollbar {
     width: 24px;
   }
 }
+#mirakan .top-content-box .sauce, #miranezu .top-content-box .sauce, #mila-egg .top-content-box .sauce, #spinach .top-content-box .sauce, #hama-chan .top-content-box .sauce {
+  position: absolute;
+  top: 55px;
+  right: -15px;
+  display: block;
+  width: 110px;
+  opacity: 0;
+  z-index: 1;
+  transition: all 1s 2s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  #mirakan .top-content-box .sauce, #miranezu .top-content-box .sauce, #mila-egg .top-content-box .sauce, #spinach .top-content-box .sauce, #hama-chan .top-content-box .sauce {
+    width: 95px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #mirakan .top-content-box .sauce, #miranezu .top-content-box .sauce, #mila-egg .top-content-box .sauce, #spinach .top-content-box .sauce, #hama-chan .top-content-box .sauce {
+    top: 60px;
+    right: -20px;
+    width: 90px;
+    z-index: 10;
+    transition: all 1s 1.5s ease-in-out;
+  }
+}
 #mirakan .bottom-content-box, #miranezu .bottom-content-box, #mila-egg .bottom-content-box, #spinach .bottom-content-box, #hama-chan .bottom-content-box {
   display: flex;
   justify-content: center;
@@ -1478,6 +1502,9 @@ body::-webkit-scrollbar {
     bottom: 22px;
   }
 }
+#mirakan .top-content-box.is-show .sauce {
+  opacity: 1;
+}
 #mirakan .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
 }
@@ -1612,6 +1639,9 @@ body::-webkit-scrollbar {
     bottom: 50px;
   }
 }
+#miranezu .top-content-box.is-show .sauce {
+  opacity: 1;
+}
 #miranezu .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
 }
@@ -1709,6 +1739,9 @@ body::-webkit-scrollbar {
     right: -101px;
     bottom: 48px;
   }
+}
+#mila-egg .top-content-box.is-show .sauce {
+  opacity: 1;
 }
 #mila-egg .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
@@ -1829,6 +1862,9 @@ body::-webkit-scrollbar {
     bottom: 94px;
   }
 }
+#spinach .top-content-box.is-show .sauce {
+  opacity: 1;
+}
 #spinach .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
 }
@@ -1912,6 +1948,33 @@ body::-webkit-scrollbar {
     width: 40px;
   }
 }
+#hama-chan .top-content-box .hama-sauce {
+  position: absolute;
+  right: -10px;
+  bottom: 20px;
+  display: block;
+  width: 110px;
+  opacity: 0;
+  z-index: 2;
+  transition: all 1s 2s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  #hama-chan .top-content-box .hama-sauce {
+    right: -5px;
+    bottom: 13px;
+    width: 95px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #hama-chan .top-content-box .hama-sauce {
+    top: 60px;
+    right: -20px;
+    bottom: initial;
+    width: 90px;
+    z-index: 10;
+    transition: all 1s 1.5s ease-in-out;
+  }
+}
 #hama-chan .top-content-box .addition {
   position: absolute;
   top: 15px;
@@ -1959,6 +2022,9 @@ body::-webkit-scrollbar {
     left: -19px;
     bottom: 10px;
   }
+}
+#hama-chan .top-content-box.is-show .hama-sauce {
+  opacity: 1;
 }
 #hama-chan .top-content-box.is-show .addition {
   opacity: 1;
@@ -2076,32 +2142,32 @@ body::-webkit-scrollbar {
 }
 @keyframes left-roll-circle {
   0% {
-    left: -30%;
-    top: 75%;
+    left: 10%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 0;
   }
   5% {
-    left: -30%;
-    top: 75%;
+    left: 10%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
   }
   35% {
-    left: 15%;
-    top: 75%;
+    left: 35%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(168deg);
     opacity: 1;
   }
   55% {
     left: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
   }
   75% {
     left: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
   }
@@ -2114,32 +2180,32 @@ body::-webkit-scrollbar {
 }
 @keyframes right-roll-circle {
   0% {
-    right: -30%;
-    top: 75%;
+    right: 10%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 0;
   }
   5% {
-    right: -30%;
-    top: 75%;
+    right: 10%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 1;
   }
   35% {
-    right: 15%;
-    top: 75%;
+    right: 35%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(168deg);
     opacity: 1;
   }
   55% {
     right: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 1;
   }
   75% {
     right: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 1;
   }
@@ -2171,10 +2237,10 @@ body::-webkit-scrollbar {
   0% {
     opacity: 0;
   }
-  45% {
+  30% {
     opacity: 0;
   }
-  60% {
+  50% {
     transform: scale(0.4) translate(0%, -10%);
     filter: unset;
     opacity: 1;
@@ -2944,25 +3010,24 @@ body::-webkit-scrollbar {
 }
 #peperoncino .top-content-box .sauce {
   position: absolute;
-  top: 22px;
-  right: -45px;
+  top: 55px;
+  right: -15px;
   display: block;
-  width: 160px;
+  width: 110px;
   opacity: 0;
+  z-index: 1;
   transition: all 1s 2s ease-in-out;
 }
 @media screen and (max-width: 600px) {
   #peperoncino .top-content-box .sauce {
-    top: 40px;
-    right: -60px;
-    width: 140px;
+    width: 95px;
   }
 }
 @media screen and (max-width: 500px) {
   #peperoncino .top-content-box .sauce {
-    top: 45px;
-    right: -50px;
-    width: 130px;
+    top: 60px;
+    right: -20px;
+    width: 90px;
     z-index: 10;
     transition: all 1s 1.5s ease-in-out;
   }
@@ -3113,25 +3178,24 @@ body::-webkit-scrollbar {
 }
 #indian .top-content-box .sauce {
   position: absolute;
-  top: 22px;
-  right: -45px;
+  top: 55px;
+  right: -15px;
   display: block;
-  width: 160px;
+  width: 110px;
   opacity: 0;
+  z-index: 1;
   transition: all 1s 2s ease-in-out;
 }
 @media screen and (max-width: 600px) {
   #indian .top-content-box .sauce {
-    top: 40px;
-    right: -60px;
-    width: 140px;
+    width: 95px;
   }
 }
 @media screen and (max-width: 500px) {
   #indian .top-content-box .sauce {
-    top: 45px;
-    right: -50px;
-    width: 130px;
+    top: 60px;
+    right: -20px;
+    width: 90px;
     z-index: 10;
     transition: all 1s 1.5s ease-in-out;
   }

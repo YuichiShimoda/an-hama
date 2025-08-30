@@ -26,6 +26,13 @@
 
 
 @section('content_sidebar')
+    <a class="side-bar" href="{{ route('voice') }}" target="_blank" rel="noopener noreferrer">
+        <div class="icon-box">
+            <img class="nomal" src="{{ asset('image/questionnaire.png') }}" alt="">
+            <img class="move" src="{{ asset('image/questionnaire.png') }}" alt="">
+        </div>
+        <p>アンケート</p>
+    </a>
 @stop
 
 
@@ -83,6 +90,9 @@
                 <p class="desc">・接客対応中の場合、電話に出られない場合がございます。</p>
                 <p class="desc">・臨時休業、貸し切りなどは下部のお知らせをご確認ください。</p>
             </div>
+            <a class="parking-box" href="{{ route('parking') }}">
+                <p>近隣駐車場</p>
+            </a>
         </div>
     </section>
     <div id="loop-band">
@@ -134,6 +144,9 @@
             <p class="desc">・接客対応中の場合、電話に出られない場合がございます。</p>
             <p class="desc">・臨時休業、貸し切りなどは下部のお知らせをご確認ください。</p>
         </div>
+        <a class="parking-box" href="{{ route('parking') }}">
+            <p>近隣駐車場</p>
+        </a>
     </div>
     <section id="concept">
         <div class="content-box">

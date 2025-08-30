@@ -311,6 +311,25 @@ body::-webkit-scrollbar
 				font-family: $iroha-25icho-stdn
 				letter-spacing: 0.0em
 				color: #999
+		.parking-box
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 110px
+			height: 30px
+			margin: 10px auto 0
+			border-radius: 15px
+			background-color: #006134
+			z-index: 2
+			position: relative
+			> p
+				display: block
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #fff
 @keyframes puni
 	0%
 		transform: scale(0.9, 1.05) translateY(0)
@@ -533,6 +552,162 @@ body::-webkit-scrollbar
 			font-family: $iroha-25icho-stdn
 			letter-spacing: 0.0em
 			color: #999
+	.parking-box
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 110px
+		height: 30px
+		margin: 10px auto 0
+		border-radius: 15px
+		background-color: #006134
+		animation: bounceBtn 5.0s ease-in-out infinite
+		z-index: 2
+		position: relative
+		> p
+			display: block
+			font-weight: 400
+			font-size: 12px
+			line-height: 1.0
+			font-family: $iroha-25icho-stdn
+			letter-spacing: 0.05em
+			color: #fff
+@keyframes bounceBtn
+	0%, 20%, 27.5%, 35%, 100%
+		transform: translateY(0)
+	25%
+		transform: translateY(-6px)
+	30%
+		transform: translateY(-3px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.side-bar
+	position: fixed
+	top: 50%
+	right: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	width: fit-content
+	padding: 17px 13px
+	border-top-left-radius: 13px
+	border-bottom-left-radius: 13px
+	background: #B92928
+	opacity: 0.0
+	transition: opacity 0.5s ease-in-out
+	pointer-events: none
+	z-index: 2000
+	&.is-show
+		opacity: 1.0
+		pointer-events: initial
+	+bp450
+		padding: 15px 11px
+		border-top-left-radius: 10px
+		border-bottom-left-radius: 10px
+	.icon-box
+		display: block
+		width: 28px
+		position: relative
+		+bp450
+			width: 24px
+		.nomal
+			display: block
+			width: 100%
+			filter: hue-rotate(110deg)
+			transform-origin: left bottom
+			animation: puni 5.0s infinite
+		.move
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			animation: puni-translate 5.0s 1.3s infinite
+	p
+		display: block
+		margin-top: 10px
+		font-weight: 400
+		font-size: 16px
+		line-height: 1.0
+		font-family: $iroha-25icho-stdn
+		letter-spacing: 0.25em
+		writing-mode: vertical-rl
+		color: #fff
+		+bp450
+			margin-top: 6px
+			font-size: 14px
+@keyframes puni
+	0%
+		transform: scale(0.9, 1.05) translateY(0) rotate(45deg)
+		opacity: 1.0
+	3%
+		transform: scale(1.1, 0.9) translateY(10%)
+	6%
+		transform: scale(1.0, 1.0) translateY(0)
+	9%
+		transform: scale(1.05, 0.95) translateY(5%)
+	12%
+		transform: scale(1.0, 1.0) translateY(0)
+	15%
+		transform: scale(1.02, 0.98) translateY(2%) rotate(0deg)
+	18%
+		transform: scale(1.0, 1.0) translateY(0)
+	20%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 1.0
+	50%
+		opacity: 1.0
+	60%
+		opacity: 0.0
+	100%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 0.0
+@keyframes puni-translate
+	0%
+		transform: scale(0.9, 1.05) translate(27%, 17%) rotate(45deg)
+		opacity: 1.0
+	3%
+		transform: scale(1.1, 0.9) translate(27%, 27%)
+	6%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	9%
+		transform: scale(1.05, 0.95) translate(27%, 22%)
+	12%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	15%
+		transform: scale(1.02, 0.98) translate(27%, 19%) rotate(0deg)
+	18%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+	20%
+		transform: scale(1.0, 1.0) translate(27%, 17%)
+		opacity: 1.0
+	50%
+		opacity: 1.0
+	60%
+		opacity: 0.0
+	100%
+		transform: scale(1.0, 1.0) translateY(0)
+		opacity: 0.0
+
+
+
+
+
 
 
 

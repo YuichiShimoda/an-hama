@@ -708,16 +708,16 @@ body::-webkit-scrollbar {
   }
 }
 #mirakan .top-content-box.is-show .left-circle, #miranezu .top-content-box.is-show .left-circle, #mila-egg .top-content-box.is-show .left-circle, #spinach .top-content-box.is-show .left-circle, #hama-chan .top-content-box.is-show .left-circle {
-  animation: left-roll-circle 3s ease-in-out forwards;
+  animation: left-roll-circle 1.5s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .right-circle, #miranezu .top-content-box.is-show .right-circle, #mila-egg .top-content-box.is-show .right-circle, #spinach .top-content-box.is-show .right-circle, #hama-chan .top-content-box.is-show .right-circle {
-  animation: right-roll-circle 3s ease-in-out forwards;
+  animation: right-roll-circle 1.5s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .dish, #miranezu .top-content-box.is-show .dish, #mila-egg .top-content-box.is-show .dish, #spinach .top-content-box.is-show .dish, #hama-chan .top-content-box.is-show .dish {
-  animation: clip-path-circle 3s 3s ease-in-out forwards;
+  animation: clip-path-circle 1.5s 1.5s ease-in-out forwards;
 }
 #mirakan .top-content-box.is-show .bg, #miranezu .top-content-box.is-show .bg, #mila-egg .top-content-box.is-show .bg, #spinach .top-content-box.is-show .bg, #hama-chan .top-content-box.is-show .bg {
-  animation: bg-bounce-in 6s forwards;
+  animation: bg-bounce-in 3.5s forwards;
 }
 #mirakan .top-content-box.is-show .fork, #miranezu .top-content-box.is-show .fork, #mila-egg .top-content-box.is-show .fork, #spinach .top-content-box.is-show .fork, #hama-chan .top-content-box.is-show .fork {
   filter: opacity(0.2);
@@ -1146,6 +1146,29 @@ body::-webkit-scrollbar {
     width: 30px;
   }
 }
+#mirakan .top-content-box .sauce, #miranezu .top-content-box .sauce, #mila-egg .top-content-box .sauce, #spinach .top-content-box .sauce, #hama-chan .top-content-box .sauce {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  display: block;
+  width: 170px;
+  opacity: 0;
+  transition: all 1s 2s ease-in-out;
+}
+@media screen and (max-width: 1400px) {
+  #mirakan .top-content-box .sauce, #miranezu .top-content-box .sauce, #mila-egg .top-content-box .sauce, #spinach .top-content-box .sauce, #hama-chan .top-content-box .sauce {
+    top: 70px;
+    right: -10px;
+    width: 140px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mirakan .top-content-box .sauce, #miranezu .top-content-box .sauce, #mila-egg .top-content-box .sauce, #spinach .top-content-box .sauce, #hama-chan .top-content-box .sauce {
+    top: 80px;
+    right: -15px;
+    width: 110px;
+  }
+}
 #mirakan .bottom-content-box, #miranezu .bottom-content-box, #mila-egg .bottom-content-box, #spinach .bottom-content-box, #hama-chan .bottom-content-box {
   display: flex;
   justify-content: center;
@@ -1440,6 +1463,9 @@ body::-webkit-scrollbar {
     bottom: 27px;
   }
 }
+#mirakan .top-content-box.is-show .sauce {
+  opacity: 1;
+}
 #mirakan .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
 }
@@ -1559,6 +1585,9 @@ body::-webkit-scrollbar {
     bottom: 63px;
   }
 }
+#miranezu .top-content-box.is-show .sauce {
+  opacity: 1;
+}
 #miranezu .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
 }
@@ -1658,6 +1687,9 @@ body::-webkit-scrollbar {
     right: -126px;
     bottom: 60px;
   }
+}
+#mila-egg .top-content-box.is-show .sauce {
+  opacity: 1;
 }
 #mila-egg .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
@@ -1777,6 +1809,9 @@ body::-webkit-scrollbar {
     bottom: 117px;
   }
 }
+#spinach .top-content-box.is-show .sauce {
+  opacity: 1;
+}
 #spinach .top-content-box.is-show .base-box:hover .ingredient-box.done {
   opacity: 1;
 }
@@ -1874,6 +1909,30 @@ body::-webkit-scrollbar {
     width: 50px;
   }
 }
+#hama-chan .top-content-box .hama-sauce {
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  display: block;
+  width: 170px;
+  opacity: 0;
+  transition: all 1s 2s ease-in-out;
+  z-index: 2;
+}
+@media screen and (max-width: 1400px) {
+  #hama-chan .top-content-box .hama-sauce {
+    right: 10px;
+    bottom: 40px;
+    width: 140px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #hama-chan .top-content-box .hama-sauce {
+    right: 5px;
+    bottom: 40px;
+    width: 110px;
+  }
+}
 #hama-chan .top-content-box .addition {
   position: absolute;
   top: 20px;
@@ -1930,6 +1989,9 @@ body::-webkit-scrollbar {
     left: -24px;
     bottom: 12px;
   }
+}
+#hama-chan .top-content-box.is-show .hama-sauce {
+  opacity: 1;
 }
 #hama-chan .top-content-box.is-show .addition {
   opacity: 1;
@@ -2004,32 +2066,32 @@ body::-webkit-scrollbar {
 }
 @keyframes left-roll-circle {
   0% {
-    left: -30%;
-    top: 75%;
+    left: 10%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 0;
   }
   5% {
-    left: -30%;
-    top: 75%;
+    left: 10%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
   }
   35% {
-    left: 15%;
-    top: 75%;
+    left: 35%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(168deg);
     opacity: 1;
   }
   55% {
     left: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
   }
   75% {
     left: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
   }
@@ -2042,32 +2104,32 @@ body::-webkit-scrollbar {
 }
 @keyframes right-roll-circle {
   0% {
-    right: -30%;
-    top: 75%;
+    right: 10%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 0;
   }
   5% {
-    right: -30%;
-    top: 75%;
+    right: 10%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 1;
   }
   35% {
-    right: 15%;
-    top: 75%;
+    right: 35%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(168deg);
     opacity: 1;
   }
   55% {
     right: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 1;
   }
   75% {
     right: 50%;
-    top: 75%;
+    top: 65%;
     transform: translate(50%, -50%) rotate(0deg);
     opacity: 1;
   }
@@ -2099,10 +2161,10 @@ body::-webkit-scrollbar {
   0% {
     opacity: 0;
   }
-  45% {
+  30% {
     opacity: 0;
   }
-  60% {
+  50% {
     transform: scale(0.4) translate(0%, -10%);
     filter: unset;
     opacity: 1;
@@ -2905,25 +2967,25 @@ body::-webkit-scrollbar {
 }
 #peperoncino .top-content-box .sauce {
   position: absolute;
-  top: 20px;
-  right: -60px;
+  top: 60px;
+  right: 0px;
   display: block;
-  width: 260px;
+  width: 170px;
   opacity: 0;
   transition: all 1s 2s ease-in-out;
 }
 @media screen and (max-width: 1400px) {
   #peperoncino .top-content-box .sauce {
-    top: 20px;
-    right: -70px;
-    width: 240px;
+    top: 70px;
+    right: -10px;
+    width: 140px;
   }
 }
 @media screen and (max-width: 1000px) {
   #peperoncino .top-content-box .sauce {
-    top: 40px;
-    right: -60px;
-    width: 180px;
+    top: 80px;
+    right: -15px;
+    width: 110px;
   }
 }
 #peperoncino .top-content-box.is-show .name {
@@ -3052,25 +3114,25 @@ body::-webkit-scrollbar {
 }
 #indian .top-content-box .sauce {
   position: absolute;
-  top: 20px;
-  right: -60px;
+  top: 60px;
+  right: 0px;
   display: block;
-  width: 260px;
+  width: 170px;
   opacity: 0;
   transition: all 1s 2s ease-in-out;
 }
 @media screen and (max-width: 1400px) {
   #indian .top-content-box .sauce {
-    top: 20px;
-    right: -70px;
-    width: 240px;
+    top: 70px;
+    right: -10px;
+    width: 140px;
   }
 }
 @media screen and (max-width: 1000px) {
   #indian .top-content-box .sauce {
-    top: 40px;
-    right: -60px;
-    width: 180px;
+    top: 80px;
+    right: -15px;
+    width: 110px;
   }
 }
 #indian .top-content-box.is-show .name {

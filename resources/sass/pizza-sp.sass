@@ -745,13 +745,13 @@ body::-webkit-scrollbar
 			transform: scale(0.8)
 		&.is-show
 			.left-circle
-				animation: left-roll-circle 3.0s ease-in-out forwards
+				animation: left-roll-circle 1.5s ease-in-out forwards
 			.right-circle
-				animation: right-roll-circle 3.0s ease-in-out forwards
+				animation: right-roll-circle 1.5s ease-in-out forwards
 			.dish
-				animation: clip-path-circle 3.0s 3.0s ease-in-out forwards
+				animation: clip-path-circle 1.5s 1.5s ease-in-out forwards
 			.bg
-				animation: bg-bounce-in 6.0s forwards
+				animation: bg-bounce-in 3.5s forwards
 			.fork
 				filter: opacity(0.2)
 			.tricolore
@@ -1068,6 +1068,25 @@ body::-webkit-scrollbar
 				width: 24px
 			+bp450
 				// width: 150px
+		.sauce
+			position: absolute
+			top: 55px
+			right: -15px
+			display: block
+			width: 110px
+			opacity: 0.0
+			z-index: 1
+			transition: all 1.0s 2.0s ease-in-out
+			+bp600
+				// top: 40px
+				// right: -60px
+				width: 95px
+			+bp500
+				top: 60px
+				right: -20px
+				width: 90px
+				z-index: 10
+				transition: all 1.0s 1.5s ease-in-out
 	.bottom-content-box
 		display: flex
 		justify-content: center
@@ -1281,6 +1300,8 @@ body::-webkit-scrollbar
 			+bp450
 				// right: -70px
 				// bottom: 27px
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1386,6 +1407,8 @@ body::-webkit-scrollbar
 			+bp450
 				// right: -102px
 				// bottom: 63px
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1465,6 +1488,8 @@ body::-webkit-scrollbar
 			+bp450
 				// right: -126px
 				// bottom: 60px
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1562,6 +1587,8 @@ body::-webkit-scrollbar
 			+bp450
 				// right: -96px
 				// bottom: 117
+		.sauce
+			opacity: 1.0
 		.base-box:hover
 			.ingredient-box.done
 				opacity: 1.0
@@ -1654,6 +1681,26 @@ body::-webkit-scrollbar
 			// right: -42px
 			// bottom: 24px
 			// width: 50px
+	.hama-sauce
+		position: absolute
+		right: -10px
+		bottom: 20px
+		display: block
+		width: 110px
+		opacity: 0.0
+		z-index: 2
+		transition: all 1.0s 2.0s ease-in-out
+		+bp600
+			right: -5px
+			bottom: 13px
+			width: 95px
+		+bp500
+			top: 60px
+			right: -20px
+			bottom: initial
+			width: 90px
+			z-index: 10
+			transition: all 1.0s 1.5s ease-in-out
 	.addition
 		position: absolute
 		top: 15px
@@ -1694,6 +1741,8 @@ body::-webkit-scrollbar
 			+bp450
 				// left: -24px
 				// bottom: 12px
+		.hama-sauce
+			opacity: 1.0
 		.addition
 			opacity: 1.0
 		.base-box:hover
@@ -1776,28 +1825,28 @@ body::-webkit-scrollbar
 		transform: scale(1.0)
 @keyframes left-roll-circle
 	0%
-		left: -30%
-		top: 75%
+		left: 10%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 0.0
 	5%
-		left: -30%
-		top: 75%
+		left: 10%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 1.0
 	35%
-		left: 15%
-		top: 75%
+		left: 35%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(168deg)
 		opacity: 1.0
 	55%
 		left: 50%
-		top: 75%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 1.0
 	75%
 		left: 50%
-		top: 75%
+		top: 65%
 		transform: translate(-50%, -50%) rotate(0deg)
 		opacity: 1.0
 	100%
@@ -1807,28 +1856,28 @@ body::-webkit-scrollbar
 		opacity: 1.0
 @keyframes right-roll-circle
 	0%
-		right: -30%
-		top: 75%
+		right: 10%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 0.0
 	5%
-		right: -30%
-		top: 75%
+		right: 10%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 1.0
 	35%
-		right: 15%
-		top: 75%
+		right: 35%
+		top: 65%
 		transform: translate(50%, -50%) rotate(168deg)
 		opacity: 1.0
 	55%
 		right: 50%
-		top: 75%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 1.0
 	75%
 		right: 50%
-		top: 75%
+		top: 65%
 		transform: translate(50%, -50%) rotate(0deg)
 		opacity: 1.0
 	100%
@@ -1850,9 +1899,9 @@ body::-webkit-scrollbar
 @keyframes bg-bounce-in
 	0%
 		opacity: 0.0
-	45%
+	30%
 		opacity: 0.0
-	60%
+	50%
 		transform: scale(0.4) translate(0%, -10%)
 		filter: unset
 		opacity: 1.0
@@ -2475,20 +2524,21 @@ body::-webkit-scrollbar
 			// width: 50px
 	.sauce
 		position: absolute
-		top: 22px
-		right: -45px
+		top: 55px
+		right: -15px
 		display: block
-		width: 160px
+		width: 110px
 		opacity: 0.0
+		z-index: 1
 		transition: all 1.0s 2.0s ease-in-out
 		+bp600
-			top: 40px
-			right: -60px
-			width: 140px
+			// top: 40px
+			// right: -60px
+			width: 95px
 		+bp500
-			top: 45px
-			right: -50px
-			width: 130px
+			top: 60px
+			right: -20px
+			width: 90px
 			z-index: 10
 			transition: all 1.0s 1.5s ease-in-out
 	&.is-show
@@ -2600,20 +2650,21 @@ body::-webkit-scrollbar
 			// bottom: 102px
 	.sauce
 		position: absolute
-		top: 22px
-		right: -45px
+		top: 55px
+		right: -15px
 		display: block
-		width: 160px
+		width: 110px
 		opacity: 0.0
+		z-index: 1
 		transition: all 1.0s 2.0s ease-in-out
 		+bp600
-			top: 40px
-			right: -60px
-			width: 140px
+			// top: 40px
+			// right: -60px
+			width: 95px
 		+bp500
-			top: 45px
-			right: -50px
-			width: 130px
+			top: 60px
+			right: -20px
+			width: 90px
 			z-index: 10
 			transition: all 1.0s 1.5s ease-in-out
 	&.is-show
