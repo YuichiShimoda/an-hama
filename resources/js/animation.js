@@ -149,7 +149,19 @@ gsap.to(".side-bar", {
 		}
 	}
 });
-
+gsap.to(".side-bar", {
+	scrollTrigger: {
+		trigger: "#chef",
+		start: "bottom center-=1%",
+		end: "bottom center-=1%",
+		onEnter: () => {
+			$(".side-bar").removeClass("is-show");
+		},
+		onLeaveBack: () => {
+			$(".side-bar").addClass("is-show");
+		}
+	}
+});
 
 
 

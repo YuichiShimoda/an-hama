@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Models\PressRelease;
 
 class PressReleaseStoreRequest extends FormRequest
 {
@@ -40,5 +41,23 @@ class PressReleaseStoreRequest extends FormRequest
             'end.date_format'      => '「 YYYY-MM-DD 」の形式で入力してください。',
             'end.after_or_equal'      => '開始日時よりも後の日時を入力してください。',
         ];
+    }
+
+    public function withValidator($validator)
+    {
+        $validator->after(function ($validator) {
+            $start = $this->input('start');
+            $end = $this->input('end');
+
+            $overlap = PressRelease::where(function ($query) use ($start, $end) {
+                $query->where('start', '<=', $end)
+                      ->where('end', '>=', $start);
+            })->exists();
+
+            if ($overlap) {
+                $validator->errors()->add('start', 'すでに登録しているデータと重複しています。');
+                $validator->errors()->add('end', ' ');
+            }
+        });
     }
 }

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'PR管理｜編集')
+@section('title', 'NEWS管理｜編集')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminlte/press-release.css') }}">
@@ -9,7 +9,7 @@
 
 @section('content_header')
     <div class="tit-box">
-        <h1>PR管理<span>｜</span>編集</h1>
+        <h1>NEWS管理<span>｜</span>編集</h1>
         <a href="{{ route('admin.press-release.index') }}" class="back-btn">
             <p>一覧に戻る</p>
         </a>

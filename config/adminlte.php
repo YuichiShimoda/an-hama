@@ -337,7 +337,7 @@ return [
             'icon' => 'fas fa-concierge-bell',
         ],
         [
-            'text' => 'PR編集',
+            'text' => 'NEWS編集',
             'url' => 'admin/press-release',
             'icon' => 'fas fa-bullhorn',
         ],
@@ -442,13 +442,13 @@ return [
         [
             'text' => 'Instagram',
             'icon_color' => 'purple',
-            'url' => 'https://www.instagram.com/?locale=ja_JP',
+            'url' => 'https://www.instagram.com/ankake.hama.chan/',
             'target' => '_blank',
         ],
         [
             'text' => 'X（ 旧Twitter ）',
             'icon_color' => 'black',
-            'url' => 'https://x.com',
+            'url' => 'https://x.com/ankakeHamaChan',
             'target' => '_blank',
         ],
         [

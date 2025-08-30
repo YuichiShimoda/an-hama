@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'PR管理')
+@section('title', 'NEWS管理')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminlte/press-release.css') }}">
@@ -13,14 +13,14 @@
         <x-adminlte-alert theme="success" title="{{ session('success') }}"></x-adminlte-alert>
     @endif
     <div class="tit-box">
-        <h1>PR管理</h1>
+        <h1>NEWS管理</h1>
         <a href="{{ route('admin.press-release.create') }}" class="create-btn">
             <p>新規作成</p>
         </a>
     </div>
     <div class="desc-box">
-        <p>PR情報を新規作成・編集・確認・削除できます。</p>
-        <p>PR情報は、条件を満たした場合にホームページ上でポップアップ表示されます。</p>
+        <p>NEWS情報を新規作成・編集・確認・削除できます。</p>
+        <p>NEWS情報は、条件を満たした場合にホームページ上でポップアップ表示されます。</p>
     </div>
 @endsection
 
