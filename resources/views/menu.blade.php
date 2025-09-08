@@ -457,7 +457,7 @@
             <img class="name" src="{{ asset('image/menu/menu5-name.svg') }}" alt="あんかけパスタ ハマちゃん">
             <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="フォーク">
             <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="トリコローレ">
-            <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="">
+            <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="週替りのプラスされる具材">
         </div>
         <div class="bottom-content-box">
             <div class="right-box">

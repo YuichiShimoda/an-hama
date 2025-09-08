@@ -2,7 +2,6 @@
 @section('title', 'あんかけピザ｜あんかけハマちゃん')
 @section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
 @section('meta_tags')
-    <meta name="robots" content="noindex, nofollow">
 @stop
 
 @section('css')
@@ -280,7 +279,7 @@
             <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="トリコローレ">
             <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
             <!-- <img class="hama-sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース"> -->
-            <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="">
+            <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="週替りのプラスされる具材">
         </div>
     </section>
 
