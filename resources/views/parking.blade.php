@@ -37,7 +37,7 @@
     <section id="parking-map">
         <div class="pc-content-box">
             <div class="inside">
-                <img src="{{ asset('image/info/pc-parking-map.webp') }}" alt="">
+                <img src="{{ asset('image/info/pc-parking-map.webp') }}" alt="近隣駐車場 料金">
             </div>
             <div class="ripple-box parking1" data-target="modal1">
                 <div class="ripple-btn"></div>
@@ -78,7 +78,7 @@
         </div>
         <div class="sp-content-box">
             <div class="inside">
-                <img src="{{ asset('image/info/sp-parking-map.webp') }}" alt="">
+                <img src="{{ asset('image/info/sp-parking-map.webp') }}" alt="近隣駐車場 料金">
             </div>
             <div class="ripple-box parking1" data-target="modal1">
                 <div class="ripple-btn"></div>
@@ -130,7 +130,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/a.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/a.webp') }}" alt="駐車場A">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -140,7 +140,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/b.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/b.webp') }}" alt="駐車場B">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -150,7 +150,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/c.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/c.webp') }}" alt="駐車場C">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -160,7 +160,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/d.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/d.webp') }}" alt="駐車場D">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -170,7 +170,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/e.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/e.webp') }}" alt="駐車場E">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -180,7 +180,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/f.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/f.webp') }}" alt="駐車場F">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -190,7 +190,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/g.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/g.webp') }}" alt="駐車場G">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -200,7 +200,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/h.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/h.webp') }}" alt="駐車場H">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -210,7 +210,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/i.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/i.webp') }}" alt="駐車場I">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -221,7 +221,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/j.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/j.webp') }}" alt="駐車場J">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -231,7 +231,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/k.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/k.webp') }}" alt="駐車場K">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -241,7 +241,7 @@
             <div class="md-overlay md-close basic-hover"></div>
             <div class="md-contents">
                 <div class="md-inner basic-hover">
-                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/l.webp') }}" alt="">
+                    <img loading="lazy" class="fig" src="{{ asset('image/info/parking/l.webp') }}" alt="駐車場L">
                     <p class="note">※ 掲載情報は、変更になる場合があります。</p>
                     <img loading="lazy" class="close_btn" src="{{ asset('image/info/close-btn.svg') }}" alt="close">
                 </div>
@@ -252,11 +252,11 @@
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/info/scene1.webp') }}" alt="">
+            <img src="{{ asset('image/info/scene1.webp') }}" alt="料理渡し">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/info/scene2.webp') }}" alt="">
+            <img src="{{ asset('image/info/scene2.webp') }}" alt="店長 教育">
             <div class="overlay click-canvas"></div>
         </div>
     </section>

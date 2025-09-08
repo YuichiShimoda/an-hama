@@ -104,9 +104,9 @@
                     </div>
                     <div class="dish-box">
                         <div class="left-circle"></div>
-                        <img class="dish" src="{{ asset('image/pizza/pizza1.webp') }}" alt="">
+                        <img class="dish" src="{{ asset('image/pizza/pizza1.webp') }}" alt="あんかけピザ ミラカン">
                     </div>
-                    <img class="bg" src="{{ asset('image/pizza/pizza1-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/pizza/pizza1-paint.svg') }}" alt="背景ペイント">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -118,10 +118,10 @@
                     <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/pizza/pizza1-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
-            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza1-name.svg') }}" alt="あんかけピザ ミラカン">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="フォーク">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="トリコローレ">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
         </div>
     </section>
 
@@ -140,9 +140,9 @@
                     </div>
                     <div class="dish-box">
                         <div class="right-circle"></div>
-                        <img class="dish" src="{{ asset('image/pizza/pizza2.webp') }}" alt="">
+                        <img class="dish" src="{{ asset('image/pizza/pizza2.webp') }}" alt="あんかけピザ ミラネーズ">
                     </div>
-                    <img class="bg" src="{{ asset('image/pizza/pizza2-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/pizza/pizza2-paint.svg') }}" alt="背景ペイント">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -154,10 +154,10 @@
                     <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/pizza/pizza2-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
-            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza2-name.svg') }}" alt="あんかけピザ ミラネーズ">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="フォーク">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="トリコローレ">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
         </div>
     </section>
 
@@ -179,9 +179,9 @@
                     </div>
                     <div class="dish-box">
                         <div class="left-circle"></div>
-                        <img class="dish" src="{{ asset('image/pizza/pizza3.webp') }}" alt="">
+                        <img class="dish" src="{{ asset('image/pizza/pizza3.webp') }}" alt="あんかけピザ ミラエッグ">
                     </div>
-                    <img class="bg" src="{{ asset('image/pizza/pizza3-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/pizza/pizza3-paint.svg') }}" alt="背景ペイント">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -193,10 +193,10 @@
                     <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/pizza/pizza3-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
-            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza3-name.svg') }}" alt="あんかけピザ ミラエッグ">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="フォーク">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="トリコローレ">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
         </div>
     </section>
 
@@ -221,9 +221,9 @@
                     </div> -->
                     <div class="dish-box">
                         <div class="right-circle"></div>
-                        <img class="dish" src="{{ asset('image/pizza/pizza4.webp') }}" alt="">
+                        <img class="dish" src="{{ asset('image/pizza/pizza4.webp') }}" alt="あんかけピザ ポパイ">
                     </div>
-                    <img class="bg" src="{{ asset('image/pizza/pizza4-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/pizza/pizza4-paint.svg') }}" alt="背景ペイント">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -235,10 +235,10 @@
                     <p>1,000<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/pizza/pizza4-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
-            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
+            <img class="name" src="{{ asset('image/pizza/pizza4-name.svg') }}" alt="あんかけピザ ポパイ">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="フォーク">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="トリコローレ">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
         </div>
     </section>
 
@@ -261,9 +261,9 @@
                     </div>
                     <div class="dish-box">
                         <div class="left-circle"></div>
-                        <img class="dish" src="{{ asset('image/pizza/pizza5.webp') }}" alt="">
+                        <img class="dish" src="{{ asset('image/pizza/pizza5.webp') }}" alt="あんかけピザ ハマちゃん">
                     </div>
-                    <img class="bg" src="{{ asset('image/pizza/pizza5-paint.svg') }}" alt="">
+                    <img class="bg" src="{{ asset('image/pizza/pizza5-paint.svg') }}" alt="背景ペイント">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -275,11 +275,11 @@
                     <p>1,200<span class="yen">円</span></p>
                 </div>
             </div>
-            <img class="name" src="{{ asset('image/pizza/pizza5-name.svg') }}" alt="">
-            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="">
-            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="">
-            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="">
-            <!-- <img class="hama-sauce" src="{{ asset('image/menu/sauce.webp') }}" alt=""> -->
+            <img class="name" src="{{ asset('image/pizza/pizza5-name.svg') }}" alt="あんかけピザ ハマちゃん">
+            <img class="fork" src="{{ asset('image/pizza/fork.svg') }}" alt="フォーク">
+            <img class="tricolore" src="{{ asset('image/pizza/tricolore.svg') }}" alt="トリコローレ">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
+            <!-- <img class="hama-sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース"> -->
             <img class="addition" src="{{ asset('image/menu/addition.webp') }}" alt="">
         </div>
     </section>
@@ -318,11 +318,11 @@
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/pizza/scene1.webp') }}" alt="">
+            <img src="{{ asset('image/pizza/scene1.webp') }}" alt="注文">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/pizza/scene2.webp') }}" alt="">
+            <img src="{{ asset('image/pizza/scene2.webp') }}" alt="料理運び">
             <div class="overlay click-canvas"></div>
         </div>
         <a class="menu-link-box" href="{{ route('menu') }}">

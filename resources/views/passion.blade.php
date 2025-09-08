@@ -49,16 +49,16 @@
         <h2>旨味たっぷり、ほどよい辛さ<br>とろ～りマイルドソース</h2>
         <div class="content-box">
             <div class="bg-img-box">
-                <img class="txt" src="{{ asset('image/passion/love-cooking.svg') }}" alt="">
-                <img class="img" src="{{ asset('image/passion/cooking-equipment.svg') }}" alt="">
+                <img class="txt" src="{{ asset('image/passion/love-cooking.svg') }}" alt="love cooking">
+                <img class="img" src="{{ asset('image/passion/cooking-equipment.svg') }}" alt="調理器具">
             </div>
             <div class="left-box">
                 <div class="main">
-                    <img src="{{ asset('image/passion/sauce-left1.webp') }}" alt="">
+                    <img src="{{ asset('image/passion/sauce-left1.webp') }}" alt="ずんどう">
                     <div class="overlay"></div>
                 </div>
                 <div class="sub">
-                    <img src="{{ asset('image/passion/sauce-left2.webp') }}" alt="">
+                    <img src="{{ asset('image/passion/sauce-left2.webp') }}" alt="ソース仕込み">
                     <div class="overlay"></div>
                 </div>
             </div>
@@ -69,11 +69,11 @@
                 </div>
                 <div class="img-box">
                     <div class="left">
-                        <img src="{{ asset('image/passion/sauce-right1.webp') }}" alt="">
+                        <img src="{{ asset('image/passion/sauce-right1.webp') }}" alt="ソース">
                         <div class="overlay"></div>
                     </div>
                     <div class="right">
-                        <img src="{{ asset('image/passion/sauce-right2.webp') }}" alt="">
+                        <img src="{{ asset('image/passion/sauce-right2.webp') }}" alt="盛り付け ソースかけ">
                         <div class="overlay"></div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
         <h2>もちもち、ぷりぷり<br>心地よい歯ごたえ</h2>
         <div class="content-box">
             <div class="bg-img-box">
-                <img src="{{ asset('image/passion/pasta-on-fork.svg') }}" alt="">
+                <img src="{{ asset('image/passion/pasta-on-fork.svg') }}" alt="パスタ">
             </div>
             <div class="top-box">
                 <div class="txt-box">
@@ -99,7 +99,7 @@
                 </div>
                 <div class="img-box">
                     <div class="with-pasta">
-                        <img src="{{ asset('image/passion/pasta-right.webp') }}" alt="">
+                        <img src="{{ asset('image/passion/pasta-right.webp') }}" alt="フォークにパスタ">
                         <div class="overlay"></div>
                     </div>
                     <div class="v-txt-box">
@@ -111,7 +111,7 @@
             <div class="bottom-box">
                 <div class="img-box">
                     <div class="fryer">
-                        <img src="{{ asset('image/passion/pasta-left2.webp') }}" alt="">
+                        <img src="{{ asset('image/passion/pasta-left2.webp') }}" alt="パスタ 油通し">
                         <div class="overlay"></div>
                     </div>
                     <div class="v-txt-box">
@@ -131,14 +131,14 @@
         <div class="content-box">
             <div class="bg-img-box">
                 <div class="outside-box">
-                    <img src="{{ asset('image/passion/mill-top.svg') }}" alt="">
+                    <img src="{{ asset('image/passion/mill-top.svg') }}" alt="ペッパーミル">
                     <div class="inside-box">
-                        <img src="{{ asset('image/passion/mill-bottom.svg') }}" alt="">
+                        <img src="{{ asset('image/passion/mill-bottom.svg') }}" alt="コショウ">
                     </div>
                 </div>
             </div>
             <div class="left-img">
-                <img src="{{ asset('image/passion/pepper-left.webp') }}" alt="">
+                <img src="{{ asset('image/passion/pepper-left.webp') }}" alt="コショウの実">
                 <div class="overlay"></div>
             </div>
             <div class="center-box">
@@ -147,12 +147,12 @@
                     <p>あんかけハマちゃんは、伝統的なスパイス感を数種類のコショウをブレンドし踏襲しつつ、より現代的にコショウの持つ消化促進、血行促進、抗酸化作用などの様々な健康効果をソースに付加するとともに味の奥行き感を意識したマイルドな配合に仕上げました。</p>
                 </div>
                 <div class="center-img">
-                    <img src="{{ asset('image/passion/pepper-center.webp') }}" alt="">
+                    <img src="{{ asset('image/passion/pepper-center.webp') }}" alt="ペッパーミル">
                     <div class="overlay"></div>
                 </div>
             </div>
             <div class="right-img">
-                <img src="{{ asset('image/passion/pepper-right.webp') }}" alt="">
+                <img src="{{ asset('image/passion/pepper-right.webp') }}" alt="ペッパーミル">
                 <div class="overlay"></div>
             </div>
         </div>
@@ -165,18 +165,18 @@
                 <div class="img-box">
                     <div class="base-box">
                         <div class="green-pepper-box">
-                            <img class="green-pepper" src="{{ asset('image/passion/food/green-pepper.webp') }}" alt="">
+                            <img class="green-pepper" src="{{ asset('image/passion/food/green-pepper.webp') }}" alt="青唐辛子">
                             <div class="overlay"></div>
                         </div>
                         <div class="egg-box">
-                            <img class="egg" src="{{ asset('image/passion/food/egg.webp') }}" alt="">
+                            <img class="egg" src="{{ asset('image/passion/food/egg.webp') }}" alt="卵">
                         </div>
                     </div>
                     <div class="tomato-box">
-                        <img class="tomato" src="{{ asset('image/passion/food/tomato.webp') }}" alt="">
+                        <img class="tomato" src="{{ asset('image/passion/food/tomato.webp') }}" alt="トマト">
                     </div>
                     <div class="carrot-box">
-                        <img class="carrot" src="{{ asset('image/passion/food/carrot.webp') }}" alt="">
+                        <img class="carrot" src="{{ asset('image/passion/food/carrot.webp') }}" alt="にんじん">
                     </div>
                 </div>
                 <div class="txt-box">
@@ -188,22 +188,22 @@
                 <div class="img-box">
                     <div class="base-box">
                         <div class="corn-box">
-                            <img class="corn" src="{{ asset('image/passion/food/corn.webp') }}" alt="">
+                            <img class="corn" src="{{ asset('image/passion/food/corn.webp') }}" alt="トウモロコシ">
                         </div>
                         <div class="vegetable-box">
-                            <img class="vegetable" src="{{ asset('image/passion/food/vegetable.webp') }}" alt="">
+                            <img class="vegetable" src="{{ asset('image/passion/food/vegetable.webp') }}" alt="野菜盛り">
                             <div class="overlay"></div>
                         </div>
                         <div class="spinach-box">
-                            <img class="spinach" src="{{ asset('image/passion/food/spinach.webp') }}" alt="">
+                            <img class="spinach" src="{{ asset('image/passion/food/spinach.webp') }}" alt="ほうれん草">
                             <div class="overlay"></div>
                         </div>
                     </div>
                     <div class="onion-box">
-                        <img class="onion" src="{{ asset('image/passion/food/onion.webp') }}" alt="">
+                        <img class="onion" src="{{ asset('image/passion/food/onion.webp') }}" alt="玉ねぎ">
                     </div>
                     <div class="wiener-box">
-                        <img class="wiener" src="{{ asset('image/passion/food/wiener.webp') }}" alt="">
+                        <img class="wiener" src="{{ asset('image/passion/food/wiener.webp') }}" alt="ウィンナー">
                     </div>
                 </div>
             </div>
@@ -214,10 +214,10 @@
         <h2>明るさと美しさに包まれた心地よい空間</h2>
         <div class="content-box">
             <div class="bg-left-img-box">
-                <img src="{{ asset('image/passion/restaurant.svg') }}" alt="">
+                <img src="{{ asset('image/passion/restaurant.svg') }}" alt="レストラン">
             </div>
             <div class="bg-right-img-box">
-                <img src="{{ asset('image/passion/light.svg') }}" alt="">
+                <img src="{{ asset('image/passion/light.svg') }}" alt="ライト">
             </div>
             <div class="left-box">
                 <div class="img-box">
@@ -226,7 +226,7 @@
                         <p>お一人様でも気軽に入れる小さなお店</p>
                     </div>
                     <div class="interior1-box">
-                        <img src="{{ asset('image/passion/shop-center.webp') }}" alt="">
+                        <img src="{{ asset('image/passion/shop-center.webp') }}" alt="店内">
                         <div class="overlay"></div>
                     </div>
                 </div>
@@ -236,21 +236,21 @@
                     <p>老若男女、キレイな空間でイマドキの“名古屋を感じるパスタ”をお楽しみください。</p>
                 </div>
                 <div class="interior2-box">
-                    <img src="{{ asset('image/passion/shop-left.webp') }}" alt="">
+                    <img src="{{ asset('image/passion/shop-left.webp') }}" alt="サービスカード">
                     <div class="overlay"></div>
                 </div>
             </div>
             <div class="right-box">
                 <div class="interior3-box">
-                    <img src="{{ asset('image/passion/shop-right1.webp') }}" alt="">
+                    <img src="{{ asset('image/passion/shop-right1.webp') }}" alt="カウンター席">
                     <div class="overlay"></div>
                 </div>
                 <div class="interior4-box">
-                    <img src="{{ asset('image/passion/shop-right2.webp') }}" alt="">
+                    <img src="{{ asset('image/passion/shop-right2.webp') }}" alt="カウンター席">
                     <div class="overlay"></div>
                 </div>
                 <div class="interior5-box">
-                    <img src="{{ asset('image/passion/shop-right3.webp') }}" alt="">
+                    <img src="{{ asset('image/passion/shop-right3.webp') }}" alt="テーブル席">
                     <div class="overlay"></div>
                 </div>
             </div>
@@ -259,11 +259,11 @@
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/passion/scene1.webp') }}" alt="">
+            <img src="{{ asset('image/passion/scene1.webp') }}" alt="親子">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/passion/scene2.webp') }}" alt="">
+            <img src="{{ asset('image/passion/scene2.webp') }}" alt="サービスカード 手渡し">
             <div class="overlay click-canvas"></div>
         </div>
     </section>

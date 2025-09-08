@@ -25,8 +25,8 @@
 @section('content_sidebar')
     <a class="side-bar" href="{{ route('voice') }}" target="_blank" rel="noopener noreferrer">
         <div class="icon-box">
-            <img class="nomal" src="{{ asset('image/questionnaire.png') }}" alt="">
-            <img class="move" src="{{ asset('image/questionnaire.png') }}" alt="">
+            <img class="nomal" src="{{ asset('image/questionnaire.png') }}" alt="星">
+            <img class="move" src="{{ asset('image/questionnaire.png') }}" alt="星">
         </div>
         <p>アンケート</p>
     </a>
@@ -41,7 +41,7 @@
     </section>
 
     <section id="overview">
-        <img class="left-box" src="{{ asset('image/info/exterior.webp') }}" alt="">
+        <img class="left-box" src="{{ asset('image/info/exterior.webp') }}" alt="入口">
         <div class="right-box">
             <div class="content-box">
                 <div class="ele">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="ele">
                     <p class="tit">決済方法</p>
-                    <p class="desc">現金<img class="pay-logo" src="{{ asset('image/info/pay.webp') }}" alt=""></p>
+                    <p class="desc">現金<img class="pay-logo" src="{{ asset('image/info/pay.webp') }}" alt="利用可能クレジットカード"></p>
                 </div>
                 <div class="ele">
                     <p class="tit">最寄り駅</p>
@@ -72,7 +72,7 @@
                     <p class="tit">駐車場</p>
                     <a class="desc" href="{{ route('parking') }}" target="_blank" rel="noopener noreferrer">
                         <span class="parking">※ 近隣のコインパーキングをご利用ください</span>
-                        <img class="external-link-icon" src="{{ asset('image/info/external-link-icon.svg') }}" alt="">
+                        <img class="external-link-icon" src="{{ asset('image/info/external-link-icon.svg') }}" alt="リンク">
                     </a>
                 </div>
             </div>
@@ -83,12 +83,12 @@
         <h2>アクセス</h2>
         <div class="content-box">
             <div class="train-box">
-                <img class="icon" src="{{ asset('image/info/train.svg') }}" alt="">
+                <img class="icon" src="{{ asset('image/info/train.svg') }}" alt="電車">
                 <p class="cat">電車でお越しの場合</p>
                 <p class="desc">地下鉄 名城線 志賀本通駅<br>4番出口より 徒歩 約2分</p>
             </div>
             <div class="car-box">
-                <img class="icon" src="{{ asset('image/info/car.svg') }}" alt="">
+                <img class="icon" src="{{ asset('image/info/car.svg') }}" alt="車">
                 <p class="cat">車でお越しの場合</p>
                 <p class="desc">お車を止める際は、近隣のコインパーキングをご利用ください。</p>
             </div>
@@ -100,11 +100,11 @@
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/info/scene1.webp') }}" alt="">
+            <img src="{{ asset('image/info/scene1.webp') }}" alt="料理渡し">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/info/scene2.webp') }}" alt="">
+            <img src="{{ asset('image/info/scene2.webp') }}" alt="店長 教育">
             <div class="overlay click-canvas"></div>
         </div>
     </section>

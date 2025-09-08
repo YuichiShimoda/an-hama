@@ -96,7 +96,7 @@
             <!-- End Google Tag Manager (noscript) -->
             <header class="header-box">
                 <a class="logo-box" href="{{ route('home') }}">
-                    <img class="logo" src="{{ asset('image/top/logo.svg') }}" alt="">
+                    <img class="logo" src="{{ asset('image/top/logo.svg') }}" alt="ロゴ">
                 </a>
                 <nav>
                     <ul>
@@ -109,7 +109,7 @@
                         <li>
                             <div class="main-link-txt accordion" href="{{ route('menu') }}">
                                 <p class="en">MENU</p>
-                                <p class="jp">メニュー<img class="nav-arrow" src="{{ asset('image/nav-arrow.svg') }}" alt=""></p>
+                                <p class="jp">メニュー<img class="nav-arrow" src="{{ asset('image/nav-arrow.svg') }}" alt="矢印"></p>
                                 <div class="sub-nav-box">
                                     <div class="inside-box">
                                         <a class="sub-link-txt" href="{{ route('menu') }}">あんかけパスタ</a>
@@ -131,8 +131,8 @@
             </header>
             <div id="cursor" class="cursor-box">
                 <div class="inside">
-                    <img class="circle" src="{{ asset('image/cursor-circle.svg') }}" alt="">
-                    <img class="pasta-icon" src="{{ asset('image/pasta-icon.svg') }}" alt="">
+                    <img class="circle" src="{{ asset('image/cursor-circle.svg') }}" alt="円">
+                    <img class="pasta-icon" src="{{ asset('image/pasta-icon.svg') }}" alt="パスタ">
                 </div>
             </div>
             <canvas id="c"></canvas>
@@ -189,7 +189,7 @@
                 <div class="content-box">
                     <div class="left-box click-canvas">
                         <a class="logo not-click-canvas" href="{{ route('home') }}">
-                            <img src="{{ asset('image/top/logo.svg') }}" alt="">
+                            <img src="{{ asset('image/top/logo.svg') }}" alt="ロゴ">
                         </a>
                         <p class="zipcode"><span>〒</span>462 - 0853</p>
                         <p class="address">愛知県 名古屋市 北区 志賀本通 二丁目 48番地　1F北</p>
@@ -205,18 +205,18 @@
                     <div class="right-box click-canvas">
                         <div class="sns-box">
                             <a class="insta-box" href="">
-                                <img class="logo" src="{{ asset('image/sns-icon.svg') }}" alt="">
+                                <img class="logo" src="{{ asset('image/sns-icon.svg') }}" alt="SNS">
                             </a>
                             <a class="line-box" href="">
-                                <img class="logo" src="{{ asset('image/sns-icon.svg') }}" alt="">
+                                <img class="logo" src="{{ asset('image/sns-icon.svg') }}" alt="SNS">
                             </a>
                             <a class="x-box" href="">
-                                <img class="logo" src="{{ asset('image/sns-icon.svg') }}" alt="">
+                                <img class="logo" src="{{ asset('image/sns-icon.svg') }}" alt="SNS">
                             </a>
                         </div>
                         <div class="tel-box not-click-canvas">
                             <a class="inside-box" href="tel:052-938-3392">
-                                <img class="icon" src="{{ asset('image/tel-icon.svg') }}" alt="">
+                                <img class="icon" src="{{ asset('image/tel-icon.svg') }}" alt="電話">
                                 <p>052 - 938 - 3392</p>
                             </a>
                         </div>
@@ -236,14 +236,14 @@
                         </nav>
                         <a class="voice-link-box" href="{{ route('voice') }}" target="_blank" rel="noopener noreferrer">
                             <p>アンケート</p>
-                            <img class="icon" src="{{ asset('image/external-link-icon.svg') }}" alt="">
+                            <img class="icon" src="{{ asset('image/external-link-icon.svg') }}" alt="リンク">
                         </a>
                     </div>
                 </div>
                 <div class="copyright-box">
                     <div class="corporate-box">
                         <a class="link-box" href="https://grow-no1.com" target="_blank" rel="noopener noreferrer">
-                            <img class="logo" src="{{ asset('image/corporate-logo.svg') }}" alt="">
+                            <img class="logo" src="{{ asset('image/corporate-logo.svg') }}" alt="株式会社 growロゴ">
                         </a>
                         <div class="invoice-box">
                             <p class="tit">登録番号：</p>
@@ -265,7 +265,7 @@
                 @if (Route::currentRouteName() === 'home')
                     <a class="parking-link-btn" href="{{ route('parking') }}" target="_blank" rel="noopener noreferrer">
                         <p>コインパーキングのご案内</p>
-                        <img class="icon" src="{{ asset('image/external-link-icon.svg') }}" alt="">
+                        <img class="icon" src="{{ asset('image/external-link-icon.svg') }}" alt="リンク">
                     </a>
                 @endif
             </footer>
