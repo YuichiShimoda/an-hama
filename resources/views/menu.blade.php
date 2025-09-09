@@ -1,7 +1,103 @@
 @extends('layouts.viewer')
 @section('title', 'あんかけパスタ｜あんかけハマちゃん')
-@section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
+@section('description', 'あんハマのオリジナルソースで再定義した定番系のあんかけパスタ、創作系のつけかけパスタ"－ Dip & Pour －"をご用意しています。')
 @section('meta_tags')
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "あんかけパスタ｜あんかけハマちゃん",
+        "url": "https://an-hama.com/menu",
+        "hasMenuSection": [
+            {
+                "@type": "MenuSection",
+                "name": "あんかけパスタ",
+                "hasMenuItem": [
+                    {
+                        "@type": "MenuItem",
+                        "name": "ミラカン",
+                        "image": "https://an-hama.com/image/top/menu1.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1200",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ミラネーズ",
+                        "image": "https://an-hama.com/image/top/menu2.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1200",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ミラエッグ",
+                        "image": "https://an-hama.com/image/top/menu3.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1200",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ポパイ",
+                        "image": "https://an-hama.com/image/top/menu4.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1200",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ハマちゃん　※ 週替わりメニュー",
+                        "image": "https://an-hama.com/image/top/menu5.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1500",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ペペロンチーノ　※ オイルパスタ",
+                        "image": "https://an-hama.com/image/top/sosaku1.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "インディアン　※ カレーパスタ",
+                        "image": "https://an-hama.com/image/top/sosaku2.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ジェノベーゼ　※ バジルパスタ",
+                        "image": "https://an-hama.com/image/top/sosaku3.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 @stop
 
 @section('css')

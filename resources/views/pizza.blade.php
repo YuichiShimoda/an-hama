@@ -1,7 +1,73 @@
 @extends('layouts.viewer')
 @section('title', 'あんかけピザ｜あんかけハマちゃん')
-@section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
+@section('description', '直径24cmのあんかけピザは、あんかけパスタの"あん"をソースに使ったオリジナルピザです。旨味とコクたっぷり"あん"がピザ生地とよく合い、深い味わいに仕上げました。お持ち帰りもできます。')
 @section('meta_tags')
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "あんかけピザ｜あんかけハマちゃん",
+        "url": "https://an-hama.com/menu/pizza",
+        "hasMenuSection": [
+            {
+                "@type": "MenuSection",
+                "name": "あんかけピザ",
+                "hasMenuItem": [
+                    {
+                        "@type": "MenuItem",
+                        "name": "ミラカン",
+                        "image": "https://an-hama.com/image/top/pizza1.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ミラネーズ",
+                        "image": "https://an-hama.com/image/top/pizza2.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ミラエッグ",
+                        "image": "https://an-hama.com/image/top/pizza3.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ポパイ",
+                        "image": "https://an-hama.com/image/top/pizza4.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "ハマちゃん　※ 週替わりメニュー",
+                        "image": "https://an-hama.com/image/top/pizza5.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1200",
+                            "priceCurrency": "JPY"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 @stop
 
 @section('css')

@@ -2,6 +2,62 @@
 @section('title', 'あんかけハマちゃん｜名古屋あんかけスパゲティ')
 @section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
 @section('meta_tags')
+    <script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"Restaurant",
+        "name":"あんかけハマちゃん",
+        "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"志賀本通２丁目48番地 1F北",
+            "addressLocality":"名古屋市北区",
+            "addressRegion":"愛知県",
+            "postalCode":"462-0853",
+            "addressCountry":"JP"
+        },
+        "geo":{
+            "@type":"GeoCoordinates",
+            "latitude":"35.196578",
+            "longitude":"136.921385"
+        },
+        "telephone":"+81-52-938-3392",
+        "servesCuisine": ["あんかけパスタ", "あんかけピザ", "つけかけパスタ"],
+        "openingHoursSpecification":[
+            {
+                "@type":"OpeningHoursSpecification",
+                "dayOfWeek":[
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens":"11:00",
+                "closes":"15:00"
+            }
+        ],
+        "image":[
+            "https://an-hama.com/image/info/exterior.webp",
+            "https://an-hama.com/image/passion/shop-center.webp",
+            "https://an-hama.com/image/top/back-shot.webp",
+            "https://an-hama.com/image/menu/menu1.webp",
+            "https://an-hama.com/image/menu/sosaku1.webp",
+            "https://an-hama.com/image/menu/sosaku2.webp",
+            "https://an-hama.com/image/menu/sosaku3.webp",
+            "https://an-hama.com/image/pizza/pizza1.webp"
+        ],
+        "url":"https://an-hama.com/",
+        "menu": [
+            "https://an-hama.com/menu",
+            "https://an-hama.com/menu/pizza"
+        ],
+        "sameAs": [
+            "https://www.instagram.com/ankake.hama.chan",
+            "https://x.com/ankakeHamaChan"
+        ]
+    }
+    </script>
 @stop
 
 @section('css')

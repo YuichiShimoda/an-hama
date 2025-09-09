@@ -1,7 +1,30 @@
 @extends('layouts.viewer')
 @section('title', 'コインパーキング｜あんかけハマちゃん')
-@section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
+@section('description', '車でお越しの際は、近隣のコインパーキングをご利用ください。店舗周辺のコインパーキングの場所や料金についてご案内いたします。')
 @section('meta_tags')
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "コインパーキング｜あんかけハマちゃん",
+        "url": "https://an-hama.com/parking",
+        "description": "車でお越しの際は、近隣のコインパーキングをご利用ください。店舗周辺のコインパーキングの場所や料金についてご案内いたします。",
+        "about": {
+            "@type": "Restaurant",
+            "name": "あんかけハマちゃん",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "志賀本通２丁目48番地 1F北",
+                "addressLocality": "名古屋市北区",
+                "addressRegion": "愛知県",
+                "postalCode": "462-0853",
+                "addressCountry": "JP"
+            },
+            "telephone": "+81-52-938-3392",
+            "url": "https://an-hama.com/"
+        }
+    }
+    </script>
 @stop
 
 @section('css')

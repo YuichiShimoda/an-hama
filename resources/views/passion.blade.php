@@ -1,7 +1,31 @@
 @extends('layouts.viewer')
 @section('title', 'こだわり｜あんかけハマちゃん')
-@section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
+@section('description', '伝統の味をマイルドかつ現代的に再構築し、一般的なパスタ好きも魅了する新たな"あんかけパスタ"を提供いたします。老若男女、キレイな空間でイマドキの"名古屋を感じるパスタ"をお楽しみいただけます。')
 @section('meta_tags')
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "こだわり｜あんかけハマちゃん",
+        "url": "https://an-hama.com/passion",
+        "description": "伝統の味をマイルドかつ現代的に再構築し、一般的なパスタ好きも魅了する新たな\"あんかけパスタ\"を提供いたします。老若男女、キレイな空間でイマドキの\"名古屋を感じるパスタ\"をお楽しみいただけます。",
+        "about": {
+            "@type": "Restaurant",
+            "name": "あんかけハマちゃん",
+            "servesCuisine": ["あんかけパスタ", "あんかけピザ", "創作料理"],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "志賀本通２丁目48番地 1F北",
+                "addressLocality": "名古屋市北区",
+                "addressRegion": "愛知県",
+                "postalCode": "462-0853",
+                "addressCountry": "JP"
+            },
+            "telephone": "+81-52-938-3392",
+            "url": "https://an-hama.com/"
+        }
+    }
+    </script>
 @stop
 
 @section('css')

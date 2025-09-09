@@ -1,7 +1,52 @@
 @extends('layouts.viewer')
 @section('title', '店舗情報｜あんかけハマちゃん')
-@section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
+@section('description', '名古屋市北区 志賀本通にある"あんかけハマちゃん"は、11:00から営業しています。電車でもお車でもお越しいただけますので、お近くにお越しの際はぜひお立ち寄りください。')
 @section('meta_tags')
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "あんかけハマちゃん",
+        "image": [
+            "https://an-hama.com/image/info/exterior.webp"
+        ],
+        "url": "https://an-hama.com/info",
+        "telephone": "+81-52-938-3392",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "志賀本通２丁目48番地 1F北",
+            "addressLocality": "名古屋市北区",
+            "addressRegion": "愛知県",
+            "postalCode": "462-0853",
+            "addressCountry": "JP"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "35.196578",
+            "longitude": "136.921385"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens": "11:00",
+                "closes": "15:00"
+            }
+        ],
+        "servesCuisine": ["あんかけパスタ", "あんかけピザ", "創作料理"],
+        "menu": [
+            "https://an-hama.com/menu",
+            "https://an-hama.com/menu/pizza"
+        ]
+    }
+    </script>
 @stop
 
 @section('css')
