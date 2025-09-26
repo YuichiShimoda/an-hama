@@ -333,6 +333,8 @@ body::-webkit-scrollbar
 			display: flex
 			justify-content: center
 			align-items: center
+			flex-wrap: wrap
+			width: 500px
 			margin: 25px auto 0
 			z-index: 2
 			position: relative
@@ -376,14 +378,15 @@ body::-webkit-scrollbar
 						margin-top: 10px
 				&.info-addition
 					padding: 8px 0
-					margin-left: 15px
+					margin-top: 10px
+					margin-left: 0
 					border: 0
 					background-color: initial
 					font-size: 12px
 					letter-spacing: 0.1em
 					color: #555
 					+bp600
-						margin-left: 0
+						margin-left: 15px
 				// &.previous
 				// 	border: solid 1px #006134
 				// 	background-color: #006134
