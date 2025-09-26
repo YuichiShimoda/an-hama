@@ -6,6 +6,9 @@ Disallow: /image/
 Disallow: /movie/
 Disallow: /vendor/
 
+# ただし、/image/favicon/以下は許可
+Allow: /image/favicon/
+
 # APIや非公開ルートがあればそれもブロック（必要に応じて）
 Disallow: /api/
 Disallow: /admin/

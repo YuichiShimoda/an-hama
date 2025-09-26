@@ -45,6 +45,7 @@
             "https://an-hama.com/image/menu/sosaku1.webp",
             "https://an-hama.com/image/menu/sosaku2.webp",
             "https://an-hama.com/image/menu/sosaku3.webp",
+            "https://an-hama.com/image/menu/sosaku4.webp",
             "https://an-hama.com/image/pizza/pizza1.webp"
         ],
         "url":"https://an-hama.com/",
@@ -349,6 +350,9 @@
                     </div>
                     <div class="swiper-slide">
                         <img src="{{ asset('image/top/sosaku3.webp') }}" alt="バジルパスタ ジェノベーゼ">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('image/top/sosaku4.webp') }}" alt="チーズパスタ カルボナーラ">
                     </div>
                     <div class="swiper-slide">
                         <img src="{{ asset('image/top/pizza1.webp') }}" alt="あんかけピザ ミラカン">

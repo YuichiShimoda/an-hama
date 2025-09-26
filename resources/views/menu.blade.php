@@ -92,6 +92,16 @@
                             "price": "1000",
                             "priceCurrency": "JPY"
                         }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "カルボナーラ　※ チーズパスタ",
+                        "image": "https://an-hama.com/image/top/sosaku4.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
                     }
                 ]
             }
@@ -169,6 +179,7 @@
                 <a href="#peperoncino">ペペロンチーノ</a>
                 <a href="#indian">インディアン</a>
                 <a href="#genovese">ジェノベーゼ</a>
+                <a href="#carbonara">カルボナーラ</a>
                 <a class="info-addition" href="#info-addition">~ 随時追加予定 ~</a>
             </div>
             <div class="option-box">
@@ -761,11 +772,11 @@
             <div class="img-box">
                 <div class="base-box click-canvas">
                     <img class="dish" src="{{ asset('image/menu/sosaku3.webp') }}" alt="つけかけパスタ ジェノベーゼ">
-                    <img class="bg" src="{{ asset('image/menu/menu2-paint.svg') }}" alt="背景ペイント">
+                    <img class="bg" src="{{ asset('image/menu/menu4-paint.svg') }}" alt="背景ペイント">
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu2.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('movie/menu3.mp4') }}" type="video/mp4">
                     </video>
                 </div>
                 <div class="copy-box">
@@ -825,6 +836,75 @@
             </div>
         </div>
     </section>
+    <section id="carbonara">
+        <div class="top-content-box">
+            <div class="img-box">
+                <div class="base-box click-canvas">
+                    <img class="dish" src="{{ asset('image/menu/sosaku4.webp') }}" alt="つけかけパスタ カルボナーラ">
+                    <img class="bg" src="{{ asset('image/menu/menu3-paint.svg') }}" alt="背景ペイント">
+                </div>
+                <div class="food-box">
+                    <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
+                        <source src="{{ asset('movie/menu4.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+                <div class="copy-box">
+                    <div class="pasta-category-box"><p>チーズパスタ</p></div>
+                    <h3>カルボナーラ</h3>
+                    <p>1,000<span class="yen">円</span></p>
+                </div>
+            </div>
+            <img class="name" src="{{ asset('image/menu/sosaku4-name.svg') }}" alt="つけかけパスタ カルボナーラ">
+            <!-- <p class="italiano">Autentico</p> -->
+            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="フォーク">
+            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="トリコローレ">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
+        </div>
+        <div class="bottom-content-box">
+            <div class="right-box">
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">スモール</p>
+                        <p class="gram">200g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">950</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">レギュラー</p>
+                        <p class="gram">300g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,000</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">ラージ</p>
+                        <p class="gram">400g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,100</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">メガ</p>
+                        <p class="gram">600g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,200</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="announcement">
 <!--         <div class="content-box">
             <p>" 創作メニュー 第2弾 "</p>
@@ -834,7 +914,7 @@
         </div> -->
         <div class="text">
             <div class="text__content">
-                <h3 class="part-number">" 創作メニュー 第4弾 "</h3>
+                <h3 class="part-number">" 創作メニュー 第5弾 "</h3>
                 <h3 class="pasta-name">つけかけパスタ  <span>－ Dip & Pour －</span></h3>
                 <p><span>現在</span>開発中！<span>乞う</span>ご期待！</p>
             </div>

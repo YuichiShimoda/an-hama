@@ -581,6 +581,70 @@ gsap.to("#genovese .right-box", {
 
 
 
+gsap.to("#carbonara", {
+	scrollTrigger: {
+		trigger: "#carbonara .base-box",
+		start: "center bottom-=1%",
+		onEnter: () => {
+			$("#carbonara .top-content-box").addClass("is-show");
+		},
+	}
+});
+gsap.fromTo("#carbonara .base-box",
+	{opacity: 0.0, y: "-30vh"},
+	{opacity: 1.0, y: "0", ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#carbonara",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 2.0,
+			// markers: true,
+		}
+	}
+);
+gsap.fromTo("#carbonara .copy-box",
+	{opacity: 0.0, rotate: -60},
+	{opacity: 1.0, rotate: 0, ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#carbonara",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 1.0,
+			// markers: true,
+		}
+	}
+);
+gsap.fromTo("#carbonara .food-box",
+	{opacity: 0.0, rotate: 60},
+	{opacity: 0.3, rotate: 0, ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#carbonara",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 1.0,
+			// markers: true,
+		}
+	}
+);
+gsap.to("#carbonara .right-box", {
+	scrollTrigger: {
+		trigger: "#carbonara .right-box",
+		start: "top bottom-=1%",
+		end: "top bottom-=1%",
+		onEnter: () => {
+			$("#carbonara .right-box").addClass("is-show");
+		},
+		onLeaveBack: () => {
+			$("#carbonara .right-box").removeClass("is-show");
+		}
+	}
+});
+
+
+
+
+
+
 
 
 
