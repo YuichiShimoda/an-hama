@@ -334,15 +334,17 @@ body::-webkit-scrollbar
 			justify-content: center
 			align-items: center
 			flex-wrap: wrap
-			width: 500px
+			width: 370px
 			margin: 25px auto 0
 			z-index: 2
 			position: relative
-			+bp600
-				flex-wrap: wrap
-				width: 370px
+			// +bp600
+			// 	flex-wrap: wrap
+			// 	width: 370px
 			+bp450
 				margin: 25px auto 0
+			+bp400
+				width: 350px
 			a
 				display: flex
 				justify-content: center
@@ -367,12 +369,12 @@ body::-webkit-scrollbar
 				&:nth-of-type(1)
 					margin-left: 0
 				&:nth-of-type(4)
-					+bp600
-						margin-top: 10px
-						margin-left: 0
+					margin-top: 10px
+					margin-left: 0
+					// +bp600
 				&:nth-of-type(5)
-					+bp600
-						margin-top: 10px
+					margin-top: 10px
+					// +bp600
 				&:nth-of-type(6)
 					+bp600
 						margin-top: 10px
@@ -1762,7 +1764,7 @@ body::-webkit-scrollbar
 
 
 
-#peperoncino, #indian, #genovese, #carbonara
+#peperoncino, #indian, #genovese, #carbonara, #katsuh-nori
 	display: block
 	width: 100%
 	padding-top: 80px
@@ -2743,7 +2745,166 @@ body::-webkit-scrollbar
 				top: 56%
 				left: 80%
 				transform: translate(-50%, -50%) rotate(9deg)
-
+#katsuh-nori .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 180px
+		transform: rotate(60deg)
+		+bp600
+			width: 144px
+		+bp550
+			width: 125px
+		+bp450
+			// width: 180px
+	.fork
+		left: 40%
+		bottom: 30%
+		transform: rotate(-10deg)
+	.tricolore
+		right: -42px
+		bottom: 24px
+		width: 50px
+		+bp600
+			right: -34px
+			bottom: 19px
+			width: 40px
+		+bp450
+			// right: -42px
+			// bottom: 24px
+			// width: 50px
+	.sauce
+		position: absolute
+		top: 22px
+		right: -45px
+		display: block
+		width: 160px
+		opacity: 0.0
+		transition: all 1.0s 2.0s ease-in-out
+		+bp600
+			top: 40px
+			right: -60px
+			width: 140px
+		+bp500
+			top: 45px
+			right: -50px
+			width: 130px
+			z-index: 10
+			transition: all 1.0s 1.5s ease-in-out
+	.addition
+		position: absolute
+		top: 15px
+		right: -45px
+		display: block
+		width: 150px
+		opacity: 0.0
+		transition: all 1.0s 2.0s ease-in-out
+		+bp600
+			top: 15px
+			right: -40px
+			width: 140px
+		+bp500
+			top: initial
+			bottom: -10px
+			right: -15px
+			width: 120px
+			z-index: 10
+			transition: all 1.0s 1.5s ease-in-out
+	&.is-show
+		.name
+			left: -129px
+			bottom: 57px
+			transform: rotate(-20deg)
+			+bp600
+				left: -103px
+				bottom: 46px
+			+bp550
+				left: -83px
+				bottom: 45px
+			+bp450
+				// left: -129px
+				// bottom: 57px
+		.fork
+			left: -24px
+			bottom: 12px
+			transform: rotate(5deg)
+			+bp600
+				left: -19px
+				bottom: 10px
+			+bp450
+				// left: -24px
+				// bottom: 12px
+		.addition
+			opacity: 1.0
+		.sauce
+			opacity: 1.0
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 50%
+					left: 27%
+					transform: translate(-50%, -50%) rotate(-8deg)
+					+bp600
+						left: 25%
+				&:nth-of-type(2)
+					top: 48%
+					left: 55%
+					transform: translate(-50%, -50%) rotate(10deg)
+					background-color: #FFE100
+					p
+						color: #555
+				&:nth-of-type(3)
+					top: 44%
+					left: 78%
+					transform: translate(-50%, -50%) rotate(20deg)
+					background-color: #FFE100
+					+bp600
+						left: 80%
+					p
+						color: #555
+				&:nth-of-type(4)
+					top: 24%
+					left: 89%
+					transform: translate(-50%, -50%) rotate(4deg)
+					background-color: #933724
+					+bp500
+						top: 92%
+						left: 56%
+						width: 100px
+					p
+						+bp500
+							white-space: initial
+#katsuh-nori .top-content-box.is-show
+	+bp450
+		&:hover .base-box .ingredient-box
+			opacity: 1.0
+			&:nth-of-type(1)
+				top: 50%
+				left: 25%
+				transform: translate(-50%, -50%) rotate(-8deg)
+			&:nth-of-type(2)
+				top: 48%
+				left: 55%
+				transform: translate(-50%, -50%) rotate(10deg)
+				background-color: #FFE100
+				p
+					color: #555
+			&:nth-of-type(3)
+				top: 44%
+				left: 80%
+				transform: translate(-50%, -50%) rotate(20deg)
+				background-color: #FFE100
+				p
+					color: #555
+			&:nth-of-type(4)
+				top: 92%
+				left: 56%
+				width: 100px
+				transform: translate(-50%, -50%) rotate(4deg)
+				background-color: #933724
+				p
+					white-space: initial
 
 
 

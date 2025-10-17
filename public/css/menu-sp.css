@@ -361,20 +361,19 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 500px;
+  width: 370px;
   margin: 25px auto 0;
   z-index: 2;
   position: relative;
 }
-@media screen and (max-width: 600px) {
-  #first-view .creation-box .nav-box {
-    flex-wrap: wrap;
-    width: 370px;
-  }
-}
 @media screen and (max-width: 450px) {
   #first-view .creation-box .nav-box {
     margin: 25px auto 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  #first-view .creation-box .nav-box {
+    width: 350px;
   }
 }
 #first-view .creation-box .nav-box a {
@@ -408,16 +407,12 @@ body::-webkit-scrollbar {
 #first-view .creation-box .nav-box a:nth-of-type(1) {
   margin-left: 0;
 }
-@media screen and (max-width: 600px) {
-  #first-view .creation-box .nav-box a:nth-of-type(4) {
-    margin-top: 10px;
-    margin-left: 0;
-  }
+#first-view .creation-box .nav-box a:nth-of-type(4) {
+  margin-top: 10px;
+  margin-left: 0;
 }
-@media screen and (max-width: 600px) {
-  #first-view .creation-box .nav-box a:nth-of-type(5) {
-    margin-top: 10px;
-  }
+#first-view .creation-box .nav-box a:nth-of-type(5) {
+  margin-top: 10px;
 }
 @media screen and (max-width: 600px) {
   #first-view .creation-box .nav-box a:nth-of-type(6) {
@@ -2071,18 +2066,18 @@ body::-webkit-scrollbar {
     opacity: 0;
   }
 }
-#peperoncino, #indian, #genovese, #carbonara {
+#peperoncino, #indian, #genovese, #carbonara, #katsuh-nori {
   display: block;
   width: 100%;
   padding-top: 80px;
   margin: 0 auto 0;
 }
 @media screen and (max-width: 500px) {
-  #peperoncino, #indian, #genovese, #carbonara {
+  #peperoncino, #indian, #genovese, #carbonara, #katsuh-nori {
     padding-top: 60px;
   }
 }
-#peperoncino .tit-box, #indian .tit-box, #genovese .tit-box, #carbonara .tit-box {
+#peperoncino .tit-box, #indian .tit-box, #genovese .tit-box, #carbonara .tit-box, #katsuh-nori .tit-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2091,22 +2086,22 @@ body::-webkit-scrollbar {
   margin: 0 auto 20px;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .tit-box, #indian .tit-box, #genovese .tit-box, #carbonara .tit-box {
+  #peperoncino .tit-box, #indian .tit-box, #genovese .tit-box, #carbonara .tit-box, #katsuh-nori .tit-box {
     width: 320px;
     margin: 0 auto 15px;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .tit-box, #indian .tit-box, #genovese .tit-box, #carbonara .tit-box {
+  #peperoncino .tit-box, #indian .tit-box, #genovese .tit-box, #carbonara .tit-box, #katsuh-nori .tit-box {
     width: 280px;
     margin: 0 auto 10px;
   }
 }
-#peperoncino .tit-box img, #indian .tit-box img, #genovese .tit-box img, #carbonara .tit-box img {
+#peperoncino .tit-box img, #indian .tit-box img, #genovese .tit-box img, #carbonara .tit-box img, #katsuh-nori .tit-box img {
   display: block;
   width: 100%;
 }
-#peperoncino .tit-box h2, #indian .tit-box h2, #genovese .tit-box h2, #carbonara .tit-box h2 {
+#peperoncino .tit-box h2, #indian .tit-box h2, #genovese .tit-box h2, #carbonara .tit-box h2, #katsuh-nori .tit-box h2 {
   display: block;
   width: 100%;
   margin: 7px auto;
@@ -2119,65 +2114,65 @@ body::-webkit-scrollbar {
   color: #000;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .tit-box h2, #indian .tit-box h2, #genovese .tit-box h2, #carbonara .tit-box h2 {
+  #peperoncino .tit-box h2, #indian .tit-box h2, #genovese .tit-box h2, #carbonara .tit-box h2, #katsuh-nori .tit-box h2 {
     margin: 5px auto;
     font-size: 16px;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .tit-box h2, #indian .tit-box h2, #genovese .tit-box h2, #carbonara .tit-box h2 {
+  #peperoncino .tit-box h2, #indian .tit-box h2, #genovese .tit-box h2, #carbonara .tit-box h2, #katsuh-nori .tit-box h2 {
     margin: 3px auto;
     font-size: 14px;
   }
 }
-#peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box {
+#peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box, #katsuh-nori .top-content-box {
   display: block;
   width: 380px;
   margin: 0 auto;
   position: relative;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box {
+  #peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box, #katsuh-nori .top-content-box {
     width: 304px;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box {
+  #peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box, #katsuh-nori .top-content-box {
     transform-origin: top center;
     transform: scale(0.9);
     z-index: 3;
   }
 }
 @media screen and (max-width: 400px) {
-  #peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box {
+  #peperoncino .top-content-box, #indian .top-content-box, #genovese .top-content-box, #carbonara .top-content-box, #katsuh-nori .top-content-box {
     transform: scale(0.8);
   }
 }
-#peperoncino .top-content-box.is-show .dish, #indian .top-content-box.is-show .dish, #genovese .top-content-box.is-show .dish, #carbonara .top-content-box.is-show .dish {
+#peperoncino .top-content-box.is-show .dish, #indian .top-content-box.is-show .dish, #genovese .top-content-box.is-show .dish, #carbonara .top-content-box.is-show .dish, #katsuh-nori .top-content-box.is-show .dish {
   animation: dish-bounce-in 2s forwards;
 }
-#peperoncino .top-content-box.is-show .bg, #indian .top-content-box.is-show .bg, #genovese .top-content-box.is-show .bg, #carbonara .top-content-box.is-show .bg {
+#peperoncino .top-content-box.is-show .bg, #indian .top-content-box.is-show .bg, #genovese .top-content-box.is-show .bg, #carbonara .top-content-box.is-show .bg, #katsuh-nori .top-content-box.is-show .bg {
   animation: bg-bounce-in 4s forwards;
 }
-#peperoncino .top-content-box.is-show .fork, #indian .top-content-box.is-show .fork, #genovese .top-content-box.is-show .fork, #carbonara .top-content-box.is-show .fork {
+#peperoncino .top-content-box.is-show .fork, #indian .top-content-box.is-show .fork, #genovese .top-content-box.is-show .fork, #carbonara .top-content-box.is-show .fork, #katsuh-nori .top-content-box.is-show .fork {
   filter: opacity(0.2);
 }
-#peperoncino .top-content-box.is-show .tricolore, #indian .top-content-box.is-show .tricolore, #genovese .top-content-box.is-show .tricolore, #carbonara .top-content-box.is-show .tricolore {
+#peperoncino .top-content-box.is-show .tricolore, #indian .top-content-box.is-show .tricolore, #genovese .top-content-box.is-show .tricolore, #carbonara .top-content-box.is-show .tricolore, #katsuh-nori .top-content-box.is-show .tricolore {
   opacity: 1;
 }
-#peperoncino .top-content-box .img-box, #indian .top-content-box .img-box, #genovese .top-content-box .img-box, #carbonara .top-content-box .img-box {
+#peperoncino .top-content-box .img-box, #indian .top-content-box .img-box, #genovese .top-content-box .img-box, #carbonara .top-content-box .img-box, #katsuh-nori .top-content-box .img-box {
   display: block;
   width: 100%;
   padding-top: 80px;
   position: relative;
 }
-#peperoncino .top-content-box .img-box .base-box, #indian .top-content-box .img-box .base-box, #genovese .top-content-box .img-box .base-box, #carbonara .top-content-box .img-box .base-box {
+#peperoncino .top-content-box .img-box .base-box, #indian .top-content-box .img-box .base-box, #genovese .top-content-box .img-box .base-box, #carbonara .top-content-box .img-box .base-box, #katsuh-nori .top-content-box .img-box .base-box {
   display: block;
   width: 100%;
   z-index: 2;
   position: relative;
 }
-#peperoncino .top-content-box .img-box .base-box .dish, #indian .top-content-box .img-box .base-box .dish, #genovese .top-content-box .img-box .base-box .dish, #carbonara .top-content-box .img-box .base-box .dish {
+#peperoncino .top-content-box .img-box .base-box .dish, #indian .top-content-box .img-box .base-box .dish, #genovese .top-content-box .img-box .base-box .dish, #carbonara .top-content-box .img-box .base-box .dish, #katsuh-nori .top-content-box .img-box .base-box .dish {
   display: block;
   width: 100%;
   min-height: 302px;
@@ -2187,11 +2182,11 @@ body::-webkit-scrollbar {
   position: relative;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .base-box .dish, #indian .top-content-box .img-box .base-box .dish, #genovese .top-content-box .img-box .base-box .dish, #carbonara .top-content-box .img-box .base-box .dish {
+  #peperoncino .top-content-box .img-box .base-box .dish, #indian .top-content-box .img-box .base-box .dish, #genovese .top-content-box .img-box .base-box .dish, #carbonara .top-content-box .img-box .base-box .dish, #katsuh-nori .top-content-box .img-box .base-box .dish {
     min-height: 242px;
   }
 }
-#peperoncino .top-content-box .img-box .base-box .bg, #indian .top-content-box .img-box .base-box .bg, #genovese .top-content-box .img-box .base-box .bg, #carbonara .top-content-box .img-box .base-box .bg {
+#peperoncino .top-content-box .img-box .base-box .bg, #indian .top-content-box .img-box .base-box .bg, #genovese .top-content-box .img-box .base-box .bg, #carbonara .top-content-box .img-box .base-box .bg, #katsuh-nori .top-content-box .img-box .base-box .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -2204,7 +2199,7 @@ body::-webkit-scrollbar {
   transform: scale(0.4) translate(0);
   z-index: 1;
 }
-#peperoncino .top-content-box .img-box .base-box .ingredient-box, #indian .top-content-box .img-box .base-box .ingredient-box, #genovese .top-content-box .img-box .base-box .ingredient-box, #carbonara .top-content-box .img-box .base-box .ingredient-box {
+#peperoncino .top-content-box .img-box .base-box .ingredient-box, #indian .top-content-box .img-box .base-box .ingredient-box, #genovese .top-content-box .img-box .base-box .ingredient-box, #carbonara .top-content-box .img-box .base-box .ingredient-box, #katsuh-nori .top-content-box .img-box .base-box .ingredient-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2224,12 +2219,12 @@ body::-webkit-scrollbar {
   transition: all 0.5s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .base-box .ingredient-box, #indian .top-content-box .img-box .base-box .ingredient-box, #genovese .top-content-box .img-box .base-box .ingredient-box, #carbonara .top-content-box .img-box .base-box .ingredient-box {
+  #peperoncino .top-content-box .img-box .base-box .ingredient-box, #indian .top-content-box .img-box .base-box .ingredient-box, #genovese .top-content-box .img-box .base-box .ingredient-box, #carbonara .top-content-box .img-box .base-box .ingredient-box, #katsuh-nori .top-content-box .img-box .base-box .ingredient-box {
     min-width: 85px;
     padding: 6px 10px;
   }
 }
-#peperoncino .top-content-box .img-box .base-box .ingredient-box p, #indian .top-content-box .img-box .base-box .ingredient-box p, #genovese .top-content-box .img-box .base-box .ingredient-box p, #carbonara .top-content-box .img-box .base-box .ingredient-box p {
+#peperoncino .top-content-box .img-box .base-box .ingredient-box p, #indian .top-content-box .img-box .base-box .ingredient-box p, #genovese .top-content-box .img-box .base-box .ingredient-box p, #carbonara .top-content-box .img-box .base-box .ingredient-box p, #katsuh-nori .top-content-box .img-box .base-box .ingredient-box p {
   display: block;
   font-weight: 700;
   font-size: 12px;
@@ -2241,11 +2236,11 @@ body::-webkit-scrollbar {
   transition: all 0.5s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .base-box .ingredient-box p, #indian .top-content-box .img-box .base-box .ingredient-box p, #genovese .top-content-box .img-box .base-box .ingredient-box p, #carbonara .top-content-box .img-box .base-box .ingredient-box p {
+  #peperoncino .top-content-box .img-box .base-box .ingredient-box p, #indian .top-content-box .img-box .base-box .ingredient-box p, #genovese .top-content-box .img-box .base-box .ingredient-box p, #carbonara .top-content-box .img-box .base-box .ingredient-box p, #katsuh-nori .top-content-box .img-box .base-box .ingredient-box p {
     font-size: 10px;
   }
 }
-#peperoncino .top-content-box .img-box .food-box, #indian .top-content-box .img-box .food-box, #genovese .top-content-box .img-box .food-box, #carbonara .top-content-box .img-box .food-box {
+#peperoncino .top-content-box .img-box .food-box, #indian .top-content-box .img-box .food-box, #genovese .top-content-box .img-box .food-box, #carbonara .top-content-box .img-box .food-box, #katsuh-nori .top-content-box .img-box .food-box {
   position: absolute;
   right: -90px;
   top: 0;
@@ -2256,17 +2251,17 @@ body::-webkit-scrollbar {
   transform: rotate(0deg);
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .food-box, #indian .top-content-box .img-box .food-box, #genovese .top-content-box .img-box .food-box, #carbonara .top-content-box .img-box .food-box {
+  #peperoncino .top-content-box .img-box .food-box, #indian .top-content-box .img-box .food-box, #genovese .top-content-box .img-box .food-box, #carbonara .top-content-box .img-box .food-box, #katsuh-nori .top-content-box .img-box .food-box {
     right: -85px;
     transform-origin: 192px 312px;
   }
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .food-box, #indian .top-content-box .img-box .food-box, #genovese .top-content-box .img-box .food-box, #carbonara .top-content-box .img-box .food-box {
+  #peperoncino .top-content-box .img-box .food-box, #indian .top-content-box .img-box .food-box, #genovese .top-content-box .img-box .food-box, #carbonara .top-content-box .img-box .food-box, #katsuh-nori .top-content-box .img-box .food-box {
     right: -60px;
   }
 }
-#peperoncino .top-content-box .img-box .food-box h2, #indian .top-content-box .img-box .food-box h2, #genovese .top-content-box .img-box .food-box h2, #carbonara .top-content-box .img-box .food-box h2 {
+#peperoncino .top-content-box .img-box .food-box h2, #indian .top-content-box .img-box .food-box h2, #genovese .top-content-box .img-box .food-box h2, #carbonara .top-content-box .img-box .food-box h2, #katsuh-nori .top-content-box .img-box .food-box h2 {
   display: block;
   margin-left: 5px;
   font-weight: 400;
@@ -2279,17 +2274,17 @@ body::-webkit-scrollbar {
   order: 2;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .food-box h2, #indian .top-content-box .img-box .food-box h2, #genovese .top-content-box .img-box .food-box h2, #carbonara .top-content-box .img-box .food-box h2 {
+  #peperoncino .top-content-box .img-box .food-box h2, #indian .top-content-box .img-box .food-box h2, #genovese .top-content-box .img-box .food-box h2, #carbonara .top-content-box .img-box .food-box h2, #katsuh-nori .top-content-box .img-box .food-box h2 {
     margin-left: 0px;
     font-size: 29px;
   }
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .food-box h2, #indian .top-content-box .img-box .food-box h2, #genovese .top-content-box .img-box .food-box h2, #carbonara .top-content-box .img-box .food-box h2 {
+  #peperoncino .top-content-box .img-box .food-box h2, #indian .top-content-box .img-box .food-box h2, #genovese .top-content-box .img-box .food-box h2, #carbonara .top-content-box .img-box .food-box h2, #katsuh-nori .top-content-box .img-box .food-box h2 {
     font-size: 26px;
   }
 }
-#peperoncino .top-content-box .img-box .food-box .price, #indian .top-content-box .img-box .food-box .price, #genovese .top-content-box .img-box .food-box .price, #carbonara .top-content-box .img-box .food-box .price {
+#peperoncino .top-content-box .img-box .food-box .price, #indian .top-content-box .img-box .food-box .price, #genovese .top-content-box .img-box .food-box .price, #carbonara .top-content-box .img-box .food-box .price, #katsuh-nori .top-content-box .img-box .food-box .price {
   display: block;
   width: 33px;
   margin-top: 120px;
@@ -2303,16 +2298,16 @@ body::-webkit-scrollbar {
   border-collapse: collapse;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .food-box .price, #indian .top-content-box .img-box .food-box .price, #genovese .top-content-box .img-box .food-box .price, #carbonara .top-content-box .img-box .food-box .price {
+  #peperoncino .top-content-box .img-box .food-box .price, #indian .top-content-box .img-box .food-box .price, #genovese .top-content-box .img-box .food-box .price, #carbonara .top-content-box .img-box .food-box .price, #katsuh-nori .top-content-box .img-box .food-box .price {
     margin-top: 96px;
   }
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .food-box .price, #indian .top-content-box .img-box .food-box .price, #genovese .top-content-box .img-box .food-box .price, #carbonara .top-content-box .img-box .food-box .price {
+  #peperoncino .top-content-box .img-box .food-box .price, #indian .top-content-box .img-box .food-box .price, #genovese .top-content-box .img-box .food-box .price, #carbonara .top-content-box .img-box .food-box .price, #katsuh-nori .top-content-box .img-box .food-box .price {
     width: 26px;
   }
 }
-#peperoncino .top-content-box .img-box .food-box .price .num, #indian .top-content-box .img-box .food-box .price .num, #genovese .top-content-box .img-box .food-box .price .num, #carbonara .top-content-box .img-box .food-box .price .num {
+#peperoncino .top-content-box .img-box .food-box .price .num, #indian .top-content-box .img-box .food-box .price .num, #genovese .top-content-box .img-box .food-box .price .num, #carbonara .top-content-box .img-box .food-box .price .num, #katsuh-nori .top-content-box .img-box .food-box .price .num {
   display: block;
   font-weight: 400;
   font-size: 36px;
@@ -2322,16 +2317,16 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .food-box .price .num, #indian .top-content-box .img-box .food-box .price .num, #genovese .top-content-box .img-box .food-box .price .num, #carbonara .top-content-box .img-box .food-box .price .num {
+  #peperoncino .top-content-box .img-box .food-box .price .num, #indian .top-content-box .img-box .food-box .price .num, #genovese .top-content-box .img-box .food-box .price .num, #carbonara .top-content-box .img-box .food-box .price .num, #katsuh-nori .top-content-box .img-box .food-box .price .num {
     font-size: 29px;
   }
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .food-box .price .num, #indian .top-content-box .img-box .food-box .price .num, #genovese .top-content-box .img-box .food-box .price .num, #carbonara .top-content-box .img-box .food-box .price .num {
+  #peperoncino .top-content-box .img-box .food-box .price .num, #indian .top-content-box .img-box .food-box .price .num, #genovese .top-content-box .img-box .food-box .price .num, #carbonara .top-content-box .img-box .food-box .price .num, #katsuh-nori .top-content-box .img-box .food-box .price .num {
     font-size: 25px;
   }
 }
-#peperoncino .top-content-box .img-box .food-box .price .yen, #indian .top-content-box .img-box .food-box .price .yen, #genovese .top-content-box .img-box .food-box .price .yen, #carbonara .top-content-box .img-box .food-box .price .yen {
+#peperoncino .top-content-box .img-box .food-box .price .yen, #indian .top-content-box .img-box .food-box .price .yen, #genovese .top-content-box .img-box .food-box .price .yen, #carbonara .top-content-box .img-box .food-box .price .yen, #katsuh-nori .top-content-box .img-box .food-box .price .yen {
   display: block;
   margin-top: 5px;
   font-weight: 400;
@@ -2343,16 +2338,16 @@ body::-webkit-scrollbar {
   color: #555;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .food-box .price .yen, #indian .top-content-box .img-box .food-box .price .yen, #genovese .top-content-box .img-box .food-box .price .yen, #carbonara .top-content-box .img-box .food-box .price .yen {
+  #peperoncino .top-content-box .img-box .food-box .price .yen, #indian .top-content-box .img-box .food-box .price .yen, #genovese .top-content-box .img-box .food-box .price .yen, #carbonara .top-content-box .img-box .food-box .price .yen, #katsuh-nori .top-content-box .img-box .food-box .price .yen {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .food-box .price .yen, #indian .top-content-box .img-box .food-box .price .yen, #genovese .top-content-box .img-box .food-box .price .yen, #carbonara .top-content-box .img-box .food-box .price .yen {
+  #peperoncino .top-content-box .img-box .food-box .price .yen, #indian .top-content-box .img-box .food-box .price .yen, #genovese .top-content-box .img-box .food-box .price .yen, #carbonara .top-content-box .img-box .food-box .price .yen, #katsuh-nori .top-content-box .img-box .food-box .price .yen {
     font-size: 12px;
   }
 }
-#peperoncino .top-content-box .img-box .food-box video, #indian .top-content-box .img-box .food-box video, #genovese .top-content-box .img-box .food-box video, #carbonara .top-content-box .img-box .food-box video {
+#peperoncino .top-content-box .img-box .food-box video, #indian .top-content-box .img-box .food-box video, #genovese .top-content-box .img-box .food-box video, #carbonara .top-content-box .img-box .food-box video, #katsuh-nori .top-content-box .img-box .food-box video {
   display: block;
   width: 190px;
   height: 320px;
@@ -2360,18 +2355,18 @@ body::-webkit-scrollbar {
   object-position: center;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .food-box video, #indian .top-content-box .img-box .food-box video, #genovese .top-content-box .img-box .food-box video, #carbonara .top-content-box .img-box .food-box video {
+  #peperoncino .top-content-box .img-box .food-box video, #indian .top-content-box .img-box .food-box video, #genovese .top-content-box .img-box .food-box video, #carbonara .top-content-box .img-box .food-box video, #katsuh-nori .top-content-box .img-box .food-box video {
     width: 145px;
     height: 240px;
   }
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .food-box video, #indian .top-content-box .img-box .food-box video, #genovese .top-content-box .img-box .food-box video, #carbonara .top-content-box .img-box .food-box video {
+  #peperoncino .top-content-box .img-box .food-box video, #indian .top-content-box .img-box .food-box video, #genovese .top-content-box .img-box .food-box video, #carbonara .top-content-box .img-box .food-box video, #katsuh-nori .top-content-box .img-box .food-box video {
     width: 115px;
     height: 190px;
   }
 }
-#peperoncino .top-content-box .img-box .copy-box, #indian .top-content-box .img-box .copy-box, #genovese .top-content-box .img-box .copy-box, #carbonara .top-content-box .img-box .copy-box {
+#peperoncino .top-content-box .img-box .copy-box, #indian .top-content-box .img-box .copy-box, #genovese .top-content-box .img-box .copy-box, #carbonara .top-content-box .img-box .copy-box, #katsuh-nori .top-content-box .img-box .copy-box {
   position: absolute;
   top: 0;
   left: -80px;
@@ -2384,7 +2379,7 @@ body::-webkit-scrollbar {
   z-index: 1;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .copy-box, #indian .top-content-box .img-box .copy-box, #genovese .top-content-box .img-box .copy-box, #carbonara .top-content-box .img-box .copy-box {
+  #peperoncino .top-content-box .img-box .copy-box, #indian .top-content-box .img-box .copy-box, #genovese .top-content-box .img-box .copy-box, #carbonara .top-content-box .img-box .copy-box, #katsuh-nori .top-content-box .img-box .copy-box {
     left: -75px;
     width: 304px;
     padding: 19px 24px 19px;
@@ -2392,11 +2387,11 @@ body::-webkit-scrollbar {
   }
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .copy-box, #indian .top-content-box .img-box .copy-box, #genovese .top-content-box .img-box .copy-box, #carbonara .top-content-box .img-box .copy-box {
+  #peperoncino .top-content-box .img-box .copy-box, #indian .top-content-box .img-box .copy-box, #genovese .top-content-box .img-box .copy-box, #carbonara .top-content-box .img-box .copy-box, #katsuh-nori .top-content-box .img-box .copy-box {
     left: -60px;
   }
 }
-#peperoncino .top-content-box .img-box .copy-box .pasta-category-box, #indian .top-content-box .img-box .copy-box .pasta-category-box, #genovese .top-content-box .img-box .copy-box .pasta-category-box, #carbonara .top-content-box .img-box .copy-box .pasta-category-box {
+#peperoncino .top-content-box .img-box .copy-box .pasta-category-box, #indian .top-content-box .img-box .copy-box .pasta-category-box, #genovese .top-content-box .img-box .copy-box .pasta-category-box, #carbonara .top-content-box .img-box .copy-box .pasta-category-box, #katsuh-nori .top-content-box .img-box .copy-box .pasta-category-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2406,7 +2401,7 @@ body::-webkit-scrollbar {
   border-radius: 20px;
   background-color: #ae0e0e;
 }
-#peperoncino .top-content-box .img-box .copy-box .pasta-category-box p, #indian .top-content-box .img-box .copy-box .pasta-category-box p, #genovese .top-content-box .img-box .copy-box .pasta-category-box p, #carbonara .top-content-box .img-box .copy-box .pasta-category-box p {
+#peperoncino .top-content-box .img-box .copy-box .pasta-category-box p, #indian .top-content-box .img-box .copy-box .pasta-category-box p, #genovese .top-content-box .img-box .copy-box .pasta-category-box p, #carbonara .top-content-box .img-box .copy-box .pasta-category-box p, #katsuh-nori .top-content-box .img-box .copy-box .pasta-category-box p {
   display: block;
   margin: 0;
   font-weight: 400;
@@ -2417,11 +2412,11 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 @media screen and (max-width: 500px) {
-  #peperoncino .top-content-box .img-box .copy-box .pasta-category-box p, #indian .top-content-box .img-box .copy-box .pasta-category-box p, #genovese .top-content-box .img-box .copy-box .pasta-category-box p, #carbonara .top-content-box .img-box .copy-box .pasta-category-box p {
+  #peperoncino .top-content-box .img-box .copy-box .pasta-category-box p, #indian .top-content-box .img-box .copy-box .pasta-category-box p, #genovese .top-content-box .img-box .copy-box .pasta-category-box p, #carbonara .top-content-box .img-box .copy-box .pasta-category-box p, #katsuh-nori .top-content-box .img-box .copy-box .pasta-category-box p {
     font-size: 10px;
   }
 }
-#peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3, #genovese .top-content-box .img-box .copy-box h3, #carbonara .top-content-box .img-box .copy-box h3 {
+#peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3, #genovese .top-content-box .img-box .copy-box h3, #carbonara .top-content-box .img-box .copy-box h3, #katsuh-nori .top-content-box .img-box .copy-box h3 {
   display: block;
   font-weight: 400;
   font-size: 29.4px;
@@ -2432,19 +2427,19 @@ body::-webkit-scrollbar {
   position: relative;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3, #genovese .top-content-box .img-box .copy-box h3, #carbonara .top-content-box .img-box .copy-box h3 {
+  #peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3, #genovese .top-content-box .img-box .copy-box h3, #carbonara .top-content-box .img-box .copy-box h3, #katsuh-nori .top-content-box .img-box .copy-box h3 {
     font-size: 25.2px;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3, #genovese .top-content-box .img-box .copy-box h3, #carbonara .top-content-box .img-box .copy-box h3 {
+  #peperoncino .top-content-box .img-box .copy-box h3, #indian .top-content-box .img-box .copy-box h3, #genovese .top-content-box .img-box .copy-box h3, #carbonara .top-content-box .img-box .copy-box h3, #katsuh-nori .top-content-box .img-box .copy-box h3 {
     font-size: 22.4px;
   }
 }
-#peperoncino .top-content-box .img-box .copy-box h3::selection, #indian .top-content-box .img-box .copy-box h3::selection, #genovese .top-content-box .img-box .copy-box h3::selection, #carbonara .top-content-box .img-box .copy-box h3::selection {
+#peperoncino .top-content-box .img-box .copy-box h3::selection, #indian .top-content-box .img-box .copy-box h3::selection, #genovese .top-content-box .img-box .copy-box h3::selection, #carbonara .top-content-box .img-box .copy-box h3::selection, #katsuh-nori .top-content-box .img-box .copy-box h3::selection {
   background: #444;
 }
-#peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p, #genovese .top-content-box .img-box .copy-box p, #carbonara .top-content-box .img-box .copy-box p {
+#peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p, #genovese .top-content-box .img-box .copy-box p, #carbonara .top-content-box .img-box .copy-box p, #katsuh-nori .top-content-box .img-box .copy-box p {
   display: block;
   margin-top: 0px;
   margin-left: 0px;
@@ -2456,22 +2451,22 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p, #genovese .top-content-box .img-box .copy-box p, #carbonara .top-content-box .img-box .copy-box p {
+  #peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p, #genovese .top-content-box .img-box .copy-box p, #carbonara .top-content-box .img-box .copy-box p, #katsuh-nori .top-content-box .img-box .copy-box p {
     margin-left: 0px;
     font-size: 22px;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p, #genovese .top-content-box .img-box .copy-box p, #carbonara .top-content-box .img-box .copy-box p {
+  #peperoncino .top-content-box .img-box .copy-box p, #indian .top-content-box .img-box .copy-box p, #genovese .top-content-box .img-box .copy-box p, #carbonara .top-content-box .img-box .copy-box p, #katsuh-nori .top-content-box .img-box .copy-box p {
     margin-top: 0px;
     margin-left: 0px;
     font-size: 20px;
   }
 }
-#peperoncino .top-content-box .img-box .copy-box p::selection, #indian .top-content-box .img-box .copy-box p::selection, #genovese .top-content-box .img-box .copy-box p::selection, #carbonara .top-content-box .img-box .copy-box p::selection {
+#peperoncino .top-content-box .img-box .copy-box p::selection, #indian .top-content-box .img-box .copy-box p::selection, #genovese .top-content-box .img-box .copy-box p::selection, #carbonara .top-content-box .img-box .copy-box p::selection, #katsuh-nori .top-content-box .img-box .copy-box p::selection {
   background: #444;
 }
-#peperoncino .top-content-box .img-box .copy-box p .yen, #indian .top-content-box .img-box .copy-box p .yen, #genovese .top-content-box .img-box .copy-box p .yen, #carbonara .top-content-box .img-box .copy-box p .yen {
+#peperoncino .top-content-box .img-box .copy-box p .yen, #indian .top-content-box .img-box .copy-box p .yen, #genovese .top-content-box .img-box .copy-box p .yen, #carbonara .top-content-box .img-box .copy-box p .yen, #katsuh-nori .top-content-box .img-box .copy-box p .yen {
   display: inline-block;
   margin-left: 6px;
   margin-bottom: -3px;
@@ -2484,35 +2479,35 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .img-box .copy-box p .yen, #indian .top-content-box .img-box .copy-box p .yen, #genovese .top-content-box .img-box .copy-box p .yen, #carbonara .top-content-box .img-box .copy-box p .yen {
+  #peperoncino .top-content-box .img-box .copy-box p .yen, #indian .top-content-box .img-box .copy-box p .yen, #genovese .top-content-box .img-box .copy-box p .yen, #carbonara .top-content-box .img-box .copy-box p .yen, #katsuh-nori .top-content-box .img-box .copy-box p .yen {
     margin-left: 5px;
     font-size: 15px;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .top-content-box .img-box .copy-box p .yen, #indian .top-content-box .img-box .copy-box p .yen, #genovese .top-content-box .img-box .copy-box p .yen, #carbonara .top-content-box .img-box .copy-box p .yen {
+  #peperoncino .top-content-box .img-box .copy-box p .yen, #indian .top-content-box .img-box .copy-box p .yen, #genovese .top-content-box .img-box .copy-box p .yen, #carbonara .top-content-box .img-box .copy-box p .yen, #katsuh-nori .top-content-box .img-box .copy-box p .yen {
     margin-left: 4px;
     font-size: 14px;
   }
 }
-#peperoncino .top-content-box .img-box .copy-box p .yen::selection, #indian .top-content-box .img-box .copy-box p .yen::selection, #genovese .top-content-box .img-box .copy-box p .yen::selection, #carbonara .top-content-box .img-box .copy-box p .yen::selection {
+#peperoncino .top-content-box .img-box .copy-box p .yen::selection, #indian .top-content-box .img-box .copy-box p .yen::selection, #genovese .top-content-box .img-box .copy-box p .yen::selection, #carbonara .top-content-box .img-box .copy-box p .yen::selection, #katsuh-nori .top-content-box .img-box .copy-box p .yen::selection {
   background: #444;
 }
-#peperoncino .top-content-box .name, #indian .top-content-box .name, #genovese .top-content-box .name, #carbonara .top-content-box .name {
+#peperoncino .top-content-box .name, #indian .top-content-box .name, #genovese .top-content-box .name, #carbonara .top-content-box .name, #katsuh-nori .top-content-box .name {
   position: absolute;
   margin: auto;
   display: block;
   transform-origin: center;
   transition: all 1s ease-in-out;
 }
-#peperoncino .top-content-box .italiano, #indian .top-content-box .italiano, #genovese .top-content-box .italiano, #carbonara .top-content-box .italiano {
+#peperoncino .top-content-box .italiano, #indian .top-content-box .italiano, #genovese .top-content-box .italiano, #carbonara .top-content-box .italiano, #katsuh-nori .top-content-box .italiano {
   position: absolute;
   margin: auto;
   display: block;
   transform-origin: center;
   transition: all 1s ease-in-out;
 }
-#peperoncino .top-content-box .fork, #indian .top-content-box .fork, #genovese .top-content-box .fork, #carbonara .top-content-box .fork {
+#peperoncino .top-content-box .fork, #indian .top-content-box .fork, #genovese .top-content-box .fork, #carbonara .top-content-box .fork, #katsuh-nori .top-content-box .fork {
   position: absolute;
   margin: auto;
   display: block;
@@ -2522,11 +2517,11 @@ body::-webkit-scrollbar {
   transition: left 1s ease-in-out, right 1s ease-in-out, bottom 1s ease-in-out, transform 1s ease-in-out, filter 1.5s 0.5s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .fork, #indian .top-content-box .fork, #genovese .top-content-box .fork, #carbonara .top-content-box .fork {
+  #peperoncino .top-content-box .fork, #indian .top-content-box .fork, #genovese .top-content-box .fork, #carbonara .top-content-box .fork, #katsuh-nori .top-content-box .fork {
     width: 120px;
   }
 }
-#peperoncino .top-content-box .tricolore, #indian .top-content-box .tricolore, #genovese .top-content-box .tricolore, #carbonara .top-content-box .tricolore {
+#peperoncino .top-content-box .tricolore, #indian .top-content-box .tricolore, #genovese .top-content-box .tricolore, #carbonara .top-content-box .tricolore, #katsuh-nori .top-content-box .tricolore {
   position: absolute;
   margin: auto;
   display: block;
@@ -2536,11 +2531,11 @@ body::-webkit-scrollbar {
   transition: all 1s 1s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .top-content-box .tricolore, #indian .top-content-box .tricolore, #genovese .top-content-box .tricolore, #carbonara .top-content-box .tricolore {
+  #peperoncino .top-content-box .tricolore, #indian .top-content-box .tricolore, #genovese .top-content-box .tricolore, #carbonara .top-content-box .tricolore, #katsuh-nori .top-content-box .tricolore {
     width: 24px;
   }
 }
-#peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box {
+#peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box, #katsuh-nori .bottom-content-box {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -2548,28 +2543,28 @@ body::-webkit-scrollbar {
   margin: 40px auto 0;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box {
+  #peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box, #katsuh-nori .bottom-content-box {
     width: 400px;
     margin: 30px auto 0;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box {
+  #peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box, #katsuh-nori .bottom-content-box {
     width: 360px;
     margin: 10px auto 0;
   }
 }
 @media screen and (max-width: 400px) {
-  #peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box {
+  #peperoncino .bottom-content-box, #indian .bottom-content-box, #genovese .bottom-content-box, #carbonara .bottom-content-box, #katsuh-nori .bottom-content-box {
     width: 300px;
     margin: -15px auto 0;
   }
 }
-#peperoncino .bottom-content-box .left-box, #indian .bottom-content-box .left-box, #genovese .bottom-content-box .left-box, #carbonara .bottom-content-box .left-box {
+#peperoncino .bottom-content-box .left-box, #indian .bottom-content-box .left-box, #genovese .bottom-content-box .left-box, #carbonara .bottom-content-box .left-box, #katsuh-nori .bottom-content-box .left-box {
   display: block;
   width: 450px;
 }
-#peperoncino .bottom-content-box .left-box p, #indian .bottom-content-box .left-box p, #genovese .bottom-content-box .left-box p, #carbonara .bottom-content-box .left-box p {
+#peperoncino .bottom-content-box .left-box p, #indian .bottom-content-box .left-box p, #genovese .bottom-content-box .left-box p, #carbonara .bottom-content-box .left-box p, #katsuh-nori .bottom-content-box .left-box p {
   display: block;
   width: 100%;
   font-weight: 400;
@@ -2579,76 +2574,76 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #555;
 }
-#peperoncino .bottom-content-box .right-box, #indian .bottom-content-box .right-box, #genovese .bottom-content-box .right-box, #carbonara .bottom-content-box .right-box {
+#peperoncino .bottom-content-box .right-box, #indian .bottom-content-box .right-box, #genovese .bottom-content-box .right-box, #carbonara .bottom-content-box .right-box, #katsuh-nori .bottom-content-box .right-box {
   display: block;
   width: 100%;
   border-bottom: solid 1px #ccc;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele .size-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele .size-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele .size-box .desc {
   opacity: 1;
   transform: translate(0, 0);
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele .size-box .gram {
+#peperoncino .bottom-content-box .right-box.is-show .ele .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele .size-box .gram, #katsuh-nori .bottom-content-box .right-box.is-show .ele .size-box .gram {
   opacity: 1;
   transform: translate(0, 0);
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele .price-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele .price-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele .price-box .desc {
   opacity: 1;
   transform: translate(0, 0);
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele .price-box .yen {
+#peperoncino .bottom-content-box .right-box.is-show .ele .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele .price-box .yen, #katsuh-nori .bottom-content-box .right-box.is-show .ele .price-box .yen {
   opacity: 1;
   transform: translate(0, 0);
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .desc {
   transition-delay: 0.4s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .size-box .gram {
   transition-delay: 0.6s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .desc {
   transition-delay: 0.8s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(1) .price-box .yen {
   transition-delay: 1s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .desc {
   transition-delay: 0.8s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .size-box .gram {
   transition-delay: 1s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .desc {
   transition-delay: 1.2s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(2) .price-box .yen {
   transition-delay: 1.4s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .desc {
   transition-delay: 1.2s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .size-box .gram {
   transition-delay: 1.4s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .desc {
   transition-delay: 1.6s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(3) .price-box .yen {
   transition-delay: 1.8s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .desc {
   transition-delay: 1.6s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .size-box .gram {
   transition-delay: 1.8s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .desc {
   transition-delay: 2s;
 }
-#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen {
+#peperoncino .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen, #indian .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen, #genovese .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen, #carbonara .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen, #katsuh-nori .bottom-content-box .right-box.is-show .ele:nth-of-type(4) .price-box .yen {
   transition-delay: 2.2s;
 }
-#peperoncino .bottom-content-box .right-box .ele, #indian .bottom-content-box .right-box .ele, #genovese .bottom-content-box .right-box .ele, #carbonara .bottom-content-box .right-box .ele {
+#peperoncino .bottom-content-box .right-box .ele, #indian .bottom-content-box .right-box .ele, #genovese .bottom-content-box .right-box .ele, #carbonara .bottom-content-box .right-box .ele, #katsuh-nori .bottom-content-box .right-box .ele {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2657,17 +2652,17 @@ body::-webkit-scrollbar {
   border-top: solid 1px #ccc;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .bottom-content-box .right-box .ele, #indian .bottom-content-box .right-box .ele, #genovese .bottom-content-box .right-box .ele, #carbonara .bottom-content-box .right-box .ele {
+  #peperoncino .bottom-content-box .right-box .ele, #indian .bottom-content-box .right-box .ele, #genovese .bottom-content-box .right-box .ele, #carbonara .bottom-content-box .right-box .ele, #katsuh-nori .bottom-content-box .right-box .ele {
     padding: 15px 20px;
   }
 }
-#peperoncino .bottom-content-box .right-box .size-box, #indian .bottom-content-box .right-box .size-box, #genovese .bottom-content-box .right-box .size-box, #carbonara .bottom-content-box .right-box .size-box {
+#peperoncino .bottom-content-box .right-box .size-box, #indian .bottom-content-box .right-box .size-box, #genovese .bottom-content-box .right-box .size-box, #carbonara .bottom-content-box .right-box .size-box, #katsuh-nori .bottom-content-box .right-box .size-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: fit-content;
 }
-#peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc {
+#peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc, #katsuh-nori .bottom-content-box .right-box .size-box .desc {
   display: block;
   width: 110px;
   font-weight: 400;
@@ -2681,22 +2676,22 @@ body::-webkit-scrollbar {
   transition: all 1s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc {
+  #peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc, #katsuh-nori .bottom-content-box .right-box .size-box .desc {
     width: 100px;
     font-size: 12px;
   }
 }
 @media screen and (max-width: 450px) {
-  #peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc {
+  #peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc, #katsuh-nori .bottom-content-box .right-box .size-box .desc {
     width: 90px;
   }
 }
 @media screen and (max-width: 400px) {
-  #peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc {
+  #peperoncino .bottom-content-box .right-box .size-box .desc, #indian .bottom-content-box .right-box .size-box .desc, #genovese .bottom-content-box .right-box .size-box .desc, #carbonara .bottom-content-box .right-box .size-box .desc, #katsuh-nori .bottom-content-box .right-box .size-box .desc {
     width: 85px;
   }
 }
-#peperoncino .bottom-content-box .right-box .size-box .gram, #indian .bottom-content-box .right-box .size-box .gram, #genovese .bottom-content-box .right-box .size-box .gram, #carbonara .bottom-content-box .right-box .size-box .gram {
+#peperoncino .bottom-content-box .right-box .size-box .gram, #indian .bottom-content-box .right-box .size-box .gram, #genovese .bottom-content-box .right-box .size-box .gram, #carbonara .bottom-content-box .right-box .size-box .gram, #katsuh-nori .bottom-content-box .right-box .size-box .gram {
   display: block;
   width: fit-content;
   font-weight: 400;
@@ -2710,17 +2705,17 @@ body::-webkit-scrollbar {
   transition: all 1s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .bottom-content-box .right-box .size-box .gram, #indian .bottom-content-box .right-box .size-box .gram, #genovese .bottom-content-box .right-box .size-box .gram, #carbonara .bottom-content-box .right-box .size-box .gram {
+  #peperoncino .bottom-content-box .right-box .size-box .gram, #indian .bottom-content-box .right-box .size-box .gram, #genovese .bottom-content-box .right-box .size-box .gram, #carbonara .bottom-content-box .right-box .size-box .gram, #katsuh-nori .bottom-content-box .right-box .size-box .gram {
     font-size: 14px;
   }
 }
-#peperoncino .bottom-content-box .right-box .price-box, #indian .bottom-content-box .right-box .price-box, #genovese .bottom-content-box .right-box .price-box, #carbonara .bottom-content-box .right-box .price-box {
+#peperoncino .bottom-content-box .right-box .price-box, #indian .bottom-content-box .right-box .price-box, #genovese .bottom-content-box .right-box .price-box, #carbonara .bottom-content-box .right-box .price-box, #katsuh-nori .bottom-content-box .right-box .price-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: fit-content;
 }
-#peperoncino .bottom-content-box .right-box .price-box .desc, #indian .bottom-content-box .right-box .price-box .desc, #genovese .bottom-content-box .right-box .price-box .desc, #carbonara .bottom-content-box .right-box .price-box .desc {
+#peperoncino .bottom-content-box .right-box .price-box .desc, #indian .bottom-content-box .right-box .price-box .desc, #genovese .bottom-content-box .right-box .price-box .desc, #carbonara .bottom-content-box .right-box .price-box .desc, #katsuh-nori .bottom-content-box .right-box .price-box .desc {
   display: block;
   width: fit-content;
   font-weight: 400;
@@ -2734,11 +2729,11 @@ body::-webkit-scrollbar {
   transition: all 1s ease-in-out;
 }
 @media screen and (max-width: 600px) {
-  #peperoncino .bottom-content-box .right-box .price-box .desc, #indian .bottom-content-box .right-box .price-box .desc, #genovese .bottom-content-box .right-box .price-box .desc, #carbonara .bottom-content-box .right-box .price-box .desc {
+  #peperoncino .bottom-content-box .right-box .price-box .desc, #indian .bottom-content-box .right-box .price-box .desc, #genovese .bottom-content-box .right-box .price-box .desc, #carbonara .bottom-content-box .right-box .price-box .desc, #katsuh-nori .bottom-content-box .right-box .price-box .desc {
     font-size: 14px;
   }
 }
-#peperoncino .bottom-content-box .right-box .price-box .yen, #indian .bottom-content-box .right-box .price-box .yen, #genovese .bottom-content-box .right-box .price-box .yen, #carbonara .bottom-content-box .right-box .price-box .yen {
+#peperoncino .bottom-content-box .right-box .price-box .yen, #indian .bottom-content-box .right-box .price-box .yen, #genovese .bottom-content-box .right-box .price-box .yen, #carbonara .bottom-content-box .right-box .price-box .yen, #katsuh-nori .bottom-content-box .right-box .price-box .yen {
   display: block;
   margin-left: 5px;
   width: fit-content;
@@ -3345,6 +3340,218 @@ body::-webkit-scrollbar {
     top: 56%;
     left: 80%;
     transform: translate(-50%, -50%) rotate(9deg);
+  }
+}
+
+#katsuh-nori .top-content-box .name {
+  left: 30%;
+  bottom: 30%;
+  width: 180px;
+  transform: rotate(60deg);
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box .name {
+    width: 144px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #katsuh-nori .top-content-box .name {
+    width: 125px;
+  }
+}
+#katsuh-nori .top-content-box .fork {
+  left: 40%;
+  bottom: 30%;
+  transform: rotate(-10deg);
+}
+#katsuh-nori .top-content-box .tricolore {
+  right: -42px;
+  bottom: 24px;
+  width: 50px;
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box .tricolore {
+    right: -34px;
+    bottom: 19px;
+    width: 40px;
+  }
+}
+#katsuh-nori .top-content-box .sauce {
+  position: absolute;
+  top: 22px;
+  right: -45px;
+  display: block;
+  width: 160px;
+  opacity: 0;
+  transition: all 1s 2s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box .sauce {
+    top: 40px;
+    right: -60px;
+    width: 140px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #katsuh-nori .top-content-box .sauce {
+    top: 45px;
+    right: -50px;
+    width: 130px;
+    z-index: 10;
+    transition: all 1s 1.5s ease-in-out;
+  }
+}
+#katsuh-nori .top-content-box .addition {
+  position: absolute;
+  top: 15px;
+  right: -45px;
+  display: block;
+  width: 150px;
+  opacity: 0;
+  transition: all 1s 2s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box .addition {
+    top: 15px;
+    right: -40px;
+    width: 140px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #katsuh-nori .top-content-box .addition {
+    top: initial;
+    bottom: -10px;
+    right: -15px;
+    width: 120px;
+    z-index: 10;
+    transition: all 1s 1.5s ease-in-out;
+  }
+}
+#katsuh-nori .top-content-box.is-show .name {
+  left: -129px;
+  bottom: 57px;
+  transform: rotate(-20deg);
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box.is-show .name {
+    left: -103px;
+    bottom: 46px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #katsuh-nori .top-content-box.is-show .name {
+    left: -83px;
+    bottom: 45px;
+  }
+}
+#katsuh-nori .top-content-box.is-show .fork {
+  left: -24px;
+  bottom: 12px;
+  transform: rotate(5deg);
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box.is-show .fork {
+    left: -19px;
+    bottom: 10px;
+  }
+}
+#katsuh-nori .top-content-box.is-show .addition {
+  opacity: 1;
+}
+#katsuh-nori .top-content-box.is-show .sauce {
+  opacity: 1;
+}
+#katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box {
+  opacity: 1;
+}
+#katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(1) {
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%) rotate(-8deg);
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(1) {
+    left: 25%;
+  }
+}
+#katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(2) {
+  top: 48%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(10deg);
+  background-color: #FFE100;
+}
+#katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(2) p {
+  color: #555;
+}
+#katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(3) {
+  top: 44%;
+  left: 78%;
+  transform: translate(-50%, -50%) rotate(20deg);
+  background-color: #FFE100;
+}
+@media screen and (max-width: 600px) {
+  #katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(3) {
+    left: 80%;
+  }
+}
+#katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(3) p {
+  color: #555;
+}
+#katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(4) {
+  top: 24%;
+  left: 89%;
+  transform: translate(-50%, -50%) rotate(4deg);
+  background-color: #933724;
+}
+@media screen and (max-width: 500px) {
+  #katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(4) {
+    top: 92%;
+    left: 56%;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #katsuh-nori .top-content-box.is-show .base-box:hover .ingredient-box:nth-of-type(4) p {
+    white-space: initial;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box {
+    opacity: 1;
+  }
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box:nth-of-type(1) {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(-8deg);
+  }
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box:nth-of-type(2) {
+    top: 48%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    background-color: #FFE100;
+  }
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box:nth-of-type(2) p {
+    color: #555;
+  }
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box:nth-of-type(3) {
+    top: 44%;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(20deg);
+    background-color: #FFE100;
+  }
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box:nth-of-type(3) p {
+    color: #555;
+  }
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box:nth-of-type(4) {
+    top: 92%;
+    left: 56%;
+    width: 100px;
+    transform: translate(-50%, -50%) rotate(4deg);
+    background-color: #933724;
+  }
+  #katsuh-nori .top-content-box.is-show:hover .base-box .ingredient-box:nth-of-type(4) p {
+    white-space: initial;
   }
 }
 

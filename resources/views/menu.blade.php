@@ -102,6 +102,16 @@
                             "price": "1000",
                             "priceCurrency": "JPY"
                         }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "カツオノリ　※ 和風パスタ",
+                        "image": "https://an-hama.com/image/top/sosaku5.webp",
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "1000",
+                            "priceCurrency": "JPY"
+                        }
                     }
                 ]
             }
@@ -180,7 +190,8 @@
                 <a href="#indian">インディアン</a>
                 <a href="#genovese">ジェノベーゼ</a>
                 <a href="#carbonara">カルボナーラ</a>
-                <a class="info-addition" href="#info-addition">~ 随時追加予定 ~</a>
+                <a href="#katsuh-nori">カツオノリ</a>
+                <!-- <a class="info-addition" href="#info-addition">~ 随時追加予定 ~</a> -->
             </div>
             <div class="option-box">
                 <div class="cat-box">
@@ -856,6 +867,94 @@
             </div>
             <img class="name" src="{{ asset('image/menu/sosaku4-name.svg') }}" alt="つけかけパスタ カルボナーラ">
             <!-- <p class="italiano">Autentico</p> -->
+            <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="フォーク">
+            <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="トリコローレ">
+            <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">
+        </div>
+        <div class="bottom-content-box">
+            <div class="right-box">
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">スモール</p>
+                        <p class="gram">200g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">950</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">レギュラー</p>
+                        <p class="gram">300g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,000</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">ラージ</p>
+                        <p class="gram">400g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,100</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+                <div class="ele">
+                    <div class="size-box">
+                        <p class="desc">メガ</p>
+                        <p class="gram">600g</p>
+                    </div>
+                    <div class="price-box">
+                        <p class="desc">1,200</p>
+                        <p class="yen">円</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="katsuh-nori">
+        <div class="top-content-box">
+            <div class="img-box">
+<!--                 <div class="base-box click-canvas">
+                    <img class="dish" src="{{ asset('image/menu/menu5.webp') }}" alt="あんかけパスタ ハマちゃん">
+                    <img class="bg" src="{{ asset('image/menu/menu5-paint.svg') }}" alt="背景ペイント">
+                    <div class="ingredient-box">
+                        <p>ウィンナー</p>
+                    </div>
+                    <div class="ingredient-box">
+                        <p>目玉焼き</p>
+                    </div>
+                    <div class="ingredient-box">
+                        <p>卵そぼろ</p>
+                    </div>
+                    <div class="ingredient-box">
+                        <p>週替りのプラスされる具材</p>
+                    </div>
+                </div> -->
+                <div class="base-box click-canvas">
+                    <img class="dish" src="{{ asset('image/menu/sosaku5.webp') }}" alt="つけかけパスタ カツオノリ">
+                    <img class="bg" src="{{ asset('image/menu/menu5-paint.svg') }}" alt="背景ペイント">
+                </div>
+                <div class="food-box">
+                    <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
+                        <source src="{{ asset('movie/menu5.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+<!--                 <div class="copy-box">
+                    <h3>ハマちゃん<span class="weekly-menu">※ 週替りメニュー</span></h3>
+                    <p>1,500<span class="yen">円</span></p>
+                </div> -->
+                <div class="copy-box">
+                    <div class="pasta-category-box"><p>和風パスタ</p></div>
+                    <h3>カツオノリ</h3>
+                    <p>1,000<span class="yen">円</span></p>
+                </div>
+            </div>
+            <img class="name" src="{{ asset('image/menu/sosaku5-name.svg') }}" alt="つけかけパスタ カツオノリ">
             <img class="fork" src="{{ asset('image/menu/fork.svg') }}" alt="フォーク">
             <img class="tricolore" src="{{ asset('image/menu/tricolore.svg') }}" alt="トリコローレ">
             <img class="sauce" src="{{ asset('image/menu/sauce.webp') }}" alt="ソース">

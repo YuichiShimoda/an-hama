@@ -643,7 +643,64 @@ gsap.to("#carbonara .right-box", {
 
 
 
-
+gsap.to("#katsuh-nori", {
+	scrollTrigger: {
+		trigger: "#katsuh-nori .base-box",
+		start: "center bottom-=1%",
+		onEnter: () => {
+			$("#katsuh-nori .top-content-box").addClass("is-show");
+		},
+	}
+});
+gsap.fromTo("#katsuh-nori .base-box",
+	{opacity: 0.0, y: "-30vh"},
+	{opacity: 1.0, y: "0", ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#katsuh-nori",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 2.0,
+			// markers: true,
+		}
+	}
+);
+gsap.fromTo("#katsuh-nori .copy-box",
+	{opacity: 0.0, rotate: -60},
+	{opacity: 1.0, rotate: 0, ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#katsuh-nori",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 1.0,
+			// markers: true,
+		}
+	}
+);
+gsap.fromTo("#katsuh-nori .food-box",
+	{opacity: 0.0, rotate: 60},
+	{opacity: 0.15, rotate: 0, ease: "power1.out",
+		scrollTrigger: {
+			trigger: "#katsuh-nori",
+			start: "top bottom-=20%",
+			end: "top center+=1%",
+			scrub: 1.0,
+			// markers: true,
+		}
+	}
+);
+gsap.to("#katsuh-nori .right-box", {
+	scrollTrigger: {
+		trigger: "#katsuh-nori .right-box",
+		start: "top bottom-=1%",
+		end: "top bottom-=1%",
+		onEnter: () => {
+			$("#katsuh-nori .right-box").addClass("is-show");
+		},
+		onLeaveBack: () => {
+			$("#katsuh-nori .right-box").removeClass("is-show");
+		}
+	}
+});
 
 
 

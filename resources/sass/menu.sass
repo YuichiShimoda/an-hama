@@ -1580,7 +1580,7 @@ body::-webkit-scrollbar
 
 
 
-#peperoncino, #indian, #genovese, #carbonara
+#peperoncino, #indian, #genovese, #carbonara, #katsuh-nori
 	display: block
 	width: 100%
 	padding-top: 120px
@@ -2469,7 +2469,132 @@ body::-webkit-scrollbar
 					transform: translate(-50%, -50%) rotate(9deg)
 					+bp1000
 						left: 78%
-
+#katsuh-nori .top-content-box
+	.name
+		left: 30%
+		bottom: 30%
+		width: 300px
+		transform: rotate(60deg)
+		+bp1400
+			width: 240px
+		+bp1000
+			width: 180px
+	.fork
+		left: 40%
+		bottom: 30%
+		transform: rotate(-10deg)
+	.tricolore
+		right: -70px
+		bottom: 40px
+		width: 80px
+		+bp1400
+			right: -56px
+			bottom: 32px
+			width: 64px
+		+bp1000
+			right: -42px
+			bottom: 24px
+			width: 50px
+	.sauce
+		position: absolute
+		top: 20px
+		right: -60px
+		display: block
+		width: 260px
+		opacity: 0.0
+		transition: all 1.0s 2.0s ease-in-out
+		+bp1400
+			top: 20px
+			right: -70px
+			width: 240px
+		+bp1000
+			top: 40px
+			right: -60px
+			width: 180px
+	.addition
+		position: absolute
+		top: 20px
+		right: -60px
+		display: block
+		width: 240px
+		opacity: 0.0
+		transition: all 1.0s 2.0s ease-in-out
+		+bp1400
+			top: 10px
+			right: -70px
+			width: 230px
+		+bp1000
+			top: 20px
+			right: -50px
+			width: 180px
+		// 	width: 30px
+		// +bp1400
+		// 	right: -56px
+		// 	bottom: 32px
+		// 	width: 64px
+		// +bp1000
+		// 	right: -42px
+		// 	bottom: 24px
+		// 	width: 50px
+	&.is-show
+		.name
+			left: -215px
+			bottom: 95px
+			transform: rotate(-20deg)
+			+bp1400
+				left: -172px
+				bottom: 76px
+			+bp1000
+				left: -129px
+				bottom: 57px
+		.fork
+			left: -40px
+			bottom: 20px
+			transform: rotate(5deg)
+			+bp1400
+				left: -32px
+				bottom: 16px
+			+bp1000
+				left: -24px
+				bottom: 12px
+		.sauce
+			opacity: 1.0
+		.addition
+			opacity: 1.0
+		.base-box:hover
+			.ingredient-box
+				opacity: 1.0
+				&:nth-of-type(1)
+					top: 50%
+					left: 40%
+					transform: translate(-50%, -50%) rotate(-8deg)
+					+bp1000
+						left: 27%
+				&:nth-of-type(2)
+					top: 48%
+					left: 58%
+					transform: translate(-50%, -50%) rotate(10deg)
+					+bp1000
+						left: 55%
+					background-color: #FFE100
+					p
+						color: #555
+				&:nth-of-type(3)
+					top: 44%
+					left: 72%
+					transform: translate(-50%, -50%) rotate(20deg)
+					+bp1000
+						left: 78%
+					background-color: #FFE100
+					p
+						color: #555
+				&:nth-of-type(4)
+					top: 21%
+					left: 85%
+					transform: translate(-50%, -50%) rotate(4deg)
+					background-color: #933724
+					p
+						white-space: nowrap
 
 
 
