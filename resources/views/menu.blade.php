@@ -1004,13 +1004,7 @@
             </div>
         </div>
     </section>
-    <section id="announcement">
-<!--         <div class="content-box">
-            <p>" 創作メニュー 第2弾 "</p>
-            <p>つけかけパスタ  － Dip & Pour －</p>
-            <p>現在開発中！乞うご期待！</p>
-            <img src="{{ asset('image/menu/announcement-bg.webp') }}" alt="">
-        </div> -->
+<!--     <section id="announcement">
         <div class="text">
             <div class="text__content">
                 <h3 class="part-number">" 創作メニュー 第5弾 "</h3>
@@ -1039,7 +1033,7 @@
             <p>Pour it.</p>
             <p>Wow!</p>
         </div>
-    </section>
+    </section> -->
 
     <section id="gallery">
         <div class="img-box">

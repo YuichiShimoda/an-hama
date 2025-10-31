@@ -3471,12 +3471,15 @@ body::-webkit-scrollbar
 	justify-content: center
 	align-items: center
 	width: 100%
-	margin: 80px auto 0
+	margin: 100px auto 0
 	position: relative
+	+bp600
+		margin: 90px auto 0
 	+bp450
 		flex-direction: column
-	+bp400
-		margin: 65px auto 0
+		margin: 80px auto 0
+	// +bp400
+	// 	margin: 65px auto 0
 	.img-box
 		display: block
 		width: 50%
