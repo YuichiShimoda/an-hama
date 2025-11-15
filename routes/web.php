@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\WeeklyMenuController;
 use App\Http\Controllers\Admin\PressReleaseController;
 use App\Http\Controllers\Admin\TaskController;
 use App\Http\Controllers\Admin\AnalyticsController;
-
+use App\Http\Controllers\Admin\MovieController;
 
 
 
@@ -62,11 +62,23 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
     Route::resource('weekly-menu', WeeklyMenuController::class);
     Route::resource('press-release', PressReleaseController::class);
     Route::resource('task', TaskController::class);
+    Route::resource('movie', MovieController::class);
     Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');
 });
 
 
 
+
+
+
+
+
+
+
+
+
+
+Route::get('/api/movies', [MovieController::class, 'getMovie']);
 
 
 

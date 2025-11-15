@@ -21,5 +21,9 @@
         "sass": "^1.56.1",
         "tailwindcss": "^4.0.0",
         "vite": "^6.3.2"
+    },
+    "dependencies": {
+        "lazysizes": "^5.3.2",
+        "video.js": "^8.23.4"
     }
 }
