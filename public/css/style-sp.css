@@ -830,7 +830,7 @@ body::-webkit-scrollbar {
   width: calc(100% - 20px);
   border-radius: 50%;
   transform-origin: center center;
-  animation: scale0 5s ease-in-out infinite;
+  animation: scale0 7s 4s ease-in-out infinite;
   z-index: 1103;
   position: relative;
 }
@@ -846,7 +846,7 @@ body::-webkit-scrollbar {
   display: block;
   width: 100%;
   border-radius: 50%;
-  animation: rotation0 5s ease-in-out infinite, resize0 7s ease-in-out infinite;
+  animation: rotation0 5s ease-in-out infinite, resize0 8s ease-in-out infinite;
   z-index: 1102;
 }
 #appeal .content-box .start-box .top-desc-box {

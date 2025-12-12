@@ -41,7 +41,7 @@
 	const pause = ref(0)
 	const completed = ref(0)
 
-	const currentVideo = ref(props.initialQueryValue || 'service');
+	const currentVideo = ref(props.initialQueryValue || 'dinner-time');
 	const viewedVideos = ref([]);
 	const progressRatio = ref(0);
 	viewedVideos.value.push(currentVideo.value);
