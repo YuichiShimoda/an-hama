@@ -1,15 +1,3 @@
-#loader-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 100vw;
-  height: 100vh;
-  background-color: #b92928;
-  z-index: 3000;
-}
 #loader-bg.is-show > .border:before {
   animation: border-draw 0.7s 0.2s linear forwards;
 }
@@ -21,6 +9,18 @@
 }
 #loader-bg.is-show > .overlay-bottom {
   animation: loading-overlay 0.4s 2.2s linear forwards;
+}
+#loader-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: #b92928;
+  z-index: 3000;
 }
 #loader-bg > .border {
   position: fixed;

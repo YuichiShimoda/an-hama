@@ -6,37 +6,21 @@
 			</div>
 		</div>
 		<div class="close-btn" @click="closeVideo">
-			<img class="icon" :src="'./image/lp/movie/close.svg'" alt="閉じる">
+			<img class="icon" :src="'./image/movie/close.svg'" alt="閉じる">
 		</div>
 		<div class="volume-btn" @click="toggleVolume">
-			<img v-if="volume" class="icon" :src="'./image/lp/movie/volume-on.svg'" alt="音声ON">
-			<img v-else class="icon" :src="'./image/lp/movie/volume-off.svg'" alt="音声OFF">
+			<img v-if="volume" class="icon" :src="'./image/movie/volume-on.svg'" alt="音声ON">
+			<img v-else class="icon" :src="'./image/movie/volume-off.svg'" alt="音声OFF">
 		</div>
 		<div class="play-btn" @click="playVideo">
 			<div class="pause-btn">
-				<img v-if="pause && !completed" class="icon" :src="'./image/lp/movie/pause.svg'" alt="再生">
+				<img v-if="pause && !completed" class="icon" :src="'./image/movie/pause.svg'" alt="再生">
 			</div>
 		</div>
 		<div v-if="completed" class="completed-btn">
-			<img class="icon" :src="'./image/lp/movie/completed.svg'" alt="リピート">
-		</div>
-		<div class="up-btn" @click="showButton">
-			<img class="icon" :src="'./image/lp/movie/up.svg'" alt="矢印">
+			<img class="icon" :src="'./image/movie/completed.svg'" alt="リピート">
 		</div>
 		<video ref="videoPlayer" class="play-movie"></video>
-		<div class="bottom-box">
-			<button v-for="video in nextVideos" :key="video.key" class="next-btn" @click="changeVideo" :data-src="video.key">
-				<span>{{ video.label }}</span>
-			</button>
-			<a v-if="currentVideo !== 'rakuraku'" class="call-btn" href="tel:0120979986" :data-video-key="currentVideo" data-cv-type="tel" @click.prevent="handleConversionClick($event)">
-				<img class="tel-icon" :src="'./image/lp/movie/tel-icon.svg'" alt="電話">
-				<img class="num" :src="'./image/lp/movie/tel-num.svg'" alt="0120-979-986">
-			</a>
-			<a v-else class="call-btn" href="./up" :data-video-key="currentVideo" data-cv-type="link" target="_blank" rel="noopener noreferrer" @click.prevent="handleConversionClick($event)">
-				<img class="phone-icon" :src="'./image/lp/movie/phone-icon.svg'" alt="スマホ">
-				<img class="num" :src="'./image/lp/movie/rakuraku-white.svg'" alt="0120-979-986">
-			</a>
-		</div>
 	</div>
 </template>
 
@@ -163,10 +147,10 @@
 			muted: true,
 			playsinline: true,
 			preload: 'auto',
-			poster: './image/lp/movie/poster.webp',
+			poster: './image/movie/poster.webp',
 			sources: [
 				{
-					src: `./movie/lp/${props.initialQueryValue}.mp4`,
+					src: `./movie/${props.initialQueryValue}.mp4`,
 					type: 'video/mp4'
 				}
 			]
@@ -278,7 +262,7 @@
 		currentVideo.value = fileName;
 		if (player.value && fileName) {
 			player.value.src({
-				src: `./movie/lp/${fileName}.mp4`,
+				src: `./movie/${fileName}.mp4`,
 				type: 'video/mp4'
 			})
 			player.value.muted(false);

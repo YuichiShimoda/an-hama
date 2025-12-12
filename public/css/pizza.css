@@ -1990,12 +1990,14 @@ body::-webkit-scrollbar {
   top: 48%;
   left: 52%;
   transform: translate(-50%, -50%) rotate(10deg);
-  background-color: #FFE100;
 }
 @media screen and (max-width: 1000px) {
   #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(2) {
     left: 55%;
   }
+}
+#hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(2) {
+  background-color: #FFE100;
 }
 #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(2) p {
   color: #555;
@@ -2004,12 +2006,14 @@ body::-webkit-scrollbar {
   top: 44%;
   left: 70%;
   transform: translate(-50%, -50%) rotate(20deg);
-  background-color: #FFE100;
 }
 @media screen and (max-width: 1000px) {
   #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(3) {
     left: 78%;
   }
+}
+#hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(3) {
+  background-color: #FFE100;
 }
 #hama-chan .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(3) p {
   color: #555;
@@ -3008,12 +3012,14 @@ body::-webkit-scrollbar {
   top: 48%;
   left: 52%;
   transform: translate(-50%, -50%) rotate(10deg);
-  background-color: #FFE100;
 }
 @media screen and (max-width: 1000px) {
   #peperoncino .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(2) {
     left: 55%;
   }
+}
+#peperoncino .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(2) {
+  background-color: #FFE100;
 }
 #peperoncino .top-content-box.is-show .base-box:hover .ingredient-box.done:nth-of-type(2) p {
   color: #555;
@@ -3262,7 +3268,6 @@ body::-webkit-scrollbar {
   letter-spacing: 0.2em;
   text-align: center;
   color: #BA292B;
-  animation: spread 8s cubic-bezier(0.72, 0.01, 0.22, 0.99) infinite;
 }
 @media screen and (max-width: 1400px) {
   #announcement .text .text__content p {
@@ -3273,6 +3278,9 @@ body::-webkit-scrollbar {
   #announcement .text .text__content p {
     font-size: 30px;
   }
+}
+#announcement .text .text__content p {
+  animation: spread 8s cubic-bezier(0.72, 0.01, 0.22, 0.99) infinite;
 }
 #announcement .text .text__content p span {
   display: inline-block;

@@ -175,7 +175,7 @@
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu1.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('movie/menu/1.mp4') }}" type="video/mp4">
                     </video>
                 </div>
                 <div class="copy-box">
@@ -211,7 +211,7 @@
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu2.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('movie/menu/2.mp4') }}" type="video/mp4">
                     </video>
                 </div>
                 <div class="copy-box">
@@ -250,7 +250,7 @@
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu3.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('movie/menu/3.mp4') }}" type="video/mp4">
                     </video>
                 </div>
                 <div class="copy-box">
@@ -292,7 +292,7 @@
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu4.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('movie/menu/4.mp4') }}" type="video/mp4">
                     </video>
                 </div>
                 <div class="copy-box">
@@ -332,7 +332,7 @@
                 </div>
                 <div class="food-box">
                     <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/menu5.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('movie/menu/5.mp4') }}" type="video/mp4">
                     </video>
                 </div>
                 <div class="copy-box">

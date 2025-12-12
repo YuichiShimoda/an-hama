@@ -23,6 +23,8 @@ body::-webkit-scrollbar {
   background-color: #B92928;
   filter: contrast(1) blur(1px);
   position: relative;
+}
+#morphing {
   min-height: 65px;
 }
 #morphing .word {

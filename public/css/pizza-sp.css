@@ -1138,7 +1138,6 @@ body::-webkit-scrollbar {
   line-height: 1.5;
   font-family: "miniwa-hv-v3", sans-serif;
   letter-spacing: 0.05em;
-  color: #fff;
 }
 @media screen and (max-width: 600px) {
   #mirakan .top-content-box .img-box .copy-box p, #miranezu .top-content-box .img-box .copy-box p, #mila-egg .top-content-box .img-box .copy-box p, #spinach .top-content-box .img-box .copy-box p, #hama-chan .top-content-box .img-box .copy-box p {
@@ -1152,6 +1151,9 @@ body::-webkit-scrollbar {
     margin-left: 8px;
     font-size: 20px;
   }
+}
+#mirakan .top-content-box .img-box .copy-box p, #miranezu .top-content-box .img-box .copy-box p, #mila-egg .top-content-box .img-box .copy-box p, #spinach .top-content-box .img-box .copy-box p, #hama-chan .top-content-box .img-box .copy-box p {
+  color: #fff;
 }
 #mirakan .top-content-box .img-box .copy-box p::selection, #miranezu .top-content-box .img-box .copy-box p::selection, #mila-egg .top-content-box .img-box .copy-box p::selection, #spinach .top-content-box .img-box .copy-box p::selection, #hama-chan .top-content-box .img-box .copy-box p::selection {
   background: #444;

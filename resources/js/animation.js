@@ -1,3 +1,74 @@
+import "lazysizes";
+
+import { createApp } from 'vue';
+import Movie from './components/Movie.vue';
+
+let movieApp = null;
+
+$(window).on('load', function() {
+	var video = $('#appeal video').get(0);
+	if (video) {
+		video.play();
+	}
+	setTimeout(function() {
+		$("#appeal .next-desc-box").addClass("is-hidden");
+	}, 7000);
+});
+$(document).on('click', '#appeal', function () {
+	const $mountTarget = $('#movie');
+	$mountTarget.toggleClass("is-show");
+	$("#appeal").toggleClass("is-show");
+	$("#wrap").toggleClass("no-scroll");
+	if (!$mountTarget.length) return;
+	if ($mountTarget.data('vueMounted') === true) return;
+
+	const initialUpload = $mountTarget.data('initial-upload') || 'sample1.mp4';
+
+	movieApp = createApp(Movie, {
+		initialQueryValue: initialUpload,
+		onClose: () => {
+			// Vue アプリを unmount
+			movieApp.unmount();
+			movieApp = null;
+			// DOM をクリア
+			$mountTarget.empty();
+			$mountTarget.data('vueMounted', false);
+		}
+	});
+	movieApp.mount($mountTarget[0]);
+	$mountTarget.data('vueMounted', true);
+});
+
+function disableScrollOnWrap() {
+	const $wrap = $('#wrap');
+	$wrap.addClass('no-scroll');
+	$wrap.on('touchmove.noScroll', function (e) {
+		e.preventDefault();
+	});
+}
+function enableScrollOnWrap() {
+	const $wrap = $('#wrap');
+	$wrap.removeClass('no-scroll');
+	$wrap.off('touchmove.noScroll');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // loading animation
 $(window).on('load', function() {
 	$('#loader-bg').addClass("is-show");
