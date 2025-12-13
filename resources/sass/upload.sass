@@ -1,7 +1,4 @@
-$mb101: 'A-OTF Gothic MB101 Pro', sans-serif // M:500, DB:600
-$heisei-maru: "heisei-maru-gothic-std", sans-serif // 400, 800
-$ryumin: 'A-OTF Ryumin Pro', serif // M:450, B:550, EB:600, H:700, EH:800
-$kocho: 'A-OTF Kocho Std', serif // 600
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 
 
 
@@ -147,6 +144,7 @@ $kocho: 'A-OTF Kocho Std', serif // 600
 	display: block
 	width: 100%
 	height: 100%
+	border-radius: 20px
 	position: relative
 	overflow: hidden
 	&.hidden
@@ -166,14 +164,10 @@ $kocho: 'A-OTF Kocho Std', serif // 600
 		display: block
 		width: 100%
 		height: 300px
-		border-bottom-left-radius: 20px
-		border-bottom-right-radius: 20px
+		border-radius: 20px
 		// background: linear-gradient(0deg, rgba(#000, 0.8) 0%, rgba(#000, 0.9) 30%, rgba(#000, 0.0) 100%)
 		z-index: 2
 		pointer-events: none
-		+bp700
-			border-bottom-left-radius: 15px
-			border-bottom-right-radius: 15px
 		+bp450
 			height: 280px
 		+bp400
@@ -312,8 +306,6 @@ $kocho: 'A-OTF Kocho Std', serif // 600
 			box-shadow: inset 0 1px 2px rgba(#000, 0.3)
 			transform: translateY(-50%)
 			opacity: 0.7
-			+bp450
-				top: 30%
 	.play-movie
 		display: block
 		width: 100%
@@ -327,6 +319,49 @@ $kocho: 'A-OTF Kocho Std', serif // 600
 			object-fit: cover
 			object-position: top center
 			overflow: hidden
-
+	.bottom-box
+		position: absolute
+		left: 0
+		bottom: 0
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		flex-direction: column
+		width: 100%
+		padding: 20px 30px
+		transition: bottom 0.3s ease-in-out
+		z-index: 3
+		+bp400
+			padding: 20px 30px 15px
+		.link-btn
+			display: flex
+			justify-content: center
+			align-items: center
+			width: calc(100% - 70px)
+			height: 50px
+			margin-top: 7px
+			border-radius: 25px
+			background-color: #b92928
+			box-shadow: 0 3px 0 #D54242
+			&:nth-of-type(1)
+				margin-top: 0
+			+bp500
+				width: calc(100% - 30px)
+			+bp420
+				height: 48px
+				border-radius: 24px
+			+bp400
+				height: 46px
+				border-radius: 23px
+			> span
+				display: block
+				width: 100%
+				font-weight: 400
+				font-size: 16px
+				line-height: 1.5
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				text-align: center
+				color: #fff
 
 

@@ -21,6 +21,17 @@
 			<img class="icon" :src="'./image/movie/completed.svg'" alt="リピート">
 		</div>
 		<video ref="videoPlayer" class="play-movie"></video>
+		<div v-if="completed" class="bottom-box">
+			<a class="link-btn" href="./menu">
+				<span>あんかけパスタ</span>
+			</a>
+			<a class="link-btn" href="./menu/pizza">
+				<span>あんかけピザ</span>
+			</a>
+			<a class="link-btn" href="./info">
+				<span>店舗情報</span>
+			</a>
+		</div>
 	</div>
 </template>
 
@@ -130,8 +141,6 @@
 				}
 			});
 			videoOrderMap.value = newOrderMap;
-			console.log(videoOptions.value);
-			console.log(videoOrderMap.value);
 		} catch (error) {
 			console.error('動画データの取得エラー:', error);
 		}

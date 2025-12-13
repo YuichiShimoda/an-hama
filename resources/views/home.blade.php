@@ -100,11 +100,11 @@
                     <source src="{{ asset('movie/btn1.mp4') }}" type="video/mp4">
                 </video>
                 <img class="thum-bg lazyload" data-src="{{ asset('image/movie/bg.webp') }}" alt="回転">
-                <div class="top-desc-box">
+<!--                 <div class="top-desc-box">
                     <img class="volume pc lazyload" data-src="{{ asset('image/movie/volume-on.webp') }}" alt="音声">
                     <img class="volume sp lazyload" data-src="{{ asset('image/movie/volume-on-sp.webp') }}" alt="音声">
                     <p>動画でご説明</p>
-                </div>
+                </div> -->
                 <div class="next-desc-box">
                     <p class="txt">重要なお知らせ</p>
                     <svg class="move-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.29 246.79">

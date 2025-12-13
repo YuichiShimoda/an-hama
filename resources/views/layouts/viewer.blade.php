@@ -359,7 +359,6 @@
                 });
                 $(document).on('click', function (e) {
                     const $target = $(e.target);
-                    console.log($target);
                     if ($target.closest('.accordion').length || $target.closest('.sub-nav-box').length) {
                         return;
                     }
