@@ -823,6 +823,10 @@ body::-webkit-scrollbar {
   height: 100%;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  background: url("../image/movie/bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   position: relative;
 }
 #appeal .content-box .start-box .thum {
