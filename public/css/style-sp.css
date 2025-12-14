@@ -1113,7 +1113,7 @@ body::-webkit-scrollbar {
   transform-origin: right bottom;
   transform: scale(0);
   transition: all 1s ease-in-out;
-  z-index: 1200;
+  z-index: 2000;
 }
 #movie.is-show {
   opacity: 1;
