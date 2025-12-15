@@ -337,7 +337,7 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			display: flex
 			justify-content: center
 			align-items: center
-			width: calc(100% - 70px)
+			width: calc(100% - 30px)
 			height: 50px
 			margin-top: 7px
 			border-radius: 25px
@@ -345,8 +345,23 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			box-shadow: 0 3px 0 #D54242
 			&:nth-of-type(1)
 				margin-top: 0
-			+bp500
-				width: calc(100% - 30px)
+				+bp500
+					span
+						@for $i from 1 through 7
+							&:nth-of-type(#{$i})
+								animation: leftRight 5.0s #{($i - 1) * 0.03}s ease-in-out infinite
+			&:nth-of-type(2)
+				+bp500
+					span
+						@for $i from 1 through 6
+							&:nth-of-type(#{$i})
+								animation: leftRight 5.0s #{($i - 1) * 0.03 + 1.5}s ease-in-out infinite
+			&:nth-of-type(3)
+				+bp500
+					span
+						@for $i from 1 through 4
+							&:nth-of-type(#{$i})
+								animation: leftRight 5.0s #{($i - 1) * 0.03 + 3.0}s ease-in-out infinite
 			+bp420
 				height: 48px
 				border-radius: 24px
@@ -356,7 +371,10 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			&:hover
 				@for $i from 1 through 7
 					span:nth-of-type(#{$i})
-						animation: txt-rotate 1s #{($i - 1) * 0.05}s ease-in-out
+						animation: txt-rotate 1s #{($i - 1) * 0.05}s ease-in-out forwards
+				+bp500
+					span
+						animation: initial !important
 			> p
 				display: flex
 				justify-content: center
@@ -381,4 +399,22 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 	60%
 		opacity: 0.0
 	100%
+		opacity: 1.0
+@keyframes leftRight
+	0%
+		color: #fff
+		transform: translate(0) scale(1.0)
+		opacity: 1.0
+	9%
+		color: #f8bebc
+		transform: translate(20px, 0) scale(0.7)
+		opacity: 1.0
+	12%
+		color: #FFBE53
+	15%
+		transform: translate(0) scale(1.8)
+		opacity: 0.0
+	18%,100%
+		color: #fff
+		transform: translate(0) scale(1.0)
 		opacity: 1.0
