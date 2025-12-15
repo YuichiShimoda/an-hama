@@ -295,6 +295,7 @@
   border-radius: 25px;
   background-color: #b92928;
   box-shadow: 0 3px 0 #D54242;
+  cursor: none;
 }
 .movie-content-box .bottom-box .link-btn:nth-of-type(1) {
   margin-top: 0;
