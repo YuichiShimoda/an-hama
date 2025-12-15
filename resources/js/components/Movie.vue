@@ -23,13 +23,13 @@
 		<video ref="videoPlayer" class="play-movie"></video>
 		<div v-if="completed" class="bottom-box">
 			<a class="link-btn" href="./menu">
-				<span>あんかけパスタ</span>
+				<p><span>あ</span><span>ん</span><span>か</span><span>け</span><span>パ</span><span>ス</span><span>タ</span></p>
 			</a>
 			<a class="link-btn" href="./menu/pizza">
-				<span>あんかけピザ</span>
+				<p><span>あ</span><span>ん</span><span>か</span><span>け</span><span>ピ</span><span>ザ</span></p>
 			</a>
 			<a class="link-btn" href="./info">
-				<span>店舗情報</span>
+				<p><span>店</span><span>舗</span><span>情</span><span>報</span></p>
 			</a>
 		</div>
 	</div>

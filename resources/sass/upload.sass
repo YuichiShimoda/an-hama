@@ -353,15 +353,32 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			+bp400
 				height: 46px
 				border-radius: 23px
-			> span
-				display: block
-				width: 100%
-				font-weight: 400
-				font-size: 16px
-				line-height: 1.5
-				font-family: $iroha-25icho-stdn
-				letter-spacing: 0.05em
-				text-align: center
-				color: #fff
-
-
+			&:hover
+				@for $i from 1 through 7
+					span:nth-of-type(#{$i})
+						animation: txt-rotate 1s #{($i - 1) * 0.05}s ease-in-out
+			> p
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				margin: 0
+				> span
+					display: block
+					width: 100%
+					font-weight: 400
+					font-size: 16px
+					line-height: 1.5
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					text-align: center
+					color: #fff
+@keyframes txt-rotate
+	0%
+		opacity: 1.0
+	40%
+		opacity: 0.0
+	60%
+		opacity: 0.0
+	100%
+		opacity: 1.0
