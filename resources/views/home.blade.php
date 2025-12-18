@@ -179,14 +179,14 @@
     </section>
     <div id="loop-band">
         <ul class="word-box">
-            <li><img src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
-            <li><img src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
-            <li><img src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
+            <li><img class="lazyload" src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
+            <li><img class="lazyload" src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
+            <li><img class="lazyload" src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
         </ul>
         <ul class="word-box">
-            <li><img src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
-            <li><img src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
-            <li><img src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
+            <li><img class="lazyload" src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
+            <li><img class="lazyload" src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
+            <li><img class="lazyload" src="{{ asset('image/top/smile.svg') }}" alt="あんかけパスタは笑顔になるランチ"></li>
         </ul>
     </div>
     <div id="sp-info">
@@ -353,49 +353,49 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/menu1.webp') }}" alt="あんかけパスタ ミラカン">
+                        <img class="lazyload" src="{{ asset('image/top/menu1.webp') }}" alt="あんかけパスタ ミラカン">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/menu2.webp') }}" alt="あんかけパスタ ミラネーズ">
+                        <img class="lazyload" src="{{ asset('image/top/menu2.webp') }}" alt="あんかけパスタ ミラネーズ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/menu3.webp') }}" alt="あんかけパスタ ミラエッグ">
+                        <img class="lazyload" src="{{ asset('image/top/menu3.webp') }}" alt="あんかけパスタ ミラエッグ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/menu4.webp') }}" alt="あんかけパスタ ポパイ">
+                        <img class="lazyload" src="{{ asset('image/top/menu4.webp') }}" alt="あんかけパスタ ポパイ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/menu5.webp') }}" alt="あんかけパスタ ハマちゃん">
+                        <img class="lazyload" src="{{ asset('image/top/menu5.webp') }}" alt="あんかけパスタ ハマちゃん">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/sosaku1.webp') }}" alt="オイルパスタ ペペロンチーノ">
+                        <img class="lazyload" src="{{ asset('image/top/sosaku1.webp') }}" alt="オイルパスタ ペペロンチーノ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/sosaku2.webp') }}" alt="カレーパスタ インディアン">
+                        <img class="lazyload" src="{{ asset('image/top/sosaku2.webp') }}" alt="カレーパスタ インディアン">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/sosaku3.webp') }}" alt="バジルパスタ ジェノベーゼ">
+                        <img class="lazyload" src="{{ asset('image/top/sosaku3.webp') }}" alt="バジルパスタ ジェノベーゼ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/sosaku4.webp') }}" alt="チーズパスタ カルボナーラ">
+                        <img class="lazyload" src="{{ asset('image/top/sosaku4.webp') }}" alt="チーズパスタ カルボナーラ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/sosaku5.webp') }}" alt="和風パスタ カツオノリ">
+                        <img class="lazyload" src="{{ asset('image/top/sosaku5.webp') }}" alt="和風パスタ カツオノリ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/pizza1.webp') }}" alt="あんかけピザ ミラカン">
+                        <img class="lazyload" src="{{ asset('image/top/pizza1.webp') }}" alt="あんかけピザ ミラカン">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/pizza2.webp') }}" alt="あんかけピザ ミラネーズ">
+                        <img class="lazyload" src="{{ asset('image/top/pizza2.webp') }}" alt="あんかけピザ ミラネーズ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/pizza3.webp') }}" alt="あんかけピザ ミラエッグ">
+                        <img class="lazyload" src="{{ asset('image/top/pizza3.webp') }}" alt="あんかけピザ ミラエッグ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/pizza4.webp') }}" alt="あんかけピザ ポパイ">
+                        <img class="lazyload" src="{{ asset('image/top/pizza4.webp') }}" alt="あんかけピザ ポパイ">
                     </div>
                     <div class="swiper-slide">
-                        <img src="{{ asset('image/top/pizza5.webp') }}" alt="あんかけピザ ハマちゃん">
+                        <img class="lazyload" src="{{ asset('image/top/pizza5.webp') }}" alt="あんかけピザ ハマちゃん">
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -440,69 +440,69 @@
         <div class="content-box">
             <div class="slider-box">
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider1.webp') }}" alt="テーブル席 料理提供">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider1.webp') }}" alt="テーブル席 料理提供">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider3.webp') }}" alt="女性2人組">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider3.webp') }}" alt="女性2人組">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider4.webp') }}" alt="メガ盛り">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider4.webp') }}" alt="メガ盛り">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider5.webp') }}" alt="会計">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider5.webp') }}" alt="会計">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider6.webp') }}" alt="料理待ち 男性">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider6.webp') }}" alt="料理待ち 男性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider7.webp') }}" alt="料理待ち 女性">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider7.webp') }}" alt="料理待ち 女性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider8.webp') }}" alt="メニュー選び">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider8.webp') }}" alt="メニュー選び">
                     <div class="overlay"></div>
                 </div>
             </div>
             <div class="slider-box">
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider1.webp') }}" alt="テーブル席 料理提供">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider1.webp') }}" alt="テーブル席 料理提供">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider3.webp') }}" alt="女性2人組">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider3.webp') }}" alt="女性2人組">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider4.webp') }}" alt="メガ盛り">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider4.webp') }}" alt="メガ盛り">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider5.webp') }}" alt="会計">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider5.webp') }}" alt="会計">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider6.webp') }}" alt="料理待ち 男性">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider6.webp') }}" alt="料理待ち 男性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider7.webp') }}" alt="料理待ち 女性">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider7.webp') }}" alt="料理待ち 女性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img src="{{ asset('image/top/top-slider8.webp') }}" alt="メニュー選び">
+                    <img class="lazyload" src="{{ asset('image/top/top-slider8.webp') }}" alt="メニュー選び">
                     <div class="overlay"></div>
                 </div>
             </div>
