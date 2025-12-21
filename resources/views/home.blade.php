@@ -66,7 +66,7 @@
     <link href="{{ asset('/css/loading.css') }}" rel='stylesheet' type='text/css' media='all'>
     <link href="{{ asset('/css/mouse.css') }}" rel='stylesheet' type='text/css' media='all'>
     <link href="{{ asset('/css/common.css') }}" rel='stylesheet' type='text/css' media='all'>
-    <link href="{{ asset('/css/upload.css') }}" rel='stylesheet' type='text/css' media='all'>
+    <!-- <link href="{{ asset('/css/upload.css') }}" rel='stylesheet' type='text/css' media='all'> -->
     <link href="{{ asset('/css/style-sp.css') }}" rel='stylesheet' type='text/css' media='all and (max-width: 700px)'>
     <link href="{{ asset('/css/style.css') }}" rel='stylesheet' type='text/css' media='all and (min-width: 700px)'>
 @stop
@@ -93,19 +93,19 @@
         <p>アンケート</p>
     </a>
 
-    <section id="appeal" class="is-show">
+<!--     <section id="appeal" class="is-show">
         <div class="content-box">
             <div class="start-box">
                 <video class="thum lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
                     <source src="{{ asset('movie/btn1.mp4') }}" type="video/mp4">
                 </video>
-                <img class="thum-bg lazyload" data-src="{{ asset('image/movie/bg.webp') }}" alt="回転">
+                <img class="thum-bg lazyload" data-src="{{ asset('image/movie/bg.webp') }}" alt="回転"> -->
 <!--                 <div class="top-desc-box">
                     <img class="volume pc lazyload" data-src="{{ asset('image/movie/volume-on.webp') }}" alt="音声">
                     <img class="volume sp lazyload" data-src="{{ asset('image/movie/volume-on-sp.webp') }}" alt="音声">
                     <p>動画でご説明</p>
                 </div> -->
-                <div class="next-desc-box">
+<!--                 <div class="next-desc-box">
                     <p class="txt">重要なお知らせ</p>
                     <svg class="move-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.29 246.79">
                         <path fill="#fff" d="M133.22,113.56L23.73,4.07C18.3-1.36,9.5-1.36,4.07,4.07c-5.43,5.43-5.43,14.23,0,19.66l99.66,99.66L4.07,223.06c-5.43,5.43-5.43,14.23,0,19.66,2.71,2.71,6.27,4.07,9.83,4.07s7.11-1.36,9.83-4.07l109.49-109.49c5.43-5.43,5.43-14.23,0-19.66Z"/>
@@ -114,7 +114,7 @@
             </div>
         </div>
     </section>
-    <div id="movie" class="" data-initial-upload="dinner-time"></div>
+    <div id="movie" class="" data-initial-upload="dinner-time"></div> -->
 @stop
 
 

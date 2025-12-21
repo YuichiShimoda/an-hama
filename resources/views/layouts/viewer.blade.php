@@ -331,7 +331,7 @@
 									setTimeout(function() {
 										// console.log("再表示｜有効期限が過ぎた");
 										$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									}, 15000);
+									}, 8000);
 								} else {
 									window.localStorage.removeItem('anHamaWeeklyMenu');
 									setTimeout(function() {
@@ -343,7 +343,7 @@
 							if (window.location.pathname === "/") {
 								setTimeout(function() {
 									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-								}, 15000);
+								}, 8000);
 							} else {
 								setTimeout(function() {
 									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
