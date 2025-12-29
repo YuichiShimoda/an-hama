@@ -1,5 +1,5 @@
 @extends('layouts.viewer')
-@section('title', 'あんかけハマちゃん｜名古屋あんかけスパゲティ')
+@section('title', 'あんかけハマちゃん｜名古屋あんかけスパゲッティ')
 @section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
 @section('meta_tags')
     <script type="application/ld+json">
@@ -247,7 +247,7 @@
                 <h2>創作料理から始まる定番！</h2>
                 <div class="first-desc-box">
                     <p>当店では、お客様を笑顔にすることを何より大切にしています。</p>
-                    <p>伝統的な“あんかけスパゲティ”を現代的な“あんかけパスタ”へ...</p>
+                    <p>伝統的な“あんかけスパゲッティ”を現代的な“あんかけパスタ”へ...</p>
                     <img src="{{ asset('image/top/concept-shop.webp') }}" alt="クロス">
                 </div>
                 <p class="second-desc-box">原点でもあるイタリアンパスタが浸透した時代だからこそ、新たな“名古屋のソウルフード”を目指して、日々“美味しい”を追求します。</p>

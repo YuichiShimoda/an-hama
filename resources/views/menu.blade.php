@@ -55,7 +55,7 @@
                     },
                     {
                         "@type": "MenuItem",
-                        "name": "ハマちゃん　※ 週替わりメニュー",
+                        "name": "ハマちゃん　※ 週替りメニュー",
                         "image": "https://an-hama.com/image/top/menu5.webp",
                         "offers": {
                             "@type": "Offer",
