@@ -22,14 +22,18 @@
 		</div>
 		<video ref="videoPlayer" class="play-movie"></video>
 		<div v-if="completed" class="bottom-box">
+
+			<button v-if="currentVideo !== 'season1-2'" class="next-btn" @click="changeVideo" :data-src="'season1-2'">
+				<p><span>季</span><span>節</span><span>の</span><span>つ</span><span>け</span><span>か</span><span>け</span><span>パ</span><span>ス</span><span>タ</span></p>
+			</button>
+			<button v-if="currentVideo !== 'new-year'" class="next-btn" @click="changeVideo" :data-src="'new-year'">
+				<p><span>新</span><span>年</span><span>の</span><span>ご</span><span>挨</span><span>拶</span></p>
+			</button>
 			<a class="link-btn" href="./menu">
 				<p><span>あ</span><span>ん</span><span>か</span><span>け</span><span>パ</span><span>ス</span><span>タ</span></p>
 			</a>
 			<a class="link-btn" href="./menu/pizza">
 				<p><span>あ</span><span>ん</span><span>か</span><span>け</span><span>ピ</span><span>ザ</span></p>
-			</a>
-			<a class="link-btn" href="./info">
-				<p><span>店</span><span>舗</span><span>情</span><span>報</span></p>
 			</a>
 		</div>
 	</div>
