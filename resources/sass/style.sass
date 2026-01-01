@@ -860,6 +860,255 @@ body::-webkit-scrollbar
 
 
 
+
+
+
+#season
+	display: block
+	padding: 100px 0 50px
+	width: 100%
+	background: url("../image/season/season-bg_1-2_pc.webp")
+	background-size: cover
+	background-position: center bottom
+	background-repeat: no-repeat
+	+bp1400
+		padding: 100px 0 30px
+	+bp1200
+		padding: 100px 0 10px
+	+bp850
+		padding: 80px 0 20px
+	// +bp750
+	// 	padding: 90px 0 40px
+	.content-box
+		display: block
+		width: 100%
+		.main-box
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			width: fit-content
+			margin: 0 auto
+			position: relative
+			.left-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+				width: 500px
+				+bp1400
+					width: 420px
+				+bp1200
+					width: 380px
+				+bp800
+					width: 350px
+				.pasta-line
+					display: block
+					width: 100%
+					padding-left: 20%
+				.board
+					display: block
+					width: 100%
+					margin-top: 25px
+					+bp1200
+						margin-top: 15px
+				.illust-box
+					display: flex
+					justify-content: center
+					align-items: center
+					width: fit-content
+					margin: 20px auto 0
+					+bp1200
+						margin: 5px auto 0
+					.plate-icon
+						display: block
+						width: 80px
+						+bp1200
+							width: 60px
+					.en-msg
+						display: block
+						width: 210px
+						margin-left: 40px
+						+bp1200
+							width: 180px
+							margin-left: 20px
+			.right-box
+				display: block
+				width: 400px
+				margin-left: 30px
+				margin-top: 55px
+				+bp1400
+					width: 350px
+				+bp1200
+					width: 300px
+					margin-top: 35px
+				+bp800
+					width: 270px
+					margin-left: 20px
+				.img-box
+					.dish
+						display: block
+						width: 100%
+			.jp-msg
+				position: absolute
+				top: -5px
+				right: -160px
+				display: block
+				width: 200px
+				+bp1200
+					right: -120px
+					width: 150px
+				+bp1000
+					display: none
+		.desc-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			margin: 30px auto 0
+			.ingredient
+				display: block
+				font-weight: 400
+				font-size: 16px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #333
+			.info-box
+				display: flex
+				justify-content: center
+				align-items: flex-end
+				width: fit-content
+				+bp800
+					margin-top: 10px
+				> .tit-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					.period-box
+						display: flex
+						justify-content: center
+						align-items: center
+						width: fit-content
+						height: 32px
+						padding: 0 18px
+						border-radius: 16px
+						background-color: #B92928
+						+bp800
+							height: 30px
+							padding: 0 15px
+							border-radius: 15px
+						p
+							display: block
+							font-weight: 400
+							font-size: 16px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.05em
+							color: #fff
+							+bp800
+								font-size: 14px
+					.menu-tit
+						display: block
+						margin-left: 20px
+						font-weight: 400
+						font-size: 32px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.1em
+						color: #333
+						+bp1400
+							font-size: 28px
+						+bp800
+							font-size: 24px
+				.price-box
+					display: block
+					width: fit-content
+					padding-bottom: 1px
+					margin-left: 50px
+					+bp800
+						margin-left: 30px
+					.above-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						width: fit-content
+						.size
+							display: block
+							font-weight: 400
+							font-size: 12px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #555
+							+bp800
+								font-size: 10px
+						.unit
+							display: block
+							margin-left: 15px
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $miniwa-lt-v3
+							letter-spacing: 0.05em
+							color: #555
+							+bp800
+								margin-left: 7px
+								font-size: 12px
+					.below-box
+						display: flex
+						justify-content: flex-start
+						align-items: flex-end
+						width: fit-content
+						margin-top: 5px
+						+bp800
+							margin-top: 2px
+						.price
+							display: block
+							font-weight: 400
+							font-size: 32px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0.05em
+							color: #333
+						.yen
+							display: block
+							padding-bottom: 0.15em
+							margin-left: 4px
+							font-weight: 400
+							font-size: 20px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0.05em
+							color: #333
+							+bp1400
+								font-size: 18px
+							+bp800
+								font-size: 16px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #concept
 	display: block
 	padding: 150px 0 100px

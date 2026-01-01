@@ -230,6 +230,47 @@
             <p>近隣駐車場</p>
         </a>
     </div>
+    <section id="season">
+        <div class="content-box">
+            <div class="main-box">
+                <div class="left-box">
+                    <img class="pasta-line" src="{{ asset('image/season/pasta-line.svg') }}" alt="パスタ">
+                    <img class="board" src="{{ asset('image/season/board.svg') }}" alt="つけかけパスタ 季節の限定メニュー">
+                    <div class="illust-box">
+                        <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
+                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. Pour it.">
+                    </div>
+                </div>
+                <div class="right-box">
+                    <div class="img-box">
+                        <img class="dish" src="{{ asset('image/season/season1-2.webp') }}" alt="明太子とほうれん草のつけかけパスタ">
+                    </div>
+                </div>
+                <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
+            </div>
+            <div class="desc-box">
+                <h2 class="ingredient">旬の食材　：　「 明太子 」「 ほうれん草 」</h2>
+                <div class="info-box">
+                    <div class="tit-box">
+                        <div class="period-box">
+                            <p>1月,2月限定</p>
+                        </div>
+                        <h2 class="menu-tit">季節のつけかけパスタ</h2>
+                    </div>
+                    <div class="price-box">
+                        <div class="above-box">
+                            <p class="size">レギュラー</p>
+                            <p class="unit">300g</p>
+                        </div>
+                        <div class="below-box">
+                            <p class="price">1,300</p>
+                            <p class="yen">円</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="concept">
         <div class="content-box">
             <div class="img-box">
