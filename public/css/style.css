@@ -1138,7 +1138,7 @@ body::-webkit-scrollbar {
 #season .content-box .desc-box .info-box .price-box {
   display: block;
   width: fit-content;
-  padding-bottom: 1px;
+  padding-bottom: 3px;
   margin-left: 50px;
 }
 @media screen and (max-width: 800px) {
@@ -1197,11 +1197,16 @@ body::-webkit-scrollbar {
 #season .content-box .desc-box .info-box .price-box .below-box .price {
   display: block;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1;
   font-family: "miniwa-bd-v3", sans-serif;
   letter-spacing: 0.05em;
   color: #333;
+}
+@media screen and (max-width: 1000px) {
+  #season .content-box .desc-box .info-box .price-box .below-box .price {
+    font-size: 28px;
+  }
 }
 #season .content-box .desc-box .info-box .price-box .below-box .yen {
   display: block;

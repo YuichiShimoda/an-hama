@@ -1025,7 +1025,7 @@ body::-webkit-scrollbar
 				.price-box
 					display: block
 					width: fit-content
-					padding-bottom: 1px
+					padding-bottom: 3px
 					margin-left: 50px
 					+bp800
 						margin-left: 30px
@@ -1067,11 +1067,13 @@ body::-webkit-scrollbar
 						.price
 							display: block
 							font-weight: 400
-							font-size: 32px
+							font-size: 30px
 							line-height: 1.0
 							font-family: $miniwa-bd-v3
 							letter-spacing: 0.05em
 							color: #333
+							+bp1000
+								font-size: 28px
 						.yen
 							display: block
 							padding-bottom: 0.15em
