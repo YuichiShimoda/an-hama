@@ -240,6 +240,10 @@
                         <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
                         <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. Pour it.">
                     </div>
+                    <div class="label-box">
+                        <img class="two-month" src="{{ asset('image/season/period.svg') }}" alt="限定期間">
+                    </div>
+                    <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
                 </div>
                 <div class="right-box">
                     <div class="img-box">

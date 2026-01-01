@@ -942,6 +942,7 @@ body::-webkit-scrollbar {
   align-items: center;
   flex-direction: column;
   width: 500px;
+  position: relative;
 }
 @media screen and (max-width: 1400px) {
   #season .content-box .main-box .left-box {
@@ -1003,6 +1004,77 @@ body::-webkit-scrollbar {
   #season .content-box .main-box .left-box .illust-box .en-msg {
     width: 180px;
     margin-left: 20px;
+  }
+}
+#season .content-box .main-box .left-box .label-box {
+  position: absolute;
+  top: -5px;
+  left: -35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  z-index: 2;
+}
+@media screen and (max-width: 1400px) {
+  #season .content-box .main-box .left-box .label-box {
+    top: 4px;
+    left: -35px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #season .content-box .main-box .left-box .label-box {
+    top: 6px;
+    left: -35px;
+    width: 90px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #season .content-box .main-box .left-box .label-box {
+    top: -5px;
+    left: -35px;
+    width: 80px;
+  }
+}
+#season .content-box .main-box .left-box .label-box .two-month {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  transform-origin: center;
+  animation: spin 4s ease-in-out infinite;
+}
+#season .content-box .main-box .left-box .label-bg {
+  position: absolute;
+  top: -5px;
+  left: -35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  transform-origin: 53% 59%;
+  animation: spin 4s ease-in-out infinite, label-scale 3s ease-in-out infinite;
+  z-index: 1;
+}
+@media screen and (max-width: 1400px) {
+  #season .content-box .main-box .left-box .label-bg {
+    top: 4px;
+    left: -35px;
+    width: 106px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #season .content-box .main-box .left-box .label-bg {
+    top: 6px;
+    left: -35px;
+    width: 98px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #season .content-box .main-box .left-box .label-bg {
+    top: -5px;
+    left: -35px;
+    width: 88px;
   }
 }
 #season .content-box .main-box .right-box {
@@ -1230,6 +1302,49 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(-30deg);
+  }
+  10% {
+    transform: rotate(-29deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  90% {
+    transform: rotate(-29deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes label-scale {
+  0% {
+    scale: 0.3;
+  }
+  10% {
+    scale: 1.15;
+  }
+  40% {
+    scale: 1.15;
+  }
+  50% {
+    scale: 0.3;
+  }
+  60% {
+    scale: 1.35;
+  }
+  65% {
+    scale: 1.15;
+  }
+  90% {
+    scale: 1.15;
+  }
+  100% {
+    scale: 0.3;
+  }
+}
 #concept {
   display: block;
   padding: 150px 0 100px;
