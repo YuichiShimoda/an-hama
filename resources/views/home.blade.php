@@ -235,7 +235,7 @@
             <div class="main-box">
                 <div class="left-box">
                     <img class="pasta-line" src="{{ asset('image/season/pasta-line.svg') }}" alt="パスタ">
-                    <img class="board" src="{{ asset('image/season/board.svg') }}" alt="つけかけパスタ 季節の限定メニュー">
+                    <img class="board" src="{{ asset('image/season/board.svg') }}" alt="あんハマ発祥つけかけパスタ 季節の限定メニュー">
                     <div class="illust-box">
                         <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
                         <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. Pour it.">
