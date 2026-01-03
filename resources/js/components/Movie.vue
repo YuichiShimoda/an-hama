@@ -67,6 +67,7 @@
 	const viewedVideos = ref([]);
 	const progressRatio = ref(0);
 	viewedVideos.value.push(currentVideo.value);
+	viewedVideos.value.push("season1-2");// to show two bar
 
 	const videoOptions = ref([]);
 	const videoOrderMap = ref({});
