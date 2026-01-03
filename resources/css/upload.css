@@ -298,6 +298,11 @@
   border: none;
   outline: none;
 }
+.movie-content-box .bottom-box .next-btn.is-play {
+  margin-bottom: 15px;
+  background-color: #555;
+  box-shadow: 0 3px 0 #666;
+}
 @media screen and (max-width: 500px) {
   .movie-content-box .bottom-box .next-btn span:nth-of-type(1) {
     animation: leftRight 5s 0s ease-in-out infinite;
@@ -328,6 +333,14 @@
   }
   .movie-content-box .bottom-box .next-btn span:nth-of-type(10) {
     animation: leftRight 5s 0.27s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn.is-play {
+    margin-bottom: 15px;
+    background-color: #555;
+    box-shadow: 0 3px 0 #666;
+  }
+  .movie-content-box .bottom-box .next-btn.is-play span {
+    animation: initial;
   }
 }
 @media screen and (max-width: 400px) {
