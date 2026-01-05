@@ -347,6 +347,11 @@ return [
             'icon' => 'fas fa-newspaper',
         ],
         [
+            'text' => '動画管理',
+            'url' => 'admin/movie',
+            'icon' => 'fas fa-video',
+        ],
+        [
             'text' => 'アナリティクス',
             'url' => 'admin/analytics',
             'icon' => 'fas fa-chart-bar',
