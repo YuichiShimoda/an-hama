@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'お知らせ管理')
+@section('title', 'お知らせ ( NEWS ) 管理')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/adminlte/news.css') }}">
@@ -13,7 +13,7 @@
         <x-adminlte-alert theme="success" title="{{ session('success') }}"></x-adminlte-alert>
     @endif
     <div class="tit-box">
-        <h1>お知らせ管理</h1>
+        <h1>お知らせ ( NEWS ) 管理</h1>
         <a href="{{ route('admin.news.create') }}" class="create-btn">
             <p>新規作成</p>
         </a>

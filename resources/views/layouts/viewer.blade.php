@@ -167,7 +167,7 @@
 									<p class="common-comment">※ 週替りメニューは、あんかけパスタ, ピザ共通です。</p>
 									<div class="sec-change-box">
 										<div class="txt-box">
-											<p>NEWS</p>
+											<p>TOPICS</p>
 										</div>
 										<div class="border-left"></div>
 										<div class="border-right"></div>
