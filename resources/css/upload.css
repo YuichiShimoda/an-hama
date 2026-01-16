@@ -290,7 +290,7 @@
   justify-content: center;
   align-items: center;
   width: calc(100% - 30px);
-  height: 50px;
+  height: 42px;
   margin-top: 0;
   border-radius: 25px;
   background-color: #006134;
@@ -298,8 +298,11 @@
   border: none;
   outline: none;
 }
+.movie-content-box .bottom-box .next-btn.four-links {
+  margin-bottom: 7px;
+}
 .movie-content-box .bottom-box .next-btn.is-play {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   background-color: #555;
   box-shadow: 0 3px 0 #666;
 }
@@ -335,7 +338,7 @@
     animation: leftRight 5s 0.27s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .next-btn.is-play {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background-color: #555;
     box-shadow: 0 3px 0 #666;
   }
