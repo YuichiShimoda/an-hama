@@ -22,19 +22,19 @@
 		</div>
 		<video ref="videoPlayer" class="play-movie"></video>
 		<div v-if="!completed" class="bottom-box">
+			<button v-if="currentVideo !== 'dinner-time202601'" class="next-btn is-play" @click="changeVideo" :data-src="'dinner-time202601'">
+				<p><span>デ</span><span>ィ</span><span>ナ</span><span>ー</span><span>タ</span><span>イ</span><span>ム</span><span>特</span><span>別</span><span>営</span><span>業</span></p>
+			</button>
 			<button v-if="currentVideo !== 'season1-2'" class="next-btn is-play" @click="changeVideo" :data-src="'season1-2'">
 				<p><span>季</span><span>節</span><span>の</span><span>つ</span><span>け</span><span>か</span><span>け</span><span>パ</span><span>ス</span><span>タ</span></p>
 			</button>
-			<button v-if="currentVideo !== 'new-year'" class="next-btn is-play" @click="changeVideo" :data-src="'new-year'">
-				<p><span>新</span><span>年</span><span>の</span><span>ご</span><span>挨</span><span>拶</span></p>
-			</button>
 		</div>
 		<div v-if="completed" class="bottom-box">
+			<button v-if="currentVideo !== 'dinner-time202601'" class="next-btn" @click="changeVideo" :data-src="'dinner-time202601'">
+				<p><span>デ</span><span>ィ</span><span>ナ</span><span>ー</span><span>タ</span><span>イ</span><span>ム</span><span>特</span><span>別</span><span>営</span><span>業</span></p>
+			</button>
 			<button v-if="currentVideo !== 'season1-2'" class="next-btn" @click="changeVideo" :data-src="'season1-2'">
 				<p><span>季</span><span>節</span><span>の</span><span>つ</span><span>け</span><span>か</span><span>け</span><span>パ</span><span>ス</span><span>タ</span></p>
-			</button>
-			<button v-if="currentVideo !== 'new-year'" class="next-btn" @click="changeVideo" :data-src="'new-year'">
-				<p><span>新</span><span>年</span><span>の</span><span>ご</span><span>挨</span><span>拶</span></p>
 			</button>
 			<a class="link-btn" href="./menu">
 				<p><span>あ</span><span>ん</span><span>か</span><span>け</span><span>パ</span><span>ス</span><span>タ</span></p>
