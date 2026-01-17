@@ -346,26 +346,41 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			border: none
 			outline: none
 			&.four-links
-				margin-bottom: 7px
+				margin-top: 7px
+			&.four-links:nth-of-type(1)
+				margin-top: 0
 			&.is-play
 				margin-bottom: 10px
 				background-color: #555
 				box-shadow: 0 3px 0 #666
-			+bp500
-				span
-					@for $i from 1 through 10
-						&:nth-of-type(#{$i})
-							animation: leftRight 5.0s #{($i - 1) * 0.03}s ease-in-out infinite
-				&.is-play
-					margin-bottom: 10px
-					background-color: #555
-					box-shadow: 0 3px 0 #666
+			&:nth-of-type(1)
+				+bp500
 					span
-						animation: initial
+						@for $i from 1 through 11
+							&:nth-of-type(#{$i})
+								animation: leftRight 5.0s #{($i - 1) * 0.03}s ease-in-out infinite
+					&.is-play
+						margin-bottom: 10px
+						background-color: #555
+						box-shadow: 0 3px 0 #666
+						span
+							animation: initial
+			&:nth-of-type(2)
+				+bp500
+					span
+						@for $i from 1 through 11
+							&:nth-of-type(#{$i})
+								animation: leftRight 5.0s #{($i - 1) * 0.03 + 1.2}s ease-in-out infinite
+					&.is-play
+						margin-bottom: 10px
+						background-color: #555
+						box-shadow: 0 3px 0 #666
+						span
+							animation: initial
 			+bp400
 				min-width: 225px
 			&:hover
-				@for $i from 1 through 10
+				@for $i from 1 through 11
 					span:nth-of-type(#{$i})
 						animation: txt-rotate 1s #{($i - 1) * 0.05}s ease-in-out forwards
 				+bp500
@@ -406,13 +421,13 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 					span
 						@for $i from 1 through 7
 							&:nth-of-type(#{$i})
-								animation: leftRight 5.0s #{($i - 1) * 0.03 + 1.5}s ease-in-out infinite
+								animation: leftRight 5.0s #{($i - 1) * 0.03 + 2.4}s ease-in-out infinite
 			&:nth-of-type(2)
 				+bp500
 					span
 						@for $i from 1 through 6
 							&:nth-of-type(#{$i})
-								animation: leftRight 5.0s #{($i - 1) * 0.03 + 3.0}s ease-in-out infinite
+								animation: leftRight 5.0s #{($i - 1) * 0.03 + 3.6}s ease-in-out infinite
 			// &:nth-of-type(3)
 			// 	+bp500
 			// 		span

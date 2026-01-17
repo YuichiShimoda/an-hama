@@ -299,7 +299,10 @@
   outline: none;
 }
 .movie-content-box .bottom-box .next-btn.four-links {
-  margin-bottom: 7px;
+  margin-top: 7px;
+}
+.movie-content-box .bottom-box .next-btn.four-links:nth-of-type(1) {
+  margin-top: 0;
 }
 .movie-content-box .bottom-box .next-btn.is-play {
   margin-bottom: 10px;
@@ -307,42 +310,88 @@
   box-shadow: 0 3px 0 #666;
 }
 @media screen and (max-width: 500px) {
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(1) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(1) {
     animation: leftRight 5s 0s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(2) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(2) {
     animation: leftRight 5s 0.03s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(3) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(3) {
     animation: leftRight 5s 0.06s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(4) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(4) {
     animation: leftRight 5s 0.09s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(5) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(5) {
     animation: leftRight 5s 0.12s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(6) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(6) {
     animation: leftRight 5s 0.15s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(7) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(7) {
     animation: leftRight 5s 0.18s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(8) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(8) {
     animation: leftRight 5s 0.21s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(9) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(9) {
     animation: leftRight 5s 0.24s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn span:nth-of-type(10) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(10) {
     animation: leftRight 5s 0.27s ease-in-out infinite;
   }
-  .movie-content-box .bottom-box .next-btn.is-play {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(11) {
+    animation: leftRight 5s 0.3s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1).is-play {
     margin-bottom: 10px;
     background-color: #555;
     box-shadow: 0 3px 0 #666;
   }
-  .movie-content-box .bottom-box .next-btn.is-play span {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(1).is-play span {
+    animation: initial;
+  }
+}
+@media screen and (max-width: 500px) {
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(1) {
+    animation: leftRight 5s 1.2s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(2) {
+    animation: leftRight 5s 1.23s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(3) {
+    animation: leftRight 5s 1.26s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(4) {
+    animation: leftRight 5s 1.29s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(5) {
+    animation: leftRight 5s 1.32s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(6) {
+    animation: leftRight 5s 1.35s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(7) {
+    animation: leftRight 5s 1.38s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(8) {
+    animation: leftRight 5s 1.41s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(9) {
+    animation: leftRight 5s 1.44s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(10) {
+    animation: leftRight 5s 1.47s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(11) {
+    animation: leftRight 5s 1.5s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2).is-play {
+    margin-bottom: 10px;
+    background-color: #555;
+    box-shadow: 0 3px 0 #666;
+  }
+  .movie-content-box .bottom-box .next-btn:nth-of-type(2).is-play span {
     animation: initial;
   }
 }
@@ -380,6 +429,9 @@
 }
 .movie-content-box .bottom-box .next-btn:hover span:nth-of-type(10) {
   animation: txt-rotate 1s 0.45s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(11) {
+  animation: txt-rotate 1s 0.5s ease-in-out forwards;
 }
 @media screen and (max-width: 500px) {
   .movie-content-box .bottom-box .next-btn:hover span {
@@ -421,45 +473,45 @@
 }
 @media screen and (max-width: 500px) {
   .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(1) {
-    animation: leftRight 5s 1.5s ease-in-out infinite;
+    animation: leftRight 5s 2.4s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(2) {
-    animation: leftRight 5s 1.53s ease-in-out infinite;
+    animation: leftRight 5s 2.43s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(3) {
-    animation: leftRight 5s 1.56s ease-in-out infinite;
+    animation: leftRight 5s 2.46s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(4) {
-    animation: leftRight 5s 1.59s ease-in-out infinite;
+    animation: leftRight 5s 2.49s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(5) {
-    animation: leftRight 5s 1.62s ease-in-out infinite;
+    animation: leftRight 5s 2.52s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(6) {
-    animation: leftRight 5s 1.65s ease-in-out infinite;
+    animation: leftRight 5s 2.55s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(7) {
-    animation: leftRight 5s 1.68s ease-in-out infinite;
+    animation: leftRight 5s 2.58s ease-in-out infinite;
   }
 }
 @media screen and (max-width: 500px) {
   .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(1) {
-    animation: leftRight 5s 3s ease-in-out infinite;
+    animation: leftRight 5s 3.6s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(2) {
-    animation: leftRight 5s 3.03s ease-in-out infinite;
+    animation: leftRight 5s 3.63s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(3) {
-    animation: leftRight 5s 3.06s ease-in-out infinite;
+    animation: leftRight 5s 3.66s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(4) {
-    animation: leftRight 5s 3.09s ease-in-out infinite;
+    animation: leftRight 5s 3.69s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(5) {
-    animation: leftRight 5s 3.12s ease-in-out infinite;
+    animation: leftRight 5s 3.72s ease-in-out infinite;
   }
   .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(6) {
-    animation: leftRight 5s 3.15s ease-in-out infinite;
+    animation: leftRight 5s 3.75s ease-in-out infinite;
   }
 }
 @media screen and (max-width: 420px) {
