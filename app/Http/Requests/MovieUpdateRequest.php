@@ -34,7 +34,7 @@ class MovieUpdateRequest extends FormRequest
 			'next_movie_id1' => 'nullable|exists:movies,id',
 			'next_movie_id2' => 'nullable|exists:movies,id',
 			'next_movie_id3' => 'nullable|exists:movies,id',
-			'conversion_type' => 'required',
+			// 'conversion_type' => 'required',
             'is_visible' => 'boolean',
 			'expired_at' => 'nullable|date_format:Y-m-d',
 			'script' => 'nullable',
@@ -57,7 +57,7 @@ class MovieUpdateRequest extends FormRequest
 			'next_movie_id1.exists' => '指定された動画は存在しません。',
 			'next_movie_id2.exists' => '指定された動画は存在しません。',
 			'next_movie_id3.exists' => '指定された動画は存在しません。',
-			'conversion_type.required' => '必ず選択してください。',
+			// 'conversion_type.required' => '必ず選択してください。',
 			'expired_at.date_format' => '「 YYYY-MM-DD 」の形式で入力してください。',
 		];
 	}
