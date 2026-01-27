@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreign('next_movie_id1')->references('id')->on('movies')->onDelete('cascade');
             $table->foreign('next_movie_id2')->references('id')->on('movies')->onDelete('cascade');
             $table->foreign('next_movie_id3')->references('id')->on('movies')->onDelete('cascade');
-            $table->string('conversion_type', 255);
+            // $table->string('conversion_type', 255);
             $table->boolean('is_visible')->default(false);
             $table->timestamp('expired_at')->nullable();
             $table->text('script')->nullable();

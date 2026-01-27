@@ -18,7 +18,7 @@ class Movie extends Model
         'next_movie_id1',
         'next_movie_id2',
         'next_movie_id3',
-        'conversion_type',
+        // 'conversion_type',
         'is_visible',
         'expired_at',
         'script',

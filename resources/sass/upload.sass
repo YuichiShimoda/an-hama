@@ -333,54 +333,35 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 		z-index: 3
 		+bp400
 			padding: 20px 30px 15px
-		.next-btn
-			display: flex
-			justify-content: center
-			align-items: center
-			width: calc(100% - 30px)
-			height: 42px
-			margin-top: 0
-			border-radius: 25px
-			background-color: #006134
-			box-shadow: 0 3px 0 #007F44
-			border: none
-			outline: none
-			&.four-links
-				margin-top: 7px
-			&.four-links:nth-of-type(1)
+		.movie-btn
+			margin-top: 7px
+			&:nth-child(1)
 				margin-top: 0
-			&.is-play
-				margin-bottom: 10px
-				background-color: #555
-				box-shadow: 0 3px 0 #666
-			&:nth-of-type(1)
 				+bp500
 					span
-						@for $i from 1 through 11
+						@for $i from 1 through 15
 							&:nth-of-type(#{$i})
 								animation: leftRight 5.0s #{($i - 1) * 0.03}s ease-in-out infinite
-					&.is-play
-						margin-bottom: 10px
-						background-color: #555
-						box-shadow: 0 3px 0 #666
-						span
-							animation: initial
-			&:nth-of-type(2)
+			&:nth-child(2)
 				+bp500
 					span
-						@for $i from 1 through 11
+						@for $i from 1 through 15
 							&:nth-of-type(#{$i})
 								animation: leftRight 5.0s #{($i - 1) * 0.03 + 1.2}s ease-in-out infinite
-					&.is-play
-						margin-bottom: 10px
-						background-color: #555
-						box-shadow: 0 3px 0 #666
-						span
-							animation: initial
-			+bp400
-				min-width: 225px
+			&:nth-child(3)
+				+bp500
+					span
+						@for $i from 1 through 15
+							&:nth-of-type(#{$i})
+								animation: leftRight 5.0s #{($i - 1) * 0.03 + 2.4}s ease-in-out infinite
+			&:nth-child(4)
+				+bp500
+					span
+						@for $i from 1 through 15
+							&:nth-of-type(#{$i})
+								animation: leftRight 5.0s #{($i - 1) * 0.03 + 3.6}s ease-in-out infinite
 			&:hover
-				@for $i from 1 through 11
+				@for $i from 1 through 15
 					span:nth-of-type(#{$i})
 						animation: txt-rotate 1s #{($i - 1) * 0.05}s ease-in-out forwards
 				+bp500
@@ -388,6 +369,24 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 						animation: initial !important
 			&:focus
 				outline: none
+		.next-btn
+			display: flex
+			justify-content: center
+			align-items: center
+			width: calc(100% - 30px)
+			height: 42px
+			border-radius: 25px
+			background-color: #006134
+			box-shadow: 0 3px 0 #007F44
+			border: none
+			outline: none
+			&.is-play
+				background-color: #555 !important
+				box-shadow: 0 3px 0 #666 !important
+				span
+					animation: initial !important
+			+bp400
+				min-width: 225px
 			> p
 				display: flex
 				justify-content: center
@@ -410,30 +409,10 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			align-items: center
 			width: calc(100% - 30px)
 			height: 50px
-			margin-top: 7px
 			border-radius: 25px
 			background-color: #b92928
 			box-shadow: 0 3px 0 #D54242
 			cursor: none
-			&:nth-of-type(1)
-				// margin-top: 0
-				+bp500
-					span
-						@for $i from 1 through 7
-							&:nth-of-type(#{$i})
-								animation: leftRight 5.0s #{($i - 1) * 0.03 + 2.4}s ease-in-out infinite
-			&:nth-of-type(2)
-				+bp500
-					span
-						@for $i from 1 through 6
-							&:nth-of-type(#{$i})
-								animation: leftRight 5.0s #{($i - 1) * 0.03 + 3.6}s ease-in-out infinite
-			// &:nth-of-type(3)
-			// 	+bp500
-			// 		span
-			// 			@for $i from 1 through 4
-			// 				&:nth-of-type(#{$i})
-			// 					animation: leftRight 5.0s #{($i - 1) * 0.03 + 3.0}s ease-in-out infinite
 			+bp420
 				height: 48px
 				border-radius: 24px
@@ -441,13 +420,6 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 				min-width: 225px
 				height: 46px
 				border-radius: 23px
-			&:hover
-				@for $i from 1 through 7
-					span:nth-of-type(#{$i})
-						animation: txt-rotate 1s #{($i - 1) * 0.05}s ease-in-out forwards
-				+bp500
-					span
-						animation: initial !important
 			> p
 				display: flex
 				justify-content: center

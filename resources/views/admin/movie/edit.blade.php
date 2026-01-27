@@ -27,7 +27,7 @@
 		<div class="d-block">
 			<x-adminlte-input name="title" label="タイトル" label-class="required" placeholder="タイトル" value="{{ old('title', $movie->title) }}"/>
 			<div class="form-note-box">
-				<p>※ 10文字以内で入力してください。</p>
+				<p>※ 15文字以内で入力してください。</p>
 			</div>
 		</div>
 
@@ -166,7 +166,7 @@
 		@endphp
 
 		{{-- コンバージョン種別 --}}
-		<div class="d-block">
+<!-- 		<div class="d-block">
 			<div class="form-group">
 				<label class="required">コンバージョン種別</label>
 				<div class="radio-box">
@@ -185,7 +185,7 @@
 					</span>
 				@enderror
 			</div>
-		</div>
+		</div> -->
 
 		{{-- 表示フラグ --}}
         <div class="d-block">

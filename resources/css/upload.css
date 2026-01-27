@@ -285,161 +285,276 @@
     padding: 20px 30px 15px;
   }
 }
+.movie-content-box .bottom-box .movie-btn {
+  margin-top: 7px;
+}
+.movie-content-box .bottom-box .movie-btn:nth-child(1) {
+  margin-top: 0;
+}
+@media screen and (max-width: 500px) {
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(1) {
+    animation: leftRight 5s 0s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(2) {
+    animation: leftRight 5s 0.03s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(3) {
+    animation: leftRight 5s 0.06s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(4) {
+    animation: leftRight 5s 0.09s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(5) {
+    animation: leftRight 5s 0.12s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(6) {
+    animation: leftRight 5s 0.15s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(7) {
+    animation: leftRight 5s 0.18s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(8) {
+    animation: leftRight 5s 0.21s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(9) {
+    animation: leftRight 5s 0.24s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(10) {
+    animation: leftRight 5s 0.27s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(11) {
+    animation: leftRight 5s 0.3s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(12) {
+    animation: leftRight 5s 0.33s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(13) {
+    animation: leftRight 5s 0.36s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(14) {
+    animation: leftRight 5s 0.39s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(1) span:nth-of-type(15) {
+    animation: leftRight 5s 0.42s ease-in-out infinite;
+  }
+}
+@media screen and (max-width: 500px) {
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(1) {
+    animation: leftRight 5s 1.2s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(2) {
+    animation: leftRight 5s 1.23s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(3) {
+    animation: leftRight 5s 1.26s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(4) {
+    animation: leftRight 5s 1.29s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(5) {
+    animation: leftRight 5s 1.32s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(6) {
+    animation: leftRight 5s 1.35s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(7) {
+    animation: leftRight 5s 1.38s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(8) {
+    animation: leftRight 5s 1.41s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(9) {
+    animation: leftRight 5s 1.44s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(10) {
+    animation: leftRight 5s 1.47s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(11) {
+    animation: leftRight 5s 1.5s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(12) {
+    animation: leftRight 5s 1.53s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(13) {
+    animation: leftRight 5s 1.56s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(14) {
+    animation: leftRight 5s 1.59s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(2) span:nth-of-type(15) {
+    animation: leftRight 5s 1.62s ease-in-out infinite;
+  }
+}
+@media screen and (max-width: 500px) {
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(1) {
+    animation: leftRight 5s 2.4s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(2) {
+    animation: leftRight 5s 2.43s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(3) {
+    animation: leftRight 5s 2.46s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(4) {
+    animation: leftRight 5s 2.49s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(5) {
+    animation: leftRight 5s 2.52s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(6) {
+    animation: leftRight 5s 2.55s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(7) {
+    animation: leftRight 5s 2.58s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(8) {
+    animation: leftRight 5s 2.61s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(9) {
+    animation: leftRight 5s 2.64s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(10) {
+    animation: leftRight 5s 2.67s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(11) {
+    animation: leftRight 5s 2.7s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(12) {
+    animation: leftRight 5s 2.73s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(13) {
+    animation: leftRight 5s 2.76s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(14) {
+    animation: leftRight 5s 2.79s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(3) span:nth-of-type(15) {
+    animation: leftRight 5s 2.82s ease-in-out infinite;
+  }
+}
+@media screen and (max-width: 500px) {
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(1) {
+    animation: leftRight 5s 3.6s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(2) {
+    animation: leftRight 5s 3.63s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(3) {
+    animation: leftRight 5s 3.66s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(4) {
+    animation: leftRight 5s 3.69s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(5) {
+    animation: leftRight 5s 3.72s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(6) {
+    animation: leftRight 5s 3.75s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(7) {
+    animation: leftRight 5s 3.78s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(8) {
+    animation: leftRight 5s 3.81s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(9) {
+    animation: leftRight 5s 3.84s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(10) {
+    animation: leftRight 5s 3.87s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(11) {
+    animation: leftRight 5s 3.9s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(12) {
+    animation: leftRight 5s 3.93s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(13) {
+    animation: leftRight 5s 3.96s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(14) {
+    animation: leftRight 5s 3.99s ease-in-out infinite;
+  }
+  .movie-content-box .bottom-box .movie-btn:nth-child(4) span:nth-of-type(15) {
+    animation: leftRight 5s 4.02s ease-in-out infinite;
+  }
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(1) {
+  animation: txt-rotate 1s 0s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(2) {
+  animation: txt-rotate 1s 0.05s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(3) {
+  animation: txt-rotate 1s 0.1s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(4) {
+  animation: txt-rotate 1s 0.15s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(5) {
+  animation: txt-rotate 1s 0.2s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(6) {
+  animation: txt-rotate 1s 0.25s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(7) {
+  animation: txt-rotate 1s 0.3s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(8) {
+  animation: txt-rotate 1s 0.35s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(9) {
+  animation: txt-rotate 1s 0.4s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(10) {
+  animation: txt-rotate 1s 0.45s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(11) {
+  animation: txt-rotate 1s 0.5s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(12) {
+  animation: txt-rotate 1s 0.55s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(13) {
+  animation: txt-rotate 1s 0.6s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(14) {
+  animation: txt-rotate 1s 0.65s ease-in-out forwards;
+}
+.movie-content-box .bottom-box .movie-btn:hover span:nth-of-type(15) {
+  animation: txt-rotate 1s 0.7s ease-in-out forwards;
+}
+@media screen and (max-width: 500px) {
+  .movie-content-box .bottom-box .movie-btn:hover span {
+    animation: initial !important;
+  }
+}
+.movie-content-box .bottom-box .movie-btn:focus {
+  outline: none;
+}
 .movie-content-box .bottom-box .next-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   width: calc(100% - 30px);
   height: 42px;
-  margin-top: 0;
   border-radius: 25px;
   background-color: #006134;
   box-shadow: 0 3px 0 #007F44;
   border: none;
   outline: none;
 }
-.movie-content-box .bottom-box .next-btn.four-links {
-  margin-top: 7px;
-}
-.movie-content-box .bottom-box .next-btn.four-links:nth-of-type(1) {
-  margin-top: 0;
-}
 .movie-content-box .bottom-box .next-btn.is-play {
-  margin-bottom: 10px;
-  background-color: #555;
-  box-shadow: 0 3px 0 #666;
+  background-color: #555 !important;
+  box-shadow: 0 3px 0 #666 !important;
 }
-@media screen and (max-width: 500px) {
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(1) {
-    animation: leftRight 5s 0s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(2) {
-    animation: leftRight 5s 0.03s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(3) {
-    animation: leftRight 5s 0.06s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(4) {
-    animation: leftRight 5s 0.09s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(5) {
-    animation: leftRight 5s 0.12s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(6) {
-    animation: leftRight 5s 0.15s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(7) {
-    animation: leftRight 5s 0.18s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(8) {
-    animation: leftRight 5s 0.21s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(9) {
-    animation: leftRight 5s 0.24s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(10) {
-    animation: leftRight 5s 0.27s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1) span:nth-of-type(11) {
-    animation: leftRight 5s 0.3s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1).is-play {
-    margin-bottom: 10px;
-    background-color: #555;
-    box-shadow: 0 3px 0 #666;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(1).is-play span {
-    animation: initial;
-  }
-}
-@media screen and (max-width: 500px) {
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(1) {
-    animation: leftRight 5s 1.2s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(2) {
-    animation: leftRight 5s 1.23s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(3) {
-    animation: leftRight 5s 1.26s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(4) {
-    animation: leftRight 5s 1.29s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(5) {
-    animation: leftRight 5s 1.32s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(6) {
-    animation: leftRight 5s 1.35s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(7) {
-    animation: leftRight 5s 1.38s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(8) {
-    animation: leftRight 5s 1.41s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(9) {
-    animation: leftRight 5s 1.44s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(10) {
-    animation: leftRight 5s 1.47s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2) span:nth-of-type(11) {
-    animation: leftRight 5s 1.5s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2).is-play {
-    margin-bottom: 10px;
-    background-color: #555;
-    box-shadow: 0 3px 0 #666;
-  }
-  .movie-content-box .bottom-box .next-btn:nth-of-type(2).is-play span {
-    animation: initial;
-  }
+.movie-content-box .bottom-box .next-btn.is-play span {
+  animation: initial !important;
 }
 @media screen and (max-width: 400px) {
   .movie-content-box .bottom-box .next-btn {
     min-width: 225px;
   }
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(1) {
-  animation: txt-rotate 1s 0s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(2) {
-  animation: txt-rotate 1s 0.05s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(3) {
-  animation: txt-rotate 1s 0.1s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(4) {
-  animation: txt-rotate 1s 0.15s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(5) {
-  animation: txt-rotate 1s 0.2s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(6) {
-  animation: txt-rotate 1s 0.25s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(7) {
-  animation: txt-rotate 1s 0.3s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(8) {
-  animation: txt-rotate 1s 0.35s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(9) {
-  animation: txt-rotate 1s 0.4s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(10) {
-  animation: txt-rotate 1s 0.45s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .next-btn:hover span:nth-of-type(11) {
-  animation: txt-rotate 1s 0.5s ease-in-out forwards;
-}
-@media screen and (max-width: 500px) {
-  .movie-content-box .bottom-box .next-btn:hover span {
-    animation: initial !important;
-  }
-}
-.movie-content-box .bottom-box .next-btn:focus {
-  outline: none;
 }
 .movie-content-box .bottom-box .next-btn > p {
   display: flex;
@@ -465,54 +580,10 @@
   align-items: center;
   width: calc(100% - 30px);
   height: 50px;
-  margin-top: 7px;
   border-radius: 25px;
   background-color: #b92928;
   box-shadow: 0 3px 0 #D54242;
   cursor: none;
-}
-@media screen and (max-width: 500px) {
-  .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(1) {
-    animation: leftRight 5s 2.4s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(2) {
-    animation: leftRight 5s 2.43s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(3) {
-    animation: leftRight 5s 2.46s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(4) {
-    animation: leftRight 5s 2.49s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(5) {
-    animation: leftRight 5s 2.52s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(6) {
-    animation: leftRight 5s 2.55s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(1) span:nth-of-type(7) {
-    animation: leftRight 5s 2.58s ease-in-out infinite;
-  }
-}
-@media screen and (max-width: 500px) {
-  .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(1) {
-    animation: leftRight 5s 3.6s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(2) {
-    animation: leftRight 5s 3.63s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(3) {
-    animation: leftRight 5s 3.66s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(4) {
-    animation: leftRight 5s 3.69s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(5) {
-    animation: leftRight 5s 3.72s ease-in-out infinite;
-  }
-  .movie-content-box .bottom-box .link-btn:nth-of-type(2) span:nth-of-type(6) {
-    animation: leftRight 5s 3.75s ease-in-out infinite;
-  }
 }
 @media screen and (max-width: 420px) {
   .movie-content-box .bottom-box .link-btn {
@@ -525,32 +596,6 @@
     min-width: 225px;
     height: 46px;
     border-radius: 23px;
-  }
-}
-.movie-content-box .bottom-box .link-btn:hover span:nth-of-type(1) {
-  animation: txt-rotate 1s 0s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .link-btn:hover span:nth-of-type(2) {
-  animation: txt-rotate 1s 0.05s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .link-btn:hover span:nth-of-type(3) {
-  animation: txt-rotate 1s 0.1s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .link-btn:hover span:nth-of-type(4) {
-  animation: txt-rotate 1s 0.15s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .link-btn:hover span:nth-of-type(5) {
-  animation: txt-rotate 1s 0.2s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .link-btn:hover span:nth-of-type(6) {
-  animation: txt-rotate 1s 0.25s ease-in-out forwards;
-}
-.movie-content-box .bottom-box .link-btn:hover span:nth-of-type(7) {
-  animation: txt-rotate 1s 0.3s ease-in-out forwards;
-}
-@media screen and (max-width: 500px) {
-  .movie-content-box .bottom-box .link-btn:hover span {
-    animation: initial !important;
   }
 }
 .movie-content-box .bottom-box .link-btn > p {

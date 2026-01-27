@@ -24,7 +24,7 @@ class MovieUpdateRequest extends FormRequest
 	{
 		$movieId = $this->route('movie')->id;
 		return [
-			'title' => 'required|max:10',
+			'title' => 'required|max:15',
 			'movie' => 'nullable|file|mimetypes:video/mp4,video/webm|max:10240',
 			'filename' => [
 				'required',
@@ -46,7 +46,7 @@ class MovieUpdateRequest extends FormRequest
 	{
 		return [
 			'title.required' => '必ず入力してください。',
-			'title.max'      => '10文字以内で入力してください。',
+			'title.max'      => '15文字以内で入力してください。',
 			'movie.required' => '必ず選択してください。',
 			'movie.file' => 'ファイルを選択してください。',
 			'movie.mimetypes' => '対応している動画形式は「 mp4 / webm 」のいずれかです。',

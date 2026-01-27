@@ -33,7 +33,7 @@
         <p class="table-empty-msg">表示するデータがありません。</p>
     @else
         <p class="visible-tit">▼ 表示動画 ▼
-        <x-adminlte-datatable id="visibleTable" :heads="['タイトル', '動画', 'コンバージョン種別', '有効期限', '操作']" striped hoverable bordered compressed>
+        <x-adminlte-datatable id="visibleTable" :heads="['タイトル', '動画', '有効期限', '操作']" striped hoverable bordered compressed>
             @foreach($visible_movie as $visible_movie_ele)
                 <tr>
                     <td>{{ $visible_movie_ele->title }}</td>
@@ -42,7 +42,7 @@
                             <img class="movie-icon" src="{{ asset('image/adminlte/movie/movie-icon.svg') }}" alt="">
                         </div>
                     </td>
-                    <td>{{ $visible_movie_ele->conversion_type }}</td>
+                    <!-- <td>{{ $visible_movie_ele->conversion_type }}</td> -->
                     @if ($visible_movie_ele->expired_at)
                         @php
                             $expiredAt = \Carbon\Carbon::parse($visible_movie_ele->expired_at);
@@ -60,9 +60,9 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
-        <div class="note">※ 有効期限を過ぎている動画は、LPで表示されません。</div>
+        <div class="note">※ 有効期限を過ぎている動画は、HPで表示されません。</div>
         <div class="border-line"></div>
-        <x-adminlte-datatable id="movieTable" :heads="['タイトル', '動画', 'コンバージョン種別', '有効期限', '操作']" striped hoverable bordered compressed>
+        <x-adminlte-datatable id="movieTable" :heads="['タイトル', '動画', '有効期限', '操作']" striped hoverable bordered compressed>
             @foreach($movie as $movie_ele)
                 <tr>
                     <td>{{ $movie_ele->title }}</td>
@@ -71,7 +71,7 @@
                             <img class="movie-icon" src="{{ asset('image/adminlte/movie/movie-icon.svg') }}" alt="">
                         </div>
                     </td>
-                    <td>{{ $movie_ele->conversion_type }}</td>
+                    <!-- <td>{{ $movie_ele->conversion_type }}</td> -->
                     @if ($movie_ele->expired_at)
                         @php
                             $expiredAt = \Carbon\Carbon::parse($movie_ele->expired_at);

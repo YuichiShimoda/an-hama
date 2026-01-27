@@ -60,7 +60,7 @@
 					@endif
 				</div>
 			</div>
-			<p><strong>コンバージョン種別：</strong>{{ $movie->conversion_type }}</p>
+			<!-- <p><strong>コンバージョン種別：</strong>{{ $movie->conversion_type }}</p> -->
 			<p><strong>有効期限：</strong>{{ $movie->expired_at ? \Carbon\Carbon::parse($movie->expired_at)->format('Y年 n月 j日') : '---' }}</p>
 			<div class="memmo-box bg-light rounded border">
 				<strong>台本：</strong>
