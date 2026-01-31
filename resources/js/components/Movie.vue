@@ -173,7 +173,7 @@
 			poster: './image/movie/poster.webp',
 			sources: [
 				{
-					src: `./movie/${props.initialQueryValue}.mp4`,
+					src: `./movie/uploader/${props.initialQueryValue}.mp4`,
 					type: 'video/mp4'
 				}
 			]
@@ -285,7 +285,7 @@
 		currentVideo.value = fileName;
 		if (player.value && fileName) {
 			player.value.src({
-				src: `./movie/${fileName}.mp4`,
+				src: `./movie/uploader/${fileName}.mp4`,
 				type: 'video/mp4'
 			})
 			player.value.muted(false);
