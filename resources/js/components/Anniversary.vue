@@ -189,7 +189,7 @@
 				volume.value = 1;
 			}
 			if (player.value.currentTime() < 2) {
-				$("#movie .call-btn").removeClass("is-end");
+				$("#anniversary .call-btn").removeClass("is-end");
 				gtmEventSent.value[currentVideo.value] = false;
 			}
 		})
@@ -198,7 +198,7 @@
 			pause.value = 1
 		})
 		player.value.on('ended', () => {
-			$("#movie .call-btn").addClass("is-end");
+			$("#anniversary .call-btn").addClass("is-end");
 			completed.value = 1;
 			const videoId = currentVideo.value;
 			const videoInfo = videoOptions.value.find(v => v.key === videoId);
@@ -251,9 +251,10 @@
 	}
 
 	function closeVideo() {
-		$("#appeal .thum").get(0).play();
-		$("#movie").toggleClass("is-show");
-		$("#appeal").toggleClass("is-show");
+		// $("#appeal .thum").get(0).play();
+		$("#anniversary").toggleClass("is-show");
+		console.log("close");
+		// $("#appeal").toggleClass("is-show");
 		$("#wrap").toggleClass("no-scroll");
 		props.onClose?.()
 	}

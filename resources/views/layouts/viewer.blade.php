@@ -398,7 +398,7 @@
 										$("#confetti-wrapper").removeClass("fired");
 										const anniversaryItem = {
 											value: "anniversary",
-											expiry: new Date().getTime() + 1 * 1 * 1 * 1 * 1000 // 1時間後のタイムスタンプ
+											expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
 										};
 										window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 									}, 6000);
@@ -451,7 +451,7 @@
 									$("#confetti-wrapper").removeClass("fired");
 									const anniversaryItem = {
 										value: "anniversary",
-										expiry: new Date().getTime() + 1 * 1 * 1 * 1 * 1000 // 1時間後のタイムスタンプ
+										expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
 									};
 									window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 								}, 6000);
