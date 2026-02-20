@@ -129,6 +129,36 @@
 					</ul>
 				</nav>
 			</header>
+			<div id="confetti-wrapper">
+				<canvas id="confetti-canvas"></canvas>
+				<div class="content-box">
+					<div class="anniversary-tit">
+						<span class="txt">オープン</span>
+						<span class="one">1</span>
+						<span class="txt">周年</span>
+						<div class="thanks-box">
+							<img class="thanks" src="{{ asset('image/thanks.svg') }}" alt="おかげさまで">
+						</div>
+					</div>
+					<div class="date-box">
+						<div class="item-box">
+							<p class="num">2026</p>
+							<p class="unit">年</p>
+						</div>
+						<div class="item-box">
+							<p class="num">3</p>
+							<p class="unit">月</p>
+						</div>
+						<div class="item-box">
+							<p class="num">10</p>
+							<p class="unit">日</p>
+						</div>
+					</div>
+					<div class="movie-btn">
+						<p>動画を見る</p>
+					</div>
+				</div>
+			</div>
 			<div id="cursor" class="cursor-box">
 				<div class="inside">
 					<img class="circle" src="{{ asset('image/cursor-circle.svg') }}" alt="円">
@@ -286,6 +316,45 @@
 			<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
 
+			<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@latest/dist/confetti.browser.min.js"></script><!-- confetti -->
+			<script>
+				const canvas = $('#confetti-canvas')[0];
+				const myConfetti = confetti.create(canvas, {
+					resize: true,
+					useWorker: true
+				});
+
+				const colors = ['#FFD700', '#FFA500', '#C0C0C0', '#E8E8E8']; // 金銀
+				const defaults = {
+					angle: 90,
+					spread: 180,
+					startVelocity: 60,
+					origin: {
+						x: 0.5,
+						y: 0.8
+					},
+					colors: colors,
+					scalar: 1.5
+				};
+
+				function fire(particleRatio, options) {
+					myConfetti($.extend({}, defaults, options, {
+						particleCount: Math.floor(1000 * particleRatio)
+					}));
+				}
+
+				function launchConfetti() {
+					fire(0.25, { spread: 26, startVelocity: 55 });
+					fire(0.2, { spread: 60 });
+					fire(0.35, { spread: 100, scalar: 0.8 });
+					fire(0.1, { startVelocity: 25, decay: 0.92, scalar: 1.2 });
+					fire(0.1, { spread: 120, startVelocity: 45 });
+					setTimeout(function () {
+						fire(0.3, { spread: 140, startVelocity: 65, scalar: 2 });
+					}, 300);
+				}
+			</script>
+
 			<script>
 				document.oncontextmenu = function () {return false;}
 				$(document).on('keydown', function(e) {
@@ -316,42 +385,78 @@
 					}
 				});
 				$(window).on('load', function() {
-					@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
-						setTimeout(function() {
-							$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-							// console.log("メニューページ表示");
-						}, 10000);
-					@else
-						// ローカルストレージを取得
-						var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
-						if (localStorageData) {
-							// 有効期限が過ぎているか確認後、ローカルストレージを削除
-							if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
-								if (window.location.pathname === "/") {
-									setTimeout(function() {
-										// console.log("再表示｜有効期限が過ぎた");
-										$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									}, 8000);
-								} else {
-									window.localStorage.removeItem('anHamaWeeklyMenu');
-									setTimeout(function() {
-										$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									}, 8000);
-								}
-							}
+					var localStorageAnniversary = window.localStorage.getItem('anniversary');
+					if (localStorageAnniversary) {
+						if (new Date().getTime() > JSON.parse(localStorageAnniversary).expiry) {
+							window.localStorage.removeItem('anniversary');
+							setTimeout(function() {
+								$("#confetti-wrapper").addClass("fired");
+								setTimeout(function () {
+									launchConfetti();
+									setTimeout(function () {
+										$("#confetti-wrapper").removeClass("fired");
+										const anniversaryItem = {
+											value: "anniversary",
+											expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+										};
+										window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
+									}, 6000);
+								}, 500);
+							}, 4000);
 						} else {
-							if (window.location.pathname === "/") {
+							@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
 								setTimeout(function() {
 									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-								}, 8000);
-							} else {
-								setTimeout(function() {
-									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									// console.log("初回表示｜ローカルストレージがないため");
-								}, 8000);
-							}
+									// console.log("メニューページ表示");
+								}, 10000);
+							@else
+								// ローカルストレージを取得
+								var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
+								if (localStorageData) {
+									// 有効期限が過ぎているか確認後、ローカルストレージを削除
+									if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
+										if (window.location.pathname === "/") {
+											setTimeout(function() {
+												// console.log("再表示｜有効期限が過ぎた");
+												$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+											}, 8000);
+										} else {
+											window.localStorage.removeItem('anHamaWeeklyMenu');
+											setTimeout(function() {
+												$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+											}, 8000);
+										}
+									}
+								} else {
+									if (window.location.pathname === "/") {
+										setTimeout(function() {
+											$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+										}, 8000);
+									} else {
+										setTimeout(function() {
+											$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+											// console.log("初回表示｜ローカルストレージがないため");
+										}, 8000);
+									}
+								}
+							@endif
 						}
-					@endif
+					} else {
+						setTimeout(function() {
+							$("#confetti-wrapper").addClass("fired");
+							setTimeout(function () {
+								launchConfetti();
+								setTimeout(function () {
+									$("#confetti-wrapper").removeClass("fired");
+									const anniversaryItem = {
+										value: "anniversary",
+										expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+									};
+									window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
+								}, 6000);
+							}, 500);
+						}, 4000);
+					}
 				});
 				$('.weekly-modal-close').on('click',function() {
 					$('.md-overlay,.md-contents').fadeOut();

@@ -19,18 +19,18 @@ $(window).on("load", function() {
 
 
 
-$("canvas").on("click", function() {
+$("#c").on("click", function() {
 	$(this).addClass("is-show");
 	setTimeout(function() {
-		$("canvas").removeClass("is-show");
+		$("#c").removeClass("is-show");
 	}, 500);
 });
 $(".click-canvas").on("click", function() {
 	var clickedElement = $(event.target);
 	if (!clickedElement.closest(".not-click-canvas").length) {
-		$("canvas").addClass("is-show");
+		$("#c").addClass("is-show");
 		setTimeout(function() {
-			$("canvas").removeClass("is-show");
+			$("#c").removeClass("is-show");
 		}, 500);
 	}
 });

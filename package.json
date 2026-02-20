@@ -23,7 +23,9 @@
         "vite": "^6.3.2"
     },
     "dependencies": {
+        "canvas-confetti": "^1.9.4",
         "lazysizes": "^5.3.2",
+        "three": "^0.183.0",
         "video.js": "^8.23.4"
     }
 }

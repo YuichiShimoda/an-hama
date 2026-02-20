@@ -1,0 +1,55 @@
+紙吹雪アニメーション
+
+CODEPEN：https://codepen.io/search/pens?q=confetti+animation
+　∟ https://codepen.io/ilkerkurtel/pen/vEKQVjP
+　∟ https://codepen.io/matteobruni/pen/VwdEbmg
+　∟ https://codepen.io/Best_codes/pen/ExMOzxz
+　∟ https://codepen.io/Ranjithkumar10/pen/mdqeoVp
+　∟ https://codepen.io/matteobruni/pen/dyKgWOw
+　∟ https://codepen.io/chrisgannon/pen/VapQoG
+
+
+
+
+3Dアニメーション：https://codepen.io/zadvorsky/pen/rVaZoP
+	◆遅延・実行時間
+		var delay = randomRange(-3, 2)
+		var duration = randomRange(5, 11)
+
+	◆サイズ
+		var halfWidth = randomRange(0.03, 0.05);
+		var halfHeight = halfWidth * 0.5;
+
+	◆移動量
+		var x1 = randomRange(-5, 5);
+		var y1 = -1000;
+		var z1 = randomRange(-5, 5);
+
+	◆1ループの時間
+		time += timeStep;
+		time %= 8; // make it loop
+
+	◆回転軸：それぞれの紙吹雪をより立体的にする
+		// axis
+		a.x = Math.random() - 0.5;
+		a.y = Math.random() - 0.5;
+		a.z = Math.random() - 0.5;
+		a.normalize();
+		// angle
+		a.w = Math.PI * randomRange(-50, 50);
+
+	◆ベジェ曲線：制御点を変更して奥行きを強調
+		cp0.x = randomRange(-1, 1);
+		cp0.y = randomRange(6, 10);
+		cp0.z = randomRange(-4, 4);
+
+		cp1.x = randomRange(-8, 8);
+		cp1.y = randomRange(2, 10);
+		cp1.z = randomRange(-12, 12);
+
+
+
+
+
+
+理想形：https://codepen.io/nagdesign/pen/oNREqrY
