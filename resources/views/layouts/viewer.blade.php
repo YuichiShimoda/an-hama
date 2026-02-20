@@ -402,7 +402,7 @@
 										window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 									}, 6000);
 								}, 500);
-							}, 4000);
+							}, 6000);
 						} else {
 							@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
 								setTimeout(function() {
@@ -455,7 +455,7 @@
 									window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 								}, 6000);
 							}, 500);
-						}, 4000);
+						}, 6000);
 					}
 				});
 				$('.weekly-modal-close').on('click',function() {
