@@ -265,3 +265,40 @@ function fauxClick(x, y) {
 	fauxClick.clientY = y;
 	document.dispatchEvent(fauxClick);
 }
+
+
+
+
+
+
+
+
+
+import { createApp } from 'vue';
+import Anniversary from './components/Anniversary.vue';
+
+let anniversaryApp = null;
+
+$(document).on('click', '#confetti-wrapper .movie-btn', function () {
+	const $mountTarget = $('#anniversary');
+	$mountTarget.toggleClass("is-show");
+	$("#wrap").toggleClass("no-scroll");
+	if (!$mountTarget.length) return;
+	if ($mountTarget.data('vueMounted') === true) return;
+
+	const initialUpload = $mountTarget.data('initial-upload') || 'sample1.mp4';
+
+	anniversaryApp = createApp(Anniversary, {
+		initialQueryValue: initialUpload,
+		onClose: () => {
+			// Vue アプリを unmount
+			anniversaryApp.unmount();
+			anniversaryApp = null;
+			// DOM をクリア
+			$mountTarget.empty();
+			$mountTarget.data('vueMounted', false);
+		}
+	});
+	anniversaryApp.mount($mountTarget[0]);
+	$mountTarget.data('vueMounted', true);
+});

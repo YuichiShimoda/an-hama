@@ -403,3 +403,30 @@
     height: 100%;
   }
 }
+#anniversary {
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  aspect-ratio: 9/16;
+  border-radius: 20px;
+  background: #f0f0f0;
+  opacity: 0;
+  transform-origin: right bottom;
+  transform: scale(0);
+  transition: all 1s ease-in-out;
+  z-index: 2000;
+}
+#anniversary.is-show {
+  opacity: 1;
+  transform: scale(1);
+}
+@media screen and (max-width: 1100px) {
+  #anniversary {
+    right: 30px;
+    bottom: 20px;
+  }
+}

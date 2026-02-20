@@ -213,6 +213,7 @@
 			@endif
 
 			<main role="main">
+				<div id="anniversary" class="" data-initial-upload="season1-2"></div>
 				@yield('content')
 			</main>
 			<footer class="footer-box">
@@ -397,7 +398,7 @@
 										$("#confetti-wrapper").removeClass("fired");
 										const anniversaryItem = {
 											value: "anniversary",
-											expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+											expiry: new Date().getTime() + 1 * 1 * 1 * 1 * 1000 // 1時間後のタイムスタンプ
 										};
 										window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 									}, 6000);
@@ -450,7 +451,7 @@
 									$("#confetti-wrapper").removeClass("fired");
 									const anniversaryItem = {
 										value: "anniversary",
-										expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+										expiry: new Date().getTime() + 1 * 1 * 1 * 1 * 1000 // 1時間後のタイムスタンプ
 									};
 									window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 								}, 6000);
