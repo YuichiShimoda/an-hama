@@ -154,9 +154,9 @@
 							<p class="unit">日</p>
 						</div>
 					</div>
-					<div class="movie-btn">
+<!-- 					<div class="movie-btn">
 						<p>動画を見る</p>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div id="cursor" class="cursor-box">
@@ -213,7 +213,7 @@
 			@endif
 
 			<main role="main">
-				<div id="anniversary" class="" data-initial-upload="season1-2"></div>
+				<!-- <div id="anniversary" class="" data-initial-upload="season1-2"></div> -->
 				@yield('content')
 			</main>
 			<footer class="footer-box">
