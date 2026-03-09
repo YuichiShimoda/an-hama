@@ -282,6 +282,42 @@
   text-align: center;
   color: #555;
 }
+.md-contents > .md-inner > .pr-box .yaar-note-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto 20px;
+  border: solid 1px #cd2c1d;
+}
+.md-contents > .md-inner > .pr-box .yaar-note-box .thanks-msg {
+  display: block;
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  white-space: nowrap;
+}
+.md-contents > .md-inner > .pr-box .yaar-note-box .thanks-msg:first-of-type {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #cd2c1d;
+}
+.md-contents > .md-inner > .pr-box .yaar-note-box .thanks-msg:last-of-type {
+  font-size: 12px;
+  color: #333;
+}
+@media screen and (max-width: 450px) {
+  .md-contents > .md-inner > .pr-box .yaar-note-box .thanks-msg:first-of-type {
+    font-size: 13px;
+  }
+  .md-contents > .md-inner > .pr-box .yaar-note-box .thanks-msg:last-of-type {
+    font-size: 11px;
+  }
+}
 .md-contents > .md-inner > .pr-box .sec-change-box {
   display: block;
   width: 100%;

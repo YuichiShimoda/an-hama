@@ -296,6 +296,35 @@ $fgp-soei-pop2: "fgp-soei-pop2", sans-serif // 700
 				letter-spacing: 0.05em
 				text-align: center
 				color: #555
+			.yaar-note-box
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				width: fit-content
+				padding: 10px 20px
+				margin: 0 auto 20px
+				border: solid 1px #cd2c1d
+				.thanks-msg
+					display: block
+					font-weight: 500
+					line-height: 1.5
+					font-family: sans-serif
+					letter-spacing: 0.05em
+					text-align: center
+					white-space: nowrap
+					&:first-of-type
+						font-size: 14px
+						letter-spacing: 0.1em
+						color: #cd2c1d
+					&:last-of-type
+						font-size: 12px
+						color: #333
+					+bp450
+						&:first-of-type
+							font-size: 13px
+						&:last-of-type
+							font-size: 11px
 			.sec-change-box
 				display: block
 				width: 100%

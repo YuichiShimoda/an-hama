@@ -195,6 +195,10 @@
 							@if(!empty($pressRelease))
 								<div class="pr-box">
 									<p class="common-comment">※ 週替りメニューは、あんかけパスタ, ピザ共通です。</p>
+									<div class="yaar-note-box">
+										<p class="thanks-msg">2026.3.10  おかげさまで1周年</p>
+										<p class="thanks-msg">いつも支えてくださる皆様に感謝いたします！</p>
+									</div>
 									<div class="sec-change-box">
 										<div class="txt-box">
 											<p>TOPICS</p>
