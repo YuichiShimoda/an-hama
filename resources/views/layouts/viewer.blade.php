@@ -432,6 +432,17 @@
 					var localStorageAnniversary = window.localStorage.getItem('anniversary');
 					if (localStorageAnniversary) {
 						if (new Date().getTime() > JSON.parse(localStorageAnniversary).expiry) {
+							if ($('#movie').hasClass('is-show')) {
+								console.log("storageあり　　あり");
+								var clickX = $(window).width() - 120;
+								var clickY = $(window).height() - 200;
+								var element = document.elementFromPoint(clickX, clickY);
+								if (element) {
+									$(element).trigger('click');
+								}
+							} else {
+								console.log("storageあり　　no");
+							}
 							window.localStorage.removeItem('anniversary');
 							setTimeout(function() {
 								$("#confetti-wrapper").addClass("fired");
@@ -441,7 +452,7 @@
 										$("#confetti-wrapper").removeClass("fired");
 										const anniversaryItem = {
 											value: "anniversary",
-											expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+											expiry: new Date().getTime() + 1 * 1 * 1 * 1 * 1000 // 1時間後のタイムスタンプ
 										};
 										window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 									}, 6000);
@@ -487,6 +498,17 @@
 						}
 					} else {
 						setTimeout(function() {
+							if ($('#movie').hasClass('is-show')) {
+								console.log("storageなし　　あり");
+								var clickX = $(window).width() - 120;
+								var clickY = $(window).height() - 200;
+								var element = document.elementFromPoint(clickX, clickY);
+								if (element) {
+									$(element).trigger('click');
+								}
+							} else {
+								console.log("storageなし　　no");
+							}
 							$("#confetti-wrapper").addClass("fired");
 							setTimeout(function () {
 								launchConfetti();
@@ -494,7 +516,7 @@
 									$("#confetti-wrapper").removeClass("fired");
 									const anniversaryItem = {
 										value: "anniversary",
-										expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+										expiry: new Date().getTime() + 1 * 1 * 1 * 1 * 1000 // 1時間後のタイムスタンプ
 									};
 									window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
 								}, 6000);
