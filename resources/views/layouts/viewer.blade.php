@@ -149,11 +149,12 @@
 							<p class="num">3</p>
 							<p class="unit">月</p>
 						</div>
-						<div class="item-box">
+<!-- 						<div class="item-box">
 							<p class="num">10</p>
 							<p class="unit">日</p>
-						</div>
+						</div> -->
 					</div>
+					<p class="gratitude">To our customers, with gratitude.</p>
 <!-- 					<div class="movie-btn">
 						<p>動画を見る</p>
 					</div> -->
@@ -217,7 +218,7 @@
 			@endif
 
 			<main role="main">
-				<!-- <div id="anniversary" class="" data-initial-upload="season1-2"></div> -->
+				<div id="anniversary" class="" data-initial-upload="season1-2"></div>
 				@yield('content')
 			</main>
 			<footer class="footer-box">
@@ -389,118 +390,118 @@
 						// console.log('Mac開発者ツールの起動を禁止しました。');
 					}
 				});
-				$(window).on('load', function() {
-					@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
-						setTimeout(function() {
-							$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-							// console.log("メニューページ表示");
-						}, 10000);
-					@else
-						// ローカルストレージを取得
-						var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
-						if (localStorageData) {
-							// 有効期限が過ぎているか確認後、ローカルストレージを削除
-							if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
-								if (window.location.pathname === "/") {
-									setTimeout(function() {
-										// console.log("再表示｜有効期限が過ぎた");
-										$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									}, 8000);
-								} else {
-									window.localStorage.removeItem('anHamaWeeklyMenu');
-									setTimeout(function() {
-										$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									}, 8000);
-								}
-							}
-						} else {
-							if (window.location.pathname === "/") {
-								setTimeout(function() {
-									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-								}, 8000);
-							} else {
-								setTimeout(function() {
-									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									// console.log("初回表示｜ローカルストレージがないため");
-								}, 8000);
-							}
-						}
-					@endif
-				});
 				// $(window).on('load', function() {
-				// 	var localStorageAnniversary = window.localStorage.getItem('anniversary');
-				// 	if (localStorageAnniversary) {
-				// 		if (new Date().getTime() > JSON.parse(localStorageAnniversary).expiry) {
-				// 			window.localStorage.removeItem('anniversary');
-				// 			setTimeout(function() {
-				// 				$("#confetti-wrapper").addClass("fired");
-				// 				setTimeout(function () {
-				// 					launchConfetti();
-				// 					setTimeout(function () {
-				// 						$("#confetti-wrapper").removeClass("fired");
-				// 						const anniversaryItem = {
-				// 							value: "anniversary",
-				// 							expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
-				// 						};
-				// 						window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
-				// 					}, 6000);
-				// 				}, 500);
-				// 			}, 6000);
+				// 	@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
+				// 		setTimeout(function() {
+				// 			$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+				// 			// console.log("メニューページ表示");
+				// 		}, 10000);
+				// 	@else
+				// 		// ローカルストレージを取得
+				// 		var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
+				// 		if (localStorageData) {
+				// 			// 有効期限が過ぎているか確認後、ローカルストレージを削除
+				// 			if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
+				// 				if (window.location.pathname === "/") {
+				// 					setTimeout(function() {
+				// 						// console.log("再表示｜有効期限が過ぎた");
+				// 						$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+				// 					}, 8000);
+				// 				} else {
+				// 					window.localStorage.removeItem('anHamaWeeklyMenu');
+				// 					setTimeout(function() {
+				// 						$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+				// 					}, 8000);
+				// 				}
+				// 			}
 				// 		} else {
-				// 			@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
+				// 			if (window.location.pathname === "/") {
 				// 				setTimeout(function() {
 				// 					$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 					// console.log("メニューページ表示");
-				// 				}, 10000);
-				// 			@else
-				// 				// ローカルストレージを取得
-				// 				var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
-				// 				if (localStorageData) {
-				// 					// 有効期限が過ぎているか確認後、ローカルストレージを削除
-				// 					if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
-				// 						if (window.location.pathname === "/") {
-				// 							setTimeout(function() {
-				// 								// console.log("再表示｜有効期限が過ぎた");
-				// 								$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 							}, 8000);
-				// 						} else {
-				// 							window.localStorage.removeItem('anHamaWeeklyMenu');
-				// 							setTimeout(function() {
-				// 								$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 							}, 8000);
-				// 						}
-				// 					}
-				// 				} else {
-				// 					if (window.location.pathname === "/") {
-				// 						setTimeout(function() {
-				// 							$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 						}, 8000);
-				// 					} else {
-				// 						setTimeout(function() {
-				// 							$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 							// console.log("初回表示｜ローカルストレージがないため");
-				// 						}, 8000);
-				// 					}
-				// 				}
-				// 			@endif
+				// 				}, 8000);
+				// 			} else {
+				// 				setTimeout(function() {
+				// 					$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+				// 					// console.log("初回表示｜ローカルストレージがないため");
+				// 				}, 8000);
+				// 			}
 				// 		}
-				// 	} else {
-				// 		setTimeout(function() {
-				// 			$("#confetti-wrapper").addClass("fired");
-				// 			setTimeout(function () {
-				// 				launchConfetti();
-				// 				setTimeout(function () {
-				// 					$("#confetti-wrapper").removeClass("fired");
-				// 					const anniversaryItem = {
-				// 						value: "anniversary",
-				// 						expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
-				// 					};
-				// 					window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
-				// 				}, 6000);
-				// 			}, 500);
-				// 		}, 6000);
-				// 	}
+				// 	@endif
 				// });
+				$(window).on('load', function() {
+					var localStorageAnniversary = window.localStorage.getItem('anniversary');
+					if (localStorageAnniversary) {
+						if (new Date().getTime() > JSON.parse(localStorageAnniversary).expiry) {
+							window.localStorage.removeItem('anniversary');
+							setTimeout(function() {
+								$("#confetti-wrapper").addClass("fired");
+								setTimeout(function () {
+									launchConfetti();
+									setTimeout(function () {
+										$("#confetti-wrapper").removeClass("fired");
+										const anniversaryItem = {
+											value: "anniversary",
+											expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+										};
+										window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
+									}, 6000);
+								}, 500);
+							}, 9000);
+						} else {
+							@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
+								setTimeout(function() {
+									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+									// console.log("メニューページ表示");
+								}, 10000);
+							@else
+								// ローカルストレージを取得
+								var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
+								if (localStorageData) {
+									// 有効期限が過ぎているか確認後、ローカルストレージを削除
+									if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
+										if (window.location.pathname === "/") {
+											setTimeout(function() {
+												// console.log("再表示｜有効期限が過ぎた");
+												$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+											}, 8000);
+										} else {
+											window.localStorage.removeItem('anHamaWeeklyMenu');
+											setTimeout(function() {
+												$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+											}, 8000);
+										}
+									}
+								} else {
+									if (window.location.pathname === "/") {
+										setTimeout(function() {
+											$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+										}, 8000);
+									} else {
+										setTimeout(function() {
+											$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+											// console.log("初回表示｜ローカルストレージがないため");
+										}, 8000);
+									}
+								}
+							@endif
+						}
+					} else {
+						setTimeout(function() {
+							$("#confetti-wrapper").addClass("fired");
+							setTimeout(function () {
+								launchConfetti();
+								setTimeout(function () {
+									$("#confetti-wrapper").removeClass("fired");
+									const anniversaryItem = {
+										value: "anniversary",
+										expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
+									};
+									window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
+								}, 6000);
+							}, 500);
+						}, 9000);
+					}
+				});
 				$('.weekly-modal-close').on('click',function() {
 					$('.md-overlay,.md-contents').fadeOut();
 					const value = @json($weeklyMenu['start_day']);

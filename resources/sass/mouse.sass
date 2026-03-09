@@ -99,6 +99,8 @@
 						transition: all 1.0s 2.0s ease-in-out
 					.num, .unit
 						animation: date-glow 4.0s 1.5s ease-in-out forwards
+			.gratitude
+				animation: glow 4.0s 2.5s ease-in-out forwards
 			.movie-btn
 				animation: pulse 2.5s ease-out infinite
 				&:before
@@ -226,6 +228,17 @@
 					letter-spacing: 0.05em
 					color: #fff
 					transition: all 1.0s ease-in-out
+		.gratitude
+			display: block
+			margin-top: 30px
+			font-weight: 400
+			font-size: 18px
+			line-height: 1.0
+			font-family: "miniwa-bd-v3", sans-serif
+			letter-spacing: 0.05em
+			color: #fff
+			+bp420
+				margin-top: 20px
 		.movie-btn
 			position: relative
 			display: flex
