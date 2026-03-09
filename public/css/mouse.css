@@ -69,7 +69,6 @@
   top: 0;
   opacity: 1;
   z-index: 2001;
-  pointer-events: initial;
   transition: all 0.3s ease-in-out;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .txt {
@@ -99,7 +98,7 @@
   animation: date-glow 4s 1.5s ease-in-out forwards;
 }
 #confetti-wrapper.fired .content-box .gratitude {
-  animation: glow 4s 1.5s ease-in-out forwards;
+  animation: glow 4s 2.5s ease-in-out forwards;
 }
 #confetti-wrapper.fired .content-box .movie-btn {
   animation: pulse 2.5s ease-out infinite;

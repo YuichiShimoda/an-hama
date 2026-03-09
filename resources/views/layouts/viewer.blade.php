@@ -434,6 +434,12 @@
 						if (new Date().getTime() > JSON.parse(localStorageAnniversary).expiry) {
 							window.localStorage.removeItem('anniversary');
 							setTimeout(function() {
+								if ($("#movie").hasClass("is-show")) {
+									if (!$("#movie .pause-btn .icon").length) {
+										$("#movie .pause-btn").click();
+										console.log('動画停止');
+									}
+								}
 								$("#confetti-wrapper").addClass("fired");
 								setTimeout(function () {
 									launchConfetti();
@@ -487,6 +493,12 @@
 						}
 					} else {
 						setTimeout(function() {
+							if ($("#movie").hasClass("is-show")) {
+								if (!$("#movie .pause-btn .icon").length) {
+									$("#movie .pause-btn").click();
+									console.log('動画停止');
+								}
+							}
 							$("#confetti-wrapper").addClass("fired");
 							setTimeout(function () {
 								launchConfetti();
