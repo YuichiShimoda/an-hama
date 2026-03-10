@@ -441,6 +441,7 @@
 									}
 								}
 								$("#confetti-wrapper").addClass("fired");
+								// $("#confetti-wrapper").css("pointer-events", "none");
 								setTimeout(function () {
 									launchConfetti();
 									setTimeout(function () {
@@ -500,6 +501,7 @@
 								}
 							}
 							$("#confetti-wrapper").addClass("fired");
+							// $("#confetti-wrapper").css("pointer-events", "none");
 							setTimeout(function () {
 								launchConfetti();
 								setTimeout(function () {
