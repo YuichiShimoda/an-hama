@@ -390,144 +390,131 @@
 						// console.log('Mac開発者ツールの起動を禁止しました。');
 					}
 				});
-				// $(window).on('load', function() {
-				// 	@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
-				// 		setTimeout(function() {
-				// 			$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 			// console.log("メニューページ表示");
-				// 		}, 10000);
-				// 	@else
-				// 		// ローカルストレージを取得
-				// 		var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
-				// 		if (localStorageData) {
-				// 			// 有効期限が過ぎているか確認後、ローカルストレージを削除
-				// 			if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
-				// 				if (window.location.pathname === "/") {
-				// 					setTimeout(function() {
-				// 						// console.log("再表示｜有効期限が過ぎた");
-				// 						$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 					}, 8000);
-				// 				} else {
-				// 					window.localStorage.removeItem('anHamaWeeklyMenu');
-				// 					setTimeout(function() {
-				// 						$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 					}, 8000);
-				// 				}
-				// 			}
-				// 		} else {
-				// 			if (window.location.pathname === "/") {
-				// 				setTimeout(function() {
-				// 					$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 				}, 8000);
-				// 			} else {
-				// 				setTimeout(function() {
-				// 					$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-				// 					// console.log("初回表示｜ローカルストレージがないため");
-				// 				}, 8000);
-				// 			}
-				// 		}
-				// 	@endif
-				// });
+
+
+				/* =========================
+				   =========================
+				   Main処理
+				=========================
+				========================= */
 				$(window).on('load', function() {
-					var localStorageAnniversary = window.localStorage.getItem('anniversary');
-					if (localStorageAnniversary) {
-						if (new Date().getTime() > JSON.parse(localStorageAnniversary).expiry) {
-							window.localStorage.removeItem('anniversary');
-							setTimeout(function() {
-								if ($("#movie").hasClass("is-show")) {
-									if (!$("#movie .pause-btn .icon").length) {
-										$("#movie .pause-btn").click();
-										console.log('動画停止');
-									}
-								}
-								$("#confetti-wrapper").addClass("fired");
-								// $("#confetti-wrapper").css("pointer-events", "none");
-								setTimeout(function () {
-									launchConfetti();
-									setTimeout(function () {
-										$("#confetti-wrapper").removeClass("fired");
-										const anniversaryItem = {
-											value: "anniversary",
-											expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
-										};
-										window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
-									}, 6000);
-								}, 500);
-							}, 9000);
-						} else {
-							@if (in_array(Route::currentRouteName(), ['menu', 'pizza']))
-								setTimeout(function() {
-									$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-									// console.log("メニューページ表示");
-								}, 10000);
-							@else
-								// ローカルストレージを取得
-								var localStorageData = window.localStorage.getItem('anHamaWeeklyMenu');
-								if (localStorageData) {
-									// 有効期限が過ぎているか確認後、ローカルストレージを削除
-									if (new Date().getTime() > JSON.parse(localStorageData).expiry) {
-										if (window.location.pathname === "/") {
-											setTimeout(function() {
-												// console.log("再表示｜有効期限が過ぎた");
-												$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-											}, 8000);
-										} else {
-											window.localStorage.removeItem('anHamaWeeklyMenu');
-											setTimeout(function() {
-												$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-											}, 8000);
-										}
-									}
-								} else {
-									if (window.location.pathname === "/") {
-										setTimeout(function() {
-											$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-										}, 8000);
-									} else {
-										setTimeout(function() {
-											$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
-											// console.log("初回表示｜ローカルストレージがないため");
-										}, 8000);
-									}
-								}
-							@endif
+					const routeName = "{{ Route::currentRouteName() }}";
+					const anniversaryData = getStorage('anniversary');
+					const weeklyData = getStorage('anHamaWeeklyMenu');
+					const movieShowing = isMovieShowing();
+
+					// ① 動画が流れている場合
+					if (movieShowing) {
+						// 週替りメニュー表示
+						if (shouldShowWeeklyModal(weeklyData)) {
+							showWeeklyModal(8000);
 						}
-					} else {
-						setTimeout(function() {
-							if ($("#movie").hasClass("is-show")) {
-								if (!$("#movie .pause-btn .icon").length) {
-									$("#movie .pause-btn").click();
-									console.log('動画停止');
-								}
-							}
-							$("#confetti-wrapper").addClass("fired");
-							// $("#confetti-wrapper").css("pointer-events", "none");
-							setTimeout(function () {
-								launchConfetti();
-								setTimeout(function () {
-									$("#confetti-wrapper").removeClass("fired");
-									const anniversaryItem = {
-										value: "anniversary",
-										expiry: new Date().getTime() + 1 * 1 * 60 * 60 * 1000 // 1時間後のタイムスタンプ
-									};
-									window.localStorage.setItem('anniversary', JSON.stringify(anniversaryItem));
-								}, 6000);
-							}, 500);
-						}, 9000);
+						return; // 紙吹雪は実行しない
+					}
+					// ② menu / pizza ページ
+					if (isMenuPage(routeName)) {
+						showWeeklyModal(10000);
+						return;
+					}
+					// ③ 週替りメニュー（期限切れ or 未保存）
+					if (shouldShowWeeklyModal(weeklyData)) {
+						showWeeklyModal(8000);
+						return;
+					}
+					// ④ 紙吹雪
+					if (shouldLaunchConfetti(anniversaryData)) {
+						launchAnniversaryConfetti();
 					}
 				});
-				$('.weekly-modal-close').on('click',function() {
+
+				/* =========================
+				   localStorage Utility
+				========================= */
+				function getStorage(key) {
+					const item = window.localStorage.getItem(key);
+					if (!item) return null;
+					const data = JSON.parse(item);
+					if (new Date().getTime() > data.expiry) {
+						window.localStorage.removeItem(key);
+						return null;
+					}
+					return data;
+				}
+
+				/* =========================
+				   Movie
+				========================= */
+				function isMovieShowing() {
+					return $("#movie").hasClass("is-show");
+				}
+				function stopMovieIfPlaying() {
+					if ($("#movie").hasClass("is-show")) {
+						if (!$("#movie .pause-btn .icon").length) {
+							$("#movie .pause-btn").click();
+						}
+					}
+				}
+
+				/* =========================
+				   Route
+				========================= */
+				function isMenuPage(routeName) {
+					return routeName === "menu" || routeName === "pizza";
+				}
+
+				/* =========================
+				   Weekly Modal
+				========================= */
+				function shouldShowWeeklyModal(data) {
+					return !data;
+				}
+				function showWeeklyModal(delay) {
+					setTimeout(function() {
+						$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
+					}, delay);
+				}
+
+				/* =========================
+				   Confetti
+				========================= */
+				function shouldLaunchConfetti(data) {
+					return !data;
+				}
+				function launchAnniversaryConfetti() {
+					setTimeout(function() {
+						stopMovieIfPlaying();
+						$("#confetti-wrapper").addClass("fired");
+						setTimeout(function() {
+							launchConfetti();
+							setTimeout(function() {
+								$("#confetti-wrapper").removeClass("fired");
+								const item = {
+									value: "anniversary",
+									expiry: new Date().getTime() + 60 * 60 * 1000 // 1時間後のタイムスタンプ
+								};
+								window.localStorage.setItem('anniversary', JSON.stringify(item));
+							}, 6000);
+						}, 500);
+					}, 9000);
+				}
+
+				/* =========================
+				   Weekly Modal Close
+				========================= */
+				$('.weekly-modal-close').on('click', function() {
 					$('.md-overlay,.md-contents').fadeOut();
 					const value = @json($weeklyMenu['start_day']);
 					if (value) {
 						const item = {
 							value: value,
-							expiry: new Date().getTime() + 1 * 24 * 60 * 60 * 1000 // 1日後のタイムスタンプ
+							expiry: new Date().getTime() + 24 * 60 * 60 * 1000 // 1日後のタイムスタンプ
 						};
-						// ローカルストレージを保存
 						window.localStorage.setItem('anHamaWeeklyMenu', JSON.stringify(item));
 					}
 				});
+
+
+
 				$('.accordion').on('click', function (e) {
 					e.stopPropagation();
 					$(this).toggleClass("is-open");
