@@ -401,28 +401,24 @@
 					const routeName = "{{ Route::currentRouteName() }}";
 					const anniversaryData = getStorage('anniversary');
 					const weeklyData = getStorage('anHamaWeeklyMenu');
-					const movieShowing = isMovieShowing();
 
-					// ① 動画が流れている場合
-					if (movieShowing) {
-						// 週替りメニュー表示
-						if (shouldShowWeeklyModal(weeklyData)) {
-							showWeeklyModal(8000);
-						}
-						return; // 紙吹雪は実行しない
-					}
-					// ② menu / pizza ページ
+					// ① menu / pizza ページ
 					if (isMenuPage(routeName)) {
 						showWeeklyModal(10000);
 						return;
 					}
-					// ③ 週替りメニュー（期限切れ or 未保存）
+					// ② 週替りメニュー（期限切れ or 未保存）
 					if (shouldShowWeeklyModal(weeklyData)) {
 						showWeeklyModal(8000);
 						return;
 					}
-					// ④ 紙吹雪
+					// ③ 紙吹雪
 					if (shouldLaunchConfetti(anniversaryData)) {
+						const movieShowing = isMovieShowing();
+						// ④ 動画が流れている場合
+						if (movieShowing) {
+							return; // 紙吹雪は実行しない
+						}
 						launchAnniversaryConfetti();
 					}
 				});
