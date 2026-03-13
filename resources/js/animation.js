@@ -304,22 +304,31 @@ $(window).on('load', function() {
 		useWorker: true
 	});
 	const colors = ['#FFD700', '#FFA500', '#C0C0C0', '#E8E8E8']; // 金銀
-	defaults = {
-		angle: 90,
-		spread: 180,
-		startVelocity: 60,
-		origin: {
-			x: 0.5,
-			y: 0.8
-		},
-		colors: colors,
-		scalar: 1.5
-	};
+	if ($(window).width() <= 500) {
+		defaults = {
+			angle: 90,
+			spread: 180,
+			startVelocity: 60,
+			origin: { x: 0.5, y: 0.8 },
+			colors: colors,
+			scalar: 1.5
+		};
+	} else {
+		defaults = {
+			angle: 90,
+			spread: 100,
+			startVelocity: 60,
+			origin: { x: 0.5, y: 0.8 },
+			colors: colors,
+			scalar: 1.5
+		};
+	}
 });
 
 function fire(particleRatio, options) {
+	const baseCount = $(window).width() <= 500 ? 1000 : 300;
 	myConfetti($.extend({}, defaults, options, {
-		particleCount: Math.floor(1000 * particleRatio)
+		particleCount: Math.floor(baseCount * particleRatio)
 	}));
 }
 
