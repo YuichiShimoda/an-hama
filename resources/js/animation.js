@@ -340,7 +340,7 @@ function launchAnniversaryConfetti() {
 		launchConfetti();
 		setTimeout(function() {
 			$("#confetti-wrapper").removeClass("fired");
-		}, 6000);
+		}, 7500);
 	}, 500);
 }
 
@@ -351,7 +351,7 @@ ScrollTrigger.create({
 	onEnter: function() {
 		if (!confettiLoop) {
 			launchAnniversaryConfetti();
-			confettiLoop = setInterval(launchAnniversaryConfetti, 8000);
+			confettiLoop = setInterval(launchAnniversaryConfetti, 10000);
 		}
 	}
 });

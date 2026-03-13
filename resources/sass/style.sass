@@ -876,15 +876,13 @@ body::-webkit-scrollbar
 					letter-spacing: 0.1em
 					opacity: 1.0
 					animation: glow 3.0s 2.5s ease-in-out forwards
-					transition: letter-spacing 4.0s 0.5s ease-in-out, opacity 1.0s 0.5s ease-in-out
+					transition: letter-spacing 4.0s 0.5s ease-in-out forwards, opacity 1.0s 0.5s ease-in-out
 				.one
 					opacity: 1.0
 					animation: glow 3.0s 2.5s ease-in-out forwards
-					transition: opacity 1.0s 0.5s ease-in-out forwards
+					transition: opacity 1.0s 0.5s ease-in-out forwards, animation 4.0s 0.5s ease-in-out
 				.thanks-box
-					opacity: 1.0
 					animation: thanks 3.5s ease-in-out infinite
-					transition: opacity 1.0s 0.5s ease-in-out forwards
 			.date-box
 				.item-box
 					&:nth-of-type(1)
@@ -899,7 +897,9 @@ body::-webkit-scrollbar
 					.num, .unit
 						animation: date-glow 4.0s 1.5s ease-in-out forwards
 			.gratitude
+				opacity: 1.0
 				animation: glow 4.0s 2.5s ease-in-out forwards
+				transition: opacity 1.0s 0.5s ease-in-out forwards, animation 4.0s 0.5s ease-in-out
 			.movie-btn
 				animation: pulse 2.5s ease-out infinite
 				&:before
@@ -971,7 +971,7 @@ body::-webkit-scrollbar
 				letter-spacing: -0.2em
 				color: #fff
 				opacity: 0.0
-				transition: all 4.0s 0.5s ease-in-out
+				transition: all 1.0s ease-in-out
 			.one
 				display: inline
 				margin-left: 0.2rem
@@ -983,15 +983,13 @@ body::-webkit-scrollbar
 				letter-spacing: 0.05em
 				color: #fff
 				opacity: 0.0
-				transition: all 4.0s 0.5s ease-in-out
+				transition: all 1.0s ease-in-out
 			.thanks-box
 				position: absolute
 				top: -20px
 				left: -25px
 				display: block
 				width: 90px
-				opacity: 0.0
-				transition: all 0.5s ease-in-out
 				.thanks
 					display: block
 					width: 100%
@@ -1045,6 +1043,8 @@ body::-webkit-scrollbar
 			font-family: "miniwa-bd-v3", sans-serif
 			letter-spacing: 0.05em
 			color: #fff
+			opacity: 0.0
+			transition: all 1.0s ease-in-out
 		.movie-btn
 			position: relative
 			display: flex
