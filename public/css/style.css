@@ -1032,6 +1032,7 @@ body::-webkit-scrollbar {
   color: #fff;
   opacity: 0;
   transition: all 1s ease-in-out;
+  will-change: letter-spacing, opacity;
 }
 #confetti-wrapper .content-box .anniversary-tit .one {
   display: inline;
@@ -1045,6 +1046,7 @@ body::-webkit-scrollbar {
   color: #fff;
   opacity: 0;
   transition: all 1s ease-in-out;
+  will-change: opacity;
 }
 #confetti-wrapper .content-box .anniversary-tit .thanks-box {
   position: absolute;
@@ -1115,6 +1117,7 @@ body::-webkit-scrollbar {
   color: #fff;
   opacity: 0;
   transition: all 1s ease-in-out;
+  will-change: opacity;
 }
 #confetti-wrapper .content-box .movie-btn {
   position: relative;
