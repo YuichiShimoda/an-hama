@@ -129,37 +129,7 @@
 					</ul>
 				</nav>
 			</header>
-			<div id="confetti-wrapper">
-				<canvas id="confetti-canvas"></canvas>
-				<div class="content-box">
-					<div class="anniversary-tit">
-						<span class="txt">オープン</span>
-						<span class="one">1</span>
-						<span class="txt">周年</span>
-						<div class="thanks-box">
-							<img class="thanks" src="{{ asset('image/thanks.svg') }}" alt="おかげさまで">
-						</div>
-					</div>
-					<div class="date-box">
-						<div class="item-box">
-							<p class="num">2026</p>
-							<p class="unit">年</p>
-						</div>
-						<div class="item-box">
-							<p class="num">3</p>
-							<p class="unit">月</p>
-						</div>
-<!-- 						<div class="item-box">
-							<p class="num">10</p>
-							<p class="unit">日</p>
-						</div> -->
-					</div>
-					<p class="gratitude">To our customers, with gratitude.</p>
-<!-- 					<div class="movie-btn">
-						<p>動画を見る</p>
-					</div> -->
-				</div>
-			</div>
+
 			<div id="cursor" class="cursor-box">
 				<div class="inside">
 					<img class="circle" src="{{ asset('image/cursor-circle.svg') }}" alt="円">
@@ -218,7 +188,7 @@
 			@endif
 
 			<main role="main">
-				<div id="anniversary" class="" data-initial-upload="season1-2"></div>
+				<!-- <div id="anniversary" class="" data-initial-upload="season1-2"></div> -->
 				@yield('content')
 			</main>
 			<footer class="footer-box">
@@ -322,44 +292,6 @@
 			<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
 
-			<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@latest/dist/confetti.browser.min.js"></script><!-- confetti -->
-			<script>
-				const canvas = $('#confetti-canvas')[0];
-				const myConfetti = confetti.create(canvas, {
-					resize: true,
-					useWorker: true
-				});
-
-				const colors = ['#FFD700', '#FFA500', '#C0C0C0', '#E8E8E8']; // 金銀
-				const defaults = {
-					angle: 90,
-					spread: 180,
-					startVelocity: 60,
-					origin: {
-						x: 0.5,
-						y: 0.8
-					},
-					colors: colors,
-					scalar: 1.5
-				};
-
-				function fire(particleRatio, options) {
-					myConfetti($.extend({}, defaults, options, {
-						particleCount: Math.floor(1000 * particleRatio)
-					}));
-				}
-
-				function launchConfetti() {
-					fire(0.25, { spread: 26, startVelocity: 55 });
-					fire(0.2, { spread: 60 });
-					fire(0.35, { spread: 100, scalar: 0.8 });
-					fire(0.1, { startVelocity: 25, decay: 0.92, scalar: 1.2 });
-					fire(0.1, { spread: 120, startVelocity: 45 });
-					setTimeout(function () {
-						fire(0.3, { spread: 140, startVelocity: 65, scalar: 2 });
-					}, 300);
-				}
-			</script>
 
 			<script>
 				document.oncontextmenu = function () {return false;}
@@ -399,7 +331,6 @@
 				========================= */
 				$(window).on('load', function() {
 					const routeName = "{{ Route::currentRouteName() }}";
-					const anniversaryData = getStorage('anniversary');
 					const weeklyData = getStorage('anHamaWeeklyMenu');
 
 					// ① menu / pizza ページ
@@ -411,15 +342,6 @@
 					if (shouldShowWeeklyModal(weeklyData)) {
 						showWeeklyModal(8000);
 						return;
-					}
-					// ③ 紙吹雪
-					if (shouldLaunchConfetti(anniversaryData)) {
-						const movieShowing = isMovieShowing();
-						// ④ 動画が流れている場合
-						if (movieShowing) {
-							return; // 紙吹雪は実行しない
-						}
-						launchAnniversaryConfetti();
 					}
 				});
 
@@ -468,30 +390,6 @@
 					setTimeout(function() {
 						$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
 					}, delay);
-				}
-
-				/* =========================
-				   Confetti
-				========================= */
-				function shouldLaunchConfetti(data) {
-					return !data;
-				}
-				function launchAnniversaryConfetti() {
-					setTimeout(function() {
-						stopMovieIfPlaying();
-						$("#confetti-wrapper").addClass("fired");
-						setTimeout(function() {
-							launchConfetti();
-							setTimeout(function() {
-								$("#confetti-wrapper").removeClass("fired");
-								const item = {
-									value: "anniversary",
-									expiry: new Date().getTime() + 60 * 60 * 1000 // 1時間後のタイムスタンプ
-								};
-								window.localStorage.setItem('anniversary', JSON.stringify(item));
-							}, 6000);
-						}, 500);
-					}, 9000);
 				}
 
 				/* =========================

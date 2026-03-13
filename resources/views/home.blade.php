@@ -230,6 +230,52 @@
             <p>近隣駐車場</p>
         </a>
     </div>
+
+
+
+
+
+
+    <div id="confetti-wrapper">
+        <canvas id="confetti-canvas"></canvas>
+        <div class="content-box">
+            <div class="anniversary-tit">
+                <span class="txt">オープン</span>
+                <span class="one">1</span>
+                <span class="txt">周年</span>
+                <div class="thanks-box">
+                    <img class="thanks" src="{{ asset('image/thanks.svg') }}" alt="おかげさまで">
+                </div>
+            </div>
+            <div class="date-box">
+                <div class="item-box">
+                    <p class="num">2026</p>
+                    <p class="unit">年</p>
+                </div>
+                <div class="item-box">
+                    <p class="num">3</p>
+                    <p class="unit">月</p>
+                </div>
+<!--                        <div class="item-box">
+                    <p class="num">10</p>
+                    <p class="unit">日</p>
+                </div> -->
+            </div>
+            <p class="gratitude">To our customers, with gratitude.</p>
+<!--                    <div class="movie-btn">
+                <p>動画を見る</p>
+            </div> -->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@latest/dist/confetti.browser.min.js"></script><!-- confetti -->
+
+
+
+
+
+
+
+
     <section id="season">
         <div class="content-box">
             <div class="main-box">
