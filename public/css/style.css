@@ -902,14 +902,19 @@ body::-webkit-scrollbar {
 
 #confetti-wrapper.fired .content-box .anniversary-tit .txt {
   letter-spacing: 0.1em;
+  opacity: 1;
   animation: glow 3s 2.5s ease-in-out forwards;
+  transition: letter-spacing 4s 0.5s ease-in-out, opacity 1s 0.5s ease-in-out;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .one {
+  opacity: 1;
   animation: glow 3s 2.5s ease-in-out forwards;
+  transition: opacity 1s 0.5s ease-in-out forwards;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .thanks-box {
   opacity: 1;
   animation: thanks 3.5s ease-in-out infinite;
+  transition: opacity 1s 0.5s ease-in-out forwards;
 }
 #confetti-wrapper.fired .content-box .date-box .item-box:nth-of-type(1) {
   transform: translate(0, 0%);
@@ -1025,6 +1030,7 @@ body::-webkit-scrollbar {
   font-family: "miniwa-hv-v3", sans-serif;
   letter-spacing: -0.2em;
   color: #fff;
+  opacity: 0;
   transition: all 4s 0.5s ease-in-out;
 }
 #confetti-wrapper .content-box .anniversary-tit .one {
@@ -1037,6 +1043,8 @@ body::-webkit-scrollbar {
   font-family: "miniwa-hv-v3", sans-serif;
   letter-spacing: 0.05em;
   color: #fff;
+  opacity: 0;
+  transition: all 4s 0.5s ease-in-out;
 }
 #confetti-wrapper .content-box .anniversary-tit .thanks-box {
   position: absolute;

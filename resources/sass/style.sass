@@ -874,12 +874,17 @@ body::-webkit-scrollbar
 			.anniversary-tit
 				.txt
 					letter-spacing: 0.1em
+					opacity: 1.0
 					animation: glow 3.0s 2.5s ease-in-out forwards
+					transition: letter-spacing 4.0s 0.5s ease-in-out, opacity 1.0s 0.5s ease-in-out
 				.one
+					opacity: 1.0
 					animation: glow 3.0s 2.5s ease-in-out forwards
+					transition: opacity 1.0s 0.5s ease-in-out forwards
 				.thanks-box
 					opacity: 1.0
 					animation: thanks 3.5s ease-in-out infinite
+					transition: opacity 1.0s 0.5s ease-in-out forwards
 			.date-box
 				.item-box
 					&:nth-of-type(1)
@@ -965,6 +970,7 @@ body::-webkit-scrollbar
 				font-family: "miniwa-hv-v3", sans-serif
 				letter-spacing: -0.2em
 				color: #fff
+				opacity: 0.0
 				transition: all 4.0s 0.5s ease-in-out
 			.one
 				display: inline
@@ -976,6 +982,8 @@ body::-webkit-scrollbar
 				font-family: "miniwa-hv-v3", sans-serif
 				letter-spacing: 0.05em
 				color: #fff
+				opacity: 0.0
+				transition: all 4.0s 0.5s ease-in-out
 			.thanks-box
 				position: absolute
 				top: -20px
