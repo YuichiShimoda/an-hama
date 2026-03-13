@@ -1137,10 +1137,10 @@ body::-webkit-scrollbar {
 }
 
 #confetti-wrapper.fired .content-box .anniversary-tit .txt {
-  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
+  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out forwards;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .one {
-  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
+  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out forwards;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .thanks-box {
   animation: thanks 3.5s ease-in-out infinite;
@@ -1251,7 +1251,7 @@ body::-webkit-scrollbar {
   font-family: "miniwa-hv-v3", sans-serif;
   color: #fff;
   opacity: 0;
-  will-change: letter-spacing, opacity;
+  will-change: animation, letter-spacing, opacity;
 }
 #confetti-wrapper .content-box .anniversary-tit .one {
   display: inline;
