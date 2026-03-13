@@ -901,12 +901,12 @@ body::-webkit-scrollbar {
 }
 
 #confetti-wrapper.fired .content-box .anniversary-tit .txt {
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
   transition: all 8s ease-in-out;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .one {
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
   transition: all 8s ease-in-out;
 }
@@ -1030,7 +1030,7 @@ body::-webkit-scrollbar {
   letter-spacing: -0.2em;
   color: #fff;
   opacity: 0;
-  will-change: opacity;
+  will-change: transform, opacity;
 }
 #confetti-wrapper .content-box .anniversary-tit .one {
   display: inline;
@@ -1043,7 +1043,7 @@ body::-webkit-scrollbar {
   letter-spacing: -0.2em;
   color: #fff;
   opacity: 0;
-  will-change: opacity;
+  will-change: transform, opacity;
 }
 #confetti-wrapper .content-box .anniversary-tit .thanks-box {
   position: absolute;
@@ -1182,15 +1182,19 @@ body::-webkit-scrollbar {
 @keyframes anniversaryTit {
   0% {
     opacity: 0;
+    transform: scaleX(0.8);
   }
   15% {
     opacity: 1;
+    transform: scaleX(0.9);
   }
   97% {
     opacity: 1;
+    transform: scaleX(1);
   }
   100% {
     opacity: 0;
+    transform: scaleX(1.1);
   }
 }
 @keyframes thanks {
