@@ -901,10 +901,10 @@ body::-webkit-scrollbar {
 }
 
 #confetti-wrapper.fired .content-box .anniversary-tit .txt {
-  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
+  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out infinite;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .one {
-  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
+  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out infinite;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .thanks-box {
   animation: thanks 3.5s ease-in-out infinite;
