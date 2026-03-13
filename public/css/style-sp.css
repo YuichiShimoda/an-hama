@@ -1137,10 +1137,14 @@ body::-webkit-scrollbar {
 }
 
 #confetti-wrapper.fired .content-box .anniversary-tit .txt {
-  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out forwards;
+  letter-spacing: 0.1rem;
+  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
+  transition: all 8s ease-in-out;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .one {
-  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out forwards;
+  letter-spacing: 0.1rem;
+  animation: glow 3s 2.5s ease-in-out forwards, anniversaryTit 8s ease-in-out;
+  transition: all 8s ease-in-out;
 }
 #confetti-wrapper.fired .content-box .anniversary-tit .thanks-box {
   animation: thanks 3.5s ease-in-out infinite;
@@ -1249,9 +1253,10 @@ body::-webkit-scrollbar {
   font-size: 32px;
   line-height: 1;
   font-family: "miniwa-hv-v3", sans-serif;
+  letter-spacing: -0.2em;
   color: #fff;
   opacity: 0;
-  will-change: animation, letter-spacing, opacity;
+  will-change: opacity;
 }
 #confetti-wrapper .content-box .anniversary-tit .one {
   display: inline;
@@ -1261,10 +1266,10 @@ body::-webkit-scrollbar {
   font-size: 40px;
   line-height: 1;
   font-family: "miniwa-hv-v3", sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.2em;
   color: #fff;
   opacity: 0;
-  will-change: letter-spacing, opacity;
+  will-change: opacity;
 }
 #confetti-wrapper .content-box .anniversary-tit .thanks-box {
   position: absolute;
@@ -1403,7 +1408,6 @@ body::-webkit-scrollbar {
 @keyframes anniversaryTit {
   0% {
     opacity: 0;
-    letter-spacing: -0.2em;
   }
   15% {
     opacity: 1;
@@ -1413,7 +1417,6 @@ body::-webkit-scrollbar {
   }
   100% {
     opacity: 0;
-    letter-spacing: 0.1em;
   }
 }
 @keyframes thanks {

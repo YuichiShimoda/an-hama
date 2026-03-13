@@ -873,9 +873,13 @@ body::-webkit-scrollbar
 		.content-box
 			.anniversary-tit
 				.txt
-					animation: glow 3.0s 2.5s ease-in-out forwards, anniversaryTit 8.0s ease-in-out infinite
+					letter-spacing: 0.1rem
+					animation: glow 3.0s 2.5s ease-in-out forwards, anniversaryTit 8.0s ease-in-out
+					transition: all 8.0s ease-in-out
 				.one
-					animation: glow 3.0s 2.5s ease-in-out forwards, anniversaryTit 8.0s ease-in-out infinite
+					letter-spacing: 0.1rem
+					animation: glow 3.0s 2.5s ease-in-out forwards, anniversaryTit 8.0s ease-in-out
+					transition: all 8.0s ease-in-out
 				.thanks-box
 					animation: thanks 3.5s ease-in-out infinite
 			.date-box
@@ -963,9 +967,10 @@ body::-webkit-scrollbar
 				font-size: 32px
 				line-height: 1.0
 				font-family: "miniwa-hv-v3", sans-serif
+				letter-spacing: -0.2em
 				color: #fff
 				opacity: 0.0
-				will-change: letter-spacing, opacity
+				will-change: opacity
 			.one
 				display: inline
 				margin-left: 0.2rem
@@ -974,10 +979,10 @@ body::-webkit-scrollbar
 				font-size: 40px
 				line-height: 1.0
 				font-family: "miniwa-hv-v3", sans-serif
-				letter-spacing: 0.05em
+				letter-spacing: -0.2em
 				color: #fff
 				opacity: 0.0
-				will-change: letter-spacing, opacity
+				will-change: opacity
 			.thanks-box
 				position: absolute
 				top: -20px
@@ -1092,14 +1097,12 @@ body::-webkit-scrollbar
 @keyframes anniversaryTit
 	0%
 		opacity: 0.0
-		letter-spacing: -0.2em
 	15%
 		opacity: 1.0
 	97%
 		opacity: 1.0
 	100%
 		opacity: 0.0
-		letter-spacing: 0.1em
 @keyframes thanks
 	0%
 		opacity: 0.0
