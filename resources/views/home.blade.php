@@ -333,7 +333,7 @@
                 </div>
             </div>
         </div>
-        <img class="bg-gw lazyload" src="{{ asset('image/gw/bg-blue-gw.webp') }}" alt="新緑">
+        <img class="bg-gw lazyload" src="{{ asset('image/gw/bg-gw.webp') }}" alt="新緑">
         <video class="bg-light lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
             <source src="{{ asset('movie/top/bg_light.mp4') }}" type="video/mp4">
         </video>
