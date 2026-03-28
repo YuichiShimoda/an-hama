@@ -295,84 +295,103 @@ $(document).on("visibilitychange", function() {
 
 
 
-let myConfetti;
-let defaults;
-$(window).on('load', function() {
-	const canvas = $('#confetti-canvas')[0];
-	myConfetti = confetti.create(canvas, {
-		resize: true,
-		useWorker: true
-	});
-	const colors = ['#FFD700', '#FFA500', '#C0C0C0', '#E8E8E8']; // 金銀
-	if ($(window).width() <= 500) {
-		defaults = {
-			angle: 90,
-			spread: 180,
-			startVelocity: 60,
-			origin: { x: 0.5, y: 0.8 },
-			colors: colors,
-			scalar: 1.5
-		};
-	} else {
-		defaults = {
-			angle: 90,
-			spread: 100,
-			startVelocity: 60,
-			origin: { x: 0.5, y: 0.8 },
-			colors: colors,
-			scalar: 1.5
-		};
-	}
-});
+// let myConfetti;
+// let defaults;
+// $(window).on('load', function() {
+// 	const canvas = $('#confetti-canvas')[0];
+// 	myConfetti = confetti.create(canvas, {
+// 		resize: true,
+// 		useWorker: true
+// 	});
+// 	const colors = ['#FFD700', '#FFA500', '#C0C0C0', '#E8E8E8'];
+// 	if ($(window).width() <= 500) {
+// 		defaults = {
+// 			angle: 90,
+// 			spread: 180,
+// 			startVelocity: 60,
+// 			origin: { x: 0.5, y: 0.8 },
+// 			colors: colors,
+// 			scalar: 1.5
+// 		};
+// 	} else {
+// 		defaults = {
+// 			angle: 90,
+// 			spread: 100,
+// 			startVelocity: 60,
+// 			origin: { x: 0.5, y: 0.8 },
+// 			colors: colors,
+// 			scalar: 1.5
+// 		};
+// 	}
+// });
 
-function fire(particleRatio, options) {
-	const baseCount = $(window).width() <= 500 ? 1000 : 300;
-	myConfetti($.extend({}, defaults, options, {
-		particleCount: Math.floor(baseCount * particleRatio)
-	}));
-}
+// function fire(particleRatio, options) {
+// 	const baseCount = $(window).width() <= 500 ? 1000 : 300;
+// 	myConfetti($.extend({}, defaults, options, {
+// 		particleCount: Math.floor(baseCount * particleRatio)
+// 	}));
+// }
 
-function launchConfetti() {
-	fire(0.25, { spread: 26, startVelocity: 55 });
-	fire(0.2, { spread: 60 });
-	fire(0.35, { spread: 100, scalar: 0.8 });
-	fire(0.1, { startVelocity: 25, decay: 0.92, scalar: 1.2 });
-	fire(0.1, { spread: 120, startVelocity: 45 });
-	setTimeout(function () {
-		fire(0.3, { spread: 140, startVelocity: 65, scalar: 2 });
-	}, 300);
-}
+// function launchConfetti() {
+// 	fire(0.25, { spread: 26, startVelocity: 55 });
+// 	fire(0.2, { spread: 60 });
+// 	fire(0.35, { spread: 100, scalar: 0.8 });
+// 	fire(0.1, { startVelocity: 25, decay: 0.92, scalar: 1.2 });
+// 	fire(0.1, { spread: 120, startVelocity: 45 });
+// 	setTimeout(function () {
+// 		fire(0.3, { spread: 140, startVelocity: 65, scalar: 2 });
+// 	}, 300);
+// }
 
-function launchAnniversaryConfetti() {
-	$("#confetti-wrapper").addClass("fired");
+// function launchAnniversaryConfetti() {
+// 	$("#confetti-wrapper").addClass("fired");
+// 	setTimeout(function() {
+// 		launchConfetti();
+// 		setTimeout(function() {
+// 			$("#confetti-wrapper").removeClass("fired");
+// 		}, 7500);
+// 	}, 500);
+// }
+
+// let confettiLoop;
+// ScrollTrigger.create({
+// 	trigger: "#confetti-wrapper",
+// 	start: "top center+=10%",
+// 	onEnter: function() {
+// 		if (!confettiLoop) {
+// 			launchAnniversaryConfetti();
+// 			confettiLoop = setInterval(launchAnniversaryConfetti, 10000);
+// 		}
+// 	}
+// });
+
+
+
+
+
+
+
+
+function launchGoldenWeek() {
+	$("#gw").addClass("fired");
 	setTimeout(function() {
-		launchConfetti();
 		setTimeout(function() {
-			$("#confetti-wrapper").removeClass("fired");
+			$("#gw").removeClass("fired");
 		}, 7500);
 	}, 500);
 }
 
-let confettiLoop;
+let goldenWeekLoop;
 ScrollTrigger.create({
-	trigger: "#confetti-wrapper",
+	trigger: "#gw",
 	start: "top center+=10%",
 	onEnter: function() {
-		if (!confettiLoop) {
-			launchAnniversaryConfetti();
-			confettiLoop = setInterval(launchAnniversaryConfetti, 10000);
+		if (!goldenWeekLoop) {
+			launchGoldenWeek();
+			goldenWeekLoop = setInterval(launchGoldenWeek, 10000);
 		}
 	}
 });
-
-
-
-
-
-
-
-
-
 
 
 

@@ -236,7 +236,7 @@
 
 
 
-    <div id="confetti-wrapper">
+<!--     <div id="confetti-wrapper">
         <canvas id="confetti-canvas"></canvas>
         <div class="content-box">
             <div class="anniversary-tit">
@@ -244,7 +244,7 @@
                 <span class="one">1</span>
                 <span class="txt">周年</span>
                 <div class="thanks-box">
-                    <img class="thanks" src="{{ asset('image/thanks.svg') }}" alt="おかげさまで">
+                    <img class="thanks" src="{{ asset('image/anniversary/thanks.svg') }}" alt="おかげさまで">
                 </div>
             </div>
             <div class="date-box">
@@ -256,18 +256,97 @@
                     <p class="num">3</p>
                     <p class="unit">月</p>
                 </div>
-<!--                        <div class="item-box">
-                    <p class="num">10</p>
-                    <p class="unit">日</p>
-                </div> -->
+            //     <div class="item-box">
+            //         <p class="num">10</p>
+            //         <p class="unit">日</p>
+            //     </div>
             </div>
-            <p class="gratitude">To our customers, with gratitude.</p>
-<!--                    <div class="movie-btn">
-                <p>動画を見る</p>
-            </div> -->
+            // <p class="gratitude">To our customers, with gratitude.</p>
+            //        <div class="movie-btn">
+            //     <p>動画を見る</p>
+            // </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@latest/dist/confetti.browser.min.js"></script><!-- confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@latest/dist/confetti.browser.min.js"></script> -->
+    <!-- confetti -->
+
+
+
+
+
+
+
+
+
+    <div id="gw" class="">
+        <div class="content-box">
+            <div class="gw-tit">
+                <span class="txt">GW期間</span>
+                <span class="s-txt">の</span>
+                <span class="txt">営業</span>
+                <span class="s-txt">の</span>
+                <span class="txt">お知らせ</span>
+<!--                 <div class="thanks-box">
+                    <img class="thanks" src="{{ asset('image/anniversary/thanks.svg') }}" alt="おかげさまで">
+                </div> -->
+            </div>
+            <div class="date-box">
+                <div class="date-ele">
+                    <div class="item-box">
+                        <p class="num">4</p>
+                        <p class="unit">月</p>
+                    </div>
+                           <div class="item-box">
+                        <p class="num">30</p>
+                        <p class="unit">日（ 木 ）</p>
+                    </div>
+                </div>
+                <div class="date-ele">
+                    <div class="item-box">
+                        <p class="num">5</p>
+                        <p class="unit">月</p>
+                    </div>
+                           <div class="item-box">
+                        <p class="num">1</p>
+                        <p class="unit">日（ 金 ）</p>
+                    </div>
+                </div>
+                <div class="date-ele">
+                    <div class="item-box">
+                        <p class="num">5</p>
+                        <p class="unit">月</p>
+                    </div>
+                           <div class="item-box">
+                        <p class="num">7</p>
+                        <p class="unit">日（ 木 ）</p>
+                    </div>
+                </div>
+                <div class="date-ele">
+                    <div class="item-box">
+                        <p class="num">5</p>
+                        <p class="unit">月</p>
+                    </div>
+                           <div class="item-box">
+                        <p class="num">8</p>
+                        <p class="unit">日（ 金 ）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="bg-gw lazyload" src="{{ asset('image/gw/bg-gw.webp') }}" alt="新緑">
+        <video class="bg-light lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
+            <source src="{{ asset('movie/top/bg_light.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+
+
+
+
+
+
+
+
 
 
 
