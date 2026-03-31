@@ -114,7 +114,7 @@
             </div>
         </div>
     </section>
-    <div id="movie" class="" data-initial-upload="open-1year"></div>
+    <div id="movie" class="" data-initial-upload="dinner-time202604"></div>
 @stop
 
 
@@ -278,7 +278,7 @@
 
 
 
-    <div id="gw" class="">
+<!--     <div id="gw" class="">
         <div class="content-box">
             <div class="gw-tit">
                 <span class="txt">GW期間</span>
@@ -286,9 +286,6 @@
                 <span class="txt">営業</span>
                 <span class="s-txt">の</span>
                 <span class="txt">お知らせ</span>
-<!--                 <div class="thanks-box">
-                    <img class="thanks" src="{{ asset('image/anniversary/thanks.svg') }}" alt="おかげさまで">
-                </div> -->
             </div>
             <div class="date-box">
                 <div class="date-ele">
@@ -337,7 +334,7 @@
         <video class="bg-light lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
             <source src="{{ asset('movie/top/bg_light.mp4') }}" type="video/mp4">
         </video>
-    </div>
+    </div> -->
 
 
 
