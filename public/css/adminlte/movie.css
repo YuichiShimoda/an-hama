@@ -240,6 +240,11 @@
   aspect-ratio: initial;
   height: 30px;
 }
+@media screen and (max-width: 700px) {
+  .content #visibleTable td:last-of-type form.first-set-btn {
+    height: 25px;
+  }
+}
 .content #visibleTable td:last-of-type form.first-set-btn > button {
   display: flex;
   justify-content: flex-start;
@@ -269,6 +274,11 @@
   width: fit-content;
   aspect-ratio: initial;
   height: 30px;
+}
+@media screen and (max-width: 700px) {
+  .content #visibleTable td:last-of-type form.first-reset-btn {
+    height: 25px;
+  }
 }
 .content #visibleTable td:last-of-type form.first-reset-btn > button {
   display: flex;
