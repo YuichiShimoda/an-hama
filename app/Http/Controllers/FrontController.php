@@ -39,7 +39,7 @@ class FrontController extends Controller
             $ele->delete();
         }
         $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
-        $movie = Movie::where('first_movie', true)->first();
+        $movie = Movie::where('is_visible', true)->where('first_movie', true)->first();
         return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
     }
 

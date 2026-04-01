@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .content-header .tit-box {
   display: flex;
   justify-content: space-between;
@@ -239,11 +240,6 @@
   aspect-ratio: initial;
   height: 30px;
 }
-.content #visibleTable td:last-of-type form.first-set-btn.is-first > button {
-  border-color: #1a277e;
-  background-color: #1a277e;
-  pointer-events: none;
-}
 .content #visibleTable td:last-of-type form.first-set-btn > button {
   display: flex;
   justify-content: flex-start;
@@ -268,6 +264,55 @@
   letter-spacing: 0.05em;
   white-space: nowrap;
   color: #fff;
+}
+.content #visibleTable td:last-of-type form.first-reset-btn {
+  width: fit-content;
+  aspect-ratio: initial;
+  height: 30px;
+}
+.content #visibleTable td:last-of-type form.first-reset-btn > button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  padding: 0 9px;
+  border-color: #1a277e;
+  border-radius: 0.2rem;
+  background-color: #1a277e;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.content #visibleTable td:last-of-type form.first-reset-btn > button:hover {
+  border-color: #555;
+  background-color: #555;
+}
+.content #visibleTable td:last-of-type form.first-reset-btn > button:hover::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "リセット";
+  display: block;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: #fff;
+}
+.content #visibleTable td:last-of-type form.first-reset-btn > button:hover > p {
+  opacity: 0;
+}
+.content #visibleTable td:last-of-type form.first-reset-btn > button > p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 700px) {
   .content #visibleTable td:last-of-type form {

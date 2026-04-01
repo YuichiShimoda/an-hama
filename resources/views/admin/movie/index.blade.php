@@ -60,12 +60,21 @@
                         <a href="{{ route('admin.movie.edit', $visible_movie_ele->id) }}" class="btn btn-sm btn-warning">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <form action="{{ route('admin.movie.firstSet', $visible_movie_ele->id) }}" method="POST" @class(['d-inline first-set-btn', 'is-first' => $visible_movie_ele->first_movie])>
-                            @csrf
-                            <button class="btn btn-xs btn-danger first-set-btn" type="submit">
-                                <p>{{ $visible_movie_ele->first_movie ? '最初に再生中' : '最初に再生' }}</p>
-                            </button>
-                        </form>
+                        @if($visible_movie_ele->first_movie)
+                            <form action="{{ route('admin.movie.firstReset', $visible_movie_ele->id) }}" method="POST" class="d-inline first-reset-btn">
+                                @csrf
+                                <button class="btn btn-xs btn-danger" type="submit">
+                                    <p>最初に再生中</p>
+                                </button>
+                            </form>
+                        @else
+                            <form action="{{ route('admin.movie.firstSet', $visible_movie_ele->id) }}" method="POST" class="d-inline first-set-btn">
+                                @csrf
+                                <button class="btn btn-xs btn-danger" type="submit">
+                                    <p>最初に再生</p>
+                                </button>
+                            </form>
+                        @endif
                     </td>
                 </tr>
             @endforeach
@@ -174,6 +183,24 @@
                 const $form = $(this).closest('form');
                 Swal.fire({
                     title: '変更してよろしいでしょうか？',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#007bff',
+                    cancelButtonColor: '#999',
+                    confirmButtonText: 'OK',
+                    cancelButtonText: 'キャンセル',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $form.submit();
+                    }
+                });
+            });
+
+            $('.first-reset-btn').on('click', function (e) {
+                e.preventDefault();
+                const $form = $(this).closest('form');
+                Swal.fire({
+                    title: 'リセットしてよろしいでしょうか？',
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#007bff',

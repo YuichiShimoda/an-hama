@@ -154,6 +154,12 @@ class MovieController extends Controller
 		Movie::where('first_movie', true)->update(['first_movie' => false]);
 		$movie->first_movie = true;
 		$movie->save();
-		return redirect()->route('admin.movie.index')->with('success', '更新完了');
+		return redirect()->route('admin.movie.index')->with('success', '変更完了');
+	}
+
+	public function firstReset(Movie $movie)
+	{
+		Movie::where('first_movie', true)->update(['first_movie' => false]);
+		return redirect()->route('admin.movie.index')->with('success', 'リセット完了');
 	}
 }

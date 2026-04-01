@@ -292,11 +292,6 @@
 						width: fit-content
 						aspect-ratio: initial
 						height: 30px
-						&.is-first
-							> button
-								border-color: #1a277e
-								background-color: #1a277e
-								pointer-events: none
 						> button
 							display: flex
 							justify-content: flex-start
@@ -319,6 +314,49 @@
 								letter-spacing: 0.05em
 								white-space: nowrap
 								color: #fff
+					&.first-reset-btn
+						width: fit-content
+						aspect-ratio: initial
+						height: 30px
+						> button
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: fit-content
+							padding: 0 9px
+							border-color: #1a277e
+							border-radius: .2rem
+							background-color: #1a277e
+							transition: all 0.5s ease-in-out
+							position: relative
+							&:hover
+								border-color: #555
+								background-color: #555
+								&::after
+									position: absolute
+									top: 50%
+									left: 50%
+									transform: translate(-50%, -50%)
+									content: "リセット"
+									display: block
+									font-weight: 400
+									font-size: 11px
+									line-height: 1.0
+									letter-spacing: 0.05em
+									white-space: nowrap
+									color: #fff
+								> p
+									opacity: 0.0
+							> p
+								display: block
+								margin: 0
+								font-weight: 400
+								font-size: 11px
+								line-height: 1.0
+								letter-spacing: 0.05em
+								white-space: nowrap
+								color: #fff
+								transition: all 0.3s ease-in-out
 					+bp700
 						width: 25px
 						margin-left: 0.3em
