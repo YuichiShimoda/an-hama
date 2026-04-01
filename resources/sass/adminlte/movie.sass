@@ -169,6 +169,10 @@
 		th:nth-child(2), td:nth-child(2)
 			width: 70px !important
 			min-width: 70px
+			&.is-first
+				background-color: #1a277e
+				.movie-box
+					border: solid 1px #ccc
 			+bp500
 				width: 50px !important
 				min-width: 50px
@@ -201,7 +205,7 @@
 			// 	min-width: 100px !important
 		th:nth-child(4), td:nth-child(4)
 			width: 60px !important
-			min-width: 60px
+			min-width: 160px
 			// +bp700
 			// 	min-width: 100px !important
 		th
@@ -284,6 +288,37 @@
 					aspect-ratio: 1 / 1
 					padding: 0
 					margin-left: 0.5em
+					&.first-set-btn
+						width: fit-content
+						aspect-ratio: initial
+						height: 30px
+						&.is-first
+							> button
+								border-color: #1a277e
+								background-color: #1a277e
+								pointer-events: none
+						> button
+							display: flex
+							justify-content: flex-start
+							align-items: center
+							width: fit-content
+							padding: 0 9px
+							border-color: #ccc
+							border-radius: .2rem
+							background-color: #ccc
+							transition: all 0.5s ease-in-out
+							&:hover
+								border-color: #1a277e
+								background-color: #1a277e
+							> p
+								display: block
+								margin: 0
+								font-weight: 400
+								font-size: 11px
+								line-height: 1.0
+								letter-spacing: 0.05em
+								white-space: nowrap
+								color: #fff
 					+bp700
 						width: 25px
 						margin-left: 0.3em

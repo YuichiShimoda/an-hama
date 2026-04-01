@@ -15,6 +15,8 @@ class Movie extends Model
         'title',
         'movie',
         'filename',
+        'suffix',
+        'first_movie',
         'next_movie_id1',
         'next_movie_id2',
         'next_movie_id3',

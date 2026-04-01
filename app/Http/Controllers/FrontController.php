@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use App\Models\News;
 use App\Models\WeeklyMenu;
 use App\Models\PressRelease;
+use App\Models\Movie;
 use Illuminate\View\View;
 
 class FrontController extends Controller
@@ -38,8 +39,8 @@ class FrontController extends Controller
             $ele->delete();
         }
         $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
-        // $news = News::orderBy('id', 'desc')->limit(3)->get();
-        return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease]);
+        $movie = Movie::where('first_movie', true)->first();
+        return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
     }
 
     public function passion(): View

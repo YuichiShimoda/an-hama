@@ -63,6 +63,8 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
     Route::resource('press-release', PressReleaseController::class);
     Route::resource('task', TaskController::class);
     Route::resource('movie', MovieController::class);
+    Route::post('movie/{movie}/first-set', [MovieController::class, 'firstSet'])->name('movie.firstSet');
+    Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');
     Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');
 });
 

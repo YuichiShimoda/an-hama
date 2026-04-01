@@ -94,6 +94,12 @@
   width: 70px !important;
   min-width: 70px;
 }
+.content #visibleTable th:nth-child(2).is-first, .content #visibleTable td:nth-child(2).is-first {
+  background-color: #1a277e;
+}
+.content #visibleTable th:nth-child(2).is-first .movie-box, .content #visibleTable td:nth-child(2).is-first .movie-box {
+  border: solid 1px #ccc;
+}
 @media screen and (max-width: 500px) {
   .content #visibleTable th:nth-child(2), .content #visibleTable td:nth-child(2) {
     width: 50px !important;
@@ -125,7 +131,7 @@
 }
 .content #visibleTable th:nth-child(4), .content #visibleTable td:nth-child(4) {
   width: 60px !important;
-  min-width: 60px;
+  min-width: 160px;
 }
 .content #visibleTable th {
   padding: 0.7em 1em;
@@ -227,6 +233,41 @@
   aspect-ratio: 1/1;
   padding: 0;
   margin-left: 0.5em;
+}
+.content #visibleTable td:last-of-type form.first-set-btn {
+  width: fit-content;
+  aspect-ratio: initial;
+  height: 30px;
+}
+.content #visibleTable td:last-of-type form.first-set-btn.is-first > button {
+  border-color: #1a277e;
+  background-color: #1a277e;
+  pointer-events: none;
+}
+.content #visibleTable td:last-of-type form.first-set-btn > button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  padding: 0 9px;
+  border-color: #ccc;
+  border-radius: 0.2rem;
+  background-color: #ccc;
+  transition: all 0.5s ease-in-out;
+}
+.content #visibleTable td:last-of-type form.first-set-btn > button:hover {
+  border-color: #1a277e;
+  background-color: #1a277e;
+}
+.content #visibleTable td:last-of-type form.first-set-btn > button > p {
+  display: block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  color: #fff;
 }
 @media screen and (max-width: 700px) {
   .content #visibleTable td:last-of-type form {

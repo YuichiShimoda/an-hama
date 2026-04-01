@@ -23,7 +23,13 @@ class MovieController extends Controller
 	{
 		$visible_movie = Movie::where('is_visible', true)->get();
 		$movie = Movie::all();
-		return view('admin.movie.index', compact('visible_movie', 'movie'));
+		$first_movie = Movie::where('is_visible', true)->where('first_movie', true)->first();
+		if ($first_movie) {
+			return view('admin.movie.index', compact('visible_movie', 'movie', 'first_movie'));
+		} else {
+			$first_movie_error = '最初に再生する動画が未選択';
+			return view('admin.movie.index', compact('visible_movie', 'movie', 'first_movie', 'first_movie_error'));
+		}
 	}
 
 	/**
@@ -141,5 +147,13 @@ class MovieController extends Controller
 			return $movie;
 		});
 		return response()->json($movies);
+	}
+
+	public function firstSet(Movie $movie)
+	{
+		Movie::where('first_movie', true)->update(['first_movie' => false]);
+		$movie->first_movie = true;
+		$movie->save();
+		return redirect()->route('admin.movie.index')->with('success', '更新完了');
 	}
 }
