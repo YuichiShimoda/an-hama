@@ -37,7 +37,8 @@ class MovieController extends Controller
 	 */
 	public function create()
 	{
-		$next_movies = Movie::where('expired_at', '>', now())->orWhereNull('expired_at')->pluck('title', 'id');
+		// $next_movies = Movie::where('expired_at', '>', now())->orWhereNull('expired_at')->pluck('title', 'id');
+		$next_movies = Movie::where('expired_at', '>', now())->orWhereNull('expired_at')->select('id', 'title', 'suffix')->get();
 		return view('admin.movie.create', compact('next_movies'));
 	}
 
@@ -82,7 +83,8 @@ class MovieController extends Controller
 		if (!empty($movie->id)) {
 			$next_movies->where('id', '!=', $movie->id);
 		}
-		$next_movies = $next_movies->pluck('title', 'id');
+		// $next_movies = $next_movies->pluck('title', 'id');
+		$next_movies = $next_movies->select('id', 'title', 'suffix')->get();
 
 		return view('admin.movie.edit',compact('movie', 'next_movies'));
 	}

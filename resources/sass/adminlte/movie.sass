@@ -204,10 +204,11 @@
 			// +bp700
 			// 	min-width: 100px !important
 		th:nth-child(4), td:nth-child(4)
-			width: 60px !important
+			width: 160px !important
 			min-width: 160px
-			// +bp700
-			// 	min-width: 100px !important
+			+bp700
+				width: 150px !important
+				min-width: 150px
 		th
 			padding: 0.7em 1.0em
 			font-size: 14px
@@ -624,6 +625,10 @@
 							width: 350px
 						+bp450
 							width: 80vw
+					#suffix
+						width: 250px
+						+bp450
+							width: 50vw
 					#filename
 						width: 300px
 						+bp450

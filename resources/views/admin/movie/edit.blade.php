@@ -137,6 +137,15 @@
 			</div>
 		</div>
 
+		{{-- 接尾語 --}}
+		<div class="d-block">
+			<x-adminlte-input name="suffix" label="接尾語" placeholder="接尾語" placeholder="2025.1" value="{{ old('suffix', $movie->suffix) }}"/>
+			<div class="form-note-box">
+				<p>※ 「 次の動画 」の選択肢で表示される補足情報です。</p>
+				<p>※ 20文字以内で入力してください。</p>
+			</div>
+		</div>
+
 		@php
 			$next_movie_fields = ['next_movie_id1', 'next_movie_id2', 'next_movie_id3'];
 		@endphp
@@ -148,9 +157,17 @@
 				@foreach($next_movie_fields as $field)
 					<x-adminlte-select name="{{ $field }}" fgroup-class="select-box">
 						<option value="" selected>選択してください</option>
-						@foreach($next_movies as $id => $title)
+						{{-- @foreach($next_movies as $id => $title)
 							<option value="{{ $id }}" {{ old($field, $movie->{$field}) == $id ? 'selected' : '' }}>
 								{{ $title }}
+							</option>
+						@endforeach --}}
+						@foreach($next_movies as $item)
+							<option value="{{ $item->id }}" {{ old($field, $movie->{$field}) == $item->id ? 'selected' : '' }}>
+								{{ $item->title }}
+								@if(!empty($item->suffix))
+									- {{ $item->suffix }}
+								@endif
 							</option>
 						@endforeach
 					</x-adminlte-select>
