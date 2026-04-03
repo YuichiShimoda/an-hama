@@ -77,6 +77,15 @@ div.wrapper aside.main-sidebar .sidebar nav ul li a.separate-line p {
 div.wrapper aside.main-sidebar .sidebar nav ul li a p {
   margin-left: 10px;
 }
+div.wrapper aside.main-sidebar .sidebar nav ul li .alert-no-movie {
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  display: block;
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
 
 .content-header .alert.alert-success {
   margin-top: 20px;
