@@ -413,9 +413,10 @@
         </div>
         <!-- <img class="bg-gw lazyload" src="{{ asset('image/gw/bg-gw.webp') }}" alt="新緑"> -->
         <div class="bg-light-box">
-            <video class="bg-light lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
+            <img class="bg-light lazyload" src="{{ asset('image/gw/bg-awai-gw.webp') }}" alt="新緑">
+<!--             <video class="bg-light lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
                 <source src="{{ asset('movie/top/bg2.mp4') }}" type="video/mp4">
-            </video>
+            </video> -->
         </div>
     </div>
 
