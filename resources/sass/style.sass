@@ -1197,6 +1197,7 @@ body::-webkit-scrollbar
 	&.fired
 		.content-box
 			.top-tit
+				animation: slidingText 8.0s ease-in-out
 				.txt
 					// letter-spacing: 0.1em
 					animation: gwGlow 3.0s 0.0s ease-in-out forwards, gwTit 8.0s ease-in-out
@@ -1238,11 +1239,11 @@ body::-webkit-scrollbar
 	@media screen and (max-width: 1200px)
 		height: 580px
 	@media screen and (max-width: 1000px)
-		height: 480px
+		height: 540px
 	@media screen and (max-width: 850px)
-		height: 460px
+		height: 500px
 	@media screen and (max-width: 750px)
-		height: 440px
+		height: 480px
 	.content-box
 		position: absolute
 		top: 0
@@ -1346,10 +1347,12 @@ body::-webkit-scrollbar
 			align-items: center
 			flex-direction: column
 			width: fit-content
-			margin: 40px auto 0
+			margin: 10px auto 0
 			position: relative
+			@media screen and (max-width: 1200px)
+				margin: 5px auto 0
 			@media screen and (max-width: 1000px)
-				margin: 30px auto 0
+				margin: -5px auto 0
 			> p
 				display: block
 				font-weight: 400
@@ -1362,6 +1365,9 @@ body::-webkit-scrollbar
 				// text-shadow: 0 0 0.3em #000, 0 0 1.5em #ff0, 0 0 5.0em #000
 				br
 					display: none
+			.mid-copy
+				display: block
+				width: 440px
 			.camera
 				position: absolute
 				top: -20px
@@ -1444,95 +1450,111 @@ body::-webkit-scrollbar
 				color: #555
 				// text-shadow: 0 0 0.3em #000, 0 0 1.5em #ff0, 0 0 5.0em #000
 		.open-box
-			display: block
+			display: flex
+			justify-content: center
+			align-items: center
 			width: fit-content
-			margin: 20px auto 0
+			padding: 35px 35px 45px
+			margin: 15px auto -15px
+			background: url("../image/gw/board.webp")
+			background-size: 100% 100%
+			background-position: center center
+			background-repeat: no-repeat
 			position: relative
-			.s-tit
+			.open-img
 				display: block
-				font-weight: 400
-				font-size: 12px
-				line-height: 1.5
-				font-family: $miniwa-hv-v3
-				letter-spacing: 0.2em
-				text-align: center
-				color: #B92928
-			.open-ele
-				display: flex
-				justify-content: center
-				align-items: center
+				width: 50px
+				transform-origin: top center
+				animation: tilt 1.5s ease-in-out infinite
+			.right-box
+				display: block
 				width: fit-content
-				margin-top: 5px
-				overflow: hidden
-				position: relative
-				.month-box
-					display: flex
-					justify-content: center
-					align-items: flex-end
-					width: fit-content
-					.num
-						display: block
-						font-weight: 400
-						font-size: 14px
-						line-height: 1.0
-						font-family: $iroha-25icho-stdn
-						letter-spacing: 0.0em
-						color: #555
-						transition: all 1.5s ease-in-out
-					.unit
-						display: block
-						margin-left: 0.2rem
-						margin-bottom: 0.05rem
-						font-weight: 400
-						font-size: 10px
-						line-height: 1.0
-						font-family: $iroha-25icho-stdn
-						letter-spacing: 0.05em
-						color: #555
-						transition: all 1.5s ease-in-out
-				.date-box
-					display: flex
-					justify-content: center
-					align-items: flex-end
-					width: fit-content
-					margin-left: 5px
-					.num
-						display: block
-						font-weight: 400
-						font-size: 14px
-						line-height: 1.0
-						font-family: $iroha-25icho-stdn
-						letter-spacing: 0.0em
-						color: #555
-						transition: all 1.5s ease-in-out
-					.unit
-						display: block
-						margin-left: 0.2rem
-						margin-bottom: 0.05rem
-						font-weight: 400
-						font-size: 10px
-						line-height: 1.0
-						font-family: $iroha-25icho-stdn
-						letter-spacing: -0.1em
-						color: #555
-						transition: all 1.5s ease-in-out
-				.time
+				margin-left: 15px
+				.s-tit
 					display: block
-					margin-left: 7px
-					margin-bottom: -2px
+					font-weight: 400
 					font-size: 12px
-					line-height: 1.0
-					font-family: $iroha-25icho-stdn
-					letter-spacing: 0.05em
-					color: #555
-					> span
-						display: inline-block
-						margin: 0 3px 0
+					line-height: 1.5
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.2em
+					text-align: center
+					color: #B92928
+				.open-ele
+					display: flex
+					justify-content: center
+					align-items: center
+					width: fit-content
+					margin-top: 5px
+					overflow: hidden
+					position: relative
+					.month-box
+						display: flex
+						justify-content: center
+						align-items: flex-end
+						width: fit-content
+						.num
+							display: block
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.0em
+							color: #555
+							transition: all 1.5s ease-in-out
+						.unit
+							display: block
+							margin-left: 0.2rem
+							margin-bottom: 0.05rem
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #555
+							transition: all 1.5s ease-in-out
+					.date-box
+						display: flex
+						justify-content: center
+						align-items: flex-end
+						width: fit-content
+						margin-left: 5px
+						.num
+							display: block
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.0em
+							color: #555
+							transition: all 1.5s ease-in-out
+						.unit
+							display: block
+							margin-left: 0.2rem
+							margin-bottom: 0.05rem
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: -0.1em
+							color: #555
+							transition: all 1.5s ease-in-out
+					.time
+						display: block
+						margin-left: 7px
+						margin-bottom: -2px
 						font-size: 12px
 						line-height: 1.0
 						font-family: $iroha-25icho-stdn
 						letter-spacing: 0.05em
 						color: #555
+						> span
+							display: inline-block
+							margin: 0 3px 0
+							font-size: 12px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #555
 	.circle-left
 		position: absolute
 		top: 50%
@@ -1578,6 +1600,41 @@ body::-webkit-scrollbar
 			object-fit: cover
 			object-position: top center
 			filter: saturate(3.0)
+@keyframes slidingText
+	0%
+		transform: translateX(-100vw) skew(0deg, 0deg)
+	10%
+		transform: translateX(-100vw) skew(0deg, 0deg)
+	11%
+		transform: translateX(-100%) skew(0deg, 0deg)
+	12%
+		transform: skew(0deg, 0deg)
+	13%
+		transform: translateX(7.5px) skew(-35deg, 0deg)
+	13.5%
+		transform: translateX(5px) skew(-25deg, 0deg)
+	14%
+		transform: translateX(2.5px) skew(-15deg, 0deg)
+	14.5%
+		transform: translateX(-2.5px) skew(15deg, 0deg)
+	15%
+		transform: translateX(-5px) skew(25deg, 0deg)
+	15.5%
+		transform: translateX(-2.5px) skew(15deg, 0deg)
+	16%
+		transform: translateX(2.5px) skew(-15deg, 0deg)
+	16.5%
+		transform: translateX(5px) skew(-25deg, 0deg)
+	17%
+		transform: translateX(2.5px) skew(-15deg, 0deg)
+	18%
+		transform: translateX(1px) skew(-7.5deg, 0deg)
+	19%
+		transform: translateX(0px) skew(0deg, 0deg)
+	20%
+		transform: translateX(0px)
+	100%
+		transform: translateX(0px)
 @keyframes gwGlow
 	0%
 		text-shadow: 0 0 0.0em #fff, 0 0 0.0em #ff0, 0 0 0.0em #fff

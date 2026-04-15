@@ -352,8 +352,9 @@
                 </div>
             </div>
             <div class="mid-box">
-                <p>話題の元祖“つけかけパスタ <br>～ dip & pour ～”を体験しませんか？</p>
-                <p>進化し続ける「 新しい名古屋グルメ 」の衝撃を、ぜひその舌で！</p>
+                <img class="mid-copy lazyload" src="{{ asset('image/gw/mid-copy.webp') }}" alt="カメラ">
+<!--                 <p>話題の元祖“つけかけパスタ <br>～ dip & pour ～”を体験しませんか？</p>
+                <p>進化し続ける「 新しい名古屋グルメ 」の衝撃を、ぜひその舌で！</p> -->
 <!--                 <div class="camera">
                     <img class="lazyload" src="{{ asset('image/gw/camera.svg') }}" alt="カメラ">
                 </div>
@@ -375,39 +376,42 @@
                 <p>連休中のランチタイム、皆様のご来店を心よりお待ちしております。</p>
             </div>
             <div class="open-box">
-                <h2 class="s-tit">【 GWの営業 】</h2>
-                <div class="open-ele">
-                    <div class="month-box">
-                        <p class="num">5</p>
-                        <p class="unit">月</p>
+                <img class="open-img lazyload" src="{{ asset('image/gw/open.webp') }}" alt="看板">
+                <!-- <h2 class="s-tit">【 GWの営業 】</h2> -->
+                <div class="right-box">
+                    <div class="open-ele">
+                        <div class="month-box">
+                            <p class="num">5</p>
+                            <p class="unit">月</p>
+                        </div>
+                        <div class="date-box">
+                            <p class="num">4</p>
+                            <p class="unit">日（ 月 ）</p>
+                        </div>
+                        <p class="time">11:00<span>~</span>15:00</p>
                     </div>
-                    <div class="date-box">
-                        <p class="num">4</p>
-                        <p class="unit">日（ 月 ）</p>
+                    <div class="open-ele">
+                        <div class="month-box">
+                            <p class="num">5</p>
+                            <p class="unit">月</p>
+                        </div>
+                        <div class="date-box">
+                            <p class="num">5</p>
+                            <p class="unit">日（ 火 ）</p>
+                        </div>
+                        <p class="time">11:00<span>~</span>15:00</p>
                     </div>
-                    <p class="time">11:00<span>~</span>15:00</p>
-                </div>
-                <div class="open-ele">
-                    <div class="month-box">
-                        <p class="num">5</p>
-                        <p class="unit">月</p>
+                    <div class="open-ele">
+                        <div class="month-box">
+                            <p class="num">5</p>
+                            <p class="unit">月</p>
+                        </div>
+                        <div class="date-box">
+                            <p class="num">6</p>
+                            <p class="unit">日（ 水 ）</p>
+                        </div>
+                        <p class="time">11:00<span>~</span>15:00</p>
                     </div>
-                    <div class="date-box">
-                        <p class="num">5</p>
-                        <p class="unit">日（ 火 ）</p>
-                    </div>
-                    <p class="time">11:00<span>~</span>15:00</p>
-                </div>
-                <div class="open-ele">
-                    <div class="month-box">
-                        <p class="num">5</p>
-                        <p class="unit">月</p>
-                    </div>
-                    <div class="date-box">
-                        <p class="num">6</p>
-                        <p class="unit">日（ 水 ）</p>
-                    </div>
-                    <p class="time">11:00<span>~</span>15:00</p>
                 </div>
             </div>
         </div>

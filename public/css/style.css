@@ -1282,6 +1282,9 @@ body::-webkit-scrollbar {
     height: 100%;
   }
 }
+#gw.fired .content-box .top-tit {
+  animation: slidingText 8s ease-in-out;
+}
 #gw.fired .content-box .top-tit .txt {
   animation: gwGlow 3s 0s ease-in-out forwards, gwTit 8s ease-in-out;
   transition: all 8s ease-in-out;
@@ -1337,17 +1340,17 @@ body::-webkit-scrollbar {
 }
 @media screen and (max-width: 1000px) {
   #gw {
-    height: 480px;
+    height: 540px;
   }
 }
 @media screen and (max-width: 850px) {
   #gw {
-    height: 460px;
+    height: 500px;
   }
 }
 @media screen and (max-width: 750px) {
   #gw {
-    height: 440px;
+    height: 480px;
   }
 }
 #gw .content-box {
@@ -1475,12 +1478,17 @@ body::-webkit-scrollbar {
   align-items: center;
   flex-direction: column;
   width: fit-content;
-  margin: 40px auto 0;
+  margin: 10px auto 0;
   position: relative;
+}
+@media screen and (max-width: 1200px) {
+  #gw .content-box .mid-box {
+    margin: 5px auto 0;
+  }
 }
 @media screen and (max-width: 1000px) {
   #gw .content-box .mid-box {
-    margin: 30px auto 0;
+    margin: -5px auto 0;
   }
 }
 #gw .content-box .mid-box > p {
@@ -1495,6 +1503,10 @@ body::-webkit-scrollbar {
 }
 #gw .content-box .mid-box > p br {
   display: none;
+}
+#gw .content-box .mid-box .mid-copy {
+  display: block;
+  width: 440px;
 }
 #gw .content-box .mid-box .camera {
   position: absolute;
@@ -1620,12 +1632,30 @@ body::-webkit-scrollbar {
   color: #555;
 }
 #gw .content-box .open-box {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
-  margin: 20px auto 0;
+  padding: 35px 35px 45px;
+  margin: 15px auto -15px;
+  background: url("../image/gw/board.webp");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
   position: relative;
 }
-#gw .content-box .open-box .s-tit {
+#gw .content-box .open-box .open-img {
+  display: block;
+  width: 50px;
+  transform-origin: top center;
+  animation: tilt 1.5s ease-in-out infinite;
+}
+#gw .content-box .open-box .right-box {
+  display: block;
+  width: fit-content;
+  margin-left: 15px;
+}
+#gw .content-box .open-box .right-box .s-tit {
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -1635,7 +1665,7 @@ body::-webkit-scrollbar {
   text-align: center;
   color: #B92928;
 }
-#gw .content-box .open-box .open-ele {
+#gw .content-box .open-box .right-box .open-ele {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1644,13 +1674,13 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
 }
-#gw .content-box .open-box .open-ele .month-box {
+#gw .content-box .open-box .right-box .open-ele .month-box {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: fit-content;
 }
-#gw .content-box .open-box .open-ele .month-box .num {
+#gw .content-box .open-box .right-box .open-ele .month-box .num {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -1660,7 +1690,7 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .month-box .unit {
+#gw .content-box .open-box .right-box .open-ele .month-box .unit {
   display: block;
   margin-left: 0.2rem;
   margin-bottom: 0.05rem;
@@ -1672,14 +1702,14 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .date-box {
+#gw .content-box .open-box .right-box .open-ele .date-box {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: fit-content;
   margin-left: 5px;
 }
-#gw .content-box .open-box .open-ele .date-box .num {
+#gw .content-box .open-box .right-box .open-ele .date-box .num {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -1689,7 +1719,7 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .date-box .unit {
+#gw .content-box .open-box .right-box .open-ele .date-box .unit {
   display: block;
   margin-left: 0.2rem;
   margin-bottom: 0.05rem;
@@ -1701,7 +1731,7 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .time {
+#gw .content-box .open-box .right-box .open-ele .time {
   display: block;
   margin-left: 7px;
   margin-bottom: -2px;
@@ -1711,7 +1741,7 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #555;
 }
-#gw .content-box .open-box .open-ele .time > span {
+#gw .content-box .open-box .right-box .open-ele .time > span {
   display: inline-block;
   margin: 0 3px 0;
   font-size: 12px;
@@ -1777,6 +1807,59 @@ body::-webkit-scrollbar {
   filter: saturate(3);
 }
 
+@keyframes slidingText {
+  0% {
+    transform: translateX(-100vw) skew(0deg, 0deg);
+  }
+  10% {
+    transform: translateX(-100vw) skew(0deg, 0deg);
+  }
+  11% {
+    transform: translateX(-100%) skew(0deg, 0deg);
+  }
+  12% {
+    transform: skew(0deg, 0deg);
+  }
+  13% {
+    transform: translateX(7.5px) skew(-35deg, 0deg);
+  }
+  13.5% {
+    transform: translateX(5px) skew(-25deg, 0deg);
+  }
+  14% {
+    transform: translateX(2.5px) skew(-15deg, 0deg);
+  }
+  14.5% {
+    transform: translateX(-2.5px) skew(15deg, 0deg);
+  }
+  15% {
+    transform: translateX(-5px) skew(25deg, 0deg);
+  }
+  15.5% {
+    transform: translateX(-2.5px) skew(15deg, 0deg);
+  }
+  16% {
+    transform: translateX(2.5px) skew(-15deg, 0deg);
+  }
+  16.5% {
+    transform: translateX(5px) skew(-25deg, 0deg);
+  }
+  17% {
+    transform: translateX(2.5px) skew(-15deg, 0deg);
+  }
+  18% {
+    transform: translateX(1px) skew(-7.5deg, 0deg);
+  }
+  19% {
+    transform: translateX(0px) skew(0deg, 0deg);
+  }
+  20% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @keyframes gwGlow {
   0% {
     text-shadow: 0 0 0em #fff, 0 0 0em #ff0, 0 0 0em #fff;

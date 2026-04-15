@@ -1717,13 +1717,8 @@ body::-webkit-scrollbar {
   align-items: center;
   flex-direction: column;
   width: fit-content;
-  margin: 40px auto 0;
+  margin: 10px auto 0;
   position: relative;
-}
-@media screen and (max-width: 1000px) {
-  #gw .content-box .mid-box {
-    margin: 30px auto 0;
-  }
 }
 #gw .content-box .mid-box > p {
   display: block;
@@ -1740,6 +1735,21 @@ body::-webkit-scrollbar {
   #gw .content-box .mid-box > p {
     font-size: 13px;
     letter-spacing: 0;
+  }
+}
+#gw .content-box .mid-box .mid-copy {
+  display: block;
+  width: 400px;
+}
+@media screen and (max-width: 500px) {
+  #gw .content-box .mid-box .mid-copy {
+    width: 380px;
+    margin-left: -15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #gw .content-box .mid-box .mid-copy {
+    width: 360px;
   }
 }
 #gw .content-box .mid-box .camera {
@@ -1925,11 +1935,35 @@ body::-webkit-scrollbar {
   color: #555;
 }
 #gw .content-box .open-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 35px 35px 45px;
+  margin: 15px auto -15px;
+  background: url("../image/gw/board.webp");
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  #gw .content-box .open-box {
+    padding: 25px 30px 35px;
+  }
+}
+#gw .content-box .open-box .open-img {
+  display: block;
+  width: 50px;
+  transform-origin: top center;
+  animation: tilt 1.5s ease-in-out infinite;
+}
+#gw .content-box .open-box .right-box {
   display: block;
   width: fit-content;
-  margin: 20px auto 0;
+  margin-left: 15px;
 }
-#gw .content-box .open-box .s-tit {
+#gw .content-box .open-box .right-box .s-tit {
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -1939,7 +1973,7 @@ body::-webkit-scrollbar {
   text-align: center;
   color: #B92928;
 }
-#gw .content-box .open-box .open-ele {
+#gw .content-box .open-box .right-box .open-ele {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1948,13 +1982,13 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
 }
-#gw .content-box .open-box .open-ele .month-box {
+#gw .content-box .open-box .right-box .open-ele .month-box {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: fit-content;
 }
-#gw .content-box .open-box .open-ele .month-box .num {
+#gw .content-box .open-box .right-box .open-ele .month-box .num {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -1964,7 +1998,7 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .month-box .unit {
+#gw .content-box .open-box .right-box .open-ele .month-box .unit {
   display: block;
   margin-left: 0.2rem;
   margin-bottom: 0.05rem;
@@ -1976,14 +2010,14 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .date-box {
+#gw .content-box .open-box .right-box .open-ele .date-box {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: fit-content;
   margin-left: 5px;
 }
-#gw .content-box .open-box .open-ele .date-box .num {
+#gw .content-box .open-box .right-box .open-ele .date-box .num {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -1993,7 +2027,7 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .date-box .unit {
+#gw .content-box .open-box .right-box .open-ele .date-box .unit {
   display: block;
   margin-left: 0.2rem;
   margin-bottom: 0.05rem;
@@ -2005,7 +2039,7 @@ body::-webkit-scrollbar {
   color: #555;
   transition: all 1.5s ease-in-out;
 }
-#gw .content-box .open-box .open-ele .time {
+#gw .content-box .open-box .right-box .open-ele .time {
   display: block;
   margin-left: 7px;
   margin-bottom: -2px;
@@ -2015,7 +2049,7 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #555;
 }
-#gw .content-box .open-box .open-ele .time > span {
+#gw .content-box .open-box .right-box .open-ele .time > span {
   display: inline-block;
   margin: 0 3px 0;
   font-size: 12px;
