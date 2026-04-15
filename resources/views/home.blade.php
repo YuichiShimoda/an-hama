@@ -466,7 +466,8 @@
                         <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. Pour it.">
                     </div>
                     <div class="label-box">
-                        <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間">
+                        <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
+                        <img class="two-month" src="{{ asset('image/season/period5-6.svg') }}" alt="限定期間">
                     </div>
                     <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
                 </div>
