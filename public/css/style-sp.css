@@ -1750,9 +1750,14 @@ body::-webkit-scrollbar {
     margin-left: -15px;
   }
 }
+@media screen and (max-width: 450px) {
+  #gw .content-box .mid-box .mid-copy {
+    width: 420px;
+  }
+}
 @media screen and (max-width: 400px) {
   #gw .content-box .mid-box .mid-copy {
-    width: 360px;
+    width: 410px;
   }
 }
 #gw .content-box .mid-box .camera {
