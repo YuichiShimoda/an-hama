@@ -354,7 +354,7 @@
             <div class="mid-box">
                 <p>話題の元祖“つけかけパスタ <br>～ dip & pour ～”を体験しませんか？</p>
                 <p>進化し続ける「 新しい名古屋グルメ 」の衝撃を、ぜひその舌で！</p>
-                <div class="camera">
+<!--                 <div class="camera">
                     <img class="lazyload" src="{{ asset('image/gw/camera.svg') }}" alt="カメラ">
                 </div>
                 <div class="lunch">
@@ -368,7 +368,7 @@
                 </div>
                 <div class="car">
                     <img class="lazyload" src="{{ asset('image/gw/car.svg') }}" alt="車">
-                </div>
+                </div> -->
             </div>
             <div class="bottom-box">
                 <p>お一人でじっくり、ご家族・ご友人と賑やかに。</p>
@@ -411,6 +411,8 @@
                 </div>
             </div>
         </div>
+        <img class="circle-left lazyload" src="{{ asset('image/gw/circle.webp') }}" alt="背景">
+        <img class="circle-right lazyload" src="{{ asset('image/gw/circle.webp') }}" alt="背景">
         <!-- <img class="bg-gw lazyload" src="{{ asset('image/gw/bg-gw.webp') }}" alt="新緑"> -->
         <div class="bg-light-box">
             <img class="bg-light lazyload" src="{{ asset('image/gw/bg-awai-gw.webp') }}" alt="新緑">

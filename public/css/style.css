@@ -1328,6 +1328,7 @@ body::-webkit-scrollbar {
   background: #fff;
   transition: top 60s ease-in-out, opacity 1s ease-in-out, z-index 1s ease-in-out, pointer-events 1s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 1200px) {
   #gw {
@@ -1622,6 +1623,7 @@ body::-webkit-scrollbar {
   display: block;
   width: fit-content;
   margin: 20px auto 0;
+  position: relative;
 }
 #gw .content-box .open-box .s-tit {
   display: block;
@@ -1717,6 +1719,36 @@ body::-webkit-scrollbar {
   font-family: "iroha-25icho-stdn", sans-serif;
   letter-spacing: 0.05em;
   color: #555;
+}
+#gw .circle-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-40%, -50%) rotate(45deg);
+  display: block;
+  width: 100vw;
+  opacity: 0.3;
+  z-index: 2;
+}
+@media screen and (max-width: 1000px) {
+  #gw .circle-left {
+    width: 70vw;
+  }
+}
+#gw .circle-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(45%, -50%) rotate(-90deg);
+  display: block;
+  width: 100vw;
+  opacity: 0.1;
+  z-index: 2;
+}
+@media screen and (max-width: 1000px) {
+  #gw .circle-right {
+    width: 70vw;
+  }
 }
 #gw .bg-light-box {
   position: absolute;

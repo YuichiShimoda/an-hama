@@ -1554,6 +1554,7 @@ body::-webkit-scrollbar {
   background: #fff;
   transition: top 60s ease-in-out, opacity 1s ease-in-out, z-index 1s ease-in-out, pointer-events 1s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 @media screen and (max-width: 450px) {
   #gw {
@@ -2022,6 +2023,31 @@ body::-webkit-scrollbar {
   font-family: "iroha-25icho-stdn", sans-serif;
   letter-spacing: 0.05em;
   color: #555;
+}
+#gw .circle-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  transform: translate(-40%, -50%) rotate(45deg);
+  display: block;
+  width: 80vw;
+  opacity: 0.3;
+  z-index: 2;
+}
+@media screen and (max-width: 420px) {
+  #gw .circle-left {
+    top: 65%;
+  }
+}
+#gw .circle-right {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  transform: translate(45%, -50%) rotate(-90deg);
+  display: block;
+  width: 80vw;
+  opacity: 0.1;
+  z-index: 2;
 }
 #gw .bg-light-box {
   position: absolute;
