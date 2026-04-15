@@ -1366,6 +1366,7 @@ body::-webkit-scrollbar
 	&.fired
 		.content-box
 			.top-tit
+				animation: slidingText 8.0s ease-in-out
 				.txt
 					// letter-spacing: 0.1em
 					animation: gwGlow 3.0s 0.0s ease-in-out forwards, gwTit 8.0s ease-in-out
@@ -1684,7 +1685,7 @@ body::-webkit-scrollbar
 				padding: 25px 30px 35px
 			.open-img
 				display: block
-				width: 50px
+				width: 40px
 				transform-origin: top center
 				animation: tilt 1.5s ease-in-out infinite
 			.right-box
@@ -1819,6 +1820,41 @@ body::-webkit-scrollbar
 			object-fit: cover
 			object-position: top center
 			filter: saturate(3.0)
+@keyframes slidingText
+	0%
+		transform: translateX(-100vw) skew(0deg, 0deg)
+	10%
+		transform: translateX(-100vw) skew(0deg, 0deg)
+	11%
+		transform: translateX(-100%) skew(0deg, 0deg)
+	12%
+		transform: skew(0deg, 0deg)
+	13%
+		transform: translateX(7.5px) skew(-35deg, 0deg)
+	13.5%
+		transform: translateX(5px) skew(-25deg, 0deg)
+	14%
+		transform: translateX(2.5px) skew(-15deg, 0deg)
+	14.5%
+		transform: translateX(-2.5px) skew(15deg, 0deg)
+	15%
+		transform: translateX(-5px) skew(25deg, 0deg)
+	15.5%
+		transform: translateX(-2.5px) skew(15deg, 0deg)
+	16%
+		transform: translateX(2.5px) skew(-15deg, 0deg)
+	16.5%
+		transform: translateX(5px) skew(-25deg, 0deg)
+	17%
+		transform: translateX(2.5px) skew(-15deg, 0deg)
+	18%
+		transform: translateX(1px) skew(-7.5deg, 0deg)
+	19%
+		transform: translateX(0px) skew(0deg, 0deg)
+	20%
+		transform: translateX(0px)
+	100%
+		transform: translateX(0px)
 @keyframes gwGlow
 	0%
 		text-shadow: 0 0 0.0em #fff, 0 0 0.0em #ff0, 0 0 0.0em #fff
