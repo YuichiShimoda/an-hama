@@ -966,7 +966,7 @@ body::-webkit-scrollbar
 				font-weight: 400
 				font-size: 32px
 				line-height: 1.0
-				font-family: "miniwa-hv-v3", sans-serif
+				font-family: $miniwa-hv-v3
 				letter-spacing: -0.2em
 				color: #fff
 				opacity: 0.0
@@ -978,7 +978,7 @@ body::-webkit-scrollbar
 				font-weight: 400
 				font-size: 40px
 				line-height: 1.0
-				font-family: "miniwa-hv-v3", sans-serif
+				font-family: $miniwa-hv-v3
 				letter-spacing: -0.2em
 				color: #fff
 				opacity: 0.0
@@ -1018,7 +1018,7 @@ body::-webkit-scrollbar
 					font-weight: 400
 					font-size: 24px
 					line-height: 1.0
-					font-family: "miniwa-hv-v3", sans-serif
+					font-family: $miniwa-hv-v3
 					letter-spacing: 0.05em
 					color: #fff
 					transition: all 1.0s ease-in-out
@@ -1029,7 +1029,7 @@ body::-webkit-scrollbar
 					font-weight: 400
 					font-size: 18px
 					line-height: 1.0
-					font-family: "miniwa-hv-v3", sans-serif
+					font-family: $miniwa-hv-v3
 					letter-spacing: 0.05em
 					color: #fff
 					transition: all 1.0s ease-in-out
@@ -1039,7 +1039,7 @@ body::-webkit-scrollbar
 			font-weight: 400
 			font-size: 18px
 			line-height: 1.0
-			font-family: "miniwa-bd-v3", sans-serif
+			font-family: $miniwa-bd-v3
 			letter-spacing: 0.05em
 			color: #fff
 			opacity: 0.0
@@ -1091,7 +1091,7 @@ body::-webkit-scrollbar
 				font-weight: 400
 				font-size: 18px
 				line-height: 1.0
-				font-family: "miniwa-bd-v3", sans-serif
+				font-family: $miniwa-bd-v3
 				letter-spacing: 0.2em
 				color: #fff
 @keyframes anniversaryTit
@@ -1196,62 +1196,52 @@ body::-webkit-scrollbar
 #gw
 	&.fired
 		.content-box
-			.gw-tit
+			.top-tit
 				.txt
 					// letter-spacing: 0.1em
-					animation: gwGlow 3.0s 2.5s ease-in-out forwards, gwTit 8.0s ease-in-out
+					animation: gwGlow 3.0s 0.0s ease-in-out forwards, gwTit 8.0s ease-in-out
 					transition: all 8.0s ease-in-out
 				.s-txt
 					// letter-spacing: 0.1em
-					animation: gwGlow 3.0s 2.5s ease-in-out forwards, gwTit 8.0s ease-in-out
+					animation: gwGlow 3.0s 0.0s ease-in-out forwards, gwTit 8.0s ease-in-out
 					transition: all 8.0s ease-in-out
-				// .thanks-box
-				// 	animation: thanks 3.5s ease-in-out infinite
-			.date-box
-				.date-ele
-					.item-box
-						opacity: 1.0
-						filter: blur(0px)
-						transform: translate(0, 0%)
-						transition: all 1.5s 1.1s ease-in-out
-					.num, .unit
-						animation: gwDateGlow 4.0s 1.5s ease-in-out forwards
-			// .gratitude
-			// 	opacity: 1.0
-			// 	animation: gwGlow 4.0s 2.5s ease-in-out forwards
-			// 	transition: opacity 1.0s 0.5s ease-in-out forwards, animation 4.0s 0.5s ease-in-out
-			// .movie-btn
-			// 	animation: pulse 2.5s ease-out infinite
-			// 	&:before
-			// 		width: 100%
-			// 		height: 100%
-			// 		visibility: visible
-			// 		animation: borderDraw 4.0s linear infinite
-			// 	&:after
-			// 		width: 100%
-			// 		height: 100%
-			// 		visibility: visible
-			// 		animation: borderDraw 4.0s 2.0s linear infinite
-		.bg-gw
-			animation: bgImage 8.0s ease-in-out
-		.bg-light
-			animation: bgLight 8.0s ease-in-out
+			.mid-box
+				.camera
+					transform: scale(1.0) translateY(0)
+					> img
+						animation: tilt 1.3s ease-in-out infinite
+				.lunch
+					transform: scale(1.0) translateY(0)
+					> img
+						animation: tilt 1.6s ease-in-out infinite
+				.sun
+					transform: scale(1.0) translateY(0)
+					> img
+						animation: tilt 2.0s ease-in-out infinite
+				.rainbow
+					transform: scale(1.0) translateY(0)
+					> img
+						animation: tilt 1.5s ease-in-out infinite
+				.car
+					transform: scale(1.0) translateY(0)
+					> img
+						animation: tilt 2.5s ease-in-out infinite
 	display: block
 	width: 100vw
-	height: 420px
+	height: 620px
 	opacity: 1.0
-	// background: #0c561e
-	// background: #26a3db
-	background: #B92928
+	background: #fff
 	// pointer-events: none
 	transition: top 60.0s ease-in-out, opacity 1.0s ease-in-out, z-index 1.0s ease-in-out, pointer-events 1.0s ease-in-out
 	position: relative
 	@media screen and (max-width: 1200px)
-		height: 380px
+		height: 580px
+	@media screen and (max-width: 1000px)
+		height: 480px
 	@media screen and (max-width: 850px)
-		height: 340px
+		height: 460px
 	@media screen and (max-width: 750px)
-		height: 300px
+		height: 440px
 	.content-box
 		position: absolute
 		top: 0
@@ -1275,197 +1265,273 @@ body::-webkit-scrollbar
 			transform: scale(1.0)
 		@media screen and (max-width: 380px)
 			transform: scale(0.9)
-		.gw-tit
+		.top-tit
 			display: flex
 			justify-content: center
 			align-items: center
-			width: 400px
+			flex-direction: column
+			width: fit-content
 			position: relative
-			margin-bottom: 20px
-			.txt
-				display: block
-				font-weight: 400
-				font-size: 24px
-				line-height: 1.0
-				font-family: "miniwa-hv-v3", sans-serif
-				letter-spacing: 0.05em
-				color: #444
-				opacity: 0.0
-				will-change: transform, opacity
-			.s-txt
-				display: block
-				margin-left: 0.4em
-				margin-right: 0.3em
-				margin-bottom: -0.15em
-				font-weight: 400
-				font-size: 20px
-				line-height: 1.0
-				font-family: "miniwa-hv-v3", sans-serif
-				letter-spacing: 0.05em
-				color: #444
-				opacity: 0.0
-				will-change: transform, opacity
-			// .one
-			// 	display: inline
-			// 	margin-left: 0.2rem
-			// 	margin-right: 0.2rem
-			// 	font-weight: 400
-			// 	font-size: 40px
-			// 	line-height: 1.0
-			// 	font-family: "miniwa-hv-v3", sans-serif
-			// 	letter-spacing: 0.05em
-			// 	color: #555
-			// 	// opacity: 0.0
-			// 	will-change: transform, opacity
-			// .thanks-box
-			// 	position: absolute
-			// 	top: -20px
-			// 	left: -25px
-			// 	display: block
-			// 	width: 90px
-			// 	.thanks
-			// 		display: block
-			// 		width: 100%
-			// 		transform-origin: left center
-			// 		transform: rotate(-5deg)
-		.date-box
+			.first-line
+				display: flex
+				justify-content: center
+				align-items: center
+				.txt
+					display: block
+					font-weight: 400
+					font-size: 24px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.05em
+					white-space: nowrap
+					color: #333
+					opacity: 0.0
+					will-change: transform, opacity
+					transition: all 1.5s 0.0s ease-in-out
+				.s-txt
+					display: block
+					margin-left: 0.4em
+					margin-right: 0.3em
+					margin-bottom: -0.15em
+					font-weight: 400
+					font-size: 20px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.05em
+					white-space: nowrap
+					color: #333
+					opacity: 0.0
+					will-change: transform, opacity
+					transition: all 1.5s 0.0s ease-in-out
+					&:nth-of-tupe(2)
+						margin-left: 0.1em
+					&:last-child
+						margin-right: 0
+			.second-line
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-top: 15px
+				.txt
+					display: block
+					font-weight: 400
+					font-size: 24px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.05em
+					white-space: nowrap
+					color: #333
+					opacity: 0.0
+					will-change: transform, opacity
+					transition: all 1.5s 0.0s ease-in-out
+				.s-txt
+					display: block
+					margin-left: -0.5em
+					margin-right: 0.4em
+					margin-bottom: -0.15em
+					font-weight: 400
+					font-size: 20px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.05em
+					white-space: nowrap
+					color: #333
+					opacity: 0.0
+					will-change: transform, opacity
+					transition: all 1.5s 0.0s ease-in-out
+		.mid-box
 			display: flex
-			justify-content: center
+			justify-content: flex-start
 			align-items: center
-			flex-wrap: wrap
-			width: 340px
-			.date-ele
+			flex-direction: column
+			width: fit-content
+			margin: 40px auto 0
+			position: relative
+			@media screen and (max-width: 1000px)
+				margin: 30px auto 0
+			> p
+				display: block
+				font-weight: 400
+				font-size: 14px
+				line-height: 2.0
+				font-family: $miniwa-bd-v3
+				letter-spacing: 0.05em
+				white-space: nowrap
+				color: #B92928
+				// text-shadow: 0 0 0.3em #000, 0 0 1.5em #ff0, 0 0 5.0em #000
+				br
+					display: none
+			.camera
+				position: absolute
+				top: -20px
+				left: -120px
+				display: block
+				width: 60px
+				transform: scale(0.0) translateY(100%)
+				transition: transform 0.4s cubic-bezier(0.34, 2.56, 0.64, 1)
+				@media screen and (max-width: 1200px)
+					left: -100px
+				@media screen and (max-width: 750px)
+					left: -80px
+			.lunch
+				position: absolute
+				top: 70px
+				left: -170px
+				display: block
+				width: 50px
+				transform: scale(0.0) translateY(100%)
+				transition: transform 0.4s 0.1s cubic-bezier(0.34, 2.56, 0.64, 1)
+				@media screen and (max-width: 1200px)
+					left: -150px
+				@media screen and (max-width: 850px)
+					left: -120px
+				@media screen and (max-width: 750px)
+					left: -100px
+			.sun
+				position: absolute
+				top: 100px
+				left: -80px
+				display: block
+				width: 50px
+				transform: scale(0.0) translateY(100%)
+				transition: transform 0.4s 0.2s cubic-bezier(0.34, 2.56, 0.64, 1)
+				@media screen and (max-width: 1200px)
+					left: -60px
+				@media screen and (max-width: 850px)
+					left: -40px
+				@media screen and (max-width: 750px)
+					left: -20px
+			.rainbow
+				position: absolute
+				top: 0px
+				right: -120px
+				display: block
+				width: 75px
+				transform: scale(0.0) translateY(100%)
+				transition: transform 0.4s cubic-bezier(0.34, 2.56, 0.64, 1)
+				@media screen and (max-width: 1200px)
+					right: -100px
+				@media screen and (max-width: 850px)
+					right: -90px
+			.car
+				position: absolute
+				top: 110px
+				right: -90px
+				display: block
+				width: 60px
+				transform: scale(0.0) translateY(100%)
+				transition: transform 0.4s 0.15s cubic-bezier(0.34, 2.56, 0.64, 1)
+				@media screen and (max-width: 1200px)
+					right: -70px
+				@media screen and (max-width: 850px)
+					right: -40px
+		.bottom-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			margin: 20px auto 0
+			> p
+				display: block
+				font-weight: 400
+				font-size: 10px
+				line-height: 1.7
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				white-space: nowrap
+				color: #555
+				// text-shadow: 0 0 0.3em #000, 0 0 1.5em #ff0, 0 0 5.0em #000
+		.open-box
+			display: block
+			width: fit-content
+			margin: 20px auto 0
+			.s-tit
+				display: block
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.5
+				font-family: $miniwa-hv-v3
+				letter-spacing: 0.2em
+				text-align: center
+				color: #B92928
+			.open-ele
 				display: flex
 				justify-content: center
 				align-items: center
 				width: fit-content
+				margin-top: 5px
 				overflow: hidden
 				position: relative
-				&:nth-of-type(1)
-					margin-right: 20px
-					.item-box
-						transition: all 1.5s 0.0s ease-in-out
-				&:nth-of-type(2)
-					.item-box
-						transition: all 1.5s 0.2s ease-in-out
-				&:nth-of-type(3)
-					margin-top: 10px
-					margin-right: 20px
-					.item-box
-						transition: all 1.5s 0.4s ease-in-out
-				&:nth-of-type(4)
-					margin-top: 10px
-					.item-box
-						transition: all 1.5s 0.6s ease-in-out
-				.item-box
+				.month-box
 					display: flex
 					justify-content: center
 					align-items: flex-end
 					width: fit-content
-					transform: translate(0, 220%)
-					opacity: 0.0
-					filter: blur(20px)
-					// transition: all 1.0s ease-in-out
-					&:nth-of-type(2)
-						margin-left: 0.3em
-						.unit
-							letter-spacing: -0.1em
 					.num
 						display: block
 						font-weight: 400
-						font-size: 20px
+						font-size: 14px
 						line-height: 1.0
-						font-family: "miniwa-hv-v3", sans-serif
+						font-family: $iroha-25icho-stdn
 						letter-spacing: 0.0em
 						color: #555
-						transition: all 1.0s ease-in-out
+						transition: all 1.5s ease-in-out
 					.unit
 						display: block
 						margin-left: 0.2rem
 						margin-bottom: 0.05rem
 						font-weight: 400
-						font-size: 16px
+						font-size: 10px
 						line-height: 1.0
-						font-family: "miniwa-hv-v3", sans-serif
+						font-family: $iroha-25icho-stdn
 						letter-spacing: 0.05em
 						color: #555
-						transition: all 1.0s ease-in-out
-		// .gratitude
-		// 	display: block
-		// 	margin-top: 30px
-		// 	font-weight: 400
-		// 	font-size: 18px
-		// 	line-height: 1.0
-		// 	font-family: "miniwa-bd-v3", sans-serif
-		// 	letter-spacing: 0.05em
-		// 	color: #fff
-		// 	opacity: 0.0
-		// 	transition: all 1.0s ease-in-out
-		// 	will-change: opacity
-		// .movie-btn
-		// 	position: relative
-		// 	display: flex
-		// 	justify-content: center
-		// 	align-items: center
-		// 	width: fit-content
-		// 	padding: 20px 50px
-		// 	margin-top: 20px
-		// 	border: solid 1px  rgba(#ff0, 0.8)
-		// 	cursor: pointer
-		// 	transform: scale(0.625)
-		// 	@media screen and (max-width: 1400px)
-		// 		transform: scale(0.77)
-		// 	@media screen and (max-width: 1000px)
-		// 		transform: scale(0.8)
-		// 	@media screen and (max-width: 500px)
-		// 		padding: 22px 70px
-		// 		margin-top: 30px
-		// 		transform: scale(0.8)
-		// 	&:before
-		// 		position: absolute
-		// 		top: 0
-		// 		left: 0
-		// 		content: ""
-		// 		width: 0%
-		// 		height: 0%
-		// 		border-top: solid 1px #fff
-		// 		border-right: solid 1px #fff
-		// 		border-radius: 2px
-		// 		visibility: hidden
-		// 	&:after
-		// 		position: absolute
-		// 		right: 0
-		// 		bottom: 0
-		// 		content: ""
-		// 		width: 0%
-		// 		height: 0%
-		// 		border-left: solid 1px #fff
-		// 		border-bottom: solid 1px #fff
-		// 		border-radius: 2px
-		// 		visibility: hidden
-		// 	> p
-		// 		display: block
-		// 		font-weight: 400
-		// 		font-size: 18px
-		// 		line-height: 1.0
-		// 		font-family: "miniwa-bd-v3", sans-serif
-		// 		letter-spacing: 0.2em
-		// 		color: #fff
-	.bg-gw
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		margin: auto
-		display: none
-		width: 100%
-		height: 100%
-		object-fit: cover
-		object-position: top center
-		mix-blend-mode: hard-light
-		opacity: 0.9
-		z-index: 2
-	.bg-light
+						transition: all 1.5s ease-in-out
+				.date-box
+					display: flex
+					justify-content: center
+					align-items: flex-end
+					width: fit-content
+					margin-left: 5px
+					.num
+						display: block
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.0em
+						color: #555
+						transition: all 1.5s ease-in-out
+					.unit
+						display: block
+						margin-left: 0.2rem
+						margin-bottom: 0.05rem
+						font-weight: 400
+						font-size: 10px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: -0.1em
+						color: #555
+						transition: all 1.5s ease-in-out
+				.time
+					display: block
+					margin-left: 7px
+					margin-bottom: -2px
+					font-size: 12px
+					line-height: 1.0
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #555
+					> span
+						display: inline-block
+						margin: 0 3px 0
+						font-size: 12px
+						line-height: 1.0
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #555
+	.bg-light-box
 		position: absolute
 		top: 0
 		left: 0
@@ -1474,10 +1540,19 @@ body::-webkit-scrollbar
 		display: block
 		width: 100%
 		height: 100%
-		object-fit: cover
-		object-position: -5% center
-		opacity: 0.4
 		z-index: 1
+		&:after
+			content: ""
+			position: absolute
+			inset: 0
+			background: linear-gradient(to bottom, rgba(#fff, 0.3), rgba(#fff, 1.0) 60%)
+			pointer-events: none
+		.bg-light
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: top center
 @keyframes gwGlow
 	0%
 		text-shadow: 0 0 0.0em #fff, 0 0 0.0em #ff0, 0 0 0.0em #fff
@@ -1485,13 +1560,6 @@ body::-webkit-scrollbar
 		text-shadow: 0 0 0.3em #fff, 0 0 1.0em #ff0, 0 0 3.0em #fff
 	100%
 		text-shadow: 0 0 0.3em #fff, 0 0 1.5em #ff0, 0 0 5.0em #fff
-@keyframes gwDateGlow
-	0%
-		text-shadow: 0 0 0.0em #fff, 0 0 0.0em #ff0, 0 0 0.0em #fff
-	30%
-		text-shadow: 0 0 0.01em #fff, 0 0 0.03em #ff0, 0 0 0.08em #fff
-	100%
-		text-shadow: 0 0 0.05em #fff, 0 0 0.05em #ff0, 0 0 0.2em #fff
 @keyframes pulse
 	0%
 		box-shadow: 0 0 0 0 rgba(#fff, 0.4)
@@ -1510,29 +1578,13 @@ body::-webkit-scrollbar
 	100%
 		opacity: 0.0
 		transform: scaleX(1.1)
-@keyframes bgImage
+@keyframes tilt
 	0%
-		opacity: 0.9
-	10%
-		opacity: 0.9
-	30%
-		opacity: 1.0
-	95%
-		opacity: 1.0
-	100%
-		opacity: 0.9
-@keyframes bgLight
-	0%
-		opacity: 0.4
-	10%
-		opacity: 0.4
+		transform: rotate(-4deg)
 	50%
-		opacity: 1.0
-	85%
-		opacity: 1.0
+		transform: rotate(4deg)
 	100%
-		opacity: 0.4
-
+		transform: rotate(-4deg)
 
 
 
