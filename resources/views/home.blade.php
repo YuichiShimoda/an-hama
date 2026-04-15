@@ -472,22 +472,22 @@
                         <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. Pour it.">
                     </div>
                     <div class="label-box">
-                        <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
-                        <img class="two-month" src="{{ asset('image/season/period5-6.svg') }}" alt="限定期間">
+                        <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間">
+                        <!-- <img class="two-month" src="{{ asset('image/season/period5-6.svg') }}" alt="限定期間"> -->
                     </div>
                     <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
                 </div>
                 <div class="right-box">
                     <div class="img-box">
-                        <!-- <img class="dish" src="{{ asset('image/season/season3-4.webp') }}" alt="あさりと桜えびのつけかけパスタ"> -->
-                        <img class="dish" src="{{ asset('image/season/season5-6.webp') }}" alt="しらすとアスパラガスのつけかけパスタ">
+                        <img class="dish" src="{{ asset('image/season/season3-4.webp') }}" alt="あさりと桜えびのつけかけパスタ">
+                        <!-- <img class="dish" src="{{ asset('image/season/season5-6.webp') }}" alt="しらすとアスパラガスのつけかけパスタ"> -->
                     </div>
                 </div>
                 <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
             </div>
             <div class="desc-box">
-                <!-- <h2 class="ingredient">旬の食材　：　「 あさり 」「 桜えび 」</h2> -->
-                <h2 class="ingredient">旬の食材　：　「 しらす 」「 アスパラガス 」</h2>
+                <h2 class="ingredient">旬の食材　：　「 あさり 」「 桜えび 」</h2>
+                <!-- <h2 class="ingredient">旬の食材　：　「 しらす 」「 アスパラガス 」</h2> -->
                 <div class="info-box">
                     <div class="tit-box">
                         <div class="period-box">
