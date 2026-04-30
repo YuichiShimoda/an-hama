@@ -2100,7 +2100,15 @@ body::-webkit-scrollbar {
   display: block;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 90%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 90%);
+}
+@media screen and (max-width: 450px) {
+  #gw .bg-light-box {
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.9) 90%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.9) 90%);
+  }
 }
 #gw .bg-light-box:after {
   content: "";
@@ -2223,7 +2231,7 @@ body::-webkit-scrollbar {
   display: block;
   padding: 60px 0 30px;
   width: 100%;
-  background: url("../image/season/season-bg_3-4.webp");
+  background: url("../image/season/season-bg_5-6.webp");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
