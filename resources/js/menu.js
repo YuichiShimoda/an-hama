@@ -782,6 +782,7 @@ gsap.to("#topping", {
 	}
 });
 $('#topping').on('click',function() {
+	console.log("test");
 	$("#weekly-modal").find('.md-overlay,.md-contents').fadeIn();
 });
 

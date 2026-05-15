@@ -475,7 +475,7 @@
   top: 15px;
   right: 20px;
   display: block;
-  width: 40px;
+  width: 50px;
   pointer-events: initial;
   -webkit-user-select: initial;
   -moz-touch-callout: initial;
@@ -483,9 +483,19 @@
   user-select: initial;
   transition: all 0.3s ease-in-out;
 }
+@media screen and (max-width: 1000px) {
+  .md-contents > .md-inner > .close_btn {
+    width: 45px;
+  }
+}
 @media screen and (max-width: 450px) {
   .md-contents > .md-inner > .close_btn {
-    width: 30px;
+    width: 42px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .md-contents > .md-inner > .close_btn {
+    width: 40px;
   }
 }
 .md-contents > .md-inner > .close_btn:hover {
