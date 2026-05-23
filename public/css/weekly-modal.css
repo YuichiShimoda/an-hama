@@ -470,7 +470,7 @@
     margin: 7px auto 0;
   }
 }
-.md-contents > .md-inner > .close_btn {
+.md-contents > .close_btn {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -484,21 +484,21 @@
   transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 1000px) {
-  .md-contents > .md-inner > .close_btn {
+  .md-contents > .close_btn {
     width: 45px;
   }
 }
 @media screen and (max-width: 450px) {
-  .md-contents > .md-inner > .close_btn {
+  .md-contents > .close_btn {
     width: 42px;
   }
 }
 @media screen and (max-width: 400px) {
-  .md-contents > .md-inner > .close_btn {
+  .md-contents > .close_btn {
     width: 40px;
   }
 }
-.md-contents > .md-inner > .close_btn:hover {
+.md-contents > .close_btn.close_btn:hover {
   opacity: 0.5;
 }
 

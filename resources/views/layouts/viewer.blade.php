@@ -181,8 +181,8 @@
 									<div class="pr-body">{!! nl2br(e($pressRelease['body'])) !!}</div>
 								</div>
 							@endif
-							<img loading="lazy" class="close_btn weekly-modal-close" src="{{ asset('image/close-btn.svg') }}" alt="close">
 						</div>
+						<img loading="lazy" class="close_btn weekly-modal-close" src="{{ asset('image/close-btn.svg') }}" alt="close">
 					</div>
 				</div>
 			@endif
