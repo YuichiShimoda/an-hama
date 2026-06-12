@@ -6,7 +6,7 @@ $morfin: "morfin", sans-serif // 400
 $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 $rift: "rift", sans-serif // 400, 700
 $shalimar: "Shalimar", serif // 400
-
+$zen-maru-gothic: "Zen Maru Gothic", sans-serif // 500, 700
 
 
 @mixin bp1600
@@ -841,6 +841,50 @@ body::-webkit-scrollbar
 	+bp1100
 		right: 30px
 		bottom: 20px
+#broadcast
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 67vw
+	aspect-ratio: 16 / 9
+	border-radius: 20px
+	background: #f0f0f0
+	opacity: 0.0
+	transform-origin: center
+	transform: scale(0.0)
+	transition: all 1.0s ease-in-out
+	z-index: 2000
+	&.is-show
+		opacity: 1.0
+		transform: scale(1.0)
+#location
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 330px
+	aspect-ratio: 9 / 16
+	border-radius: 20px
+	background: #f0f0f0
+	opacity: 0.0
+	transform-origin: center
+	transform: scale(0.0)
+	transition: all 1.0s ease-in-out
+	z-index: 2000
+	&.is-show
+		opacity: 1.0
+		transform: scale(1.0)
 
 
 
@@ -1671,6 +1715,504 @@ body::-webkit-scrollbar
 		transform: rotate(-4deg)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#mezamashi
+	display: block
+	padding: 180px 0 200px
+	width: 100%
+	background: url("../image/mezamashi/bg.webp")
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat
+	// +bp1400
+	// 	padding: 100px 0 30px
+	// +bp1200
+	// 	padding: 100px 0 10px
+	// +bp850
+	// 	padding: 80px 0 20px
+	// +bp750
+	// 	padding: 90px 0 40px
+	.content-box
+		display: block
+		width: 100%
+		.tit-box
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			margin: 0 auto
+			position: relative
+			.left-img
+				display: block
+				width: 240px
+				animation: heartBeat 6.0s infinite ease
+			.right-box
+				display: block
+				width: fit-content
+				margin-left: 50px
+				.top-txt
+					display: block
+					font-weight: 500
+					font-size: 24px
+					line-height: 1.0
+					font-family: $zen-maru-gothic
+					letter-spacing: 0.05em
+					color: #fff
+					text-shadow: 0px 2px 2px rgba(#000, 0.5)
+					.date-box
+						display: inline-block
+						margin-left: 1.0rem
+						margin-right: 0.5rem
+						font-weight: 500
+						font-size: 24px
+						line-height: 1.0
+						font-family: $zen-maru-gothic
+						letter-spacing: 0.05em
+						color: #fff
+						text-shadow: 0px 2px 2px rgba(#000, 0.5)
+						.year
+							display: inline
+							margin: 0 0.4rem 0 0.2rem
+							font-weight: 500
+							font-size: 20px
+							line-height: 1.0
+							font-family: $zen-maru-gothic
+							letter-spacing: 0.05em
+							color: #fff
+							text-shadow: 0px 2px 2px rgba(#000, 0.5)
+						.month
+							display: inline
+							margin: 0 0.4rem 0 0.2rem
+							font-weight: 500
+							font-size: 20px
+							line-height: 1.0
+							font-family: $zen-maru-gothic
+							letter-spacing: 0.05em
+							color: #fff
+							text-shadow: 0px 2px 2px rgba(#000, 0.5)
+						.day
+							display: inline
+							margin: 0 0 0 0.2rem
+							font-weight: 500
+							font-size: 20px
+							line-height: 1.0
+							font-family: $zen-maru-gothic
+							letter-spacing: 0.05em
+							color: #fff
+							text-shadow: 0px 2px 2px rgba(#000, 0.5)
+				.mid-txt
+					display: block
+					margin-top: 13px
+					font-weight: 500
+					font-size: 24px
+					line-height: 1.0
+					font-family: $zen-maru-gothic
+					letter-spacing: 0.05em
+					color: #fff
+					text-shadow: 0px 2px 2px rgba(#000, 0.5)
+					.program
+						display: inline-block
+						width: fit-content
+						padding: 10px 15px
+						margin-right: 15px
+						border: solid 1px #fff
+						background-color: #FD710E
+						font-weight: 700
+						font-size: 24px
+						line-height: 1.0
+						font-family: $zen-maru-gothic
+						letter-spacing: 0.05em
+						color: #fff
+						box-shadow: 5px 5px 0px #fff
+				.bottom-txt
+					display: block
+					margin-top: 15px
+					font-weight: 500
+					font-size: 24px
+					line-height: 1.0
+					font-family: $zen-maru-gothic
+					letter-spacing: 0.05em
+					color: #fff
+					text-shadow: 0px 2px 2px rgba(#000, 0.5)
+			.clock-left
+				position: absolute
+				top: -50%
+				left: -30%
+				display: block
+				width: 100px
+				opacity: 0.8
+				animation: floatingLeft 6.0s ease-in-out alternate infinite
+			.clock-right
+				position: absolute
+				top: -3%
+				right: -35%
+				display: block
+				width: 185px
+				animation: floatingRight 4.5s ease-in-out alternate infinite
+		.location-box
+			display: block
+			width: fit-content
+			margin: 60px auto 0
+			position: relative
+			.location-ele
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 200px
+				aspect-ratio: 1 / 1
+				border-radius: 20px
+				box-shadow: 5px 5px 7px rgba(#000, 0.25)
+				position: relative
+				overflow: hidden
+				transition: all 1.0s ease-in-out
+				&:not(:nth-of-type(4)):hover
+					top: -30px !important
+					transform: rotate(0deg) !important
+					z-index: 20
+				&:nth-of-type(1)
+					position: absolute
+					top: 26%
+					left: -240%
+					transform: rotate(-12deg)
+					z-index: 16
+					.inside-box
+						.vignetting
+							background: radial-gradient(50% 50% at 50% 50%, rgba(#FF8F40, 0.0) 75%, #FF8F40 100%)
+				&:nth-of-type(2)
+					position: absolute
+					top: 12%
+					left: -160%
+					transform: rotate(-8deg)
+					z-index: 15
+					.inside-box
+						.vignetting
+							background: radial-gradient(50% 50% at 50% 50%, rgba(#25CAB3, 0.0) 75%, #25CAB3 100%)
+				&:nth-of-type(3)
+					position: absolute
+					top: 3%
+					left: -80%
+					transform: rotate(-4deg)
+					z-index: 14
+					.inside-box
+						.vignetting
+							background: radial-gradient(50% 50% at 50% 50%, rgba(#FF4C00, 0.0) 75%, #FF4C00 100%)
+				&:nth-of-type(4)
+					z-index: 13
+					.inside-box
+						.vignetting
+							background: radial-gradient(50% 50% at 50% 50%, rgba(#FF7EB9, 0.0) 75%, #FF7EB9 100%)
+					&:hover
+						transform: translateY(-30px)
+						z-index: 20
+				&:nth-of-type(5)
+					position: absolute
+					top: 3%
+					right: -80%
+					transform: rotate(4deg)
+					z-index: 12
+					.inside-box
+						.vignetting
+							background: radial-gradient(50% 50% at 50% 50%, rgba(#FF4668, 0.0) 75%, #FF4668 100%)
+				&:nth-of-type(6)
+					position: absolute
+					top: 12%
+					right: -160%
+					transform: rotate(8deg)
+					z-index: 11
+					.inside-box
+						.vignetting
+							background: radial-gradient(50% 50% at 50% 50%, rgba(#79CF4B, 0.0) 75%, #79CF4B 100%)
+				&:nth-of-type(7)
+					position: absolute
+					top: 26%
+					right: -240%
+					transform: rotate(12deg)
+					z-index: 10
+					.inside-box
+						.vignetting
+							background: radial-gradient(50% 50% at 50% 50%, rgba(#FF7D00, 0.0) 75%, #FF7D00 100%)
+				.inside-box
+					display: block
+					width: 100%
+					height: 100%
+					position: relative
+					&:hover
+						.vignetting
+							opacity: 0.0
+						.cut
+							opacity: 0.0
+							clip-path: circle(0% at 50% 50%)
+					.vignetting
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						margin: auto
+						display: block
+						width: 100%
+						height: 100%
+						opacity: 1.0
+						z-index: 2
+						transition: all 0.7s 0.2s ease-in-out
+					.cut
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						object-fit: cover
+						object-position: center
+						opacity: 1.0
+						clip-path: circle(75% at 50% 50%)
+						z-index: 1
+						transition: all 1.0s 0.2s ease-in-out
+					.short-movie
+						display: block
+						width: 100%
+						height: 100%
+						object-fit: cover
+						object-position: center
+			.en
+				position: absolute
+				top: 80%
+				left: -275%
+				display: block
+				font-weight: 400
+				font-size: 230px
+				line-height: 0.8
+				font-family: $shalimar
+				letter-spacing: 0.05em
+				color: #eee
+				transform: rotate(-5deg)
+				z-index: 20
+				pointer-events: none
+		.desc-box
+			display: block
+			width: fit-content
+			margin: 110px auto 0
+			> p
+				display: block
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.7
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				text-align: center
+				color: #fff
+		.collection-box
+			display: flex
+			justify-content: center
+			align-items: flex-end
+			width: fit-content
+			margin: 80px auto 0
+			.sign-box
+				display: block
+				width: fit-content
+				padding: 30px 45px
+				border-radius: 10px
+				background: url("../image/base-bg.png")
+				background-size: cover
+				background-position: center top
+				background-repeat: no-repeat
+				position: relative
+				box-shadow: 10px 10px 20px rgba(#c00,0.5)
+				.head-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					z-index: 2
+					.abe
+						display: block
+						width: 120px
+					> p
+						display: block
+						width: fit-content
+						margin-left: 11px
+						font-weight: 500
+						font-size: 16px
+						line-height: 1.0
+						font-family: $zen-maru-gothic
+						letter-spacing: 0.05em
+						color: #777
+				.role-box
+					display: block
+					width: fit-content
+					margin-top: 15px
+					z-index: 2
+					position: relative
+					> p
+						display: block
+						font-weight: 400
+						font-size: 12px
+						line-height: 1.7
+						font-family: $iroha-25icho-stdn
+						letter-spacing: 0.05em
+						color: #777
+				> h2
+					display: block
+					width: fit-content
+					margin-top: 15px
+					font-weight: 400
+					font-size: 12px
+					line-height: 1.7
+					font-family: $iroha-25icho-stdn
+					letter-spacing: 0.05em
+					color: #777
+					z-index: 2
+					position: relative
+				.big-en
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: fit-content
+					font-weight: 400
+					font-size: 90px
+					line-height: 1.0
+					font-family: $miniwa-hv-v3
+					letter-spacing: 0.05em
+					color: rgba(#999, 0.2)
+					z-index: 1
+				.colored-paper
+					position: absolute
+					top: -35px
+					right: -35px
+					display: block
+					width: 105px
+					z-index: 3
+			.tv-box
+				display: block
+				width: 250px
+				margin-left: 60px
+				position: relative
+				z-index: 1100
+				.monitor-box
+					position: absolute
+					top: 28%
+					left: 7%
+					display: block
+					width: 69%
+					height: 60%
+					z-index: 10
+					.play-icon
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						margin: auto
+						display: block
+						width: 50px
+						aspect-ratio: 1 / 1
+						background-color: #fff
+						border-radius: 50%
+						z-index: 2
+					.loop-movie
+						display: block
+						width: 100%
+						height: 100%
+						border-radius: 23px
+						object-fit: cover
+						object-position: center
+				.icon
+					display: block
+					width: 100%
+			.phone-box
+				display: block
+				width: 130px
+				margin-left: 50px
+				position: relative
+				z-index: 1100
+				.play-icon
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					display: block
+					width: 50px
+					aspect-ratio: 1 / 1
+					background-color: #fff
+					border-radius: 50%
+					z-index: 2
+				.loop-movie
+					position: absolute
+					top: 4%
+					left: 7%
+					display: block
+					width: 86%
+					height: 92%
+					border-radius: 15px
+					object-fit: cover
+					object-position: center
+					z-index: 1
+				.icon
+					display: block
+					width: 100%
+			.screenshot
+				display: block
+				width: 300px
+				border-radius: 10px
+				margin-left: 60px
+				box-shadow: 10px 10px 20px rgba(#c00,0.5)
+@keyframes heartBeat
+	0%
+		transform: scale(1.0)
+	3.34%
+		transform: scale(1.2)
+	4.66%
+		transform: scale(1.0)
+	6.66%
+		transform: scale(1.2)
+	15%
+		transform: scale(1.0)
+	100%
+		transform: scale(1.0)
+@keyframes floatingLeft
+	0%
+		transform: translateY(30%) rotate3d(0,0,1,5deg)
+	100%
+		transform: translateY(-30%) rotate3d(0,0,1,-15deg)
+@keyframes floatingRight
+	0%
+		transform: translateY(10%) rotate3d(0,0,1,15deg)
+	100%
+		transform: translateY(-40%) rotate3d(0,0,0.7,-5deg)
 
 
 

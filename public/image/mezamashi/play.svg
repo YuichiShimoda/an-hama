@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608.17 608.17">
+  <defs>
+    <linearGradient id="myGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff2928" />
+        <stop offset="100%" stop-color="#EC9B39" />
+    </linearGradient>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <path fill="url(#myGradient)" d="M304.09,0C136.41,0,0,136.41,0,304.08s136.41,304.09,304.09,304.09,304.09-136.41,304.09-304.09S471.76,0,304.09,0ZM240.84,434.76V173.4l195.08,130.68-195.08,130.68Z"/>
+  </g>
+</svg>

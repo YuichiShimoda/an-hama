@@ -112,6 +112,8 @@
         </section>
         <div id="movie" class="" data-initial-upload="{{ $movie->filename }}"></div>
     @endif
+    <div id="broadcast"></div>
+    <div id="location"></div>
 @stop
 
 
@@ -280,7 +282,122 @@
 
 
 
-
+    <section id="mezamashi">
+        <div class="content-box">
+            <div class="tit-box">
+                <img class="left-img lazyload" data-src="{{ asset('image/mezamashi/nationwide.webp') }}" alt="全国放送">
+                <div class="right-box">
+                    <div class="top-txt">フジテレビ<div class="date-box">2026<span class="year">年</span>6<span class="month">月</span>13<span class="day">日</span></div>放送</div>
+                    <h2 class="mid-txt"><div class="program">めざましどよう</div>の名古屋特集</h2>
+                    <h1 class="bottom-txt">あんかけハマちゃんが紹介されました</h1>
+                </div>
+                <img class="clock-left lazyload" data-src="{{ asset('image/mezamashi/clock-left.webp') }}" alt="時計">
+                <img class="clock-right lazyload" data-src="{{ asset('image/mezamashi/clock-right.webp') }}" alt="時計">
+            </div>
+            <div class="location-box">
+                <div class="location-ele">
+                    <div class="inside-box">
+                        <div class="vignetting"></div>
+                        <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location1.webp') }}" alt="撮影カット1">
+                        <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location1.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="location-ele">
+                    <div class="inside-box">
+                        <div class="vignetting"></div>
+                        <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location2.webp') }}" alt="撮影カット2">
+                        <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location2.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="location-ele">
+                    <div class="inside-box">
+                        <div class="vignetting"></div>
+                        <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location3.webp') }}" alt="撮影カット3">
+                        <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location3.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="location-ele fixed">
+                    <div class="inside-box">
+                        <div class="vignetting"></div>
+                        <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location4.webp') }}" alt="撮影カット4">
+                        <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location4.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="location-ele">
+                    <div class="inside-box">
+                        <div class="vignetting"></div>
+                        <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location5.webp') }}" alt="撮影カット5">
+                        <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location5.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="location-ele">
+                    <div class="inside-box">
+                        <div class="vignetting"></div>
+                        <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location6.webp') }}" alt="撮影カット6">
+                        <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location6.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="location-ele">
+                    <div class="inside-box">
+                        <div class="vignetting"></div>
+                        <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location7.webp') }}" alt="撮影カット7">
+                        <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location7.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <p class="en">Media</p>
+            </div>
+            <div class="desc-box">
+                <p>スタッフ一同、とても楽しい時間を過ごさせていただきました。</p>
+                <p>ご来店ありがとうございました！</p>
+            </div>
+            <div class="collection-box">
+                <div class="sign-box">
+                    <div class="head-box">
+                        <img class="abe lazyload" data-src="{{ asset('image/mezamashi/abe.svg') }}" alt="阿部華也子">
+                        <p>さんがご来店</p>
+                    </div>
+                    <div class="role-box">
+                        <p>「 めざましどよう 」メインキャスター</p>
+                        <p>「 めざましテレビ 」7代目お天気キャスター</p>
+                    </div>
+                    <h2>あんハマ発祥 つけかけパスタ - Dip & Pour -<br>"カルボナーラ"をお召し上がりいただきました。</h2>
+                    <p class="big-en">Talent</p>
+                    <img class="colored-paper lazyload" data-src="{{ asset('image/mezamashi/colored-paper.webp') }}" alt="色紙">
+                </div>
+                <div id="tv" class="tv-box">
+                    <div class="monitor-box">
+                        <img class="play-icon lazyload" data-src="{{ asset('image/mezamashi/play.svg') }}" alt="再生">
+                        <video class="loop-movie lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
+                            <source src="{{ asset('movie/top/mezamashi/location4.mp4') }}" type="video/mp4">
+                        </video>
+                    </div>
+                    <img class="icon lazyload" data-src="{{ asset('image/mezamashi/tv.svg') }}" alt="テレビ">
+                </div>
+                <div id="phone" class="phone-box">
+                    <img class="play-icon lazyload" data-src="{{ asset('image/mezamashi/play.svg') }}" alt="再生">
+                    <video class="loop-movie lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
+                        <source src="{{ asset('movie/top/mezamashi/location1.mp4') }}" type="video/mp4">
+                    </video>
+                    <img class="icon lazyload" data-src="{{ asset('image/mezamashi/phone.svg') }}" alt="スマホ">
+                </div>
+                <img class="screenshot lazyload" data-src="{{ asset('image/mezamashi/screenshot.webp') }}" alt="スクリーンショット">
+            </div>
+        </div>
+    </section>
 
 
 
