@@ -289,7 +289,7 @@
                 <div class="right-box">
                     <div class="top-txt">フジテレビ<div class="date-box">2026<span class="year">年</span>6<span class="month">月</span>13<span class="day">日</span></div>放送</div>
                     <h2 class="mid-txt"><div class="program">めざましどよう</div>の名古屋特集</h2>
-                    <h1 class="bottom-txt">あんかけハマちゃんが紹介されました</h1>
+                    <h1 class="bottom-txt">あんかけハマちゃん が紹介されました</h1>
                 </div>
                 <img class="clock-left lazyload" data-src="{{ asset('image/mezamashi/clock-left.webp') }}" alt="時計">
                 <img class="clock-right lazyload" data-src="{{ asset('image/mezamashi/clock-right.webp') }}" alt="時計">
