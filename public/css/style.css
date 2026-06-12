@@ -2360,10 +2360,12 @@ body::-webkit-scrollbar {
 }
 #mezamashi .content-box .collection-box .sign-box .colored-paper {
   position: absolute;
-  top: -35px;
+  top: -45px;
   right: -35px;
   display: block;
   width: 105px;
+  box-shadow: -4px 3px 5px rgba(0, 0, 0, 0.5);
+  transform: rotate(-20deg);
   z-index: 3;
 }
 #mezamashi .content-box .collection-box .tv-box {
