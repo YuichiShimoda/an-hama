@@ -374,7 +374,7 @@
                         <p>「 めざましどよう 」メインキャスター</p>
                         <p>「 めざましテレビ 」7代目お天気キャスター</p>
                     </div>
-                    <h2>あんハマ発祥 つけかけパスタ - Dip & Pour -<br>"カルボナーラ"をお召し上がりいただきました。</h2>
+                    <h2>あんハマ発祥『 つけかけパスタ - Dip & Pour - 』<br>"カルボナーラ"をお召し上がりいただきました。</h2>
                     <p class="big-en">Talent</p>
                     <img class="colored-paper lazyload" data-src="{{ asset('image/mezamashi/colored-paper.webp') }}" alt="色紙">
                 </div>
