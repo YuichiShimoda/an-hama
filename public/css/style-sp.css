@@ -2944,6 +2944,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 500px) {
   #mezamashi .content-box .desc-box .txt2 {
     font-size: 22px;
+    line-height: 1.4;
   }
 }
 #mezamashi .content-box .desc-box .txt2 > span {
