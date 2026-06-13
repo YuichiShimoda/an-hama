@@ -15,6 +15,32 @@ body::-webkit-scrollbar {
   background-size: 500px;
   background-repeat: repeat;
 }
+#wrap::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+#wrap.no-scroll::before {
+  opacity: 1;
+  z-index: 1200;
+}
+#wrap.no-scroll #appeal {
+  pointer-events: none;
+}
+#wrap.no-scroll #mezamashi .content-box .collection-box #tv {
+  pointer-events: none;
+}
+#wrap.no-scroll #mezamashi .content-box .collection-box #phone {
+  pointer-events: none;
+}
 
 *::selection {
   background: #ddd;
@@ -919,6 +945,21 @@ body::-webkit-scrollbar {
   transform: scale(0);
   transition: all 1s ease-in-out;
   z-index: 2000;
+}
+@media screen and (max-width: 1400px) {
+  #broadcast {
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #broadcast {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  #broadcast {
+    width: 90vw;
+  }
 }
 #broadcast.is-show {
   opacity: 1;

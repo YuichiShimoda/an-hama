@@ -1,5 +1,5 @@
 <template>
-	<div ref="bottomBox" class="movie-content-box">
+	<div ref="bottomBox" class="location-content-box">
 		<div class="progress-bar-box">
 			<div v-for="(log, index) in viewedVideos" :key="log" :class="['each-bar-box', { 'is-active': log === currentVideo }]">
 				<div class="inside-bar" :style="log === currentVideo ? { transform: `scaleX(${progressRatio})` } : {}"></div>
@@ -17,6 +17,7 @@
 				<img v-if="pause && !completed" class="icon" :src="'./image/movie/pause.svg'" alt="再生">
 			</div>
 		</div>
+		<img v-if="!pause || !completed" class="logo-white" :src="'./image/mezamashi/logo-white.svg'" alt="ロゴ">
 		<div v-if="completed" class="completed-btn">
 			<img class="icon" :src="'./image/movie/completed.svg'" alt="リピート">
 		</div>
@@ -28,7 +29,7 @@
 	import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 	import videojs from 'video.js';
 	import axios from 'axios';
-	import '../../css/upload.css';
+	import '../../css/location.css';
 
 	const props = defineProps({
 		initialQueryValue: String,
@@ -41,7 +42,7 @@
 	const pause = ref(0)
 	const completed = ref(0)
 
-	const currentVideo = 'location1';
+	const currentVideo = 'location';
 	const viewedVideos = ref([]);
 	const progressRatio = ref(0);
 	viewedVideos.value.push(currentVideo.value);
