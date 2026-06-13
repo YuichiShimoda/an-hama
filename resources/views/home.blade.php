@@ -288,8 +288,9 @@
                 <img class="left-img lazyload" data-src="{{ asset('image/mezamashi/nationwide.webp') }}" alt="全国放送">
                 <div class="right-box">
                     <div class="top-txt">フジテレビ<div class="date-box">2026<span class="year">年</span>6<span class="month">月</span>13<span class="day">日</span></div>放送</div>
-                    <h2 class="mid-txt"><div class="program">めざましどよう</div>の名古屋特集</h2>
-                    <h1 class="bottom-txt">あんかけハマちゃん が紹介されました</h1>
+                    <div class="mid-txt1"><div class="program">めざましどようび</div></div>
+                    <h2 class="mid-txt2">特集：進化した「 なごやめし 」</h2>
+                    <h1 class="bottom-txt">あんかけハマちゃん が紹介されました！</h1>
                 </div>
                 <img class="clock-left lazyload" data-src="{{ asset('image/mezamashi/clock-left.webp') }}" alt="時計">
                 <img class="clock-right lazyload" data-src="{{ asset('image/mezamashi/clock-right.webp') }}" alt="時計">
@@ -361,8 +362,9 @@
                 <p class="en">Media</p>
             </div>
             <div class="desc-box">
-                <p>スタッフ一同、とても楽しい時間を過ごさせていただきました。</p>
-                <p>ご来店ありがとうございました！</p>
+                <p class="txt1">“あんハマ”でしか食べられない</p>
+                <h2 class="txt2">あんかけスパ<span>の</span>新形態</h2>
+                <p class="txt3">つけかけパスタ - dip & pour -</p>
             </div>
             <div class="collection-box">
                 <div class="sign-box">
@@ -374,7 +376,7 @@
                         <p>「 めざましどよう 」メインキャスター</p>
                         <p>「 めざましテレビ 」7代目お天気キャスター</p>
                     </div>
-                    <h2>あんハマ発祥『 つけかけパスタ - Dip & Pour - 』<br>"カルボナーラ"をお召し上がりいただきました。</h2>
+                    <h2>あんハマ発祥『 つけかけパスタ - dip & pour - 』<br>"カルボナーラ"をお召し上がりいただきました。</h2>
                     <p class="big-en">Talent</p>
                     <img class="colored-paper lazyload" data-src="{{ asset('image/mezamashi/colored-paper.webp') }}" alt="色紙">
                 </div>
@@ -382,7 +384,7 @@
                     <div class="monitor-box">
                         <img class="play-icon lazyload" data-src="{{ asset('image/mezamashi/play.svg') }}" alt="再生">
                         <video class="loop-movie lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                            <source src="{{ asset('movie/top/mezamashi/location4.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('movie/top/mezamashi/tv.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                     <img class="icon lazyload" data-src="{{ asset('image/mezamashi/tv.svg') }}" alt="テレビ">
@@ -390,11 +392,15 @@
                 <div id="phone" class="phone-box">
                     <img class="play-icon lazyload" data-src="{{ asset('image/mezamashi/play.svg') }}" alt="再生">
                     <video class="loop-movie lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                        <source src="{{ asset('movie/top/mezamashi/location1.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('movie/top/mezamashi/phone.mp4') }}" type="video/mp4">
                     </video>
                     <img class="icon lazyload" data-src="{{ asset('image/mezamashi/phone.svg') }}" alt="スマホ">
                 </div>
                 <img class="screenshot lazyload" data-src="{{ asset('image/mezamashi/screenshot.webp') }}" alt="スクリーンショット">
+            </div>
+            <div class="comment-box">
+                <p>阿部さん、撮影スタッフの方々には撮影外のメニューにまで興味を持っていただき、大変嬉しく思います。</p>
+                <p>ご来店、ありがとうございました！</p>
             </div>
         </div>
     </section>
@@ -437,7 +443,7 @@
                     <img class="board" src="{{ asset('image/season/board.svg') }}" alt="あんハマ発祥つけかけパスタ 季節の限定メニュー">
                     <div class="illust-box">
                         <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
-                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. Pour it.">
+                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. pour it.">
                     </div>
                     <div class="label-box">
                         <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
