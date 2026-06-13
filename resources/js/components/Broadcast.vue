@@ -17,7 +17,7 @@
 				<img v-if="pause && !completed" class="icon" :src="'./image/movie/pause.svg'" alt="再生">
 			</div>
 		</div>
-		<img v-if="!pause || !completed" class="logo-white" :src="'./image/mezamashi/logo-white.svg'" alt="ロゴ">
+		<!-- <img v-if="!pause || !completed" class="logo-white" :src="'./image/mezamashi/logo-white.svg'" alt="ロゴ"> -->
 		<div v-if="completed" class="completed-btn">
 			<img class="icon" :src="'./image/mezamashi/completed.svg'" alt="リピート">
 		</div>
