@@ -364,7 +364,7 @@
             <div class="desc-box">
                 <p class="txt1">“あんハマ”でしか食べられない</p>
                 <h2 class="txt2">あんかけスパ<span>の</span>新形態</h2>
-                <p class="txt3">つけかけパスタ - dip & pour -</p>
+                <p class="txt3">つけかけパスタ - Dip & Pour -</p>
             </div>
             <div class="collection-box">
                 <div class="sign-box">
@@ -376,7 +376,7 @@
                         <p>「 めざましどようび 」メインキャスター</p>
                         <p>「 めざましテレビ 」7代目お天気キャスター</p>
                     </div>
-                    <h2>あんハマ発祥『 つけかけパスタ - dip & pour - 』<br>"カルボナーラ"をお召し上がりいただきました。</h2>
+                    <h2>あんハマ発祥『 つけかけパスタ - Dip & Pour - 』<br>"カルボナーラ"をお召し上がりいただきました。</h2>
                     <p class="big-en">Talent</p>
                     <img class="colored-paper lazyload" data-src="{{ asset('image/mezamashi/colored-paper.webp') }}" alt="色紙">
                 </div>
@@ -443,7 +443,7 @@
                     <img class="board" src="{{ asset('image/season/board.svg') }}" alt="あんハマ発祥つけかけパスタ 季節の限定メニュー">
                     <div class="illust-box">
                         <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
-                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="dip it. pour it.">
+                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="Dip it. Pour it.">
                     </div>
                     <div class="label-box">
                         <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
