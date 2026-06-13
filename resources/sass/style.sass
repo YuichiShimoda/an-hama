@@ -1784,8 +1784,11 @@ body::-webkit-scrollbar
 	background-size: cover
 	background-position: center top
 	background-repeat: no-repeat
-	// +bp1400
-	// 	padding: 100px 0 30px
+	overflow: hidden
+	+bp1000
+		padding: 180px 0 150px
+	+bp800
+		padding: 180px 0 120px
 	// +bp1200
 	// 	padding: 100px 0 10px
 	// +bp850
@@ -1806,10 +1809,18 @@ body::-webkit-scrollbar
 				display: block
 				width: 280px
 				animation: heartBeat 6.0s infinite ease
+				+bp1100
+					width: 250px
+				+bp900
+					width: 220px
 			.right-box
 				display: block
 				width: fit-content
 				margin-left: 65px
+				+bp1100
+					margin-left: 50px
+				+bp900
+					margin-left: 40px
 				.top-txt
 					display: block
 					font-weight: 500
@@ -1819,6 +1830,12 @@ body::-webkit-scrollbar
 					letter-spacing: 0.05em
 					color: #fff
 					text-shadow: 0px 2px 2px rgba(#000, 0.5)
+					+bp1100
+						font-size: 20px
+					+bp900
+						font-size: 18px
+					+bp800
+						font-size: 17px
 					.date-box
 						display: inline-block
 						margin-left: 1.0rem
@@ -1830,6 +1847,12 @@ body::-webkit-scrollbar
 						letter-spacing: 0.05em
 						color: #fff
 						text-shadow: 0px 2px 2px rgba(#000, 0.5)
+						+bp1100
+							font-size: 20px
+						+bp900
+							font-size: 18px
+						+bp800
+							font-size: 17px
 						.year
 							display: inline
 							margin: 0 0.4rem 0 0.2rem
@@ -1840,6 +1863,12 @@ body::-webkit-scrollbar
 							letter-spacing: 0.05em
 							color: #fff
 							text-shadow: 0px 2px 2px rgba(#000, 0.5)
+							+bp1100
+								font-size: 16px
+							+bp900
+								font-size: 14px
+							+bp800
+								font-size: 13px
 						.month
 							display: inline
 							margin: 0 0.4rem 0 0.2rem
@@ -1850,6 +1879,12 @@ body::-webkit-scrollbar
 							letter-spacing: 0.05em
 							color: #fff
 							text-shadow: 0px 2px 2px rgba(#000, 0.5)
+							+bp1100
+								font-size: 16px
+							+bp900
+								font-size: 14px
+							+bp800
+								font-size: 13px
 						.day
 							display: inline
 							margin: 0 0 0 0.2rem
@@ -1860,6 +1895,12 @@ body::-webkit-scrollbar
 							letter-spacing: 0.05em
 							color: #fff
 							text-shadow: 0px 2px 2px rgba(#000, 0.5)
+							+bp1100
+								font-size: 16px
+							+bp900
+								font-size: 14px
+							+bp800
+								font-size: 13px
 				.mid-txt1
 					display: block
 					margin-top: 13px
@@ -1870,6 +1911,14 @@ body::-webkit-scrollbar
 					letter-spacing: 0.05em
 					color: #fff
 					text-shadow: 0px 2px 2px rgba(#000, 0.5)
+					+bp1100
+						font-size: 20px
+					+bp900
+						margin-top: 11px
+						font-size: 18px
+					+bp800
+						margin-top: 10px
+						font-size: 17px
 					.program
 						display: inline-block
 						width: fit-content
@@ -1883,6 +1932,16 @@ body::-webkit-scrollbar
 						letter-spacing: 0.05em
 						color: #fff
 						box-shadow: 5px 5px 0px #fff
+						+bp1100
+							padding: 9px 13px
+							font-size: 20px
+							box-shadow: 4px 4px 0px #fff
+						+bp900
+							padding: 8px 12px
+							font-size: 18px
+							box-shadow: 3px 3px 0px #fff
+						+bp800
+							font-size: 17px
 				.mid-txt2
 					display: block
 					margin-top: 15px
@@ -1893,6 +1952,14 @@ body::-webkit-scrollbar
 					letter-spacing: 0.05em
 					color: #fff
 					text-shadow: 0px 2px 2px rgba(#000, 0.5)
+					+bp1100
+						font-size: 20px
+					+bp900
+						margin-top: 13px
+						font-size: 18px
+					+bp800
+						margin-top: 12px
+						font-size: 17px
 				.bottom-txt
 					display: block
 					margin-top: 13px
@@ -1903,6 +1970,14 @@ body::-webkit-scrollbar
 					letter-spacing: 0.05em
 					color: #fff
 					text-shadow: 0px 2px 2px rgba(#000, 0.5)
+					+bp1100
+						font-size: 20px
+					+bp900
+						margin-top: 11px
+						font-size: 18px
+					+bp800
+						margin-top: 10px
+						font-size: 17px
 			.clock-left
 				position: absolute
 				top: -50%
@@ -1911,6 +1986,19 @@ body::-webkit-scrollbar
 				width: 100px
 				opacity: 0.8
 				animation: floatingLeft 6.0s ease-in-out alternate infinite
+				+bp1400
+					left: -24%
+				+bp1200
+					left: -18%
+				+bp900
+					left: -15%
+					width: 80px
+				+bp800
+					top: -40%
+					left: -12%
+					width: 70px
+				+bp750
+					left: -7%
 			.clock-right
 				position: absolute
 				top: -3%
@@ -1918,11 +2006,29 @@ body::-webkit-scrollbar
 				display: block
 				width: 185px
 				animation: floatingRight 4.5s ease-in-out alternate infinite
+				+bp1400
+					right: -30%
+				+bp1200
+					right: -24%
+					width: 155px
+				+bp900
+					right: -18%
+					width: 140px
+				+bp800
+					top: -10%
+					right: -15%
+					width: 120px
+				+bp750
+					right: -12%
 		.location-box
 			display: block
 			width: fit-content
 			margin: 80px auto 0
 			position: relative
+			+bp900
+				margin: 70px auto 0
+			+bp800
+				margin: 60px auto 0
 			.location-ele
 				display: flex
 				justify-content: center
@@ -1938,6 +2044,13 @@ body::-webkit-scrollbar
 					width: 180px
 				+bp1100
 					width: 170px
+				+bp900
+					width: 155px
+					border-radius: 15px
+				+bp850
+					width: 145px
+				+bp800
+					width: 140px
 				&:not(:nth-of-type(4)):hover
 					top: -30px !important
 					transform: rotate(0deg) !important
@@ -2080,10 +2193,26 @@ body::-webkit-scrollbar
 				+bp1100
 					top: 90%
 					font-size: 180px
+				+bp1000
+					left: -220%
+				+bp900
+					font-size: 165px
+				+bp800
+					left: -210%
+					font-size: 150px
+				+bp750
+					left: -180%
+					font-size: 140px
 		.desc-box
 			display: block
 			width: fit-content
 			margin: 140px auto 0
+			+bp1400
+				margin: 120px auto 0
+			+bp1200
+				margin: 110px auto 0
+			+bp1000
+				margin: 100px auto 0
 			.txt1
 				display: block
 				font-weight: 500
@@ -2093,6 +2222,10 @@ body::-webkit-scrollbar
 				letter-spacing: 0.05em
 				text-align: center
 				color: #fff
+				+bp1000
+					font-size: 17px
+				+bp800
+					font-size: 16px
 			.txt2
 				display: block
 				font-weight: 700
@@ -2103,6 +2236,12 @@ body::-webkit-scrollbar
 				text-align: center
 				color: #fff
 				text-shadow: 0px 2px 2px rgba(#000, 0.5)
+				+bp1200
+					font-size: 22px
+				+bp1000
+					font-size: 21px
+				+bp800
+					font-size: 19px
 				> span
 					display: inline-block
 					margin: 0 7px 0px 5px
@@ -2112,6 +2251,12 @@ body::-webkit-scrollbar
 					font-family: $zen-maru-gothic
 					letter-spacing: 0.05em
 					color: #fff
+					+bp1200
+						font-size: 16px
+					+bp1000
+						font-size: 15px
+					+bp800
+						font-size: 14px
 			.txt3
 				display: block
 				margin: 30px auto 0
@@ -2125,12 +2270,24 @@ body::-webkit-scrollbar
 				letter-spacing: 0.05em
 				text-align: center
 				color: #fff
+				+bp1000
+					padding: 8px 12px
+					margin: 25px auto 0
+					font-size: 17px
+				+bp800
+					padding: 7px 12px
+					margin: 20px auto 0
+					font-size: 16px
 		.collection-box
 			display: flex
 			justify-content: center
 			align-items: flex-end
 			width: fit-content
 			margin: 80px auto 0
+			+bp1000
+				flex-wrap: wrap
+				max-width: 700px
+				margin: 40px auto 0
 			.sign-box
 				display: block
 				width: fit-content
@@ -2142,6 +2299,15 @@ body::-webkit-scrollbar
 				background-repeat: no-repeat
 				position: relative
 				box-shadow: 10px 10px 20px rgba(#c00,0.5)
+				+bp1400
+					padding: 20px 30px 25px
+					box-shadow: 7px 7px 15px rgba(#c00,0.5)
+				+bp1200
+					padding: 20px 20px 25px
+				+bp1000
+					padding: 20px 50px 30px
+				+bp800
+					padding: 20px 40px 30px
 				.head-box
 					display: flex
 					justify-content: flex-start
@@ -2151,6 +2317,10 @@ body::-webkit-scrollbar
 					.abe
 						display: block
 						width: 120px
+						+bp1400
+							width: 110px
+						+bp1200
+							width: 100px
 					> p
 						display: block
 						width: fit-content
@@ -2162,12 +2332,22 @@ body::-webkit-scrollbar
 						font-family: $zen-maru-gothic
 						letter-spacing: 0.05em
 						color: #777
+						+bp1400
+							font-size: 15px
+						+bp1200
+							margin-left: 9px
+							font-size: 14px
+							white-space: nowrap
+						+bp1100
+							letter-spacing: 0
 				.role-box
 					display: block
 					width: fit-content
 					margin-top: 15px
 					z-index: 2
 					position: relative
+					+bp1200
+						margin-top: 12px
 					> p
 						display: block
 						font-weight: 400
@@ -2175,7 +2355,12 @@ body::-webkit-scrollbar
 						line-height: 1.7
 						font-family: $iroha-25icho-stdn
 						letter-spacing: 0.05em
+						white-space: nowrap
 						color: #777
+						+bp1400
+							font-size: 11px
+						+bp1100
+							letter-spacing: 0
 				> h2
 					display: block
 					width: fit-content
@@ -2186,8 +2371,15 @@ body::-webkit-scrollbar
 					font-family: $iroha-25icho-stdn
 					letter-spacing: 0.05em
 					color: #777
+					white-space: nowrap
 					z-index: 2
 					position: relative
+					+bp1400
+						font-size: 11px
+					+bp1200
+						margin-top: 12px
+					+bp1100
+						letter-spacing: 0
 				.big-en
 					position: absolute
 					left: 0
@@ -2203,6 +2395,10 @@ body::-webkit-scrollbar
 					letter-spacing: 0.05em
 					color: rgba(#999, 0.2)
 					z-index: 1
+					+bp1400
+						font-size: 80px
+					+bp1200
+						font-size: 76px
 				.colored-paper
 					position: absolute
 					top: -45px
@@ -2212,12 +2408,32 @@ body::-webkit-scrollbar
 					box-shadow: -4px 3px 5px rgba(#000, 0.5)
 					transform: rotate(-20deg)
 					z-index: 3
+					+bp1400
+						width: 95px
+					+bp1200
+						right: -25px
+						width: 90px
+					+bp1000
+						right: -40px
+						width: 100px
 			.tv-box
 				display: block
 				width: 250px
 				margin-left: 60px
 				position: relative
 				z-index: 1100
+				+bp1400
+					width: 230px
+					margin-left: 50px
+				+bp1200
+					width: 210px
+					margin-left: 30px
+				+bp1000
+					width: 260px
+					margin-left: 80px
+				+bp800
+					width: 240px
+					margin-left: 60px
 				.monitor-box
 					position: absolute
 					top: 28%
@@ -2239,6 +2455,12 @@ body::-webkit-scrollbar
 						background-color: #fff
 						border-radius: 50%
 						z-index: 2
+						+bp1200
+							width: 40px
+						+bp1000
+							width: 50px
+						+bp800
+							width: 40px
 					.loop-movie
 						display: block
 						width: 100%
@@ -2255,6 +2477,18 @@ body::-webkit-scrollbar
 				margin-left: 50px
 				position: relative
 				z-index: 1100
+				+bp1400
+					width: 120px
+					margin-left: 40px
+				+bp1200
+					width: 110px
+					margin-left: 30px
+				+bp1100
+					margin-left: 20px
+				+bp1000
+					width: 125px
+					margin-top: 50px
+					margin-left: 0px
 				.play-icon
 					position: absolute
 					top: 0
@@ -2268,6 +2502,12 @@ body::-webkit-scrollbar
 					background-color: #fff
 					border-radius: 50%
 					z-index: 2
+					+bp1200
+						width: 40px
+					+bp1000
+						width: 50px
+					+bp800
+						width: 40px
 				.loop-movie
 					position: absolute
 					top: 4%
@@ -2288,10 +2528,23 @@ body::-webkit-scrollbar
 				border-radius: 10px
 				margin-left: 60px
 				box-shadow: 10px 10px 20px rgba(#c00,0.5)
+				+bp1400
+					width: 280px
+					margin-left: 45px
+				+bp1200
+					width: 260px
+					margin-left: 30px
+				+bp1100
+					width: 240px
+				+bp1000
+					width: 280px
+					margin-left: 60px
 		.comment-box
 			display: block
 			width: fit-content
 			margin: 80px auto 0
+			+bp1000
+				margin: 60px auto 0
 			> p
 				display: block
 				font-weight: 400
@@ -2301,6 +2554,10 @@ body::-webkit-scrollbar
 				letter-spacing: 0.05em
 				text-align: center
 				color: #fff
+				br
+					display: none
+					+bp800
+						display: block
 @keyframes heartBeat
 	0%
 		transform: scale(1.0)

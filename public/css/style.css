@@ -2009,6 +2009,17 @@ body::-webkit-scrollbar {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  overflow: hidden;
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi {
+    padding: 180px 0 150px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi {
+    padding: 180px 0 120px;
+  }
 }
 #mezamashi .content-box {
   display: block;
@@ -2027,10 +2038,30 @@ body::-webkit-scrollbar {
   width: 280px;
   animation: heartBeat 6s infinite ease;
 }
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .left-img {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .left-img {
+    width: 220px;
+  }
+}
 #mezamashi .content-box .tit-box .right-box {
   display: block;
   width: fit-content;
   margin-left: 65px;
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box {
+    margin-left: 40px;
+  }
 }
 #mezamashi .content-box .tit-box .right-box .top-txt {
   display: block;
@@ -2041,6 +2072,21 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt {
+    font-size: 17px;
+  }
 }
 #mezamashi .content-box .tit-box .right-box .top-txt .date-box {
   display: inline-block;
@@ -2054,6 +2100,21 @@ body::-webkit-scrollbar {
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box {
+    font-size: 17px;
+  }
+}
 #mezamashi .content-box .tit-box .right-box .top-txt .date-box .year {
   display: inline;
   margin: 0 0.4rem 0 0.2rem;
@@ -2064,6 +2125,21 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .year {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .year {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .year {
+    font-size: 13px;
+  }
 }
 #mezamashi .content-box .tit-box .right-box .top-txt .date-box .month {
   display: inline;
@@ -2076,6 +2152,21 @@ body::-webkit-scrollbar {
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .month {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .month {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .month {
+    font-size: 13px;
+  }
+}
 #mezamashi .content-box .tit-box .right-box .top-txt .date-box .day {
   display: inline;
   margin: 0 0 0 0.2rem;
@@ -2087,6 +2178,21 @@ body::-webkit-scrollbar {
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .day {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .day {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .top-txt .date-box .day {
+    font-size: 13px;
+  }
+}
 #mezamashi .content-box .tit-box .right-box .mid-txt1 {
   display: block;
   margin-top: 13px;
@@ -2097,6 +2203,23 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt1 {
+    margin-top: 11px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt1 {
+    margin-top: 10px;
+    font-size: 17px;
+  }
 }
 #mezamashi .content-box .tit-box .right-box .mid-txt1 .program {
   display: inline-block;
@@ -2112,6 +2235,25 @@ body::-webkit-scrollbar {
   color: #fff;
   box-shadow: 5px 5px 0px #fff;
 }
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt1 .program {
+    padding: 9px 13px;
+    font-size: 20px;
+    box-shadow: 4px 4px 0px #fff;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt1 .program {
+    padding: 8px 12px;
+    font-size: 18px;
+    box-shadow: 3px 3px 0px #fff;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt1 .program {
+    font-size: 17px;
+  }
+}
 #mezamashi .content-box .tit-box .right-box .mid-txt2 {
   display: block;
   margin-top: 15px;
@@ -2122,6 +2264,23 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt2 {
+    margin-top: 13px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .mid-txt2 {
+    margin-top: 12px;
+    font-size: 17px;
+  }
 }
 #mezamashi .content-box .tit-box .right-box .bottom-txt {
   display: block;
@@ -2134,6 +2293,23 @@ body::-webkit-scrollbar {
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .tit-box .right-box .bottom-txt {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .right-box .bottom-txt {
+    margin-top: 11px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .right-box .bottom-txt {
+    margin-top: 10px;
+    font-size: 17px;
+  }
+}
 #mezamashi .content-box .tit-box .clock-left {
   position: absolute;
   top: -50%;
@@ -2143,6 +2319,34 @@ body::-webkit-scrollbar {
   opacity: 0.8;
   animation: floatingLeft 6s ease-in-out alternate infinite;
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .tit-box .clock-left {
+    left: -24%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .tit-box .clock-left {
+    left: -18%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .clock-left {
+    left: -15%;
+    width: 80px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .clock-left {
+    top: -40%;
+    left: -12%;
+    width: 70px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #mezamashi .content-box .tit-box .clock-left {
+    left: -7%;
+  }
+}
 #mezamashi .content-box .tit-box .clock-right {
   position: absolute;
   top: -3%;
@@ -2151,11 +2355,50 @@ body::-webkit-scrollbar {
   width: 185px;
   animation: floatingRight 4.5s ease-in-out alternate infinite;
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .tit-box .clock-right {
+    right: -30%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .tit-box .clock-right {
+    right: -24%;
+    width: 155px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .tit-box .clock-right {
+    right: -18%;
+    width: 140px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .tit-box .clock-right {
+    top: -10%;
+    right: -15%;
+    width: 120px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #mezamashi .content-box .tit-box .clock-right {
+    right: -12%;
+  }
+}
 #mezamashi .content-box .location-box {
   display: block;
   width: fit-content;
   margin: 80px auto 0;
   position: relative;
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .location-box {
+    margin: 70px auto 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .location-box {
+    margin: 60px auto 0;
+  }
 }
 #mezamashi .content-box .location-box .location-ele {
   display: flex;
@@ -2177,6 +2420,22 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 1100px) {
   #mezamashi .content-box .location-box .location-ele {
     width: 170px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .location-box .location-ele {
+    width: 155px;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #mezamashi .content-box .location-box .location-ele {
+    width: 145px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .location-box .location-ele {
+    width: 140px;
   }
 }
 #mezamashi .content-box .location-box .location-ele:not(:nth-of-type(4)):hover {
@@ -2363,10 +2622,47 @@ body::-webkit-scrollbar {
     font-size: 180px;
   }
 }
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .location-box .en {
+    left: -220%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .content-box .location-box .en {
+    font-size: 165px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .location-box .en {
+    left: -210%;
+    font-size: 150px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #mezamashi .content-box .location-box .en {
+    left: -180%;
+    font-size: 140px;
+  }
+}
 #mezamashi .content-box .desc-box {
   display: block;
   width: fit-content;
   margin: 140px auto 0;
+}
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .desc-box {
+    margin: 120px auto 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .desc-box {
+    margin: 110px auto 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .desc-box {
+    margin: 100px auto 0;
+  }
 }
 #mezamashi .content-box .desc-box .txt1 {
   display: block;
@@ -2377,6 +2673,16 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   text-align: center;
   color: #fff;
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .desc-box .txt1 {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .desc-box .txt1 {
+    font-size: 16px;
+  }
 }
 #mezamashi .content-box .desc-box .txt2 {
   display: block;
@@ -2389,6 +2695,21 @@ body::-webkit-scrollbar {
   color: #fff;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .desc-box .txt2 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .desc-box .txt2 {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .desc-box .txt2 {
+    font-size: 19px;
+  }
+}
 #mezamashi .content-box .desc-box .txt2 > span {
   display: inline-block;
   margin: 0 7px 0px 5px;
@@ -2398,6 +2719,21 @@ body::-webkit-scrollbar {
   font-family: "Zen Maru Gothic", sans-serif;
   letter-spacing: 0.05em;
   color: #fff;
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .desc-box .txt2 > span {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .desc-box .txt2 > span {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .desc-box .txt2 > span {
+    font-size: 14px;
+  }
 }
 #mezamashi .content-box .desc-box .txt3 {
   display: block;
@@ -2413,12 +2749,33 @@ body::-webkit-scrollbar {
   text-align: center;
   color: #fff;
 }
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .desc-box .txt3 {
+    padding: 8px 12px;
+    margin: 25px auto 0;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .desc-box .txt3 {
+    padding: 7px 12px;
+    margin: 20px auto 0;
+    font-size: 16px;
+  }
+}
 #mezamashi .content-box .collection-box {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: fit-content;
   margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box {
+    flex-wrap: wrap;
+    max-width: 700px;
+    margin: 40px auto 0;
+  }
 }
 #mezamashi .content-box .collection-box .sign-box {
   display: block;
@@ -2432,6 +2789,27 @@ body::-webkit-scrollbar {
   position: relative;
   box-shadow: 10px 10px 20px rgba(204, 0, 0, 0.5);
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .sign-box {
+    padding: 20px 30px 25px;
+    box-shadow: 7px 7px 15px rgba(204, 0, 0, 0.5);
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .sign-box {
+    padding: 20px 20px 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box .sign-box {
+    padding: 20px 50px 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .collection-box .sign-box {
+    padding: 20px 40px 30px;
+  }
+}
 #mezamashi .content-box .collection-box .sign-box .head-box {
   display: flex;
   justify-content: flex-start;
@@ -2442,6 +2820,16 @@ body::-webkit-scrollbar {
 #mezamashi .content-box .collection-box .sign-box .head-box .abe {
   display: block;
   width: 120px;
+}
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .sign-box .head-box .abe {
+    width: 110px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .sign-box .head-box .abe {
+    width: 100px;
+  }
 }
 #mezamashi .content-box .collection-box .sign-box .head-box > p {
   display: block;
@@ -2455,12 +2843,34 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #777;
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .sign-box .head-box > p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .sign-box .head-box > p {
+    margin-left: 9px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .collection-box .sign-box .head-box > p {
+    letter-spacing: 0;
+  }
+}
 #mezamashi .content-box .collection-box .sign-box .role-box {
   display: block;
   width: fit-content;
   margin-top: 15px;
   z-index: 2;
   position: relative;
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .sign-box .role-box {
+    margin-top: 12px;
+  }
 }
 #mezamashi .content-box .collection-box .sign-box .role-box > p {
   display: block;
@@ -2469,7 +2879,18 @@ body::-webkit-scrollbar {
   line-height: 1.7;
   font-family: "iroha-25icho-stdn", sans-serif;
   letter-spacing: 0.05em;
+  white-space: nowrap;
   color: #777;
+}
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .sign-box .role-box > p {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .collection-box .sign-box .role-box > p {
+    letter-spacing: 0;
+  }
 }
 #mezamashi .content-box .collection-box .sign-box > h2 {
   display: block;
@@ -2481,8 +2902,24 @@ body::-webkit-scrollbar {
   font-family: "iroha-25icho-stdn", sans-serif;
   letter-spacing: 0.05em;
   color: #777;
+  white-space: nowrap;
   z-index: 2;
   position: relative;
+}
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .sign-box > h2 {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .sign-box > h2 {
+    margin-top: 12px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .collection-box .sign-box > h2 {
+    letter-spacing: 0;
+  }
 }
 #mezamashi .content-box .collection-box .sign-box .big-en {
   position: absolute;
@@ -2500,6 +2937,16 @@ body::-webkit-scrollbar {
   color: rgba(153, 153, 153, 0.2);
   z-index: 1;
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .sign-box .big-en {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .sign-box .big-en {
+    font-size: 76px;
+  }
+}
 #mezamashi .content-box .collection-box .sign-box .colored-paper {
   position: absolute;
   top: -45px;
@@ -2510,12 +2957,53 @@ body::-webkit-scrollbar {
   transform: rotate(-20deg);
   z-index: 3;
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .sign-box .colored-paper {
+    width: 95px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .sign-box .colored-paper {
+    right: -25px;
+    width: 90px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box .sign-box .colored-paper {
+    right: -40px;
+    width: 100px;
+  }
+}
 #mezamashi .content-box .collection-box .tv-box {
   display: block;
   width: 250px;
   margin-left: 60px;
   position: relative;
   z-index: 1100;
+}
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .tv-box {
+    width: 230px;
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .tv-box {
+    width: 210px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box .tv-box {
+    width: 260px;
+    margin-left: 80px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .collection-box .tv-box {
+    width: 240px;
+    margin-left: 60px;
+  }
 }
 #mezamashi .content-box .collection-box .tv-box .monitor-box {
   position: absolute;
@@ -2540,6 +3028,21 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   z-index: 2;
 }
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .tv-box .monitor-box .play-icon {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box .tv-box .monitor-box .play-icon {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .collection-box .tv-box .monitor-box .play-icon {
+    width: 40px;
+  }
+}
 #mezamashi .content-box .collection-box .tv-box .monitor-box .loop-movie {
   display: block;
   width: 100%;
@@ -2559,6 +3062,30 @@ body::-webkit-scrollbar {
   position: relative;
   z-index: 1100;
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .phone-box {
+    width: 120px;
+    margin-left: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .phone-box {
+    width: 110px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .collection-box .phone-box {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box .phone-box {
+    width: 125px;
+    margin-top: 50px;
+    margin-left: 0px;
+  }
+}
 #mezamashi .content-box .collection-box .phone-box .play-icon {
   position: absolute;
   top: 0;
@@ -2572,6 +3099,21 @@ body::-webkit-scrollbar {
   background-color: #fff;
   border-radius: 50%;
   z-index: 2;
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .phone-box .play-icon {
+    width: 40px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box .phone-box .play-icon {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .collection-box .phone-box .play-icon {
+    width: 40px;
+  }
 }
 #mezamashi .content-box .collection-box .phone-box .loop-movie {
   position: absolute;
@@ -2596,10 +3138,38 @@ body::-webkit-scrollbar {
   margin-left: 60px;
   box-shadow: 10px 10px 20px rgba(204, 0, 0, 0.5);
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi .content-box .collection-box .screenshot {
+    width: 280px;
+    margin-left: 45px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi .content-box .collection-box .screenshot {
+    width: 260px;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #mezamashi .content-box .collection-box .screenshot {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .collection-box .screenshot {
+    width: 280px;
+    margin-left: 60px;
+  }
+}
 #mezamashi .content-box .comment-box {
   display: block;
   width: fit-content;
   margin: 80px auto 0;
+}
+@media screen and (max-width: 1000px) {
+  #mezamashi .content-box .comment-box {
+    margin: 60px auto 0;
+  }
 }
 #mezamashi .content-box .comment-box > p {
   display: block;
@@ -2610,6 +3180,14 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   text-align: center;
   color: #fff;
+}
+#mezamashi .content-box .comment-box > p br {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  #mezamashi .content-box .comment-box > p br {
+    display: block;
+  }
 }
 
 @keyframes heartBeat {

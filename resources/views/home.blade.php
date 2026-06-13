@@ -399,7 +399,7 @@
                 <img class="screenshot lazyload" data-src="{{ asset('image/mezamashi/screenshot.webp') }}" alt="スクリーンショット">
             </div>
             <div class="comment-box">
-                <p>阿部さん、撮影スタッフの方々には撮影外のメニューにまで興味を持っていただき、大変嬉しく思います。</p>
+                <p>阿部さん、撮影スタッフの方々には撮影外のメニューにまで<br>興味を持っていただき、大変嬉しく思います。</p>
                 <p>ご来店、ありがとうございました！</p>
             </div>
         </div>
