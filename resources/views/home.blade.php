@@ -67,8 +67,8 @@
     <link href="{{ asset('/css/mouse.css') }}" rel='stylesheet' type='text/css' media='all'>
     <link href="{{ asset('/css/common.css') }}" rel='stylesheet' type='text/css' media='all'>
     <!-- <link href="{{ asset('/css/upload.css') }}" rel='stylesheet' type='text/css' media='all'> -->
-    <link href="{{ asset('/css/style-sp.css') }}?v=2" rel='stylesheet' type='text/css' media='all and (max-width: 700px)'>
-    <link href="{{ asset('/css/style.css') }}?v=2" rel='stylesheet' type='text/css' media='all and (min-width: 700px)'>
+    <link href="{{ asset('/css/style-sp.css') }}?v=3" rel='stylesheet' type='text/css' media='all and (max-width: 700px)'>
+    <link href="{{ asset('/css/style.css') }}?v=3" rel='stylesheet' type='text/css' media='all and (min-width: 700px)'>
 @stop
 
 
@@ -362,7 +362,7 @@
                 <p class="en">Media</p>
             </div>
             <div class="desc-box">
-                <p class="txt1">“あんハマ”でしか食べられない</p>
+                <p class="txt1">“あんハマ” でしか食べられない</p>
                 <h2 class="txt2">あんかけスパ<span>の</span>新形態</h2>
                 <p class="txt3">つけかけパスタ - Dip & Pour -</p>
             </div>

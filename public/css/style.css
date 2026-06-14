@@ -2002,7 +2002,7 @@ body::-webkit-scrollbar {
   }
 }
 #mezamashi {
-  display: none;
+  display: block;
   padding: 180px 0 200px;
   width: 100%;
   background: url("../image/mezamashi/bg.webp");
