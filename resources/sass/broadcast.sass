@@ -324,6 +324,40 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 					width: 60px
 				+bp400
 					width: 50px
+	.size-btn
+		position: absolute
+		top: 32%
+		right: 66px
+		display: none
+		justify-content: center
+		align-items: center
+		width: 40px
+		aspect-ratio: 1 / 1
+		border-radius: 50%
+		background-color: rgba(#fff, 0.7)
+		box-shadow: inset 0 1px 2px rgba(#000, 0.4)
+		z-index: 10
+		+bp1000
+			right: 63px
+			width: 36px
+		+bp800
+			right: 60px
+		+bp700
+			right: 63px
+		+bp450
+			display: flex
+			right: 45px
+			width: 30px
+		+bp400
+			right: 46px
+		&.is-off .icon:nth-of-type(2)
+			opacity: 1.0
+		.icon
+			display: block
+			width: 50%
+			transition: all 0.5s ease-in-out
+			&:nth-of-type(2)
+				opacity: 0.0
 	.logo-white
 		position: absolute
 		top: 32%

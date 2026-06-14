@@ -22,6 +22,10 @@
 				<img v-if="pause && !completed" class="icon" :src="'./image/movie/pause.svg'" alt="再生">
 			</div>
 		</div>
+		<div class="size-btn" @click="toggleSize">
+			<img v-if="!isFullscreen" class="icon" :src="'./image/mezamashi/expand.svg'" alt="フルサイズ">
+			<img v-else class="icon" :src="'./image/mezamashi/shrink.svg'" alt="通常サイズ">
+		</div>
 		<!-- <img v-if="!pause || !completed" class="logo-white" :src="'./image/mezamashi/logo-white.svg'" alt="ロゴ"> -->
 		<div v-if="completed" class="completed-btn">
 			<img class="icon" :src="'./image/mezamashi/completed.svg'" alt="リピート">
@@ -33,7 +37,6 @@
 <script setup>
 	import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
 	import videojs from 'video.js';
-	import axios from 'axios';
 	import '../../css/broadcast.css';
 
 	const props = defineProps({
@@ -44,6 +47,8 @@
 	const videoPlayer = ref(null)
 	const player = ref(null)
 	const volume = ref(1)
+	const isFullscreen = ref(false)
+	let el = null
 	const pause = ref(0)
 	const completed = ref(0)
 
@@ -51,9 +56,6 @@
 	const viewedVideos = ref([]);
 	const progressRatio = ref(0);
 	viewedVideos.value.push(currentVideo.value);
-
-	const videoOptions = ref([]);
-	const videoOrderMap = ref({});
 
 	const bottomBox = ref(null);
 	let startX = 0;
@@ -216,24 +218,8 @@
 			completed.value = 0;
 			pause.value = 1
 		})
-		player.value.on('ended', () => {
-			completed.value = 1;
-			const videoId = currentVideo.value;
-			const videoInfo = videoOptions.value.find(v => v.key === videoId);
-			const videoTitle = videoInfo ? videoInfo.label : videoId;
-			pushGTMEventComplete(videoId, videoTitle);
-		});
 
-		player.value.on('timeupdate', () => {
-			const currentTime = player.value.currentTime();
-			const videoId = currentVideo.value;
-			if (currentTime >= 2 && !gtmEventSent.value[videoId]) {
-				const videoInfo = videoOptions.value.find(v => v.key === videoId);
-				const videoTitle = videoInfo ? videoInfo.label : videoId;
-				pushGTMEventStart(videoId, videoTitle);
-				gtmEventSent.value[videoId] = true;
-			}
-		});
+		el = document.getElementById('broadcast');
 
 		if (bottomBox.value) {
 			bottomBox.value.addEventListener('mousedown', handleDragStart);
@@ -290,6 +276,13 @@
 			player.value.muted(!volume.value)
 		}
 	}
+
+	function toggleSize() {
+		console.log("aaa");
+		isFullscreen.value = !isFullscreen.value
+		el?.classList.toggle('fullscreen', isFullscreen.value)
+	}
+
 	function playVideo() {
 		if (!player.value) return
 		if (player.value.paused()) {
@@ -298,11 +291,6 @@
 		} else {
 			completed.value = 0;
 			player.value.pause()
-		}
-	}
-	function showButton() {
-		if (player.value) {
-			$(".movie-content-box").removeClass("hidden");
 		}
 	}
 </script>

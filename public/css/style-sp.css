@@ -1186,6 +1186,15 @@ body::-webkit-scrollbar {
   opacity: 1;
   transform: scale(1);
 }
+#broadcast.fullscreen {
+  top: 50%;
+  left: 50%;
+  right: initial;
+  bottom: initial;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 80vh;
+  transition: all 0.5s ease-in-out;
+}
 
 #location {
   position: fixed;
@@ -2706,7 +2715,7 @@ body::-webkit-scrollbar {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
-  transition: top 1s ease-in-out, transform 1s ease-in-out;
+  transition: top 1s ease-in-out, transform 1s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 @media screen and (max-width: 550px) {
   #mezamashi .content-box .location-box .location-ele {
@@ -2832,7 +2841,7 @@ body::-webkit-scrollbar {
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 125, 0, 0) 75%, #FF7D00 100%);
 }
 #mezamashi .content-box .location-box .location-ele.poyon {
-  box-shadow: initial;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 #mezamashi .content-box .location-box .location-ele.poyon .inside-box {
   transform-origin: bottom center;

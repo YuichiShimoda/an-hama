@@ -1059,6 +1059,14 @@ body::-webkit-scrollbar
 	&.is-show
 		opacity: 1.0
 		transform: scale(1.0)
+	&.fullscreen
+		top: 50%
+		left: 50%
+		right: initial
+		bottom: initial
+		transform: translate(-50%, -50%) rotate(90deg)
+		width: 80vh
+		transition: all 0.5s ease-in-out
 #location
 	position: fixed
 	top: 0
@@ -2342,7 +2350,7 @@ body::-webkit-scrollbar
 						.vignetting
 							background: radial-gradient(50% 50% at 50% 50%, rgba(#FF7D00, 0.0) 75%, #FF7D00 100%)
 				&.poyon
-					box-shadow: box-shadow: 2px 2px 3px rgba(#000, 0.1)
+					box-shadow: 2px 2px 3px rgba(#000, 0.1)
 					.inside-box
 						transform-origin: bottom center
 						animation: poyon 1.0s linear infinite
