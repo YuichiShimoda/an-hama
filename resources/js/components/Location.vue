@@ -1,10 +1,15 @@
 <template>
 	<div ref="bottomBox" class="location-content-box">
 		<div class="progress-bar-box">
+			<div class="each-bar-box is-active">
+				<div class="inside-bar" :style="{ transform: `scaleX(${progressRatio})` }"></div>
+			</div>
+		</div>
+<!-- 		<div class="progress-bar-box">
 			<div v-for="(log, index) in viewedVideos" :key="log" :class="['each-bar-box', { 'is-active': log === currentVideo }]">
 				<div class="inside-bar" :style="log === currentVideo ? { transform: `scaleX(${progressRatio})` } : {}"></div>
 			</div>
-		</div>
+		</div> -->
 		<div class="close-btn" @click="closeVideo">
 			<img class="icon" :src="'./image/movie/close.svg'" alt="閉じる">
 		</div>
