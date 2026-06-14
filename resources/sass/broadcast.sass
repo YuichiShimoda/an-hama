@@ -1,0 +1,393 @@
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+
+
+
+
+
+
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.progress-box
+	display: block
+	width: 300px
+	padding: 4px
+	margin: 0 auto 30px
+	border-radius: 30px
+	background: rgba(0, 0, 0, 0.1)
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.08)
+	+bp900
+		padding: 3px
+	+bp500
+		width: 250px
+	+bp450
+		width: 220px
+		margin: 0 auto 20px
+	.progress-bar
+		width: 50%
+		height: 10px
+		border-radius: 30px
+		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05))
+		background-color: #DCB474
+		transition: all 0.4s ease-in-out
+		transition-property: width, background-color
+		+bp500
+			height: 8px
+		+bp450
+			height: 7px
+		// +bp1200
+		// 	height: 9px
+		// +bp900
+		// 	height: 8px
+		&.step1
+			width: calc(100% / 6 * 0)
+		&.step2
+			width: calc(100% / 6 * 1)
+		&.step3
+			width: calc(100% / 6 * 2)
+		&.step4
+			width: calc(100% / 6 * 3)
+		&.step5
+			width: calc(100% / 6 * 4)
+		&.step6
+			width: calc(100% / 6 * 5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+.broadcast-content-box
+	display: block
+	width: 100%
+	height: 100%
+	border-radius: 20px
+	position: relative
+	overflow: hidden
+	+bp1000
+		border-radius: 10px
+	+bp450
+		border-radius: 5px
+	&.hidden
+		+bp500
+			.up-btn
+				opacity: 1.0
+				pointer-events: initial
+			.bottom-box
+				bottom: -260px
+	&::before
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		content: ""
+		display: block
+		width: 100%
+		height: 300px
+		border-radius: 20px
+		// background: linear-gradient(0deg, rgba(#000, 0.8) 0%, rgba(#000, 0.9) 30%, rgba(#000, 0.0) 100%)
+		z-index: 2
+		pointer-events: none
+		+bp1000
+			border-radius: 10px
+		+bp450
+			height: 280px
+			border-radius: 5px
+		+bp400
+			height: 260px
+	.progress-bar-box
+		position: absolute
+		top: 3%
+		left: 0
+		right: 0
+		margin: auto
+		display: flex
+		justify-content: center
+		align-items: center
+		width: calc(100% - 60px)
+		height: 46px
+		padding: 20px 0
+		z-index: 10
+		+bp700
+			top: 2%
+		+bp450
+			top: 7px
+			height: 24px
+			padding: 10px 0
+		+bp400
+			top: 5px
+		.each-bar-box
+			display: block
+			width: 100%
+			height: 100%
+			background-color: #fff
+			box-shadow: 0 1px 4px #aaa
+			border-radius: 3px
+			margin-left: 2%
+			margin-right: 2%
+			position: relative
+			+bp450
+				box-shadow: 0 1px 3px #aaa
+				border-radius: 2px
+			&:first-of-type
+				margin-left: 0
+			&:last-of-type
+				margin-right: 0
+			&.is-active
+				.inside-bar
+					background-color: #b92928
+					transition: transform 0.1s linear
+					will-change: transform
+			&.is-active ~ .each-bar-box
+				opacity: 0.3
+				.inside-bar
+					background-color: none
+			.inside-bar
+				position: absolute
+				top: 1.3px
+				left: 1px
+				width: calc(100% - 2px)
+				height: 4px
+				border-radius: 2px
+				background-color: #fff
+				transform-origin: left center
+				+bp450
+					top: 0.8px
+					height: 3px
+					border-radius: 1.5px
+	.close-btn
+		position: absolute
+		top: 32%
+		right: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		aspect-ratio: 1 / 1
+		border-radius: 50%
+		background-color: rgba(#fff, 0.7)
+		box-shadow: inset 0 1px 2px rgba(#000, 0.4)
+		z-index: 10
+		+bp1000
+			width: 36px
+		+bp450
+			right: 10px
+			width: 30px
+		.icon
+			display: block
+			width: 37.5%
+	.volume-btn
+		position: absolute
+		top: calc(32% + 45px)
+		right: 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		aspect-ratio: 1 / 1
+		border-radius: 50%
+		background-color: rgba(#fff, 0.7)
+		box-shadow: inset 0 1px 2px rgba(#000, 0.4)
+		z-index: 10
+		+bp1000
+			width: 36px
+			top: calc(32% + 40px)
+		+bp450
+			top: calc(32% + 35px)
+			right: 10px
+			width: 30px
+		&.is-off .icon:nth-of-type(2)
+			opacity: 1.0
+		.icon
+			display: block
+			width: 50%
+			transition: all 0.5s ease-in-out
+			&:nth-of-type(2)
+				opacity: 0.0
+	.play-btn
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		width: 100%
+		height: 100%
+		z-index: 3
+		.pause-btn
+			display: block
+			width: 100%
+			height: 100%
+			position: relative
+			.icon
+				position: absolute
+				top: 50%
+				right: 0
+				left: 0
+				margin: auto
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 80px
+				aspect-ratio: 1 / 1
+				border-radius: 50%
+				box-shadow: inset 0 1px 2px rgba(#000, 0.3)
+				transform: translateY(-50%)
+				opacity: 0.7
+				+bp700
+					width: 70px
+				+bp600
+					width: 64px
+				+bp450
+					width: 60px
+				+bp400
+					width: 50px
+	.logo-white
+		position: absolute
+		top: 32%
+		right: 30px
+		display: block
+		width: 160px
+		z-index: 3
+		opacity: 0.6
+		+bp1200
+			width: 130px
+		+bp700
+			width: 110px
+		+bp600
+			width: 90px
+		+bp450
+			top: 33%
+			width: 70px
+		+bp400
+			width: 60px
+	.completed-btn
+		position: absolute
+		top: 0
+		right: 0
+		display: block
+		width: 100%
+		height: 100%
+		z-index: 1
+		.icon
+			position: absolute
+			top: 50%
+			right: 0
+			left: 0
+			margin: auto
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 80px
+			aspect-ratio: 1 / 1
+			border-radius: 50%
+			box-shadow: inset 0 1px 2px rgba(#000, 0.3)
+			transform: translateY(-50%)
+			opacity: 0.7
+			+bp700
+				width: 70px
+			+bp600
+				width: 64px
+			+bp450
+				width: 60px
+			+bp400
+				width: 50px
+	.play-movie
+		display: block
+		width: 100%
+		height: 100%
+		border-radius: 20px
+		overflow: hidden
+		+bp1000
+			border-radius: 10px
+		+bp450
+			border-radius: 5px
+		> video
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: top center
+			overflow: hidden

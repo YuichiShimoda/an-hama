@@ -24,7 +24,7 @@
 		</div>
 		<!-- <img v-if="!pause || !completed" class="logo-white" :src="'./image/mezamashi/logo-white.svg'" alt="ロゴ"> -->
 		<div v-if="completed" class="completed-btn">
-			<img class="icon" :src="'./image/movie/completed.svg'" alt="リピート">
+			<img class="icon" :src="'./image/mezamashi/completed.svg'" alt="リピート">
 		</div>
 		<video ref="videoPlayer" class="play-movie"></video>
 	</div>
