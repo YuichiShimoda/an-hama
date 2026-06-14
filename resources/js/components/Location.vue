@@ -55,9 +55,13 @@
 	const videoOptions = ref([]);
 	const videoOrderMap = ref({});
 
-	const bottomBox = ref(null)
+	const bottomBox = ref(null);
+	let startX = 0;
 	let startY = 0;
+	let startTime = 0;
 	let isDragging = false;
+	let dragDirection = null;
+	const SENSITIVITY = 0.05;
 
 	const gtmEventSent = ref({});
 
@@ -66,6 +70,7 @@
 		startY = e.touches[0].clientY;
 		isDragging = true;
 	}
+
 	function handleTouchMove(e) {
 		if (!isDragging) return;
 		const deltaY = e.touches[0].clientY - startY;
@@ -111,6 +116,73 @@
 				});
 			}
 		}
+	}
+
+	function handleDragStart(e) {
+		console.log("handleDrag  -- Start");
+		if (e.target.closest('.close-btn') || e.target.closest('.volume-btn') || e.target.closest('.play-btn') || e.target.closest('.completed-btn')) {
+			return;
+		}
+
+		if (e.touches && e.cancelable) {
+			e.preventDefault();
+		}
+
+		const touch = e.touches ? e.touches[0] : e;
+		startX = touch.pageX;
+		startY = touch.pageY;
+		isDragging = true;
+		dragDirection = null;
+
+		if (player.value) {
+			startTime = player.value.currentTime();
+		}
+	}
+
+	function handleDragMove(e) {
+		console.log("handleDrag     Move");
+		if (!isDragging) return;
+		const touch = e.touches ? e.touches[0] : e;
+		const deltaX = touch.pageX - startX;
+		const deltaY = touch.pageY - startY;
+
+		if (!dragDirection) {
+			if (Math.abs(deltaX) > 10) {
+				dragDirection = 'horizontal';
+				if (player.value && !player.value.paused()) {
+					player.value.pause();
+				}
+			} else if (Math.abs(deltaY) > 10) {
+				dragDirection = 'vertical';
+			}
+			return;
+		}
+
+		if (e.cancelable) {
+			e.preventDefault();
+		}
+
+		if (dragDirection === 'horizontal' && player.value) {
+			let targetTime = startTime + (deltaX * SENSITIVITY);
+			const duration = player.value.duration();
+			if (targetTime < 0) targetTime = 0;
+			if (targetTime > duration) targetTime = duration;
+			player.value.currentTime(targetTime);
+		}
+
+		if (dragDirection === 'vertical') {
+			if (deltaY > 50 && bottomBox.value) {
+				bottomBox.value.classList.add('hidden');
+				isDragging = false;
+			}
+		}
+	}
+
+	function handleDragEnd() {
+		console.log("handleDrag     end---");
+		if (!isDragging) return;
+		isDragging = false;
+		dragDirection = null;
 	}
 
 	onMounted(async () => {
@@ -162,23 +234,34 @@
 				gtmEventSent.value[videoId] = true;
 			}
 		});
+
+		if (bottomBox.value) {
+			bottomBox.value.addEventListener('mousedown', handleDragStart);
+			bottomBox.value.addEventListener('touchstart', handleDragStart, { passive: false });
+		}
+
+		window.addEventListener('mousemove', handleDragMove);
+		window.addEventListener('touchmove', handleDragMove, { passive: false });
+		window.addEventListener('mouseup', handleDragEnd);
+		window.addEventListener('touchend', handleDragEnd);
+
 		updateProgress();
-		// if (window.innerWidth <= 500 && bottomBox.value) {
-		// 	bottomBox.value.addEventListener('touchstart', handleTouchStart);
-		// 	bottomBox.value.addEventListener('touchmove', handleTouchMove);
-		// 	bottomBox.value.addEventListener('touchend', handleTouchEnd);
-		// }
 	})
 
 	onBeforeUnmount(() => {
 		if (player.value) {
 			player.value.dispose()
 		}
-		// if (window.innerWidth <= 500 && bottomBox.value) {
-		// 	bottomBox.value.removeEventListener('touchstart', handleTouchStart);
-		// 	bottomBox.value.removeEventListener('touchmove', handleTouchMove);
-		// 	bottomBox.value.removeEventListener('touchend', handleTouchEnd);
-		// }
+
+		if (bottomBox.value) {
+			bottomBox.value.removeEventListener('mousedown', handleDragStart);
+			bottomBox.value.removeEventListener('touchstart', handleDragStart);
+		}
+
+		window.removeEventListener('mousemove', handleDragMove);
+		window.removeEventListener('touchmove', handleDragMove);
+		window.removeEventListener('mouseup', handleDragEnd);
+		window.removeEventListener('touchend', handleDragEnd);
 	})
 
 	watch(currentVideo, (newVideo) => {
