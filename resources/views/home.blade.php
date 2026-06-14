@@ -385,15 +385,15 @@
                         </div>
                     </div>
                 </div>
-                <div id="tv" class="tv-box">
+<!--                 <div id="tv" class="tv-box">
                     <div class="monitor-box">
-                        <img class="play-icon lazyload" data-src="{{ asset('image/mezamashi/play.svg') }}" alt="再生">
+                        <img class="play-icon lazyload" data-src="{{ asset('image/mezamashi/play.svg') }}" style="display: none;" alt="再生">
                         <video class="loop-movie lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
                             <source src="{{ asset('movie/top/mezamashi/tv.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                     <img class="icon lazyload" data-src="{{ asset('image/mezamashi/tv.svg') }}" alt="テレビ">
-                </div>
+                </div> -->
                 <div id="phone" class="phone-box">
                     <img class="play-icon lazyload" data-src="{{ asset('image/mezamashi/play.svg') }}" alt="再生">
                     <video class="loop-movie lazyload" preload="none" autoplay loop muted playsinline disablepictureinpicture>
@@ -401,7 +401,7 @@
                     </video>
                     <img class="icon lazyload" data-src="{{ asset('image/mezamashi/phone.svg') }}" alt="スマホ">
                 </div>
-                <img class="screenshot lazyload" data-src="{{ asset('image/mezamashi/screenshot.webp') }}" alt="スクリーンショット">
+                <!-- <img class="screenshot lazyload" data-src="{{ asset('image/mezamashi/screenshot.webp') }}" alt="スクリーンショット"> -->
             </div>
             <div class="comment-box">
                 <p>阿部さん、撮影スタッフの方々には撮影外のメニューにまで<br>興味を持っていただき、大変嬉しく思います。</p>

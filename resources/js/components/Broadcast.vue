@@ -1,5 +1,5 @@
 <template>
-	<div ref="bottomBox" class="broadcast-content-box">
+	<div ref="bottomBox" class="broadcast-content-box" :class="{ fullscreen: isFullscreen }">
 		<div class="progress-bar-box">
 			<div class="each-bar-box is-active">
 				<div class="inside-bar" :style="{ transform: `scaleX(${progressRatio})` }"></div>
@@ -17,14 +17,14 @@
 			<img v-if="volume" class="icon" :src="'./image/movie/volume-on.svg'" alt="音声ON">
 			<img v-else class="icon" :src="'./image/movie/volume-off.svg'" alt="音声OFF">
 		</div>
+		<div class="size-btn" @click="toggleSize">
+			<img v-if="!isFullscreen" class="icon" :src="'./image/mezamashi/expand.svg'" alt="フルサイズ">
+			<img v-else class="icon" :src="'./image/mezamashi/shrink.svg'" alt="通常サイズ">
+		</div>
 		<div class="play-btn" @click="playVideo">
 			<div class="pause-btn">
 				<img v-if="pause && !completed" class="icon" :src="'./image/movie/pause.svg'" alt="再生">
 			</div>
-		</div>
-		<div class="size-btn" @click="toggleSize">
-			<img v-if="!isFullscreen" class="icon" :src="'./image/mezamashi/expand.svg'" alt="フルサイズ">
-			<img v-else class="icon" :src="'./image/mezamashi/shrink.svg'" alt="通常サイズ">
 		</div>
 		<!-- <img v-if="!pause || !completed" class="logo-white" :src="'./image/mezamashi/logo-white.svg'" alt="ロゴ"> -->
 		<div v-if="completed" class="completed-btn">
@@ -47,8 +47,7 @@
 	const videoPlayer = ref(null)
 	const player = ref(null)
 	const volume = ref(1)
-	const isFullscreen = ref(false)
-	let el = null
+	const isFullscreen = ref(0)
 	const pause = ref(0)
 	const completed = ref(0)
 
@@ -219,8 +218,6 @@
 			pause.value = 1
 		})
 
-		el = document.getElementById('broadcast');
-
 		if (bottomBox.value) {
 			bottomBox.value.addEventListener('mousedown', handleDragStart);
 			bottomBox.value.addEventListener('touchstart', handleDragStart, { passive: false });
@@ -278,9 +275,7 @@
 	}
 
 	function toggleSize() {
-		console.log("aaa");
-		isFullscreen.value = !isFullscreen.value
-		el?.classList.toggle('fullscreen', isFullscreen.value)
+		isFullscreen.value = isFullscreen.value ? 0 : 1
 	}
 
 	function playVideo() {

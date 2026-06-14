@@ -42,25 +42,25 @@ $(document).on('click', '#appeal', function () {
 	movieApp.mount($mountTarget[0]);
 	$mountTarget.data('vueMounted', true);
 });
-$(document).on('click', '#tv', function () {
-	const $mountTarget = $('#broadcast');
-	$mountTarget.toggleClass("is-show");
-	$("#wrap").toggleClass("no-scroll");
-	if (!$mountTarget.length) return;
-	if ($mountTarget.data('vueMounted') === true) return;
-	broadcastApp = createApp(Broadcast, {
-		onClose: () => {
-			// Vue アプリを unmount
-			broadcastApp.unmount();
-			broadcastApp = null;
-			// DOM をクリア
-			$mountTarget.empty();
-			$mountTarget.data('vueMounted', false);
-		}
-	});
-	broadcastApp.mount($mountTarget[0]);
-	$mountTarget.data('vueMounted', true);
-});
+// $(document).on('click', '#tv', function () {
+// 	const $mountTarget = $('#broadcast');
+// 	$mountTarget.toggleClass("is-show");
+// 	$("#wrap").toggleClass("no-scroll");
+// 	if (!$mountTarget.length) return;
+// 	if ($mountTarget.data('vueMounted') === true) return;
+// 	broadcastApp = createApp(Broadcast, {
+// 		onClose: () => {
+// 			// Vue アプリを unmount
+// 			broadcastApp.unmount();
+// 			broadcastApp = null;
+// 			// DOM をクリア
+// 			$mountTarget.empty();
+// 			$mountTarget.data('vueMounted', false);
+// 		}
+// 	});
+// 	broadcastApp.mount($mountTarget[0]);
+// 	$mountTarget.data('vueMounted', true);
+// });
 $(document).on('click', '#phone', function () {
 	const $mountTarget = $('#location');
 	$mountTarget.toggleClass("is-show");

@@ -267,6 +267,59 @@
 .broadcast-content-box .volume-btn .icon:nth-of-type(2) {
   opacity: 0;
 }
+.broadcast-content-box .size-btn {
+  position: absolute;
+  top: 32%;
+  right: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+@media screen and (max-width: 1000px) {
+  .broadcast-content-box .size-btn {
+    right: 63px;
+    width: 36px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .broadcast-content-box .size-btn {
+    right: 60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .broadcast-content-box .size-btn {
+    right: 63px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .broadcast-content-box .size-btn {
+    right: 45px;
+    width: 30px;
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+@media screen and (max-width: 400px) {
+  .broadcast-content-box .size-btn {
+    right: 46px;
+  }
+}
+.broadcast-content-box .size-btn .icon {
+  display: block;
+  width: 50%;
+  transition: all 0.5s ease-in-out;
+}
+.broadcast-content-box .size-btn .icon:nth-of-type(2) {
+  opacity: 0;
+}
 .broadcast-content-box .play-btn {
   position: absolute;
   top: 0;
@@ -317,59 +370,6 @@
   .broadcast-content-box .play-btn .pause-btn .icon {
     width: 50px;
   }
-}
-.broadcast-content-box .size-btn {
-  position: absolute;
-  top: 32%;
-  right: 66px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
-  z-index: 10;
-}
-@media screen and (max-width: 1000px) {
-  .broadcast-content-box .size-btn {
-    right: 63px;
-    width: 36px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .broadcast-content-box .size-btn {
-    right: 60px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .broadcast-content-box .size-btn {
-    right: 63px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .broadcast-content-box .size-btn {
-    display: flex;
-    right: 45px;
-    width: 30px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .broadcast-content-box .size-btn {
-    right: 46px;
-  }
-}
-.broadcast-content-box .size-btn.is-off .icon:nth-of-type(2) {
-  opacity: 1;
-}
-.broadcast-content-box .size-btn .icon {
-  display: block;
-  width: 50%;
-  transition: all 0.5s ease-in-out;
-}
-.broadcast-content-box .size-btn .icon:nth-of-type(2) {
-  opacity: 0;
 }
 .broadcast-content-box .logo-white {
   position: absolute;

@@ -3088,32 +3088,24 @@ body::-webkit-scrollbar {
 #mezamashi .content-box .collection-box .phone-box {
   display: block;
   width: 130px;
-  margin-left: 50px;
+  margin-left: 80px;
   position: relative;
   z-index: 1100;
 }
 @media screen and (max-width: 1400px) {
   #mezamashi .content-box .collection-box .phone-box {
     width: 120px;
-    margin-left: 40px;
   }
 }
 @media screen and (max-width: 1200px) {
   #mezamashi .content-box .collection-box .phone-box {
     width: 110px;
-    margin-left: 30px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  #mezamashi .content-box .collection-box .phone-box {
-    margin-left: 20px;
   }
 }
 @media screen and (max-width: 1000px) {
   #mezamashi .content-box .collection-box .phone-box {
     width: 125px;
-    margin-top: 50px;
-    margin-left: 0px;
+    margin-left: 60px;
   }
 }
 #mezamashi .content-box .collection-box .phone-box .play-icon {

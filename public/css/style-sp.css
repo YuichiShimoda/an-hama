@@ -3006,7 +3006,7 @@ body::-webkit-scrollbar {
   align-items: flex-end;
   flex-wrap: wrap;
   width: fit-content;
-  max-width: 550px;
+  max-width: 450px;
   margin: 80px auto 0;
 }
 @media screen and (max-width: 450px) {
@@ -3245,19 +3245,13 @@ body::-webkit-scrollbar {
 #mezamashi .content-box .collection-box .phone-box {
   display: block;
   width: 130px;
-  margin-left: 80px;
+  margin-top: 40px;
   position: relative;
   z-index: 1100;
 }
 @media screen and (max-width: 450px) {
   #mezamashi .content-box .collection-box .phone-box {
     width: 115px;
-    margin-left: 40px;
-  }
-}
-@media screen and (max-width: 420px) {
-  #mezamashi .content-box .collection-box .phone-box {
-    margin-left: 30px;
   }
 }
 #mezamashi .content-box .collection-box .phone-box .play-icon {
