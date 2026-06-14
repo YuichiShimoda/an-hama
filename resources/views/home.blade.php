@@ -67,8 +67,8 @@
     <link href="{{ asset('/css/mouse.css') }}" rel='stylesheet' type='text/css' media='all'>
     <link href="{{ asset('/css/common.css') }}" rel='stylesheet' type='text/css' media='all'>
     <!-- <link href="{{ asset('/css/upload.css') }}" rel='stylesheet' type='text/css' media='all'> -->
-    <link href="{{ asset('/css/style-sp.css') }}" rel='stylesheet' type='text/css' media='all and (max-width: 700px)'>
-    <link href="{{ asset('/css/style.css') }}" rel='stylesheet' type='text/css' media='all and (min-width: 700px)'>
+    <link href="{{ asset('/css/style-sp.css') }}?v=1" rel='stylesheet' type='text/css' media='all and (max-width: 700px)'>
+    <link href="{{ asset('/css/style.css') }}?v=1" rel='stylesheet' type='text/css' media='all and (min-width: 700px)'>
 @stop
 
 
