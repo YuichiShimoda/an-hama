@@ -124,6 +124,28 @@ $(window).on('load', function() {
 	} else {
 		setTimeout(stopload, 500);
 	}
+	$(function() {
+		if ($(window).width() > 450) return;
+		const $targets = $(".location-ele");
+		let lastTime = 0;
+		const interval = 4000;
+
+		function poyon(timestamp) {
+			if (!lastTime) lastTime = timestamp;
+			const elapsed = timestamp - lastTime;
+			if (elapsed >= interval) {
+				lastTime = timestamp;
+				const index = Math.floor(Math.random() * $targets.length);
+				const $el = $targets.eq(index);
+				$el.addClass("poyon");
+				setTimeout(() => {
+					$el.removeClass("poyon");
+				}, 1000);
+			}
+			requestAnimationFrame(poyon);
+		}
+		requestAnimationFrame(poyon);
+	});
 });
 
 function stopload() {

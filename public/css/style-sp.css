@@ -2706,7 +2706,7 @@ body::-webkit-scrollbar {
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
   position: relative;
   overflow: hidden;
-  transition: all 1s ease-in-out;
+  transition: top 1s ease-in-out, transform 1s ease-in-out;
 }
 @media screen and (max-width: 550px) {
   #mezamashi .content-box .location-box .location-ele {
@@ -2718,6 +2718,7 @@ body::-webkit-scrollbar {
   #mezamashi .content-box .location-box .location-ele {
     width: 100px;
     border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
   }
 }
 #mezamashi .content-box .location-box .location-ele:not(:nth-of-type(4)):hover {
@@ -2829,6 +2830,13 @@ body::-webkit-scrollbar {
 }
 #mezamashi .content-box .location-box .location-ele:nth-of-type(7) .inside-box .vignetting {
   background: radial-gradient(50% 50% at 50% 50%, rgba(255, 125, 0, 0) 75%, #FF7D00 100%);
+}
+#mezamashi .content-box .location-box .location-ele.poyon {
+  box-shadow: initial;
+}
+#mezamashi .content-box .location-box .location-ele.poyon .inside-box {
+  transform-origin: bottom center;
+  animation: poyon 1s linear infinite;
 }
 #mezamashi .content-box .location-box .location-ele .inside-box {
   display: block;
@@ -3147,6 +3155,36 @@ body::-webkit-scrollbar {
     width: 80px;
   }
 }
+#mezamashi .content-box .collection-box .sign-box .colored-paper .inside-box {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#mezamashi .content-box .collection-box .sign-box .colored-paper .inside-box .talent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1;
+  font-family: "miniwa-hv-v3", sans-serif;
+  letter-spacing: 0.05em;
+  color: #b92928;
+}
+#mezamashi .content-box .collection-box .sign-box .colored-paper .inside-box .img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+}
 #mezamashi .content-box .collection-box .tv-box {
   display: block;
   width: 220px;
@@ -3326,6 +3364,23 @@ body::-webkit-scrollbar {
   }
   100% {
     transform: translateY(-40%) rotate3d(0, 0, 0.7, -5deg);
+  }
+}
+@keyframes poyon {
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.1, 0.9);
+  }
+  50% {
+    transform: scale(0.95, 1.05);
+  }
+  70% {
+    transform: scale(1.025, 0.975);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }
 #season {

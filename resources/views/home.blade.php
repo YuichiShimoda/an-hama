@@ -378,7 +378,12 @@
                     </div>
                     <h2>あんハマ発祥『 つけかけパスタ - Dip & Pour - 』<br>"カルボナーラ"をお召し上がりいただきました。</h2>
                     <p class="big-en">Talent</p>
-                    <img class="colored-paper lazyload" data-src="{{ asset('image/mezamashi/colored-paper.webp') }}" alt="色紙">
+                    <div class="colored-paper lazyload">
+                        <div class="inside-box">
+                            <h3 class="talent">阿部 華也子</h3>
+                            <img class="img lazyload" data-src="{{ asset('image/mezamashi/colored-paper.webp') }}" alt="色紙">
+                        </div>
+                    </div>
                 </div>
                 <div id="tv" class="tv-box">
                     <div class="monitor-box">

@@ -2253,13 +2253,14 @@ body::-webkit-scrollbar
 				box-shadow: 4px 4px 6px rgba(#000, 0.25)
 				position: relative
 				overflow: hidden
-				transition: all 1.0s ease-in-out
+				transition: top 1.0s ease-in-out, transform 1.0s ease-in-out, box-shadow 0.5s ease-in-out
 				+bp550
 					width: 125px
 					border-radius: 18px
 				+bp450
 					width: 100px
 					border-radius: 10px
+					box-shadow: 2px 2px 3px rgba(#000, 0.25)
 				&:not(:nth-of-type(4)):hover
 					top: -30px !important
 					transform: rotate(0deg) !important
@@ -2340,6 +2341,11 @@ body::-webkit-scrollbar
 					.inside-box
 						.vignetting
 							background: radial-gradient(50% 50% at 50% 50%, rgba(#FF7D00, 0.0) 75%, #FF7D00 100%)
+				&.poyon
+					box-shadow: box-shadow: 2px 2px 3px rgba(#000, 0.1)
+					.inside-box
+						transform-origin: bottom center
+						animation: poyon 1.0s linear infinite
 				.inside-box
 					display: block
 					width: 100%
@@ -2586,6 +2592,33 @@ body::-webkit-scrollbar
 						top: -30px
 						right: -20px
 						width: 80px
+					.inside-box
+						display: block
+						width: 100%
+						height: 100%
+						position: relative
+						.talent
+							position: absolute
+							top: 0
+							left: 0
+							right: 0
+							bottom: 0
+							margin: auto
+							display: block
+							width: fit-content
+							height: fit-content
+							font-weight: 400
+							font-size: 10px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.05em
+							color: #b92928
+						.img
+							display: block
+							width: 100%
+							height: 100%
+							z-index: 2
+							position: relative
 			.tv-box
 				display: block
 				width: 220px
@@ -2717,6 +2750,17 @@ body::-webkit-scrollbar
 		transform: translateY(10%) rotate3d(0,0,1,15deg)
 	100%
 		transform: translateY(-40%) rotate3d(0,0,0.7,-5deg)
+@keyframes poyon
+	0%
+		transform: scale(1, 1)
+	30%
+		transform: scale(1.1, 0.9)
+	50%
+		transform: scale(0.95, 1.05)
+	70%
+		transform: scale(1.025, 0.975)
+	100%
+		transform: scale(1, 1)
 
 
 
