@@ -329,7 +329,7 @@
                         <div class="vignetting"></div>
                         <img class="cut lazyload" data-src="{{ asset('image/mezamashi/location4_check.webp') }}" alt="撮影カット4">
                         <video class="short-movie lazyload" preload="none" loop muted playsinline disablepictureinpicture>
-                            <source src="{{ asset('movie/top/mezamashi/location4.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('movie/top/mezamashi/location4-check.mp4') }}" type="video/mp4">
                         </video>
                     </div>
                 </div>
