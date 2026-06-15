@@ -8,6 +8,7 @@ export default defineConfig({
             input: [
                 'resources/js/admin/movie.js',
                 'resources/js/animation.js',
+                'resources/js/check.js',
                 'resources/js/app.js',
                 'resources/js/bootstrap.js',
                 'resources/js/horizontal.js',

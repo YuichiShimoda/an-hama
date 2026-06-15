@@ -72,4 +72,21 @@ class FrontController extends Controller
     {
         return view('voice', ['weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease]);
     }
+
+    public function check(): View
+    {
+        $today = Carbon::today();
+        $change_news = News::whereNotNull('reservation_day')->Where('reservation_day', '<', $today)->get();
+        foreach ($change_news as $ele) {
+            $newNews = $ele->replicate();
+            $newNews->reservation_day = null;
+            $newNews->created_at = now();
+            $newNews->updated_at = now();
+            $newNews->save();
+            $ele->delete();
+        }
+        $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
+        $movie = Movie::where('is_visible', true)->where('first_movie', true)->first();
+        return view('check', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
+    }
 }
