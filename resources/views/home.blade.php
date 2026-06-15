@@ -67,8 +67,8 @@
     <link href="{{ asset('/css/mouse.css') }}" rel='stylesheet' type='text/css' media='all'>
     <link href="{{ asset('/css/common.css') }}" rel='stylesheet' type='text/css' media='all'>
     <!-- <link href="{{ asset('/css/upload.css') }}" rel='stylesheet' type='text/css' media='all'> -->
-    <link href="{{ asset('/css/style-sp.css') }}?v=3" rel='stylesheet' type='text/css' media='all and (max-width: 700px)'>
-    <link href="{{ asset('/css/style.css') }}?v=3" rel='stylesheet' type='text/css' media='all and (min-width: 700px)'>
+    <link href="{{ asset('/css/style-sp.css') }}?v=4" rel='stylesheet' type='text/css' media='all and (max-width: 700px)'>
+    <link href="{{ asset('/css/style.css') }}?v=4" rel='stylesheet' type='text/css' media='all and (min-width: 700px)'>
 @stop
 
 
@@ -407,6 +407,7 @@
                 <p>阿部 華也子さん、撮影スタッフの方々には<br>撮影外のメニューにまで<br>興味を持っていただき、大変嬉しく思います。</p>
                 <p>ご来店ありがとうございました！</p>
             </div>
+            <p class="note">※ 本セクションにおける映像および画像コンテンツは、<br>取材責任者の正式な許諾を得て撮影された、当店の一次著作物となります。</p>
         </div>
     </section>
 

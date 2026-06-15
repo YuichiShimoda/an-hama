@@ -2014,6 +2014,7 @@ body::-webkit-scrollbar
 	background-size: cover
 	background-position: center top
 	background-repeat: no-repeat
+	position: relative
 	+bp450
 		padding: 100px 0 80px
 	.content-box
@@ -2724,6 +2725,28 @@ body::-webkit-scrollbar
 					font-size: 13px
 				+bp400
 					font-size: 12px
+	.note
+		position: absolute
+		right: 30px
+		bottom: 15px
+		display: block
+		width: fit-content
+		font-weight: 400
+		font-size: 10px
+		line-height: 1.4
+		font-family: $iroha-25icho-stdn
+		letter-spacing: 0.05em
+		color: #fff
+		white-space: nowrap
+		text-indent: -0.9rem
+		padding-left: 0.9rem
+		+bp450
+			right: 15px
+			bottom: 10px
+			text-indent: -0.8rem
+			padding-left: 0.8rem
+			transform-origin: right bottom
+			transform: scale(0.8)
 @keyframes heartBeat
 	0%
 		transform: scale(1.0)

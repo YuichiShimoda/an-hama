@@ -2010,6 +2010,7 @@ body::-webkit-scrollbar {
   background-position: center top;
   background-repeat: no-repeat;
   overflow: hidden;
+  position: relative;
 }
 @media screen and (max-width: 1000px) {
   #mezamashi {
@@ -3208,6 +3209,30 @@ body::-webkit-scrollbar {
 }
 @media screen and (max-width: 800px) {
   #mezamashi .content-box .comment-box > p br {
+    display: block;
+  }
+}
+#mezamashi .note {
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  display: block;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.4;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  color: #fff;
+  white-space: nowrap;
+  text-indent: -0.9rem;
+  padding-left: 0.9rem;
+}
+#mezamashi .note br {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  #mezamashi .note br {
     display: block;
   }
 }

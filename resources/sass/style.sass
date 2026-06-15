@@ -1785,6 +1785,7 @@ body::-webkit-scrollbar
 	background-position: center top
 	background-repeat: no-repeat
 	overflow: hidden
+	position: relative
 	+bp1000
 		padding: 180px 0 150px
 	+bp800
@@ -2582,6 +2583,25 @@ body::-webkit-scrollbar
 					display: none
 					+bp800
 						display: block
+	.note
+		position: absolute
+		right: 30px
+		bottom: 15px
+		display: block
+		width: fit-content
+		font-weight: 400
+		font-size: 10px
+		line-height: 1.4
+		font-family: $iroha-25icho-stdn
+		letter-spacing: 0.05em
+		color: #fff
+		white-space: nowrap
+		text-indent: -0.9rem
+		padding-left: 0.9rem
+		br
+			display: none
+			+bp900
+				display: block
 @keyframes heartBeat
 	0%
 		transform: scale(1.0)
