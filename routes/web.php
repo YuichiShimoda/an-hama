@@ -39,7 +39,7 @@ Route::post('voice', [VoiceController::class, 'submit'])->name('voice.submit');
 
 
 // Test
-Route::get('zni3xwapmd8khmwa', [App\Http\Controllers\FrontController::class, 'check'])->name('check');
+// Route::get('zni3xwapmd8khmwa', [App\Http\Controllers\FrontController::class, 'check'])->name('check');
 
 
 
