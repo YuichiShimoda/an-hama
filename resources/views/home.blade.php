@@ -472,7 +472,7 @@
                     <div class="tit-box">
                         <div class="period-box">
                             <!-- <p>3月,4月限定</p> -->
-                            <p>5月,6月限定</p>
+                            <p>7月,8月限定</p>
                         </div>
                         <h2 class="menu-tit">季節のつけかけパスタ</h2>
                     </div>
