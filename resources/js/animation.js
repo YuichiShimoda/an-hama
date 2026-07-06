@@ -108,7 +108,18 @@ function enableScrollOnWrap() {
 
 
 
-
+$(function() {
+	const $video = $('#mv-video');
+	if ($video.length === 0) return;
+	const isMobile = window.matchMedia('(max-width: 450px)').matches;
+	const videoSrc = isMobile ? $video.data('sp') : $video.data('pc');
+	$video.attr('src', videoSrc);
+	const videoElement = $video[0];
+	videoElement.load();
+	videoElement.play().catch(function(error) {
+		console.log("Autoplay prevented:", error);
+	});
+});
 
 
 // loading animation
@@ -344,6 +355,11 @@ $(document).on("visibilitychange", function() {
 		video.play();
 	}
 });
+
+
+
+
+
 
 
 

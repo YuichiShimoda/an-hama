@@ -122,11 +122,9 @@
 @section('content')
     <section id="mv">
         <div class="video-box">
-            <video preload="none" autoplay loop muted playsinline disablepictureinpicture>
-                <source src="{{ asset('movie/top/mv.mp4') }}" type="video/mp4">
-            </video>
+            <video id="mv-video" preload="none" autoplay loop muted playsinline disablepictureinpicture data-pc="{{ asset('movie/top/mv.mp4') }}" data-sp="{{ asset('movie/top/mv-sp.mp4') }}"></video>
         </div>
-        <img class="mesh" src="{{ asset('image/top/mesh.png') }}" alt="メッシュ">
+        <img class="mesh" src="{{ asset('image/top/mesh.webp') }}" alt="メッシュ">
         <!-- <p class="center">キャッチコピーキャッチ<br>キャッチコピーキャッチコピー<br>キャッチコピー</p> -->
         <div class="center-box">
             <div class="inside">
