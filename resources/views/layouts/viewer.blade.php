@@ -19,28 +19,28 @@
 		<style>
 			@font-face {
 				font-family: 'miniwa-lt-v3';
-				src: url("{{ secure_asset('fonts/MinIWA-Lt-V3-Regular.woff2') }}") format('woff2');
+				src: url('https://an-hama.com/fonts/MinIWA-Lt-V3-Regular.woff2') format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'miniwa-md-v3';
-				src: url("{{ secure_asset('fonts/MinIWA-Md-V3-Regular.woff2') }}") format('woff2');
+				src: url('https://an-hama.com/fonts/MinIWA-Md-V3-Regular.woff2') format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'miniwa-bd-v3';
-				src: url("{{ secure_asset('fonts/MinIWA-Bd-V3-Regular.woff2') }}") format('woff2');
+				src: url('https://an-hama.com/fonts/MinIWA-Bd-V3-Regular.woff2') format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'miniwa-hv-v3';
-				src: url("{{ secure_asset('fonts/MinIWA-Hv-V3-Regular.woff2') }}") format('woff2');
+				src: url('https://an-hama.com/fonts/MinIWA-Hv-V3-Regular.woff2') format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
