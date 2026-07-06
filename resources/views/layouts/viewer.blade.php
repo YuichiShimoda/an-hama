@@ -19,42 +19,42 @@
 		<style>
 			@font-face {
 				font-family: 'miniwa-lt-v3';
-				src: url("{{ asset('fonts/MinIWA-Lt-V3-Regular.ttf') }}") format('truetype');
+				src: url("{{ asset('fonts/MinIWA-Lt-V3-Regular.woff2') }}") format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'miniwa-md-v3';
-				src: url("{{ asset('fonts/MinIWA-Md-V3-Regular.ttf') }}") format('truetype');
+				src: url("{{ asset('fonts/MinIWA-Md-V3-Regular.woff2') }}") format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'miniwa-bd-v3';
-				src: url("{{ asset('fonts/MinIWA-Bd-V3-Regular.ttf') }}") format('truetype');
+				src: url("{{ asset('fonts/MinIWA-Bd-V3-Regular.woff2') }}") format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'miniwa-hv-v3';
-				src: url("{{ asset('fonts/MinIWA-Hv-V3-Regular.ttf') }}") format('truetype');
+				src: url("{{ asset('fonts/MinIWA-Hv-V3-Regular.woff2') }}") format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'morfin';
-				src: url("{{ asset('fonts/MorfinSans-Regular.ttf') }}") format('truetype');
+				src: url("{{ asset('fonts/MorfinSans-Regular.woff2') }}") format('woff2');
 				font-weight: 400;
 				font-style: normal;
 				font-display: swap;
 			}
 			@font-face {
 				font-family: 'fgp-soei-pop2';
-				src: url("{{ asset('fonts/FGSOEIPP2-Bold.ttf') }}") format('truetype');
+				src: url("{{ asset('fonts/FGSOEIPP2-Bold.woff2') }}") format('woff2');
 				font-weight: 700;
 				font-style: normal;
 				font-display: swap;
