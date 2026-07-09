@@ -250,7 +250,7 @@
                         <p>お一人様でも気軽に入れる小さなお店</p>
                     </div>
                     <div class="interior1-box">
-                        <img src="{{ asset('image/passion/-p-center.webp') }}" alt="店内">
+                        <img src="{{ asset('image/passion/shop-center.webp') }}" alt="店内">
                         <div class="overlay"></div>
                     </div>
                 </div>
