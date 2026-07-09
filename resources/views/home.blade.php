@@ -491,7 +491,7 @@
     <section id="concept">
         <div class="content-box">
             <div class="img-box">
-                <img src="{{ asset('image/top/concept-person.webp') }}" alt="女性スタッフ">
+                <img src="{{ asset('image/top/disallow/concept-person.webp') }}" alt="女性スタッフ">
                 <div class="v-txt-box">
                     <div class="reveal-box">
                         <h2>あんかけパスタ専門店</h2>
@@ -571,14 +571,14 @@
     <section id="chef">
         <div class="content-box">
             <div class="left-box">
-                <img class="main" src="{{ asset('image/top/chef-left.webp') }}" alt="店長 ソース仕込み">
+                <img class="main" src="{{ asset('image/top/disallow/chef-left.webp') }}" alt="店長 ソース仕込み">
                 <img class="sub1" src="{{ asset('image/top/chef-left-sub1.webp') }}" alt="卓上 楊枝">
                 <img class="sub2" src="{{ asset('image/top/chef-left-sub2.webp') }}" alt="卓上 グラス">
                 <p class="en">Special<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moments</p>
             </div>
             <div class="right-box">
                 <div class="img-box">
-                    <img src="{{ asset('image/top/chef-right-top.webp') }}" alt="店長 オーダー確認">
+                    <img src="{{ asset('image/top/disallow/chef-right-top.webp') }}" alt="店長 オーダー確認">
                     <p class="en">Unique Experience</p>
                 </div>
                 <div class="txt-box">
@@ -588,11 +588,11 @@
                     <p>“あんハマ”でしか味わえない“コク”を一皿に込めます。</p>
                 </div>
                 <div class="prof-box">
-                    <img class="img" src="{{ asset('image/top/chef-right-bottom.webp') }}" alt="店長 インタビュー">
+                    <img class="img" src="{{ asset('image/top/disallow/chef-right-bottom.webp') }}" alt="店長 インタビュー">
                     <div class="txt-box">
                         <p class="manager">店長</p>
                         <div class="name-box">
-                            <img class="name" src="{{ asset('image/top/chef-name.svg') }}" alt="店長 名前">
+                            <img class="name" src="{{ asset('image/top/disallow/chef-name.svg') }}" alt="店長 名前">
                             <p class="role">Chef</p>
                         </div>
                         <div class="desc-box">
@@ -698,69 +698,69 @@
         <div class="content-box">
             <div class="slider-box">
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider1.webp') }}" alt="テーブル席 料理提供">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider1.webp') }}" alt="テーブル席 料理提供">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider3.webp') }}" alt="女性2人組">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider3.webp') }}" alt="女性2人組">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider4.webp') }}" alt="メガ盛り">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider4.webp') }}" alt="メガ盛り">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider5.webp') }}" alt="会計">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider5.webp') }}" alt="会計">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider6.webp') }}" alt="料理待ち 男性">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider6.webp') }}" alt="料理待ち 男性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider7.webp') }}" alt="料理待ち 女性">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider7.webp') }}" alt="料理待ち 女性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider8.webp') }}" alt="メニュー選び">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider8.webp') }}" alt="メニュー選び">
                     <div class="overlay"></div>
                 </div>
             </div>
             <div class="slider-box">
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider1.webp') }}" alt="テーブル席 料理提供">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider1.webp') }}" alt="テーブル席 料理提供">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider2.webp') }}" alt="カウンター席 サラリーマン">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider3.webp') }}" alt="女性2人組">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider3.webp') }}" alt="女性2人組">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider4.webp') }}" alt="メガ盛り">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider4.webp') }}" alt="メガ盛り">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider5.webp') }}" alt="会計">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider5.webp') }}" alt="会計">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider6.webp') }}" alt="料理待ち 男性">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider6.webp') }}" alt="料理待ち 男性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider7.webp') }}" alt="料理待ち 女性">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider7.webp') }}" alt="料理待ち 女性">
                     <div class="overlay"></div>
                 </div>
                 <div class="block">
-                    <img class="lazyload" data-src="{{ asset('image/top/top-slider8.webp') }}" alt="メニュー選び">
+                    <img class="lazyload" data-src="{{ asset('image/top/disallow/top-slider8.webp') }}" alt="メニュー選び">
                     <div class="overlay"></div>
                 </div>
             </div>

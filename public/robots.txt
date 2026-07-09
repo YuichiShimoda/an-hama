@@ -2,12 +2,15 @@ User-agent: *
 # Laravelのストレージや画像ディレクトリをクロール禁止
 Disallow: /css/
 Disallow: /fonts/
-Disallow: /image/
 Disallow: /movie/
 Disallow: /vendor/
 
-# ただし、/image/favicon/以下は許可
-Allow: /image/favicon/
+# 全検索エンジン：特定フォルダ以下の画像検索・クロールを禁止
+Disallow: /image/top/disallow/
+Disallow: /image/passion/disallow/
+Disallow: /image/menu/disallow/
+Disallow: /image/pizza/disallow/
+Disallow: /image/info/disallow/
 
 # APIや非公開ルートがあればそれもブロック（必要に応じて）
 Disallow: /api/

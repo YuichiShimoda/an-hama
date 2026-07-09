@@ -274,11 +274,11 @@
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/info/scene1.webp') }}" alt="料理渡し">
+            <img src="{{ asset('image/info/disallow/scene1.webp') }}" alt="料理渡し">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/info/scene2.webp') }}" alt="店長 教育">
+            <img src="{{ asset('image/info/disallow/scene2.webp') }}" alt="店長 教育">
             <div class="overlay click-canvas"></div>
         </div>
     </section>

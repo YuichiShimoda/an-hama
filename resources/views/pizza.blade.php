@@ -383,11 +383,11 @@
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/pizza/scene1.webp') }}" alt="注文">
+            <img src="{{ asset('image/pizza/disallow/scene1.webp') }}" alt="注文">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/pizza/scene2.webp') }}" alt="料理運び">
+            <img src="{{ asset('image/pizza/disallow/scene2.webp') }}" alt="料理運び">
             <div class="overlay click-canvas"></div>
         </div>
         <a class="menu-link-box" href="{{ route('menu') }}">

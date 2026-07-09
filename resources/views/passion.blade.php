@@ -250,7 +250,7 @@
                         <p>お一人様でも気軽に入れる小さなお店</p>
                     </div>
                     <div class="interior1-box">
-                        <img src="{{ asset('image/passion/shop-center.webp') }}" alt="店内">
+                        <img src="{{ asset('image/passion/-p-center.webp') }}" alt="店内">
                         <div class="overlay"></div>
                     </div>
                 </div>
@@ -283,11 +283,11 @@
 
     <section id="gallery">
         <div class="img-box">
-            <img src="{{ asset('image/passion/scene1.webp') }}" alt="親子">
+            <img src="{{ asset('image/passion/disallow/scene1.webp') }}" alt="親子">
             <div class="overlay click-canvas"></div>
         </div>
         <div class="img-box">
-            <img src="{{ asset('image/passion/scene2.webp') }}" alt="サービスカード 手渡し">
+            <img src="{{ asset('image/passion/disallow/scene2.webp') }}" alt="サービスカード 手渡し">
             <div class="overlay click-canvas"></div>
         </div>
     </section>
