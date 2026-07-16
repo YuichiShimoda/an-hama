@@ -1778,18 +1778,25 @@ body::-webkit-scrollbar
 
 #mezamashi
 	display: block
-	padding: 180px 0 200px
 	width: 100%
+	padding: 180px 0 200px
+	margin: 140px auto 60px
 	background: url("../image/mezamashi/bg.webp")
 	background-size: cover
 	background-position: center top
 	background-repeat: no-repeat
 	overflow: hidden
 	position: relative
+	+bp1400
+		margin: 140px auto 40px
+	+bp1200
+		margin: 120px auto 30px
 	+bp1000
 		padding: 180px 0 150px
+		margin: 100px auto 30px
 	+bp800
 		padding: 180px 0 120px
+		margin: 80px auto 20px
 	.content-box
 		display: block
 		width: 100%

@@ -2003,8 +2003,9 @@ body::-webkit-scrollbar {
 }
 #mezamashi {
   display: block;
-  padding: 180px 0 200px;
   width: 100%;
+  padding: 180px 0 200px;
+  margin: 140px auto 60px;
   background: url("../image/mezamashi/bg.webp");
   background-size: cover;
   background-position: center top;
@@ -2012,14 +2013,26 @@ body::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 1400px) {
+  #mezamashi {
+    margin: 140px auto 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mezamashi {
+    margin: 120px auto 30px;
+  }
+}
 @media screen and (max-width: 1000px) {
   #mezamashi {
     padding: 180px 0 150px;
+    margin: 100px auto 30px;
   }
 }
 @media screen and (max-width: 800px) {
   #mezamashi {
     padding: 180px 0 120px;
+    margin: 80px auto 20px;
   }
 }
 #mezamashi .content-box {

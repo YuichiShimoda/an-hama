@@ -280,6 +280,154 @@
 
 
 
+
+    <section id="season">
+        <div class="content-box">
+            <div class="main-box">
+                <div class="left-box">
+                    <img class="pasta-line" src="{{ asset('image/season/pasta-line.svg') }}" alt="パスタ">
+                    <img class="board" src="{{ asset('image/season/board.svg') }}" alt="あんハマ発祥つけかけパスタ 季節の限定メニュー">
+                    <div class="illust-box">
+                        <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
+                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="Dip it. Pour it.">
+                    </div>
+                    <div class="label-box">
+                        <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
+                        <img class="two-month" src="{{ asset('image/season/period7-8.svg') }}" alt="限定期間">
+                    </div>
+                    <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
+                </div>
+                <div class="right-box">
+                    <div class="img-box">
+                        <!-- <img class="dish" src="{{ asset('image/season/season3-4.webp') }}" alt="あさりと桜えびのつけかけパスタ"> -->
+                        <img class="dish" src="{{ asset('image/season/season7-8.webp') }}" alt="なすとズッキーニのつけかけパスタ">
+                    </div>
+                </div>
+                <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
+            </div>
+            <div class="desc-box">
+                <!-- <h2 class="ingredient">旬の食材　：　「 あさり 」「 桜えび 」</h2> -->
+                <h2 class="ingredient">旬の食材　：　「 なす 」「 ズッキーニ 」</h2>
+                <div class="info-box">
+                    <div class="tit-box">
+                        <div class="period-box">
+                            <!-- <p>3月,4月限定</p> -->
+                            <p>7月,8月限定</p>
+                        </div>
+                        <h2 class="menu-tit">季節のつけかけパスタ</h2>
+                    </div>
+                    <div class="price-box">
+                        <div class="above-box">
+                            <p class="size">レギュラー</p>
+                            <p class="unit">300g</p>
+                        </div>
+                        <div class="below-box">
+                            <p class="price">1,300</p>
+                            <p class="yen">円</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="concept">
+        <div class="content-box">
+            <div class="img-box">
+                <img src="{{ asset('image/top/disallow/concept-person.webp') }}" alt="女性スタッフ">
+                <div class="v-txt-box">
+                    <div class="reveal-box">
+                        <h2>あんかけパスタ専門店</h2>
+                    </div>
+                    <div class="reveal-box">
+                        <h2>あんかけハマちゃん</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="txt-box">
+                <h2>創作料理から始まる定番！</h2>
+                <div class="first-desc-box">
+                    <p>当店では、お客様を笑顔にすることを何より大切にしています。</p>
+                    <p>伝統的な“あんかけスパゲッティ”を現代的な“あんかけパスタ”へ...</p>
+                    <img src="{{ asset('image/top/concept-shop.webp') }}" alt="クロス">
+                </div>
+                <p class="second-desc-box">原点でもあるイタリアンパスタが浸透した時代だからこそ、新たな“名古屋のソウルフード”を目指して、日々“美味しい”を追求します。</p>
+                <p class="second-desc-box">今は、様々なこだわりから一日に提供できる量に限りがありますが“あんハマ”のパスタをソースに絡めて、口に入れた瞬間の芳醇な味わいを得るための、量より質の選択です。</p>
+                <p class="second-desc-box">お客様のご来店をスタッフ一同心よりお待ちしております。</p>
+                <a class="link-btn" href="{{ route('passion') }}">
+                    <p>詳細はこちら</p>
+                    <img src="{{ asset('image/top/arrow.svg') }}" alt="矢印">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="interior"></section> -->
+    <section id="back-shot">
+        <img src="{{ asset('image/top/back-shot.webp') }}" alt="カウンター席">
+    </section>
+    <section id="news" data-total="{{ count($news) }}">
+        <div class="content-box">
+            <div class="top-box click-canvas">
+                <div class="tit-box">
+                    <p class="en">NEWS</p>
+                    <p class="jp">お知らせ</p>
+                </div>
+                <div class="news-box">
+                    @foreach($news as $index => $news_ele)
+                        <div class="news-ele not-click-canvas" data-index="{{ $index }}" style="{{ $index >= 3 ? 'display:none;' : '' }}">
+                            <div class="main-box">
+                                <div class="cat-box">
+                                    <p>Click</p>
+                                    <p>{{ $news_ele->category }}</p>
+                                </div>
+                                <h3 class="tit">{{ $news_ele->title }}</h3>
+                            </div>
+                            <p class="time">{{ $news_ele->created_at->format('Y.m.d') }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="pagination-box">
+                <button class="prev-btn"><p>&laquo;</p></button>
+                <div class="page-numbers"></div>
+                <button class="next-btn"><p>&raquo;</p></button>
+            </div>
+            <div class="bottom-box click-canvas">
+                @foreach($news as $index => $news_ele)
+                    <div class="detail-ele" data-index="{{ $index }}" style="{{ $index >= 3 ? 'display:none;' : '' }}">
+                        @php
+                            $text = explode("\n", $news_ele->body);
+                        @endphp
+                        @foreach ($text as $line)
+                            @if(strlen(trim($line)) == 0)
+                                <br>
+                            @else
+                                <p>{{ $line }}</p>
+                            @endif
+                        @endforeach
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="back"></div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="mezamashi">
         <div class="content-box">
             <div class="tit-box">
@@ -423,151 +571,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="season">
-        <div class="content-box">
-            <div class="main-box">
-                <div class="left-box">
-                    <img class="pasta-line" src="{{ asset('image/season/pasta-line.svg') }}" alt="パスタ">
-                    <img class="board" src="{{ asset('image/season/board.svg') }}" alt="あんハマ発祥つけかけパスタ 季節の限定メニュー">
-                    <div class="illust-box">
-                        <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
-                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="Dip it. Pour it.">
-                    </div>
-                    <div class="label-box">
-                        <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
-                        <img class="two-month" src="{{ asset('image/season/period7-8.svg') }}" alt="限定期間">
-                    </div>
-                    <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
-                </div>
-                <div class="right-box">
-                    <div class="img-box">
-                        <!-- <img class="dish" src="{{ asset('image/season/season3-4.webp') }}" alt="あさりと桜えびのつけかけパスタ"> -->
-                        <img class="dish" src="{{ asset('image/season/season7-8.webp') }}" alt="なすとズッキーニのつけかけパスタ">
-                    </div>
-                </div>
-                <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
-            </div>
-            <div class="desc-box">
-                <!-- <h2 class="ingredient">旬の食材　：　「 あさり 」「 桜えび 」</h2> -->
-                <h2 class="ingredient">旬の食材　：　「 なす 」「 ズッキーニ 」</h2>
-                <div class="info-box">
-                    <div class="tit-box">
-                        <div class="period-box">
-                            <!-- <p>3月,4月限定</p> -->
-                            <p>7月,8月限定</p>
-                        </div>
-                        <h2 class="menu-tit">季節のつけかけパスタ</h2>
-                    </div>
-                    <div class="price-box">
-                        <div class="above-box">
-                            <p class="size">レギュラー</p>
-                            <p class="unit">300g</p>
-                        </div>
-                        <div class="below-box">
-                            <p class="price">1,300</p>
-                            <p class="yen">円</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="concept">
-        <div class="content-box">
-            <div class="img-box">
-                <img src="{{ asset('image/top/disallow/concept-person.webp') }}" alt="女性スタッフ">
-                <div class="v-txt-box">
-                    <div class="reveal-box">
-                        <h2>あんかけパスタ専門店</h2>
-                    </div>
-                    <div class="reveal-box">
-                        <h2>あんかけハマちゃん</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="txt-box">
-                <h2>創作料理から始まる定番！</h2>
-                <div class="first-desc-box">
-                    <p>当店では、お客様を笑顔にすることを何より大切にしています。</p>
-                    <p>伝統的な“あんかけスパゲッティ”を現代的な“あんかけパスタ”へ...</p>
-                    <img src="{{ asset('image/top/concept-shop.webp') }}" alt="クロス">
-                </div>
-                <p class="second-desc-box">原点でもあるイタリアンパスタが浸透した時代だからこそ、新たな“名古屋のソウルフード”を目指して、日々“美味しい”を追求します。</p>
-                <p class="second-desc-box">今は、様々なこだわりから一日に提供できる量に限りがありますが“あんハマ”のパスタをソースに絡めて、口に入れた瞬間の芳醇な味わいを得るための、量より質の選択です。</p>
-                <p class="second-desc-box">お客様のご来店をスタッフ一同心よりお待ちしております。</p>
-                <a class="link-btn" href="{{ route('passion') }}">
-                    <p>詳細はこちら</p>
-                    <img src="{{ asset('image/top/arrow.svg') }}" alt="矢印">
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- <section id="interior"></section> -->
-    <section id="back-shot">
-        <img src="{{ asset('image/top/back-shot.webp') }}" alt="カウンター席">
-    </section>
-    <section id="news" data-total="{{ count($news) }}">
-        <div class="content-box">
-            <div class="top-box click-canvas">
-                <div class="tit-box">
-                    <p class="en">NEWS</p>
-                    <p class="jp">お知らせ</p>
-                </div>
-                <div class="news-box">
-                    @foreach($news as $index => $news_ele)
-                        <div class="news-ele not-click-canvas" data-index="{{ $index }}" style="{{ $index >= 3 ? 'display:none;' : '' }}">
-                            <div class="main-box">
-                                <div class="cat-box">
-                                    <p>Click</p>
-                                    <p>{{ $news_ele->category }}</p>
-                                </div>
-                                <h3 class="tit">{{ $news_ele->title }}</h3>
-                            </div>
-                            <p class="time">{{ $news_ele->created_at->format('Y.m.d') }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="pagination-box">
-                <button class="prev-btn"><p>&laquo;</p></button>
-                <div class="page-numbers"></div>
-                <button class="next-btn"><p>&raquo;</p></button>
-            </div>
-            <div class="bottom-box click-canvas">
-                @foreach($news as $index => $news_ele)
-                    <div class="detail-ele" data-index="{{ $index }}" style="{{ $index >= 3 ? 'display:none;' : '' }}">
-                        @php
-                            $text = explode("\n", $news_ele->body);
-                        @endphp
-                        @foreach ($text as $line)
-                            @if(strlen(trim($line)) == 0)
-                                <br>
-                            @else
-                                <p>{{ $line }}</p>
-                            @endif
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
-        </div>
-        <div class="back"></div>
-    </section>
     <section id="chef">
         <div class="content-box">
             <div class="left-box">
