@@ -2341,7 +2341,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 450px) {
   #mezamashi {
     padding: 100px 0 80px;
-    margin: 70px auto 30px;
+    margin: 0 auto 30px;
   }
 }
 #mezamashi .content-box {
