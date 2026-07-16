@@ -2342,6 +2342,7 @@ body::-webkit-scrollbar {
   #mezamashi {
     padding: 100px 0 80px;
     margin: 0 auto 30px;
+    z-index: 1;
   }
 }
 #mezamashi .content-box {
