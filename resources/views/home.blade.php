@@ -293,26 +293,26 @@
                     </div>
                     <div class="label-box">
                         <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
-                        <img class="two-month" src="{{ asset('image/season/period7-8.svg') }}" alt="限定期間">
+                        <img class="two-month" src="{{ asset('image/season/period9-10.svg') }}" alt="限定期間">
                     </div>
                     <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
                 </div>
                 <div class="right-box">
                     <div class="img-box">
                         <!-- <img class="dish" src="{{ asset('image/season/season3-4.webp') }}" alt="あさりと桜えびのつけかけパスタ"> -->
-                        <img class="dish" src="{{ asset('image/season/season7-8.webp') }}" alt="なすとズッキーニのつけかけパスタ">
+                        <img class="dish" src="{{ asset('image/season/season9-10.webp') }}" alt="イカと青唐辛子のつけかけパスタ">
                     </div>
                 </div>
                 <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
             </div>
             <div class="desc-box">
                 <!-- <h2 class="ingredient">旬の食材　：　「 あさり 」「 桜えび 」</h2> -->
-                <h2 class="ingredient">旬の食材　：　「 なす 」「 ズッキーニ 」</h2>
+                <h2 class="ingredient">旬の食材　：　「 イカ 」「 青唐辛子 」</h2>
                 <div class="info-box">
                     <div class="tit-box">
                         <div class="period-box">
                             <!-- <p>3月,4月限定</p> -->
-                            <p>7月,8月限定</p>
+                            <p>9月,10月限定</p>
                         </div>
                         <h2 class="menu-tit">季節のつけかけパスタ</h2>
                     </div>
