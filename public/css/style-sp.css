@@ -3443,7 +3443,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 500px) {
   #season {
     padding: 60px 0 70px;
-    background-position: 65% top;
+    background-position: 85% top;
   }
 }
 #season .content-box {
