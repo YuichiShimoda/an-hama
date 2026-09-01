@@ -3443,6 +3443,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 500px) {
   #season {
     padding: 60px 0 70px;
+    background: url("../image/season/season-bg_9-10-sp.webp");
     background-position: 85% top;
   }
 }
