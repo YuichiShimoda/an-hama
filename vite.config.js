@@ -7,7 +7,9 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/js/admin/movie.js',
+                'resources/js/admin/video.js',
                 'resources/js/animation.js',
+                'resources/js/animation-video.js',
                 'resources/js/check.js',
                 'resources/js/app.js',
                 'resources/js/bootstrap.js',

@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PressReleaseController;
 use App\Http\Controllers\Admin\TaskController;
 use App\Http\Controllers\Admin\AnalyticsController;
 use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\Admin\VideoController;
 
 
 
@@ -38,10 +39,11 @@ Route::post('voice', [VoiceController::class, 'submit'])->name('voice.submit');
 
 
 
-// Test
+// フジテレビ映像あり
 // Route::get('zni3xwapmd8khmwa', [App\Http\Controllers\FrontController::class, 'check'])->name('check');
 
-
+// video
+Route::get('test', [App\Http\Controllers\FrontController::class, 'video'])->name('video');
 
 
 
@@ -66,6 +68,9 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
     Route::resource('movie', MovieController::class);
     Route::post('movie/{movie}/first-set', [MovieController::class, 'firstSet'])->name('movie.firstSet');
     Route::post('movie/{movie}/first-reset', [MovieController::class, 'firstReset'])->name('movie.firstReset');
+    Route::resource('video', VideoController::class);
+    Route::post('video/{video}/first-set', [VideoController::class, 'firstSet'])->name('video.firstSet');
+    Route::post('video/{video}/first-reset', [VideoController::class, 'firstReset'])->name('video.firstReset');
     Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');
     Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');
 });
@@ -83,6 +88,7 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
 
 
 Route::get('/api/movies', [MovieController::class, 'getMovie']);
+Route::get('/api/videos', [VideoController::class, 'getVideo']);
 
 
 
