@@ -203,11 +203,6 @@
             @enderror
         </div>
 
-		{{-- メモ１ --}}
-		<div class="d-block">
-			<x-adminlte-textarea name="script" label="メモ１【 動画内のセリフなど 】" placeholder="動画内のセリフなどを入力してください。" rows="7">{{ old('script') }}</x-adminlte-textarea>
-		</div>
-
 		@php
 			$next_video_fields = ['next_video_id1', 'next_video_id2', 'next_video_id3'];
 		@endphp
@@ -241,6 +236,11 @@
 				<p>※ 事前に選択設定する動画の「 管理No, 」をチェックし、間違えないように選択してください。</p>
 				<p>※ ………</p>
 			</div>
+		</div>
+
+		{{-- メモ１ --}}
+		<div class="d-block">
+			<x-adminlte-textarea name="script" label="メモ１【 動画内のセリフなど 】" placeholder="動画内のセリフなどを入力してください。" rows="7">{{ old('script') }}</x-adminlte-textarea>
 		</div>
 
 		{{-- メモ２ --}}
