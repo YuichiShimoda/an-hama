@@ -31,11 +31,7 @@
 				<strong>メモ１【 動画内のセリフなど 】：</strong>
 				{!! nl2br(e($video->script)) !!}
 			</div>
-			<div class="memmo-box bg-light rounded border">
-				<strong>メモ２【 管理用の備考 】：</strong>
-				{!! nl2br(e($video->memo)) !!}
-			</div>
-			<p><strong>連続再生する動画：</strong></p>
+			<p><strong>連続再生する他の動画：</strong></p>
 			<div class="next-box">
 				<div class="next-ele">
 					<p class="order">動画1 ：</p>
@@ -70,6 +66,10 @@
 						<p class="expired {{ $isExpired ? 'is-error' : '' }}">公開終了日時 {{ $video->nextVideo3->expired_at ? \Carbon\Carbon::parse($video->nextVideo3->expired_at)->format('Y年 n月 j日 H:i') : '---' }}</p>
 					@endif
 				</div>
+			</div>
+			<div class="memmo-box bg-light rounded border">
+				<strong>メモ２【 管理用の備考 】：</strong>
+				{!! nl2br(e($video->memo)) !!}
 			</div>
 		</div>
 		<div class="card-footer">

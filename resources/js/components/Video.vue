@@ -142,7 +142,7 @@
 
 	async function getMovie() {
 		try {
-			const response = await axios.get('/api/videos');
+			const response = await axios.get('/hama/api/videos');// 修正した部分
 			const moviesData = response.data;
 			videoOptions.value = moviesData.map(movie => ({
 				key: movie.filename,

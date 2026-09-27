@@ -194,7 +194,7 @@
                 </div>
             </div>
 			<div class="form-note-box">
-				<p>※ ONで上部の「公開する動画 」が他の動画の「 連続再生する動画 」で選択可能になります。OFFだと選択設定に表示されません。</p>
+				<p>※ ONで上部の「 公開する動画 」が「 連続再生する他の動画 」で選択可能になります。OFFだと選択設定に表示されません。</p>
 			</div>
             @error('is_visible')
                 <span class="invalid-feedback d-block" role="alert">
@@ -208,19 +208,14 @@
 			<x-adminlte-textarea name="script" label="メモ１【 動画内のセリフなど 】" placeholder="動画内のセリフなどを入力してください。" rows="7">{{ old('script') }}</x-adminlte-textarea>
 		</div>
 
-		{{-- メモ２ --}}
-		<div class="d-block">
-			<x-adminlte-textarea name="memo" label="メモ２【 管理用の備考 】" placeholder="管理用の備考を入力してください。" rows="7">{{ old('memo') }}</x-adminlte-textarea>
-		</div>
-
 		@php
 			$next_video_fields = ['next_video_id1', 'next_video_id2', 'next_video_id3'];
 		@endphp
 
-		{{-- 連続再生する動画 --}}
+		{{-- 連続再生する他の動画 --}}
 		<div class="d-block">
 			<div class="form-group">
-				<label>連続再生する動画</label>
+				<label>連続再生する他の動画</label>
 				@foreach($next_video_fields as $field)
 					<x-adminlte-select name="{{ $field }}" fgroup-class="select-box">
 						<option value="" selected>選択してください</option>
@@ -246,6 +241,11 @@
 				<p>※ 事前に選択設定する動画の「 管理No, 」をチェックし、間違えないように選択してください。</p>
 				<p>※ ………</p>
 			</div>
+		</div>
+
+		{{-- メモ２ --}}
+		<div class="d-block">
+			<x-adminlte-textarea name="memo" label="メモ２【 管理用の備考 】" placeholder="管理用の備考を入力してください。" rows="7">{{ old('memo') }}</x-adminlte-textarea>
 		</div>
 
 
