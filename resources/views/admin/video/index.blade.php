@@ -79,7 +79,7 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
-        <div class="note">※ 公開終了日時を過ぎている動画は、HPで表示されません。</div>
+        <div class="note">※ ---</div>
         <div class="border-line"></div>
         <p class="visible-second-tit">▼ 動画一覧 ▼</p>
         <x-adminlte-datatable id="videoTable" :heads="['タイトル', '動画', '公開終了日時', '操作']" striped hoverable bordered compressed>
