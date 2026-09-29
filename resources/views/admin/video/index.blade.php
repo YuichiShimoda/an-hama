@@ -80,6 +80,7 @@
             @endforeach
         </x-adminlte-datatable>
         <div class="note">※ 「 最初に再生 」設定が未選択の場合、HP側の動画機能は表示されません。</div>
+        <div class="note">※ 「 最初に再生 」設定した動画の「公開終了日時 」が過ぎた場合、HP側の動画機能は表示されません。</div>
         <div class="border-line"></div>
         <p class="visible-second-tit">▼ 動画一覧 ▼</p>
         <x-adminlte-datatable id="videoTable" :heads="['タイトル', '動画', '公開終了日時', '操作']" striped hoverable bordered compressed>
