@@ -27,7 +27,7 @@ class VideoController extends Controller
 		if ($first_video) {
 			return view('admin.video.index', compact('visible_video', 'video', 'first_video'));
 		} else {
-			$first_video_error = '最初に再生する動画が未選択';
+			$first_video_error = 'スタンバイ動画の「 最初に再生 」設定が未選択です。';
 			return view('admin.video.index', compact('visible_video', 'video', 'first_video', 'first_video_error'));
 		}
 	}
