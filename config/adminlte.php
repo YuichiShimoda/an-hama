@@ -342,7 +342,7 @@ return [
             'icon' => 'fas fa-bullhorn',
         ],
         [
-            'text' => 'お知らせ ( NEWS ) 編集',
+            'text' => 'NEWS編集',
             'url' => 'admin/news',
             'icon' => 'fas fa-newspaper',
         ],
