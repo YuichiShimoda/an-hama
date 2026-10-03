@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use App\Http\Requests\VideoStoreRequest;
 use App\Http\Requests\VideoUpdateRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class VideoController extends Controller
@@ -37,8 +38,13 @@ class VideoController extends Controller
 	 */
 	public function create()
 	{
-		$next_videos = Video::where('expired_at', '>', now())->orWhereNull('expired_at')->select('id', 'title', 'expired_at')->get();
-		return view('admin.video.create', compact('next_videos'));
+		$next_videos = Video::where('expired_at', '>', now())->orWhereNull('expired_at')->select('id', 'btn_title', 'expired_at')->get();
+
+		$tableName = (new Video())->getTable();
+		$status = DB::select("SHOW TABLE STATUS LIKE '{$tableName}'");
+		$nextId = $status[0]->Auto_increment ?? 1;
+
+		return view('admin.video.create', compact('next_videos', 'nextId'));
 	}
 
 	/**
@@ -82,7 +88,7 @@ class VideoController extends Controller
 		if (!empty($video->id)) {
 			$next_videos->where('id', '!=', $video->id);
 		}
-		$next_videos = $next_videos->select('id', 'title', 'expired_at')->get();
+		$next_videos = $next_videos->select('id', 'btn_title', 'expired_at')->get();
 
 		return view('admin.video.edit',compact('video', 'next_videos'));
 	}

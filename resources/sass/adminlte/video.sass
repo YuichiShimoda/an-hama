@@ -87,6 +87,60 @@
 			line-height: 1.0
 			letter-spacing: 0.05em
 			color: #555
+		.date-box
+			position: absolute
+			left: 0px
+			bottom: -10px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			+bp450
+				bottom: -25px
+				align-items: flex-start
+				flex-direction: column
+			.created-at
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #777
+			.updated-at
+				display: block
+				margin: 0 0 0 15px
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #777
+				+bp450
+					margin: 5px 0 0 0
+		.date-show-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			+bp600
+				align-items: flex-end
+				flex-direction: column
+			.created-at
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #777
+			.updated-at
+				display: block
+				margin: 0 0 0 15px
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #777
+				+bp600
+					margin: 5px 0 0 0
 		.create-btn
 			display: flex
 			justify-content: center
@@ -141,7 +195,10 @@
 
 
 
-
+.page-edit
+	.content
+		+bp450
+			margin-top: 35px
 .content
 	margin-top: 20px
 	// margin-bottom: 100px
@@ -161,11 +218,11 @@
 	#visibleTable
 		width: initial !important
 		margin: 0
+		th, td
+			box-sizing: border-box
 		th:nth-child(1), td:nth-child(1)
 			width: 220px !important
 			min-width: 220px
-			// +bp700
-			// 	min-width: 30px !important
 		th:nth-child(2), td:nth-child(2)
 			width: 70px !important
 			min-width: 70px
@@ -190,25 +247,27 @@
 				.video-icon
 					display: block
 					width: 16px
-			// +bp700
-			// 	min-width: 90px !important
-		// th:nth-child(3), td:nth-child(3)
-		// 	width: 200px !important
-		// 	min-width: 200px
-			// white-space: nowrap
-			// text-overflow: ellipsis
-			// overflow: hidden
 		th:nth-child(3), td:nth-child(3)
-			width: 160px !important
-			min-width: 160px
-			// +bp700
-			// 	min-width: 100px !important
+			width: 170px !important
+			min-width: 170px
 		th:nth-child(4), td:nth-child(4)
-			width: 160px !important
-			min-width: 160px
+			width: 170px !important
+			min-width: 170px
+		th:nth-child(5), td:nth-child(5)
+			width: 95px !important
+			min-width: 95px
+		th:nth-child(6), td:nth-child(6)
+			width: 180px !important
+			min-width: 180px
+		th:nth-child(7), td:nth-child(7)
+			width: 170px !important
+			min-width: 170px
+		th:nth-child(8), td:nth-child(8)
+			width: 200px !important
+			min-width: 200px
 			+bp700
-				width: 150px !important
-				min-width: 150px
+				width: 180px !important
+				min-width: 180px
 		th
 			padding: 0.7em 1.0em
 			font-size: 14px
@@ -342,7 +401,7 @@
 									top: 50%
 									left: 50%
 									transform: translate(-50%, -50%)
-									content: "リセット"
+									content: "�ꥻ�å�"
 									display: block
 									font-weight: 400
 									font-size: 11px
@@ -373,15 +432,20 @@
 							padding: 0
 						i
 							font-size: 12px
-	.note
+	.note-box
 		display: block
 		width: 100%
 		margin: 5px 0 0
-		font-weight: 400
-		font-size: 10px
-		line-height: 1.5
-		letter-spacing: 0.05em
-		color: #c71f10
+		> p
+			display: block
+			margin: 0
+			font-weight: 400
+			font-size: 10px
+			line-height: 1.5
+			letter-spacing: 0.05em
+			color: #c71f10
+			padding-left: 1.7em
+			text-indent: -1.7em
 	.border-line
 		display: block
 		width: 80%
@@ -412,11 +476,11 @@
 			margin-bottom: 80px
 		+bp600
 			margin-bottom: 40px
+		th, td
+			box-sizing: border-box
 		th:nth-child(1), td:nth-child(1)
-			width: 200px !important
-			min-width: 200px
-			// +bp700
-			// 	min-width: 30px !important
+			width: 220px !important
+			min-width: 220px
 		th:nth-child(2), td:nth-child(2)
 			width: 70px !important
 			min-width: 70px
@@ -429,7 +493,7 @@
 				align-items: center
 				width: 30px
 				aspect-ratio: 1 / 1
-				margin-left: 20px
+				margin-left: 10px
 				border-radius: 50%
 				background-color: #ccc
 				+bp500
@@ -437,23 +501,24 @@
 				.video-icon
 					display: block
 					width: 16px
-			// +bp700
-			// 	min-width: 90px !important
-		// th:nth-child(3), td:nth-child(3)
-		// 	width: 180px !important
-		// 	min-width: 180px
-			// white-space: nowrap
-			// text-overflow: ellipsis
-			// overflow: hidden
 		th:nth-child(3), td:nth-child(3)
-			width: 160px !important
-			min-width: 160px
-			box-sizing: border-box
-			// +bp700
-			// 	min-width: 100px !important
+			width: 170px !important
+			min-width: 170px
 		th:nth-child(4), td:nth-child(4)
-			width: 110px !important
-			min-width: 110px
+			width: 170px !important
+			min-width: 170px
+		th:nth-child(5), td:nth-child(5)
+			width: 95px !important
+			min-width: 95px
+		th:nth-child(6), td:nth-child(6)
+			width: 180px !important
+			min-width: 180px
+		th:nth-child(7), td:nth-child(7)
+			width: 170px !important
+			min-width: 170px
+		th:nth-child(8), td:nth-child(8)
+			width: 120px !important
+			min-width: 120px
 			// +bp700
 			// 	min-width: 100px !important
 		th
@@ -573,6 +638,15 @@
 							.fa-calendar-alt
 								+bp450
 									font-size: 12px
+			&.readonly
+				margin-top: 0.7em
+				.form-group
+					label
+						margin-bottom: .2rem
+						font-weight: 700
+						font-size: 12px
+						color: #555
+					.input-group
 			.form-group
 				margin: 0
 				label
@@ -640,11 +714,11 @@
 					#btn_title
 						width: 250px
 					#filename_display
-						width: 300px
+						width: 240px
 						+bp600
-							width: 250px
+							width: 220px
 						+bp450
-							width: 230px
+							width: 210px
 						+bp400
 							width: 200px
 					#script
@@ -653,13 +727,13 @@
 						width: 100%
 				.file-upload-box
 					display: block
-					width: 300px
+					width: 240px
 					aspect-ratio: 9 / 16
 					position: relative
 					+bp600
-						width: 250px
+						width: 220px
 					+bp450
-						width: 230px
+						width: 210px
 					+bp400
 						width: 200px
 					&.edit-page
@@ -688,11 +762,11 @@
 						height: 100%
 						margin: 0
 						border: solid 1px #ced4da
-						border-radius: 20px
+						border-radius: 15px
 						cursor: pointer
 						background-color: #f0f0f0
 						+bp600
-							border-radius: 15px
+							border-radius: 12px
 						+bp450
 							border-radius: 10px
 						&:hover
@@ -728,7 +802,7 @@
 						top: 0
 						right: 0
 						display: block
-						width: 60px
+						width: 50px
 						padding: 10px
 						cursor: pointer
 						z-index: 10

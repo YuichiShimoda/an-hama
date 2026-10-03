@@ -36,8 +36,8 @@
     @if ($video->isEmpty())
         <p class="table-empty-msg">表示するデータがありません。</p>
     @else
-        <p class="visible-tit">▼ スタンバイ / 表示動画一覧 ▼</p>
-        <x-adminlte-datatable id="visibleTable" :heads="['タイトル', '動画', '公開終了日時', '操作']" striped hoverable bordered compressed>
+        <p class="visible-tit">▼ スタンバイ / 表示動画 ▼</p>
+        <x-adminlte-datatable id="visibleTable" :heads="['タイトル', '動画', '新規作成日時', '更新日時', '管理No,', 'ボタンラベル', '公開終了日時', '編集']" striped hoverable bordered compressed>
             @foreach($visible_video as $visible_video_ele)
                 <tr>
                     <td>{{ $visible_video_ele->title }}</td>
@@ -46,7 +46,10 @@
                             <img class="video-icon" src="{{ asset('image/adminlte/video/video-icon.svg') }}" alt="">
                         </div>
                     </td>
-                    <!-- <td>{{ $visible_video_ele->conversion_type }}</td> -->
+                    <td>{{ $visible_video_ele->created_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>{{ $visible_video_ele->updated_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>{{ sprintf('%04d', $visible_video_ele->id) }}</td>
+                    <td>{{ $visible_video_ele->btn_title }}</td>
                     @if ($visible_video_ele->expired_at)
                         @php
                             $expiredAt = \Carbon\Carbon::parse($visible_video_ele->expired_at);
@@ -57,6 +60,9 @@
                         <td>---</td>
                     @endif
                     <td>
+                        <a href="{{ route('admin.video.show', $visible_video_ele->id) }}" class="btn btn-sm btn-primary">
+                            <i class="fas fa-eye"></i>
+                        </a>
                         <a href="{{ route('admin.video.edit', $visible_video_ele->id) }}" class="btn btn-sm btn-warning">
                             <i class="fas fa-edit"></i>
                         </a>
@@ -79,11 +85,13 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
-        <div class="note">※ 「 最初に再生 」設定が未選択の場合、HP側の動画機能は表示されません。</div>
-        <div class="note">※ 「 最初に再生 」設定した動画の「公開終了日時 」が過ぎた場合、HP側の動画機能は表示されません。</div>
+        <div class="note-box">
+            <p>※ 「 最初に再生 」設定が未選択の場合、HP側の動画機能は表示されません。</p>
+            <p>※ 「 最初に再生 」設定した動画の「公開終了日時 」が過ぎた場合、HP側の動画機能は表示されません。</p>
+        </div>
         <div class="border-line"></div>
-        <p class="visible-second-tit">▼ 動画一覧 ▼</p>
-        <x-adminlte-datatable id="videoTable" :heads="['タイトル', '動画', '公開終了日時', '操作']" striped hoverable bordered compressed>
+        <p class="visible-second-tit">▼ 動画一覧（ 全ての動画 ） ▼</p>
+        <x-adminlte-datatable id="videoTable" :heads="['タイトル', '動画', '新規作成日時', '更新日時', '管理No,', 'ボタンラベル', '公開終了日時', '編集']" striped hoverable bordered compressed>
             @foreach($video as $video_ele)
                 <tr>
                     <td>{{ $video_ele->title }}</td>
@@ -92,7 +100,10 @@
                             <img class="video-icon" src="{{ asset('image/adminlte/video/video-icon.svg') }}" alt="">
                         </div>
                     </td>
-                    <!-- <td>{{ $video_ele->conversion_type }}</td> -->
+                    <td>{{ $video_ele->created_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>{{ $video_ele->updated_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>{{ sprintf('%04d', $video_ele->id) }}</td>
+                    <td>{{ $video_ele->btn_title }}</td>
                     @if ($video_ele->expired_at)
                         @php
                             $expiredAt = \Carbon\Carbon::parse($video_ele->expired_at);
@@ -234,11 +245,18 @@
                 $("#individual-modal").addClass('is-active');
             });
         });
-        $(".modal-close-btn").click (function() {
+        function closeModalAndStopVideo() {
             $("#individual-modal").removeClass('is-active');
+            const videoElement = $('.answer-video').get(0);
+            if (videoElement) {
+                videoElement.pause();
+            }
+        }
+        $(".modal-close-btn").click (function() {
+            closeModalAndStopVideo();
         });
         $(".md-overlay").click (function() {
-            $("#individual-modal").removeClass('is-active');
+            closeModalAndStopVideo();
         });
     </script>
 @endsection

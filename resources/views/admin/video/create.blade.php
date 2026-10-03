@@ -33,6 +33,7 @@
 
 		@php
 			$current_time = \Carbon\Carbon::now()->format('Y-m-d H:i');
+			$default_end_time = \Carbon\Carbon::now()->endOfDay()->format('Y-m-d H:i');
 		@endphp
 		{{-- 公開終了日時 --}}
 		<div class="d-block period-box">
@@ -40,7 +41,7 @@
 				:config="[
 					'format' => 'YYYY-MM-DD HH:mm',
 					'minDate' => $current_time,
-					'stepping' => 15,
+					'defaultDate' => $default_end_time,
 					'display' => [
 						'keepOpen' => false,
 						'buttons' => [
@@ -56,8 +57,9 @@
 				</x-slot>
 			</x-adminlte-input-date>
 			<div class="form-note-box">
-				<p>※ 特別営業などで「 ●/●日まで 」というセリフがある場合、設定してください。</p>
+				<p>※ 初回入力時は、当日の「 23:59 」が自動で設定されます。</p>
 				<p>※ 公開終了日時を過ぎた動画は、HP側で表示されません。</p>
+				<p>※ 設定した日時の「 00秒 」の時点で公開終了となります。</p>
 			</div>
 		</div>
 
@@ -75,10 +77,6 @@
 					<img v-if="videoPreview" class="preview-close-btn" src="{{ asset('image/adminlte/video/preview-close-btn.svg') }}" alt="" @click="resetPreview">
 				</div>
 			</div>
-			<div class="d-block" style="margin-top: 5px;">
-				<x-adminlte-input id="filename_display" name="filename_display" value="{{ old('filename') }}" readonly/>
-				<input type="hidden" name="filename" value="{{ old('filename') }}">
-			</div>
 			<div class="form-note-box">
 				<p>※ ファイルサイズは10MB以下としてください。</p>
 				<p>※ 使用可能な拡張子は「 mp4 / webm 」です。</p>
@@ -92,6 +90,24 @@
 					<strong>{{ $message }}</strong>
 				</span>
 			@enderror
+		</div>
+
+		<div class="d-block readonly">
+			<x-adminlte-input id="filename_display" name="filename_display" label="ファイル名" value="{{ old('filename') }}" readonly/>
+			<input type="hidden" name="filename" value="{{ old('filename') }}">
+			<div class="form-note-box">
+				<p>※ 設定した動画のファイル名が自動で反映されます。</p>
+				<p>※ 入力されたファイル名を変更することはできません。</p>
+				<p>※ 動画が未設定の場合、空欄となります。</p>
+			</div>
+		</div>
+
+		<div class="d-block readonly">
+			<x-adminlte-input id="next_id_display" name="next_id_display" label="管理No," value="{{ sprintf('%04d', $nextId) }}" readonly/>
+			<div class="form-note-box">
+				<p>※ 登録の際、自動で設定される番号（ 連番 ）です。</p>
+				<p>※ 変更はできません。</p>
+			</div>
 		</div>
 
 		{{-- ファイル名 --}}
@@ -226,7 +242,7 @@
 						@endforeach --}}
 						@foreach($next_videos as $item)
 						    <option value="{{ $item->id }}" {{ old($field) == $item->id ? 'selected' : '' }}>
-						        {{ $item->title }}　管理No,{{ $item->id }}　{{ $item->expired_at ? \Carbon\Carbon::parse($item->expired_at)->format('Y-m-d H:i') : '---' }}
+						        {{ sprintf('%04d', $item->id) }}　{{ $item->btn_title }}　{{ $item->expired_at ? \Carbon\Carbon::parse($item->expired_at)->format('Y-m-d H:i') : '---' }}
 						    </option>
 						@endforeach
 					</x-adminlte-select>
@@ -234,7 +250,8 @@
 			</div>
 			<div class="form-note-box">
 				<p>※ 事前に選択設定する動画の「 管理No, 」をチェックし、間違えないように選択してください。</p>
-				<p>※ ………</p>
+				<p>※ 公開終了日時を過ぎた動画は、選択肢で表示されません。</p>
+				<p>※ 設定した動画の公開終了日時が過ぎた場合、HP側の動画機能は表示されません。</p>
 			</div>
 		</div>
 
