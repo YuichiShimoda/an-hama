@@ -228,8 +228,8 @@
   min-width: 90px;
 }
 .content #visibleTable th:nth-child(6), .content #visibleTable td:nth-child(6) {
-  width: 180px !important;
-  min-width: 180px;
+  width: 175px !important;
+  min-width: 175px;
 }
 .content #visibleTable th:nth-child(7), .content #visibleTable td:nth-child(7) {
   width: 170px !important;
@@ -570,8 +570,8 @@
   min-width: 90px;
 }
 .content #videoTable th:nth-child(6), .content #videoTable td:nth-child(6) {
-  width: 180px !important;
-  min-width: 180px;
+  width: 175px !important;
+  min-width: 175px;
 }
 .content #videoTable th:nth-child(7), .content #videoTable td:nth-child(7) {
   width: 170px !important;
