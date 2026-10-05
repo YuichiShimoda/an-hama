@@ -61,9 +61,9 @@
 				</x-slot>
 			</x-adminlte-input-date>
 			<div class="form-note-box">
-				<p>※ 未設定で初回入力をおこなう場合、選択日の「 23:59 」が自動で設定されます。</p>
+				<p>※ 時間の初期値は「 23:59 」です。変更する場合は手動で任意の時間に設定してください。</p>
+				<p>※ 時間の秒数設定はありませんが設定した時間（ 分 ）の「 00秒 」時点で公開終了となります。</p>
 				<p>※ 公開終了日時を過ぎた動画は、HP側で表示されません。</p>
-				<p>※ 設定した日時の「 00秒 」の時点で公開終了となります。</p>
 			</div>
 		</div>
 
@@ -105,17 +105,16 @@
 			<x-adminlte-input id="filename_display" name="filename_display" label="ファイル名" value="{{ old('filename', $video->filename) }}" readonly/>
 			<input type="hidden" name="filename" value="{{ old('filename', $video->filename) }}">
 			<div class="form-note-box">
-				<p>※ 設定した動画のファイル名が自動で反映されます。</p>
-				<p>※ 入力されたファイル名を変更することはできません。</p>
-				<p>※ 動画が未設定の場合、空欄となります。</p>
+				<p>※ 動画ファイルをアップロードした時点でローカル側で設定していた動画のファイル名が自動反映されます。</p>
+				<p>※ 自動反映されたファイル名は、動画ファイルをアップロードした後に変更することはできません。</p>
 			</div>
 		</div>
 
 		<div class="d-block readonly">
 			<x-adminlte-input id="next_id_display" name="next_id_display" label="管理No," value="{{ sprintf('%04d', $video->id) }}" readonly/>
 			<div class="form-note-box">
-				<p>※ 登録の際、自動で設定された番号（ 連番 ）です。</p>
-				<p>※ 変更はできません。</p>
+				<p>※ 動画ファイルをアップロードした時点でサーバ側に自動登録される管理用のNo,（ 通番 ）です。</p>
+				<p>※ 自動登録された管理No,は、動画ファイルをアップロードした後に変更することはできません。</p>
 			</div>
 		</div>
 
@@ -131,9 +130,9 @@
 		<div class="d-block">
 			<x-adminlte-input name="btn_title" label="ボタンラベル" label-class="required" placeholder="ディナータイム特別営業" value="{{ old('btn_title', $video->btn_title) }}"/>
 			<div class="form-note-box">
-				<p>※ 上部の「 公開する動画 」の実質的なタイトルです。</p>
-				<p>※ 動画内のボタンに表示する文言です。</p>
-				<p>※ 11文字以内で入力してください。</p>
+				<p>※ 上部「 公開する動画 」の実質的なタイトルです。</p>
+				<p>※ 上部「 公開する動画 」がHP側にて表示される際のボタン内の文言です。</p>
+				<p>※ （ 全半角関係なく ）11文字以内で入力してください。</p>
 			</div>
 		</div>
 
@@ -223,7 +222,8 @@
                 </div>
             </div>
 			<div class="form-note-box">
-				<p>※ ONで上部の「 公開する動画 」が「 連続再生する他の動画 」で選択可能になります。OFFだと選択設定に表示されません。</p>
+				<p>※ ONで上部「 公開する動画 」が下部「 連続再生する他の動画 」で選択可能になります。</p>
+				<p>※ OFFだと下部「 連続再生する他の動画 」で選択設定に表示されません。</p>
 			</div>
             @error('is_visible')
                 <span class="invalid-feedback d-block" role="alert">
@@ -233,16 +233,20 @@
         </div>
 
 		@php
-			$next_video_fields = ['next_video_id1', 'next_video_id2', 'next_video_id3'];
+			$next_video_fields = [
+				'next_video_id1' => 'nextVideo1',
+				'next_video_id2' => 'nextVideo2',
+				'next_video_id3' => 'nextVideo3',
+			];
 		@endphp
 
 		{{-- 連続再生する他の動画 --}}
 		<div class="d-block">
 			<div class="form-group">
 				<label>連続再生する他の動画</label>
-				@foreach($next_video_fields as $field)
+				@foreach($next_video_fields as $field => $value)
 					<x-adminlte-select name="{{ $field }}" fgroup-class="select-box">
-						<option value="" selected>選択してください</option>
+						<option value="" selected>選択設定　‐順番{{ substr($value, -1) }}‐</option>
 						{{-- @foreach($next_videos as $id => $title)
 							<option value="{{ $id }}" {{ old($field, $video->{$field}) == $id ? 'selected' : '' }}>
 								{{ $title }}
@@ -262,12 +266,17 @@
 							</option>
 						@endforeach
 					</x-adminlte-select>
+					@if(!empty($video->{$field}))
+						<p class="setting-log">{{ sprintf('%04d', $video->{$value}->id) }}　{{ $video->{$value}->btn_title }}　{{ $video->{$value}->expired_at ? \Carbon\Carbon::parse($video->{$value}->expired_at)->format('Y-m-d H:i') : '---' }}</p>
+					@endif
 				@endforeach
 			</div>
 			<div class="form-note-box">
-				<p>※ 事前に選択設定する動画の「 管理No, 」をチェックし、間違えないように選択してください。</p>
-				<p>※ 公開終了日時を過ぎた動画は、選択肢で表示されません。</p>
-				<p>※ 設定した動画の公開終了日時が過ぎた場合、HP側の動画機能は表示されません。</p>
+				<p>※ 選択設定の順番は、HP側で連続再生される順番です。</p>
+				<p>※ 事前に選択設定する動画の内容と「 管理No, 」をチェックし、間違えないように選択設定してください。</p>
+				<p>※ 選択設定する動画の「 スタンバイ 」がOFFだと選択設定に表示されません。</p>
+				<p>※ 選択設定する動画の「 公開終了日時 」が既に公開終了（ 期間満了 ）となった動画は、選択設定に表示されません。</p>
+				<p>※ 選択設定した動画の「 公開終了日時 」が既に公開終了（ 期間満了 ）となった動画は、HP側で表示されません。</p>
 			</div>
 		</div>
 
@@ -278,7 +287,7 @@
 
 		{{-- メモ２ --}}
 		<div class="d-block">
-			<x-adminlte-textarea name="memo" label="メモ２【 管理用の備考 】" placeholder="管理用の備考を入力してください。" rows="7">{{ old('memo', $video->memo) }}</x-adminlte-textarea>
+			<x-adminlte-textarea name="memo" label="メモ２【 管理用の備考 】" placeholder="自由に入力してください。" rows="7">{{ old('memo', $video->memo) }}</x-adminlte-textarea>
 		</div>
 
 

@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
 		<meta name="format-detection" content="telephone=no">
-		<meta property="og:image" content="{{ asset('images/ogp-image.png') }}" />
+		<meta property="og:image" content="{{ asset('image/ogp-image.png') }}" />
 		<meta name="google-site-verification" content="SU15WuLBhwRRcdHsanX1bgkzekZWzf-43S2mwMFh2jk" />
 
 		<link rel="icon" type="image/png" href="{{ asset('image/favicon/favicon-96x96.png') }}" sizes="96x96" />

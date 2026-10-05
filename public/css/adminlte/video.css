@@ -1,8 +1,4 @@
 @charset "UTF-8";
-.content-wrapper {
-  background-color: #fff0f0;
-}
-
 .content-header .tit-box {
   display: flex;
   justify-content: space-between;
@@ -40,7 +36,7 @@
   font-size: 11px;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #777;
+  color: #55f;
 }
 .content-header .tit-box .date-box .updated-at {
   display: block;
@@ -49,7 +45,7 @@
   font-size: 11px;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #777;
+  color: #55f;
 }
 @media screen and (max-width: 450px) {
   .content-header .tit-box .date-box .updated-at {
@@ -74,7 +70,7 @@
   font-size: 11px;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #777;
+  color: #55f;
 }
 .content-header .tit-box .date-show-box .updated-at {
   display: block;
@@ -83,7 +79,7 @@
   font-size: 11px;
   line-height: 1;
   letter-spacing: 0.05em;
-  color: #777;
+  color: #55f;
 }
 @media screen and (max-width: 600px) {
   .content-header .tit-box .date-show-box .updated-at {
@@ -702,7 +698,12 @@
   font-size: 12px;
 }
 .content form .d-block {
-  margin-top: 1.2em;
+  margin-top: 2em;
+}
+@media screen and (max-width: 450px) {
+  .content form .d-block {
+    margin-top: 1.5em;
+  }
 }
 .content form .d-block:first-of-type {
   margin-top: 0;
@@ -1002,6 +1003,17 @@
   .content form .d-block .form-group .select-box select#next_video_id3 {
     width: calc(100vw - 45px);
   }
+}
+.content form .d-block .form-group .setting-log {
+  display: block;
+  margin: 0.1em 0 0.1em 0.35em;
+  padding-left: 1.15em;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #55f;
+  text-indent: -1.15em;
 }
 .content form .d-block .form-group .radio-box {
   display: flex;

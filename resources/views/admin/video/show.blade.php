@@ -35,7 +35,7 @@
 			<p><strong>連続再生する他の動画：</strong></p>
 			<div class="next-box">
 				<div class="next-ele">
-					<p class="order">動画1 ：</p>
+					<p class="order">順番1 ：</p>
 					<p class="next-tit">
 					@if(isset($video->nextVideo1) && $video->nextVideo1->id)
 						{{ sprintf('%04d', $video->nextVideo1->id) }}　{{ $video->nextVideo1->btn_title }}
@@ -52,7 +52,7 @@
 					@endif
 				</div>
 				<div class="next-ele">
-					<p class="order">動画2 ：</p>
+					<p class="order">順番2 ：</p>
 					<p class="next-tit">
 					@if(isset($video->nextVideo2) && $video->nextVideo2->id)
 						{{ sprintf('%04d', $video->nextVideo2->id) }}　{{ $video->nextVideo2->btn_title }}
@@ -69,7 +69,7 @@
 					@endif
 				</div>
 				<div class="next-ele">
-					<p class="order">動画3 ：</p>
+					<p class="order">順番3 ：</p>
 					<p class="next-tit">
 					@if(isset($video->nextVideo3) && $video->nextVideo3->id)
 						{{ sprintf('%04d', $video->nextVideo3->id) }}　{{ $video->nextVideo3->btn_title }}

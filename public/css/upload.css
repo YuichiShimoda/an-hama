@@ -213,7 +213,7 @@
 }
 .movie-content-box .play-btn .pause-btn .icon {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 0;
   left: 0;
   margin: auto;
@@ -238,7 +238,7 @@
 }
 .movie-content-box .completed-btn .icon {
   position: absolute;
-  top: 50%;
+  top: 30%;
   right: 0;
   left: 0;
   margin: auto;
