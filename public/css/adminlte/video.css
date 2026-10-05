@@ -175,6 +175,7 @@
 .content #visibleTable th:nth-child(1), .content #visibleTable td:nth-child(1) {
   width: 200px !important;
   min-width: 200px;
+  max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -523,6 +524,7 @@
 .content #videoTable th:nth-child(1), .content #videoTable td:nth-child(1) {
   width: 200px !important;
   min-width: 200px;
+  max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
