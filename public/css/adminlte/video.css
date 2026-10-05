@@ -173,8 +173,11 @@
   box-sizing: border-box;
 }
 .content #visibleTable th:nth-child(1), .content #visibleTable td:nth-child(1) {
-  width: 220px !important;
-  min-width: 220px;
+  width: 200px !important;
+  min-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content #visibleTable th:nth-child(2), .content #visibleTable td:nth-child(2) {
   width: 70px !important;
@@ -220,8 +223,8 @@
   min-width: 170px;
 }
 .content #visibleTable th:nth-child(5), .content #visibleTable td:nth-child(5) {
-  width: 95px !important;
-  min-width: 95px;
+  width: 90px !important;
+  min-width: 90px;
 }
 .content #visibleTable th:nth-child(6), .content #visibleTable td:nth-child(6) {
   width: 180px !important;
@@ -514,11 +517,14 @@
   }
 }
 .content #videoTable th, .content #videoTable td {
+  white-space: nowrap;
   box-sizing: border-box;
 }
 .content #videoTable th:nth-child(1), .content #videoTable td:nth-child(1) {
-  width: 220px !important;
-  min-width: 220px;
+  width: 200px !important;
+  min-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .content #videoTable th:nth-child(2), .content #videoTable td:nth-child(2) {
   width: 70px !important;
@@ -558,8 +564,8 @@
   min-width: 170px;
 }
 .content #videoTable th:nth-child(5), .content #videoTable td:nth-child(5) {
-  width: 95px !important;
-  min-width: 95px;
+  width: 90px !important;
+  min-width: 90px;
 }
 .content #videoTable th:nth-child(6), .content #videoTable td:nth-child(6) {
   width: 180px !important;
