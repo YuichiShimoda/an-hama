@@ -466,6 +466,11 @@
   padding-left: 1.7em;
   text-indent: -1.7em;
 }
+@media screen and (max-width: 450px) {
+  .content .standby-note-box > p {
+    font-size: 8px;
+  }
+}
 .content .index-note-box {
   display: block;
   width: 100%;
@@ -481,6 +486,11 @@
   color: #c71f10;
   padding-left: 1.1em;
   text-indent: -1.1em;
+}
+@media screen and (max-width: 450px) {
+  .content .index-note-box > p {
+    font-size: 8px;
+  }
 }
 .content .border-line {
   display: block;
