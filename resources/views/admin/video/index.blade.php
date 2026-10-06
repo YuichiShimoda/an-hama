@@ -85,7 +85,7 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
-        <div class="note-box">
+        <div class="standby-note-box">
             <p>※ 「 最初に再生 」設定が未選択の場合、HP側の“動画機能”は表示されません。</p>
             <p>※ 「 最初に再生 」設定した動画の「 公開終了日時 」が既に公開終了（ 期間満了 ）となった場合、HP側の“動画機能”は表示されません。</p>
         </div>
@@ -131,7 +131,7 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
-        <div class="note-box">
+        <div class="index-note-box">
             <p>※ 動画の「 公開終了日時 」が既に公開終了（ 期間満了 ）となった場合、日時が“赤文字”で表示されます。</p>
             <p>※ 動画の「 公開終了日時 」が既に公開終了（ 期間満了 ）となった場合、上部の“▼ スタンバイ / 表示動画 ▼”には表示されません。</p>
         </div>
