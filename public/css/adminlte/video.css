@@ -529,16 +529,6 @@
   width: initial !important;
   margin: 0;
 }
-@media screen and (max-width: 1000px) {
-  .content #videoTable {
-    margin-bottom: 80px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .content #videoTable {
-    margin-bottom: 40px;
-  }
-}
 .content #videoTable th, .content #videoTable td {
   white-space: nowrap;
   box-sizing: border-box;
@@ -1124,6 +1114,11 @@
   letter-spacing: 0.05em;
   color: #777;
   text-indent: -1.15em;
+}
+@media screen and (max-width: 450px) {
+  .content form .d-block .form-note-box p {
+    font-size: 8px;
+  }
 }
 .content form .d-block .invalid-feedback {
   margin: 0.5em 0 0 0.3em;
