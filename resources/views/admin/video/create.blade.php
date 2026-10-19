@@ -120,8 +120,9 @@
 
 		{{-- ボタンラベル --}}
 		<div class="d-block">
-			<x-adminlte-input name="btn_title" label="ボタンラベル" label-class="required" placeholder="ディナータイム特別営業" value="{{ old('btn_title') }}"/>
+			<x-adminlte-input name="btn_title" label="ボタンラベル" label-class="required" placeholder="内規に従いラベルを入力" value="{{ old('btn_title') }}"/>
 			<div class="form-note-box">
+				<p>※ ボタンラベルは、社内ルール（ 内規 ）の定めに従い入力してください。</p>
 				<p>※ 上部「 公開する動画 」の実質的なタイトルです。</p>
 				<p>※ 上部「 公開する動画 」がHP側にて表示される際のボタン内の文言です。</p>
 				<p>※ （ 全半角関係なく ）11文字以内で入力してください。</p>
