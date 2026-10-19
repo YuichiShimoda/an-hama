@@ -348,7 +348,7 @@ return [
         ],
         [
             'text' => '動画管理',
-            'url' => 'admin/movie',
+            'url' => 'admin/video',
             'icon' => 'fas fa-video',
         ],
         [
