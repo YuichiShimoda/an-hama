@@ -22,7 +22,7 @@ class VideoController extends Controller
 	 */
 	public function index()
 	{
-		$visible_video = Video::where('is_visible', true)->get();
+		$visible_video = Video::where('is_visible', true)->orderBy('expired_at', 'desc')->get();
 		$video = Video::all();
 		$first_video = Video::where('is_visible', true)->where('first_video', true)->first();
 		if ($first_video) {
