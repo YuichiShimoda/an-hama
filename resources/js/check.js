@@ -1,7 +1,7 @@
 import "lazysizes";
 
 import { createApp } from 'vue';
-import Movie from './components/Movie.vue';
+import Video from './components/Video.vue';
 import Broadcast from './components/Broadcast.vue';
 import Location from './components/LocationCheck.vue';
 
@@ -28,7 +28,7 @@ $(document).on('click', '#appeal', function () {
 
 	const initialUpload = $mountTarget.data('initial-upload') || 'sample1.mp4';
 
-	movieApp = createApp(Movie, {
+	movieApp = createApp(Video, {
 		initialQueryValue: initialUpload,
 		onClose: () => {
 			// Vue アプリを unmount
