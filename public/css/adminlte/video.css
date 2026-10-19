@@ -559,7 +559,7 @@
   aspect-ratio: 1/1;
   margin-left: 10px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #1a277e;
 }
 @media screen and (max-width: 500px) {
   .content #videoTable th:nth-child(2) .video-box, .content #videoTable td:nth-child(2) .video-box {
