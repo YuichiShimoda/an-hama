@@ -24,7 +24,7 @@
 
 		{{-- タイトル --}}
 		<div class="d-block">
-			<x-adminlte-input name="title" label="タイトル" label-class="required" placeholder="タイトル" value="{{ old('title') }}"/>
+			<x-adminlte-input name="title" label="タイトル" label-class="required" placeholder="内規に従いタイトル入力" value="{{ old('title') }}"/>
 			<div class="form-note-box">
 				<p>※ 管理用のタイトルです。</p>
 				<p>※ 管理用のタイトルは、社内ルール（ 内規 ）の定めに従い入力してください。</p>
