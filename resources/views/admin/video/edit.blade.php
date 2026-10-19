@@ -32,6 +32,7 @@
 			<x-adminlte-input name="title" label="タイトル" label-class="required" placeholder="タイトル" value="{{ old('title', $video->title) }}"/>
 			<div class="form-note-box">
 				<p>※ 管理用のタイトルです。</p>
+				<p>※ 管理用のタイトルは、社内ルール（ 内規 ）の定めに従い入力してください。</p>
 				<p>※ このタイトルはHP側には表示されません。</p>
 			</div>
 		</div>
