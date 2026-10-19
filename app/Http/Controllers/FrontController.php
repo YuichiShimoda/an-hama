@@ -7,7 +7,6 @@ use Carbon\Carbon;
 use App\Models\News;
 use App\Models\WeeklyMenu;
 use App\Models\PressRelease;
-use App\Models\Movie;
 use App\Models\Video;
 use Illuminate\View\View;
 
@@ -40,7 +39,7 @@ class FrontController extends Controller
             $ele->delete();
         }
         $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
-        $movie = Movie::where('is_visible', true)->where('first_movie', true)->where('expired_at', '>', now())->first();
+        $movie = Video::where('is_visible', true)->where('first_video', true)->where('expired_at', '>', now())->first();
         return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
     }
 
@@ -87,24 +86,8 @@ class FrontController extends Controller
             $ele->delete();
         }
         $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
-        $movie = Movie::where('is_visible', true)->where('first_movie', true)->first();
+        $movie = Video::where('is_visible', true)->where('first_video', true)->first();
         return view('check', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
     }
 
-    public function video(): View
-    {
-        $today = Carbon::today();
-        $change_news = News::whereNotNull('reservation_day')->Where('reservation_day', '<', $today)->get();
-        foreach ($change_news as $ele) {
-            $newNews = $ele->replicate();
-            $newNews->reservation_day = null;
-            $newNews->created_at = now();
-            $newNews->updated_at = now();
-            $newNews->save();
-            $ele->delete();
-        }
-        $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
-        $movie = Video::where('is_visible', true)->where('first_video', true)->where('expired_at', '>', now())->first();
-        return view('video', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
-    }
 }

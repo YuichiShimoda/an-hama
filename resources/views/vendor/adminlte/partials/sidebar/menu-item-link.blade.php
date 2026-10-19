@@ -19,7 +19,7 @@
         </p>
         @if($item['text'] == '動画管理')
             @php
-                $has_first_movie = App\Models\Movie::where('is_visible', true)->where('first_movie', true)->exists();
+                $has_first_movie = App\Models\Video::where('is_visible', true)->where('first_video', true)->exists();
             @endphp
             @if(!$has_first_movie)
                 <svg class="alert-no-movie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
