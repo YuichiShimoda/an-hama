@@ -3,7 +3,6 @@
 /public/build
 /public/hot
 /public/storage
-/public/movie/uploader
 /public/video/uploader
 /public/robots.txt
 /storage/*.key
