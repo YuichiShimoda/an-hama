@@ -137,6 +137,111 @@ body::-webkit-scrollbar
 			object-fit: cover
 			object-position: center
 			// filter: brightness(1.3) saturate(1.2)
+	#doorWrapper
+		position: absolute
+		left: 0
+		bottom: 0
+		display: block
+		width: 150px
+		aspect-ratio: 1 / 2
+		border-radius: 2px
+		background: linear-gradient(to bottom, rgba(#ccc, 0.8) 40%, rgba(#333, 0.8) 98%, rgba(#303030, 0.8))
+		animation: doorLoop 10.0s ease-in-out infinite
+		z-index: 10
+		.content-box
+			display: block
+			width: 100%
+			height: 100%
+			box-shadow: 0 4px 10px rgba(#000, 0.6)
+			perspective: 600px
+			position: relative
+			.inner-box
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				width: 100%
+				height: 100%
+				border: solid 15px #B92928
+				background-color: #B92928
+				box-shadow: inset 0 0 5px rgba(0,0,0,0.4)
+				transform-origin: right center
+				transform-style: preserve-3d
+				animation: doorOpen 10.0s cubic-bezier(0.4, 0, 0.2, 1) infinite
+				&::before
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					content: ''
+					display: block
+					border: solid 4px #6d1615
+					pointer-events: none
+					z-index: 30
+				.door-handle
+					position: absolute
+					top: 40%
+					left: -10px
+					width: 10px
+					height: 25%
+					background: linear-gradient(to right, #230808, #5a0807 80%, #7c6000)
+					border-radius: 1px
+					box-shadow: -1px 2px 4px rgba(#000, 0.4)
+					z-index: 30
+				.glass-pane
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 100%
+					height: 100%
+					background-color: #ffefcd
+					box-shadow: inset 0 0 10px rgba(#000, 0.8)
+					overflow: hidden
+					position: relative
+					.center-open-sign
+						position: absolute
+						h1
+							font-size: 16px
+							font-weight: 900
+							color: #000
+							text-transform: uppercase
+							letter-spacing: 0.05em
+							margin: 0
+							line-height: 1.0
+					.roll-curtain
+						position: absolute
+						top: 0
+						left: 0
+						display: block
+						width: 100%
+						height: 100%
+						border-bottom: solid 10px #f0f0f0
+						background-color: #999
+						background-image: linear-gradient(rgba(#fff, 0.8) 50%, rgba(#fff, 1.0) 50%)
+						background-size: 100% 2px
+						transform-origin: top center
+						z-index: 20
+						animation: rollCurtainOpen 10.0s cubic-bezier(0.25, 1.1, 0.4, 1) infinite
+						.curtain-cord
+							position: absolute
+							left: 50%
+							bottom: -15px
+							display: block
+							width: 2px
+							height: 10px
+							background-color: #6d1615
+							transform: translateX(-50%)
+							&::after
+								position: absolute
+								left: -4px
+								bottom: -6px
+								content: ''
+								display: block
+								width: 10px
+								aspect-ratio: 1 / 1
+								border-radius: 50%
+								background-color: #551615
 	.mesh
 		position: absolute
 		top: 0
@@ -394,6 +499,43 @@ body::-webkit-scrollbar
 				font-family: $iroha-25icho-stdn
 				letter-spacing: 0.05em
 				color: #fff
+@keyframes doorLoop
+	0%
+		opacity: 0.0
+	10%
+		opacity: 1.0
+	80%
+		opacity: 1.0
+	90%
+		opacity: 0.0
+	100%
+		opacity: 0.0
+@keyframes doorOpen
+	0%
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+		transform: rotateY(0deg)
+		box-shadow: none
+	35%
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+		transform: rotateY(0deg)
+		box-shadow: none
+	65%
+		border-top-left-radius: 5px
+		border-bottom-left-radius: 5px
+		transform: rotateY(70deg)
+		box-shadow: -3px 1px 10px rgba(#000, 0.4)
+	100%
+		border-top-left-radius: 5px
+		border-bottom-left-radius: 5px
+		transform: rotateY(70deg)
+		box-shadow: -3px 1px 10px rgba(#000, 0.4)
+@keyframes rollCurtainOpen
+	0%, 15%
+		transform: scaleY(1)
+	45%, 100%
+		transform: scaleY(0)
 @keyframes puni
 	0%
 		transform: scale(0.9, 1.05) translateY(0)
@@ -2666,7 +2808,7 @@ body::-webkit-scrollbar
 	padding: 100px 0 50px
 	width: 100%
 	// background: url("../image/season/season-bg_3-4.webp")
-	background: url("../image/season/season-bg_9-10.webp")
+	background: url("../image/season/season-bg_11-12.webp")
 	background-size: cover
 	background-position: center bottom
 	background-repeat: no-repeat

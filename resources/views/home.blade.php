@@ -77,6 +77,21 @@
     <div id="loader-bg">
         <div class="border"></div>
         <img class="logo" src="{{ asset('image/loading-logo.svg') }}" alt="ロゴ">
+<!--         <div id="doorWrapper" class="kamachi-door is-open">
+            <div class="content-box">
+                <div class="inner-box">
+                    <div class="door-handle"></div>
+                    <div class="glass-pane">
+                        <div class="center-open-sign">
+                            <h1>Open</h1>
+                        </div>
+                        <div class="roll-curtain">
+                            <div class="curtain-cord"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <div class="overlay-top"></div>
         <div class="overlay-bottom"></div>
     </div>
@@ -124,6 +139,21 @@
         <div class="video-box">
             <video id="mv-video" preload="none" autoplay loop muted playsinline disablepictureinpicture data-pc="{{ asset('movie/top/mv.mp4') }}" data-sp="{{ asset('movie/top/mv-sp.mp4') }}"></video>
         </div>
+<!--         <div id="doorWrapper" class="kamachi-door is-open">
+            <div class="content-box">
+                <div class="inner-box">
+                    <div class="door-handle"></div>
+                    <div class="glass-pane">
+                        <div class="center-open-sign">
+                            <h1>Open</h1>
+                        </div>
+                        <div class="roll-curtain">
+                            <div class="curtain-cord"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <img class="mesh" src="{{ asset('image/top/mesh.webp') }}" alt="メッシュ">
         <!-- <p class="center">キャッチコピーキャッチ<br>キャッチコピーキャッチコピー<br>キャッチコピー</p> -->
         <div class="center-box">
@@ -293,26 +323,25 @@
                     </div>
                     <div class="label-box">
                         <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
-                        <img class="two-month" src="{{ asset('image/season/period9-10.svg') }}" alt="限定期間">
+                        <img class="two-month" src="{{ asset('image/season/period11-12.svg') }}" alt="限定期間">
                     </div>
                     <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
                 </div>
                 <div class="right-box">
                     <div class="img-box">
                         <!-- <img class="dish" src="{{ asset('image/season/season3-4.webp') }}" alt="あさりと桜えびのつけかけパスタ"> -->
-                        <img class="dish" src="{{ asset('image/season/season9-10.webp') }}" alt="イカと青唐辛子のつけかけパスタ">
+                        <img class="dish" src="{{ asset('image/season/season11-12.webp') }}" alt="しめじとまいたけのつけかけパスタ">
                     </div>
                 </div>
                 <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
             </div>
             <div class="desc-box">
-                <!-- <h2 class="ingredient">旬の食材　：　「 あさり 」「 桜えび 」</h2> -->
-                <h2 class="ingredient">旬の食材　：　「 イカ 」「 青唐辛子 」</h2>
+                <h2 class="ingredient">旬の食材　：　「 しめじ 」「 まいたけ 」</h2>
                 <div class="info-box">
                     <div class="tit-box">
                         <div class="period-box">
                             <!-- <p>3月,4月限定</p> -->
-                            <p>9月,10月限定</p>
+                            <p>11月,12月限定</p>
                         </div>
                         <h2 class="menu-tit">季節のつけかけパスタ</h2>
                     </div>

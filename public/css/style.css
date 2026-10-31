@@ -79,6 +79,122 @@ body::-webkit-scrollbar {
   object-fit: cover;
   object-position: center;
 }
+#mv #doorWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 150px;
+  aspect-ratio: 1/2;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, rgba(204, 204, 204, 0.8) 40%, rgba(51, 51, 51, 0.8) 98%, rgba(48, 48, 48, 0.8));
+  animation: doorLoop 10s ease-in-out infinite;
+  z-index: 10;
+}
+#mv #doorWrapper .content-box {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  perspective: 600px;
+  position: relative;
+}
+#mv #doorWrapper .content-box .inner-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: solid 15px #B92928;
+  background-color: #B92928;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+  transform-origin: right center;
+  transform-style: preserve-3d;
+  animation: doorOpen 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+#mv #doorWrapper .content-box .inner-box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  border: solid 4px #6d1615;
+  pointer-events: none;
+  z-index: 30;
+}
+#mv #doorWrapper .content-box .inner-box .door-handle {
+  position: absolute;
+  top: 40%;
+  left: -10px;
+  width: 10px;
+  height: 25%;
+  background: linear-gradient(to right, #230808, #5a0807 80%, #7c6000);
+  border-radius: 1px;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.4);
+  z-index: 30;
+}
+#mv #doorWrapper .content-box .inner-box .glass-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ffefcd;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  position: relative;
+}
+#mv #doorWrapper .content-box .inner-box .glass-pane .center-open-sign {
+  position: absolute;
+}
+#mv #doorWrapper .content-box .inner-box .glass-pane .center-open-sign h1 {
+  font-size: 16px;
+  font-weight: 900;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1;
+}
+#mv #doorWrapper .content-box .inner-box .glass-pane .roll-curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: solid 10px #f0f0f0;
+  background-color: #999;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8) 50%, white 50%);
+  background-size: 100% 2px;
+  transform-origin: top center;
+  z-index: 20;
+  animation: rollCurtainOpen 10s cubic-bezier(0.25, 1.1, 0.4, 1) infinite;
+}
+#mv #doorWrapper .content-box .inner-box .glass-pane .roll-curtain .curtain-cord {
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  display: block;
+  width: 2px;
+  height: 10px;
+  background-color: #6d1615;
+  transform: translateX(-50%);
+}
+#mv #doorWrapper .content-box .inner-box .glass-pane .roll-curtain .curtain-cord::after {
+  position: absolute;
+  left: -4px;
+  bottom: -6px;
+  content: "";
+  display: block;
+  width: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #551615;
+}
 #mv .mesh {
   position: absolute;
   top: 0;
@@ -399,6 +515,57 @@ body::-webkit-scrollbar {
   color: #fff;
 }
 
+@keyframes doorLoop {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes doorOpen {
+  0% {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: rotateY(0deg);
+    box-shadow: none;
+  }
+  35% {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transform: rotateY(0deg);
+    box-shadow: none;
+  }
+  65% {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transform: rotateY(70deg);
+    box-shadow: -3px 1px 10px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transform: rotateY(70deg);
+    box-shadow: -3px 1px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+@keyframes rollCurtainOpen {
+  0%, 15% {
+    transform: scaleY(1);
+  }
+  45%, 100% {
+    transform: scaleY(0);
+  }
+}
 @keyframes puni {
   0% {
     transform: scale(0.9, 1.05) translateY(0);
@@ -3284,7 +3451,7 @@ body::-webkit-scrollbar {
   display: block;
   padding: 100px 0 50px;
   width: 100%;
-  background: url("../image/season/season-bg_9-10.webp");
+  background: url("../image/season/season-bg_11-12.webp");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
