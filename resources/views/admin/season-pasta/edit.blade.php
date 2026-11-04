@@ -157,6 +157,62 @@
             {{-- 更新ボタン --}}
             <x-adminlte-button label="更新する" class="register-btn" type="submit"/>
 
+            <div class="toggle-btn-box" @click="isClose = !isClose">
+                <p v-show="!isClose">»</p>
+                <p v-show="isClose">«</p>
+            </div>
+            <div class="scale-box" :class="{ 'is-close': isClose }">
+                <input type="range" class="scale-slider" v-model.number="scale" min="0.3" max="0.8" step="0.01">
+            </div>
+            <div id="frame" :class="{ 'is-close': isClose }" :style="{ transform: `scale(${scale})` }">
+                <div id="season" :style="period ? { backgroundImage: `url('{{ asset('image/season/season-bg') }}_${period}.webp')` } : {}">
+                    <div class="content-box">
+                        <div class="main-box">
+                            <div class="left-box">
+                                <img class="pasta-line" src="{{ asset('image/season/pasta-line.svg') }}" alt="">
+                                <img class="board" src="{{ asset('image/season/board.svg') }}" alt="">
+                                <div class="illust-box">
+                                    <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="">
+                                    <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="">
+                                </div>
+                                <div class="label-box">
+                                    <img class="two-month" :src="`{{ asset('image/season/period') }}${period}.svg`" alt="">
+                                </div>
+                                <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="">
+                            </div>
+                            <div class="right-box">
+                                <div class="img-box">
+                                    <img v-if="!dishPreview" class="dish" src="{{ asset('image/adminlte/season-pasta/plate.webp') }}" alt="">
+                                    <img w-else class="dish" :src="dishPreview" alt="">
+                                </div>
+                            </div>
+                            <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="">
+                        </div>
+                        <div class="desc-box">
+                            <h2 class="ingredient">旬の食材　：　「 @{{ ingredient1 || 'ーーー' }} 」「 @{{ ingredient2 || 'ーーー' }} 」</h2>
+                            <div class="info-admin-box">
+                                <div class="tit-box">
+                                    <div class="period-box">
+                                        <p>@{{ period ? period.replace('-', '月,') + '月' : 'ーー月, ー' }}月限定</p>
+                                    </div>
+                                    <h2 class="menu-tit">季節のつけかけパスタ</h2>
+                                </div>
+                                <div class="price-box">
+                                    <div class="above-box">
+                                        <p class="size">レギュラー</p>
+                                        <p class="unit">300g</p>
+                                    </div>
+                                    <div class="below-box">
+                                        <p class="price">1,300</p>
+                                        <p class="yen">円</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -187,6 +243,8 @@
                         const expiredAt = ref(@json(old('expired_at', $season_pasta->expired_at->format('Y-m-d H:i'))));
                         const comment = ref(@json(old('comment', $season_pasta->comment)));
 
+                        const scale = ref(0.6);
+                        const isClose = ref(false);
                         const loading = ref(false);
                         const errors = ref({});
 
@@ -269,6 +327,8 @@
                             reservationAt,
                             expiredAt,
                             comment,
+                            scale,
+                            isClose,
                             errors,
                             handleDish,
                             resetPreview,
