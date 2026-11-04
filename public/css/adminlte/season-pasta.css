@@ -928,7 +928,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  width: 20px;
+  width: 30px;
   aspect-ratio: 1/1;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -1030,6 +1030,7 @@
   border-radius: 20px;
   transform-origin: right bottom;
   z-index: 100;
+  pointer-events: none;
   transition: transform 0.3s ease-in-out, right 1s 0.2s ease-in-out, opacity 1s 0.2s ease-in-out;
 }
 @media screen and (max-width: 1100px) {
