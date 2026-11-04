@@ -12,6 +12,9 @@
     @if(session('success'))
         <x-adminlte-alert theme="success" title="{{ session('success') }}"></x-adminlte-alert>
     @endif
+    @if(isset($overlap_error))
+        <x-adminlte-alert theme="danger" title="{{ $overlap_error }}"></x-adminlte-alert>
+    @endif
     <div class="tit-box">
         <h1>季節のつけかけパスタ管理</h1>
         <a href="{{ route('admin.season-pasta.create') }}" class="create-btn">
@@ -19,8 +22,8 @@
         </a>
     </div>
     <div class="desc-box">
-        <p>黄色はIDがハイライトになります。</p>
-        <p>公開日時に重複がある場合、エラーを表示します</p>
+        <p>現在公開中のデータは、黄色で表示されます。</p>
+        <p>公開日時が重複しているデータは、ID欄が赤色で表示されます。</p>
     </div>
 @endsection
 
@@ -31,8 +34,8 @@
     @else
         <x-adminlte-datatable id="seasonPastaTable" :heads="['ID', '期間', '画像', '新規作成日時', '更新日時', '旬の食材１', '旬の食材２', '公開開始日時', '公開終了日時', '操作']" striped hoverable bordered compressed>
             @foreach($season_pasta as $season_pasta_ele)
-                <tr>
-                    <td>{{ $season_pasta_ele->id }}</td>
+                <tr class="{{ $season_pasta_ele->id === $published_id ? 'is-published' : '' }}">
+                    <td class="{{ in_array($season_pasta_ele->id, $overlap_ids) ? 'is-overlap' : '' }}">{{ $season_pasta_ele->id }}</td>
                     @php
                         $periods = [
                             '1-2'   => '1月,2月',
@@ -73,6 +76,9 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
+        <div class="index-note-box">
+            <p>※ 重複があった場合、HP側に表示されません。</p>
+        </div>
         <div id="individual-modal" class="modal">
             <div class="md-overlay basic-hover"></div>
             <div class="md-contents">
