@@ -1,3 +1,8 @@
+$miniwa-lt-v3: "miniwa-lt-v3", sans-serif // 400
+$miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
+$miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
+$iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
+
 @mixin bp1600
 	@media screen and (max-width: 1600px)
 		@content
@@ -836,3 +841,381 @@
 			height: 2.0em
 			&::before
 				font-size: 14px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-btn-box
+	position: fixed
+	bottom: 10vh
+	right: 0
+	display: none
+	justify-content: center
+	align-items: center
+	width: 20px
+	aspect-ratio: 1 / 1
+	border-top-left-radius: 4px
+	border-bottom-left-radius: 4px
+	border-left: solid 1px #ccc
+	border-bottom: solid 1px #ccc
+	background-color: #fff
+	z-index: 110
+	+bp450
+		display: flex
+	> p
+		display: block
+		margin: -5px 0 0 0
+		font-weight: 400
+		font-size: 16px
+		line-height: 1
+		font-family: iroha-25icho-stdn, sans-serif
+		letter-spacing: 0.05em
+		color: #555
+.scale-box
+	position: fixed
+	right: 40px
+	bottom: 30px
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 150px
+	height: 3px
+	z-index: 110
+	transition: transform 0.3s ease-in-out, right 1.0s 0.2s ease-in-out, opacity 1.0s 0.2s ease-in-out
+	+bp450
+		right: 25px
+		bottom: 13px
+	&.is-close
+		right: -100%
+		opacity: 0.0
+	.scale-slider
+		appearance: none
+		-webkit-appearance: none
+		display: block
+		width: 100%
+		height: 100%
+		background: #ddd
+		border-radius: 1px
+		outline: none
+		cursor: pointer
+		&::-webkit-slider-thumb
+			appearance: none
+			-webkit-appearance: none
+			width: 10px
+			aspect-ratio: 1 / 1
+			border-radius: 50%
+			background: #00f
+			border: none
+			cursor: grab
+			transition: background 0.2s, transform 0.2s
+			+bp450
+				width: 8px
+		&::-webkit-slider-thumb:hover
+			background: #0C2A81
+			transform: scale(1.15)
+		&::-moz-range-thumb
+			width: 10px
+			aspect-ratio: 1 / 1
+			border: none
+			border-radius: 50%
+			background: #0C2A81
+			cursor: grab
+			+bp450
+				width: 8px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#frame
+	position: fixed
+	right: 20px
+	bottom: 20px
+	display: block
+	width: fit-content
+	height: fit-content
+	border-radius: 20px
+	transform-origin: right bottom
+	z-index: 100
+	transition: transform 0.3s ease-in-out, right 1.0s 0.2s ease-in-out, opacity 1.0s 0.2s ease-in-out
+	+bp1100
+		border-radius: 18px
+	+bp450
+		border-radius: 15px
+		right: 15px
+		bottom: 15px
+	&.is-close
+		right: -100%
+		opacity: 0.0
+#season
+	display: block
+	padding: 100px 200px 50px
+	width: 100%
+	background-color: #fff
+	background-size: cover
+	background-position: center bottom
+	background-repeat: no-repeat
+	transform-origin: right bottom
+	box-shadow: 0 10px 10px rgba(#000, 0.4)
+	pointer-events: none
+	position: relative
+	+bp1400
+		transform: scale(0.7)
+	+bp1100
+		transform: scale(0.6)
+		box-shadow: 0 8px 8px rgba(#000, 0.4)
+	+bp700
+		transform: scale(0.5)
+	+bp600
+		transform: scale(0.4)
+	+bp500
+		transform: scale(0.37)
+	+bp450
+		transform: scale(0.33)
+		box-shadow: 0 5px 5px rgba(#000, 0.4)
+	+bp400
+		transform: scale(0.3)
+	.content-box
+		display: block
+		width: 100%
+		.main-box
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			width: fit-content
+			margin: 0 auto
+			position: relative
+			.left-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+				width: 500px
+				position: relative
+				.pasta-line
+					display: block
+					width: 100%
+					padding-left: 20%
+				.board
+					display: block
+					width: 100%
+					margin-top: 25px
+				.illust-box
+					display: flex
+					justify-content: center
+					align-items: center
+					width: fit-content
+					margin: 20px auto 0
+					.plate-icon
+						display: block
+						width: 80px
+					.en-msg
+						display: block
+						width: 210px
+						margin-left: 40px
+				.label-box
+					position: absolute
+					top: -15px
+					left: -45px
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 120px
+					z-index: 2
+					.two-month
+						display: block
+						width: 100%
+						border-radius: 50%
+						transform-origin: center
+						animation: spin 4.0s ease-in-out infinite
+				.label-bg
+					position: absolute
+					top: -15px
+					left: -45px
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 128px
+					transform-origin: 53% 59%
+					animation: spin 4.0s ease-in-out infinite, label-scale 3.0s ease-in-out infinite
+					z-index: 1
+			.right-box
+				display: block
+				width: 400px
+				margin-left: 30px
+				margin-top: 55px
+				.img-box
+					.dish
+						display: block
+						width: 100%
+			.jp-msg
+				position: absolute
+				top: -5px
+				right: -160px
+				display: block
+				width: 200px
+		.desc-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			margin: 30px auto 0
+			.ingredient
+				display: block
+				font-weight: 400
+				font-size: 16px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #333
+			.info-admin-box
+				display: flex
+				justify-content: center
+				align-items: flex-end
+				width: fit-content
+				> .tit-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					.period-box
+						display: flex
+						justify-content: center
+						align-items: center
+						width: fit-content
+						height: 32px
+						padding: 0 18px
+						border-radius: 16px
+						background-color: #B92928
+						p
+							display: block
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 16px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.05em
+							color: #fff
+					.menu-tit
+						display: block
+						margin-left: 20px
+						font-weight: 400
+						font-size: 32px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.1em
+						color: #333
+				.price-box
+					display: block
+					width: fit-content
+					padding-bottom: 3px
+					margin-left: 50px
+					.above-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						width: fit-content
+						.size
+							display: block
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 12px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #555
+						.unit
+							display: block
+							margin-left: 15px
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $miniwa-lt-v3
+							letter-spacing: 0.05em
+							color: #555
+					.below-box
+						display: flex
+						justify-content: flex-start
+						align-items: flex-end
+						width: fit-content
+						margin-top: 5px
+						.price
+							display: block
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 30px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0.05em
+							color: #333
+						.yen
+							display: block
+							padding-bottom: 0.15em
+							margin-left: 4px
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 20px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0.05em
+							color: #333
+@keyframes spin
+	0%
+		transform: rotate(-30deg)
+	10%
+		transform: rotate(-29deg)
+	50%
+		transform: rotate(-15deg)
+	90%
+		transform: rotate(-29deg)
+	100%
+		transform: rotate(-30deg)
+@keyframes label-scale
+	0%
+		scale: 0.3
+	10%
+		scale: 1.15
+	40%
+		scale: 1.15
+	50%
+		scale: 0.3
+	60%
+		scale: 1.35
+	65%
+		scale: 1.15
+	90%
+		scale: 1.15
+	100%
+		scale: 0.3
