@@ -43,7 +43,8 @@ Route::post('voice', [VoiceController::class, 'submit'])->name('voice.submit');
 // フジテレビ映像あり
 // Route::get('zni3xwapmd8khmwa', [App\Http\Controllers\FrontController::class, 'check'])->name('check');
 
-
+// test
+Route::get('test', [App\Http\Controllers\FrontController::class, 'test'])->name('test');
 
 
 

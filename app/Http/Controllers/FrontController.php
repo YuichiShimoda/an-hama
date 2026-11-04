@@ -8,6 +8,7 @@ use App\Models\News;
 use App\Models\WeeklyMenu;
 use App\Models\PressRelease;
 use App\Models\Video;
+use App\Models\SeasonPasta;
 use Illuminate\View\View;
 
 class FrontController extends Controller
@@ -90,4 +91,27 @@ class FrontController extends Controller
         return view('check', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
     }
 
+    public function test(): View
+    {
+        $today = Carbon::today();
+        $change_news = News::whereNotNull('reservation_day')->Where('reservation_day', '<', $today)->get();
+        foreach ($change_news as $ele) {
+            $newNews = $ele->replicate();
+            $newNews->reservation_day = null;
+            $newNews->created_at = now();
+            $newNews->updated_at = now();
+            $newNews->save();
+            $ele->delete();
+        }
+        $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
+        $movie = Video::where('is_visible', true)->where('first_video', true)->where('expired_at', '>', now())->first();
+        $seasonPasta = SeasonPasta::where('reservation_at', '<=', now())->where('expired_at', '>=', now())->get();
+        if ($seasonPasta->count() === 1) {
+            $seasonPasta = $seasonPasta->first();
+        } else {
+            $seasonPasta = null;
+        }
+
+        return view('test', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie, 'seasonPasta' => $seasonPasta]);
+    }
 }
