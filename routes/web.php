@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PressReleaseController;
 use App\Http\Controllers\Admin\TaskController;
 use App\Http\Controllers\Admin\AnalyticsController;
 use App\Http\Controllers\Admin\VideoController;
+use App\Http\Controllers\Admin\SeasonPastaController;
 use App\Http\Controllers\Admin\RestaurantController;
 
 
@@ -66,6 +67,7 @@ Route::prefix('admin')->middleware(['auth'])->name('admin.')->group(function () 
     Route::resource('video', VideoController::class);
     Route::post('video/{video}/first-set', [VideoController::class, 'firstSet'])->name('video.firstSet');
     Route::post('video/{video}/first-reset', [VideoController::class, 'firstReset'])->name('video.firstReset');
+    Route::resource('season-pasta', SeasonPastaController::class)->parameters(['season-pasta' => 'season_pasta']);
     Route::resource('restaurant', RestaurantController::class);
     Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');
     Route::get('analytics', [AnalyticsController::class, 'analytics'])->name('analytics');

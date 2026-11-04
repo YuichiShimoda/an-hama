@@ -352,6 +352,11 @@ return [
             'icon' => 'fas fa-video',
         ],
         [
+            'text' => '季節のつけかけ管理',
+            'url' => 'admin/season-pasta',
+            'icon' => 'fas fa-utensils',
+        ],
+        [
             'text' => 'アナリティクス',
             'url' => 'admin/analytics',
             'icon' => 'fas fa-chart-bar',

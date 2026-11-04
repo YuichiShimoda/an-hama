@@ -1,0 +1,838 @@
+@mixin bp1600
+	@media screen and (max-width: 1600px)
+		@content
+@mixin bp1500
+	@media screen and (max-width: 1500px)
+		@content
+@mixin bp1400
+	@media screen and (max-width: 1400px)
+		@content
+@mixin bp1300
+	@media screen and (max-width: 1300px)
+		@content
+@mixin bp1200
+	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1100
+	@media screen and (max-width: 1100px)
+		@content
+@mixin bp1050
+	@media screen and (max-width: 1050px)
+		@content
+@mixin bp1000
+	@media screen and (max-width: 1000px)
+		@content
+@mixin bp950
+	@media screen and (max-width: 950px)
+		@content
+@mixin bp900
+	@media screen and (max-width: 900px)
+		@content
+@mixin bp850
+	@media screen and (max-width: 850px)
+		@content
+@mixin bp800
+	@media screen and (max-width: 800px)
+		@content
+@mixin bp750
+	@media screen and (max-width: 750px)
+		@content
+@mixin bp700
+	@media screen and (max-width: 700px)
+		@content
+@mixin bp650
+	@media screen and (max-width: 650px)
+		@content
+@mixin bp600
+	@media screen and (max-width: 600px)
+		@content
+@mixin bp550
+	@media screen and (max-width: 550px)
+		@content
+@mixin bp500
+	@media screen and (max-width: 500px)
+		@content
+@mixin bp450
+	@media screen and (max-width: 450px)
+		@content
+@mixin bp420
+	@media screen and (max-width: 420px)
+		@content
+@mixin bp400
+	@media screen and (max-width: 400px)
+		@content
+@mixin bp380
+	@media screen and (max-width: 380px)
+		@content
+
+
+
+
+
+
+
+
+
+.content-header
+	.tit-box
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		margin-top: 20px
+		&.show-page
+			margin-bottom: 5px
+			+bp500
+				margin-bottom: 25px
+			.date-box
+				left: 2px
+				bottom: -20px
+				+bp500
+					bottom: -37px
+				.date-box
+					margin-top: 15px
+					margin-left: auto
+					margin-bottom: -15px
+			h1
+				+bp450
+					width: initial
+					line-height: 1.0
+					margin-bottom: 0
+				span
+					+bp450
+						display: inline-block
+						line-height: 1.0
+		&.edit-page
+			+bp500
+				margin-bottom: 15px
+			+bp450
+				margin-bottom: 25px
+		.date-box
+			position: absolute
+			left: 0px
+			bottom: -10px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			+bp500
+				bottom: -30px
+				align-items: flex-start
+				flex-direction: column
+			+bp450
+				bottom: -40px
+			.created-at
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #55f
+			.updated-at
+				display: block
+				margin: 0 0 0 15px
+				font-weight: 400
+				font-size: 11px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #55f
+				+bp500
+					margin: 5px 0 0 0
+		h1
+			display: block
+			font-weight: 500
+			font-size: 16px
+			line-height: 1.0
+			letter-spacing: 0.05em
+			color: #555
+			+bp450
+				width: 215px
+				line-height: 1.3
+				margin-bottom: -3px
+			span
+				display: inline-block
+				font-weight: 500
+				font-size: 16px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #555
+				+bp450
+					display: none
+					line-height: 1.3
+		.create-btn
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			padding: 12px 20px
+			border-radius: 5px
+			background-color: #007bff
+			p
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				color: #fff
+		.back-btn
+			display: flex
+			justify-content: center
+			align-items: center
+			width: fit-content
+			padding: 12px 20px
+			border-radius: 5px
+			background-color: #ccc
+			p
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				white-space: nowrap
+				color: #555
+	.desc-box
+		display: block
+		width: 100%
+		margin-top: 15px
+		p
+			display: block
+			margin: 0
+			font-weight: 400
+			font-size: 14px
+			line-height: 1.5
+			letter-spacing: 0.05em
+			color: #555
+
+
+
+
+
+
+
+
+
+
+
+.content
+	margin-top: 20px
+	// margin-bottom: 100px
+	// -----  index  -----
+	#seasonPastaTable
+		width: initial !important
+		margin: 0
+		+bp1000
+			margin-bottom: 80px
+		+bp600
+			margin-bottom: 40px
+		th, td
+			box-sizing: border-box
+		th:nth-child(1), td:nth-child(1)
+			width: 60px !important
+			min-width: 60px !important
+		th:nth-child(2), td:nth-child(2)
+			width: 90px !important
+			min-width: 90px !important
+		th:nth-child(3), td:nth-child(3)
+			width: 70px !important
+			min-width: 70px !important
+			.img-box
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 30px
+				aspect-ratio: 1 / 1
+				margin-left: 10px
+				border-radius: 50%
+				background-color: #1a277e
+				+bp500
+					margin-left: 10px
+				.img-icon
+					display: block
+					width: 16px
+		th:nth-child(4), td:nth-child(4)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(5), td:nth-child(5)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(6), td:nth-child(6)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(7), td:nth-child(7)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(8), td:nth-child(8)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(9), td:nth-child(9)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(10), td:nth-child(10)
+			width: 140px !important
+			min-width: 140px !important
+		th
+			padding: 0.7em 1.0em
+			font-size: 14px
+			vertical-align: middle
+			color: #555
+		td
+			padding: 0.5em 1.0em
+			font-size: 13px
+			vertical-align: middle
+			white-space: nowrap
+			color: #555
+			&:first-of-type
+				font-size: 15px
+			&:last-of-type
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				a
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 30px
+					aspect-ratio: 1 / 1
+					padding: 0
+					+bp700
+						width: 25px
+					&:nth-of-type(1)
+						i
+							font-size: 13px
+					&:nth-of-type(2)
+						margin-left: 0.5em
+						+bp700
+							margin-left: 0.3em
+						i
+							font-size: 14px
+							color: #444
+				form
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 30px
+					aspect-ratio: 1 / 1
+					padding: 0
+					margin-left: 0.5em
+					+bp700
+						width: 25px
+						margin-left: 0.3em
+					button
+						display: block
+						width: 100%
+						height: 100%
+						+bp700
+							padding: 0
+						i
+							font-size: 12px
+	// -----  create  -----
+	form
+		// padding-bottom: 100px
+		// +bp1000
+		// 	padding-bottom: 80px
+		// +bp600
+		// 	padding-bottom: 40px
+		.d-block
+			margin-top: 2.5em
+			+bp450
+				margin-top: 1.5em
+			&:first-of-type
+				margin-top: 0
+			&.ingredient-box
+				display: flex !important
+				justify-content: flex-start
+				align-items: flex-start
+				flex-wrap: wrap
+				+bp500
+					flex-direction: column
+				.form-group
+					&:not(:first-of-type)
+						margin-left: 10px
+						+bp500
+							margin-left: 0
+							margin-top: 6px
+						label
+							opacity: 0.0
+							pointer-events: none
+							+bp500
+								display: none
+				.form-note-box
+					width: 100%
+			&.period-box
+				display: flex !important
+				justify-content: flex-start
+				align-items: flex-start
+				flex-wrap: wrap
+				+bp500
+					flex-direction: column
+				.form-group
+					&:not(:first-of-type)
+						label
+							opacity: 0.0
+							pointer-events: none
+							+bp500
+								display: none
+					.input-group
+						&.is-invalid
+							border: solid 1px #dc3545
+							border-radius: 4px
+						.dp__main.dp__theme_light
+							.dp__input
+								width: 210px
+								height: 38px
+								font-weight: 400
+								font-size: 1.0rem
+								line-height: 1.5
+								color: #495057
+				.wavy-line
+					display: block
+					margin: 40px 10px 0
+					font-weight: 400
+					font-size: 18px
+					line-height: 1.0
+					letter-spacing: 0.05em
+					color: #999
+					+bp500
+						margin: 7px 90px 7px
+						font-size: 14px
+						transform-origin: center
+						transform: rotate(90deg)
+						pointer-events: none
+				.form-note-box
+					width: 100%
+			.form-group
+				margin: 0
+				label
+					display: block
+					font-weight: 700
+					font-size: 14px
+					line-height: 1.5
+					letter-spacing: 0.05em
+					color: #882117
+					&.required
+						position: relative
+						display: inline-block
+						padding-right: 0.8em
+					&.required::after
+						position: absolute
+						top: 0
+						right: 0
+						content: "*"
+						display: block
+						font-weight: 400
+						font-size: 1.2em
+						line-height: 1.0
+						color: red
+				.input-group
+					&.adminlte-invalid-igroup
+						width: fit-content
+					#ingredient1, #ingredient2
+						width: 180px
+						flex: initial
+				.radio-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					flex-wrap: wrap
+					width: 100%
+					margin-top: -5px
+					+bp600
+						margin-top: -7px
+					.radio-ele
+						display: block
+						margin: 5px 10px 0 0
+						+bp600
+							margin: 7px 7px 0 0
+						&:last-of-type
+							margin-right: 0
+						input[type="radio"]
+							display: none
+							&:checked + label
+								border: 1px solid #0C2A81
+								background-color: #0C2A81
+								color: #fff
+						label
+							display: block
+							padding: 8px 12px
+							margin: 0
+							border: 1px solid #A8B2BC
+							border-radius: 5px
+							font-weight: 400
+							font-size: 15px
+							line-height: 1.0
+							letter-spacing: 0.05em
+							color: #495057
+							cursor: pointer
+							transition: all 0.3s ease-in-out
+				.file-upload-box
+					display: block
+					width: 400px
+					aspect-ratio: 4 / 3
+					position: relative
+					+bp700
+						width: 350px
+					+bp500
+						width: 320px
+					+bp450
+						width: 300px
+					+bp400
+						width: 260px
+					&.edit-page
+						width: 800px
+						aspect-ratio: 8 / 5
+						margin-top: 5px
+						margin-bottom: 0
+						object-fit: contain
+						object-position: left top
+						+bp1100
+							width: 100%
+						.file-upload-label
+							height: initial
+							border: 0
+							border-radius: 0
+							cursor: initial
+							background-color: initial
+							.preview-image
+								object-fit: initial
+					.file-upload-label
+						display: flex
+						justify-content: center
+						align-items: center
+						flex-direction: column
+						width: 100%
+						height: 100%
+						padding: 7%
+						margin: 0
+						border: solid 1px #ced4da
+						border-radius: 10px
+						cursor: pointer
+						background-color: #f0f0f0
+						overflow: hidden
+						&:hover
+							.add-icon
+								opacity: 0.5
+						.add-icon
+							display: block
+							width: 30px
+							transition: all 0.2s ease-in-out
+						.preview-image
+							display: block
+							width: 100%
+							height: 100%
+							object-fit: contain
+						input[type="file"]
+							display: none
+					.preview-close-btn
+						position: absolute
+						top: 0
+						right: 0
+						display: block
+						width: 50px
+						padding: 10px
+						cursor: pointer
+						z-index: 10
+						transition: all 0.2s ease-in-out
+						&:hover
+							opacity: 0.5
+			.form-note-box
+				margin-left: 0.2em
+				margin-top: 0.3em
+				p
+					display: block
+					margin: 0
+					padding-left: 1.15em
+					font-weight: 400
+					font-size: 11px
+					line-height: 1.5
+					letter-spacing: 0.05em
+					color: #777
+					text-indent: -1.15em
+			.invalid-feedback
+				margin: 0.5em 0 0 0.3em
+				font-weight: bolder
+				font-size: 10px
+				&:nth-of-type(2)
+					margin: 0 0 0 0.3em
+		.register-btn
+			padding: 13px 25px
+			margin-top: 20px
+			border: 0
+			background-color: #c71f10
+			font-weight: 700
+			font-size: 14px
+			line-height: 1.0
+			letter-spacing: 0.05em
+			color: #fff
+	// -----  show  -----
+	.card
+		margin-bottom: 100px
+		+bp1000
+			margin-bottom: 80px
+		+bp600
+			margin-bottom: 40px
+		.card-header
+			background-color: #c71f10
+			.card-title
+				font-weight: 700
+				font-size: 16px
+				line-height: 1.3
+				letter-spacing: 0.05em
+				+bp600
+					font-size: 14px
+		.card-body
+			> p
+				width: 100%
+				margin-top: 5px
+				margin-bottom: 0
+				font-weight: 400
+				font-size: 14px
+				letter-spacing: 0.05em
+				color: #555
+				strong
+					display: inline-block
+					width: fit-content
+					margin-right: 5px
+					font-weight: 500
+					font-size: 14px
+					letter-spacing: 0.05em
+					color: #333
+					.parentheses
+						display: inline-block
+						width: fit-content
+						font-weight: 400
+						font-size: 12px
+						letter-spacing: 0.05em
+						color: #555
+			.img-box
+				display: block
+				width: 300px
+				margin-top: 5px
+				margin-bottom: 25px
+				+bp600
+					width: 250px
+					margin-bottom: 20px
+				+bp450
+					width: 220px
+					margin-bottom: 15px
+				.img
+					display: block
+					width: 100%
+			.period-box
+				display: block
+				margin-top: 5px
+				+bp600
+					margin-top: 10px
+				&:first-of-type
+					margin-top: 0
+				.tit
+					display: block
+					width: 100%
+					margin: 0
+					font-weight: 500
+					font-size: 14px
+					letter-spacing: 0.05em
+					color: #333
+				.detail
+					display: block
+					width: 100%
+					margin: 0 0 0 0.15em
+					font-weight: 400
+					font-size: 14px
+					letter-spacing: 0.05em
+					color: #555
+					+bp420
+						width: 190px
+			.body-box
+				padding: 15px 20px
+				margin-top: 0.3em
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.5
+				color: #555
+				+bp600
+					padding: 10px 15px
+		.card-footer
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				width: fit-content
+				height: 36px
+				padding: 0 20px
+				border-radius: 5px
+				font-size: 14px
+				line-height: 1.0
+				letter-spacing: 0.05em
+				&:first-of-type
+					font-weight: 400
+					color: #fff
+					i
+						display: block
+						margin-right: 8px
+						font-size: 13px
+						transform-origin: center
+						transform: scaleY(0.7)
+				&:last-of-type
+					margin-left: 5px
+					font-weight: 700
+					color: #444
+					i
+						display: block
+						margin-right: 5px
+						font-size: 13px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#individual-modal
+	display: block
+	pointer-events: none
+	opacity: 0
+	z-index: 1999
+	&.is-active
+		opacity: 1
+		pointer-events: auto
+	.md-overlay
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vh
+		background: #000
+		opacity: .7
+	.md-contents
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 450px
+		+bp1000
+			width: 400px
+		+bp700
+			width: 350px
+		+bp600
+			width: 300px
+		+bp450
+			top: 40%
+			width: 250px
+		+bp400
+			width: 230px
+		> .md-inner
+			display: block
+			width: 100%
+			position: relative
+			.answer-img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+				// aspect-ratio: 8 / 5
+				// object-fit: contain
+				// object-position: left top
+				// +bp1100
+				// 	width: 100%
+	.modal-close-btn
+		position: fixed
+		bottom: 30px
+		right: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100px
+		height: 100px
+		border: 1px solid #ccc
+		border-radius: 50%
+		background: #fff
+		cursor: pointer
+		z-index: 4000
+		opacity: 0.7
+		transition: all 1.0s ease-in-out
+		&:hover
+			opacity: 1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bootstrap-datetimepicker-widget.dropdown-menu
+	padding: 5px 15px 3px
+	.datepicker-days
+		.table.table-sm
+			thead
+				tr
+					.prev, .next
+						vertical-align: middle
+						span
+							font-size: 12px
+							color: #777
+					.picker-switch
+						font-weight: 700
+						line-height: 1.7
+						color: #555
+					.dow
+						font-weight: 400
+						font-size: 14px
+						line-height: 1.5
+						color: #555
+			tbody
+				tr
+					td
+						font-size: 12px
+		th.dow:first-child, td:first-child
+			color: #f00
+		th.dow:last-child, td:last-child
+			color: #00f
+	.picker-switch.accordion-toggle
+		.fas.fa-times
+			line-height: 2.0
+			height: 2.0em
+			&::before
+				font-size: 14px
