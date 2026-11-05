@@ -2,6 +2,7 @@
 @section('title', 'フジテレビ確認用ページ')
 @section('description', '名古屋の定番グルメ「 あんかけパスタ 」を楽しむなら、あんかけハマちゃんへ！スパイシーさに負けない“コク”のあるマイルドソースがやみつきに。安心・安全な料理をご提供します。')
 @section('meta_tags')
+    @verbatim
     <meta name="robots" content="noindex, nofollow">
     <script type="application/ld+json">
     {
@@ -61,6 +62,7 @@
         ]
     }
     </script>
+    @endverbatim
 @stop
 
 @section('css')

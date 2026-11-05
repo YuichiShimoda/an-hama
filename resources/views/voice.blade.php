@@ -2,6 +2,7 @@
 @section('title', 'アンケート｜あんかけハマちゃん')
 @section('description', 'あんかけハマちゃんでは、Webアンケートを通じてお客様のご意見を募集しております。率直なご感想やご意見をぜひお聞かせください。')
 @section('meta_tags')
+    @verbatim
     <meta name="robots" content="noindex,nofollow">
     <script type="application/ld+json">
     {
@@ -31,6 +32,7 @@
         }
     }
     </script>
+    @endverbatim
 @stop
 
 @section('css')

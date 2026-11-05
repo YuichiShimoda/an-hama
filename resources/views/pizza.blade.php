@@ -2,7 +2,8 @@
 @section('title', 'あんかけピザ｜あんかけハマちゃん')
 @section('description', '直径24cmのあんかけピザは、あんかけパスタの"あん"をソースに使ったオリジナルピザです。旨味とコクたっぷり"あん"がピザ生地とよく合い、深い味わいに仕上げました。お持ち帰りもできます。')
 @section('meta_tags')
-<script type="application/ld+json">
+    @verbatim
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Menu",
@@ -68,6 +69,7 @@
         ]
     }
     </script>
+    @endverbatim
 @stop
 
 @section('css')

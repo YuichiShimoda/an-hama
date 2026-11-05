@@ -2,6 +2,7 @@
 @section('title', 'こだわり｜あんかけハマちゃん')
 @section('description', '伝統の味をマイルドかつ現代的に再構築し、一般的なパスタ好きも魅了する新たな"あんかけパスタ"を提供いたします。老若男女、キレイな空間でイマドキの"名古屋を感じるパスタ"をお楽しみいただけます。')
 @section('meta_tags')
+    @verbatim
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -26,6 +27,7 @@
         }
     }
     </script>
+    @endverbatim
 @stop
 
 @section('css')

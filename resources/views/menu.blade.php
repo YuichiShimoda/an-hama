@@ -2,7 +2,8 @@
 @section('title', 'あんかけパスタ｜あんかけハマちゃん')
 @section('description', 'あんハマのオリジナルソースで再定義した定番系のあんかけパスタ、創作系のつけかけパスタ"－ Dip & Pour －"をご用意しています。')
 @section('meta_tags')
-<script type="application/ld+json">
+    @verbatim
+    <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Menu",
@@ -118,6 +119,7 @@
         ]
     }
     </script>
+    @endverbatim
 @stop
 
 @section('css')

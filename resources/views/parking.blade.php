@@ -2,6 +2,7 @@
 @section('title', 'コインパーキング｜あんかけハマちゃん')
 @section('description', '車でお越しの際は、近隣のコインパーキングをご利用ください。店舗周辺のコインパーキングの場所や料金についてご案内いたします。')
 @section('meta_tags')
+    @verbatim
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -25,6 +26,7 @@
         }
     }
     </script>
+    @endverbatim
 @stop
 
 @section('css')

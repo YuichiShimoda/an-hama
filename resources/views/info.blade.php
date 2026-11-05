@@ -2,6 +2,7 @@
 @section('title', '店舗情報｜あんかけハマちゃん')
 @section('description', '名古屋市北区 志賀本通にある"あんかけハマちゃん"は、11:00から営業しています。電車でもお車でもお越しいただけますので、お近くにお越しの際はぜひお立ち寄りください。')
 @section('meta_tags')
+	@verbatim
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -47,6 +48,7 @@
 		]
 	}
 	</script>
+	@endverbatim
 @stop
 
 @section('css')
