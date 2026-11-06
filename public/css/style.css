@@ -3686,6 +3686,22 @@ body::-webkit-scrollbar {
   letter-spacing: 0.05em;
   color: #333;
 }
+#season .content-box .desc-box .comment {
+  display: block;
+  margin: 20px auto 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "iroha-25icho-stdn", sans-serif;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #777;
+}
+@media screen and (max-width: 1200px) {
+  #season .content-box .desc-box .comment {
+    margin: 15px auto 0;
+  }
+}
 #season .content-box .desc-box .info-box {
   display: flex;
   justify-content: center;

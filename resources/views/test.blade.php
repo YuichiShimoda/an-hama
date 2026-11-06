@@ -337,6 +337,9 @@
                 </div>
                 <div class="desc-box">
                     <h2 class="ingredient">旬の食材　：　「 {{ $seasonPasta->ingredient1 }} 」「 {{ $seasonPasta->ingredient2 }} 」</h2>
+                    @if (!empty($seasonPasta->comment))
+                        <p class="comment">{!! nl2br(e($seasonPasta->comment)) !!}</p>
+                    @endif
                     <div class="info-box">
                         <div class="tit-box">
                             <div class="period-box">

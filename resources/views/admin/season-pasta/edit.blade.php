@@ -149,6 +149,9 @@
                         <textarea class="form-control" name="comment" v-model="comment" :class="{'is-invalid': getErrorMessage('comment')}" placeholder="コメントを入力してください。" rows="4"></textarea>
                     </div>
                 </div>
+                <div class="form-note-box">
+                    <p>※ 1行あたり25文字以内とし、超える場合は改行してください。</p>
+                </div>
                 <p v-if="getErrorMessage('comment')" class="invalid-feedback d-block">
                     @{{ getErrorMessage('comment') }}
                 </p>
@@ -183,13 +186,14 @@
                             <div class="right-box">
                                 <div class="img-box">
                                     <img v-if="!dishPreview" class="dish" src="{{ asset('image/adminlte/season-pasta/plate.webp') }}" alt="">
-                                    <img w-else class="dish" :src="dishPreview" alt="">
+                                    <img v-else class="dish" :src="dishPreview" alt="">
                                 </div>
                             </div>
                             <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="">
                         </div>
                         <div class="desc-box">
                             <h2 class="ingredient">旬の食材　：　「 @{{ ingredient1 || 'ーーー' }} 」「 @{{ ingredient2 || 'ーーー' }} 」</h2>
+                            <p v-if="comment" class="comment">@{{ comment }}</p>
                             <div class="info-admin-box">
                                 <div class="tit-box">
                                     <div class="period-box">
