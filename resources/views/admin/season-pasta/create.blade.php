@@ -77,8 +77,7 @@
                     </div>
                 </div>
                 <div class="form-note-box">
-                    <p>※ テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
-                    <p>※ テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+                    <p>※ 選択肢を切り替えることによって、以下の要素が変更されます。詳細はプレビュー画面でご確認ください。<br>　・背景画像<br>　・左上の「 月 」<br>　・左下の「 月 」</p>
                 </div>
                 <p v-if="getErrorMessage('period')" class="invalid-feedback d-block">
                     @{{ getErrorMessage('period') }}
@@ -102,6 +101,7 @@
                     <p>※ ファイルサイズは100KB以下としてください。</p>
                     <p>※ 使用可能な拡張子は「 png / webp 」です。</p>
                     <p>※ 以下、推奨値となります。<br>　・横幅：800px<br>　・縦幅：637px</p>
+                    <p>※ 画像を設定することで、プレビュー画面に反映されます。</p>
                 </div>
                 <p v-if="getErrorMessage('dish')" class="invalid-feedback d-block">
                     @{{ getErrorMessage('dish') }}
@@ -123,8 +123,7 @@
                     </div>
                 </div>
                 <div class="form-note-box">
-                    <p>※ テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
-                    <p>※ テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。</p>
+                    <p>※ 入力をおこなうことで、プレビュー画面に反映されます。</p>
                 </div>
                 <p v-if="getErrorMessage('ingredient1')" class="invalid-feedback d-block">
                     @{{ getErrorMessage('ingredient1') }}
@@ -173,6 +172,7 @@
                 </div>
                 <div class="form-note-box">
                     <p>※ 1行あたり25文字以内とし、超える場合は改行してください。</p>
+                    <p>※ 入力をおこなうことで、プレビュー画面に反映されます。</p>
                 </div>
                 <p v-if="getErrorMessage('comment')" class="invalid-feedback d-block">
                     @{{ getErrorMessage('comment') }}
