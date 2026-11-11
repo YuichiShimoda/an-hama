@@ -24,7 +24,7 @@ class SeasonPastaController extends Controller
      */
     public function index(): View
     {
-        $season_pasta = SeasonPasta::orderBy('reservation_at')->get();
+        $season_pasta = SeasonPasta::all();
         $overlap_ids = [];
         foreach ($season_pasta as $i => $pasta) {
             foreach ($season_pasta as $j => $other) {
@@ -38,14 +38,12 @@ class SeasonPastaController extends Controller
             }
         }
         $overlap_ids = array_unique($overlap_ids);
-        $season_pasta = SeasonPasta::all();
+        $published_season_pasta = SeasonPasta::where('is_visible', 1)->where('reservation_at', '<=', now())->where('expired_at', '>=', now())->first();
         if (!$overlap_ids) {
-            $published_id = SeasonPasta::where('reservation_at', '<=', now())->where('expired_at', '>=', now())->value('id');
-            return view('admin.season-pasta.index', compact('season_pasta', 'overlap_ids', 'published_id'));
+            return view('admin.season-pasta.index', compact('published_season_pasta', 'season_pasta', 'overlap_ids'));
         } else {
-            $published_id = "";
             $overlap_error = '公開日時が重複するデータが存在します。';
-            return view('admin.season-pasta.index', compact('season_pasta', 'overlap_ids', 'published_id', 'overlap_error'));
+            return view('admin.season-pasta.index', compact('published_season_pasta', 'season_pasta', 'overlap_ids', 'overlap_error'));
         }
     }
 

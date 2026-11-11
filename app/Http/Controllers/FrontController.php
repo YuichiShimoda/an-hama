@@ -41,7 +41,30 @@ class FrontController extends Controller
         }
         $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
         $movie = Video::where('is_visible', true)->where('first_video', true)->where('expired_at', '>', now())->first();
-        return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie]);
+
+        $seasonPasta = SeasonPasta::where('is_visible', 1)->where('reservation_at', '<=', now())->where('expired_at', '>=', now())->get();
+
+        $season_pasta = SeasonPasta::orderBy('reservation_at')->get();
+        $overlap_ids = [];
+        foreach ($season_pasta as $i => $pasta) {
+            foreach ($season_pasta as $j => $other) {
+                if ($i >= $j) {
+                    continue;
+                }
+                if ($pasta->reservation_at <= $other->expired_at && $pasta->expired_at >= $other->reservation_at) {
+                    $overlap_ids[] = $pasta->id;
+                    $overlap_ids[] = $other->id;
+                }
+            }
+        }
+        $overlap_ids = array_unique($overlap_ids);
+        if ($seasonPasta->isNotEmpty() && !$overlap_ids) {
+            $seasonPasta = $seasonPasta->first();
+        } else {
+            $seasonPasta = null;
+        }
+
+        return view('home', ['news' => $news, 'weeklyMenu' => $this->weeklyMenu, 'pressRelease' => $this->pressRelease, 'movie' => $movie, 'seasonPasta' => $seasonPasta]);
     }
 
     public function passion(): View
@@ -106,7 +129,22 @@ class FrontController extends Controller
         $news = News::whereNull('reservation_day')->orWhere('reservation_day', '<', $today)->orderBy('id', 'desc')->get();
         $movie = Video::where('is_visible', true)->where('first_video', true)->where('expired_at', '>', now())->first();
         $seasonPasta = SeasonPasta::where('reservation_at', '<=', now())->where('expired_at', '>=', now())->get();
-        if ($seasonPasta->count() === 1) {
+
+        $season_pasta = SeasonPasta::orderBy('reservation_at')->get();
+        $overlap_ids = [];
+        foreach ($season_pasta as $i => $pasta) {
+            foreach ($season_pasta as $j => $other) {
+                if ($i >= $j) {
+                    continue;
+                }
+                if ($pasta->reservation_at <= $other->expired_at && $pasta->expired_at >= $other->reservation_at) {
+                    $overlap_ids[] = $pasta->id;
+                    $overlap_ids[] = $other->id;
+                }
+            }
+        }
+        $overlap_ids = array_unique($overlap_ids);
+        if ($seasonPasta->count() === 1 && !$overlap_ids) {
             $seasonPasta = $seasonPasta->first();
         } else {
             $seasonPasta = null;

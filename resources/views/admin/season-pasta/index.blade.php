@@ -22,7 +22,6 @@
         </a>
     </div>
     <div class="desc-box">
-        <p>現在公開中のデータは、黄色で表示されます。</p>
         <p>公開日時が重複しているデータは、ID欄が赤色で表示されます。</p>
     </div>
 @endsection
@@ -32,10 +31,70 @@
     @if ($season_pasta->isEmpty())
         <p class="table-empty-msg">表示するデータがありません。</p>
     @else
-        <x-adminlte-datatable id="seasonPastaTable" :heads="['ID', '期間', '画像', '新規作成日時', '更新日時', '旬の食材１', '旬の食材２', '公開開始日時', '公開終了日時', '操作']" striped hoverable bordered compressed>
+        <p class="visible-tit">▼ 公開中 ▼</p>
+        @if ($published_season_pasta)
+            <x-adminlte-datatable id="visibleTable" :heads="['ID', '表示', '期間', '画像', '新規作成日時', '更新日時', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
+                <tr>
+                    <td class="{{ in_array($published_season_pasta->id, $overlap_ids) ? 'is-overlap' : '' }}">{{ $published_season_pasta->id }}</td>
+                    <td>
+                        <div class="toggle-box">
+                            <div class="circle {{ $published_season_pasta->is_visible == 1 ? 'is-on' : '' }}"></div>
+                        </div>
+                    </td>
+                    @php
+                        $periods = [
+                            '1-2'   => '1月,2月',
+                            '3-4'   => '3月,4月',
+                            '5-6'   => '5月,6月',
+                            '7-8'   => '7月,8月',
+                            '9-10'  => '9月,10月',
+                            '11-12' => '11月,12月',
+                        ];
+                    @endphp
+                    <td>{{ $periods[$published_season_pasta->period] ?? $published_season_pasta->period }}</td>
+                    <td>
+                        <div class="img-box modal__open-btn" data-id="{{ $published_season_pasta->id }}">
+                            <img class="img-icon" src="{{ asset('image/adminlte/season-pasta/img-icon.svg') }}" alt="">
+                        </div>
+                    </td>
+                    <td>{{ $published_season_pasta->created_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>{{ $published_season_pasta->updated_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>{{ $published_season_pasta->ingredient1 }} ／ {{ $published_season_pasta->ingredient2 }}</td>
+                    <td>{{ $published_season_pasta->reservation_at->format('Y年 n月 j日 H:i') }} ~ {{ $published_season_pasta->expired_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>
+                        <a href="{{ route('admin.season-pasta.show', $published_season_pasta->id) }}" class="btn btn-sm btn-primary">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.season-pasta.edit', $published_season_pasta->id) }}" class="btn btn-sm btn-warning">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <form action="{{ route('admin.season-pasta.destroy', $published_season_pasta->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-xs btn-danger delete-btn" type="submit">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </x-adminlte-datatable>
+            <div class="index-note-box">
+                <p>※ 重複があった場合、HP側に表示されません。</p>
+            </div>
+        @else
+            <p class="published-empty-msg">公開中のデータはありません。</p>
+        @endif
+        <div class="border-line"></div>
+        <p class="visible-second-tit">▼ 一覧（ 全てのデータ ） ▼</p>
+        <x-adminlte-datatable id="seasonPastaTable" :heads="['ID', '表示', '期間', '画像', '新規作成日時', '更新日時', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
             @foreach($season_pasta as $season_pasta_ele)
-                <tr class="{{ $season_pasta_ele->id === $published_id ? 'is-published' : '' }}">
+                <tr class="{{ $published_season_pasta && $season_pasta_ele->id === $published_season_pasta->id ? 'is-published' : '' }}">
                     <td class="{{ in_array($season_pasta_ele->id, $overlap_ids) ? 'is-overlap' : '' }}">{{ $season_pasta_ele->id }}</td>
+                    <td>
+                        <div class="toggle-box">
+                            <div class="circle {{ $season_pasta_ele->is_visible == 1 ? 'is-on' : '' }}"></div>
+                        </div>
+                    </td>
                     @php
                         $periods = [
                             '1-2'   => '1月,2月',
@@ -54,10 +113,8 @@
                     </td>
                     <td>{{ $season_pasta_ele->created_at->format('Y年 n月 j日 H:i') }}</td>
                     <td>{{ $season_pasta_ele->updated_at->format('Y年 n月 j日 H:i') }}</td>
-                    <td>{{ $season_pasta_ele->ingredient1 }}</td>
-                    <td>{{ $season_pasta_ele->ingredient2 }}</td>
-                    <td>{{ $season_pasta_ele->reservation_at->format('Y年 n月 j日 H:i') }}</td>
-                    <td>{{ $season_pasta_ele->expired_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td>{{ $season_pasta_ele->ingredient1 }} ／ {{ $season_pasta_ele->ingredient2 }}</td>
+                    <td>{{ $season_pasta_ele->reservation_at->format('Y年 n月 j日 H:i') }} ~ {{ $season_pasta_ele->expired_at->format('Y年 n月 j日 H:i') }}</td>
                     <td>
                         <a href="{{ route('admin.season-pasta.show', $season_pasta_ele->id) }}" class="btn btn-sm btn-primary">
                             <i class="fas fa-eye"></i>
@@ -76,9 +133,6 @@
                 </tr>
             @endforeach
         </x-adminlte-datatable>
-        <div class="index-note-box">
-            <p>※ 重複があった場合、HP側に表示されません。</p>
-        </div>
         <div id="individual-modal" class="modal">
             <div class="md-overlay basic-hover"></div>
             <div class="md-contents">
@@ -101,17 +155,19 @@
     <script>
         $(window).on('load', function () {
             setTimeout(function() {
-                if ($.fn.DataTable.isDataTable('#seasonPastaTable')) {
+                if ($.fn.DataTable.isDataTable('#visibleTable') || $.fn.DataTable.isDataTable('#seasonPastaTable')) {
+                    $('#visibleTable').DataTable().destroy();
                     $('#seasonPastaTable').DataTable().destroy();
                 }
-                $('#seasonPastaTable').DataTable({
+                const table = $('#seasonPastaTable').DataTable({
                     "order": [[0, 'desc']],
                     language: {
                         url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
                     },
-                    lengthMenu: [[5, 10, 20], [5, 10, 20]]
+                    lengthMenu: [[10, 30, 50], [10, 30, 50]]
                 });
             }, 100);
+
             $('.delete-btn').on('click', function (e) {
                 e.preventDefault();
                 const $form = $(this).closest('form');

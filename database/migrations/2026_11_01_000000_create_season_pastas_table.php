@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('season_pastas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->boolean('is_visible')->default(true);
             $table->string('period', 255);
+            $table->timestamp('reservation_at')->nullable();
+            $table->timestamp('expired_at')->nullable();
             $table->string('dish');
             $table->string('ingredient1', 255);
             $table->string('ingredient2', 255);
-            $table->timestamp('reservation_at')->nullable();
-            $table->timestamp('expired_at')->nullable();
             $table->text('comment')->nullable();
             $table->timestamps();
         });

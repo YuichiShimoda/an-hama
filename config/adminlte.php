@@ -332,17 +332,22 @@ return [
         ],
         ['header' => 'ホームページ管理'],
         [
-            'text' => '週替りトッピング編集',
+            'text' => '季節のつけかけ管理',
+            'url' => 'admin/season-pasta',
+            'icon' => 'fas fa-utensils',
+        ],
+        [
+            'text' => '週替りトッピング管理',
             'url' => 'admin/weekly-menu',
             'icon' => 'fas fa-concierge-bell',
         ],
         [
-            'text' => 'TOPICS編集',
+            'text' => 'TOPICS管理',
             'url' => 'admin/press-release',
             'icon' => 'fas fa-bullhorn',
         ],
         [
-            'text' => 'NEWS編集',
+            'text' => 'NEWS管理',
             'url' => 'admin/news',
             'icon' => 'fas fa-newspaper',
         ],
@@ -350,11 +355,6 @@ return [
             'text' => '動画管理',
             'url' => 'admin/video',
             'icon' => 'fas fa-video',
-        ],
-        [
-            'text' => '季節のつけかけ管理',
-            'url' => 'admin/season-pasta',
-            'icon' => 'fas fa-utensils',
         ],
         [
             'text' => 'アナリティクス',

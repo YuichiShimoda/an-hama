@@ -312,55 +312,69 @@
 
 
 
-
-    <section id="season">
-        <div class="content-box">
-            <div class="main-box">
-                <div class="left-box">
-                    <img class="pasta-line" src="{{ asset('image/season/pasta-line.svg') }}" alt="パスタ">
-                    <img class="board" src="{{ asset('image/season/board.svg') }}" alt="あんハマ発祥つけかけパスタ 季節の限定メニュー">
-                    <div class="illust-box">
-                        <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
-                        <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="Dip it. Pour it.">
+    @if(!empty($seasonPasta))
+        <section id="season" style="background-image: url('{{ asset('image/season/season-bg_' . $seasonPasta->period . '.webp') }}');">
+            <div class="content-box">
+                <div class="main-box">
+                    <div class="left-box">
+                        <img class="pasta-line" src="{{ asset('image/season/pasta-line.svg') }}" alt="パスタ">
+                        <img class="board" src="{{ asset('image/season/board.svg') }}" alt="あんハマ発祥つけかけパスタ 季節の限定メニュー">
+                        <div class="illust-box">
+                            <img class="plate-icon" src="{{ asset('image/season/plate-icon.svg') }}" alt="つけかけパスタ">
+                            <img class="en-msg" src="{{ asset('image/season/en-msg.svg') }}" alt="Dip it. Pour it.">
+                        </div>
+                        <div class="label-box">
+                            <img class="two-month" src="{{ asset('image/season/period' . $seasonPasta->period . '.svg') }}" alt="限定期間">
+                        </div>
+                        <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
                     </div>
-                    <div class="label-box">
-                        <!-- <img class="two-month" src="{{ asset('image/season/period3-4.svg') }}" alt="限定期間"> -->
-                        <img class="two-month" src="{{ asset('image/season/period11-12.svg') }}" alt="限定期間">
+                    <div class="right-box">
+                        <div class="img-box">
+                            <img class="dish" src="{{ asset('image/season-pasta/' . $seasonPasta->dish) }}" alt="{{ $seasonPasta->ingredient1 }}と{{ $seasonPasta->ingredient2 }}のつけかけパスタ">
+                        </div>
                     </div>
-                    <img class="label-bg" src="{{ asset('image/season/label-bg.webp') }}" alt="背景フレーム">
+                    <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
                 </div>
-                <div class="right-box">
-                    <div class="img-box">
-                        <!-- <img class="dish" src="{{ asset('image/season/season3-4.webp') }}" alt="あさりと桜えびのつけかけパスタ"> -->
-                        <img class="dish" src="{{ asset('image/season/season11-12.webp') }}" alt="しめじとまいたけのつけかけパスタ">
+                <div class="desc-box">
+                    <h2 class="ingredient">旬の食材　：　「 {{ $seasonPasta->ingredient1 }} 」「 {{ $seasonPasta->ingredient2 }} 」</h2>
+                    @if (!empty($seasonPasta->comment))
+                        <p class="comment">{!! nl2br(e($seasonPasta->comment)) !!}</p>
+                    @endif
+                    <div class="info-box">
+                        <div class="tit-box">
+                            <div class="period-box">
+                                <!-- <p>3月,4月限定</p> -->
+                                @php
+                                    $periods = [
+                                        '1-2'   => '1月,2月',
+                                        '3-4'   => '3月,4月',
+                                        '5-6'   => '5月,6月',
+                                        '7-8'   => '7月,8月',
+                                        '9-10'  => '9月,10月',
+                                        '11-12' => '11月,12月',
+                                    ];
+                                @endphp
+                                <p>{{ $periods[$seasonPasta->period] ?? '' }}限定</p>
+                            </div>
+                            <h2 class="menu-tit">季節のつけかけパスタ</h2>
+                        </div>
+                        <div class="price-box">
+                            <div class="above-box">
+                                <p class="size">レギュラー</p>
+                                <p class="unit">300g</p>
+                            </div>
+                            <div class="below-box">
+                                <p class="price">1,300</p>
+                                <p class="yen">円</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <img class="jp-msg" src="{{ asset('image/season/jp-msg.svg') }}" alt="つけてもよし！かけてもよし！新感覚パスタ">
             </div>
-            <div class="desc-box">
-                <h2 class="ingredient">旬の食材　：　「 しめじ 」「 まいたけ 」</h2>
-                <div class="info-box">
-                    <div class="tit-box">
-                        <div class="period-box">
-                            <!-- <p>3月,4月限定</p> -->
-                            <p>11月,12月限定</p>
-                        </div>
-                        <h2 class="menu-tit">季節のつけかけパスタ</h2>
-                    </div>
-                    <div class="price-box">
-                        <div class="above-box">
-                            <p class="size">レギュラー</p>
-                            <p class="unit">300g</p>
-                        </div>
-                        <div class="below-box">
-                            <p class="price">1,300</p>
-                            <p class="yen">円</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    @else
+        <section id="no-season"></section>
+    @endif
     <section id="concept">
         <div class="content-box">
             <div class="img-box">

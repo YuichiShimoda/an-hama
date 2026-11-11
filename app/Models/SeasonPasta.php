@@ -10,12 +10,13 @@ class SeasonPasta extends Model
     use HasFactory;
 
     protected $fillable = [
+        'is_visible',
         'period',
+        'reservation_at',
+        'expired_at',
         'dish',
         'ingredient1',
         'ingredient2',
-        'reservation_at',
-        'expired_at',
         'comment',
     ];
 

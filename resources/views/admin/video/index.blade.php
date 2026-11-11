@@ -169,7 +169,7 @@
                 //     ordering: false
                 // });
                 const table = $('#videoTable').DataTable({
-                    "order": [[0, 'desc']],
+                    "order": [[4, 'desc']],
                     language: {
                         url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
                     },

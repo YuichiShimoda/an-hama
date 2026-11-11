@@ -50,6 +50,27 @@
 @section('content')
     <div id="app">
         <form enctype="multipart/form-data" @submit.prevent="submitForm">
+            {{-- 表示 --}}
+            <div class="d-block">
+                <div class="form-group">
+                    <label>表示</label>
+                    <div class="toggle-box">
+                        <label class="toggle-label" for="is_visible">
+                            <input type="hidden" name="is_visible" value="0">
+                            <input type="checkbox" id="is_visible" name="is_visible" v-model="isVisible" value="1" :true-value="1" :false-value="0">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-note-box">
+                    <p>※ OFFの場合、HP側に表示されません。</p>
+                </div>
+                @error('is_visible')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+
             @php
                 $periods = [
                     '1-2'   => '1月,2月',
@@ -60,7 +81,6 @@
                     '11-12' => '11月,12月',
                 ];
             @endphp
-
             {{-- 期間 --}}
             <div class="d-block">
                 <div class="form-group">
@@ -81,6 +101,35 @@
                 </div>
                 <p v-if="getErrorMessage('period')" class="invalid-feedback d-block">
                     @{{ getErrorMessage('period') }}
+                </p>
+            </div>
+
+            {{-- 公開日時 --}}
+            <div class="d-block period-box">
+                <div class="form-group">
+                    <label for="reservation_at" class="required">公開日時</label>
+                    <div class="input-group d-block" :class="{'is-invalid': getErrorMessage('reservation_at')}">
+                        <vue-date-picker v-model="reservationAt" model-type="yyyy-MM-dd HH:mm" format="yyyy-MM-dd HH:mm" placeholder="開始日時" :enable-time-picker="true" :is-24="true" :enable-seconds="false" :min-date="minDate" :start-time="reservationStartTime" locale="ja" auto-apply/>
+                    </div>
+                </div>
+                <div class="wavy-line">～</div>
+                <div class="form-group">
+                    <label for="expired_at">公開日時</label>
+                    <div class="input-group d-block" :class="{'is-invalid': getErrorMessage('expired_at')}">
+                        <vue-date-picker v-model="expiredAt" model-type="yyyy-MM-dd HH:mm" format="yyyy-MM-dd HH:mm" placeholder="終了日時" :enable-time-picker="true" :is-24="true" :enable-seconds="false" :min-date="minDate" :start-time="expiredStartTime" locale="ja" auto-apply/>
+                    </div>
+                </div>
+                <div class="form-note-box">
+                    <p>※ 開始日時の初期値は「 00:00 」です。変更する場合は手動で任意の日時に設定してください。</p>
+                    <p>※ 終了日時の初期値は「 23:59 」です。変更する場合は手動で任意の日時に設定してください。</p>
+                    <p>※ 時間の秒数設定はありませんが、設定した時間（ 分 ）の「 00秒 」時点で開始、終了となります。</p>
+                    <p>※ 「 公開日時 」になるとHP側で表示されます。</p>
+                </div>
+                <p v-if="getErrorMessage('reservation_at')" class="invalid-feedback d-block">
+                    @{{ getErrorMessage('reservation_at') }}
+                </p>
+                <p v-if="getErrorMessage('expired_at')" class="invalid-feedback d-block">
+                    @{{ getErrorMessage('expired_at') }}
                 </p>
             </div>
 
@@ -133,41 +182,12 @@
                 </p>
             </div>
 
-            {{-- 公開日時 --}}
-            <div class="d-block period-box">
-                <div class="form-group">
-                    <label for="reservation_at" class="required">公開日時</label>
-                    <div class="input-group d-block" :class="{'is-invalid': getErrorMessage('reservation_at')}">
-                        <vue-date-picker v-model="reservationAt" model-type="yyyy-MM-dd HH:mm" format="yyyy-MM-dd HH:mm" placeholder="開始時間" :enable-time-picker="true" :is-24="true" :enable-seconds="false" :min-date="minDate" :start-time="reservationStartTime" locale="ja" auto-apply/>
-                    </div>
-                </div>
-                <div class="wavy-line">～</div>
-                <div class="form-group">
-                    <label for="expired_at">公開日時</label>
-                    <div class="input-group d-block" :class="{'is-invalid': getErrorMessage('expired_at')}">
-                        <vue-date-picker v-model="expiredAt" model-type="yyyy-MM-dd HH:mm" format="yyyy-MM-dd HH:mm" placeholder="終了時間" :enable-time-picker="true" :is-24="true" :enable-seconds="false" :min-date="minDate" :start-time="expiredStartTime" locale="ja" auto-apply/>
-                    </div>
-                </div>
-                <div class="form-note-box">
-                    <p>※ 開始時間の初期値は「 00:00 」です。変更する場合は手動で任意の時間に設定してください。</p>
-                    <p>※ 終了時間の初期値は「 23:59 」です。変更する場合は手動で任意の時間に設定してください。</p>
-                    <p>※ 時間の秒数設定はありませんが、設定した時間（ 分 ）の「 00秒 」時点で開始、終了となります。</p>
-                    <p>※ 「 公開日時 」になるとHP側で表示されます。</p>
-                </div>
-                <p v-if="getErrorMessage('reservation_at')" class="invalid-feedback d-block">
-                    @{{ getErrorMessage('reservation_at') }}
-                </p>
-                <p v-if="getErrorMessage('expired_at')" class="invalid-feedback d-block">
-                    @{{ getErrorMessage('expired_at') }}
-                </p>
-            </div>
-
             {{-- コメント --}}
             <div class="d-block">
                 <div class="form-group">
                     <label>コメント</label>
                     <div class="input-group">
-                        <textarea class="form-control" name="comment" v-model="comment" :class="{'is-invalid': getErrorMessage('comment')}" placeholder="コメントを入力してください。" rows="4"></textarea>
+                        <textarea class="form-control" name="comment" v-model="comment" :class="{'is-invalid': getErrorMessage('comment')}" placeholder="“季節のつけかけパスタ”の味や体感に関するコメントを入力してください。" rows="4"></textarea>
                     </div>
                 </div>
                 <div class="form-note-box">
@@ -254,11 +274,8 @@
                         // ===== CSRF =====
                         axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').content;
 
+                        const isVisible = ref(@json(old('is_visible', 1)));
                         const period = ref(@json(old('period', '')));
-                        const dish = ref(null);
-                        const dishPreview = ref(@json(old('dish_preview', null)));
-                        const ingredient1 = ref(@json(old('ingredient1', '')));
-                        const ingredient2 = ref(@json(old('ingredient2', '')));
                         const reservationAt = ref(@json(old('reservation_at', '')));
                         const expiredAt = ref(@json(old('expired_at', '')));
                         const minDate = computed(() => {
@@ -266,6 +283,10 @@
                             d.setHours(0, 0, 0, 0);
                             return d;
                         });
+                        const dish = ref(null);
+                        const dishPreview = ref(@json(old('dish_preview', null)));
+                        const ingredient1 = ref(@json(old('ingredient1', '')));
+                        const ingredient2 = ref(@json(old('ingredient2', '')));
                         const comment = ref(@json(old('comment', '')));
 
                         const scale = ref(0.6);
@@ -308,12 +329,13 @@
                             loading.value = true;
                             errors.value = {};
                             const formData = new FormData();
+                            formData.append('is_visible', isVisible.value);
                             formData.append('period', period.value);
+                            formData.append('reservation_at', reservationAt.value);
+                            formData.append('expired_at', expiredAt.value);
                             formData.append('dish', dish.value);
                             formData.append('ingredient1', ingredient1.value);
                             formData.append('ingredient2', ingredient2.value);
-                            formData.append('reservation_at', reservationAt.value);
-                            formData.append('expired_at', expiredAt.value);
                             formData.append('comment', comment.value ?? '');
                             for (const [key, value] of formData.entries()) {
                                 console.log(key, value);
@@ -334,13 +356,14 @@
                         };
 
                         return {
+                            isVisible,
                             period,
-                            dishPreview,
-                            ingredient1,
-                            ingredient2,
                             reservationAt,
                             expiredAt,
                             minDate,
+                            dishPreview,
+                            ingredient1,
+                            ingredient2,
                             comment,
                             scale,
                             isClose,
