@@ -188,7 +188,7 @@
                 <input type="range" class="scale-slider" v-model.number="scale" min="0.3" max="0.8" step="0.01">
             </div>
             <div id="frame" :class="{ 'is-close': isClose }" :style="{ transform: `scale(${scale})` }">
-                <div id="season" :style="period ? { backgroundImage: `url('{{ asset('image/season/season-bg') }}_${period}.webp')` } : {}">
+                <div id="season" :style="period ? { backgroundImage: `url('{{ asset('image/adminlte/season-pasta/season-bg') }}_${period}.webp')` } : {}">
                     <div class="content-box">
                         <div class="main-box">
                             <div class="left-box">

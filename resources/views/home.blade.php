@@ -313,7 +313,7 @@
 
 
     @if(!empty($seasonPasta))
-        <section id="season" style="background-image: url('{{ asset('image/season/season-bg_' . $seasonPasta->period . '.webp') }}');">
+        <section id="season" style="background-image: url('{{ asset('image/adminlte/season-pasta/season-bg_' . $seasonPasta->period . '.webp') }}');">
             <div class="content-box">
                 <div class="main-box">
                     <div class="left-box">
