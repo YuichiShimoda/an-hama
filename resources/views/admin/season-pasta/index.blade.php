@@ -33,14 +33,13 @@
     @else
         <p class="visible-tit">▼ 公開中 ▼</p>
         @if ($published_season_pasta)
-            <x-adminlte-datatable id="visibleTable" :heads="['ID', '表示', '期間', '画像', '新規作成日時', '更新日時', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
+            <x-adminlte-datatable id="visibleTable" :heads="['期間', '画像', '新規作成日時', '更新日時', 'ID', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
                 <tr>
-                    <td class="{{ in_array($published_season_pasta->id, $overlap_ids) ? 'is-overlap' : '' }}">{{ $published_season_pasta->id }}</td>
-                    <td>
+<!--                     <td>
                         <div class="toggle-box">
                             <div class="circle {{ $published_season_pasta->is_visible == 1 ? 'is-on' : '' }}"></div>
                         </div>
-                    </td>
+                    </td> -->
                     @php
                         $periods = [
                             '1-2'   => '1月,2月',
@@ -59,6 +58,7 @@
                     </td>
                     <td>{{ $published_season_pasta->created_at->format('Y年 n月 j日 H:i') }}</td>
                     <td>{{ $published_season_pasta->updated_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td class="{{ in_array($published_season_pasta->id, $overlap_ids) ? 'is-overlap' : '' }}">{{ sprintf('%04d', $published_season_pasta->id) }}</td>
                     <td>{{ $published_season_pasta->ingredient1 }} ／ {{ $published_season_pasta->ingredient2 }}</td>
                     <td>{{ $published_season_pasta->reservation_at->format('Y年 n月 j日 H:i') }} ~ {{ $published_season_pasta->expired_at->format('Y年 n月 j日 H:i') }}</td>
                     <td>
@@ -86,15 +86,14 @@
         @endif
         <div class="border-line"></div>
         <p class="visible-second-tit">▼ 一覧（ 全てのデータ ） ▼</p>
-        <x-adminlte-datatable id="seasonPastaTable" :heads="['ID', '表示', '期間', '画像', '新規作成日時', '更新日時', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
+        <x-adminlte-datatable id="seasonPastaTable" :heads="['期間', '画像', '新規作成日時', '更新日時', 'ID', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
             @foreach($season_pasta as $season_pasta_ele)
                 <tr class="{{ $published_season_pasta && $season_pasta_ele->id === $published_season_pasta->id ? 'is-published' : '' }}">
-                    <td class="{{ in_array($season_pasta_ele->id, $overlap_ids) ? 'is-overlap' : '' }}">{{ $season_pasta_ele->id }}</td>
-                    <td>
+<!--                     <td>
                         <div class="toggle-box">
                             <div class="circle {{ $season_pasta_ele->is_visible == 1 ? 'is-on' : '' }}"></div>
                         </div>
-                    </td>
+                    </td> -->
                     @php
                         $periods = [
                             '1-2'   => '1月,2月',
@@ -113,6 +112,7 @@
                     </td>
                     <td>{{ $season_pasta_ele->created_at->format('Y年 n月 j日 H:i') }}</td>
                     <td>{{ $season_pasta_ele->updated_at->format('Y年 n月 j日 H:i') }}</td>
+                    <td class="{{ in_array($season_pasta_ele->id, $overlap_ids) ? 'is-overlap' : '' }}">{{ sprintf('%04d', $season_pasta_ele->id) }}</td>
                     <td>{{ $season_pasta_ele->ingredient1 }} ／ {{ $season_pasta_ele->ingredient2 }}</td>
                     <td>{{ $season_pasta_ele->reservation_at->format('Y年 n月 j日 H:i') }} ~ {{ $season_pasta_ele->expired_at->format('Y年 n月 j日 H:i') }}</td>
                     <td>
@@ -160,7 +160,7 @@
                     $('#seasonPastaTable').DataTable().destroy();
                 }
                 const table = $('#seasonPastaTable').DataTable({
-                    "order": [[0, 'desc']],
+                    "order": [[4, 'desc']],
                     language: {
                         url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/ja.json'
                     },

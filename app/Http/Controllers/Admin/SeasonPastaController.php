@@ -52,7 +52,10 @@ class SeasonPastaController extends Controller
      */
     public function create(): View
     {
-        return view('admin.season-pasta.create');
+        $tableName = (new SeasonPasta())->getTable();
+        $status = DB::select("SHOW TABLE STATUS LIKE '{$tableName}'");
+        $nextId = $status[0]->Auto_increment ?? 1;
+        return view('admin.season-pasta.create', compact('nextId'));
     }
 
     /**
@@ -75,6 +78,7 @@ class SeasonPastaController extends Controller
         $path = 'image/season-pasta/' . $fileName;
         Storage::disk('public_uploads')->put($path, $image->toWebp());
         $season_pasta["dish"] = $fileName;
+        $season_pasta["filename"] = $request->filename;
 
         SeasonPasta::create($season_pasta);
         return redirect()->route('admin.season-pasta.index')->with('success', '登録完了');
@@ -115,6 +119,7 @@ class SeasonPastaController extends Controller
             $path = 'image/season-pasta/' . $fileName;
             Storage::disk('public_uploads')->put($path, $image->toWebp());
             $season_pasta->dish = $fileName;
+            $season_pasta->filename = $request->filename;
         } elseif ($request->boolean('delete_dish')) {
             $season_pasta->dish = null;
         }

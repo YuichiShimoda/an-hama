@@ -26,7 +26,7 @@ class SeasonPastaUpdateRequest extends FormRequest
             'period' => 'required',
             'reservation_at' => 'required|date_format:Y-m-d H:i',
             'expired_at' => 'required|date_format:Y-m-d H:i|after:reservation_at',
-            'dish' => 'required_without:dish_existing|image|mimes:png,webp|max:100',
+            'dish' => 'required_without:dish_existing|image|mimes:png,webp|max:3072',
             'dish_existing' => 'nullable',
             'delete_dish' => 'nullable|boolean',
             'ingredient1' => 'required',
@@ -48,7 +48,7 @@ class SeasonPastaUpdateRequest extends FormRequest
             'dish.required_without' => '画像ファイルを必ず設定してください。',
             'dish.image' => '画像ファイルを選択してください。',
             'dish.mimes' => '「 png / webp 」の拡張子が使用可能です。',
-            'dish.max'   => 'ファイルサイズは100KB以下にしてください。',
+            'dish.max'   => 'ファイルサイズは3MB以下にしてください。',
             'ingredient1.required'   => '1つ目の食材を入力してください。',
             'ingredient2.required'   => '2つ目の食材を入力してください。',
         ];

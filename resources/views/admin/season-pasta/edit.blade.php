@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="form-note-box">
-                    <p>※ ファイルサイズは100KB以下としてください。</p>
+                    <p>※ ファイルサイズは3MB以下としてください。</p>
                     <p>※ 使用可能な拡張子は「 png / webp 」です。</p>
                     <p>※ 以下、推奨値となります。<br>　・横幅：800px<br>　・縦幅：637px</p>
                     <p>※ 画像を設定することで、プレビュー画面に反映されます。</p>
@@ -133,6 +133,23 @@
                 <p v-if="getErrorMessage('dish')" class="invalid-feedback d-block">
                     @{{ getErrorMessage('dish') }}
                 </p>
+            </div>
+
+            <div class="d-block readonly">
+                <x-adminlte-input id="filename_display" name="filename_display" label="ファイル名" value="{{ old('filename', $season_pasta->filename) }}" readonly/>
+                <input type="hidden" name="filename" v-model="filename">
+                <div class="form-note-box">
+                    <p>※ 画像ファイルをアップロードした時点でローカル側で設定していた画像のファイル名が自動反映されます。</p>
+                    <p>※ 自動反映されたファイル名は、画像ファイルをアップロードした後に変更することはできません。</p>
+                </div>
+            </div>
+
+            <div class="d-block readonly">
+                <x-adminlte-input id="next_id_display" name="next_id_display" label="ID" value="{{ sprintf('%04d', $season_pasta->id) }}" readonly/>
+                <div class="form-note-box">
+                    <p>※ 画像ファイルをアップロードした時点でサーバ側に自動登録されるID（ 通番 ）です。</p>
+                    <p>※ 自動登録されたIDは、画像ファイルをアップロードした後に変更することはできません。</p>
+                </div>
             </div>
 
             {{-- 旬の食材 --}}
@@ -264,6 +281,7 @@
                         const deleteDish = ref(false);
                         const dish = ref(null);
                         const dishPreview = ref(@json(old('dish_preview', $initialThumbUrl)));
+                        const filename = ref(@json(old('filename', $season_pasta->filename)));
                         const ingredient1 = ref(@json(old('ingredient1', $season_pasta->ingredient1)));
                         const ingredient2 = ref(@json(old('ingredient2', $season_pasta->ingredient2)));
                         const comment = ref(@json(old('comment', $season_pasta->comment)));
@@ -279,6 +297,9 @@
                             if (file) {
                                 dish.value = file;
                                 deleteDish.value = false;
+                                const nameWithoutExtension = file.name.substring(0, file.name.lastIndexOf('.'));
+                                const displayInput = document.querySelector('#filename_display');
+                                if (displayInput) displayInput.value = nameWithoutExtension;
 
                                 const reader = new FileReader();
                                 reader.onload = ev => dishPreview.value = ev.target.result;
@@ -292,6 +313,8 @@
                             deleteDish.value = true;
                             const input = document.querySelector('input[name="dish"]');
                             if (input) input.value = '';
+                            const displayInput = document.querySelector('#filename_display');
+                            if (displayInput) displayInput.value = '';
                         };
 
 
@@ -318,6 +341,7 @@
                             formData.append('expired_at', expiredAt.value);
                             if (dish.value) {
                                 formData.append('dish', dish.value);
+                                formData.append('filename', dish.value.name.substring(0, dish.value.name.lastIndexOf('.')));
                             }
                             formData.append('delete_dish', deleteDish.value ? '1' : '0');
                             if (!deleteDish.value) {
@@ -351,6 +375,7 @@
                             expiredAt,
                             dishPreview,
                             deleteDish,
+                            filename,
                             ingredient1,
                             ingredient2,
                             comment,

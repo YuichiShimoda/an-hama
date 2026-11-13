@@ -3,6 +3,9 @@ $miniwa-bd-v3: "miniwa-bd-v3", sans-serif // 400
 $miniwa-hv-v3: "miniwa-hv-v3", sans-serif // 400
 $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 
+@mixin bp1700
+	@media screen and (max-width: 1700px)
+		@content
 @mixin bp1600
 	@media screen and (max-width: 1600px)
 		@content
@@ -15,8 +18,14 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 @mixin bp1300
 	@media screen and (max-width: 1300px)
 		@content
+@mixin bp1250
+	@media screen and (max-width: 1250px)
+		@content
 @mixin bp1200
 	@media screen and (max-width: 1200px)
+		@content
+@mixin bp1150
+	@media screen and (max-width: 1150px)
 		@content
 @mixin bp1100
 	@media screen and (max-width: 1100px)
@@ -245,16 +254,13 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			color: #fff
 		th, td
 			box-sizing: border-box
+		// th:nth-child(2), td:nth-child(2)
+		// 	width: 80px !important
+		// 	min-width: 80px !important
 		th:nth-child(1), td:nth-child(1)
-			width: 60px !important
-			min-width: 60px !important
-		th:nth-child(2), td:nth-child(2)
-			width: 80px !important
-			min-width: 80px !important
-		th:nth-child(3), td:nth-child(3)
 			width: 90px !important
 			min-width: 90px !important
-		th:nth-child(4), td:nth-child(4)
+		th:nth-child(2), td:nth-child(2)
 			width: 70px !important
 			min-width: 70px !important
 			.img-box
@@ -271,19 +277,22 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 				.img-icon
 					display: block
 					width: 16px
+		th:nth-child(3), td:nth-child(3)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(4), td:nth-child(4)
+			width: 170px !important
+			min-width: 170px !important
 		th:nth-child(5), td:nth-child(5)
-			width: 170px !important
-			min-width: 170px !important
+			width: 60px !important
+			min-width: 60px !important
 		th:nth-child(6), td:nth-child(6)
-			width: 170px !important
-			min-width: 170px !important
-		th:nth-child(7), td:nth-child(7)
 			width: 200px !important
 			min-width: 200px !important
-		th:nth-child(8), td:nth-child(8)
+		th:nth-child(7), td:nth-child(7)
 			width: 320px !important
 			min-width: 320px !important
-		th:nth-child(9), td:nth-child(9)
+		th:nth-child(8), td:nth-child(8)
 			width: 140px !important
 			min-width: 140px !important
 		th
@@ -442,16 +451,13 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 			color: #fff
 		th, td
 			box-sizing: border-box
+		// th:nth-child(2), td:nth-child(2)
+		// 	width: 80px !important
+		// 	min-width: 80px !important
 		th:nth-child(1), td:nth-child(1)
-			width: 60px !important
-			min-width: 60px !important
-		th:nth-child(2), td:nth-child(2)
-			width: 80px !important
-			min-width: 80px !important
-		th:nth-child(3), td:nth-child(3)
 			width: 90px !important
 			min-width: 90px !important
-		th:nth-child(4), td:nth-child(4)
+		th:nth-child(2), td:nth-child(2)
 			width: 70px !important
 			min-width: 70px !important
 			.img-box
@@ -468,19 +474,22 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 				.img-icon
 					display: block
 					width: 16px
+		th:nth-child(3), td:nth-child(3)
+			width: 170px !important
+			min-width: 170px !important
+		th:nth-child(4), td:nth-child(4)
+			width: 170px !important
+			min-width: 170px !important
 		th:nth-child(5), td:nth-child(5)
-			width: 170px !important
-			min-width: 170px !important
+			width: 60px !important
+			min-width: 60px !important
 		th:nth-child(6), td:nth-child(6)
-			width: 170px !important
-			min-width: 170px !important
-		th:nth-child(7), td:nth-child(7)
 			width: 200px !important
 			min-width: 200px !important
-		th:nth-child(8), td:nth-child(8)
+		th:nth-child(7), td:nth-child(7)
 			width: 320px !important
 			min-width: 320px !important
-		th:nth-child(9), td:nth-child(9)
+		th:nth-child(8), td:nth-child(8)
 			width: 140px !important
 			min-width: 140px !important
 		th
@@ -580,26 +589,6 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 				margin-top: 1.5em
 			&:first-of-type
 				margin-top: 0
-			&.ingredient-box
-				display: flex !important
-				justify-content: flex-start
-				align-items: flex-start
-				flex-wrap: wrap
-				+bp500
-					flex-direction: column
-				.form-group
-					&:not(:first-of-type)
-						margin-left: 10px
-						+bp500
-							margin-left: 0
-							margin-top: 6px
-						label
-							opacity: 0.0
-							pointer-events: none
-							+bp500
-								display: none
-				.form-note-box
-					width: 100%
 			&.period-box
 				display: flex !important
 				justify-content: flex-start
@@ -642,6 +631,34 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 						pointer-events: none
 				.form-note-box
 					width: 100%
+			&.readonly
+				margin-top: 0.7em
+				.form-group
+					label
+						margin-bottom: .2rem
+						font-weight: 700
+						font-size: 12px
+						color: #999
+			&.ingredient-box
+				display: flex !important
+				justify-content: flex-start
+				align-items: flex-start
+				flex-wrap: wrap
+				+bp500
+					flex-direction: column
+				.form-group
+					&:not(:first-of-type)
+						margin-left: 10px
+						+bp500
+							margin-left: 0
+							margin-top: 6px
+						label
+							opacity: 0.0
+							pointer-events: none
+							+bp500
+								display: none
+				.form-note-box
+					width: 100%
 			.form-group
 				margin: 0
 				label
@@ -668,6 +685,15 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 				.input-group
 					&.adminlte-invalid-igroup
 						width: fit-content
+					#filename_display, #next_id_display
+						width: 240px
+						flex: initial
+						+bp600
+							width: 220px
+						+bp450
+							width: 210px
+						+bp400
+							width: 200px
 					#ingredient1, #ingredient2
 						width: 180px
 						flex: initial
@@ -1497,3 +1523,444 @@ $iroha-25icho-stdn: "iroha-25icho-stdn", sans-serif // 400
 		scale: 1.15
 	100%
 		scale: 0.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#season-show
+	display: block
+	padding: 100px 0 50px
+	margin: 30px 0
+	width: 100%
+	background-size: cover
+	background-position: center bottom
+	background-repeat: no-repeat
+	+bp1700
+		padding: 100px 0 30px
+	+bp1500
+		padding: 100px 0 10px
+	+bp1150
+		padding: 80px 0 20px
+	+bp1000
+		padding: 60px 0 30px
+	+bp600
+		padding: 60px 0 0
+	+bp500
+		padding: 60px 0 0
+		margin: 0
+	// +bp750
+	// 	padding: 90px 0 40px
+	.content-box
+		display: block
+		width: 100%
+		+bp450
+			transform-origin: top center
+			transform: scale(0.85)
+		+bp420
+			transform: scale(0.8)
+		+bp400
+			transform: scale(0.75)
+		.main-box
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			width: fit-content
+			margin: 0 auto
+			position: relative
+			+bp900
+				align-items: center
+				flex-direction: column
+			.left-box
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				flex-direction: column
+				width: 500px
+				position: relative
+				+bp1700
+					width: 420px
+				+bp1500
+					width: 380px
+				+bp1100
+					width: 350px
+				+bp1000
+					width: 450px
+				+bp500
+					width: 380px
+				+bp450
+					width: 350px
+				+bp420
+					width: 330px
+				.pasta-line
+					display: block
+					width: 100%
+					padding-left: 20%
+				.board
+					display: block
+					width: 100%
+					margin-top: 25px
+					+bp1500
+						margin-top: 15px
+					+bp600
+						margin-top: 10px
+				.illust-box
+					display: flex
+					justify-content: center
+					align-items: center
+					width: fit-content
+					margin: 20px auto 0
+					+bp1500
+						margin: 5px auto 0
+					.plate-icon
+						display: block
+						width: 80px
+						+bp1500
+							width: 60px
+					.en-msg
+						display: block
+						width: 210px
+						margin-left: 40px
+						+bp1500
+							width: 180px
+							margin-left: 20px
+				.label-box
+					position: absolute
+					top: -15px
+					left: -45px
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 120px
+					z-index: 2
+					+bp1700
+						top: 4px
+						left: -40px
+						width: 100px
+					+bp1500
+						top: -4px
+						left: -40px
+						width: 90px
+					+bp1100
+						top: -5px
+						left: -35px
+						width: 80px
+					+bp1000
+						top: -5px
+						left: -40px
+						width: 100px
+					+bp550
+						top: -8px
+						left: -25px
+						width: 90px
+					+bp500
+						top: -6px
+						left: -30px
+						width: 80px
+					+bp450
+						top: -10px
+						left: -16px
+						width: 70px
+					+bp400
+						top: -12px
+						left: -18px
+						width: 70px
+					.two-month
+						display: block
+						width: 100%
+						border-radius: 50%
+						transform-origin: center
+						animation: spin 4.0s ease-in-out infinite
+				.label-bg
+					position: absolute
+					top: -15px
+					left: -45px
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 128px
+					transform-origin: 53% 59%
+					animation: spin 4.0s ease-in-out infinite, label-scale 3.0s ease-in-out infinite
+					z-index: 1
+					+bp1700
+						top: 4px
+						left: -40px
+						width: 106px
+					+bp1500
+						top: -4px
+						left: -40px
+						width: 98px
+					+bp1100
+						top: -5px
+						left: -35px
+						width: 88px
+					+bp1000
+						top: -5px
+						left: -40px
+					+bp550
+						top: -8px
+						left: -25px
+						width: 98px
+					+bp500
+						top: -6px
+						left: -30px
+						width: 88px
+					+bp450
+						top: -10px
+						left: -16px
+						width: 78px
+					+bp400
+						top: -12px
+						left: -18px
+						width: 78px
+			.right-box
+				display: block
+				width: 400px
+				margin-left: 30px
+				margin-top: 55px
+				+bp1700
+					width: 350px
+				+bp1500
+					width: 300px
+					margin-top: 35px
+				+bp1100
+					width: 270px
+					margin-left: 20px
+				+bp1000
+					width: 300px
+					margin-left: 0
+					margin-top: 30px
+				+bp500
+					width: 270px
+					margin-top: 20px
+				+bp450
+					width: 250px
+				+bp420
+					width: 240px
+				.img-show-box
+					.dish
+						display: block
+						width: 100%
+			.jp-msg
+				position: absolute
+				top: -5px
+				right: -160px
+				display: block
+				width: 200px
+				+bp1500
+					right: -120px
+					width: 150px
+				+bp1000
+					display: none
+		.desc-box
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			width: fit-content
+			margin: 30px auto 0
+			+bp500
+				margin: 20px auto 0
+			.ingredient
+				display: block
+				margin: 0
+				font-weight: 400
+				font-size: 16px
+				line-height: 1.0
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				color: #333
+				+bp500
+					font-size: 14px
+			.comment
+				display: block
+				margin: 20px auto 0
+				font-weight: 400
+				font-size: 12px
+				line-height: 1.5
+				font-family: $iroha-25icho-stdn
+				letter-spacing: 0.05em
+				text-align: center
+				color: #777
+				+bp1500
+					margin: 15px auto 0
+				+bp1000
+					margin: 25px auto 0
+				+bp600
+					margin: 15px auto 10px
+				+bp500
+					margin: 15px auto 5px
+					font-size: 10px
+			.info-admin-box
+				display: flex
+				justify-content: center
+				align-items: flex-end
+				width: fit-content
+				+bp1100
+					margin-top: 10px
+				+bp700
+					justify-content: flex-start
+					align-items: center
+					flex-direction: column
+				+bp450
+					transform-origin: top center
+					transform: scale(0.9)
+				> .tit-box
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					width: fit-content
+					.period-box
+						display: flex
+						justify-content: center
+						align-items: center
+						width: fit-content
+						height: 32px
+						padding: 0 18px
+						border-radius: 16px
+						background-color: #B92928
+						+bp1100
+							height: 30px
+							padding: 0 15px
+							border-radius: 15px
+						+bp500
+							height: 26px
+							padding: 0 12px
+							border-radius: 13px
+						+bp420
+							height: 24px
+							padding: 0 12px
+							border-radius: 12px
+						p
+							display: block
+							margin: 0
+							font-weight: 400
+							font-size: 16px
+							line-height: 1.0
+							font-family: $miniwa-hv-v3
+							letter-spacing: 0.05em
+							white-space: nowrap
+							color: #fff
+							+bp1100
+								font-size: 14px
+							+bp500
+								font-size: 12px
+							+bp420
+								font-size: 11px
+					.menu-tit
+						display: block
+						margin-left: 20px
+						margin-bottom: 0
+						font-weight: 400
+						font-size: 32px
+						line-height: 1.0
+						font-family: $miniwa-hv-v3
+						letter-spacing: 0.1em
+						white-space: nowrap
+						color: #333
+						+bp1700
+							font-size: 28px
+						+bp1100
+							font-size: 24px
+						+bp500
+							margin-left: 15px
+							font-size: 20px
+						+bp450
+							margin-left: 10px
+				.price-box
+					display: block
+					width: fit-content
+					padding-bottom: 3px
+					margin-left: 50px
+					+bp1100
+						margin-left: 30px
+					+bp700
+						padding-bottom: 0
+						margin-top: 10px
+					+bp500
+						margin-top: 5px
+					.above-box
+						display: flex
+						justify-content: flex-start
+						align-items: center
+						width: fit-content
+						.size
+							display: block
+							margin: 0
+							font-weight: 400
+							font-size: 12px
+							line-height: 1.0
+							font-family: $iroha-25icho-stdn
+							letter-spacing: 0.05em
+							color: #555
+							+bp1100
+								font-size: 10px
+						.unit
+							display: block
+							margin-left: 15px
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 14px
+							line-height: 1.0
+							font-family: $miniwa-lt-v3
+							letter-spacing: 0.05em
+							color: #555
+							+bp1100
+								margin-left: 7px
+								font-size: 12px
+					.below-box
+						display: flex
+						justify-content: flex-start
+						align-items: flex-end
+						width: fit-content
+						margin-top: 5px
+						+bp1100
+							margin-top: 2px
+						.price
+							display: block
+							margin: 0
+							font-weight: 400
+							font-size: 30px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0.05em
+							color: #333
+							+bp1300
+								font-size: 28px
+							+bp700
+								font-size: 26px
+							+bp500
+								font-size: 24px
+						.yen
+							display: block
+							padding-bottom: 0.15em
+							margin-left: 4px
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 20px
+							line-height: 1.0
+							font-family: $miniwa-bd-v3
+							letter-spacing: 0.05em
+							color: #333
+							+bp1700
+								font-size: 18px
+							+bp1100
+								font-size: 16px

@@ -15,6 +15,7 @@ class SeasonPasta extends Model
         'reservation_at',
         'expired_at',
         'dish',
+        'filename',
         'ingredient1',
         'ingredient2',
         'comment',

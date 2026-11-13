@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamp('reservation_at')->nullable();
             $table->timestamp('expired_at')->nullable();
             $table->string('dish');
+            $table->string('filename', 255);
             $table->string('ingredient1', 255);
             $table->string('ingredient2', 255);
             $table->text('comment')->nullable();
