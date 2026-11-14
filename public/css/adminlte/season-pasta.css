@@ -244,8 +244,8 @@
   min-width: 170px !important;
 }
 .content #visibleTable th:nth-child(5), .content #visibleTable td:nth-child(5) {
-  width: 60px !important;
-  min-width: 60px !important;
+  width: 90px !important;
+  min-width: 90px !important;
 }
 .content #visibleTable th:nth-child(6), .content #visibleTable td:nth-child(6) {
   width: 200px !important;
@@ -500,8 +500,8 @@
   min-width: 170px !important;
 }
 .content #seasonPastaTable th:nth-child(5), .content #seasonPastaTable td:nth-child(5) {
-  width: 60px !important;
-  min-width: 60px !important;
+  width: 90px !important;
+  min-width: 90px !important;
 }
 .content #seasonPastaTable th:nth-child(6), .content #seasonPastaTable td:nth-child(6) {
   width: 200px !important;

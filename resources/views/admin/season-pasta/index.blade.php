@@ -22,7 +22,7 @@
         </a>
     </div>
     <div class="desc-box">
-        <p>公開日時が重複しているデータは、ID欄が赤色で表示されます。</p>
+        <p>公開日時が重複しているデータは、管理No,が赤色で表示されます。</p>
     </div>
 @endsection
 
@@ -33,7 +33,7 @@
     @else
         <p class="visible-tit">▼ 公開中 ▼</p>
         @if ($published_season_pasta)
-            <x-adminlte-datatable id="visibleTable" :heads="['期間', '画像', '新規作成日時', '更新日時', 'ID', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
+            <x-adminlte-datatable id="visibleTable" :heads="['期間', '画像', '新規作成日時', '更新日時', '管理No,', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
                 <tr>
 <!--                     <td>
                         <div class="toggle-box">
@@ -86,7 +86,7 @@
         @endif
         <div class="border-line"></div>
         <p class="visible-second-tit">▼ 一覧（ 全てのデータ ） ▼</p>
-        <x-adminlte-datatable id="seasonPastaTable" :heads="['期間', '画像', '新規作成日時', '更新日時', 'ID', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
+        <x-adminlte-datatable id="seasonPastaTable" :heads="['期間', '画像', '新規作成日時', '更新日時', '管理No,', '旬の食材', '公開日時', '操作']" striped hoverable bordered compressed>
             @foreach($season_pasta as $season_pasta_ele)
                 <tr class="{{ $published_season_pasta && $season_pasta_ele->id === $published_season_pasta->id ? 'is-published' : '' }}">
 <!--                     <td>

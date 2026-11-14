@@ -145,10 +145,10 @@
             </div>
 
             <div class="d-block readonly">
-                <x-adminlte-input id="next_id_display" name="next_id_display" label="ID" value="{{ sprintf('%04d', $season_pasta->id) }}" readonly/>
+                <x-adminlte-input id="next_id_display" name="next_id_display" label="管理No," value="{{ sprintf('%04d', $season_pasta->id) }}" readonly/>
                 <div class="form-note-box">
-                    <p>※ 画像ファイルをアップロードした時点でサーバ側に自動登録されるID（ 通番 ）です。</p>
-                    <p>※ 自動登録されたIDは、画像ファイルをアップロードした後に変更することはできません。</p>
+                    <p>※ 画像ファイルをアップロードした時点でサーバ側に自動登録される管理No,（ 通番 ）です。</p>
+                    <p>※ 自動登録された管理No,は、画像ファイルをアップロードした後に変更することはできません。</p>
                 </div>
             </div>
 
