@@ -256,7 +256,7 @@
                             <div class="info-admin-box">
                                 <div class="tit-box">
                                     <div class="period-box">
-                                        <p>@{{ period ? period.replace('-', '月,') + '月' : 'ーー月, ー' }}月限定</p>
+                                        <p>@{{ period ? period.replace('-', '月,') + '月' : 'ー月, ー月' }}限定</p>
                                     </div>
                                     <h2 class="menu-tit">季節のつけかけパスタ</h2>
                                 </div>

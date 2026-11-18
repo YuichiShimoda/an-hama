@@ -70,7 +70,7 @@
                                             '11-12' => '11月,12月',
                                         ];
                                     @endphp
-                                    <p>{{ $periods[$season_pasta->period] ?? '' }}月限定</p>
+                                    <p>{{ $periods[$season_pasta->period] ?? '' }}限定</p>
                                 </div>
                                 <h2 class="menu-tit">季節のつけかけパスタ</h2>
                             </div>
